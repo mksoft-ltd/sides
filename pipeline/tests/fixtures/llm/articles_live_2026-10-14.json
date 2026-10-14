@@ -1,0 +1,2641 @@
+{
+ "collected_at": "2026-10-14T22:17:59.073592Z",
+ "outlets": [
+  {
+   "id": "guardian",
+   "name": "The Guardian",
+   "lean": "left",
+   "region": "uk",
+   "bloc": "west",
+   "ownership": "independent",
+   "country": "United Kingdom",
+   "home_url": "https://www.theguardian.com/",
+   "rating_basis": "AllSides media bias rating (Lean Left), checked Oct 2026"
+  },
+  {
+   "id": "independent",
+   "name": "The Independent",
+   "lean": "left",
+   "region": "uk",
+   "bloc": "west",
+   "ownership": "independent",
+   "country": "United Kingdom",
+   "home_url": "https://www.independent.co.uk/",
+   "rating_basis": "AllSides media bias rating (Lean Left), checked Oct 2026"
+  },
+  {
+   "id": "mirror",
+   "name": "Daily Mirror",
+   "lean": "left",
+   "region": "uk",
+   "bloc": "west",
+   "ownership": "independent",
+   "country": "United Kingdom",
+   "home_url": "https://www.mirror.co.uk/",
+   "rating_basis": "Ad Fontes Media bias rating (Skews Left), checked Oct 2026"
+  },
+  {
+   "id": "bbc",
+   "name": "BBC News",
+   "lean": "centre",
+   "region": "uk",
+   "bloc": "west",
+   "ownership": "public-service",
+   "country": "United Kingdom",
+   "home_url": "https://www.bbc.co.uk/news",
+   "rating_basis": "AllSides media bias rating (Center), checked Oct 2026"
+  },
+  {
+   "id": "sky",
+   "name": "Sky News",
+   "lean": "centre",
+   "region": "uk",
+   "bloc": "west",
+   "ownership": "independent",
+   "country": "United Kingdom",
+   "home_url": "https://news.sky.com/",
+   "rating_basis": "Ad Fontes Media bias rating (Middle), checked Oct 2026"
+  },
+  {
+   "id": "telegraph",
+   "name": "The Telegraph",
+   "lean": "right",
+   "region": "uk",
+   "bloc": "west",
+   "ownership": "independent",
+   "country": "United Kingdom",
+   "home_url": "https://www.telegraph.co.uk/",
+   "rating_basis": "AllSides media bias rating (Lean Right), checked Oct 2026"
+  },
+  {
+   "id": "dailymail",
+   "name": "Daily Mail",
+   "lean": "right",
+   "region": "uk",
+   "bloc": "west",
+   "ownership": "independent",
+   "country": "United Kingdom",
+   "home_url": "https://www.dailymail.co.uk/",
+   "rating_basis": "AllSides media bias rating (Right), checked Oct 2026"
+  },
+  {
+   "id": "thesun",
+   "name": "The Sun",
+   "lean": "right",
+   "region": "uk",
+   "bloc": "west",
+   "ownership": "independent",
+   "country": "United Kingdom",
+   "home_url": "https://www.thesun.co.uk/",
+   "rating_basis": "AllSides media bias rating (Right), checked Oct 2026"
+  },
+  {
+   "id": "nyt",
+   "name": "The New York Times",
+   "lean": "left",
+   "region": "us",
+   "bloc": "west",
+   "ownership": "independent",
+   "country": "United States",
+   "home_url": "https://www.nytimes.com/",
+   "rating_basis": "AllSides media bias rating (Lean Left), checked Oct 2026"
+  },
+  {
+   "id": "nbc",
+   "name": "NBC News",
+   "lean": "left",
+   "region": "us",
+   "bloc": "west",
+   "ownership": "independent",
+   "country": "United States",
+   "home_url": "https://www.nbcnews.com/",
+   "rating_basis": "AllSides media bias rating (Lean Left), checked Oct 2026"
+  },
+  {
+   "id": "huffpost",
+   "name": "HuffPost",
+   "lean": "left",
+   "region": "us",
+   "bloc": "west",
+   "ownership": "independent",
+   "country": "United States",
+   "home_url": "https://www.huffpost.com/",
+   "rating_basis": "AllSides media bias rating (Left), checked Oct 2026"
+  },
+  {
+   "id": "npr",
+   "name": "NPR",
+   "lean": "centre",
+   "region": "us",
+   "bloc": "west",
+   "ownership": "public-service",
+   "country": "United States",
+   "home_url": "https://www.npr.org/",
+   "rating_basis": "Ad Fontes Media bias rating (Middle / Skews Left), checked Oct 2026"
+  },
+  {
+   "id": "axios",
+   "name": "Axios",
+   "lean": "centre",
+   "region": "us",
+   "bloc": "west",
+   "ownership": "independent",
+   "country": "United States",
+   "home_url": "https://www.axios.com/",
+   "rating_basis": "AllSides media bias rating (Center), checked Oct 2026"
+  },
+  {
+   "id": "fox",
+   "name": "Fox News",
+   "lean": "right",
+   "region": "us",
+   "bloc": "west",
+   "ownership": "independent",
+   "country": "United States",
+   "home_url": "https://www.foxnews.com/",
+   "rating_basis": "AllSides media bias rating (Right), checked Oct 2026"
+  },
+  {
+   "id": "nypost",
+   "name": "New York Post",
+   "lean": "right",
+   "region": "us",
+   "bloc": "west",
+   "ownership": "independent",
+   "country": "United States",
+   "home_url": "https://nypost.com/",
+   "rating_basis": "AllSides media bias rating (Lean Right), checked Oct 2026"
+  },
+  {
+   "id": "examiner",
+   "name": "Washington Examiner",
+   "lean": "right",
+   "region": "us",
+   "bloc": "west",
+   "ownership": "independent",
+   "country": "United States",
+   "home_url": "https://www.washingtonexaminer.com/",
+   "rating_basis": "AllSides media bias rating (Lean Right), checked Oct 2026"
+  },
+  {
+   "id": "france24",
+   "name": "France 24",
+   "lean": "centre",
+   "region": "europe",
+   "bloc": "west",
+   "ownership": "public-service",
+   "country": "France",
+   "home_url": "https://www.france24.com/en/",
+   "rating_basis": "Ad Fontes Media bias rating (Middle), checked Oct 2026"
+  },
+  {
+   "id": "dw",
+   "name": "DW (Deutsche Welle)",
+   "lean": "centre",
+   "region": "europe",
+   "bloc": "west",
+   "ownership": "public-service",
+   "country": "Germany",
+   "home_url": "https://www.dw.com/en/",
+   "rating_basis": "AllSides media bias rating (Center), checked Oct 2026"
+  },
+  {
+   "id": "aljazeera",
+   "name": "Al Jazeera English",
+   "lean": null,
+   "region": "middle_east",
+   "bloc": "east",
+   "ownership": "state-funded",
+   "country": "Qatar",
+   "home_url": "https://www.aljazeera.com/",
+   "rating_basis": "Funded by the State of Qatar; no left/right tag applied"
+  },
+  {
+   "id": "thenational",
+   "name": "The National (UAE)",
+   "lean": null,
+   "region": "middle_east",
+   "bloc": "east",
+   "ownership": "independent",
+   "country": "United Arab Emirates",
+   "home_url": "https://www.thenationalnews.com/",
+   "rating_basis": "Owned by International Media Investments (Abu Dhabi); no left/right tag applied"
+  },
+  {
+   "id": "timesofisrael",
+   "name": "The Times of Israel",
+   "lean": null,
+   "region": "middle_east",
+   "bloc": "east",
+   "ownership": "independent",
+   "country": "Israel",
+   "home_url": "https://www.timesofisrael.com/",
+   "rating_basis": "Privately owned; no left/right tag applied"
+  },
+  {
+   "id": "cgtn",
+   "name": "CGTN",
+   "lean": null,
+   "region": "asia",
+   "bloc": "east",
+   "ownership": "state-controlled",
+   "country": "China",
+   "home_url": "https://www.cgtn.com/",
+   "rating_basis": "China Global Television Network, part of state broadcaster China Media Group"
+  },
+  {
+   "id": "ecns",
+   "name": "ECNS (China News Service)",
+   "lean": null,
+   "region": "asia",
+   "bloc": "east",
+   "ownership": "state-controlled",
+   "country": "China",
+   "home_url": "https://www.ecns.cn/",
+   "rating_basis": "English service of China News Service, a state news agency"
+  },
+  {
+   "id": "scmp",
+   "name": "South China Morning Post",
+   "lean": null,
+   "region": "asia",
+   "bloc": "east",
+   "ownership": "independent",
+   "country": "Hong Kong",
+   "home_url": "https://www.scmp.com/",
+   "rating_basis": "Owned by Alibaba Group; no left/right tag applied"
+  },
+  {
+   "id": "toi",
+   "name": "The Times of India",
+   "lean": null,
+   "region": "asia",
+   "bloc": "east",
+   "ownership": "independent",
+   "country": "India",
+   "home_url": "https://timesofindia.indiatimes.com/",
+   "rating_basis": "Privately owned (Bennett, Coleman & Co.); no left/right tag applied"
+  },
+  {
+   "id": "thehindu",
+   "name": "The Hindu",
+   "lean": null,
+   "region": "asia",
+   "bloc": "east",
+   "ownership": "independent",
+   "country": "India",
+   "home_url": "https://www.thehindu.com/",
+   "rating_basis": "Privately owned (The Hindu Group); no left/right tag applied"
+  },
+  {
+   "id": "moscowtimes",
+   "name": "The Moscow Times",
+   "lean": null,
+   "region": "europe",
+   "bloc": "east",
+   "ownership": "independent",
+   "country": "Russia",
+   "home_url": "https://www.themoscowtimes.com/",
+   "rating_basis": "Independent, Amsterdam-based since 2022; designated \"undesirable\" by Russia; no left/right tag applied"
+  },
+  {
+   "id": "japantimes",
+   "name": "The Japan Times",
+   "lean": null,
+   "region": "asia",
+   "bloc": "east",
+   "ownership": "independent",
+   "country": "Japan",
+   "home_url": "https://www.japantimes.co.jp/",
+   "rating_basis": "Privately owned (News2u Holdings); no left/right tag applied"
+  },
+  {
+   "id": "koreaherald",
+   "name": "The Korea Herald",
+   "lean": null,
+   "region": "asia",
+   "bloc": "east",
+   "ownership": "independent",
+   "country": "South Korea",
+   "home_url": "https://www.koreaherald.com/",
+   "rating_basis": "Privately owned (Herald Corporation); no left/right tag applied"
+  }
+ ],
+ "articles": [
+  {
+   "id": "0010602040ce",
+   "outlet_id": "guardian",
+   "headline": "Ukrainian military’s access to Starlink satellite internet suddenly restricted",
+   "snippet": "Launch of Russian ballistic missiles on Ukraine, with no US warning, coincides with outage of Starlink managed by Musk’s SpaceX Ukraine’s military has suddenly had its access to Starlink satellite…",
+   "url": "https://www.theguardian.com/world/2026/oct/14/ukraine-soldiers-combat-access-starlink-satellite-internet-restricted",
+   "published_at": "2026-10-14T16:18:46Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "014ae61bd18d",
+   "outlet_id": "ecns",
+   "headline": "Xi calls for decisive progress in Healthy China advancement",
+   "snippet": "Chinese President Xi Jinping has called for efforts to firmly follow a path with Chinese characteristics in developing the country's health programs, to secure decisive progress in the Healthy China…",
+   "url": "http://www.ecns.cn/china/2026-10-13/detail-ihfmcrte5284858.shtml",
+   "published_at": "2026-10-13T16:52:20Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "03274ff3e3d1",
+   "outlet_id": "mirror",
+   "headline": "Boy, 9, who died with parents and brother in Waterford fire had heart surgery just weeks ago",
+   "snippet": "Jayden English, nine, who died following an arson attack on his home in County Waterford, Ireland, had undergone heart surgery just two weeks prior",
+   "url": "https://www.mirror.co.uk/news/world-news/waterford-house-fire-jayden-english-37773247",
+   "published_at": "2026-10-14T20:16:15Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "038c46793633",
+   "outlet_id": "thehindu",
+   "headline": "Yemen’s Houthis vow more attacks on Saudi airports, oil facilities after Aramco HQ hit",
+   "snippet": "The Houthis ‌say they have been retaliating for the kingdom’s backing of Yemeni government forces in the Yemen war that restarted last month",
+   "url": "https://www.thehindu.com/news/international/yemens-houthis-vow-more-attacks-on-saudi-airports-oil-facilities-after-aramco-hq-hit/article71583859.ece",
+   "published_at": "2026-10-14T13:15:10Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "0429252275e7",
+   "outlet_id": "nbc",
+   "headline": "Feds seized Rep. Ilhan Omar’s phone, subpoenaed family members in immigration status probe",
+   "snippet": "Federal agents seized Democratic Rep.",
+   "url": "https://www.nbcnews.com/politics/trump-administration/doj-issues-subpoenas-probe-rep-ilhan-omars-immigration-status-family-m-rcna603444",
+   "published_at": "2026-10-14T17:40:41Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "045dbfd3893a",
+   "outlet_id": "cgtn",
+   "headline": "Investigators hunt French supermarket fridge hackers, no claim made",
+   "snippet": "",
+   "url": "https://news.cgtn.com/news/2026-10-13/Investigators-hunt-French-supermarket-fridge-hackers-no-claim-made-1Rdl0qLhQjK/p.html",
+   "published_at": "2026-10-13T14:30:05Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "05db260ca587",
+   "outlet_id": "fox",
+   "headline": "Pope Leo undergoes blood tests, X-ray following cancer surgery, Vatican says",
+   "snippet": "Pope Leo XIV began walking and resumed eating after thoracic surgery at Rome's Gemelli Hospital, with blood tests and an X-ray being part of his recovery.",
+   "url": "https://www.foxnews.com/world/pope-leo-undergoes-blood-tests-x-ray-following-cancer-surgery-vatican-says",
+   "published_at": "2026-10-14T17:29:03Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "065c7f8df1c5",
+   "outlet_id": "timesofisrael",
+   "headline": "Ex-Shin Bet chief files defamation suit against Netanyahu, details warnings months before Oct. 7",
+   "snippet": "Ronen Bar says Netanyahu disregarded an 'extraordinary series of warnings of impending disaster'; lawsuit comes in response to PM's claim of 'criminal' acts by Bar for failing to wake him before…",
+   "url": "https://www.timesofisrael.com/ex-shin-bet-chief-files-defamation-suit-against-netanyahu-details-warnings-months-before-oct-7/",
+   "published_at": "2026-10-14T17:35:50Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "087ad35ae6c7",
+   "outlet_id": "thenational",
+   "headline": "Elon Musk shifts responsibility to Trump over satellite restrictions affecting Ukraine",
+   "snippet": "Elon Musk on Wednesday sought to distance himself from the satellite communications restrictions over Ukraine that have disrupted Kyiv's military operations, suggesting that US President Donald…",
+   "url": "https://www.thenationalnews.com/news/us/2026/10/14/musk-starlink-ukraine-starshield/",
+   "published_at": "2026-10-14T21:30:34Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "098af7d75852",
+   "outlet_id": "dailymail",
+   "headline": "DAMIEN TIERNAN: I knew Philip English long before he was murdered with his family in Waterford. What he texted me at 4.17am four weeks ago now sends chills down my spine",
+   "snippet": "Philip was a big, wonderful man who had been through a lot. He had relationships in the past and had grown-up children.",
+   "url": "https://www.dailymail.com/news/article-16209933/DAMIEN-TIERNAN-knew-Philip-English-long-murdered-family-Waterford-texted-4-17am-four-weeks-ago-sends-chills-spine.html",
+   "published_at": "2026-10-14T21:51:43Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "09be10836afa",
+   "outlet_id": "dailymail",
+   "headline": "Six people killed, including a child, after small plane crashes in rural Wisconsin",
+   "snippet": "A small plane crashed into a 'densely wooded area' in Dellon, Wisconsin, on Tuesday around 9.30pm, killing five adults and one child, police said.",
+   "url": "https://www.dailymail.com/news/article-16208839/dellona-wisconsin-small-plane-crash-kills-adults-child.html",
+   "published_at": "2026-10-14T20:03:10Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "0aa796233f51",
+   "outlet_id": "huffpost",
+   "headline": "Hackers Heat French Supermarket Fridges, Sparking Fires And Spoiling Food",
+   "snippet": "Hackers raised the temperature of refrigerators and freezers at hundreds of French supermarkets to as high as 50 degrees Celsius (122 degrees Fahrenheit) overnight, causing fires and spoiling food.",
+   "url": "https://www.huffpost.com/entry/french-supermarkets-cyber-attack_n_6ace3836e4b0447f8d488e08",
+   "published_at": "2026-10-13T14:02:02Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "0b1825f21c53",
+   "outlet_id": "thehindu",
+   "headline": "Suspected Russian drones hit two ships off Bulgaria, 11 missing",
+   "snippet": "Bulgarian Prime Minister Rumen Radev summoned the Russian ambassador after drones struck a Ukrainian-owned cargo ship",
+   "url": "https://www.thehindu.com/news/international/drone-sinks-ukrainian-owned-ship-off-bulgarias-black-sea-coast-bulgarian-prime-minister-says/article71578213.ece",
+   "published_at": "2026-10-13T17:05:18Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "0d2b6af9a04f",
+   "outlet_id": "moscowtimes",
+   "headline": "Germany Detains Fourth Person Over Starlink Fire That Poland Blames on Moscow",
+   "snippet": "Warsaw has said it believed the fire was an act of sabotage aimed at disrupting internet services, including for Ukraine's military.",
+   "url": "https://www.themoscowtimes.com/2026/10/13/germany-detains-fourth-person-over-starlink-fire-that-poland-blames-on-moscow-a93961",
+   "published_at": "2026-10-13T11:44:00Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "0d9577292571",
+   "outlet_id": "scmp",
+   "headline": "What does the historic Bank of America fine mean for US-China capital streams?",
+   "snippet": "As the US Treasury imposed historic fines on Bank of America over compliance failures involving Chinese money-laundering networks, analysts see the action as a signal that could prompt Western banks…",
+   "url": "https://www.scmp.com/economy/china-economy/article/3370870/what-does-historic-bank-america-fine-mean-us-china-capital-streams",
+   "published_at": "2026-10-14T13:00:09Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "0e2b5cbd6f94",
+   "outlet_id": "nypost",
+   "headline": "Zelensky says Trump betrayed Ukraine with Russian diesel deal: ‘It’s painful’",
+   "snippet": "Ukraine President Volodymyr Zelensky warned President Trump Wednesday that he had chosen \"the wrong side\" by agreeing to import diesel fuel from Russia.",
+   "url": "https://nypost.com/2026/10/14/us-news/zelensky-says-trump-betrayed-ukraine-with-russian-diesel-deal/",
+   "published_at": "2026-10-14T20:12:34Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "10497b1bc45a",
+   "outlet_id": "sky",
+   "headline": "British soldier who had 'homemade cannon' and promoted extreme right-wing views is jailed",
+   "snippet": "A British soldier who made explosives and a \"homemade cannon\" while promoting extreme right-wing views and talking of raising a militia has been jailed.",
+   "url": "https://news.sky.com/story/british-soldier-mark-broadhurst-who-had-homemade-cannon-and-promoted-extreme-right-wing-views-is-jailed-13599315",
+   "published_at": "2026-10-14T15:57:00Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "11e4cc2f7b64",
+   "outlet_id": "independent",
+   "headline": "Zelensky says Trump is on the wrong side of history with Russia diesel deal: ‘Putin is laughing’",
+   "snippet": "‘It is a pity that we are losing a strong partner,’ Mr Zelensky said about Trump",
+   "url": "https://www.independent.co.uk/news/world/europe/volodymyr-zelensky-putin-trump-diesel-deal-b3067040.html",
+   "published_at": "2026-10-14T21:55:01Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "12d6b8703a10",
+   "outlet_id": "guardian",
+   "headline": "Russell Brand was ruthless, calculated and manipulative sexual predator, court told",
+   "snippet": "Comedian faces three charges of rape, three of sexual assault and one of indecent assault against six women Russell Brand was a ruthless, calculated and manipulative sexual predator who boasted…",
+   "url": "https://www.theguardian.com/uk-news/2026/oct/14/russell-brand-was-ruthless-calculated-and-manipulative-sexual-predator-court-told",
+   "published_at": "2026-10-14T18:01:35Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "134c713ce9e6",
+   "outlet_id": "examiner",
+   "headline": "Musk blames Trump and US military for Ukraine’s Starshield restrictions",
+   "snippet": "SpaceX CEO Elon Musk said his company is not responsible for any speed restrictions on Starshield defense communications systems, saying that power is vested in the U.S. military and President…",
+   "url": "https://www.washingtonexaminer.com/policy/technology/4766151/musk-trump-us-military-ukraine-starshield/",
+   "published_at": "2026-10-14T21:08:53Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "13ce1ebd5f47",
+   "outlet_id": "france24",
+   "headline": "Trump sparks outrage over AI tiger video after sharing footage of fatal UK attack",
+   "snippet": "Donald Trump has sparked outrage after sharing the distressing footage of a 23-year-old man with mental illness being fatally mauled by a tiger at Yorkshire Wildlife Park, captioned \"Don't ever mess…",
+   "url": "https://www.france24.com/en/trump-sparks-outrage-over-ai-tiger-video-after-sharing-footage-of-fatal-uk-attack-1",
+   "published_at": "2026-10-14T19:39:08Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "142e8541d76b",
+   "outlet_id": "france24",
+   "headline": "Kenya reports second Ebola case",
+   "snippet": "In tonight's edition, Kenya confirms a second case of Ebola. Also, Nobel Peace Prize winner Navi Pillay warns that international justice is facing growing pressure. And millions of people in Nigeria…",
+   "url": "https://www.france24.com/en/kenya-reports-second-ebola-case",
+   "published_at": "2026-10-14T20:32:00Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "1658b591a0a2",
+   "outlet_id": "mirror",
+   "headline": "Pope Leo spends 'tranquil' night in hospital in Rome following cancer surgery",
+   "snippet": "The Pontiff stayed in Rome’s Gemelli hospital after undergoing an operation to remove the lower lobe of his right lung which confirmed cancer diagnosis",
+   "url": "https://www.mirror.co.uk/news/world-news/pope-leo-lung-cancer-surgery-37769942",
+   "published_at": "2026-10-14T08:59:31Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "16c9a1792757",
+   "outlet_id": "mirror",
+   "headline": "Man, 62, dies after torrential floods sweep car onto beach on Greek island of Rhodes",
+   "snippet": "A 62-year-old man died on the Greek island of Rhodes after his car was swept onto a beach by floodwaters as a severe storm battered parts of the country",
+   "url": "https://www.mirror.co.uk/news/world-news/greece-floods-rhodes-weather-rain-37773396",
+   "published_at": "2026-10-14T21:19:25Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "172e374bcc71",
+   "outlet_id": "guardian",
+   "headline": "Pennsylvania woman allegedly kills husband and son before attempting suicide at resort",
+   "snippet": "Police arrested Metallica Rose Harrison, 27, after reports of a ‘distressed female’ at the Great Wolf Lodge resort A Pennsylvania woman allegedly killed her husband and her three-year-old son at a…",
+   "url": "https://www.theguardian.com/us-news/2026/oct/14/great-wolf-lodge-woman-allegedly-kills-husband-son",
+   "published_at": "2026-10-14T21:23:12Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "17e33d649d55",
+   "outlet_id": "huffpost",
+   "headline": "Pope Leo Is Eating And Recovering After Cancer Surgery, Doctors Say",
+   "snippet": "“Recovery is proceeding as planned,” Leo’s two doctors said.",
+   "url": "https://www.huffpost.com/entry/vatican-pope-leo-surgery_n_6acf3854e4b0e26c18d0c30c",
+   "published_at": "2026-10-14T08:21:15Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "18489a395582",
+   "outlet_id": "thehindu",
+   "headline": "Zelenskyy to visit Britain as Burnham pledges fresh support for Ukraine",
+   "snippet": "The meeting comes at a difficult time for the Ukrainian President, days after the U.S. made a deal with Russia for diesel exports and U.S. President ‌Donald Trump said Mr. Zelenskyy should be…",
+   "url": "https://www.thehindu.com/news/international/zelenskyy-to-visit-britain-as-burnham-pledges-fresh-support-for-ukraine/article71581319.ece",
+   "published_at": "2026-10-13T22:31:42Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "1924d910dfdb",
+   "outlet_id": "axios",
+   "headline": "Judge orders White House to reinstate press access until litigation concludes",
+   "snippet": "A federal judge on Tuesday ruled the Trump administration must continue to grant CNN, MS NOW and Politico access to the White House grounds while the lawsuit filed by the three news organizations…",
+   "url": "https://www.axios.com/2026/10/14/white-house-cnn-ms-now-politico-access",
+   "published_at": "2026-10-14T03:35:19Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "1927cd3d9b18",
+   "outlet_id": "dw",
+   "headline": "Albania: Fire at Education Ministry as students protest",
+   "snippet": "Riot police deployed in the Albanian capital Tirana on the second day of student protests. The sudden outbreak seemed at least somewhat reminiscent of the widespread demos in France courting…",
+   "url": "https://www.dw.com/en/albania-fire-at-education-ministry-as-students-protest/a-79661193?maca=en-rss-en-world-4025-xml-mrss",
+   "published_at": "2026-10-14T14:56:00Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "197aede13b7c",
+   "outlet_id": "guardian",
+   "headline": "Student protests in Albania turn violent as demonstrators clash with police",
+   "snippet": "Government building and two banks set on fire as tens of thousands march over education costs and corruption Tens of thousands of students have taken to the streets of Tirana, the Albanian capital…",
+   "url": "https://www.theguardian.com/world/2026/oct/14/student-protests-tirana-albania-police-clashes",
+   "published_at": "2026-10-14T17:21:21Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "1a9c7ad116fd",
+   "outlet_id": "examiner",
+   "headline": "Trump says government ‘leakers should be shot’",
+   "snippet": "President Donald Trump declared Wednesday that government officials who leak information to the media “should be shot.” The president’s comments came at a campaign rally along the Arizona-Nevada…",
+   "url": "https://www.washingtonexaminer.com/news/white-house/4766320/trump-says-government-leakers-should-be-shot/",
+   "published_at": "2026-10-14T21:32:44Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "1fbf4da1bd6c",
+   "outlet_id": "japantimes",
+   "headline": "China sends aircraft carrier group into western Pacific",
+   "snippet": "Japan conducted \"surveillance and intelligence-gathering\" activities near the flotilla, which operated near Okinawa's Ishigaki Island on Wednesday.",
+   "url": "https://www.japantimes.co.jp/news/2026/10/14/japan/china-aircraft-carrier-western-pacific-japan/",
+   "published_at": "2026-10-14T04:16:00Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "211871b4017d",
+   "outlet_id": "nyt",
+   "headline": "Senators Urge Trump to Reverse Diesel Deal With Putin",
+   "snippet": "A bipartisan group of 12 senators called on the president to drop his decision to ease sanctions on Russia’s exports of diesel fuel, saying the deal would help Moscow continue the war in Ukraine.",
+   "url": "https://www.nytimes.com/2026/10/13/us/politics/trump-putin-russia-diesel-senate.html",
+   "published_at": "2026-10-14T00:12:23Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "22742c2a00c7",
+   "outlet_id": "thehindu",
+   "headline": "Iran reports cargo ship sinks after hitting mine in Strait of Hormuz",
+   "snippet": "It was the first time Iran has reported a ship sinking after hitting a mine during the war",
+   "url": "https://www.thehindu.com/news/international/iran-reports-cargo-ship-sinks-after-hitting-mine-in-strait-of-hormuz/article71585186.ece",
+   "published_at": "2026-10-14T16:41:54Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "23a19163c2fa",
+   "outlet_id": "aljazeera",
+   "headline": "Ex-UK army chef jailed for ‘terror’-related offence",
+   "snippet": "The former British Army member harboured 'extreme right-wing' views and was ordering explosives components, say police.",
+   "url": "https://www.aljazeera.com/news/2026/10/14/ex-uk-army-chef-jailed-for-terror-related-offence",
+   "published_at": "2026-10-14T17:32:09Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "27b4f05e8122",
+   "outlet_id": "guardian",
+   "headline": "Saudi Arabia strikes oil depots in Yemen and says missiles launched toward location of Saudi Aramco HQ",
+   "snippet": "Civilians warned to leave target area near Sana’a before attacks as conflict between Riyadh and Houthi forces escalates Saudi Arabia has launched a series of strikes on a strategic oil depot on the…",
+   "url": "https://www.theguardian.com/world/2026/oct/13/saudi-arabia-strikes-strategic-oil-depots-near-yemen-capital",
+   "published_at": "2026-10-13T17:26:08Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "28e56b51d704",
+   "outlet_id": "fox",
+   "headline": "Greta Thunberg joins massive French student protests as cars burn, police fire tear gas",
+   "snippet": "Greta Thunberg joined student protesters in France amid over 6,100 arrests and widespread school closures as violent clashes with riot police escalate.",
+   "url": "https://www.foxnews.com/world/greta-thunberg-joins-massive-french-student-protests-cars-burn-police-fire-tear-gas",
+   "published_at": "2026-10-13T21:31:12Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "2c3c283c745a",
+   "outlet_id": "examiner",
+   "headline": "Kash Patel shreds MS Now over false report claiming FBI director landed in Russia",
+   "snippet": "FBI Director Kash Patel ripped a major media network Wednesday for falsely reporting that he was in Russia. Earlier in the day, MS Now claimed Patel had arrived in Russia for a two-day visit in…",
+   "url": "https://www.washingtonexaminer.com/news/justice/4766223/kash-patel-ms-now-report-fbi-russia/",
+   "published_at": "2026-10-14T20:34:47Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "2d1b32e1a291",
+   "outlet_id": "nbc",
+   "headline": "Investigation Underway Into France Supermarket Cyberattack",
+   "snippet": "An investigation is underway into an unprecedented cyberattack on hundreds of French supermarkets that is still spreading across the country. Hackers are taking over refrigeration systems…",
+   "url": "https://www.today.com/video/investigation-underway-into-france-supermarket-cyberattack-271555653554",
+   "published_at": "2026-10-14T12:23:22Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "2dfd162eb163",
+   "outlet_id": "koreaherald",
+   "headline": "Korea&apos;s GDP per capita to top $40,000 this year, IMF says",
+   "snippet": "South Korea's gross domestic product per capita is projected to exceed $40,000 for the first time this year, according to the International Monetary Fund, which also sharply lowered its forecasts…",
+   "url": "https://www.koreaherald.com/article/10902499",
+   "published_at": "2026-10-14T06:13:02Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "2f18da46b6f4",
+   "outlet_id": "france24",
+   "headline": "School closures persist in France as protests gain momentum",
+   "snippet": "Some high schools in France remained closed on Wednesday, a day after tens of thousands of people joined rallies across the country to support protesting students. On Saturday, national…",
+   "url": "https://www.france24.com/en/video/20261014-school-closures-persist-in-france-as-protests-gain-momentum",
+   "published_at": "2026-10-14T13:53:38Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "2ff0421a7898",
+   "outlet_id": "timesofisrael",
+   "headline": "IDF, Shin Bet raid two West Bank charities they say were fronts for terror groups",
+   "snippet": "Security forces say groups raise money for PFLP, provide legal aid for terrorists; settlers reportedly set fire to mosque and car in West Bank village",
+   "url": "https://www.timesofisrael.com/idf-shin-bet-raid-two-west-bank-charities-they-say-were-fronts-for-terror-groups/",
+   "published_at": "2026-10-14T20:43:07Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "311d88344303",
+   "outlet_id": "axios",
+   "headline": "Exclusive: White House probes claims of missing Kennedy Center money in \"MAGA blood feud\"",
+   "snippet": "President Trump has directed his White House counsel to examine explosive allegations dropped on him Friday in the Oval Office: Former Trump attorney Alina Habba told the president that another one…",
+   "url": "https://www.axios.com/2026/10/14/trump-kennedy-center-donation-maga-feud",
+   "published_at": "2026-10-14T17:34:58Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "32905bb7820c",
+   "outlet_id": "nyt",
+   "headline": "Burnham Pledges to Back Zelensky as Trump’s Ukraine Support Wavers",
+   "snippet": "President Volodymyr Zelensky, who met with Britain’s prime minister, has said Ukraine received no warning of Russian attacks, but President Trump has said Washington is still “sharing intel.”",
+   "url": "https://www.nytimes.com/2026/10/14/world/europe/ukraine-intelligence-sharing-zelensky-uk.html",
+   "published_at": "2026-10-14T18:26:08Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "32b26d0bb461",
+   "outlet_id": "independent",
+   "headline": "Mexico President Sheinbaum orders tech giants to protect kids and teens from harmful online content",
+   "snippet": "Sheinbaum added that if technology companies fail to abide by the mandate, her administration will support legislation to levy punishments against non-compliant platforms",
+   "url": "https://www.independent.co.uk/news/world/americas/mexico-social-media-streaming-violent-sexual-content-b3066819.html",
+   "published_at": "2026-10-14T16:12:33Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "32fafc636cdd",
+   "outlet_id": "nyt",
+   "headline": "Cyberattack Hits Hundreds of Supermarket Refrigeration Systems in France",
+   "snippet": "The attack targeted a Danish software system in more than 400 supermarkets, forcing some shops to throw out frozen produce. The attackers have not been identified.",
+   "url": "https://www.nytimes.com/2026/10/13/world/europe/france-cyberattack-supermarkets-refrigeration.html",
+   "published_at": "2026-10-13T17:16:28Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "366392abf89d",
+   "outlet_id": "bbc",
+   "headline": "Watch: Hong Kong crowds queue to see Van Gogh painting unveiled for first time in 60 years",
+   "snippet": "Châtaigniers en fleurs, also known as Chestnut Trees in Blossom, is expected to receive record bids at auction this weekend.",
+   "url": "https://www.bbc.co.uk/news/videos/ck0e0l3le555o",
+   "published_at": "2026-10-14T04:21:25Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "3717c32dd4bf",
+   "outlet_id": "guardian",
+   "headline": "Ex-fiance of Nancy Mace and two others charged with sex crimes she detailed in House speech",
+   "snippet": "Republican representative described the assault in a nearly hourlong speech in February 2025 that named the men Nancy Mace’s former fiance and two of his business associates were charged with sex…",
+   "url": "https://www.theguardian.com/us-news/2026/oct/14/ex-fiance-nancy-mace-sex-crimes-speech",
+   "published_at": "2026-10-14T20:49:48Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "387d9d0fa5f4",
+   "outlet_id": "nyt",
+   "headline": "Turkey Raids Pro-Opposition TV Station",
+   "snippet": "The government appointed an overseer to the last big news channel critical of President Recep Tayyip Erdogan. The authorities have now replaced the leadership at five major news outlets.",
+   "url": "https://www.nytimes.com/2026/10/14/world/middleeast/turkey-erdogan-opposition-halk-tv.html",
+   "published_at": "2026-10-14T17:00:41Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "3d9d50cb34e4",
+   "outlet_id": "bbc",
+   "headline": "Mauritius reels from worst riots in decades after woman shot by police",
+   "snippet": "Prime Minister Navin Ramgoolam imposed a curfew after days of unrest that first began over water shortages.",
+   "url": "https://www.bbc.co.uk/news/articles/cm4g1rnj5qweo",
+   "published_at": "2026-10-14T11:24:25Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "3dfeaa7f6827",
+   "outlet_id": "mirror",
+   "headline": "World's oldest shipwreck - thought to be 4,700 years old - found off coast of Turkey",
+   "snippet": "The shipwreck dates back to the Early Bronze Age and is believed to have been built around the same time as the Great Pyramid of Giza",
+   "url": "https://www.mirror.co.uk/news/world-news/world-oldest-shipwreck-turkey-coast-37772457",
+   "published_at": "2026-10-14T16:23:22Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "3e81e06938f3",
+   "outlet_id": "nyt",
+   "headline": "China’s Exports Soar, Putting Its Trade Surplus on Track for a Record",
+   "snippet": "China’s exports grew last month at the fastest pace in almost any month since the end of the global financial crisis.",
+   "url": "https://www.nytimes.com/2026/10/14/business/china-exports-trade-surplus.html",
+   "published_at": "2026-10-14T15:41:21Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "41e857c41167",
+   "outlet_id": "nbc",
+   "headline": "Vatican says Pope Leo's lung surgery recovery is 'proceeding as expected'",
+   "snippet": "Pope Leo XIV underwent thoracic surgery after being diagnosed with adenocarcinoma, a type of non-small cell lung cancer. NBC News' Claudio Lavanga shares the latest updates from the Vatican, while…",
+   "url": "https://www.nbcnews.com/video/vatican-says-pope-leo-s-lung-surgery-recovery-is-proceeding-as-expected-271564357749",
+   "published_at": "2026-10-14T15:12:19Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "4246a58e693e",
+   "outlet_id": "moscowtimes",
+   "headline": "Ukraine Accuses SpaceX of Crippling Drone Missions as Ties With U.S. Worsen",
+   "snippet": "Starlink has been the lifeblood of Ukrainian battlefield communications since Russia's full-scale invasion in 2022.",
+   "url": "https://www.themoscowtimes.com/2026/10/14/ukraine-accuses-spacex-of-crippling-drone-missions-as-ties-with-us-worsen-a93970",
+   "published_at": "2026-10-14T09:17:00Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "4269ff48f40f",
+   "outlet_id": "independent",
+   "headline": "New York City to ban Central Park horse-drawn carriages after fatal tourist accident",
+   "snippet": "The proposed legislation prohibits owners from selling horses to slaughterhouses, specifying that animals must be handled in a ’humane manner’",
+   "url": "https://www.independent.co.uk/news/world/americas/central-park-horse-carriage-ban-mamdani-b3066889.html",
+   "published_at": "2026-10-14T17:28:45Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "428b34bd9bd9",
+   "outlet_id": "moscowtimes",
+   "headline": "Russia Arrests Japanese Journalist on Suspicion of Spying",
+   "snippet": "The FSB claimed that the journalist had been gathering information on Russia's defense capabilities.",
+   "url": "https://www.themoscowtimes.com/2026/10/14/russia-arrests-japanese-journalist-on-suspicion-of-spying-a93966",
+   "published_at": "2026-10-14T09:25:00Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "428d1922df99",
+   "outlet_id": "thehindu",
+   "headline": "Ex-gang leader sentenced to 40 years to life in prison for Tupac Shakur murder",
+   "snippet": "Duane 'Keffe D' Davis convicted of leading drive-by shooting; killing stemmed from hostilities between two LA street gangs",
+   "url": "https://www.thehindu.com/news/international/ex-gang-leader-sentenced-to-40-years-to-life-in-prison-for-tupac-shakur-murder/article71581327.ece",
+   "published_at": "2026-10-13T22:55:33Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "43acb5fb7a89",
+   "outlet_id": "independent",
+   "headline": "Trump handed ‘stinging defeat’ against his media ban — but legal battle for White House access is far from over",
+   "snippet": "Trump escalates legal battle by appealing court order that called his threats to reporters ‘unlawful viewpoint discrimination’",
+   "url": "https://www.independent.co.uk/news/world/americas/us-politics/trump-appeals-white-house-media-ban-court-ruling-b3066946.html",
+   "published_at": "2026-10-14T20:36:58Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "43e01fa745b2",
+   "outlet_id": "bbc",
+   "headline": "Burnham says he wants to 'repair bridges' between Ukraine and US",
+   "snippet": "It comes as the prime minister meets President Zelensky at Downing Street.",
+   "url": "https://www.bbc.co.uk/news/articles/cq98z59xdny5o",
+   "published_at": "2026-10-14T15:56:57Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "4699355ba2cf",
+   "outlet_id": "independent",
+   "headline": "ICE says it will not turn on body cameras automatically when weapons drawn despite watchdog’s recommendation",
+   "snippet": "Some ICE agents described camera use as ‘up to interpretation’",
+   "url": "https://www.independent.co.uk/news/world/americas/us-politics/ice-body-cameras-agents-watchdog-b3066921.html",
+   "published_at": "2026-10-14T19:52:27Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "46c3a134f6a0",
+   "outlet_id": "independent",
+   "headline": "Rep. Nancy Mace’s ex-fiancé and associates charged with sex crimes and voyeurism",
+   "snippet": "After the arrests, Mace released a statement detailing the 25 bills she says will protect victims of sexual assault",
+   "url": "https://www.independent.co.uk/news/world/americas/crime/nancy-mace-ex-fiance-patrick-bryant-sex-crimes-voyeurism-b3066915.html",
+   "published_at": "2026-10-14T18:18:15Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "47003df8a85c",
+   "outlet_id": "thehindu",
+   "headline": "New York City set to end horse-drawn carriages under law named after Indian tourist",
+   "snippet": "Efforts to ban horse-drawn carriages intensified after Romanch Mahajan, an Indian tourist, died from injuries sustained in an accident in Central Park in June",
+   "url": "https://www.thehindu.com/news/international/new-york-city-set-to-end-horse-drawn-carriages-under-law-named-after-indian-tourist/article71585392.ece",
+   "published_at": "2026-10-14T18:20:29Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "49d914532ba3",
+   "outlet_id": "cgtn",
+   "headline": "Xi Jinping proposes principles for settling Africa's hotspot issues",
+   "snippet": "Chinese President Xi Jinping on Tuesday put forward four principles for the constructive participation of all parties in the settlement of hotspot issues in Africa, during his meeting with President…",
+   "url": "https://news.cgtn.com/news/2026-10-13/Xi-Jinping-proposes-principles-for-settling-Africa-s-hotspot-issues-1RdkFVRaVKo/p.html",
+   "published_at": "2026-10-13T14:40:58Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "4ac3ea6ac806",
+   "outlet_id": "npr",
+   "headline": "Inflation sizzled in September — and Social Security benefits will get a boost",
+   "snippet": "Consumer prices in September jumped 3.7% from a year ago. The Social Security Administration said benefits will increase next year to help keep pace with the rising cost of living.",
+   "url": "https://www.npr.org/2026/10/14/nx-s1-6000593/inflation-consumer-prices-cpi-social-security-benefits",
+   "published_at": "2026-10-14T13:33:44Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "4b2e8c110856",
+   "outlet_id": "examiner",
+   "headline": "WATCH LIVE: Trump stumps for GOP hopefuls at Arizona midterm rally",
+   "snippet": "President Donald Trump on Wednesday is headlining an Arizona rally on Wednesday designed to boost Republican candidates in the battleground state ahead of the midterm elections. REPUBLICAN SUPER PAC…",
+   "url": "https://www.washingtonexaminer.com/news/campaigns/congressional/4766088/watch-live-trump-arizona-rally-midterm-elections/",
+   "published_at": "2026-10-14T19:59:19Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "4b79fc5c5593",
+   "outlet_id": "ecns",
+   "headline": "There is no room for ambiguity on Taiwan question: spokesperson on Kevin Tsai's appearance at separatist's campaign event",
+   "snippet": "Taiwan is an inalienable part of China's territory, and upholding the one-China principle is a prevailing consensus in the international community and a common political foundation for people on…",
+   "url": "http://www.ecns.cn/china/politics/2026-10-14/detail-ihfmcrte5285904.shtml",
+   "published_at": "2026-10-14T11:32:11Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "4bbd8076410c",
+   "outlet_id": "france24",
+   "headline": "Starlink restriction 'no surprise' after Musk condemned Ukraine strikes on Russian data centres",
+   "snippet": "Restrictions reported by Ukraine on its use of the US satellite internet system Starlink have exposed Kyiv's reliance on the technology for both offensive and defensive operations in its fight…",
+   "url": "https://www.france24.com/en/starlink-restriction-no-surprise-after-musk-condemned-ukraine-strikes-on-russian-data-centres",
+   "published_at": "2026-10-14T19:49:17Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "4c3402a5ef2b",
+   "outlet_id": "thehindu",
+   "headline": "Saudi coalition strikes Yemen oil sites after Houthi attacks",
+   "snippet": "The Saudi-led coalition had earlier warned civilians to evacuate the Al-Sabaha station near the Houthi-held capital, which belongs to the Yemen Petroleum Company (YPC), following a spate of deadly…",
+   "url": "https://www.thehindu.com/news/international/houthi-media-says-saudi-arabia-hit-oil-facility-near-sanaa/article71580863.ece",
+   "published_at": "2026-10-13T20:09:50Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "4e69f8ec1937",
+   "outlet_id": "france24",
+   "headline": "Houthis threaten escalation after strike on Saudi oil giant Aramco",
+   "snippet": "Yemen's Houthi rebels said Wednesday they had targeted facilities belonging to Saudi oil giant Aramco after officials in Riyadh reported a strike on a building in an area housing the energy giant's…",
+   "url": "https://www.france24.com/en/middle-east/20261014-yemen-houthis-vow-continue-saudi-attacks-oil-giant-aramco-headquarters-hit",
+   "published_at": "2026-10-14T16:21:53Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "503b334e99ff",
+   "outlet_id": "nbc",
+   "headline": "Justice Department threatens legal action against California over alleged noncitizen voters",
+   "snippet": "The Justice Department is threatening legal action against California unless state and local officials review a list of potential noncitizens on their voter rolls.",
+   "url": "https://www.nbcnews.com/politics/2026-election/justice-department-threatens-legal-action-california-noncitizens-rcna603536",
+   "published_at": "2026-10-14T18:37:37Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "5060be3b8345",
+   "outlet_id": "sky",
+   "headline": "World's oldest shipwreck found off Turkish coast",
+   "snippet": "The world's oldest shipwreck has been discovered off the coast of Turkey, according to archaeologists.",
+   "url": "https://news.sky.com/story/worlds-oldest-shipwreck-found-off-turkish-coast-archaeologists-say-13599286",
+   "published_at": "2026-10-14T14:26:00Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "5087a18b6c3d",
+   "outlet_id": "bbc",
+   "headline": "World's oldest shipwreck found off coast of Turkey",
+   "snippet": "Archaeologists say the wreck is up to 4,700 years old, dating to the Early Bronze Age.",
+   "url": "https://www.bbc.co.uk/news/articles/c6gr80rk1yyko",
+   "published_at": "2026-10-14T05:00:35Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "51806545088e",
+   "outlet_id": "huffpost",
+   "headline": "Pope Leo XIV Diagnosed With Lung Cancer After Surgery To Remove Part Of Right Lung",
+   "snippet": "Pope Leo XIV has lung cancer and had the lower lobe of his right lung removed, the Vatican announced Tuesday.",
+   "url": "https://www.huffpost.com/entry/vatican-pope-surgery-lung-cancer_n_6ace90aae4b0447f8d4a9b85",
+   "published_at": "2026-10-13T20:16:05Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "51a9ee3798c3",
+   "outlet_id": "axios",
+   "headline": "Russian diesel deal \"a betrayal,\" bipartisan coalition says",
+   "snippet": "President Trump's deal to lift sanctions on Russia to increase diesel supplies \"is a betrayal of the people of Ukraine\" and \"a gift to our adversary,\" a bipartisan coalition of senators wrote in a…",
+   "url": "https://www.axios.com/2026/10/13/trump-russian-diesel-deal-betrayal-bipartisan-letter",
+   "published_at": "2026-10-13T17:49:50Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "532d463f692d",
+   "outlet_id": "thehindu",
+   "headline": "OpenAI fires employee after finding recording device in conference room",
+   "snippet": "The ChatGPT-maker noted that it used its models to “understand” the device and where it had come from",
+   "url": "https://www.thehindu.com/sci-tech/technology/openai-fires-employee-after-finding-recording-device-in-conference-room/article71582204.ece",
+   "published_at": "2026-10-14T06:09:53Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "53d4b009a35c",
+   "outlet_id": "axios",
+   "headline": "Five things to watch after Trump's Russian diesel deal",
+   "snippet": "President Trump is turning to Vladimir Putin to help ease a global diesel crunch, setting up a clash between Washington's energy priorities and its efforts to pressure Russia over its invasion of…",
+   "url": "https://www.axios.com/2026/10/13/trump-russia-diesel-deal",
+   "published_at": "2026-10-13T12:36:07Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "53ff89e04534",
+   "outlet_id": "france24",
+   "headline": "Houthis say targeted Saudi oil giant Aramco, vow more attacks",
+   "snippet": "Yemen's Houthis said Wednesday they had targeted facilities belonging to Saudi Aramco, after Saudi officials reported a strike on a building in an area housing the energy giant's operations centre…",
+   "url": "https://www.france24.com/en/video/20261014-houthis-say-targeted-saudi-oil-giant-aramco-vow-more-attacks",
+   "published_at": "2026-10-14T14:00:14Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "5671f6334495",
+   "outlet_id": "nyt",
+   "headline": "Pope Leo’s Cancer Surgery Draws Outpouring From World Leaders",
+   "snippet": "The pontiff’s illness also prompted calls for people to seek medical treatment and early cancer screenings.",
+   "url": "https://www.nytimes.com/2026/10/13/world/europe/pope-leo-cancer-diagnosis-prayers-reaction.html",
+   "published_at": "2026-10-14T08:46:26Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "58679d777a3a",
+   "outlet_id": "ecns",
+   "headline": "China's trade with BRI partner countries jumps 17.1% in first three quarters",
+   "snippet": "China's foreign trade with Belt and Road Initiative (BRI) partner countries rose 17.1% year on year to 20.37 trillion yuan ($3.04 trillion) in the first three quarters of the year, the General…",
+   "url": "http://www.ecns.cn/cns-wire/2026-10-14/detail-ihfmcrte5286243.shtml",
+   "published_at": "2026-10-14T15:30:09Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "59bfa1361470",
+   "outlet_id": "bbc",
+   "headline": "Netflix to shed 1,000 jobs in steepest cuts since 2022",
+   "snippet": "The cuts equate to around 6% of the streaming giant's total workforce worldwide.",
+   "url": "https://www.bbc.co.uk/news/articles/c6zxj0gzk4x4o",
+   "published_at": "2026-10-14T16:47:32Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "5a5d9383de70",
+   "outlet_id": "thehindu",
+   "headline": "Pope Leo XIV undergoes surgery for cancer: What is lung adenocarcinoma?",
+   "snippet": "Pope Leo XIV was elected as the head of the Roman Catholic Church in May 2025.",
+   "url": "https://www.thehindu.com/news/international/pope-leo-xiv-cancer-surgery-current-health-update/article71582161.ece",
+   "published_at": "2026-10-14T03:03:29Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "5ca9c5e4a2a5",
+   "outlet_id": "bbc",
+   "headline": "Student protesters attack government buildings in Tirana",
+   "snippet": "Thousands of students in Albania are calling for better university conditions and job prospects, but buildings have been set on fire in the unrest.",
+   "url": "https://www.bbc.co.uk/news/articles/cq80zk5k2ep4o",
+   "published_at": "2026-10-14T20:29:05Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "5f682cd9f794",
+   "outlet_id": "thenational",
+   "headline": "'World’s oldest known shipwreck' lost more than 4,000 years ago found off Turkey",
+   "snippet": "Archaeologists have identified an ancient shipwreck off Turkey's Mediterranean coast, dating back as far as 4,700 years, which they believe could be the oldest yet discovered. More than 30 ceramic…",
+   "url": "https://www.thenationalnews.com/arts-culture/2026/10/14/worlds-oldest-known-shipwreck-lost-more-than-4000-years-ago-found-off-turkey/",
+   "published_at": "2026-10-14T15:16:00Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "5fe4410e5edc",
+   "outlet_id": "independent",
+   "headline": "MAGA is defending Trump’s new press secretary. His staff isn’t convinced",
+   "snippet": "Insiders worry that Trump’s snap decision to select Zacharia against the advice of his chief of staff echoes mistakes of his first term, writes Andrew Feinberg",
+   "url": "https://www.independent.co.uk/news/world/americas/us-politics/trump-press-secretary-kate-zacharia-maga-b3066968.html",
+   "published_at": "2026-10-14T20:46:11Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "625a573867bb",
+   "outlet_id": "guardian",
+   "headline": "Russia arrests Japanese journalist on allegations of spying",
+   "snippet": "FSB security agency said reporter was arrested on island of Sakhalin, alleging he was collecting information about Russia’s defences Russia has arrested a Japanese journalist on the far east island…",
+   "url": "https://www.theguardian.com/world/2026/oct/14/russia-detains-japanese-journalist-suspicion-spying",
+   "published_at": "2026-10-14T01:05:25Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "6270d8d7d9ce",
+   "outlet_id": "axios",
+   "headline": "Rep. Ilhan Omar under investigation by Jeanine Pirro's office",
+   "snippet": "U.S. Attorney Jeanine Pirro said her office is probing Rep. Ilhan Omar's (D-Minn.) financial disclosures, the day after federal agents searched the congresswoman's Washington, D.C. home. The big…",
+   "url": "https://www.axios.com/2026/10/13/ilhan-omar-investigation-finances-pirro",
+   "published_at": "2026-10-13T20:52:07Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "630b1b83136c",
+   "outlet_id": "nbc",
+   "headline": "Ukraine accuses SpaceX of restricting Starlink, disrupting military amid Trump pressure",
+   "snippet": "Ukrainian officials and military units accused Elon Musk’s SpaceX of throttling a technology at the heart of their battlefield communications and drone operations.",
+   "url": "https://www.nbcnews.com/world/ukraine/ukraine-starlink-restrictions-military-intel-trump-zelenskyy-russia-rcna603412",
+   "published_at": "2026-10-14T12:51:09Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "63effeec8062",
+   "outlet_id": "ecns",
+   "headline": "Xi proposes principles for constructive participation in settling Africa's hotspot issues",
+   "snippet": "Chinese President Xi Jinping on Tuesday put forward four principles for the constructive participation of all parties in the settlement of hotspot issues in Africa, during his meeting with President…",
+   "url": "http://www.ecns.cn/china/politics/2026-10-14/detail-ihfmcrte5285600.shtml",
+   "published_at": "2026-10-14T09:25:31Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "665553ffa79c",
+   "outlet_id": "axios",
+   "headline": "Trump plays Russian roulette on eve of midterms",
+   "snippet": "President Trump is indulging his fondness for Vladimir Putin at a moment of acute political peril, forcing Republicans in the midterms to take cover as he showers Moscow with one-sided concessions…",
+   "url": "https://www.axios.com/2026/10/14/trump-putin-diesel-deal-midterms-russia",
+   "published_at": "2026-10-14T09:00:05Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "66c61051eab6",
+   "outlet_id": "dailymail",
+   "headline": "FBI bashes MS NOW for false report claiming Director Kash Patel had landed in Russia for secret meetings",
+   "snippet": "The FBI ridiculed major US broadcaster MS NOW for falsely reporting that Director Kash Patel visited Russia on Wednesday.",
+   "url": "https://www.dailymail.com/news/article-16209575/fbi-kash-patel-landed-russia.html",
+   "published_at": "2026-10-14T20:36:58Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "6708c99068a6",
+   "outlet_id": "thehindu",
+   "headline": "Sally Rooney's books no longer sold in U.K. over support for banned pro-Palestinian group",
+   "snippet": "“I have made every effort to be honest with the public about my beliefs and intentions and I am wholly prepared to accept the consequences,” the author said in a statement",
+   "url": "https://www.thehindu.com/books/sally-rooneys-books-no-longer-sold-in-uk-over-support-for-banned-pro-palestinian-group/article71585477.ece",
+   "published_at": "2026-10-14T19:39:04Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "676b8214f1d6",
+   "outlet_id": "timesofisrael",
+   "headline": "UN reaffirms push for Lebanon stability as Beirut asks to extend peacekeepers’ mandate",
+   "snippet": "UNIFIL mandate set to end in December after nearly 50 years, prompting concern from Lebanese officials who warn withdrawal will create 'vacuum' and harm regional security",
+   "url": "https://www.timesofisrael.com/un-reaffirms-push-for-lebanon-stability-as-beirut-asks-to-extend-peacekeepers-mandate/",
+   "published_at": "2026-10-14T18:47:00Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "686f128a0bba",
+   "outlet_id": "nyt",
+   "headline": "Saudi Energy Giant Struck as War Spikes Between Houthis and Saudi Arabia",
+   "snippet": "The attack came after the Yemeni militia warned it would attack the headquarters of Aramco. The Saudi-led coalition said it was targeting Houthi capabilities.",
+   "url": "https://www.nytimes.com/2026/10/13/world/middleeast/saudi-arabia-yemen-houthis-aramco-threat.html",
+   "published_at": "2026-10-14T00:56:54Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "6d6ffb4c897c",
+   "outlet_id": "france24",
+   "headline": "Nord Stream may have been lawful target, argue lawyers for Ukrainian accused of bombing",
+   "snippet": "Lawyers for a Ukrainian ex-military officer accused of leading the bombing of Russia's Nord Stream ​pipeline in September 2022 argued at the start of his trial in Germany on Wednesday that \"an…",
+   "url": "https://www.france24.com/en/nord-stream-may-have-been-lawful-target-argue-lawyers-for-ukrainian-accused-of-bombing",
+   "published_at": "2026-10-14T19:56:42Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "6d922984addf",
+   "outlet_id": "france24",
+   "headline": "What is Starshield, SpaceX's military version of Starlink?",
+   "snippet": "Elon Musk’s ⁠SpaceX restricted “military-grade” ​Starlink services overnight into Wednesday, hampering Ukrainian drone strike missions and air defenses, Ukraine reported. In response, Musk said that…",
+   "url": "https://www.france24.com/en/europe/20261014-what-is-starshield-spacex-s-military-version-of-starlink",
+   "published_at": "2026-10-14T20:15:58Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "6d9355dd06ec",
+   "outlet_id": "mirror",
+   "headline": "Student, 23, sentenced to death over social media post that 'insulted' prophet",
+   "snippet": "Accounting student Najmeh Amini, 23, is to be executed for blasphemy after she was involved in anti-regime protests earlier in the year",
+   "url": "https://www.mirror.co.uk/news/world-news/iran-najmeh-amini-death-sentence-37771779",
+   "published_at": "2026-10-14T13:24:09Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "6db351d5e4b7",
+   "outlet_id": "nbc",
+   "headline": "Woman stabbed young son and husband to death at Great Wolf Lodge, police say",
+   "snippet": "Metallica Rose Harrison killed her 3-year-old son and husband before failing to kill herself at popular Pennsylvania water park Great Wolf Lodge, authorities said.",
+   "url": "https://www.nbcnews.com/news/us-news/pennsylvania-woman-stabbed-young-son-husband-death-great-wolf-lodge-wa-rcna603459",
+   "published_at": "2026-10-14T15:22:38Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "6e888c4d598c",
+   "outlet_id": "toi",
+   "headline": "Child among 6 killed in small plane crash in Wisconsin; FAA, NTSB probe underway",
+   "snippet": "Six individuals lost their lives, including a child, after a plane crash in Wisconsin Dells. The small Piper PA-46 was travelling from Kenosha to Menomonie when it went down. Weather conditions at…",
+   "url": "https://timesofindia.indiatimes.com/world/us/child-among-6-killed-in-small-plane-crash-in-wisconsin-faa-ntsb-probe-underway/articleshow/134946355.cms",
+   "published_at": "2026-10-14T16:05:12Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "6eb93cf3eeff",
+   "outlet_id": "thehindu",
+   "headline": "Trump's Ambassador to Greece resigns after allegations of improper conduct",
+   "snippet": "Mr. Trump's administration said on Tuesday (October 13) it had asked her to leave her post after she faced severe criticism over allegations she engaged in improper and possibly illegal conduct…",
+   "url": "https://www.thehindu.com/news/international/trumps-ambassador-to-greece-resigns-after-allegations-of-improper-conduct/article71582055.ece",
+   "published_at": "2026-10-14T02:42:11Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "705c2d655899",
+   "outlet_id": "thenational",
+   "headline": "Sally Rooney can no longer sell books in the UK due to Palestine Action support",
+   "snippet": "Irish novelist Sally Rooney's books will no longer be sold ​in ​the UK after she said she planned to use her royalties to ⁠support the banned campaign group Palestine Action. The bestselling author…",
+   "url": "https://www.thenationalnews.com/news/uk/2026/10/14/sally-rooney-can-no-longer-sell-books-in-the-uk-due-to-palestine-action-support/",
+   "published_at": "2026-10-14T20:08:20Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "7119c1c7e962",
+   "outlet_id": "nypost",
+   "headline": "Stepmom reveals Metallica Rose’s chilling final call with family hours before she stabbed son, husband — and sign she planned killings for weeks",
+   "snippet": "The Pennsylvania mom accused of killing her husband and their 3-year-old son at a Poconos resort showed no signs of trouble in a video call just hours before the attempted murder-suicide.",
+   "url": "https://nypost.com/2026/10/14/us-news/stepmom-reveals-metallica-roses-chilling-final-call-with-family-before-she-stabbed-son-husband-and-the-sign-she-planned-killings-for-weeks/",
+   "published_at": "2026-10-14T20:18:18Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "71fc6da9ed67",
+   "outlet_id": "bbc",
+   "headline": "Kenya confirms second Ebola case - a relative of the first victim",
+   "snippet": "It follows the death last week of a man who had arrived in Kenya after travelling from DR Congo.",
+   "url": "https://www.bbc.co.uk/news/articles/cw5yn8rn04ljo",
+   "published_at": "2026-10-14T17:23:01Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "7221558b5239",
+   "outlet_id": "guardian",
+   "headline": "Volodymyr Zelenskyy feels ‘betrayed’ by Donald Trump over Starlink access",
+   "snippet": "Ukrainian president accused US president of picking the other side over four years of war Volodymyr Zelenskyy has said he feels personally betrayed by Donald Trump after it emerged that Ukraine’s…",
+   "url": "https://www.theguardian.com/world/2026/oct/14/volodymyr-zelenskyy-feels-betrayed-by-donald-trump-over-starlink-access",
+   "published_at": "2026-10-14T21:08:52Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "72d70374ad76",
+   "outlet_id": "independent",
+   "headline": "Pilot issued haunting warning before plane crash killed 6 in Wisconsin",
+   "snippet": "The six-seat, single-engine plane crashed shortly before 10 p.m. in a wooded area near a popular tourist destination",
+   "url": "https://www.independent.co.uk/news/world/americas/wisconsin-plane-crash-ice-buildup-pilot-b3067010.html",
+   "published_at": "2026-10-14T20:58:03Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "73067bdfd2cd",
+   "outlet_id": "mirror",
+   "headline": "Waterford house fire: First picture of couple 'murdered' along with two children",
+   "snippet": "A man and a woman who died in a house fire in Waterford, Ireland, have been named as Philip English and his partner Kim",
+   "url": "https://www.mirror.co.uk/news/world-news/waterford-fire-house-birchwood-estate-37765973",
+   "published_at": "2026-10-14T06:23:47Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "7337b1ba7427",
+   "outlet_id": "thehindu",
+   "headline": "Heavy Russian strikes on Ukraine kill six, cut power in Kyiv",
+   "snippet": "The attacks on multiple regions came after President Volodymyr Zelenskyy said Ukraine had received no warning from Western allies before a Russian strike on a Kyiv power plant.",
+   "url": "https://www.thehindu.com/news/international/heavy-russian-strikes-on-ukraine-kill-six-cut-power-in-kyiv/article71582534.ece",
+   "published_at": "2026-10-14T08:15:46Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "744dc02f3e2b",
+   "outlet_id": "thehindu",
+   "headline": "Ukraine accuses U.S. of helping Russia as missiles hit Kyiv",
+   "snippet": "A senior official in Kyiv confirmed that the United States had in recent days threatened to stop providing intelligence about Russian missile launches that Ukraine uses to thwart attacks. Donald…",
+   "url": "https://www.thehindu.com/news/international/ukraine-accuses-us-of-helping-russia-as-missiles-hit-kyiv/article71585115.ece",
+   "published_at": "2026-10-14T16:20:57Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "75834fca8430",
+   "outlet_id": "axios",
+   "headline": "New inflation warning sign",
+   "snippet": "America's inflation problem is becoming harder to contain, with new evidence Wednesday that price pressures are extending beyond the war-related energy shock rattling the global economy. Why it…",
+   "url": "https://www.axios.com/2026/10/14/inflation-warning-sign-cpi",
+   "published_at": "2026-10-14T16:00:05Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "7809db6abcec",
+   "outlet_id": "fox",
+   "headline": "Pope Leo diagnosed with lung cancer after surgeons remove part of right lung, Vatican says",
+   "snippet": "Pope Leo XIV arrived at Gemelli Hospital in Rome for lung nodule removal after doctors said the growth was identified at a \"very early stage.\" Doctors later confirmed he had a form of lung cancer.",
+   "url": "https://www.foxnews.com/world/pope-leo-diagnosed-lung-cancer-after-surgeons-remove-part-of-right-lung-vatican",
+   "published_at": "2026-10-13T13:24:55Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "78a1e260f35b",
+   "outlet_id": "axios",
+   "headline": "DOJ gave California a voter list, a 48-hour deadline — and a threat of court action",
+   "snippet": "The Trump administration is threatening emergency court action unless California officials investigate potential ineligible voters within 48 hours and set aside ballots from anyone whose citizenship…",
+   "url": "https://www.axios.com/2026/10/14/doj-california-noncitizen-voters-mail-ballots",
+   "published_at": "2026-10-14T18:54:01Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "795f8ed44759",
+   "outlet_id": "scmp",
+   "headline": "Beijing warns Taiwanese not to be ‘two-faced’ after Kevin Tsai attends DPP rally",
+   "snippet": "Beijing has warned Taiwanese people against acting “two-faced” on the issue of “Taiwan independence” after television host Kevin Tsai Kang-yong attended a campaign rally for a Taipei mayoral…",
+   "url": "https://www.scmp.com/news/china/politics/article/3370895/beijing-warns-taiwanese-not-be-two-faced-after-kevin-tsai-attends-dpp-rally",
+   "published_at": "2026-10-14T11:27:37Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "79d475cea3aa",
+   "outlet_id": "bbc",
+   "headline": "Turkish police raid opposition TV station, halting live broadcasts",
+   "snippet": "It is the latest in a series of crackdowns on media critical of the Turkish president and his government.",
+   "url": "https://www.bbc.co.uk/news/articles/crx23y3d970vo",
+   "published_at": "2026-10-14T10:50:11Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "7a9c761ea52d",
+   "outlet_id": "bbc",
+   "headline": "Container ship hit by projectile sinks in Strait of Hormuz, Singapore says",
+   "snippet": "All 21 sailors on the Singapore-flagged GFS Pride were evacuated safely after it was hit by an projectile on Tuesday, maritime authorities say.",
+   "url": "https://www.bbc.co.uk/news/articles/crkg7q97z078o",
+   "published_at": "2026-10-14T15:34:19Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "7ad9d42e56a8",
+   "outlet_id": "independent",
+   "headline": "UK prosecution labels Russell Brand a ruthless sexual predator at opening of his sex assault trial",
+   "snippet": "A British prosecutor has accused Russell Brand of being a “ruthless” sexual predator who assaulted six women over the course of a decade",
+   "url": "https://www.independent.co.uk/news/world/americas/russell-brand-brand-london-southwark-crown-court-associated-press-b3066782.html",
+   "published_at": "2026-10-14T14:58:41Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "7b72793ae30c",
+   "outlet_id": "mirror",
+   "headline": "Six dead, including child, in horror Wisconsin plane crash as aircraft plunges into woods",
+   "snippet": "Six people - including a child - were killed after a small plane crashed in rural Wisconsin on Tuesday night",
+   "url": "https://www.mirror.co.uk/news/us-news/wisconsin-plane-crash-deaths-dellona-37772370",
+   "published_at": "2026-10-14T14:40:46Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "7b94b62e2e63",
+   "outlet_id": "guardian",
+   "headline": "Leaders of India’s Cockroach party jailed for violating ban on protest site",
+   "snippet": "Ashutosh Ranka and Saurav Das will spend spend five days in prison for entering Delhi’s Jantar Mantar – a historic protest site that has been closed by authorities Why Indian voters are on the…",
+   "url": "https://www.theguardian.com/world/2026/oct/14/leaders-of-indias-cockroach-party-jailed-for-violating-ban-on-protest-site",
+   "published_at": "2026-10-14T05:29:23Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "7c0ba1c070fc",
+   "outlet_id": "axios",
+   "headline": "ICE says no to automatic body-cams",
+   "snippet": "ICE is rejecting a Government Accountability Office recommendation for technology that automatically activates body cameras when weapons are drawn and safeguards to ensure agents record arrests…",
+   "url": "https://www.axios.com/2026/10/14/ice-body-cam-automatic-gao-report",
+   "published_at": "2026-10-14T20:42:08Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "7c6d5728dc08",
+   "outlet_id": "bbc",
+   "headline": "US inflation rises more than expected - here's what is happening with prices",
+   "snippet": "The pace of price rises increased to 3.7% in the year to September, driving by higher motor fuel costs.",
+   "url": "https://www.bbc.co.uk/news/articles/cwy8lx3pg4k2o",
+   "published_at": "2026-10-14T15:26:14Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "7fe50d0e71e8",
+   "outlet_id": "nyt",
+   "headline": "Trump Hands Victories to Putin, Who Offers More War in Return",
+   "snippet": "Russia has reaped a diesel deal and an increase in U.S. pressure on Ukraine as President Trump’s political needs align with his longstanding inclinations toward Russia.",
+   "url": "https://www.nytimes.com/2026/10/13/world/europe/russia-putin-trump-diesel-ukraine.html",
+   "published_at": "2026-10-14T05:03:25Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "809605e9f542",
+   "outlet_id": "nypost",
+   "headline": "Rape reported at another elite college’s frat party — as bros cheered on attack, asked ‘when’s my turn’: witness",
+   "snippet": "The alleged assault took place in the early hours of Sunday.",
+   "url": "https://nypost.com/2026/10/14/us-news/rape-reported-at-university-of-chicago-frat-party-as-bros-cheered-on-attack-asked-whens-my-turn-witness/",
+   "published_at": "2026-10-14T21:41:07Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "8118f1ec3328",
+   "outlet_id": "scmp",
+   "headline": "Musk suggests US government behind any slowdown in Ukraine’s Starshield",
+   "snippet": "SpaceX boss Elon Musk said on Wednesday that any disruptions reported by Ukraine in using the Starshield satellite communications system would be the responsibility of the US government, not his…",
+   "url": "https://www.scmp.com/news/world/russia-central-asia/article/3370923/musk-suggests-us-government-behind-any-slowdown-ukraines-starshield",
+   "published_at": "2026-10-14T21:29:05Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "8136cb8e22b0",
+   "outlet_id": "mirror",
+   "headline": "Nuremberg Airport cordoned off by police due to 'possible in-flight emergency'",
+   "snippet": "Police have sealed off Nuremberg Airport in Germany after a plane arriving from Greece was escorted by Eurofighter jets before it landed",
+   "url": "https://www.mirror.co.uk/news/world-news/nuremberg-airport-cordoned-police-due-37766541",
+   "published_at": "2026-10-13T11:05:30Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "821ccf9f90aa",
+   "outlet_id": "guardian",
+   "headline": "Pope Leo’s recovery from lung cancer surgery ‘progressing as planned’",
+   "snippet": "Pontiff has begun walking in his hospital room and is eating normally after operation to remove growth, doctors say Pope Leo’s recovery from a lung cancer operation is progressing as planned, his…",
+   "url": "https://www.theguardian.com/world/2026/oct/14/pope-leo-recovery-lung-cancer-surgery-progressing-as-planned",
+   "published_at": "2026-10-14T15:48:05Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "831620f3c86f",
+   "outlet_id": "cgtn",
+   "headline": "Xi Jinping's key remarks on building Healthy China",
+   "snippet": "Chinese President Xi Jinping has called for efforts to firmly follow a path with Chinese characteristics in developing the country's health programs, to secure decisive progress in the Healthy China…",
+   "url": "https://news.cgtn.com/news/2026-10-13/Xi-Jinping-s-key-remarks-on-building-Healthy-China-1RdmPpe9uzm/p.html",
+   "published_at": "2026-10-13T15:56:50Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "8336662b491f",
+   "outlet_id": "mirror",
+   "headline": "Face of suffering: Vladimir Putin's war on Ukraine's civilians with overnight barrage of missiles",
+   "snippet": "As Ukraine suffers multiple ballistic missile targetin of its capital President Zelensky defies Trump demands to stop deep strike operations against Russia, launching major attack on Moscow",
+   "url": "https://www.mirror.co.uk/news/world-news/ukraine-kyiv-missiles-putin-russia-37770754",
+   "published_at": "2026-10-14T11:11:09Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "83af684300f4",
+   "outlet_id": "nyt",
+   "headline": "Leo XIV’s Lung Cancer Diagnosis Tests a Papacy Still Taking Shape",
+   "snippet": "For a pope who appeared to have time on his side, cancer has raised questions about his longevity and brought a new urgency to his plans for the church.",
+   "url": "https://www.nytimes.com/2026/10/13/world/europe/pope-leo-health-cancer.html",
+   "published_at": "2026-10-14T10:18:57Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "8584cfa989e8",
+   "outlet_id": "independent",
+   "headline": "Trump press secretary Katie Zacharia may have violated California law by calling herself an attorney, group says",
+   "snippet": "Nonprofit watchdog files complaint with State Bar of California after she ‘repeatedly held herself out to the public as entitled to practice law without a license to do so’",
+   "url": "https://www.independent.co.uk/news/world/americas/us-politics/katie-zacharia-press-secretary-attorney-bar-complaint-b3066917.html",
+   "published_at": "2026-10-14T19:54:19Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "86410aa2be98",
+   "outlet_id": "guardian",
+   "headline": "In Ukraine, civilian casualties were already rising. Restrictions on Starlink will only worsen the death toll",
+   "snippet": "Throttling of mobile internet system will affect Kyiv’s air defences more than its strikes on oil refineries. Now Zelenskyy must be hoping that US intel holds In Ukraine the situation was already…",
+   "url": "https://www.theguardian.com/world/2026/oct/14/ukraine-starlink-civilian-casualties-death-toll",
+   "published_at": "2026-10-14T18:54:34Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "879e46507898",
+   "outlet_id": "scmp",
+   "headline": "China chip exports jump 136% to US$45b as AI frenzy jacks up prices",
+   "snippet": "China’s integrated circuit (IC) exports surged 136 per cent year on year in September to US$45 billion, exceeding the 108 per cent growth rate in the first nine months of the year in a sign of the…",
+   "url": "https://www.scmp.com/tech/tech-trends/article/3370858/china-chip-exports-jump-136-us45b-ai-frenzy-jacks-prices",
+   "published_at": "2026-10-14T08:30:11Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "87acddb5d35a",
+   "outlet_id": "bbc",
+   "headline": "Toilet paper and secret recorders: What we know about the arrest of the Saudi OpenAI engineer",
+   "snippet": "Abdulrahman Alfozan had worked for the AI giant for more than a year before he was arrested by the FBI.",
+   "url": "https://www.bbc.co.uk/news/articles/cm04054ykqqqo",
+   "published_at": "2026-10-14T15:54:04Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "8807e44bc21b",
+   "outlet_id": "nyt",
+   "headline": "Japan Protests Russia’s Detention of Journalist Accused of Spying",
+   "snippet": "Tokyo summoned Russia’s ambassador after a Japanese reporter was arrested in Russia’s far east and accused of collecting military intelligence.",
+   "url": "https://www.nytimes.com/2026/10/14/world/asia/japan-protest-russia-detention-journalist.html",
+   "published_at": "2026-10-14T11:30:00Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "88700d69524d",
+   "outlet_id": "thehindu",
+   "headline": "U.S. judge backs CNN, MS Now, Politico access to White House",
+   "snippet": "District Judge Timothy Kelly ruled that the Trump administration must grant the journalists access to the White House while the lawsuit filed by the three outlets against the ban proceeds",
+   "url": "https://www.thehindu.com/news/international/us-judge-backs-cnn-ms-now-politico-access-to-white-house/article71582606.ece",
+   "published_at": "2026-10-14T09:17:06Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "8a832b24a2c4",
+   "outlet_id": "independent",
+   "headline": "Even MAGA are cringing over Katie Zacharia’s press secretary debut",
+   "snippet": "One official described the briefing as ‘brutal,’ while others questioned why Zacharia didn’t take more time to prepare",
+   "url": "https://www.independent.co.uk/news/world/americas/us-politics/katie-zacharia-press-conference-white-house-b3066713.html",
+   "published_at": "2026-10-14T15:43:27Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "8c6f20393425",
+   "outlet_id": "axios",
+   "headline": "White House pushes out Kimberly Guilfoyle after misconduct reports",
+   "snippet": "Kimberly Guilfoyle, the U.S. ambassador to Greece, announced her resignation Tuesday, shortly after the White House asked her to step down and following reports alleging misconduct before and during…",
+   "url": "https://www.axios.com/2026/10/13/kimberly-guilfoyle-greece-ambassador-resigns-trump",
+   "published_at": "2026-10-13T16:24:13Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "8d62f7aa488c",
+   "outlet_id": "sky",
+   "headline": "Trump posts video of UK tiger attack - as victim's family say online content causing 'severe distress'",
+   "snippet": "The family of a man killed by a tiger have said \"deeply offensive content is causing them severe distress\".",
+   "url": "https://news.sky.com/story/man-killed-by-tiger-at-uk-wildlife-park-pictured-13598842",
+   "published_at": "2026-10-13T12:57:00Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "8d89302d3eda",
+   "outlet_id": "japantimes",
+   "headline": "U.K. and Indian economies set to overtake Japan, IMF says",
+   "snippet": "A weak yen and rising costs for Japanese households have India and the U.K. on course to overtake Japan in GDP next year.",
+   "url": "https://www.japantimes.co.jp/business/2026/10/14/economy/japan-economy-6th/",
+   "published_at": "2026-10-14T06:07:00Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "8dac459bc729",
+   "outlet_id": "thenational",
+   "headline": "Middle East latest: Houthis claim attacks on Saudi Aramco sites and Riyadh airport",
+   "snippet": "(FILES) In this file handput photo provided by Saudi oil giant Aramco on February 11, 2018, shows its Dhahran oil plants, in eastern Saudi Arabia. - The climate crisis threatens a double blow for…",
+   "url": "https://www.thenationalnews.com/news/mena/2026/10/14/live-aramco-fire-houthis-saudi-arabia/",
+   "published_at": "2026-10-14T18:04:11Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "8dbc1dbffb92",
+   "outlet_id": "thehindu",
+   "headline": "Saudi says Houthi attacks sparked Aramco fire, wounded 4 in Riyadh",
+   "snippet": "A Saudi Energy Ministry official said an administrative building belonging to oil giant Aramco in Dhahran was struck on Tuesday (October 13, 2026) evening, resulting in a “limited fire” but “no…",
+   "url": "https://www.thehindu.com/news/international/saudi-says-houthi-attacks-sparked-aramco-fire-wounded-4-in-riyadh/article71582466.ece",
+   "published_at": "2026-10-14T07:22:38Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "8deae52ff69a",
+   "outlet_id": "nyt",
+   "headline": "Pope Leo Is in ‘Good Mood’ After Cancer Surgery, Vatican Says: What to Know",
+   "snippet": "Pope Leo XIV was diagnosed with a common form of lung cancer. The Vatican said that he was walking and receiving therapy after an operation to remove a cancerous nodule.",
+   "url": "https://www.nytimes.com/2026/10/14/world/europe/pope-leo-xiv-cancer-diagnosis.html",
+   "published_at": "2026-10-14T16:32:23Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "8eda98ccd11b",
+   "outlet_id": "thesun",
+   "headline": "‘He treated me like an animal’…Every claim made at Brand ‘rape’ trial as he ‘abused 6 women to satisfy sexual appetite’",
+   "snippet": "RUSSELL Brand's rape trial began today with allegations of \"Basil Fawlty silly walks\" and the comic being painted as a \"ruthless and manipulative\" predator. Brand, 51, is accused of forcing six…",
+   "url": "https://www.thesun.co.uk/news/40686819/russell-brand-rape-trial-all-claims/",
+   "published_at": "2026-10-14T20:30:11Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "8f205afcf3de",
+   "outlet_id": "nyt",
+   "headline": "MI5 Chief Warns of Escalating Hybrid Threats From Iran and Russia on British Soil",
+   "snippet": "The head of Britain’s domestic security agency accused Tehran and Moscow of escalating their hybrid campaigns in the U.K., and called Iran-led attacks on Jewish communities “sickening.”",
+   "url": "https://www.nytimes.com/2026/10/13/world/europe/mi5-uk-threat-iran-russia.html",
+   "published_at": "2026-10-13T16:04:04Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "90561b3ef4f4",
+   "outlet_id": "aljazeera",
+   "headline": "Mexico to force Meta, TikTok, and X to better protect minors on platform",
+   "snippet": "Mexico will require the digital platforms to protect minors from violent and sexual content.",
+   "url": "https://www.aljazeera.com/news/2026/10/14/mexico-to-force-meta-tiktok-and-x-to-better-protect-minors-on-platform",
+   "published_at": "2026-10-14T20:27:41Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "924d02395724",
+   "outlet_id": "thenational",
+   "headline": "Zelenskyy in London as Burnham promises delicate Trump diplomacy",
+   "snippet": "Ukraine’s President Volodymyr Zelenskyy met with Prime Minister Andy Burnham in London on Wednesday as he attempted to shore up European support for the war. Despite battlefield advances by…",
+   "url": "https://www.thenationalnews.com/news/uk/2026/10/14/zelenskyy-in-london-as-burnham-promises-delicate-trump-diplomacy/",
+   "published_at": "2026-10-14T17:30:00Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "9267dead62ca",
+   "outlet_id": "scmp",
+   "headline": "Sally Rooney books can’t be sold in UK amid Palestine Action ban, publisher says",
+   "snippet": "Irish author Sally Rooney can no longer sell her books in the UK because of her support for the activist group Palestine Action, her publisher Faber said on Wednesday. Rooney has previously…",
+   "url": "https://www.scmp.com/news/world/europe/article/3370918/sally-rooney-books-cant-be-sold-uk-amid-palestine-action-ban-publisher-says",
+   "published_at": "2026-10-14T16:41:07Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "9282e988c2f7",
+   "outlet_id": "huffpost",
+   "headline": "Saudi Ministry Of Energy Reports Limited Fire In Building At Aramco Compound Targeted In Attack",
+   "snippet": "The Saudi Ministry of Energy says a limited fire broke out in an administrative building in Aramco, one of the world’s largest oil facilities, that was targeted in the country's Eastern Province.",
+   "url": "https://www.huffpost.com/entry/saudi-arabia-yemen_n_6acee88ce4b064943479761a",
+   "published_at": "2026-10-14T02:43:57Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "94fd233992de",
+   "outlet_id": "aljazeera",
+   "headline": "World’s oldest known shipwreck found in Turkiye",
+   "snippet": "The world’s oldest known shipwreck has been discovered off Turkiye’s coast, dating back nearly 5,000 years.",
+   "url": "https://www.aljazeera.com/video/newsfeed/2026/10/14/worlds-oldest-known-shipwreck-found-in-turkiye",
+   "published_at": "2026-10-14T19:17:48Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "95626059154e",
+   "outlet_id": "nyt",
+   "headline": "Ukraine Says It Received No Intelligence About Strikes 2 Nights in a Row",
+   "snippet": "Asked about apparent U.S. threats to cut off intelligence sharing with Kyiv, which can warn of Russian aerial attacks, President Trump said information continued to flow.",
+   "url": "https://www.nytimes.com/2026/10/13/world/europe/ukraine-trump-intelligence.html",
+   "published_at": "2026-10-14T13:11:17Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "963014c009df",
+   "outlet_id": "independent",
+   "headline": "Trump insiders fear Kimberly Guilfoyle will release her ‘burn book’ with all the dirt on the president’s family",
+   "snippet": "Kimberly Guilfoyle’s proximity to the first family over the years has Trump insiders worried after her ouster, according to a report",
+   "url": "https://www.independent.co.uk/news/world/americas/us-politics/kimberly-guilfoyle-trump-family-secrets-b3066775.html",
+   "published_at": "2026-10-14T19:38:09Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "96b1376e2b37",
+   "outlet_id": "aljazeera",
+   "headline": "Russia attack hits Kyiv after reported intelligence lapse",
+   "snippet": "",
+   "url": "https://www.aljazeera.com/video/newsfeed/2026/10/14/russia-attack-hits-kyiv-after-reported-intelligence-lapse",
+   "published_at": "2026-10-14T20:14:57Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "980daf4d9d20",
+   "outlet_id": "moscowtimes",
+   "headline": "Moscow Hails Trump Diesel Deal, Promises Direct Exports to U.S.",
+   "snippet": "Russian state agencies and oil companies are now finalizing supply contracts with U.S. counterparts, Deputy Prime Minister Alexander Novak said.",
+   "url": "https://www.themoscowtimes.com/2026/10/14/moscow-hails-trump-diesel-deal-says-exports-will-reach-us-a93977",
+   "published_at": "2026-10-14T13:11:00Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "988e9a516e2a",
+   "outlet_id": "huffpost",
+   "headline": "Poland Blames Starlink Sabotage On Russia",
+   "snippet": "Two Turkish citizens have been arrested in connection with the suspected act of sabotage, authorities said.",
+   "url": "https://www.huffpost.com/entry/poland-blames-starlink-sabotage-on-russia_n_6ace11c4e4b0649434775c30",
+   "published_at": "2026-10-13T11:15:45Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "9898521551b9",
+   "outlet_id": "independent",
+   "headline": "Netflix layoffs to cut 1,000 jobs as CEOs tell employees ‘business is strong and growing’",
+   "snippet": "The streaming pioneer had approximately 16,000 staff members at the end of last year",
+   "url": "https://www.independent.co.uk/news/world/americas/netflix-layoffs-streaming-job-cuts-b3066776.html",
+   "published_at": "2026-10-14T17:42:59Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "99d7853460c9",
+   "outlet_id": "nypost",
+   "headline": "‘Betrayed’ horse-drawn carriage drivers fear homelessness as NYC moves to ban industry",
+   "snippet": "Who exactly is being sent out to pasture?",
+   "url": "https://nypost.com/2026/10/14/us-news/betrayed-horse-drawn-carriage-drivers-fear-homelessness-as-nyc-moves-to-ban-industry/",
+   "published_at": "2026-10-14T21:17:23Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "9ab69516ca87",
+   "outlet_id": "nypost",
+   "headline": "White House investigating Alina Habba’s claim that $6 million donation went missing under Ric Grenell’s leadership at Kennedy Center",
+   "snippet": "A bitter feud has erupted among President Trump's close allies as Alina Habba accuses Ric Grenell of failing to deposit millions of dollars donated by her Turkish billionaire husband to the Kennedy…",
+   "url": "https://nypost.com/2026/10/14/us-news/alina-habba-accuses-ric-grenell-of-failing-to-deposit-millions-donated-by-her-husband-to-the-kennedy-center/",
+   "published_at": "2026-10-14T20:15:50Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "9bdb44d13f1b",
+   "outlet_id": "thehindu",
+   "headline": "Iran-backed Houthis strike Saudi oil company Aramco's headquarters, officials say",
+   "snippet": "There were no casualties in the attack, which the officials said damaged the building's top three floors",
+   "url": "https://www.thehindu.com/news/international/iran-backed-houthis-strike-saudi-oil-company-aramcos-headquarters/article71585469.ece",
+   "published_at": "2026-10-14T19:19:10Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "9be779b7a63c",
+   "outlet_id": "independent",
+   "headline": "Woman stabs her toddler and husband to death at Great Wolf Lodge family water park resort",
+   "snippet": "‘I was supposed to have my happy family,’ the woman said in the ambulance",
+   "url": "https://www.independent.co.uk/news/world/americas/crime/metallica-harrison-great-wolf-lodge-b3066762.html",
+   "published_at": "2026-10-14T16:01:22Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "9c70289d4853",
+   "outlet_id": "thesun",
+   "headline": "Trump has betrayed us, Zelensky claims as he reveals Ukraine is ‘losing’ America & diesel deal will bring more death",
+   "snippet": "VOLODYMYR Zelensky has accused Donald Trump of betraying Ukraine and warned Kyiv is \"losing\" the US. The Ukrainian president hit out at his American counterpart's diesel deal with Vladimir Putin…",
+   "url": "https://www.thesun.co.uk/news/40689001/zelensky-trump-betrayal-ukraine-starlink-death/",
+   "published_at": "2026-10-14T18:53:29Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "9ca0cc3358e3",
+   "outlet_id": "thehindu",
+   "headline": "Israeli settlers set fire to mosque in occupied West Bank",
+   "snippet": "Israel’s military said that soldiers were dispatched to Mikhmas following a report of graffiti and arson at the mosque, as well as damage to a vehicle",
+   "url": "https://www.thehindu.com/news/international/israeli-settlers-set-fire-to-mosque-in-occupied-west-bank/article71584999.ece",
+   "published_at": "2026-10-14T15:55:34Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "9cba2ddf1a8f",
+   "outlet_id": "france24",
+   "headline": "Ukraine asking US, SpaceX and NATO to clarify Starlink limitations",
+   "snippet": "⁠Ukraine is ​in contact ​with the US, SpaceX and NATO to seek ​clarification ‌over ⁠limitations imposed on its access ‌to the Starlink satellite ⁠internet system, a source in the ​country's Defence…",
+   "url": "https://www.france24.com/en/video/20261014-ukraine-asking-us-spacex-and-nato-to-clarify-starlink-limitations",
+   "published_at": "2026-10-14T13:52:20Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "9cbee2163641",
+   "outlet_id": "thehindu",
+   "headline": "Russian diesel not for us, but for world markets: Trump",
+   "snippet": "That's a diesel deal. Not for us. That's being released into the world. That's not being released to us, says U.S. President Donald Trump",
+   "url": "https://www.thehindu.com/news/international/russian-diesel-not-for-us-but-for-world-markets-trump/article71582149.ece",
+   "published_at": "2026-10-14T02:46:44Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "9e6a861a3549",
+   "outlet_id": "bbc",
+   "headline": "Why is Starlink internet so important on the battlefield in Ukraine?",
+   "snippet": "It is the \"backbone of military communications in Ukraine\" that provides vital high-speed internet to forces across the country.",
+   "url": "https://www.bbc.co.uk/news/articles/cqkgk4zg54reo",
+   "published_at": "2026-10-14T19:52:04Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "a23a265225e5",
+   "outlet_id": "bbc",
+   "headline": "Why Zelensky's meeting with Burnham matters",
+   "snippet": "Prime Minister Andy Burnham welcomed President Zelensky to Downing Street on Wednesday, as Ukraine's leader looks to shore up his European allies five years into Russia's war on Ukraine.",
+   "url": "https://www.bbc.co.uk/news/videos/c65yngxdzdd5o",
+   "published_at": "2026-10-14T20:41:03Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "a26f09c1f43c",
+   "outlet_id": "ecns",
+   "headline": "China, Botswana establish comprehensive strategic cooperative partnership",
+   "snippet": "During their talks in Beijing on Tuesday, Chinese President Xi Jinping and Botswana's President Duma Gideon Boko announced the elevation of bilateral relations to a comprehensive strategic…",
+   "url": "http://www.ecns.cn/china/politics/2026-10-14/detail-ihfmcrte5285588.shtml",
+   "published_at": "2026-10-14T09:19:30Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "a60791a91b8a",
+   "outlet_id": "axios",
+   "headline": "Bank of America hit with $1.2 billion penalty over money laundering allegations",
+   "snippet": "The Treasury Department on Tuesday announced more than $1.2 billion in penalties against Bank of America for years of failures to report suspicious transactions and address shortcomings in its…",
+   "url": "https://www.axios.com/2026/10/13/treasury-bank-america-fine",
+   "published_at": "2026-10-13T21:03:58Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "a702a4b15c80",
+   "outlet_id": "dw",
+   "headline": "How Trump's diesel deal with Russia will impact the United States and Ukraine",
+   "snippet": "US President Trump's diesel deal with Russia has alarmed Ukraine and its allies. What is he hoping to achieve at home, and what does the deal mean for Kyiv and Moscow?",
+   "url": "https://www.dw.com/en/how-trump-s-diesel-deal-with-russia-will-impact-the-united-states-and-ukraine/a-79658596?maca=en-rss-en-world-4025-xml-mrss",
+   "published_at": "2026-10-14T17:55:00Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "a7eda0f71f79",
+   "outlet_id": "scmp",
+   "headline": "India jails ‘cockroach’ leaders over protests against alleged voter roll manipulation",
+   "snippet": "Two leaders of India’s youth-led Cockroach Janta Party (CJP) were remanded in custody for five days on Wednesday, as police ratcheted up efforts to clamp down on anti-election commission protests…",
+   "url": "https://www.scmp.com/news/asia/south-asia/article/3370868/india-jails-cockroach-leaders-over-protests-against-alleged-voter-roll-manipulation",
+   "published_at": "2026-10-14T08:48:44Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "a852e44e5606",
+   "outlet_id": "axios",
+   "headline": "Pope Leo diagnosed with lung cancer",
+   "snippet": "Pope Leo has been diagnosed with lung cancer, the Vatican said Tuesday. Why it matters: The Vatican disclosed the pontiff's health news just hours after he underwent surgery to remove the lower lobe…",
+   "url": "https://www.axios.com/2026/10/13/pope-leo-lung-nodule-surgery-successful",
+   "published_at": "2026-10-13T20:26:59Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "aa34fbb1e609",
+   "outlet_id": "bbc",
+   "headline": "Musk says any limits on Ukraine's Starlink access down to US, not his firm",
+   "snippet": "Ukraine says Starlink access has improved but it is still facing speed limits which are disrupting its battlefield \"missions\".",
+   "url": "https://www.bbc.co.uk/news/articles/c8wy9veedgygo",
+   "published_at": "2026-10-14T20:55:24Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "aa88b8e82fd5",
+   "outlet_id": "independent",
+   "headline": "Cornell president admits he never followed up on gang rape allegation ahead of no-confidence debate",
+   "snippet": "Cornell University President Michael Kotlikoff acknowledged he never followed up on a student’s report of being gang raped at a fraternity house in 2024",
+   "url": "https://www.independent.co.uk/news/world/americas/cornell-the-new-york-times-kathy-hochul-letitia-james-grammy-b3066924.html",
+   "published_at": "2026-10-14T18:28:23Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "ab6c893ed260",
+   "outlet_id": "ecns",
+   "headline": "China's foreign trade volume grows by 18.8% to $5.9 trillion in first three quarters",
+   "snippet": "China's foreign trade in yuan-denominated terms rose 18.8 percent year-on-year to 39.94 trillion yuan ($5.9 trillion) in the first three quarters of 2026, official data showed on Wednesday.",
+   "url": "http://www.ecns.cn/cns-wire/2026-10-14/detail-ihfmcrte5286241.shtml",
+   "published_at": "2026-10-14T15:28:31Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "ad779bca518f",
+   "outlet_id": "independent",
+   "headline": "Trump rates on-off pal Elon Musk’s intelligence in Arizona rally: ‘He has a little problem’",
+   "snippet": "Musk has donated hundreds of millions of dollars to help Republicans win races in the upcoming midterm elections",
+   "url": "https://www.independent.co.uk/news/world/americas/us-politics/trump-rally-arizona-elon-musk-donations-b3067014.html",
+   "published_at": "2026-10-14T21:57:10Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "ae105c1e7a09",
+   "outlet_id": "axios",
+   "headline": "Democrats fear \"more October surprises\" after \"bullshit\" raid on Ilhan Omar's home",
+   "snippet": "Congressional Democrats' private text chains lit up with fear and anger on Monday after Department of Homeland Security agents searched Rep. Ilhan Omar's (D-Minn.) home in Washington, D.C. Why it…",
+   "url": "https://www.axios.com/2026/10/13/ilhan-omar-raid-democrats-reaction-midterms-2026",
+   "published_at": "2026-10-13T23:25:36Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "ae9f1cb9df51",
+   "outlet_id": "thesun",
+   "headline": "Pope’s brother – who also has cancer – says Leo’s disease ‘caught early’ as Pontiff recovers from surgery",
+   "snippet": "POPE Leo’s lung cancer was caught in its early stages as his brother says he remains optimistic following the pontiff’s surgery. Doctors discovered a lung adenocarcinoma – a common form of cancer…",
+   "url": "https://www.thesun.co.uk/news/40690461/pope-brother-cancer-caught-early/",
+   "published_at": "2026-10-14T20:57:05Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "b3c601ff6407",
+   "outlet_id": "france24",
+   "headline": "'Dark day for Turkey': Govt takes control of most-watched news channel",
+   "snippet": "Police raided Turkey's most-watched news channel, Halk TV, early Wednesday, halting broadcasts and installing a government-appointed administrator in the latest move against pro-opposition media…",
+   "url": "https://www.france24.com/en/video/20261014-dark-day-for-turkey-govt-takes-control-of-most-watched-news-channel",
+   "published_at": "2026-10-14T13:47:44Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "b54bd06c4870",
+   "outlet_id": "nyt",
+   "headline": "As Pope Leo Recovers From Surgery, Messages of Support Abound at Rome Hospital",
+   "snippet": "The pontiff, 71, is expected to spend about a week in the hospital recovering from surgery that found lung cancer. Messages of support have flooded in from far and wide.",
+   "url": "https://www.nytimes.com/2026/10/14/world/europe/pope-leo-surgery-cancer-hospital-rome.html",
+   "published_at": "2026-10-14T15:42:26Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "b5cc7aac758d",
+   "outlet_id": "axios",
+   "headline": "Ukraine's Starlink restrictions raise suspicions of Musk, Trump retaliation",
+   "snippet": "The rupture between President Trump and Ukrainian President Volodymyr Zelensky over last week's diesel deal deepened Wednesday after an Elon Musk-owned satellite system used by Ukraine unexpectedly…",
+   "url": "https://www.axios.com/2026/10/14/ukraine-starlink-zelensky-spacex-musk-trump",
+   "published_at": "2026-10-14T20:19:27Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "b670ac647ed2",
+   "outlet_id": "thesun",
+   "headline": "Apocalyptic flash floods rip through Greek holiday islands leaving one dead as roads turn into rivers & cars swept away",
+   "snippet": "APOCALYPTIC flash floods ripped through Greek holiday hotspots leaving one dead as roads turned into rivers and cars were swept away. The 62-year-old was found dead off the coast of Rhodes after…",
+   "url": "https://www.thesun.co.uk/news/40686389/deadly-storm-batters-greek-island/",
+   "published_at": "2026-10-14T16:37:39Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "b791b3bfaeb7",
+   "outlet_id": "independent",
+   "headline": "Ship carrying 2,500 containers sinks after hitting mine in Strait of Hormuz, claim Iran’s Guards",
+   "snippet": "A vessel carrying more than 2,500 containers is reported to have caught fire and sunk after hitting a naval mine in the 24-mile Strait of Hormuz",
+   "url": "https://www.independent.co.uk/news/world/middle-east/strait-hormuz-ship-sinks-iran-b3066513.html",
+   "published_at": "2026-10-14T15:45:31Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "b912ba2e9dc2",
+   "outlet_id": "independent",
+   "headline": "Trump rebuked by judge who cites Dr. Seuss in DC golf course ruling: ‘Just ask the Lorax’",
+   "snippet": "Workers cut down and bulldozed hundreds of trees because the president ‘demands haste,’ according to Judge Ana C Reyes",
+   "url": "https://www.independent.co.uk/news/world/americas/us-politics/trump-golf-course-trees-lorax-dr-seuss-b3066795.html",
+   "published_at": "2026-10-14T18:29:35Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "b9b19817358d",
+   "outlet_id": "cgtn",
+   "headline": "IMF flags risks to global markets from war, debt and AI correction",
+   "snippet": "The International Monetary Fund flagged several significant risks to growth and financial stability in their latest World Economic Outlook report",
+   "url": "https://newseu.cgtn.com/news/2026-10-13/IMF-flags-risks-to-global-markets-from-war-debt-and-AI-correction-1Rdrja1ny1y/p.html",
+   "published_at": "2026-10-13T15:22:09Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "ba5c639d9437",
+   "outlet_id": "france24",
+   "headline": "Cornell University bans fraternity parties after alleged gang rape",
+   "snippet": "Cornell University will ban parties and social events at fraternity houses until the end of the academic year, its president said on Tuesday, responding to the outcry over an alleged ​gang rape on…",
+   "url": "https://www.france24.com/en/video/20261014-cornell-university-bans-fraternity-parties-after-alleged-gang-rape",
+   "published_at": "2026-10-14T13:55:11Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "bb4ae9e69a92",
+   "outlet_id": "toi",
+   "headline": "Kimberly Guilfoyle will bring down Trump family after her shocking ouster, insiders aware of her 'burn book' fear",
+   "snippet": "",
+   "url": "https://timesofindia.indiatimes.com/world/us/kimberly-guilfoyle-will-bring-down-trump-family-after-her-shocking-ouster-insiders-aware-of-her-burn-book-fear/articleshow/134947874.cms",
+   "published_at": "2026-10-14T17:28:17Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "bc3190944e0c",
+   "outlet_id": "thehindu",
+   "headline": "MI5 chief says Iran targeting military sites, suspected plot at RAF Fairford 'not unique'",
+   "snippet": "Ken McCallum, who leads the UK's domestic security service, said Tehran is seeking to intensify its attacks in Britain beyond the traditional targets of Iranians opposed to the country's Islamic…",
+   "url": "https://www.thehindu.com/news/international/mi5-chief-says-iran-targeting-military-sites-suspected-plot-at-raf-fairford-not-unique/article71580827.ece",
+   "published_at": "2026-10-13T16:29:47Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "bd564ab2b7f8",
+   "outlet_id": "scmp",
+   "headline": "Bank of America fined US$1.21 billion as US flags suspected Chinese money laundering",
+   "snippet": "Bank of America, the second-largest US bank, failed to promptly report hundreds of millions of dollars in suspicious transactions bearing signs of Chinese money-laundering networks, US regulators…",
+   "url": "https://www.scmp.com/news/china/diplomacy/article/3370920/bank-america-fined-us121-billion-us-flags-suspected-chinese-money-laundering",
+   "published_at": "2026-10-14T17:47:33Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "bd72fad1fe78",
+   "outlet_id": "thehindu",
+   "headline": "Pope Leo has lung cancer, lower lobe of right lung removed: Vatican",
+   "snippet": "Pope Leo XIV underwent surgery to remove a lung nodule and the Vatican said the operation was completed “successfully, on schedule and as planned”",
+   "url": "https://www.thehindu.com/news/international/pope-leo-has-lung-cancer-lower-lobe-of-right-lung-removed-vatican/article71581183.ece",
+   "published_at": "2026-10-14T04:43:26Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "be89d04bea91",
+   "outlet_id": "huffpost",
+   "headline": "Iran-Backed Houthis Struck Saudi Oil Giant Aramco's Executive Offices, Officials Say",
+   "snippet": "The strike marks the latest demonstration of the Houthis’ ability to attack high-profile targets.",
+   "url": "https://www.huffpost.com/entry/riyadh-explosions-houthi-rebels_n_6acf5645e4b08a0fe85498f8",
+   "published_at": "2026-10-14T10:20:19Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "bf93a14fe9ae",
+   "outlet_id": "aljazeera",
+   "headline": "World’s oldest shipwreck found off coast of Turkiye",
+   "snippet": "Clay analysis traces recovered storage jars to early history workshops operating across the Jordan Valley.",
+   "url": "https://www.aljazeera.com/news/2026/10/14/worlds-oldest-shipwreck-found-off-coast-of-turkiye",
+   "published_at": "2026-10-14T20:33:20Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "c1a3965c021a",
+   "outlet_id": "bbc",
+   "headline": "Watch: Block of flats destroyed in Russian strikes on Ukraine",
+   "snippet": "BBC Ukraine Correspondent Dan Johnson is in Kyiv, where at least three people were killed in overnight strikes.",
+   "url": "https://www.bbc.co.uk/news/videos/cmx280x092x7o",
+   "published_at": "2026-10-14T09:25:03Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "c27a18d40518",
+   "outlet_id": "dailymail",
+   "headline": "Sally Rooney's books are no longer available in the UK due to her backing for Palestine Action",
+   "snippet": "The bestselling Irish writer has been a vocal supporter of Palestine Action, including after it was proscribed by the British government under terrorism laws last year.",
+   "url": "https://www.dailymail.com/news/article-16210053/Sally-Rooneys-books-no-longer-available-UK-Palestine-Action.html",
+   "published_at": "2026-10-14T21:48:32Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "c31b4298f437",
+   "outlet_id": "france24",
+   "headline": "Ukraine accuses SpaceX of crippling military missions as ties with US worsen",
+   "snippet": "Ukraine accused Elon Musk's SpaceX on Wednesday of limiting Starlink services, crippling its drones, as Russian missiles knocked out power stations in attacks President Volodymyr Zelensky called…",
+   "url": "https://www.france24.com/en/video/20261014-ukraine-accuses-spacex-of-crippling-military-missions-as-ties-with-us-worsen",
+   "published_at": "2026-10-14T13:57:22Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "c39e008ee990",
+   "outlet_id": "dailymail",
+   "headline": "Humiliation for new press secretary Katie Zacharia as brutal texts reveal she was 'set up to fail': Read messages being sent around the White House after her 'dumpster fire' debut",
+   "snippet": "Katie Zacharia hadn't even left the White House podium after her first on-camera press briefing when her colleagues started knifing her.",
+   "url": "https://www.dailymail.com/news/article-16206615/katie-zacharia-press-secretary-trump-white-house.html",
+   "published_at": "2026-10-14T20:46:15Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "c4345e4dc2c2",
+   "outlet_id": "toi",
+   "headline": "'When I moved to China': Major row over Katie Zacharia's calling herself a lawyer; only citizens can get a license to practise law in China",
+   "snippet": "",
+   "url": "https://timesofindia.indiatimes.com/world/us/when-i-moved-to-china-major-row-over-katie-zacharias-calling-herself-a-lawyer-only-citizens-can-get-a-license-to-practise-law-in-china/articleshow/134950210.cms",
+   "published_at": "2026-10-14T18:53:57Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "c461c807b973",
+   "outlet_id": "thesun",
+   "headline": "Brit soldier who had ‘medieval’ cannon & explosives at home among huge range of weapons is jailed",
+   "snippet": "A SOLDIER has been jailed after cops found a “homemade cannon” and explosives at his home while promoting extreme right-wing views. British Army chef, Mark Broadhurst, was arrested in 2024 after a…",
+   "url": "https://www.thesun.co.uk/news/40689132/brit-soldier-jailed-medieval-cannon-explosives/",
+   "published_at": "2026-10-14T20:19:56Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "c555dc566635",
+   "outlet_id": "thehindu",
+   "headline": "French unions say 480,000 people took part in pro-student protests",
+   "snippet": "French authorities have not yet given their own estimate for the demonstrations",
+   "url": "https://www.thehindu.com/news/international/french-unions-say-480000-people-took-part-in-pro-student-protests/article71580724.ece",
+   "published_at": "2026-10-13T15:59:15Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "c56e30a52d86",
+   "outlet_id": "scmp",
+   "headline": "Nord Stream trial: Russia used pipelines as ‘weapon’, defence says",
+   "snippet": "A lawyer for a Ukrainian accused of blowing up the Nord Stream pipelines supplying Russian gas to western Europe said on Wednesday that Moscow used the network to exert political and economic…",
+   "url": "https://www.scmp.com/news/world/russia-central-asia/article/3370911/ukrainian-accused-nord-stream-pipeline-sabotage-goes-trial-germany",
+   "published_at": "2026-10-14T13:43:17Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "c621f2917eb4",
+   "outlet_id": "mirror",
+   "headline": "MI5 warning UK faces multiple terror attack threats on post 9/11 scale, says spy chief",
+   "snippet": "Britain faces multiple threats from terror, Russia and Iran state attacks, cyber security and evil attempts to push division into our communities, says MI5 chief in stunning annual speech",
+   "url": "https://www.mirror.co.uk/news/world-news/mi5-spy-uk-security-threat-37766745",
+   "published_at": "2026-10-13T12:00:32Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "c66aebab48f7",
+   "outlet_id": "aljazeera",
+   "headline": "How six Ukrainian divers could have blown up Russia’s $20bn pipelines",
+   "snippet": "A Ukrainian military officer is on trial in Germany over an act of sabotage that remained unsolved for years.",
+   "url": "https://www.aljazeera.com/video/2026/10/14/aje-onl-pp-nord-stream-141125",
+   "published_at": "2026-10-14T18:00:44Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "c7d9175fad63",
+   "outlet_id": "bbc",
+   "headline": "Saudi employee charged with planting recording device in OpenAI office",
+   "snippet": "Prosecutors say the device, wrapped in toilet paper, was found inserted in a USB port on the back of a TV in an executive conference room.",
+   "url": "https://www.bbc.co.uk/news/articles/cwg5jq4vlddzo",
+   "published_at": "2026-10-13T21:42:49Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "cacd22e65a57",
+   "outlet_id": "mirror",
+   "headline": "NATO fighter jets scrambled as Russia launches massive drone attack on Ukraine",
+   "snippet": "NATO has been forced to scramble fighter jets after Russia launched another huge overnight drone assault on Ukraine, triggering fresh air alerts along the alliance's eastern flank",
+   "url": "https://www.mirror.co.uk/news/world-news/nato-fighter-jets-scrambled-russia-37770700",
+   "published_at": "2026-10-14T10:26:14Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "cd62c31d7fef",
+   "outlet_id": "thesun",
+   "headline": "His killer is jailed – but is Tupac ALIVE? All the ‘proof’ that has many fans convinced…& why number 7 is key to mystery",
+   "snippet": "For almost 30 years, the murder of rap superstar Tupac Shakur went unsolved. This week, former gang boss Duane “Keefe D” Davis was jailed for 40 years for orchestrating the 1996 killing, apparently…",
+   "url": "https://www.thesun.co.uk/news/40682830/tupac-alive-proof-number-seven-key/",
+   "published_at": "2026-10-14T15:17:03Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "cef9f020c2dc",
+   "outlet_id": "telegraph",
+   "headline": "Second Ebola case confirmed in Kenya",
+   "snippet": "The patient is related to a man who died in Nairobi last week – thought to be the country’s first-ever case",
+   "url": "https://www.telegraph.co.uk/global-health/science-and-disease/second-ebola-case-confirmed-in-kenya/",
+   "published_at": "2026-10-14T16:41:08Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "cffa69fe4dc8",
+   "outlet_id": "thehindu",
+   "headline": "Japanese journalist arrested in Russia's Sakhalin region on spying charges",
+   "snippet": "The arrest comes amid a spike in tensions between Russia and Japan following Putin's August trip to the Kuril Islands, the Moscow-controlled Pacific archipelago that is claimed by both countries",
+   "url": "https://www.thehindu.com/news/international/japanese-journalist-arrested-in-russias-sakhalin-region-on-spying-charges/article71582418.ece",
+   "published_at": "2026-10-14T06:22:34Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "d200cfba7ded",
+   "outlet_id": "nyt",
+   "headline": "Kimberly Guilfoyle’s Rise and Fall as Trump’s Ambassador to Greece",
+   "snippet": "President Trump cut her loose after damaging news reports about her tenure as ambassador to Greece. Once a prominent Trump insider, she suggested she will now fight to defend her reputation.",
+   "url": "https://www.nytimes.com/2026/10/13/us/politics/kimberly-guilfoyle-resigns-trump-ambassador-greece.html",
+   "published_at": "2026-10-14T14:17:27Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "d2191506ed88",
+   "outlet_id": "dailymail",
+   "headline": "Kimberly Guilfoyle is out... but the scandal is far from over. Read what's next in this week's DC Insider",
+   "snippet": "Former Ambassador to Greece Kimberly Guilfoyle's title has been revoked amid scrutiny over her allegedly lavish lifestyle in Athens as revealed by the Daily Mail.",
+   "url": "https://www.dailymail.com/news/us-politics/article-16209171/Kimberly-Guilfoyle-scandal-far-Read-whats-weeks-DC-Insider.html",
+   "published_at": "2026-10-14T21:27:40Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "d2464f770998",
+   "outlet_id": "timesofisrael",
+   "headline": "Iran Guards say cargo ship sank in Hormuz after hitting mine",
+   "snippet": "UK agency says Singaporean-flagged ship hit by projectile and sank; unclear if two statements refer to same vessel",
+   "url": "https://www.timesofisrael.com/iran-guards-say-cargo-ship-sank-in-hormuz-after-hitting-mine/",
+   "published_at": "2026-10-14T20:37:31Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "d2dca7d1ec36",
+   "outlet_id": "mirror",
+   "headline": "Pope Leo lung surgery: Vatican issues update after pontiff's cancer diagnosis",
+   "snippet": "Pope Leo XIV has undergone a 90-minute operation at the Policlinico A. Gemelli hospital in Rome which saw surgeons remove the lower lobe of the 71-year-old’s right lung after finding a cancerous…",
+   "url": "https://www.mirror.co.uk/news/world-news/pope-leo-lung-surgery-cancer-37769477",
+   "published_at": "2026-10-14T11:56:27Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "d2fb52abbf9f",
+   "outlet_id": "guardian",
+   "headline": "Iranian woman handed death sentence for ‘blasphemy’ in social media post",
+   "snippet": "Rights groups warn of Tehran regime’s increasing use of executions to suppress dissent, with at least 600 this year Human rights groups have raised the alarm over the growing number of death…",
+   "url": "https://www.theguardian.com/global-development/2026/oct/14/najmeh-amini-blasphemy-death-sentence-insulting-prophet",
+   "published_at": "2026-10-14T04:00:44Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "d34743d9c56c",
+   "outlet_id": "nyt",
+   "headline": "Pope Leo Has Lung Cancer, Vatican Says",
+   "snippet": "The surgeons removed the lower lobe of the pope’s right lung after finding a cancerous nodule.",
+   "url": "https://www.nytimes.com/2026/10/13/world/europe/pope-leo-lung-surgery.html",
+   "published_at": "2026-10-14T07:27:26Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "d5ea048a0e8a",
+   "outlet_id": "moscowtimes",
+   "headline": "Nord Stream May Have Been Lawful Target, Argue Lawyers for Ukrainian Accused of Bombing",
+   "snippet": "The secret operation that blew up the Nord Stream pipelines severed western Europe from the biggest source of Russian natural gas.",
+   "url": "https://www.themoscowtimes.com/2026/10/14/nord-stream-may-have-been-lawful-target-argue-lawyers-for-ukrainian-accused-of-bombing-a93972",
+   "published_at": "2026-10-14T14:09:00Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "d61e227e725f",
+   "outlet_id": "examiner",
+   "headline": "Biden-appointed judge cites Trump pressure in rush to remove trees at DC golf course",
+   "snippet": "A federal judge in Washington argued that the Interior Department chopped down hundreds of trees at the East Potomac Golf Links in an effort to move quickly on President Donald Trump’s vision for a…",
+   "url": "https://www.washingtonexaminer.com/news/justice/4766250/judge-trump-trees-removal-dc-golf-course/",
+   "published_at": "2026-10-14T21:53:58Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "d8ab4837ae26",
+   "outlet_id": "cgtn",
+   "headline": "Xi, Boko attend signing ceremony of cooperation documents in Beijing",
+   "snippet": "",
+   "url": "https://news.cgtn.com/news/2026-10-13/Xi-Boko-attend-signing-ceremony-of-cooperation-documents-in-Beijing-1Rd7wd5hemc/p.html",
+   "published_at": "2026-10-13T12:43:22Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "d9e4276afa19",
+   "outlet_id": "mirror",
+   "headline": "Couple and two children killed in 'suspected petrol bomb attack over debt' as siblings critical",
+   "snippet": "Police have raided two houses reportedly linked to individuals 'associated with the drug trade' as it emerged the family had been facing threats and efforts had been made to rehouse them",
+   "url": "https://www.mirror.co.uk/news/world-news/waterford-fire-house-arson-ireland-37769729",
+   "published_at": "2026-10-14T08:52:53Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "db65207b4d7f",
+   "outlet_id": "mirror",
+   "headline": "Pope Leo XIV diagnosed with lung cancer as surgery to remove right lung lobe proves successful",
+   "snippet": "Pope Leo XIV has been diagnosed with lung cancer after undergoing major surgery, which saw part of his right lung removed, the Vatican has said today",
+   "url": "https://www.mirror.co.uk/news/world-news/pope-lung-cancer-surgery-vatican-37758148",
+   "published_at": "2026-10-13T20:35:52Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "dbee1a310c49",
+   "outlet_id": "thesun",
+   "headline": "Heartbroken son of Waterford arson victim says 4 family members murdered ‘over someone else’s €20k drug debt’",
+   "snippet": "THE son of a Waterford petrol bomb victim has told how he believes his family were attacked over someone else's €20,000 drug debt. Philip English, 50s, his wife Kim, 38, and their sons, 12-year-old…",
+   "url": "https://www.thesun.co.uk/news/40689016/waterford-petrol-bomb-victim-son-murders-drug-debt-attack/",
+   "published_at": "2026-10-14T18:23:19Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "dcd63bf4d23f",
+   "outlet_id": "cgtn",
+   "headline": "Full text: Joint statement between China and Botswana",
+   "snippet": "The People's Republic of China and the Republic of Botswana on Tuesday issued a joint statement on the establishment of a comprehensive strategic cooperative partnership.",
+   "url": "https://news.cgtn.com/news/2026-10-13/Full-text-Joint-statement-between-China-and-Botswana-1RdjoPQh2dW/p.html",
+   "published_at": "2026-10-13T15:24:47Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "de48664edadd",
+   "outlet_id": "axios",
+   "headline": "Inflation heats up as gas prices surge",
+   "snippet": "Data: Bureau of Labor Statistics; Chart: Courtenay Brown/Axios U.S. inflation picked up in September as soaring energy prices added to already stubborn price pressures, the Labor Department said on…",
+   "url": "https://www.axios.com/2026/10/14/cpi-september-inflation-trump",
+   "published_at": "2026-10-14T13:00:05Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "defe1ccbc089",
+   "outlet_id": "thesun",
+   "headline": "Fears US has cut off intel to Ukraine leaving country wide open to Putin’s deadly blitzes after Musk ‘limits Starlink’",
+   "snippet": "FEARS are mounting the US has stopped sending vital intelligence to Ukraine after its military suffered a sudden Starlink outage. Donald Trump is continuing to pile pressure on Volodymyr Zelensky to…",
+   "url": "https://www.thesun.co.uk/news/40686325/us-starlink-intel-russia-ukraine/",
+   "published_at": "2026-10-14T16:08:30Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "df3fe59da9d5",
+   "outlet_id": "independent",
+   "headline": "Group of men cheered as woman was sexually assaulted at a University of Chicago frat house party: report",
+   "snippet": "Friend of alleged victim reported hearing crowd of men outside basement bathroom saying 'When’s it my turn?’ and ‘I want to go in there'",
+   "url": "https://www.independent.co.uk/news/world/americas/university-of-chicago-fraternity-sexual-assault-b3066789.html",
+   "published_at": "2026-10-14T20:40:15Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "df43a1ddc0e2",
+   "outlet_id": "nyt",
+   "headline": "Russia Detains Japanese Journalist for Alleged Espionage",
+   "snippet": "The main security service said it had detained a reporter for the Hokkaido Shimbun newspaper in Russia’s far east, where he had been reporting on military recruitment.",
+   "url": "https://www.nytimes.com/2026/10/13/world/europe/russia-detains-japanese-journalist.html",
+   "published_at": "2026-10-13T19:55:42Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "df81f3e5780a",
+   "outlet_id": "nbc",
+   "headline": "Social Security recipients will receive a 3.6% cost-of-living increase in 2027",
+   "snippet": "Individual retirement benefits will climb an average of about $75 per month, according to an advocacy group.",
+   "url": "https://www.nbcnews.com/business/personal-finance/social-security-cola-2027-increase-rcna603284",
+   "published_at": "2026-10-14T13:35:52Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "e1504b347e9f",
+   "outlet_id": "bbc",
+   "headline": "What we know about the Pope's lung cancer diagnosis",
+   "snippet": "The Pope is recovering in hospital after a successful surgery to remove part of his right lung.",
+   "url": "https://www.bbc.co.uk/news/videos/cwyvrmp9qgrgo",
+   "published_at": "2026-10-14T12:37:33Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "e19aa3ae86ba",
+   "outlet_id": "bbc",
+   "headline": "Pope walking and recovering 'as expected' after surgery, doctors say",
+   "snippet": "The 71-year-old Pope was diagnosed with lung cancer after the 90-minute procedure on Tuesday.",
+   "url": "https://www.bbc.co.uk/news/articles/cwx28r0zvm6lo",
+   "published_at": "2026-10-14T15:12:46Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "e1bd2ebe33c7",
+   "outlet_id": "france24",
+   "headline": "How far will cockroach movement go? India's youth-led protests defy Modi government",
+   "snippet": "It all started as a bit of online satire by a few young people fed up by corruption. Clearly though, the Cockroach movement's no longer a laughing matter for India’s government which has shut…",
+   "url": "https://www.france24.com/en/tv-shows/the-debate/20261014-how-far-will-cockroach-movement-go-india-s-youth-led-protests-defy-modi-government",
+   "published_at": "2026-10-14T18:40:21Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "e2861d8e4285",
+   "outlet_id": "thehindu",
+   "headline": "U.S.-Russia deal on diesel is 'very risky choice,' says Italy PM Giorgia Meloni",
+   "snippet": "The United States and Russia agreed last week that Moscow would ‌initially supply more than 3,00,000 metric tonnes of ‌diesel to ⁠U.S. and global markets",
+   "url": "https://www.thehindu.com/news/international/us-russia-deal-on-diesel-is-very-risky-choice-says-italy-pm-giorgia-meloni/article71583478.ece",
+   "published_at": "2026-10-14T12:36:40Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "e2963c3d619b",
+   "outlet_id": "independent",
+   "headline": "Pope Leo is back on his feet after lung surgery and cancer diagnosis",
+   "snippet": "Tuesday's surgery confirmed that the 71-year-old pontiff has the most common type of lung cancer, known as lung adenocarcinoma",
+   "url": "https://www.independent.co.uk/news/world/europe/pope-leo-health-update-cancer-lung-adenocarcinoma-b3066786.html",
+   "published_at": "2026-10-14T15:25:51Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "e2f61158b6bc",
+   "outlet_id": "cgtn",
+   "headline": "Moscow warns Tokyo's information gathering attempts will strain ties",
+   "snippet": "Tokyo's attempts to use its correspondents in Russia to gather information will further strain Russia-Japan relations, Russian Foreign Ministry spokesperson Maria Zakharova said in a statement on…",
+   "url": "https://news.cgtn.com/news/2026-10-14/Moscow-warns-Tokyo-s-information-gathering-attempts-will-strain-ties-1Re4koACRFK/p.html",
+   "published_at": "2026-10-14T01:53:17Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "e3a53e1727e9",
+   "outlet_id": "dw",
+   "headline": "Ukraine and the US: What's next after Trump's diesel deal with Russia?",
+   "snippet": "Donald Trump plans to allow the purchase of Russian diesel, drawing criticism at home and abroad. What is behind the US president's decision and what should Ukraine do next? DW spoke with experts.",
+   "url": "https://www.dw.com/en/ukraine-and-the-us-what-s-next-after-trump-s-diesel-deal-with-russia/a-79650785?maca=en-rss-en-world-4025-xml-mrss",
+   "published_at": "2026-10-13T18:51:00Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "e5a73f42cbbb",
+   "outlet_id": "guardian",
+   "headline": "Two container ships sink near strait of Hormuz amid surge in Iranian attacks",
+   "snippet": "Vessels were hit by missiles as rise in strikes suggests Iran is trying to close waterway before US midterm elections Two container ships near the strait of Hormuz have ⁠sunk after being struck by…",
+   "url": "https://www.theguardian.com/world/2026/oct/14/container-ship-sinks-strait-of-hormuz-surge-iranian-attacks-iran-us-midterm-elections",
+   "published_at": "2026-10-14T17:05:42Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "e700671ada82",
+   "outlet_id": "japantimes",
+   "headline": "Russia detains Japanese journalist on suspicion of spying",
+   "snippet": "The Hokkaido Shimbun journalist was detained in the far eastern Sakhalin region, with Moscow accusing him of collecting defense-related information.",
+   "url": "https://www.japantimes.co.jp/news/2026/10/14/japan/russia-arrests-japanese-journalist-espionage/",
+   "published_at": "2026-10-14T04:17:00Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "e7d55f39823a",
+   "outlet_id": "nyt",
+   "headline": "Ukraine’s Exposure Grows as Satellite Use Is Restricted and Russia Escalates",
+   "snippet": "A huge attack cut power to 600,000 people in Kyiv, and a Pentagon-funded satellite internet program appeared to be curbed without warning.",
+   "url": "https://www.nytimes.com/2026/10/14/world/europe/ukraine-starlink-energy.html",
+   "published_at": "2026-10-14T20:47:48Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "e812684625fa",
+   "outlet_id": "nyt",
+   "headline": "Nuremberg Airport in Germany Is Briefly Shut by False Alarm of Hijacking",
+   "snippet": "German police said they had determined there was “no danger” after a plane mistakenly transmitted a code suggesting a possible hijacking onboard.",
+   "url": "https://www.nytimes.com/2026/10/13/world/europe/germany-flight-nuremberg.html",
+   "published_at": "2026-10-13T16:08:04Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "e82e5c741f25",
+   "outlet_id": "thehindu",
+   "headline": "UN says wants Lebanon stability as end of peacekeepers’ mandate looms",
+   "snippet": "Under-Secretary-General for Peace Operations Jean-Pierre Lacroix met officials as well as representatives of countries contributing to the UN Interim Force in Lebanon (UNIFIL)",
+   "url": "https://www.thehindu.com/news/international/un-says-wants-lebanon-stability-as-end-of-peacekeepers-mandate-looms/article71585167.ece",
+   "published_at": "2026-10-14T16:32:43Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "e92a21256fc3",
+   "outlet_id": "sky",
+   "headline": "Sally Rooney books withdrawn from UK over Palestine Action support",
+   "snippet": "Author Sally Rooney has said she can no longer sell her books in the UK because of her support for the banned protest group Palestine Action.",
+   "url": "https://news.sky.com/story/sally-rooney-books-withdrawn-from-uk-over-palestine-action-support-13599356",
+   "published_at": "2026-10-14T18:45:00Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "e93b89493036",
+   "outlet_id": "france24",
+   "headline": "Duane Davis sentenced to minimum 40 years for Tupac killing",
+   "snippet": "Duane Davis, the former Los Angeles gang leader who boasted in books and interviews of his involvement in the killing of rapper Tupac Shakur, only to deny it when he came to trial, was sentenced to…",
+   "url": "https://www.france24.com/en/video/20261014-duane-davis-sentenced-to-minimum-40-years-for-tupac-killing",
+   "published_at": "2026-10-14T13:48:46Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "ead8e8be684e",
+   "outlet_id": "thenational",
+   "headline": "Six Kings Slam tournament in Saudi Arabia featuring Alcaraz and Djokovic postponed due to attacks on Riyadh",
+   "snippet": "The Six Kings tennis tournament featuring the likes of Carlos Alcaraz, Novak Djokovic and Alexander Zverev in Saudi Arabia has been postponed due to the recent attacks on Riyadh. The exhibition…",
+   "url": "https://www.thenationalnews.com/sport/tennis/2026/10/14/six-kings-slam-tournament-in-saudi-arabia-featuring-alcaraz-and-djokovic-postponed-due-to-attacks-on-riyadh/",
+   "published_at": "2026-10-14T17:44:26Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "ec00b587ff22",
+   "outlet_id": "scmp",
+   "headline": "China’s Liaoning carrier heads to the Pacific as US, Japan prepare for missile drills",
+   "snippet": "The PLA Navy’s Liaoning aircraft carrier has started its second drill series in the western Pacific this year, with the training likely to coincide with an expanded US-Japan military exercise that…",
+   "url": "https://www.scmp.com/news/china/military/article/3370859/chinas-liaoning-carrier-heads-pacific-us-japan-prepare-missile-drills",
+   "published_at": "2026-10-14T09:00:06Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "ed74554d1a8d",
+   "outlet_id": "sky",
+   "headline": "Pope thanks wellwishers for prayers after cancer operation",
+   "snippet": "Pope Leo has thanked wellwishers for their prayers after his cancer operation.",
+   "url": "https://news.sky.com/story/pope-thanks-wellwishers-for-prayers-after-cancer-operation-13599253",
+   "published_at": "2026-10-14T13:26:00Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "ee66b8c7f197",
+   "outlet_id": "japantimes",
+   "headline": "Scandal-hit agriculture minister Yana announces resignation",
+   "snippet": "His sudden exit deals a blow to Prime Minister Sanae Takaichi's administration, with key bills involving his ministry being debated in parliament.",
+   "url": "https://www.japantimes.co.jp/news/2026/10/14/japan/politics/takaichi-cabinet-yana-parliament-resigns/",
+   "published_at": "2026-10-14T09:48:00Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "ee70209a010e",
+   "outlet_id": "ecns",
+   "headline": "Van Gogh's Chestnut Trees in Blossom goes on show in Hong Kong, valued at $180 million",
+   "snippet": "Vincent van Gogh's Chestnut Trees in Blossom was on show in Hong Kong ahead of Sotheby's auction in New York this autumn, where it is expected to smash records and fetch around $180 million…",
+   "url": "http://www.ecns.cn/cns-wire/2026-10-14/detail-ihfmcrte5285832.shtml",
+   "published_at": "2026-10-14T10:48:20Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "eefe3ca77c4a",
+   "outlet_id": "sky",
+   "headline": "Children killed in arson attack named - as family calls for culprit to 'own up'",
+   "snippet": "Two children who died in an arson attack at a home in Ireland have been named as Callum and Jayden, as their family and police urge anyone with information to come forward.",
+   "url": "https://news.sky.com/story/children-killed-in-waterford-arson-attack-named-as-family-calls-for-culprit-to-own-up-13599219",
+   "published_at": "2026-10-14T11:58:00Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "efedd3c96701",
+   "outlet_id": "nyt",
+   "headline": "Trump Squeezes Ukraine, Again",
+   "snippet": "The president’s proposed fuel deal with Russia and a one-sided cease-fire plan are putting Kyiv in a tough spot as winter approaches.",
+   "url": "https://www.nytimes.com/2026/10/13/world/trump-russia-ukraine-deal-pope-leo.html",
+   "published_at": "2026-10-14T04:41:32Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "f230befe9538",
+   "outlet_id": "aljazeera",
+   "headline": "Israel’s former security chief sues Netanyahu for October 7 defamation",
+   "snippet": "Bar and Netanyahu have traded blame over the Hamas-led attack, as elections in Israel loom.",
+   "url": "https://www.aljazeera.com/news/2026/10/14/israels-former-security-chief-sues-netanyahu-for-october-7-defamation",
+   "published_at": "2026-10-14T18:39:03Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "f2ffa6875e2b",
+   "outlet_id": "scmp",
+   "headline": "Japan farm minister submits resignation in first scandal blow for PM Takaichi",
+   "snippet": "Japanese Agriculture Minister Kazuo Yana said he tendered his resignation following allegations of possible vote-buying, lining him up to become the first minister in Prime Minister Sanae Takaichi’s…",
+   "url": "https://www.scmp.com/news/asia/east-asia/article/3370891/japan-farm-minister-submits-resignation-first-scandal-blow-pm-takaichi",
+   "published_at": "2026-10-14T10:53:04Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "f3f2c1315694",
+   "outlet_id": "ecns",
+   "headline": "China's Liaoning aircraft carrier formation heads to Western Pacific for training",
+   "snippet": "A Chinese formation led by the Liaoning aircraft carrier on Wednesday left for the Western Pacific for training, according to the Chinese People's Liberation Army (PLA) Navy.",
+   "url": "http://www.ecns.cn/cns-wire/2026-10-14/detail-ihfmcrte5285798.shtml",
+   "published_at": "2026-10-14T10:33:16Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "f3fafd06f3f8",
+   "outlet_id": "guardian",
+   "headline": "India’s cockroach protesters defy Modi’s crackdown – The Latest",
+   "snippet": "A fresh wave of protests by India’s youth-led Cockroach movement has been met with a brutal crackdown by Narendra Modi’s government and the closure of a historic protest site in Delhi. Two of the…",
+   "url": "https://www.theguardian.com/news/audio/2026/oct/14/indias-cockroach-protesters-defy-modis-crackdown-the-latest",
+   "published_at": "2026-10-14T17:40:05Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "f590fb8e436f",
+   "outlet_id": "npr",
+   "headline": "Trump's ambassador to Greece, Kimberly Guilfoyle, resigns after allegations of improper conduct",
+   "snippet": "The White House publicly asked for U.S. Ambassador to Greece Kimberly Guilfoyle's resignation on Tuesday as she faced mounting accusations of improper conduct.",
+   "url": "https://www.npr.org/2026/10/14/g-s1-148027/trump-ambassador-greece-resignation",
+   "published_at": "2026-10-14T09:09:39Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "f874197f4081",
+   "outlet_id": "aljazeera",
+   "headline": "Sally Rooney’s books pulled from UK over Palestine Action support",
+   "snippet": "Award-winning author Sally Rooney’s books are being withdrawn from the UK over her support for Palestine Action",
+   "url": "https://www.aljazeera.com/video/newsfeed/2026/10/14/sally-rooneys-books-pulled-from-uk-over-palestine-action-support",
+   "published_at": "2026-10-14T19:23:27Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "f8907ce1582e",
+   "outlet_id": "bbc",
+   "headline": "Germany puts Ukrainian on trial accused of blowing up Nord Stream pipelines",
+   "snippet": "Four years after the attacks, Serhii Kuznetsov appears in court accused of a plot to destroy Russia's gas pipelines to Germany.",
+   "url": "https://www.bbc.co.uk/news/articles/cw99zpmnxzmjo",
+   "published_at": "2026-10-14T13:41:51Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "f8b4d6f9b4bd",
+   "outlet_id": "nyt",
+   "headline": "Why Trump Made a Diesel Deal With Putin",
+   "snippet": "Our national security and White House correspondent David E. Sanger breaks down why President Donald Trump struck a deal with President Vladimir V. Putin to import Russian diesel fuel in the coming…",
+   "url": "https://www.nytimes.com/video/world/europe/100000011205967/00vid-rv-trump-putin-deal.html",
+   "published_at": "2026-10-14T19:30:52Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "f8c68b391e4d",
+   "outlet_id": "thesun",
+   "headline": "Moment US helicopters blow up Iranian spy boat in huge blaze after sea mine sinks container ship carrying iPhones",
+   "snippet": "THIS is the moment US helicopters strike an Iranian spy boat with missiles sparking a huge onboard fireball. The strike came before a cargo ship carrying 2,500 containers hit an Iranian sea mine…",
+   "url": "https://www.thesun.co.uk/news/40690741/us-helicopters-destroy-iranian-spy-boat/",
+   "published_at": "2026-10-14T21:01:33Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "f96e351207ab",
+   "outlet_id": "independent",
+   "headline": "Mauritius imposes curfew after police shooting leads to days of protests",
+   "snippet": "Protesters clashed with police, blocked roads with burning tires and other debris, and damaged public buildings, according to local reports",
+   "url": "https://www.independent.co.uk/news/world/africa/mauritius-news-unrest-protests-police-shooting-b3066901.html",
+   "published_at": "2026-10-14T17:54:17Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "fa01e42d961e",
+   "outlet_id": "axios",
+   "headline": "Social Security recipients will see rise in monthly payments next year",
+   "snippet": "Data: Social Security Administration; Chart: Neil Irwin/Axios Social Security recipients will see the largest rise in their monthly payments in four years in January, with a 3.6% cost-of-living…",
+   "url": "https://www.axios.com/2026/10/14/social-security-cola-inflation",
+   "published_at": "2026-10-14T14:06:39Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "fa0ea20c3b91",
+   "outlet_id": "mirror",
+   "headline": "Inside the smart fridges and freezers targeted by hackers in French cyberattack as experts issue warning",
+   "snippet": "A massive cyberattack hit thousands of fridge and freezer units across Europe this week, leading to warnings about potential vulnerabilities in the software that runs them",
+   "url": "https://www.mirror.co.uk/news/world-news/smart-fridge-freezer-cyber-attack-37770934",
+   "published_at": "2026-10-14T12:06:07Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "fb88d6b25c4f",
+   "outlet_id": "moscowtimes",
+   "headline": "Bulgaria Summons Russian Ambassador After Drone Attack Sinks Ship, Leaving 11 Missing",
+   "snippet": "While Sofia has stopped short of blaming Moscow, Bulgarian Prime Minister Rumen Radev said the drone strikes' outcome \"benefits the Russian Federation.\"",
+   "url": "https://www.themoscowtimes.com/2026/10/13/bulgaria-summons-russian-ambassador-after-drone-attack-sinks-ship-leaving-11-missing-a93963",
+   "published_at": "2026-10-13T13:09:48Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "fba7fae78059",
+   "outlet_id": "nyt",
+   "headline": "Sally Rooney Withdraws Her Books From UK Over Her Support of Palestine Action",
+   "snippet": "Ms. Rooney and her publisher said that she could no longer receive royalties from British sales because she pledged to donate book revenues to Palestine Action, which is banned in Britain.",
+   "url": "https://www.nytimes.com/2026/10/14/world/europe/rooney-britain-palestine-book-sales.html",
+   "published_at": "2026-10-14T21:52:20Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "fe4afe3cc322",
+   "outlet_id": "scmp",
+   "headline": "US stocks drop to their worst day since July as inflation worsens",
+   "snippet": "US stocks dropped to their worst day since July on Wednesday, following the latest signal that inflation is getting worse. The S&P 500 sank 1.1 per cent for a fifth loss in the six days since…",
+   "url": "https://www.scmp.com/news/world/united-states-canada/article/3370922/us-stocks-drop-their-worst-day-july-inflation-worsens",
+   "published_at": "2026-10-14T21:03:28Z",
+   "published_at_estimated": false
+  },
+  {
+   "id": "fe6c5703e689",
+   "outlet_id": "aljazeera",
+   "headline": "Saudi tennis ‘slam’ with Alcaraz, Djokovic postponed amid Houthi attacks",
+   "snippet": "The Six Kings Slam exhibition tournament has been pushed from October to December by Saudi organisers.",
+   "url": "https://www.aljazeera.com/sports/2026/10/14/saudi-tennis-slam-with-alcaraz-djokovic-postponed-amid-houthi-attacks",
+   "published_at": "2026-10-14T17:11:57Z",
+   "published_at_estimated": false
+  }
+ ],
+ "feed_errors": [],
+ "per_outlet_counts": {}
+}

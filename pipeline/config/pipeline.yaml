@@ -1,0 +1,15 @@
+# Runtime configuration for the LLM stages. Founder-approved 14 Oct 2026: Claude Opus 5.5.
+# `model` is the single place to downgrade later (pricing for the new model must exist in pricing.yaml).
+model: claude-opus-5-5
+
+grouping:
+  # Adaptive thinking is always on for this model; effort is the only depth control.
+  effort: medium
+  # Streamed request, so a generous ceiling costs nothing unless used; a hit fails the run.
+  max_tokens: 64000
+  prompt: prompts/group.md
+  # Ranking/validation thresholds (enforced in code, never by the model).
+  min_outlets: 3
+  top_n: 10
+  min_stories: 5
+  title_max_chars: 90

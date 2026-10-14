@@ -2,74 +2,402 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://mksoft-ltd.github.io/sides/schema/digest.schema.json",
   "title": "Sides daily digest",
-  "description": "Contract between the Python pipeline and the Flutter app. Phase 1 defines outlets, articles and the collect-phase output; later phases add stories, meta and the top-level digest.",
+  "description": "Contract between the Python pipeline and the Flutter app. Phase 1 defines outlets, articles and the collect-phase output; phase 2 adds stories (ranked, with coverage/blindspot) and meta; phase 3 adds the per-story analysis fields.",
   "type": "object",
   "properties": {
-    "schema_version": { "type": "integer", "const": 1 },
-    "generated_at": { "type": "string", "format": "date-time" },
-    "date": { "type": "string", "format": "date" },
-    "outlets": { "type": "array", "items": { "$ref": "#/$defs/outlet" } },
-    "stories": { "type": "array", "description": "Defined in phase 2/3." }
+    "schema_version": {
+      "type": "integer",
+      "const": 1
+    },
+    "generated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "date": {
+      "type": "string",
+      "format": "date"
+    },
+    "meta": {
+      "$ref": "#/$defs/meta"
+    },
+    "outlets": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/outlet"
+      }
+    },
+    "stories": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/story"
+      },
+      "maxItems": 10
+    }
   },
-  "required": ["schema_version", "generated_at", "date", "outlets"],
+  "required": [
+    "schema_version",
+    "generated_at",
+    "date",
+    "meta",
+    "outlets",
+    "stories"
+  ],
   "$defs": {
-    "lean": { "type": ["string", "null"], "enum": ["left", "centre", "right", null] },
-    "bloc": { "type": "string", "enum": ["west", "east"] },
-    "region": { "type": "string", "enum": ["uk", "us", "europe", "middle_east", "asia", "africa", "oceania", "americas"] },
-    "ownership": { "type": "string", "enum": ["independent", "public-service", "state-funded", "state-controlled"] },
+    "lean": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "left",
+        "centre",
+        "right",
+        null
+      ]
+    },
+    "bloc": {
+      "type": "string",
+      "enum": [
+        "west",
+        "east"
+      ]
+    },
+    "region": {
+      "type": "string",
+      "enum": [
+        "uk",
+        "us",
+        "europe",
+        "middle_east",
+        "asia",
+        "africa",
+        "oceania",
+        "americas"
+      ]
+    },
+    "ownership": {
+      "type": "string",
+      "enum": [
+        "independent",
+        "public-service",
+        "state-funded",
+        "state-controlled"
+      ]
+    },
     "outlet": {
       "type": "object",
       "description": "An outlet as shipped in the digest (feed URL and operational fields are not published).",
       "properties": {
-        "id": { "type": "string", "pattern": "^[a-z][a-z0-9_]{1,31}$" },
-        "name": { "type": "string", "minLength": 1 },
-        "lean": { "$ref": "#/$defs/lean" },
-        "region": { "$ref": "#/$defs/region" },
-        "bloc": { "$ref": "#/$defs/bloc" },
-        "ownership": { "$ref": "#/$defs/ownership" },
-        "country": { "type": "string", "minLength": 2 },
-        "home_url": { "type": "string", "format": "uri", "pattern": "^https?://" },
-        "rating_basis": { "type": "string", "minLength": 1 }
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_]{1,31}$"
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "lean": {
+          "$ref": "#/$defs/lean"
+        },
+        "region": {
+          "$ref": "#/$defs/region"
+        },
+        "bloc": {
+          "$ref": "#/$defs/bloc"
+        },
+        "ownership": {
+          "$ref": "#/$defs/ownership"
+        },
+        "country": {
+          "type": "string",
+          "minLength": 2
+        },
+        "home_url": {
+          "type": "string",
+          "format": "uri",
+          "pattern": "^https?://"
+        },
+        "rating_basis": {
+          "type": "string",
+          "minLength": 1
+        }
       },
-      "required": ["id", "name", "lean", "region", "bloc", "ownership", "country", "home_url", "rating_basis"],
+      "required": [
+        "id",
+        "name",
+        "lean",
+        "region",
+        "bloc",
+        "ownership",
+        "country",
+        "home_url",
+        "rating_basis"
+      ],
       "additionalProperties": false
     },
     "article": {
       "type": "object",
       "description": "Headline plus a snippet of at most 200 characters. Full article text is never published.",
       "properties": {
-        "id": { "type": "string", "pattern": "^[0-9a-f]{12}$" },
-        "outlet_id": { "type": "string" },
-        "headline": { "type": "string", "minLength": 1 },
-        "snippet": { "type": "string", "maxLength": 200 },
-        "url": { "type": "string", "format": "uri", "pattern": "^https?://" },
-        "published_at": { "type": "string", "format": "date-time" },
-        "published_at_estimated": { "type": "boolean", "default": false }
+        "id": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{12}$"
+        },
+        "outlet_id": {
+          "type": "string"
+        },
+        "headline": {
+          "type": "string",
+          "minLength": 1
+        },
+        "snippet": {
+          "type": "string",
+          "maxLength": 200
+        },
+        "url": {
+          "type": "string",
+          "format": "uri",
+          "pattern": "^https?://"
+        },
+        "published_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "published_at_estimated": {
+          "type": "boolean",
+          "default": false
+        }
       },
-      "required": ["id", "outlet_id", "headline", "snippet", "url", "published_at"],
+      "required": [
+        "id",
+        "outlet_id",
+        "headline",
+        "snippet",
+        "url",
+        "published_at"
+      ],
       "additionalProperties": false
     },
     "feed_error": {
       "type": "object",
       "properties": {
-        "outlet_id": { "type": "string" },
-        "error": { "type": "string" }
+        "outlet_id": {
+          "type": "string"
+        },
+        "error": {
+          "type": "string"
+        }
       },
-      "required": ["outlet_id", "error"],
+      "required": [
+        "outlet_id",
+        "error"
+      ],
       "additionalProperties": false
     },
     "collect_output": {
       "type": "object",
       "description": "pipeline/out/articles.json — the phase-1 artifact handed to phase 2 (grouping).",
       "properties": {
-        "collected_at": { "type": "string", "format": "date-time" },
-        "outlets": { "type": "array", "items": { "$ref": "#/$defs/outlet" } },
-        "articles": { "type": "array", "items": { "$ref": "#/$defs/article" } },
-        "feed_errors": { "type": "array", "items": { "$ref": "#/$defs/feed_error" } },
-        "per_outlet_counts": { "type": "object", "additionalProperties": { "type": "integer", "minimum": 0 } }
+        "collected_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "outlets": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/outlet"
+          }
+        },
+        "articles": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/article"
+          }
+        },
+        "feed_errors": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/feed_error"
+          }
+        },
+        "per_outlet_counts": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "integer",
+            "minimum": 0
+          }
+        }
       },
-      "required": ["collected_at", "outlets", "articles", "feed_errors", "per_outlet_counts"],
+      "required": [
+        "collected_at",
+        "outlets",
+        "articles",
+        "feed_errors",
+        "per_outlet_counts"
+      ],
+      "additionalProperties": false
+    },
+    "meta": {
+      "type": "object",
+      "description": "Run metadata; cost_usd is the whole run's LLM spend from config/pricing.yaml.",
+      "properties": {
+        "model": {
+          "type": "string",
+          "minLength": 1
+        },
+        "cost_usd": {
+          "type": "number",
+          "minimum": 0
+        },
+        "outlets_polled": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "articles_collected": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "warnings": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "model",
+        "cost_usd",
+        "outlets_polled",
+        "articles_collected",
+        "warnings"
+      ],
+      "additionalProperties": false
+    },
+    "coverage": {
+      "type": "object",
+      "description": "Distinct outlets covering the story, computed in code from outlet tags. lean=null outlets count in bloc only.",
+      "properties": {
+        "lean": {
+          "type": "object",
+          "properties": {
+            "left": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "centre": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "right": {
+              "type": "integer",
+              "minimum": 0
+            }
+          },
+          "required": [
+            "left",
+            "centre",
+            "right"
+          ],
+          "additionalProperties": false
+        },
+        "bloc": {
+          "type": "object",
+          "properties": {
+            "west": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "east": {
+              "type": "integer",
+              "minimum": 0
+            }
+          },
+          "required": [
+            "west",
+            "east"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "lean",
+        "bloc"
+      ],
+      "additionalProperties": false
+    },
+    "blindspot": {
+      "type": "object",
+      "description": "The only lean / bloc covering the story when every other has zero outlets; null otherwise.",
+      "properties": {
+        "lean": {
+          "$ref": "#/$defs/lean"
+        },
+        "bloc": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "enum": [
+            "west",
+            "east",
+            null
+          ]
+        }
+      },
+      "required": [
+        "lean",
+        "bloc"
+      ],
+      "additionalProperties": false
+    },
+    "story": {
+      "type": "object",
+      "description": "A top story: ≥3 distinct outlets, ranked in code. Phase 3 adds agreed_facts, framing, framing_by_bloc, omissions, contested_claims, opinion, east_west_contradictions.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{12}$",
+          "description": "sha1 prefix of the sorted article ids"
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 90
+        },
+        "rank": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "outlet_count": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "distinct outlets"
+        },
+        "coverage": {
+          "$ref": "#/$defs/coverage"
+        },
+        "blindspot": {
+          "$ref": "#/$defs/blindspot"
+        },
+        "articles": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/article"
+          }
+        }
+      },
+      "required": [
+        "id",
+        "title",
+        "rank",
+        "outlet_count",
+        "coverage",
+        "blindspot",
+        "articles"
+      ],
       "additionalProperties": false
     }
-  }
+  },
+  "additionalProperties": false
 }

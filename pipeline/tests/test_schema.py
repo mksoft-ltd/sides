@@ -36,3 +36,17 @@ def test_schema_rejects_long_snippets_and_bad_leans():
     assert not article.is_valid({**good, "body": "full text must never appear"})
     outlet = jsonschema.Draft202012Validator({"$ref": "#/$defs/outlet", "$defs": schema["$defs"]})
     assert not outlet.is_valid({"id": "x", "name": "X", "lean": "far-left", "region": "uk", "bloc": "west", "ownership": "independent", "country": "UK", "home_url": "https://x.example/", "rating_basis": "r"})
+
+
+def test_story_schema_rejects_long_titles_and_extra_fields():
+    schema = _schema()
+    story = jsonschema.Draft202012Validator({"$ref": "#/$defs/story", "$defs": schema["$defs"]})
+    art = {"id": "0123456789ab", "outlet_id": "bbc", "headline": "H", "snippet": "s", "url": "https://x.example/a", "published_at": "2026-10-14T22:00:00Z"}
+    good = {"id": "abcdefabcdef", "title": "T", "rank": 1, "outlet_count": 3,
+            "coverage": {"lean": {"left": 1, "centre": 1, "right": 1}, "bloc": {"west": 3, "east": 0}},
+            "blindspot": {"lean": None, "bloc": "west"}, "articles": [art]}
+    story.validate(good)
+    assert not story.is_valid({**good, "title": "x" * 91})
+    assert not story.is_valid({**good, "blindspot": {"lean": "far-left", "bloc": None}})
+    assert not story.is_valid({**good, "summary": "unsourced prose must not appear"})
+    assert not story.is_valid({**good, "articles": []})

@@ -104,3 +104,78 @@ class CollectResult(BaseModel):
     articles: list[Article]
     feed_errors: list[FeedError]
     per_outlet_counts: dict[str, int]
+
+
+# ── Phase 2: stories ───────────────────────────────────────────────────────────
+
+TITLE_MAX_CHARS = 90
+
+
+class LeanCoverage(BaseModel):
+    """Distinct outlets per lean covering a story. Outlets with lean=null are not counted anywhere."""
+
+    model_config = ConfigDict(extra="forbid")
+
+    left: int = Field(ge=0)
+    centre: int = Field(ge=0)
+    right: int = Field(ge=0)
+
+
+class BlocCoverage(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+
+    west: int = Field(ge=0)
+    east: int = Field(ge=0)
+
+
+class Coverage(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+
+    lean: LeanCoverage
+    bloc: BlocCoverage
+
+
+class Blindspot(BaseModel):
+    """The single lean / bloc that covers a story when every other one has zero outlets, else null."""
+
+    model_config = ConfigDict(extra="forbid")
+
+    lean: Lean | None
+    bloc: Bloc | None
+
+
+class Story(BaseModel):
+    """One of the day's top stories. Analysis fields (framing, contradictions, …) arrive in phase 3."""
+
+    model_config = ConfigDict(extra="forbid")
+
+    id: str = Field(pattern=r"^[0-9a-f]{12}$")
+    title: str = Field(min_length=1, max_length=TITLE_MAX_CHARS)
+    rank: int = Field(ge=1)
+    outlet_count: int = Field(ge=1, description="distinct outlets")
+    coverage: Coverage
+    blindspot: Blindspot
+    articles: list[Article] = Field(min_length=1)
+
+
+class DigestMeta(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+
+    model: str
+    cost_usd: float = Field(ge=0)
+    outlets_polled: int = Field(ge=0)
+    articles_collected: int = Field(ge=0)
+    warnings: list[str] = Field(default_factory=list)
+
+
+class Digest(BaseModel):
+    """The published document. After phase 2 it carries stories without analysis (stories.json)."""
+
+    model_config = ConfigDict(extra="forbid")
+
+    schema_version: Literal[1] = 1
+    generated_at: datetime
+    date: str = Field(pattern=r"^\d{4}-\d{2}-\d{2}$")
+    meta: DigestMeta
+    outlets: list[OutletPublic]
+    stories: list[Story]

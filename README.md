@@ -27,6 +27,20 @@ python -m sides_pipeline.cli collect --out pipeline/out/articles.json
 
 Options: `--outlets <yaml>` (default `pipeline/config/outlets.yaml`), `--window-hours 36`, `--cap 40`, `-v`.
 
+Group today's articles into the top stories (one Claude call; writes `pipeline/out/stories.json` and
+`pipeline/out/runs/<date>.json` with the run's cost, prints the ranked table and the cost line):
+
+```bash
+export ANTHROPIC_API_KEY="$(security find-generic-password -s anthropic-api-key -a sides -w)"   # macOS Keychain, local runs
+python -m sides_pipeline.cli group --in pipeline/out/articles.json --out pipeline/out/stories.json
+python -m sides_pipeline.cli run --through group          # collect → group in one go
+```
+
+The key is never written to disk; in GitHub Actions it comes from the repo secret `ANTHROPIC_API_KEY`. Model,
+effort and thresholds live in `pipeline/config/pipeline.yaml`; prices in `pipeline/config/pricing.yaml`; the
+grouping prompt in `pipeline/config/prompts/group.md`. Add `--replay pipeline/tests/fixtures/llm/group_live_2026-10-14.json`
+to run the stage offline from a recorded response.
+
 Run the tests (no network is ever used; any socket call fails the suite):
 
 ```bash
@@ -37,8 +51,7 @@ Outlets are configured in `pipeline/config/outlets.yaml`. Each has a lean (left/
 region, bloc (west/east), ownership and the public rating the lean comes from. Only headlines and
 summaries of at most 200 characters are ever stored; article bodies are never fetched.
 
-Later phases (grouping, analysis, publishing, the GitHub Actions schedule and the `ANTHROPIC_API_KEY`
-secret) are documented here as they land.
+Later phases (analysis, publishing, the GitHub Actions schedule) are documented here as they land.
 
 ## App
 

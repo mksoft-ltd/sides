@@ -54,3 +54,46 @@ class FakeFetcher:
 @pytest.fixture
 def now() -> datetime:
     return RECORDED_AT
+
+
+# ── Phase 2 helpers ───────────────────────────────────────────────────────────
+
+from datetime import timedelta  # noqa: E402
+
+from sides_pipeline.models import Article, OutletPublic  # noqa: E402
+
+LLM_FIXTURES = Path(__file__).parent / "fixtures" / "llm"
+
+
+def make_public(id: str, lean: str | None = "left", bloc: str = "west", **overrides) -> OutletPublic:
+    base = dict(
+        id=id,
+        name=id.title(),
+        lean=lean,
+        region="uk" if bloc == "west" else "asia",
+        bloc=bloc,
+        ownership="independent",
+        country="Testland",
+        home_url=f"https://{id}.example.com/",
+        rating_basis="test",
+    )
+    base.update(overrides)
+    return OutletPublic(**base)
+
+
+def make_article(aid: str, outlet_id: str, *, minutes: int = 0, headline: str | None = None) -> Article:
+    """aid is any short string; it is padded to the 12-hex id format."""
+    hexid = aid.encode().hex().ljust(12, "0")[:12]
+    return Article(
+        id=hexid,
+        outlet_id=outlet_id,
+        headline=headline or f"Headline {aid} from {outlet_id}",
+        snippet=f"Snippet for {aid}",
+        url=f"https://{outlet_id}.example.com/{aid}",
+        published_at=RECORDED_AT - timedelta(hours=6) + timedelta(minutes=minutes),
+    )
+
+
+def aid(short: str) -> str:
+    """The 12-hex id make_article() gives a short id."""
+    return short.encode().hex().ljust(12, "0")[:12]
