@@ -63,6 +63,13 @@ def test_live_fixture_top_story_has_lean_and_bloc_framing():
     assert top.agreed_facts
 
 
+def test_live_fixture_quotes_carry_provenance_from_both_fields():
+    outcome, _, _ = _run()
+    fields = [q.field for s in outcome.digest.stories for f in s.framing + s.framing_by_bloc for q in f.headline_quotes]
+    assert set(fields) == {"headline", "snippet"} and len(fields) == 125
+    assert outcome.digest.meta.validation.dropped_by_reason == {}
+
+
 def test_live_fixture_cost_is_the_sum_of_recorded_usage():
     outcome, cost, _ = _run()
     expected = 0.0

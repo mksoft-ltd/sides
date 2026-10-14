@@ -264,11 +264,11 @@ def show_story(digest: Digest, story: Story) -> str:
         for e in entries:
             lines.append(f"  [{getattr(e, key).upper()}]")
             if e.headline_quotes:
-                lines.append("    headline wording:")
+                lines.append("    wording:")
                 for q in e.headline_quotes:
                     a = arts.get(q.article_id)
                     name = outlets[a.outlet_id].name if a and a.outlet_id in outlets else q.article_id
-                    lines.append(_wrap(f'"{q.quote}" — {name}', 6))
+                    lines.append(_wrap(f'{q.field}: "{q.quote}" — {name}', 6))
             if e.emphasis:
                 lines.append("    emphasis:")
                 for it in e.emphasis:

@@ -50,6 +50,10 @@ def test_story_schema_rejects_long_titles_and_extra_fields():
     story.validate(good)
     assert not story.is_valid({k: v for k, v in good.items() if k != "agreed_facts"})  # analysis arrays are required
     assert not story.is_valid({**good, "agreed_facts": [{"text": "unsourced", "sources": []}]})  # never empty sources
+    quote = {"article_id": "0123456789ab", "quote": "H"}
+    framing = lambda q: {**good, "framing": [{"lean": "left", "headline_quotes": [q], "emphasis": []}]}  # noqa: E731
+    assert story.is_valid(framing({**quote, "field": "headline"})) and story.is_valid(framing({**quote, "field": "snippet"}))
+    assert not story.is_valid(framing(quote)) and not story.is_valid(framing({**quote, "field": "body"}))  # provenance is required
     assert not story.is_valid({**good, "title": "x" * 91})
     assert not story.is_valid({**good, "blindspot": {"lean": "far-left", "bloc": None}})
     assert not story.is_valid({**good, "summary": "unsourced prose must not appear"})

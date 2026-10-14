@@ -112,7 +112,7 @@ stage offline from a recorded response (no key needed).
   |---|---|
   | `unknown_id` | any cited id (`sources`, `asserted_by`, `disputed_by`, `article_id`) is not an article of this story |
   | `empty_sources` | `sources` / either side of a contested claim or contradiction is empty |
-  | `quote_not_found` | a headline quote is not a literal substring of the cited article's headline or snippet (case-insensitive, whitespace-collapsed, curly quotes/dashes folded to ASCII) |
+  | `quote_not_found` | a headline quote is not a literal substring of the cited article's headline or snippet (case-insensitive, whitespace-collapsed, curly quotes/dashes folded to ASCII); a kept quote gets `field: "headline"` or `"snippet"` from the validator (headline wins when both match), never from the model |
   | `side_without_articles` | a framing entry or omission names a lean/bloc with no article in this story |
   | `source_outside_side` | a framing quote or emphasis item cites an article not of that lean/bloc (lean=null articles belong to no lean) |
   | `omission_cites_omitter` | an omission is sourced to an article of the lean said to omit the point |

@@ -124,11 +124,28 @@ def test_quote_matching_is_case_and_whitespace_and_curly_quote_insensitive():
     assert fold("‘A’ – “B”") == "'a' - \"b\""
 
 
-def test_quote_from_snippet_is_accepted():
+def test_quote_from_headline_gets_field_headline():
+    analysed, counts = run(good_response())
+    assert counts.dropped_by_reason == {}
+    q = analysed.framing[0].headline_quotes[0]
+    assert q.quote == "serious failings" and q.field == "headline"
+    assert all(q.field == "headline" for f in analysed.framing + analysed.framing_by_bloc for q in f.headline_quotes)
+
+
+def test_quote_from_snippet_is_accepted_with_field_snippet():
     resp = good_response()
     resp["framing"][1]["headline_quotes"].append({"article_id": C, "quote": "Snippet for c"})
-    _, counts = run(resp)
+    analysed, counts = run(resp)
     assert counts.dropped_by_reason == {} and counts.kept == GOOD_KEPT + 1
+    assert analysed.framing[1].headline_quotes[1].field == "snippet"
+
+
+def test_quote_present_in_both_headline_and_snippet_is_labelled_headline():
+    resp = good_response()
+    resp["framing"][1]["headline_quotes"].append({"article_id": C, "quote": "Minister"})  # "Minister quits…" / "Snippet for c" – headline only
+    resp["framing"][0]["headline_quotes"].append({"article_id": A, "quote": "s"})  # single letter: in both headline and snippet
+    analysed, _ = run(resp)
+    assert analysed.framing[0].headline_quotes[1].field == "headline"
 
 
 def test_framing_for_a_lean_with_no_articles_is_dropped():

@@ -6,7 +6,8 @@ dropped under the FIRST failing reason below and counted in ``ValidationCounts.d
   unknown_id                 a cited id (sources / asserted_by / disputed_by / article_id) is not in this story
   empty_sources              sources (or asserted_by / disputed_by / a contradiction side) is empty
   quote_not_found            a headline quote is not a literal substring of the cited article's headline or snippet
-                             (case-insensitive, whitespace-normalised, straight/curly quotes and dashes folded)
+                             (case-insensitive, whitespace-normalised, straight/curly quotes and dashes folded);
+                             a kept quote gets ``field`` = "headline" or "snippet" (headline wins when both match)
   side_without_articles      a framing entry / omission names a lean or bloc that has no article in this story
   source_outside_side        a framing quote or emphasis item cites an article not of that lean / bloc
   omission_cites_omitter     an omission is sourced to an article of the very lean said to omit the point
@@ -90,10 +91,17 @@ class _Ctx:
             s = truncate_words(s, ANALYSIS_TEXT_MAX_CHARS)
         return s or "…"
 
-    def quote_ok(self, q: AnalysisResponse.Quote) -> bool:
+    def quote_field(self, q: AnalysisResponse.Quote) -> str | None:
+        """'headline' / 'snippet' naming where the quote appears verbatim (headline wins), or None when nowhere."""
         head, snip = self.haystack[q.article_id]
         needle = fold(q.quote)
-        return bool(needle) and (needle in head or needle in snip)
+        if not needle:
+            return None
+        if needle in head:
+            return "headline"
+        if needle in snip:
+            return "snippet"
+        return None
 
 
 def _dedupe(ids: list[str]) -> list[str]:
@@ -131,14 +139,15 @@ def _framing(ctx: _Ctx, entries, *, kind: str) -> list:  # noqa: ANN001
             reason = ctx.check_ids([q.article_id])
             if reason is None and side_of[q.article_id] != side:
                 reason = "source_outside_side"
-            if reason is None and not ctx.quote_ok(q):
+            field = ctx.quote_field(q) if reason is None else None
+            if reason is None and field is None:
                 reason = "quote_not_found"
             if reason:
                 ctx.drop(reason, f"quote {q.quote[:60]!r} ({q.article_id})")
                 continue
             seen.add((q.article_id, q.quote))
             ctx.keep()
-            quotes.append(HeadlineQuote(article_id=q.article_id, quote=normalise_ws(q.quote)))
+            quotes.append(HeadlineQuote(article_id=q.article_id, quote=normalise_ws(q.quote), field=field))
         for item in e.emphasis:
             s = _sourced(ctx, item, side_of=side_of, side=side, label=f"emphasis[{side}]")
             if s is not None:

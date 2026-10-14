@@ -91,7 +91,7 @@ def test_assembly_attaches_validated_analysis_keeps_failed_story_and_totals_cost
     table = analysis_table(out)
     assert "FAILED" in table.splitlines()[-1] and "First story" in table
     shown = show_story(dg, dg.stories[0])
-    assert "AGREED FACTS (1)" in shown and "↳ L1 — Headline a" in shown and '"Headline" — L1' in shown
+    assert "AGREED FACTS (1)" in shown and "↳ L1 — Headline a" in shown and 'headline: "Headline" — L1' in shown
     assert "validator: kept 3, dropped 1 (unknown_id=1)" in shown
 
 

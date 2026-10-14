@@ -158,13 +158,18 @@ class Sourced(BaseModel):
     sources: list[str] = Field(min_length=1)
 
 
+QuoteField = Literal["headline", "snippet"]
+
+
 class HeadlineQuote(BaseModel):
-    """Verbatim wording lifted from one article's headline or snippet."""
+    """Verbatim wording lifted from one article; ``field`` says whether it came from the headline or the snippet.
+    The validator sets ``field`` deterministically (headline wins when the quote appears in both); the model never does."""
 
     model_config = ConfigDict(extra="forbid")
 
     article_id: str
     quote: str = Field(min_length=1)
+    field: QuoteField
 
 
 class LeanFraming(BaseModel):
