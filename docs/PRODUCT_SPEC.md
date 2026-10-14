@@ -27,11 +27,11 @@ Once a day a central pipeline (`pipeline/`) collects headlines and ≤200-charac
 - Monetisation: AdMob banner at the bottom of the list and story screens (never inside sourced content, hidden until a digest loads), one-time non-consumable `com.froggyeye.sides.adfree` removes ads instantly.
 
 **Tablet (phase 5, built)**
-- ≥ 840 dp window width: master-detail. Left pane = the digest list (360 dp, pull-to-refresh, selected story tinted, outlined and announced as selected); right pane = the selected story, story 1 by default; "No story selected" placeholder while there is no digest. Selecting a story swaps the pane in place and the URL reads `/story/:id` (axis carried over as `?axis=bloc`). The banner sits under the detail pane only.
+- ≥ 744 dp window width (every iPad, both orientations): master-detail. Left pane = the digest list (360 dp; 320 dp below 900 dp so the detail pane keeps ≥ 380 dp, pull-to-refresh, selected story tinted, outlined and announced as selected); right pane = the selected story, story 1 by default; "No story selected" placeholder while there is no digest. Selecting a story swaps the pane in place and the URL reads `/story/:id` (axis carried over as `?axis=bloc`). The banner sits under the detail pane only.
 - ≥ 1100 dp: perspectives side by side. Political lean = one equal-width column per lean present, shared sections (agreed, omissions, contested, opinion) full-width below. West / East = two columns; each East–West contradiction is a full-width topic with the West and East statements aligned under their columns; "No contradictions found" spans both.
 - Column guard: columns render only when every column gets ≥ 280 dp × text scale; otherwise tabs (e.g. 3 leans on an 11" iPad landscape, or any columns at 200% text).
 - Rotation/resizing keeps the selected story (route) and the axis + tab (per-story provider).
-- Below 840 dp the phone layout is unchanged. Note: iPad portrait widths of 744–834 dp (mini, 10th gen, Air/Pro 11") fall below 840 and get the phone layout; only the 12.9"/13" iPad is master-detail in portrait.
+- Below 744 dp the phone layout is unchanged. Large phones in landscape (≥ 744 dp wide) also get master-detail.
 
 **Later**
 - Phase 6: live digest URL via GitHub Actions + Pages.
@@ -43,7 +43,7 @@ Once a day a central pipeline (`pipeline/`) collects headlines and ≤200-charac
 /                      Digest list ──tap story──► /story/:id   (Story detail; ?axis=bloc opens West / East)
   └─ settings icon ──► /settings ──► /settings/outlets  (Outlets and ratings)
 
-Tablet (≥ 840 dp): / and /story/:id both render list + detail side by side; tapping a story is a
+Tablet (≥ 744 dp): / and /story/:id both render list + detail side by side; tapping a story is a
 context.go to /story/:id that updates the same page (no push, no animation).
 ```
 

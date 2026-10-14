@@ -23,7 +23,8 @@ final Provider<MasterListScrollMemory> masterListScrollProvider =
     Provider<MasterListScrollMemory>((Ref ref) => MasterListScrollMemory());
 
 /// Tablet layout (≥ [LayoutSize.mediumMin] dp): the digest list in a fixed
-/// [listPaneWidth] pane on the left, the selected story on the right.
+/// pane on the left ([listPaneWidthFor]: 360 dp, or 320 dp below 900 dp),
+/// the selected story on the right.
 ///
 /// The selection is the route: `/` shows story 1, `/story/:id` shows that
 /// story. Tapping a story calls `context.go`; between stories the route's
@@ -43,6 +44,14 @@ class MasterDetailScreen extends ConsumerStatefulWidget {
   final PerspectiveAxis initialAxis;
 
   static const double listPaneWidth = 360;
+
+  /// Below [narrowBelow] dp the list pane shrinks so the detail pane keeps
+  /// room for a readable column (744 dp → 320 + 1 + 423).
+  static const double narrowListPaneWidth = 320;
+  static const double narrowBelow = 900;
+
+  static double listPaneWidthFor(double windowWidth) =>
+      windowWidth < narrowBelow ? narrowListPaneWidth : listPaneWidth;
   static const Key listPaneKey = Key('master-list-pane');
   static const Key detailPaneKey = Key('master-detail-pane');
 
@@ -133,7 +142,9 @@ class _MasterDetailScreenState extends ConsumerState<MasterDetailScreen> {
         children: <Widget>[
           SizedBox(
             key: MasterDetailScreen.listPaneKey,
-            width: MasterDetailScreen.listPaneWidth,
+            width: MasterDetailScreen.listPaneWidthFor(
+              MediaQuery.sizeOf(context).width,
+            ),
             child: FocusTraversalGroup(
               child: Semantics(
                 container: true,

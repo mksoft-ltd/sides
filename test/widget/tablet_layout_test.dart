@@ -24,7 +24,11 @@ const Size ipad129Portrait = Size(1024, 1366); // 12.9" portrait: medium
 const Size ipad129Landscape = Size(1366, 1024); // 12.9" landscape: expanded
 const Size ipad11Landscape = Size(1194, 834); // 11" landscape: expanded
 const Size ipad102Landscape = Size(1080, 810); // 10.2" landscape: medium
-const Size ipad97Portrait = Size(768, 1024); // 9.7" portrait: compact
+const Size ipad97Portrait = Size(768, 1024); // 9.7" portrait: medium
+const Size ipadMiniPortrait = Size(744, 1133); // mini portrait: medium
+const Size ipad11Portrait = Size(834, 1194); // 11" portrait: medium
+const Size ipadAirPortrait = Size(820, 1180); // Air 11" portrait: medium
+const Size justBelowTablet = Size(743, 1000); // compact
 
 void main() {
   final Digest digest = sampleDigest();
@@ -78,7 +82,7 @@ void main() {
     await tester.tap(inList(find.text(s.title)));
   }
 
-  group('master-detail (>= 840 dp)', () {
+  group('master-detail (>= 744 dp)', () {
     testWidgets('12.9" portrait (1024 dp): both panes, story 1 by default, '
         'tabs not columns', (WidgetTester tester) async {
       await pumpSidesApp(tester, size: ipad129Portrait);
@@ -204,6 +208,37 @@ void main() {
       expect(inList(find.text('You\'re offline')), findsOneWidget);
       expect(inDetail(find.text('No story selected')), findsOneWidget);
       expect(find.byKey(FakeAdsService.bannerKey), findsNothing);
+    });
+
+    for (final (String name, Size size) in <(String, Size)>[
+      ('mini (744 dp)', ipadMiniPortrait),
+      ('9.7" (768 dp)', ipad97Portrait),
+      ('Air 11" (820 dp)', ipadAirPortrait),
+      ('Pro 11" (834 dp)', ipad11Portrait),
+    ]) {
+      testWidgets('every iPad portrait is master-detail with tabs: $name',
+          (WidgetTester tester) async {
+        await pumpSidesApp(tester, size: size);
+        expect(find.byType(DigestListScreen), findsNothing);
+        expect(listPane, findsOneWidget);
+        expect(detailPane, findsOneWidget);
+        expect(tester.getSize(listPane).width,
+            MasterDetailScreen.narrowListPaneWidth);
+        expect(tester.getSize(detailPane).width, greaterThanOrEqualTo(380));
+        expect(inDetail(find.text(s1.title)), findsOneWidget);
+        expect(inDetail(tab('Left')), findsOneWidget);
+        expect(find.byType(PerspectiveColumns), findsNothing);
+        expect(tester.takeException(), isNull);
+      });
+    }
+
+    testWidgets('mini portrait at 200% text reflows without overflow',
+        (WidgetTester tester) async {
+      tester.platformDispatcher.textScaleFactorTestValue = 2.0;
+      addTearDown(tester.platformDispatcher.clearTextScaleFactorTestValue);
+      await pumpSidesApp(tester, size: ipadMiniPortrait);
+      expect(tester.takeException(), isNull);
+      expect(detailPane, findsOneWidget);
     });
 
     testWidgets('10.2" landscape (1080 dp) keeps tabs even for two leans',
@@ -462,7 +497,7 @@ void main() {
     });
   });
 
-  group('phone layout unchanged (< 840 dp)', () {
+  group('phone layout unchanged (< 744 dp)', () {
     testWidgets('390x844: list, then a pushed story page',
         (WidgetTester tester) async {
       await pumpSidesApp(tester);
@@ -476,9 +511,9 @@ void main() {
       expect(find.byType(PerspectiveColumns), findsNothing);
     });
 
-    testWidgets('9.7" iPad portrait (768 dp) is below 840: phone layout',
+    testWidgets('743 dp is still the phone layout',
         (WidgetTester tester) async {
-      await pumpSidesApp(tester, size: ipad97Portrait);
+      await pumpSidesApp(tester, size: justBelowTablet);
       expect(find.byType(DigestListScreen), findsOneWidget);
       expect(find.byType(MasterDetailScreen), findsNothing);
     });

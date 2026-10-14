@@ -223,5 +223,8 @@ test/               fixtures (= assets/sample_digest.json), helpers/ (fakes, pum
   route's `?axis=`"), not widget state — a layout swap re-subscribes in the same frame so the reader's place survives.
 - Columns: `StoryDetailView.columnsFit` — only at `LayoutSize.expanded` and only when every column gets ≥ 280 dp ×
   text scale; else tabs. Contradiction rows (`ContradictionCard(sideBySide:)`) drop the card inset so they align
-  with the bloc columns. iPad portrait < 840 dp (all but 12.9"/13") gets the phone layout by design of the breakpoint.
+  with the bloc columns.
+- Breakpoints: `LayoutSize.mediumMin` = 744 dp (iPad mini portrait, so every iPad is master-detail in both
+  orientations; large phones in landscape too), `expandedMin` = 1100 dp. List pane 360 dp, 320 dp below 900 dp
+  (`MasterDetailScreen.listPaneWidthFor`) so the detail pane stays ≥ 380 dp at 744.
 - Tablet tests: `test/widget/tablet_layout_test.dart` (sizes in dp; pumpSidesApp renders at 3×).

@@ -10,7 +10,9 @@ enum LayoutSize {
   medium,
   expanded;
 
-  static const double mediumMin = 840;
+  /// 744 dp = iPad mini portrait, the narrowest iPad: every iPad gets
+  /// master-detail in both orientations.
+  static const double mediumMin = 744;
   static const double expandedMin = 1100;
 
   static LayoutSize of(BuildContext context) {
