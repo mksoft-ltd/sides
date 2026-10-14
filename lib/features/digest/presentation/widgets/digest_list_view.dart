@@ -15,12 +15,17 @@ class DigestListView extends ConsumerWidget {
     super.key,
     required this.onOpenStory,
     this.selectedStoryId,
+    this.scrollController,
   });
 
   final ValueChanged<Story> onOpenStory;
 
   /// Highlighted story in master-detail; unused on phones.
   final String? selectedStoryId;
+
+  /// Lets the tablet layout keep the list's scroll position when the
+  /// selection moves between routes.
+  final ScrollController? scrollController;
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -57,6 +62,7 @@ class DigestListView extends ConsumerWidget {
     return RefreshIndicator(
       onRefresh: controller.refresh,
       child: ListView.separated(
+        controller: scrollController,
         physics: const AlwaysScrollableScrollPhysics(),
         padding: const EdgeInsets.fromLTRB(16, 8, 16, 24),
         itemCount: digest.stories.length + 1,
@@ -69,7 +75,11 @@ class DigestListView extends ConsumerWidget {
             );
           }
           final Story story = digest.stories[i - 1];
-          return StoryCard(story: story, onTap: () => onOpenStory(story));
+          return StoryCard(
+            story: story,
+            selected: story.id == selectedStoryId,
+            onTap: () => onOpenStory(story),
+          );
         },
       ),
     );

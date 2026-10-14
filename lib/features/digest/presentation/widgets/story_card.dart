@@ -6,16 +6,33 @@ import '../../../../shared/widgets/coverage_indicator.dart';
 import '../../domain/digest.dart';
 
 class StoryCard extends StatelessWidget {
-  const StoryCard({super.key, required this.story, required this.onTap});
+  const StoryCard({
+    super.key,
+    required this.story,
+    required this.onTap,
+    this.selected = false,
+  });
 
   final Story story;
   final VoidCallback onTap;
 
+  /// The story shown in the tablet detail pane: tinted, outlined and
+  /// announced as selected.
+  final bool selected;
+
   @override
   Widget build(BuildContext context) {
     final ThemeData theme = Theme.of(context);
-    return Card(
+    final ColorScheme cs = theme.colorScheme;
+    final Widget card = Card(
       clipBehavior: Clip.antiAlias,
+      color: selected ? cs.secondaryContainer : null,
+      shape: selected
+          ? RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(16),
+              side: BorderSide(color: cs.primary, width: 2),
+            )
+          : null,
       child: InkWell(
         onTap: onTap,
         child: Padding(
@@ -66,5 +83,7 @@ class StoryCard extends StatelessWidget {
         ),
       ),
     );
+    // Null on phones and unselected rows, so they announce no selected state.
+    return Semantics(selected: selected ? true : null, child: card);
   }
 }

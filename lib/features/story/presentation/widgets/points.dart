@@ -114,7 +114,11 @@ class FramingPanel extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: <Widget>[
-        Text(groupLabel, style: t.titleMedium),
+        // Announced as a header: in column mode it heads its column.
+        Semantics(
+          header: true,
+          child: Text(groupLabel, style: t.titleMedium),
+        ),
         const SizedBox(height: 12),
         Text(Copy.headlineWording, style: t.labelLarge),
         const SizedBox(height: 8),
@@ -165,38 +169,73 @@ class ContestedClaimCard extends StatelessWidget {
   }
 }
 
-/// One topic, West row then East row.
+/// One topic with its West and East statements: stacked (phones, tabs) or,
+/// with [sideBySide], the topic spanning both columns and West / East in
+/// two aligned columns that line up with the bloc columns above.
 class ContradictionCard extends StatelessWidget {
   const ContradictionCard({
     super.key,
     required this.contradiction,
     required this.story,
     required this.digest,
+    this.sideBySide = false,
   });
 
   final Contradiction contradiction;
   final Story story;
   final Digest digest;
+  final bool sideBySide;
+
+  /// Matches `StoryDetailView.columnGap` so rows align with the columns.
+  static const double columnGap = 16;
 
   @override
   Widget build(BuildContext context) {
     final ThemeData theme = Theme.of(context);
     final PerspectiveColors colors = PerspectiveColors.of(context);
     Widget side(Bloc b, SourcedPoint p) => Container(
-          margin: const EdgeInsets.only(top: 10),
-          padding: const EdgeInsets.only(left: 12),
-          decoration: BoxDecoration(
-            border: Border(left: BorderSide(color: colors.forBloc(b), width: 4)),
-          ),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: <Widget>[
-              Text(b.label, style: theme.textTheme.labelLarge),
-              const SizedBox(height: 4),
-              SourcedPointTile(point: p, story: story, digest: digest),
-            ],
-          ),
-        );
+      key: ValueKey<String>('contradiction-${b.wire}'),
+      margin: const EdgeInsets.only(top: 10),
+      padding: const EdgeInsets.only(left: 12),
+      decoration: BoxDecoration(
+        border: Border(left: BorderSide(color: colors.forBloc(b), width: 4)),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: <Widget>[
+          Text(b.label, style: theme.textTheme.labelLarge),
+          const SizedBox(height: 4),
+          SourcedPointTile(point: p, story: story, digest: digest),
+        ],
+      ),
+    );
+    final Widget topic = Semantics(
+      header: sideBySide,
+      child: Text(contradiction.topic, style: theme.textTheme.titleSmall),
+    );
+    if (sideBySide) {
+      // No card inset here: the two halves sit at exactly the x positions
+      // of the West and East columns above, so each row reads across.
+      return Padding(
+        padding: const EdgeInsets.only(bottom: 12),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: <Widget>[
+            Divider(height: 1, color: theme.colorScheme.outlineVariant),
+            const SizedBox(height: 12),
+            topic,
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                Expanded(child: side(Bloc.west, contradiction.west)),
+                const SizedBox(width: columnGap),
+                Expanded(child: side(Bloc.east, contradiction.east)),
+              ],
+            ),
+          ],
+        ),
+      );
+    }
     return Card(
       margin: const EdgeInsets.only(bottom: 12),
       child: Padding(
@@ -204,7 +243,7 @@ class ContradictionCard extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
-            Text(contradiction.topic, style: theme.textTheme.titleSmall),
+            topic,
             side(Bloc.west, contradiction.west),
             side(Bloc.east, contradiction.east),
           ],
