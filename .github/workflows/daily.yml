@@ -1,0 +1,106 @@
+# Daily digest: collect → group → analyse (Claude, paid) → publish to the gh-pages branch (GitHub Pages).
+#
+# Fails red when any stage exits non-zero, so GitHub emails the failure. The per-run cost is in the job summary,
+# in runs/<date>.json on the site and in the uploaded pipeline/out/ artifact (14 days).
+#
+# Manual runs: Actions → "Daily digest" → Run workflow, or
+#   gh workflow run daily.yml                       # full run, publishes
+#   gh workflow run daily.yml -f through=group      # stops after grouping, no publish (still paid: one call)
+#   gh workflow run daily.yml -f dry_run=true       # collect only, free, no publish
+name: Daily digest
+
+on:
+  schedule:
+    - cron: "0 6 * * *"   # 06:00 UTC daily
+  workflow_dispatch:
+    inputs:
+      through:
+        description: "Last stage to run (publish happens only after analyse)"
+        type: choice
+        default: analyse
+        options: [collect, group, analyse]
+      dry_run:
+        description: "Stop after collect (no Claude calls, no publish)"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write   # push gh-pages (and the keepalive marker to main)
+  actions: write    # re-enable this workflow (keepalive)
+
+concurrency:
+  group: daily-digest
+  cancel-in-progress: false
+
+jobs:
+  digest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: pipeline/pyproject.toml
+
+      - name: Install pipeline
+        run: pip install -e pipeline
+
+      - name: Resolve stages
+        id: stages
+        env:
+          THROUGH: ${{ inputs.dry_run == true && 'collect' || (inputs.through || 'analyse') }}
+        run: |
+          echo "through=$THROUGH" >> "$GITHUB_OUTPUT"
+          echo "Running through: $THROUGH"
+
+      - name: Run pipeline
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          PYTHONUNBUFFERED: "1"
+        run: python -m sides_pipeline.cli run --through "${{ steps.stages.outputs.through }}"
+
+      - name: Publish to gh-pages
+        if: steps.stages.outputs.through == 'analyse'
+        env:
+          SITE_REMOTE_URL: https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git
+          SITE_DIR: ${{ runner.temp }}/site
+          GIT_AUTHOR_NAME: github-actions[bot]
+          GIT_AUTHOR_EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
+          GIT_COMMITTER_NAME: github-actions[bot]
+          GIT_COMMITTER_EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
+        run: SUMMARY_OUT="$GITHUB_STEP_SUMMARY" scripts/publish_site.sh
+
+      - name: Keep the schedule alive
+        # GitHub disables cron workflows on a public repo after 60 days without repository activity. The daily
+        # publish lands on gh-pages, not main, so: re-enable this workflow (no-op when enabled) and, when main has
+        # been quiet for 45+ days, push a dated marker commit to main. See CLAUDE.md "Deployment".
+        if: github.event_name == 'schedule'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GIT_AUTHOR_NAME: github-actions[bot]
+          GIT_AUTHOR_EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
+          GIT_COMMITTER_NAME: github-actions[bot]
+          GIT_COMMITTER_EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
+        run: |
+          gh api -X PUT "repos/${GITHUB_REPOSITORY}/actions/workflows/daily.yml/enable"
+          last=$(git log -1 --format=%ct HEAD)
+          age_days=$(( ( $(date +%s) - last ) / 86400 ))
+          echo "main last changed ${age_days} day(s) ago"
+          if [ "$age_days" -ge 45 ]; then
+            date -u +%F > .github/keepalive
+            git add .github/keepalive
+            git commit -m "Keepalive: scheduled-workflow activity $(date -u +%F)"
+            git push origin HEAD:main
+          fi
+
+      - name: Upload run artifacts
+        if: always()
+        uses: actions/upload-artifact@v5
+        with:
+          name: pipeline-out-${{ github.run_id }}
+          path: pipeline/out/
+          retention-days: 14
+          if-no-files-found: ignore

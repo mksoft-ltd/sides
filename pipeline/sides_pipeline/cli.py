@@ -5,6 +5,7 @@
     python -m sides_pipeline.cli analyse --in pipeline/out/stories.json --out pipeline/out/digest.json
     python -m sides_pipeline.cli show --story 1 [--in pipeline/out/digest.json]
     python -m sides_pipeline.cli run --through analyse      # collect → group → analyse
+    python -m sides_pipeline.cli publish --site site [--summary-out summary.md]   # out/ → gh-pages checkout
 """
 
 from __future__ import annotations
@@ -31,6 +32,7 @@ from .group import (
     group_articles,
 )
 from .models import CollectResult, Digest, Outlet, Story
+from .publish import publish, step_summary
 from .schema import validate_digest
 
 log = logging.getLogger(__name__)
@@ -379,6 +381,27 @@ def cmd_run(args: argparse.Namespace) -> int:
     return 0 if len(analysed.failed) < len(analysed.digest.stories) else 1
 
 
+def cmd_publish(args: argparse.Namespace) -> int:
+    digest_path = Path(args.digest)
+    runs_dir = Path(args.runs_dir)
+    privacy = Path(args.privacy_html) if args.privacy_html else None
+    result = publish(digest_path, runs_dir, Path(args.site), privacy_html=privacy)
+    for w in result.written:
+        print(f"wrote {w}")
+    if not result.run_report_copied:
+        print(f"WARNING: no cost report for {result.date} in {runs_dir}", file=sys.stderr)
+    if privacy is not None and not result.privacy_copied:
+        print(f"note: {privacy} does not exist yet; privacy_policy.html not published")
+    print(f"index: {len(result.index)} digest(s), latest {result.index[0].date if result.index else '-'}")
+    if args.summary_out:
+        digest = _load_digest(digest_path)
+        report = runs_dir / f"{digest.date}.json"
+        Path(args.summary_out).parent.mkdir(parents=True, exist_ok=True)
+        Path(args.summary_out).write_text(step_summary(digest, report if report.exists() else None), encoding="utf-8")
+        print(f"wrote {args.summary_out}")
+    return 0
+
+
 def _add_collect_args(p: argparse.ArgumentParser) -> None:
     p.add_argument("--outlets", default=str(DEFAULT_OUTLETS_PATH), help="outlets.yaml path")
     p.add_argument("--window-hours", type=int, default=WINDOW_HOURS, help="keep items newer than this")
@@ -433,6 +456,14 @@ def build_parser() -> argparse.ArgumentParser:
     _add_group_args(r)
     _add_analyse_args(r)
     r.set_defaults(func=cmd_run)
+
+    pb = sub.add_parser("publish", help="copy digest.json + the day's cost report into a gh-pages site checkout")
+    pb.add_argument("--digest", default=str(DEFAULT_OUT_DIR / "digest.json"), help="digest.json path")
+    pb.add_argument("--runs-dir", default=str(DEFAULT_OUT_DIR / "runs"), help="where <date>.json cost reports are")
+    pb.add_argument("--site", required=True, help="site directory (the gh-pages checkout); created if missing")
+    pb.add_argument("--privacy-html", default="privacy_policy.html", help="copied to the site root when it exists (default: repo-root privacy_policy.html)")
+    pb.add_argument("--summary-out", default=None, help="also write a Markdown run summary (cost + stories) here, e.g. $GITHUB_STEP_SUMMARY")
+    pb.set_defaults(func=cmd_publish)
     return p
 
 
