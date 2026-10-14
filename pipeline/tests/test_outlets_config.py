@@ -98,3 +98,26 @@ def test_duplicate_ids_rejected(tmp_path):
     p.write_text(yaml.safe_dump({"outlets": rows * 2}))
     with pytest.raises(ValueError, match="duplicate outlet id"):
         load_outlets(p)
+
+
+def test_each_axis_has_at_least_two_enabled_outlets(outlets):
+    """Balance guard: no lean, bloc or key region may depend on a single feed."""
+    enabled = [o for o in outlets if o.enabled]
+    for lean in ("left", "centre", "right"):
+        assert sum(1 for o in enabled if o.bloc == "west" and o.lean == lean) >= 2, lean
+    assert sum(1 for o in enabled if o.ownership == "state-controlled") >= 2
+    assert sum(1 for o in enabled if o.bloc == "east" and o.region == "middle_east") >= 2
+    for region in ("uk", "us"):
+        for lean in ("left", "right"):
+            assert sum(1 for o in enabled if o.region == region and o.lean == lean) >= 2, (region, lean)
+
+
+def test_replacement_outlets_present_and_originals_kept(outlets):
+    by_id = {o.id: o for o in outlets}
+    for new, old in (("thesun", "spectator"), ("nbc", "cnn"), ("thenational", "arabnews"), ("ecns", "xinhua")):
+        assert by_id[new].enabled and by_id[new].note, new
+        assert not by_id[old].enabled and by_id[old].note, old
+        assert by_id[new].bloc == by_id[old].bloc and by_id[new].lean == by_id[old].lean
+    assert by_id["ecns"].ownership == "state-controlled"
+    for dead in ("chinadaily", "peoplesdaily"):
+        assert not by_id[dead].enabled and by_id[dead].ownership == "state-controlled"

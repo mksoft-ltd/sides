@@ -112,6 +112,18 @@ outlets:
       No public RSS/Atom feed as of 14 Oct 2026: /feed, /feed/, /rss, /rss.xml, /feed.xml and
       section feeds all return 404 and the site has no feed autodiscovery link. Re-enable if one appears.
 
+  - id: thesun
+    name: The Sun
+    feed_url: https://www.thesun.co.uk/news/feed/
+    home_url: https://www.thesun.co.uk/
+    lean: right
+    region: uk
+    bloc: west
+    ownership: independent
+    country: United Kingdom
+    rating_basis: AllSides media bias rating (Right), checked Oct 2026
+    note: Added 14 Oct 2026 in place of The Spectator (no feed); The Times (thetimes.com) also has no public feed.
+
   # ── West · US ─────────────────────────────────────────────────────────────
   - id: nyt
     name: The New York Times
@@ -138,6 +150,18 @@ outlets:
     note: >-
       CNN's official RSS feeds (rss.cnn.com edition_world / cnn_world / cnn_topstories / edition / cnn_latest)
       still load but have been frozen since 2023–Aug 2024 (checked 14 Oct 2026). No current official feed exists.
+
+  - id: nbc
+    name: NBC News
+    feed_url: https://feeds.nbcnews.com/nbcnews/public/news
+    home_url: https://www.nbcnews.com/
+    lean: left
+    region: us
+    bloc: west
+    ownership: independent
+    country: United States
+    rating_basis: AllSides media bias rating (Lean Left), checked Oct 2026
+    note: Added 14 Oct 2026 in place of CNN; Washington Post feeds (feeds.washingtonpost.com) returned 502 / timed out.
 
   - id: huffpost
     name: HuffPost
@@ -257,6 +281,19 @@ outlets:
       Feed URL returns a Cloudflare "Just a moment..." bot challenge (HTTP 403) for every User-Agent tried
       on 14 Oct 2026, so it cannot be collected without browser automation. Re-enable if the challenge is lifted.
 
+  - id: thenational
+    name: The National (UAE)
+    feed_url: https://www.thenationalnews.com/arc/outboundfeeds/rss/?outputType=xml
+    home_url: https://www.thenationalnews.com/
+    lean: null
+    lean_note: Non-Western outlet; the UK/US left–right scale is not applied. Analysed on the West/East axis.
+    region: middle_east
+    bloc: east
+    ownership: independent
+    country: United Arab Emirates
+    rating_basis: Owned by International Media Investments (Abu Dhabi); no left/right tag applied
+    note: Added 14 Oct 2026 in place of Arab News. Site-wide Arc feed (no section feeds). Gulf News (gulfnews.com/stories.rss, 11 items) is a working fallback.
+
   - id: timesofisrael
     name: The Times of Israel
     feed_url: https://www.timesofisrael.com/feed/
@@ -312,6 +349,48 @@ outlets:
     ownership: state-controlled
     country: China
     rating_basis: China Global Television Network, part of state broadcaster China Media Group
+
+  - id: ecns
+    name: ECNS (China News Service)
+    feed_url: https://www.ecns.cn/rss/rss.xml
+    home_url: https://www.ecns.cn/
+    lean: null
+    region: asia
+    bloc: east
+    ownership: state-controlled
+    country: China
+    rating_basis: English service of China News Service, a state news agency
+    note: Added 14 Oct 2026 as a second state-controlled Chinese voice because China Daily and People's Daily have no live feeds.
+
+  - id: chinadaily
+    name: China Daily
+    feed_url: https://www.chinadaily.com.cn/rss/world_rss.xml
+    home_url: https://www.chinadaily.com.cn/
+    lean: null
+    region: asia
+    bloc: east
+    ownership: state-controlled
+    country: China
+    rating_basis: Owned by the Publicity Department of the Communist Party of China
+    enabled: false
+    note: >-
+      No working feed found on 14 Oct 2026: rss/world_rss.xml, china_rss.xml, cndy_rss.xml, bizchina_rss.xml on
+      www/global/europe subdomains all 404, /rss is 404, and the homepage has no feed autodiscovery link.
+
+  - id: peoplesdaily
+    name: People's Daily (English)
+    feed_url: http://en.people.cn/rss/World.xml
+    home_url: https://en.people.cn/
+    lean: null
+    region: asia
+    bloc: east
+    ownership: state-controlled
+    country: China
+    rating_basis: Official newspaper of the Central Committee of the Communist Party of China
+    enabled: false
+    note: >-
+      Feeds exist but are frozen (checked 14 Oct 2026): rss/World.xml newest item Dec 2012, rss/China.xml Aug 2011,
+      rss/90777.xml Jun 2025. Re-enable if a live feed appears.
 
   - id: scmp
     name: South China Morning Post
