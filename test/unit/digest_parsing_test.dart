@@ -140,7 +140,7 @@ void main() {
       expect(Digest.fromJson(j).stories.first.contradictions, isEmpty);
     });
 
-    test('a quote without the field property defaults to headline', () {
+    test('a quote without the required field property is rejected', () {
       final Map<String, Object?> j = mutate((Map<String, Object?> s) {
         final Map<String, Object?> framing =
             (s['framing']! as List<Object?>).first! as Map<String, Object?>;
@@ -148,12 +148,7 @@ void main() {
           (q! as Map<String, Object?>).remove('field');
         }
       });
-      final Story s = Digest.fromJson(j).stories.first;
-      expect(
-        s.framingByLean.first.headlineQuotes
-            .every((HeadlineQuote q) => q.field == QuoteField.headline),
-        isTrue,
-      );
+      expect(() => Digest.fromJson(j), throwsA(isA<DigestFormatException>()));
     });
 
     test('a structurally broken digest throws DigestFormatException', () {

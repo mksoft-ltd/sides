@@ -80,10 +80,10 @@ enum QuoteField {
   const QuoteField(this.wire);
   final String wire;
 
-  /// `field` is required in the current schema; older digests predate it
-  /// and every quote then came from a headline.
+  /// Required by the schema (set by the pipeline's citation validator, not
+  /// the model). A quote without it is a malformed digest.
   static QuoteField fromWire(Object? value) => switch (value) {
-        null || 'headline' => QuoteField.headline,
+        'headline' => QuoteField.headline,
         'snippet' => QuoteField.snippet,
         _ => throw DigestFormatException('unknown quote field "$value"'),
       };

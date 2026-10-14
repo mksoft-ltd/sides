@@ -40,7 +40,7 @@ Once a day a central pipeline (`pipeline/`) collects headlines and ≤200-charac
 
 ## Data model (app side, `lib/features/digest/domain/digest.dart`)
 
-`Digest {schemaVersion, generatedAt, date, meta, outlets[], stories[]}` · `Outlet {id, name, lean?, region, bloc, ownership, country, homeUrl, ratingBasis}` · `Story {id, title, rank, outletCount, coverage, blindspot, articles[], agreedFacts[], framingByLean[], omissions[], contestedClaims[], opinion[], framingByBloc[], contradictions[]}` · `Article {id, outletId, headline, snippet, url, publishedAt}` · `SourcedPoint {text, sources[]}` · `HeadlineQuote {articleId, quote, field: headline|snippet}` · `Contradiction {topic, west, east}`.
+`Digest {schemaVersion, generatedAt, date, meta, outlets[], stories[]}` · `Outlet {id, name, lean?, region, bloc, ownership, country, homeUrl, ratingBasis}` · `Story {id, title, rank, outletCount, coverage, blindspot, articles[], agreedFacts[], framingByLean[], omissions[], contestedClaims[], opinion[], framingByBloc[], contradictions[]}` · `Article {id, outletId, headline, snippet, url, publishedAt}` · `SourcedPoint {text, sources[]}` · `HeadlineQuote {articleId, quote, field: headline|snippet}` (field required, set by the pipeline validator) · `Contradiction {topic, west, east}`.
 Integrity on read: unknown source ids are stripped and any point left without a source is dropped, so the UI cannot render an unsourced claim.
 
 Local storage: `<documents>/digest/latest.json` + `latest.meta.json` (`fetched_at`, `etag`); SharedPreferences keys `theme_mode`, `ad_free_owned`. No accounts, no backend, no analytics or crash SDKs.
@@ -54,6 +54,8 @@ Local storage: `<documents>/digest/latest.json` + `latest.meta.json` (`fetched_a
 | Android (merged from the Mobile Ads SDK) | `ACCESS_NETWORK_STATE`, `ACCESS_ADSERVICES_AD_ID`, `ACCESS_ADSERVICES_ATTRIBUTION`, `ACCESS_ADSERVICES_TOPICS`, `WAKE_LOCK`, `FOREGROUND_SERVICE` | Added by `play-services-ads`; the app itself uses none directly. Security/compliance stages may decide to strip the Privacy Sandbox ones with `tools:node="remove"`. |
 | Android (merged from Billing) | `com.android.vending.BILLING` | Ad-free in-app purchase. |
 | iOS | none requested at runtime | No ATT prompt and no `NSUserTrackingUsageDescription`: Sides does not track; all ad requests are non-personalised (house convention). `SKAdNetworkItems` (Google's list, 50 entries) and `GADApplicationIdentifier` are in Info.plist. `ITSAppUsesNonExemptEncryption = false`. |
+
+**Decision (confirmed by the conductor, 15 Oct 2026): no App Tracking Transparency.** Sides follows the house pattern used in eight_ball_wisdom: no ATT prompt, no `NSUserTrackingUsageDescription`, non-personalised ad requests on both platforms, Google UMP consent where UK/EEA rules require it, and an "Ad privacy options" entry in Settings. Later privacy and compliance stages should not reopen this. If ATT is ever added, the App Privacy answers change to "used for tracking".
 
 Privacy declarations must reflect AdMob (advertising data, device identifiers on Android, not used for tracking) rather than "No data collected".
 
