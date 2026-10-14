@@ -7,8 +7,8 @@ Founder decisions 14 Oct 2026: Claude Opus 5.5 for the daily pipeline (paid, ~£
 | # | Stage | Status | Date | Notes |
 |---|-------|--------|------|-------|
 | 1a | build: pipeline phase 1 (collect) | done | 2026-10-14 | 45 tests, socket guard; 29 live outlets (7 dead feeds kept disabled with notes), 726 articles in sample; commits 909bbd0, 0f04255 |
-| 1b | build: pipeline phase 2 (group) | in-progress | 2026-10-14 | general-purpose agent; key in Keychain (anthropic-api-key/sides) + GH secret |
-| 1c | build: pipeline phase 3 (analyse) | pending | | |
+| 1b | build: pipeline phase 2 (group) | done | 2026-10-14 | 75 tests; live run 10 stories from 723 articles, grouping $0.53 (84k in/9.6k out); commit f37d659 |
+| 1c | build: pipeline phase 3 (analyse) | in-progress | 2026-10-14 | general-purpose agent |
 | 1d | build: phone app (phase 4) | pending | | flutter-architect |
 | 1e | build: tablet layout (phase 5) | pending | | flutter-architect |
 | 1f | build: deployment (phase 6) | pending | | GitHub Actions cron + Pages, secret via `gh secret set` |
