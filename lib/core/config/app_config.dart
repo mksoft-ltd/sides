@@ -37,5 +37,11 @@ abstract final class AppConfig {
   static const String screenshotRoute =
       String.fromEnvironment('SCREENSHOT_ROUTE', defaultValue: '/');
 
+  /// Screenshot harness only: `landscape` or `portrait` asks the system to
+  /// rotate at launch (simulators without a GUI cannot be rotated by hand).
+  /// Ignored unless [screenshotMode] is on in a non-release build.
+  static const String screenshotOrientation =
+      String.fromEnvironment('SCREENSHOT_ORIENTATION', defaultValue: '');
+
   static const String sampleDigestAsset = 'assets/sample_digest.json';
 }

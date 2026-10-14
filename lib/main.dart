@@ -24,6 +24,19 @@ Future<void> main() async {
   // The bundled sample digest stands in for the network only for the store
   // screenshot harness, and never in a release build.
   const bool useSample = !kReleaseMode && AppConfig.screenshotMode;
+  if (useSample) {
+    switch (AppConfig.screenshotOrientation) {
+      case 'landscape':
+        await SystemChrome.setPreferredOrientations(<DeviceOrientation>[
+          DeviceOrientation.landscapeLeft,
+          DeviceOrientation.landscapeRight,
+        ]);
+      case 'portrait':
+        await SystemChrome.setPreferredOrientations(
+          <DeviceOrientation>[DeviceOrientation.portraitUp],
+        );
+    }
+  }
   final DigestRepository repository = useSample
       ? BundledDigestRepository(bundle: rootBundle)
       : NetworkDigestRepository(

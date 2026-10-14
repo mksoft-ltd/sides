@@ -213,5 +213,15 @@ test/               fixtures (= assets/sample_digest.json), helpers/ (fakes, pum
   breaks the iOS module import (non-modular private header); re-test before unpinning.
 - **Deep link**: `/story/:id?axis=bloc` opens West / East. Screenshot harness: `SCREENSHOT_MODE=true` +
   `SCREENSHOT_ROUTE=<route>` (ignored in release).
-- Phase 5 hooks: `LayoutSize` breakpoints (840 / 1100 dp); `DigestListView(onOpenStory, selectedStoryId)` and
-  `StoryDetailView` are scaffold-free so a master-detail layout can host both.
+- **Tablet layout (phase 5)**: `lib/app/adaptive_pages.dart` — `HomePage` (`/`) and `StoryPage` (`/story/:id`) pick
+  the phone screen or `MasterDetailScreen` from `LayoutSize` on every build, so rotation switches live. Single adaptive
+  route, no ShellRoute: at tablet widths a selection is `context.go(Routes.story(id, axis:))`; go_router keys a
+  declarative match by its route pattern, so story → story updates the same `NoTransitionPage` in place. The first
+  selection from `/` adds that page over `/` (system back returns to story 1). Phones keep `MaterialPage` + push.
+  The list scroll offset survives that first hop via `masterListScrollProvider`.
+- Axis + tab per story live in `storyViewProvider` (autoDispose family by story id; `axis == null` means "use the
+  route's `?axis=`"), not widget state — a layout swap re-subscribes in the same frame so the reader's place survives.
+- Columns: `StoryDetailView.columnsFit` — only at `LayoutSize.expanded` and only when every column gets ≥ 280 dp ×
+  text scale; else tabs. Contradiction rows (`ContradictionCard(sideBySide:)`) drop the card inset so they align
+  with the bloc columns. iPad portrait < 840 dp (all but 12.9"/13") gets the phone layout by design of the breakpoint.
+- Tablet tests: `test/widget/tablet_layout_test.dart` (sizes in dp; pumpSidesApp renders at 3×).

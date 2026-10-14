@@ -95,7 +95,10 @@ xcrun simctl install booted ../build/ios/Debug-iphonesimulator/Runner.app && xcr
 
 Ads use Google's test IDs until the publish stage (see `lib/core/config/ad_config.dart`). The ad-free product
 `com.froggyeye.sides.adfree` must exist in App Store Connect and Play Console before the purchase button enables.
-Product spec: `docs/PRODUCT_SPEC.md`. Phase 4 screenshots: `docs/screenshots/phase4/`.
+Product spec: `docs/PRODUCT_SPEC.md`. Phase 4 screenshots: `docs/screenshots/phase4/`; tablet (iPad Pro 12.9") screenshots: `docs/screenshots/phase5/`.
+Xcode 27 here has no Simulator.app, so iPad landscape captures use `--dart-define=SCREENSHOT_ORIENTATION=landscape`
+with `UIRequiresFullScreen` temporarily added to Info.plist (iPadOS ignores orientation requests from multitasking apps);
+revert it before committing.
 
 ---
 

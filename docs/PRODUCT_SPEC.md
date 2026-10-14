@@ -1,6 +1,6 @@
 # Sides: The News, Every Angle — Product spec
 
-Publisher: Froggy Eye Ltd · Bundle/package `com.froggyeye.sides` · iOS + Android, phone (tablet layout: phase 5).
+Publisher: Froggy Eye Ltd · Bundle/package `com.froggyeye.sides` · iOS + Android, phone and tablet (iPad: all four orientations, device family 1,2).
 Approved plan: `~/.claude/plans/curried-herding-yao.md`. Data contract: `schema/digest.schema.json`.
 
 ## Summary
@@ -26,8 +26,14 @@ Once a day a central pipeline (`pipeline/`) collects headlines and ≤200-charac
 - Settings/About: theme (System/Light/Dark), text-size note (follows device up to 200%), ad-free purchase + restore, Google UMP "Ad privacy options" where required, how it works, outlets and rating basis, privacy policy, © 2026 Froggy Eye Ltd.
 - Monetisation: AdMob banner at the bottom of the list and story screens (never inside sourced content, hidden until a digest loads), one-time non-consumable `com.froggyeye.sides.adfree` removes ads instantly.
 
+**Tablet (phase 5, built)**
+- ≥ 840 dp window width: master-detail. Left pane = the digest list (360 dp, pull-to-refresh, selected story tinted, outlined and announced as selected); right pane = the selected story, story 1 by default; "No story selected" placeholder while there is no digest. Selecting a story swaps the pane in place and the URL reads `/story/:id` (axis carried over as `?axis=bloc`). The banner sits under the detail pane only.
+- ≥ 1100 dp: perspectives side by side. Political lean = one equal-width column per lean present, shared sections (agreed, omissions, contested, opinion) full-width below. West / East = two columns; each East–West contradiction is a full-width topic with the West and East statements aligned under their columns; "No contradictions found" spans both.
+- Column guard: columns render only when every column gets ≥ 280 dp × text scale; otherwise tabs (e.g. 3 leans on an 11" iPad landscape, or any columns at 200% text).
+- Rotation/resizing keeps the selected story (route) and the axis + tab (per-story provider).
+- Below 840 dp the phone layout is unchanged. Note: iPad portrait widths of 744–834 dp (mini, 10th gen, Air/Pro 11") fall below 840 and get the phone layout; only the 12.9"/13" iPad is master-detail in portrait.
+
 **Later**
-- Phase 5: tablet master-detail (≥840 dp) and side-by-side perspective columns (≥1100 dp). Extension points: `LayoutSize`, `DigestListView`, `StoryDetailView`, `/story/:id?axis=bloc`.
 - Phase 6: live digest URL via GitHub Actions + Pages.
 - Archive of past days (`digest/index.json`), story search, share a story link.
 
@@ -36,6 +42,9 @@ Once a day a central pipeline (`pipeline/`) collects headlines and ≤200-charac
 ```
 /                      Digest list ──tap story──► /story/:id   (Story detail; ?axis=bloc opens West / East)
   └─ settings icon ──► /settings ──► /settings/outlets  (Outlets and ratings)
+
+Tablet (≥ 840 dp): / and /story/:id both render list + detail side by side; tapping a story is a
+context.go to /story/:id that updates the same page (no push, no animation).
 ```
 
 ## Data model (app side, `lib/features/digest/domain/digest.dart`)
@@ -67,4 +76,4 @@ Privacy declarations must reflect AdMob (advertising data, device identifiers on
 
 ## Screenshot mode
 
-`--dart-define=SCREENSHOT_MODE=true` loads the bundled sample digest (`assets/sample_digest.json`, the real 14 Oct 2026 run) with ads off; `--dart-define=SCREENSHOT_ROUTE=/story/<id>?axis=bloc` opens a route at launch. Both are ignored in release builds.
+`--dart-define=SCREENSHOT_MODE=true` loads the bundled sample digest (`assets/sample_digest.json`, the real 14 Oct 2026 run) with ads off; `--dart-define=SCREENSHOT_ROUTE=/story/<id>?axis=bloc` opens a route at launch; `--dart-define=SCREENSHOT_ORIENTATION=landscape|portrait` asks the system to rotate (iPadOS honours it only with `UIRequiresFullScreen`, which is added temporarily for captures and never committed). All are ignored in release builds. Tablet captures: `docs/screenshots/phase5/`.
