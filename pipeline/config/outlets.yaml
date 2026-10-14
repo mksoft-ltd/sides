@@ -1,0 +1,386 @@
+# Outlet pool for Sides: The News, Every Angle.
+#
+# One entry per outlet. Fields:
+#   id            stable slug used in article ids and the digest (never rename once shipped)
+#   name          display name
+#   feed_url      public RSS/Atom feed (top stories / world preferred; English-language only)
+#   home_url      link for the outlet record in the app
+#   lean          left | centre | right | null  — null is mandatory for state-controlled outlets,
+#                 otherwise null needs a lean_note explaining why no left/right tag is applied
+#   region        uk | us | europe | middle_east | asia | africa | oceania | americas
+#   bloc          west | east  (the West/East axis the founder asked for, 14 Oct 2026)
+#   ownership     independent | public-service | state-funded | state-controlled
+#   country       ISO-ish country name
+#   rating_basis  which public rating the lean tag comes from, with a date, or why there is none
+#   enabled       default true; false keeps the outlet on record but the collector skips it
+#   note          free text (why disabled, caveats)
+#
+# Excluded on purpose: RT, Sputnik, Press TV (UK-sanctioned; store takedown risk).
+# Feed URLs were verified live on 14 Oct 2026; see CLAUDE.md "How to add an outlet".
+
+outlets:
+  # ── West · UK ─────────────────────────────────────────────────────────────
+  - id: guardian
+    name: The Guardian
+    feed_url: https://www.theguardian.com/world/rss
+    home_url: https://www.theguardian.com/
+    lean: left
+    region: uk
+    bloc: west
+    ownership: independent
+    country: United Kingdom
+    rating_basis: AllSides media bias rating (Lean Left), checked Oct 2026
+
+  - id: independent
+    name: The Independent
+    feed_url: https://www.independent.co.uk/news/world/rss
+    home_url: https://www.independent.co.uk/
+    lean: left
+    region: uk
+    bloc: west
+    ownership: independent
+    country: United Kingdom
+    rating_basis: AllSides media bias rating (Lean Left), checked Oct 2026
+
+  - id: mirror
+    name: Daily Mirror
+    feed_url: https://www.mirror.co.uk/news/world-news/?service=rss
+    home_url: https://www.mirror.co.uk/
+    lean: left
+    region: uk
+    bloc: west
+    ownership: independent
+    country: United Kingdom
+    rating_basis: Ad Fontes Media bias rating (Skews Left), checked Oct 2026
+
+  - id: bbc
+    name: BBC News
+    feed_url: https://feeds.bbci.co.uk/news/world/rss.xml
+    home_url: https://www.bbc.co.uk/news
+    lean: centre
+    region: uk
+    bloc: west
+    ownership: public-service
+    country: United Kingdom
+    rating_basis: AllSides media bias rating (Center), checked Oct 2026
+
+  - id: sky
+    name: Sky News
+    feed_url: https://feeds.skynews.com/feeds/rss/home.xml
+    home_url: https://news.sky.com/
+    lean: centre
+    region: uk
+    bloc: west
+    ownership: independent
+    country: United Kingdom
+    rating_basis: Ad Fontes Media bias rating (Middle), checked Oct 2026
+
+  - id: telegraph
+    name: The Telegraph
+    feed_url: https://www.telegraph.co.uk/rss.xml
+    home_url: https://www.telegraph.co.uk/
+    lean: right
+    region: uk
+    bloc: west
+    ownership: independent
+    country: United Kingdom
+    rating_basis: AllSides media bias rating (Lean Right), checked Oct 2026
+
+  - id: dailymail
+    name: Daily Mail
+    feed_url: https://www.dailymail.co.uk/news/index.rss
+    home_url: https://www.dailymail.co.uk/
+    lean: right
+    region: uk
+    bloc: west
+    ownership: independent
+    country: United Kingdom
+    rating_basis: AllSides media bias rating (Right), checked Oct 2026
+
+  - id: spectator
+    name: The Spectator
+    feed_url: https://www.spectator.co.uk/feed
+    home_url: https://www.spectator.co.uk/
+    lean: right
+    region: uk
+    bloc: west
+    ownership: independent
+    country: United Kingdom
+    rating_basis: AllSides media bias rating (Right), checked Oct 2026
+    enabled: false
+    note: >-
+      No public RSS/Atom feed as of 14 Oct 2026: /feed, /feed/, /rss, /rss.xml, /feed.xml and
+      section feeds all return 404 and the site has no feed autodiscovery link. Re-enable if one appears.
+
+  # ── West · US ─────────────────────────────────────────────────────────────
+  - id: nyt
+    name: The New York Times
+    feed_url: https://rss.nytimes.com/services/xml/rss/nyt/World.xml
+    home_url: https://www.nytimes.com/
+    lean: left
+    region: us
+    bloc: west
+    ownership: independent
+    country: United States
+    rating_basis: AllSides media bias rating (Lean Left), checked Oct 2026
+
+  - id: cnn
+    name: CNN
+    feed_url: http://rss.cnn.com/rss/edition_world.rss
+    home_url: https://edition.cnn.com/
+    lean: left
+    region: us
+    bloc: west
+    ownership: independent
+    country: United States
+    rating_basis: AllSides media bias rating (Lean Left), checked Oct 2026
+    enabled: false
+    note: >-
+      CNN's official RSS feeds (rss.cnn.com edition_world / cnn_world / cnn_topstories / edition / cnn_latest)
+      still load but have been frozen since 2023–Aug 2024 (checked 14 Oct 2026). No current official feed exists.
+
+  - id: huffpost
+    name: HuffPost
+    feed_url: https://chaski.huffpost.com/us/auto/vertical/world-news
+    home_url: https://www.huffpost.com/
+    lean: left
+    region: us
+    bloc: west
+    ownership: independent
+    country: United States
+    rating_basis: AllSides media bias rating (Left), checked Oct 2026
+
+  - id: npr
+    name: NPR
+    feed_url: https://feeds.npr.org/1001/rss.xml
+    home_url: https://www.npr.org/
+    lean: centre
+    region: us
+    bloc: west
+    ownership: public-service
+    country: United States
+    rating_basis: Ad Fontes Media bias rating (Middle / Skews Left), checked Oct 2026
+
+  - id: axios
+    name: Axios
+    feed_url: https://api.axios.com/feed/
+    home_url: https://www.axios.com/
+    lean: centre
+    region: us
+    bloc: west
+    ownership: independent
+    country: United States
+    rating_basis: AllSides media bias rating (Center), checked Oct 2026
+
+  - id: fox
+    name: Fox News
+    feed_url: https://moxie.foxnews.com/google-publisher/world.xml
+    home_url: https://www.foxnews.com/
+    lean: right
+    region: us
+    bloc: west
+    ownership: independent
+    country: United States
+    rating_basis: AllSides media bias rating (Right), checked Oct 2026
+
+  - id: nypost
+    name: New York Post
+    feed_url: https://nypost.com/us-news/feed/
+    home_url: https://nypost.com/
+    lean: right
+    region: us
+    bloc: west
+    ownership: independent
+    country: United States
+    rating_basis: AllSides media bias rating (Lean Right), checked Oct 2026
+
+  - id: examiner
+    name: Washington Examiner
+    feed_url: https://www.washingtonexaminer.com/section/news/feed/
+    home_url: https://www.washingtonexaminer.com/
+    lean: right
+    region: us
+    bloc: west
+    ownership: independent
+    country: United States
+    rating_basis: AllSides media bias rating (Lean Right), checked Oct 2026
+
+  # ── West · Europe ────────────────────────────────────────────────────────
+  - id: france24
+    name: France 24
+    feed_url: https://www.france24.com/en/rss
+    home_url: https://www.france24.com/en/
+    lean: centre
+    region: europe
+    bloc: west
+    ownership: public-service
+    country: France
+    rating_basis: Ad Fontes Media bias rating (Middle), checked Oct 2026
+
+  - id: dw
+    name: DW (Deutsche Welle)
+    feed_url: https://rss.dw.com/xml/rss-en-world
+    home_url: https://www.dw.com/en/
+    lean: centre
+    region: europe
+    bloc: west
+    ownership: public-service
+    country: Germany
+    rating_basis: AllSides media bias rating (Center), checked Oct 2026
+
+  # ── East · Middle East ───────────────────────────────────────────────────
+  - id: aljazeera
+    name: Al Jazeera English
+    feed_url: https://www.aljazeera.com/xml/rss/all.xml
+    home_url: https://www.aljazeera.com/
+    lean: null
+    lean_note: Non-Western outlet; the UK/US left–right scale is not applied. Analysed on the West/East axis.
+    region: middle_east
+    bloc: east
+    ownership: state-funded
+    country: Qatar
+    rating_basis: Funded by the State of Qatar; no left/right tag applied
+
+  - id: arabnews
+    name: Arab News
+    feed_url: https://www.arabnews.com/rss.xml
+    home_url: https://www.arabnews.com/
+    lean: null
+    lean_note: Non-Western outlet; the UK/US left–right scale is not applied. Analysed on the West/East axis.
+    region: middle_east
+    bloc: east
+    ownership: independent
+    country: Saudi Arabia
+    rating_basis: Owned by Saudi Research and Media Group; no left/right tag applied
+    enabled: false
+    note: >-
+      Feed URL returns a Cloudflare "Just a moment..." bot challenge (HTTP 403) for every User-Agent tried
+      on 14 Oct 2026, so it cannot be collected without browser automation. Re-enable if the challenge is lifted.
+
+  - id: timesofisrael
+    name: The Times of Israel
+    feed_url: https://www.timesofisrael.com/feed/
+    home_url: https://www.timesofisrael.com/
+    lean: null
+    lean_note: Non-Western outlet; the UK/US left–right scale is not applied. Analysed on the West/East axis.
+    region: middle_east
+    bloc: east
+    ownership: independent
+    country: Israel
+    rating_basis: Privately owned; no left/right tag applied
+
+  # ── East · Asia ──────────────────────────────────────────────────────────
+  - id: xinhua
+    name: Xinhua
+    feed_url: https://english.news.cn/rss/worldrss.xml
+    home_url: https://english.news.cn/
+    lean: null
+    region: asia
+    bloc: east
+    ownership: state-controlled
+    country: China
+    rating_basis: State news agency of the People's Republic of China
+    enabled: false
+    note: >-
+      The only Xinhua English feeds found (english.news.cn/rss/worldrss.xml, chinarss.xml, xinhuanet.com mirror)
+      stopped updating in Jan 2018 and english.news.cn has no feed autodiscovery (checked 14 Oct 2026).
+      Chinese state coverage comes from CGTN and Global Times instead.
+
+  - id: globaltimes
+    name: Global Times
+    feed_url: https://www.globaltimes.cn/rss/outbrain.xml
+    home_url: https://www.globaltimes.cn/
+    lean: null
+    region: asia
+    bloc: east
+    ownership: state-controlled
+    country: China
+    rating_basis: Published by People's Daily, organ of the Communist Party of China
+    enabled: false
+    note: >-
+      The only public feed (rss/outbrain.xml) is alive but updates irregularly (newest item 9 Oct on 14 Oct 2026,
+      0 items in the 36 h window); rss/world.xml and rss/china.xml return 404 and the site has no feed autodiscovery.
+      Re-enable to pick up the occasional item; Chinese state coverage currently comes from CGTN.
+
+  - id: cgtn
+    name: CGTN
+    feed_url: https://www.cgtn.com/subscribe/rss/section/world.xml
+    home_url: https://www.cgtn.com/
+    lean: null
+    region: asia
+    bloc: east
+    ownership: state-controlled
+    country: China
+    rating_basis: China Global Television Network, part of state broadcaster China Media Group
+
+  - id: scmp
+    name: South China Morning Post
+    feed_url: https://www.scmp.com/rss/91/feed/
+    home_url: https://www.scmp.com/
+    lean: null
+    lean_note: Non-Western outlet; the UK/US left–right scale is not applied. Analysed on the West/East axis.
+    region: asia
+    bloc: east
+    ownership: independent
+    country: Hong Kong
+    rating_basis: Owned by Alibaba Group; no left/right tag applied
+
+  - id: toi
+    name: The Times of India
+    feed_url: https://timesofindia.indiatimes.com/rssfeeds/296589292.cms
+    home_url: https://timesofindia.indiatimes.com/
+    lean: null
+    lean_note: Non-Western outlet; the UK/US left–right scale is not applied. Analysed on the West/East axis.
+    region: asia
+    bloc: east
+    ownership: independent
+    country: India
+    rating_basis: Privately owned (Bennett, Coleman & Co.); no left/right tag applied
+
+  - id: thehindu
+    name: The Hindu
+    feed_url: https://www.thehindu.com/news/international/feeder/default.rss
+    home_url: https://www.thehindu.com/
+    lean: null
+    lean_note: Non-Western outlet; the UK/US left–right scale is not applied. Analysed on the West/East axis.
+    region: asia
+    bloc: east
+    ownership: independent
+    country: India
+    rating_basis: Privately owned (The Hindu Group); no left/right tag applied
+
+  - id: moscowtimes
+    name: The Moscow Times
+    feed_url: https://www.themoscowtimes.com/rss/news
+    home_url: https://www.themoscowtimes.com/
+    lean: null
+    lean_note: Independent, exiled Russian outlet; the UK/US left–right scale is not applied. Analysed on the West/East axis.
+    region: europe
+    bloc: east
+    ownership: independent
+    country: Russia
+    rating_basis: Independent, Amsterdam-based since 2022; designated "undesirable" by Russia; no left/right tag applied
+
+  - id: japantimes
+    name: The Japan Times
+    feed_url: https://www.japantimes.co.jp/feed/
+    home_url: https://www.japantimes.co.jp/
+    lean: null
+    lean_note: Non-Western outlet; the UK/US left–right scale is not applied. Analysed on the West/East axis.
+    region: asia
+    bloc: east
+    ownership: independent
+    country: Japan
+    rating_basis: Privately owned (News2u Holdings); no left/right tag applied
+
+  - id: koreaherald
+    name: The Korea Herald
+    feed_url: https://www.koreaherald.com/rss/newsAll
+    home_url: https://www.koreaherald.com/
+    lean: null
+    lean_note: Non-Western outlet; the UK/US left–right scale is not applied. Analysed on the West/East axis.
+    region: asia
+    bloc: east
+    ownership: independent
+    country: South Korea
+    rating_basis: Privately owned (Herald Corporation); no left/right tag applied

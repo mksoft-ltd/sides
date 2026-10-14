@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+<channel>
+  <title>Synthetic RSS edge cases</title>
+  <link>https://rss.example.com/</link>
+  <description>Covers HTML descriptions, duplicates, tracking params, missing dates, stale items.</description>
+  <item>
+    <title>Fresh story &amp; the HTML description</title>
+    <link>https://rss.example.com/news/fresh?utm_campaign=x&amp;id=42&amp;fbclid=abc</link>
+    <description>&lt;p&gt;Leaders met in &lt;a href="https://x"&gt;Geneva&lt;/a&gt; on Tuesday.&lt;/p&gt;&lt;p&gt;Talks continue &amp;ldquo;tomorrow&amp;rdquo; &amp;#8212; officials said.&lt;/p&gt;&lt;img src="https://rss.example.com/pixel.gif"/&gt;</description>
+    <pubDate>Wed, 14 Oct 2026 20:15:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>Fresh story &amp; the HTML description</title>
+    <link>https://rss.example.com/news/fresh-duplicate-different-url</link>
+    <description>Same headline as above, different URL: dropped by (outlet, headline) dedupe.</description>
+    <pubDate>Wed, 14 Oct 2026 20:10:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>Exact duplicate URL item</title>
+    <link>https://rss.example.com/news/fresh?id=42&amp;utm_source=twitter</link>
+    <description>Same canonical URL as the first item: dropped by url dedupe.</description>
+    <pubDate>Wed, 14 Oct 2026 20:05:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>Very long description that must be truncated at a word boundary</title>
+    <link>https://rss.example.com/news/long</link>
+    <description>The quick brown fox jumps over the lazy dog again and again and again while the committee deliberates at length about matters of considerable importance to absolutely everyone involved in the proceedings, including the fox, the dog, and several bystanders who happened to be present.</description>
+    <pubDate>Wed, 14 Oct 2026 19:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>Undated item falls back to fetch time</title>
+    <link>https://rss.example.com/news/undated</link>
+    <description>No pubDate element here.</description>
+  </item>
+  <item>
+    <title>Stale item from two days ago</title>
+    <link>https://rss.example.com/news/stale</link>
+    <description>Older than 36 hours: dropped.</description>
+    <pubDate>Mon, 12 Oct 2026 20:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>Item on the window edge (35h old)</title>
+    <link>https://rss.example.com/news/edge</link>
+    <description>Just inside the window: kept.</description>
+    <pubDate>Tue, 13 Oct 2026 11:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>Item whose description equals its headline</title>
+    <link>https://rss.example.com/news/same</link>
+    <description>Item whose description equals its headline</description>
+    <pubDate>Wed, 14 Oct 2026 18:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title></title>
+    <link>https://rss.example.com/news/no-title</link>
+    <description>No title: skipped.</description>
+    <pubDate>Wed, 14 Oct 2026 18:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>No link item</title>
+    <description>No link: skipped.</description>
+    <pubDate>Wed, 14 Oct 2026 18:00:00 GMT</pubDate>
+  </item>
+</channel>
+</rss>

@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sides-pipeline"
+version = "0.1.0"
+description = "Daily news-digest pipeline for Sides: The News, Every Angle (collect → group → analyse → publish)"
+requires-python = ">=3.12"
+dependencies = [
+  "feedparser>=6.0",
+  "httpx>=0.27",
+  "pydantic>=2.7",
+  "pyyaml>=6.0",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8",
+  "pytest-socket>=0.7",
+  "jsonschema>=4.21",
+]
+
+[project.scripts]
+sides-pipeline = "sides_pipeline.cli:main"
+
+[tool.setuptools]
+packages = ["sides_pipeline"]
+
+[tool.pytest.ini_options]
+# No network in tests, ever: pytest-socket blocks every socket() call.
+addopts = "--disable-socket -q"
+testpaths = ["tests"]
+# pytest-socket raises *and* warns on a blocked call; the raise is what we assert on.
+filterwarnings = ["ignore:A test tried to use socket:UserWarning"]

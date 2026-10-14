@@ -1,0 +1,75 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mksoft-ltd.github.io/sides/schema/digest.schema.json",
+  "title": "Sides daily digest",
+  "description": "Contract between the Python pipeline and the Flutter app. Phase 1 defines outlets, articles and the collect-phase output; later phases add stories, meta and the top-level digest.",
+  "type": "object",
+  "properties": {
+    "schema_version": { "type": "integer", "const": 1 },
+    "generated_at": { "type": "string", "format": "date-time" },
+    "date": { "type": "string", "format": "date" },
+    "outlets": { "type": "array", "items": { "$ref": "#/$defs/outlet" } },
+    "stories": { "type": "array", "description": "Defined in phase 2/3." }
+  },
+  "required": ["schema_version", "generated_at", "date", "outlets"],
+  "$defs": {
+    "lean": { "type": ["string", "null"], "enum": ["left", "centre", "right", null] },
+    "bloc": { "type": "string", "enum": ["west", "east"] },
+    "region": { "type": "string", "enum": ["uk", "us", "europe", "middle_east", "asia", "africa", "oceania", "americas"] },
+    "ownership": { "type": "string", "enum": ["independent", "public-service", "state-funded", "state-controlled"] },
+    "outlet": {
+      "type": "object",
+      "description": "An outlet as shipped in the digest (feed URL and operational fields are not published).",
+      "properties": {
+        "id": { "type": "string", "pattern": "^[a-z][a-z0-9_]{1,31}$" },
+        "name": { "type": "string", "minLength": 1 },
+        "lean": { "$ref": "#/$defs/lean" },
+        "region": { "$ref": "#/$defs/region" },
+        "bloc": { "$ref": "#/$defs/bloc" },
+        "ownership": { "$ref": "#/$defs/ownership" },
+        "country": { "type": "string", "minLength": 2 },
+        "home_url": { "type": "string", "format": "uri", "pattern": "^https?://" },
+        "rating_basis": { "type": "string", "minLength": 1 }
+      },
+      "required": ["id", "name", "lean", "region", "bloc", "ownership", "country", "home_url", "rating_basis"],
+      "additionalProperties": false
+    },
+    "article": {
+      "type": "object",
+      "description": "Headline plus a snippet of at most 200 characters. Full article text is never published.",
+      "properties": {
+        "id": { "type": "string", "pattern": "^[0-9a-f]{12}$" },
+        "outlet_id": { "type": "string" },
+        "headline": { "type": "string", "minLength": 1 },
+        "snippet": { "type": "string", "maxLength": 200 },
+        "url": { "type": "string", "format": "uri", "pattern": "^https?://" },
+        "published_at": { "type": "string", "format": "date-time" },
+        "published_at_estimated": { "type": "boolean", "default": false }
+      },
+      "required": ["id", "outlet_id", "headline", "snippet", "url", "published_at"],
+      "additionalProperties": false
+    },
+    "feed_error": {
+      "type": "object",
+      "properties": {
+        "outlet_id": { "type": "string" },
+        "error": { "type": "string" }
+      },
+      "required": ["outlet_id", "error"],
+      "additionalProperties": false
+    },
+    "collect_output": {
+      "type": "object",
+      "description": "pipeline/out/articles.json — the phase-1 artifact handed to phase 2 (grouping).",
+      "properties": {
+        "collected_at": { "type": "string", "format": "date-time" },
+        "outlets": { "type": "array", "items": { "$ref": "#/$defs/outlet" } },
+        "articles": { "type": "array", "items": { "$ref": "#/$defs/article" } },
+        "feed_errors": { "type": "array", "items": { "$ref": "#/$defs/feed_error" } },
+        "per_outlet_counts": { "type": "object", "additionalProperties": { "type": "integer", "minimum": 0 } }
+      },
+      "required": ["collected_at", "outlets", "articles", "feed_errors", "per_outlet_counts"],
+      "additionalProperties": false
+    }
+  }
+}

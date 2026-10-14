@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Synthetic Atom Feed</title>
+  <link href="https://atom.example.com/"/>
+  <updated>2026-10-14T20:00:00Z</updated>
+  <id>urn:uuid:synthetic-atom</id>
+  <entry>
+    <title>  Atom   entry   one  </title>
+    <link rel="alternate" href="https://atom.example.com/stories/one?utm_source=rss&amp;utm_medium=feed#comments"/>
+    <id>urn:uuid:one</id>
+    <updated>2026-10-14T19:30:00Z</updated>
+    <summary type="html">&lt;p&gt;First &lt;b&gt;Atom&lt;/b&gt; story &amp;amp; summary.&lt;/p&gt;</summary>
+  </entry>
+  <entry>
+    <title>Atom entry two with content only</title>
+    <link rel="alternate" href="https://atom.example.com/stories/two"/>
+    <id>urn:uuid:two</id>
+    <published>2026-10-14T10:00:00+02:00</published>
+    <content type="html"><![CDATA[<div>Content block <i>used</i> when no summary exists.</div>]]></content>
+  </entry>
+  <entry>
+    <title>Atom entry with no date at all</title>
+    <link rel="alternate" href="https://atom.example.com/stories/three"/>
+    <id>urn:uuid:three</id>
+    <summary>Dateless entry.</summary>
+  </entry>
+</feed>
