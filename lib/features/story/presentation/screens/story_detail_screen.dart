@@ -8,8 +8,13 @@ import '../../../digest/presentation/providers/digest_controller.dart';
 import '../widgets/story_detail_view.dart';
 
 class StoryDetailScreen extends ConsumerWidget {
-  const StoryDetailScreen({super.key, required this.storyId});
+  const StoryDetailScreen({
+    super.key,
+    required this.storyId,
+    this.initialAxis = PerspectiveAxis.lean,
+  });
   final String storyId;
+  final PerspectiveAxis initialAxis;
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -25,7 +30,11 @@ class StoryDetailScreen extends ConsumerWidget {
               message: 'This story isn\'t in the current digest any more. '
                   'Go back to see today\'s stories.',
             )
-          : StoryDetailView(story: story, digest: digest),
+          : StoryDetailView(
+              story: story,
+              digest: digest,
+              initialAxis: initialAxis,
+            ),
       bottomNavigationBar: story == null ? null : const AdBannerSlot(),
     );
   }

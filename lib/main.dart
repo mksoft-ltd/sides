@@ -45,7 +45,9 @@ Future<void> main() async {
         if (mobile && !useSample)
           adsServiceProvider.overrideWithValue(AdMobAdsService()),
       ],
-      child: const SidesApp(),
+      child: const SidesApp(
+        initialLocation: useSample ? AppConfig.screenshotRoute : '/',
+      ),
     ),
   );
 }

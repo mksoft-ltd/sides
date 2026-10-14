@@ -18,17 +18,19 @@ class StoryDetailView extends StatefulWidget {
     super.key,
     required this.story,
     required this.digest,
+    this.initialAxis = PerspectiveAxis.lean,
   });
 
   final Story story;
   final Digest digest;
+  final PerspectiveAxis initialAxis;
 
   @override
   State<StoryDetailView> createState() => _StoryDetailViewState();
 }
 
 class _StoryDetailViewState extends State<StoryDetailView> {
-  PerspectiveAxis _axis = PerspectiveAxis.lean;
+  late PerspectiveAxis _axis = widget.initialAxis;
   int _leanTab = 0;
   int _blocTab = 0;
 
@@ -36,7 +38,7 @@ class _StoryDetailViewState extends State<StoryDetailView> {
   void didUpdateWidget(StoryDetailView old) {
     super.didUpdateWidget(old);
     if (old.story.id != widget.story.id) {
-      _axis = PerspectiveAxis.lean;
+      _axis = widget.initialAxis;
       _leanTab = 0;
       _blocTab = 0;
     }

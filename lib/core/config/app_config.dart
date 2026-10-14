@@ -31,5 +31,11 @@ abstract final class AppConfig {
   static const bool screenshotMode =
       bool.fromEnvironment('SCREENSHOT_MODE', defaultValue: false);
 
+  /// Screenshot harness only: the route to open at launch, e.g.
+  /// `/story/<id>?axis=bloc`. Ignored unless [screenshotMode] is on in a
+  /// non-release build.
+  static const String screenshotRoute =
+      String.fromEnvironment('SCREENSHOT_ROUTE', defaultValue: '/');
+
   static const String sampleDigestAsset = 'assets/sample_digest.json';
 }

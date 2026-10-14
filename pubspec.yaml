@@ -19,7 +19,10 @@ dependencies:
   shared_preferences: ^2.5.6
   url_launcher: ^6.3.3
   # Ads + the one-time ad-free unlock (native plugin only, house-facts §9).
-  google_mobile_ads: ^9.1.0
+  # Pinned: 9.1.0's ad-preloader headers include a private, non-modular SDK
+  # header and the iOS Runner fails to import the module
+  # (-Wnon-modular-include-in-framework-module). 9.0.0 matches food_score.
+  google_mobile_ads: 9.0.0
   in_app_purchase: ^3.3.1
   # Direct, not just transitive: the purchase controller type-guards on
   # GooglePlayPurchaseDetails to tell a pending Play order from a paid one.

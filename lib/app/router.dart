@@ -5,11 +5,13 @@ import '../features/digest/presentation/screens/digest_list_screen.dart';
 import '../features/settings/presentation/screens/outlets_screen.dart';
 import '../features/settings/presentation/screens/settings_screen.dart';
 import '../features/story/presentation/screens/story_detail_screen.dart';
+import '../features/story/presentation/widgets/story_detail_view.dart';
 
 abstract final class Routes {
   static const String home = '/';
   static const String settings = '/settings';
   static const String outlets = '/settings/outlets';
+  /// `?axis=bloc` opens the West / East view directly.
   static String story(String id) => '/story/$id';
 }
 
@@ -27,7 +29,12 @@ GoRouter buildRouter({String initialLocation = Routes.home}) => GoRouter(
             GoRoute(
               path: 'story/:id',
               builder: (BuildContext context, GoRouterState state) =>
-                  StoryDetailScreen(storyId: state.pathParameters['id']!),
+                  StoryDetailScreen(
+                storyId: state.pathParameters['id']!,
+                initialAxis: state.uri.queryParameters['axis'] == 'bloc'
+                    ? PerspectiveAxis.bloc
+                    : PerspectiveAxis.lean,
+              ),
             ),
             GoRoute(
               path: 'settings',
