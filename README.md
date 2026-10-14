@@ -69,7 +69,33 @@ Later phases (publishing, the GitHub Actions schedule) are documented here as th
 
 ## App
 
-Flutter app (iOS + Android, phone + tablet). Setup and run instructions follow once the app phase starts.
+Flutter app (iOS + Android; phone layout done, tablet layout is phase 5). Requires Flutter 3.44+, Xcode with
+CocoaPods, and the Android SDK. No keys or secrets are needed: the app reads the public digest at
+`https://mksoft-ltd.github.io/sides/digest/latest.json` (live from phase 6).
+
+```bash
+flutter pub get
+flutter analyze
+flutter test                                    # unit + widget tests, no network, no ads/IAP plugins
+flutter run                                     # live digest (404 until phase 6 publishes it)
+flutter run --dart-define=SCREENSHOT_MODE=true  # bundled sample digest, no ads (debug/profile only)
+flutter build apk --debug
+```
+
+iOS simulator builds: on Xcode 27, `flutter build ios --simulator` fails in Flutter's own packaging step
+(`lipo -verify_arch` takes one arch). Build with xcodebuild instead:
+
+```bash
+flutter build ios --simulator --debug   # writes Generated.xcconfig, then fails at debug_unpack_ios (toolchain bug)
+cd ios && xcodebuild -workspace Runner.xcworkspace -scheme Runner -configuration Debug \
+  -sdk iphonesimulator -destination "generic/platform=iOS Simulator" BUILD_DIR=$PWD/../build/ios \
+  ARCHS=arm64 ONLY_ACTIVE_ARCH=YES CODE_SIGNING_ALLOWED=NO build
+xcrun simctl install booted ../build/ios/Debug-iphonesimulator/Runner.app && xcrun simctl launch booted com.froggyeye.sides
+```
+
+Ads use Google's test IDs until the publish stage (see `lib/core/config/ad_config.dart`). The ad-free product
+`com.froggyeye.sides.adfree` must exist in App Store Connect and Play Console before the purchase button enables.
+Product spec: `docs/PRODUCT_SPEC.md`. Phase 4 screenshots: `docs/screenshots/phase4/`.
 
 ---
 

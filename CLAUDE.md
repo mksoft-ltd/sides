@@ -177,3 +177,41 @@ exactly one violation into an otherwise fully valid response.
 - House style: British spelling in prose, `centre` not `center` in enums.
 - JSON output uses ISO-8601 UTC with `Z`; ids are 12-hex sha1 prefixes of `outlet_id + "\n" + canonical url`.
 - Commit trailer: `Co-Authored-By: Claude Fable 5.1 <noreply@anthropic.com>`.
+
+## App (Flutter)
+
+Spec: `docs/PRODUCT_SPEC.md`. Stack: flutter_riverpod 3 (Notifier, no codegen), go_router, http, path_provider,
+shared_preferences, url_launcher, intl, google_mobile_ads **pinned 9.0.0**, in_app_purchase (+ in_app_purchase_android
+for a type guard). No analytics, crash reporting or accounts.
+
+```
+lib/app/            app.dart (MaterialApp.router, theme, text scale clamp 2.0, lifecycle → resume hooks), router.dart (Routes)
+lib/core/           config/ (AppConfig URLs + product id + SCREENSHOT_* defines; AdConfig = every AdMob id), constants/copy.dart
+                    (all content-facing UI strings), theme/ (PerspectiveColors), layout/breakpoints.dart, launcher/, storage/, time/
+lib/features/digest domain/digest.dart (models + on-read integrity), domain/refresh_policy.dart, data/ (cache, remote, repository),
+                    presentation/ (DigestController, DigestListView body + DigestListScreen scaffold, StoryCard)
+lib/features/story  StoryDetailView (body) + StoryDetailScreen; widgets/ points, source chips, sources list
+lib/features/{settings,purchases,ads}   theme mode, AdFreeController over StoreGateway, AdsService + AdBannerSlot
+test/               fixtures (= assets/sample_digest.json), helpers/ (fakes, pumpSidesApp at 390×844), unit/, widget/
+```
+
+- **Seams, all overridden in `main()` and in tests**: `digestRepositoryProvider`, `settingsStoreProvider`,
+  `storeGatewayProvider`, `adsServiceProvider` (default `DisabledAdsService`), `linkLauncherProvider`,
+  `reconcileAtLaunchProvider`. Widget tests never touch a plugin; use `TestHarness`/`pumpSidesApp`.
+- **Refresh policy**: cache first; revalidate on launch/resume when digest `date` < today (UTC) or fetched > 6 h
+  ago; pull-to-refresh always fetches; conditional on ETag; a bad body never overwrites the cache; body decoded as UTF-8.
+- **Integrity in the UI**: `Story.fromJson` strips unknown source ids and drops any point left unsourced; quotes need
+  a resolvable article. Never render article text beyond headline + snippet; content copy lives in `Copy` and stays
+  descriptive (never judges an outlet). Lean colours are violet/slate/orange, not red/blue (opposite meanings in UK/US).
+- **Ads**: banner only in `bottomNavigationBar` of list/detail, hidden until a digest exists and the instant ad-free
+  is owned. No ATT prompt: every request is `nonPersonalizedAds: true`, Google UMP gathers consent. Test IDs until
+  publish (`AdConfig`, Info.plist `GADApplicationIdentifier`, manifest `APPLICATION_ID`).
+- **IAP**: outcomes only arrive on `purchaseStream`; busy has a 75 s ceiling; entitlement persisted before
+  `completePurchase`; Play-only silent restore at launch/resume; Play pending purchases are not granted.
+- **Native**: SPM disabled in pubspec (ads pod is CocoaPods-only); iOS min 15.0 (pbxproj + Podfile post_install);
+  UIScene adopted (FlutterSceneDelegate + FlutterImplicitEngineDelegate, iOS 27 safe). google_mobile_ads 9.1.0
+  breaks the iOS module import (non-modular private header); re-test before unpinning.
+- **Deep link**: `/story/:id?axis=bloc` opens West / East. Screenshot harness: `SCREENSHOT_MODE=true` +
+  `SCREENSHOT_ROUTE=<route>` (ignored in release).
+- Phase 5 hooks: `LayoutSize` breakpoints (840 / 1100 dp); `DigestListView(onOpenStory, selectedStoryId)` and
+  `StoryDetailView` are scaffold-free so a master-detail layout can host both.
