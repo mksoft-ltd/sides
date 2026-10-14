@@ -1,6 +1,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Downloads the daily digest. -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <!-- Required by google_mobile_ads on Android 13+ (advertising ID for
+         frequency capping / fraud prevention; requests are non-personalised). -->
+    <uses-permission android:name="com.google.android.gms.permission.AD_ID"/>
+
     <application
-        android:label="sides"
+        android:label="Sides"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
@@ -27,6 +33,11 @@
         </activity>
         <!-- Don't delete the meta-data below.
              This is used by the Flutter tool to generate GeneratedPluginRegistrant.java -->
+        <!-- Google's TEST AdMob app ID. The live ID replaces it at the
+             publish stage, together with the unit IDs in lib/core/config/ad_config.dart. -->
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-3940256099942544~3347511713"/>
         <meta-data
             android:name="flutterEmbedding"
             android:value="2" />
