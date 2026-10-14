@@ -65,7 +65,49 @@ Every point in the digest cites article ids from its own story; the citation val
 Add `--replay-dir pipeline/tests/fixtures/llm/analyse_live_2026-10-14` to run the stage offline; `--raw-out-dir DIR`
 records a new set of fixtures. The analysis prompt is `pipeline/config/prompts/analyse.md`.
 
-Later phases (publishing, the GitHub Actions schedule) are documented here as they land.
+Publish a finished run onto the GitHub Pages site (see Deployment):
+
+```bash
+python -m sides_pipeline.cli publish --site .site      # writes digest/, runs/, index.html into a site directory
+scripts/publish_site.sh [--no-push]                     # clone gh-pages → publish → commit "Digest <date>" → push
+```
+
+## Deployment
+
+The digest is produced once a day by GitHub Actions and served from GitHub Pages; nothing else is hosted.
+
+- **Daily run**: `.github/workflows/daily.yml` runs at 06:00 UTC (`cron "0 6 * * *"`) on `ubuntu-latest` with
+  Python 3.12: `pip install -e pipeline`, then `python -m sides_pipeline.cli run --through analyse` with the key from the
+  repo secret `ANTHROPIC_API_KEY`. It then checks out the `gh-pages` branch, runs `publish`, commits `Digest YYYY-MM-DD`
+  as `github-actions[bot]` and pushes; Pages goes live a minute or so later. A non-zero exit from any stage fails
+  the run (red) and GitHub emails the repo owner. One run costs about $1.35 (Claude Opus 5.5; ~£32/month).
+- **Site** (`https://mksoft-ltd.github.io/sides/`): `digest/latest.json` (what the app reads), `digest/YYYY-MM-DD.json`
+  (one per day, kept), `digest/index.json` (newest-first `{date, generated_at, stories, cost_usd}` for every day),
+  `runs/YYYY-MM-DD.json` (the day's cost report), `privacy_policy.html` (once the file exists at the repo root),
+  `index.html`. Published by `pipeline/sides_pipeline/publish.py` via `scripts/publish_site.sh`.
+- **Per-run cost report**: three places, every run — the workflow's job summary (Actions → the run → Summary: the
+  `grouping` / `analysis` / `total` lines and the top-stories table), `runs/<date>.json` on the site
+  (`https://mksoft-ltd.github.io/sides/runs/<date>.json`, every call with token counts and USD), and `meta.cost_usd` in
+  the digest itself. The run's whole `pipeline/out/` is also attached to the run as an artifact for 14 days.
+- **Run it by hand**: Actions → "Daily digest" → Run workflow, or from a terminal:
+
+  ```bash
+  gh workflow run daily.yml                      # full run and publish (paid, ~$1.35)
+  gh workflow run daily.yml -f through=group     # stop after grouping (one paid call), no publish
+  gh workflow run daily.yml -f dry_run=true      # collect only: free, no publish, checks the feeds
+  gh run watch                                   # follow it
+  ```
+
+  Locally the same thing is `python -m sides_pipeline.cli run --through analyse && scripts/publish_site.sh`
+  (your git credentials push `gh-pages`).
+- **Rotate the key**: create a new key in the Anthropic console, then `gh secret set ANTHROPIC_API_KEY` (paste when
+  prompted; never put it on the command line or in a file), run `gh workflow run daily.yml -f through=group` to prove it
+  works, then revoke the old key. Locally: `security add-generic-password -U -s anthropic-api-key -a sides -w`.
+- **CI**: `.github/workflows/ci.yml` runs `pytest` (network blocked) and `flutter analyze` + `flutter test`
+  (Flutter 3.44.4) on every push and pull request to `main`.
+- **Sleep guard**: GitHub switches off scheduled workflows in a public repo after 60 days without repository
+  activity. The daily run re-enables itself through the API and, when `main` has been quiet for 45 days, pushes a dated
+  `.github/keepalive` marker to `main` (details in `CLAUDE.md`).
 
 ## App
 

@@ -228,3 +228,50 @@ test/               fixtures (= assets/sample_digest.json), helpers/ (fakes, pum
   orientations; large phones in landscape too), `expandedMin` = 1100 dp. List pane 360 dp, 320 dp below 900 dp
   (`MasterDetailScreen.listPaneWidthFor`) so the detail pane stays ≥ 380 dp at 744.
 - Tablet tests: `test/widget/tablet_layout_test.dart` (sizes in dp; pumpSidesApp renders at 3×).
+
+## Deployment (phase 6)
+
+- **Files**: `.github/workflows/daily.yml` (the daily job), `.github/workflows/ci.yml` (pytest + flutter on push/PR to
+  main), `pipeline/sides_pipeline/publish.py` + `cli publish` (pure file copy, unit-tested in `tests/test_publish.py`),
+  `scripts/publish_site.sh` (clone or orphan-create `gh-pages` → `publish` → commit `Digest <date>` → push; env
+  `SITE_DIR`, `SITE_REMOTE_URL`, `PYTHON`, `SUMMARY_OUT`, git's `GIT_AUTHOR_*`/`GIT_COMMITTER_*`).
+- **gh-pages layout** (branch `gh-pages`, served at `https://mksoft-ltd.github.io/sides/`, Pages source branch
+  `gh-pages` path `/`, legacy build type, HTTPS enforced): `digest/latest.json` (byte-identical to the dated file),
+  `digest/YYYY-MM-DD.json`, `digest/index.json` (plain JSON list, newest first, `{date, generated_at, stories, cost_usd}`;
+  rebuilt from every dated file on the site and merged with the old index so a hand-pruned day keeps its row; a re-run of
+  the same date replaces that day's file and row), `runs/YYYY-MM-DD.json` (cost report), `privacy_policy.html` (copied
+  from the repo root when it exists — house-facts §5; the publish step logs and carries on when it does not),
+  `.nojekyll`, `index.html`. The app's `AppConfig.digestUrl` points at `digest/latest.json`.
+- **Per-run cost report (spec requirement)**: `publish --summary-out` renders `RunCost.summary_lines()` (the
+  `grouping:` / `analysis:` / `total:` lines) and the top-stories table; the workflow writes it to
+  `$GITHUB_STEP_SUMMARY`, so the cost is the first thing on each run's summary page. The same numbers are
+  `runs/<date>.json` on the site and `pipeline/out/runs/<date>.json` inside the run's artifact (14-day retention).
+- **daily.yml mechanics**: `schedule: "0 6 * * *"` + `workflow_dispatch` inputs `through` (collect | group | analyse,
+  default analyse) and `dry_run` (true ⇒ collect only). The "Resolve stages" step turns those into one value;
+  publishing runs only when it is `analyse` (group/collect runs leave the site untouched). `permissions: contents: write`
+  (push gh-pages / keepalive), `actions: write` (re-enable), `concurrency: daily-digest` (no cancel), `timeout-minutes: 30`
+  (a full run is ~4 min). Actions pinned to majors: `actions/checkout@v5`, `actions/setup-python@v6`,
+  `actions/upload-artifact@v6` (Node 24; v5 warns), `subosito/flutter-action@v2` with `flutter-version: 3.44.4`.
+  Pushes made with `GITHUB_TOKEN` do not trigger other workflows, so the gh-pages commit and the keepalive commit never
+  start CI. Pages was auto-enabled by GitHub the moment the `gh-pages` branch was pushed (the POST
+  `/repos/mksoft-ltd/sides/pages` call returned 409 "already enabled"); `gh api repos/mksoft-ltd/sides/pages` shows the config.
+- **Sleep guard**: GitHub's rule (docs, "Events that trigger workflows → schedule", checked 15 Oct 2026): "In a public
+  repository, scheduled workflows are automatically disabled when no repository activity has occurred in 60 days."
+  What counts as activity is not documented; the community keepalive actions found that merely toggling the workflow
+  via the API did not reliably reset the deadline, and all converged on committing to the **default branch**. Our daily
+  commit lands on `gh-pages`, not `main`, so it may not count. Mitigation, in the daily run's "Keep the schedule alive"
+  step (scheduled runs only): (1) `gh api -X PUT .../actions/workflows/daily.yml/enable` (idempotent; also undoes a
+  disable if one happened); (2) if the `main` HEAD commit is ≥ 45 days old, write today's date to `.github/keepalive`
+  and push it to `main` as `github-actions[bot]`. Zero third-party actions, zero cost, at most one tiny commit every
+  45 days. If the schedule ever does stop: `gh workflow enable daily.yml` and check the Actions tab banner.
+- **When a run fails** (red run + GitHub's failure email): open the run → the failing step's log. `collect` exits 1
+  only when no articles were collected at all (single feed failures are warnings; the run on 14 Oct saw Independent 429
+  and Times of Israel 403 and carried on). `group` exits 2 on refusal/truncation — the cost report is still written and
+  uploaded in the artifact, nothing is published, latest.json keeps the previous day. `analyse` exits 1 only when every
+  story failed. A publish failure (push rejected) is a race with another run — the concurrency group should make that
+  impossible; re-run the job. Re-running the same day is safe: the dated file and index row are replaced. To check the
+  secret is still valid without paying for a full run: `gh workflow run daily.yml -f through=group`.
+- **First workflow run (run 38655525802, 14 Oct 2026 23:40 UTC, 4 min 11 s, green)**: 2 feed errors, 52 raw stories →
+  10 kept; grouping 77,968 in / 10,640 out → $0.5247; analysis 10 calls 50,795 in / 30,779 out → $0.8188; total
+  $1.3434 over 11 calls. Because it ran before midnight UTC its date was 2026-10-14 and it replaced the digest of the
+  same date published from the local run; the first index merge of two days happens with the 06:00 UTC run on 15 Oct.

@@ -98,7 +98,7 @@ jobs:
 
       - name: Upload run artifacts
         if: always()
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v6
         with:
           name: pipeline-out-${{ github.run_id }}
           path: pipeline/out/
