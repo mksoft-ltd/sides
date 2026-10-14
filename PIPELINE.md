@@ -9,8 +9,8 @@ Founder decisions 14 Oct 2026: Claude Opus 5.5 for the daily pipeline (paid, ~£
 | 1a | build: pipeline phase 1 (collect) | done | 2026-10-14 | 45 tests, socket guard; 29 live outlets (7 dead feeds kept disabled with notes), 726 articles in sample; commits 909bbd0, 0f04255 |
 | 1b | build: pipeline phase 2 (group) | done | 2026-10-14 | 75 tests; live run 10 stories from 723 articles, grouping $0.53 (84k in/9.6k out); commit f37d659 |
 | 1c | build: pipeline phase 3 (analyse) | done | 2026-10-14 | 117 tests; 10 stories analysed, 318 items kept / 0 dropped, analysis $0.83 → day total $1.35; commits 198c5a0, 7495b09 (quote `field` = headline/snippet: 87/38 today); 120 tests |
-| 1d | build: phone app (phase 4) | in-progress | 2026-10-14 | flutter-architect |
-| 1e | build: tablet layout (phase 5) | pending | | flutter-architect |
+| 1d | build: phone app (phase 4) | done | 2026-10-15 | analyze clean, 65 tests, apk + xcodebuild sim builds OK (note: `flutter build ios --simulator` lipo step fails on Xcode 27 — use archive/xcodebuild); screenshots docs/screenshots/phase4; commits 89e0e07 cd2c90f 2c11f72 |
+| 1e | build: tablet layout (phase 5) | in-progress | 2026-10-15 | flutter-architect |
 | 1f | build: deployment (phase 6) | pending | | GitHub Actions cron + Pages, secret via `gh secret set` |
 | 2 | design | pending | | ui-designer |
 | 3 | test | pending | | mobile-qa-architect |
