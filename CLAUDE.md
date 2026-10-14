@@ -11,13 +11,13 @@ Publisher: Froggy Eye Ltd (house-facts §3). Bundle/package `com.froggyeye.sides
 ```
 pipeline/                 Python 3.12+ package (flat layout, no src/)
   pyproject.toml          deps, `pip install -e pipeline[dev]`, pytest config (socket guard)
-  sides_pipeline/         models.py · config.py · text.py · fetch.py · collect.py · group.py · stories.py · cost.py · schema.py · cli.py
+  sides_pipeline/         models.py · config.py · text.py · fetch.py · collect.py · llm.py · group.py · stories.py · analyse.py · validate.py · digest.py · cost.py · schema.py · cli.py
   config/outlets.yaml     the outlet pool (see "How to add an outlet")
   config/pipeline.yaml    LLM model + per-stage effort/max_tokens/thresholds (the one place to downgrade the model)
   config/pricing.yaml     USD per MTok per model (cost.py refuses to price an unlisted model)
-  config/prompts/*.md     prompt text, never inline in code (group.md so far)
-  tests/                  pytest, fixtures/feeds/*.xml, fixtures/llm/*.json, conftest.py (FakeFetcher, article/outlet helpers)
-  out/                    run artifacts (git-ignored): articles.json, stories.json, runs/<date>.json (cost report)
+  config/prompts/*.md     prompt text, never inline in code (group.md, analyse.md)
+  tests/                  pytest, fixtures/feeds/*.xml, fixtures/llm/*.json + analyse_live_<date>/<story_id>.json, conftest.py
+  out/                    run artifacts (git-ignored): articles.json, stories.json, digest.json, runs/<date>.json (cost report)
 schema/digest.schema.json JSON contract between pipeline and app (pydantic models mirror it)
 lib/, android/, ios/ …    Flutter app (phases 4–5; untouched by pipeline work)
 ```
@@ -29,10 +29,12 @@ python3 -m venv pipeline/.venv && pipeline/.venv/bin/pip install -e "pipeline[de
 pipeline/.venv/bin/python -m pytest pipeline            # or: cd pipeline && pytest
 pipeline/.venv/bin/python -m sides_pipeline.cli collect --out pipeline/out/articles.json [--outlets pipeline/config/outlets.yaml] [--window-hours 36] [--cap 40] [-v]
 pipeline/.venv/bin/python -m sides_pipeline.cli group --in pipeline/out/articles.json --out pipeline/out/stories.json [--replay tests/fixtures/llm/x.json] [--raw-out f.json]
-pipeline/.venv/bin/python -m sides_pipeline.cli run --through group        # collect → group into pipeline/out/
+pipeline/.venv/bin/python -m sides_pipeline.cli analyse --in pipeline/out/stories.json --out pipeline/out/digest.json [--replay-dir DIR] [--raw-out-dir DIR]
+pipeline/.venv/bin/python -m sides_pipeline.cli show --story 1 [--in pipeline/out/digest.json]   # one story's full analysis, sources resolved
+pipeline/.venv/bin/python -m sides_pipeline.cli run --through analyse      # collect → group → analyse into pipeline/out/
 ```
 
-`group` and `run --through group` call the Claude API. Locally the key lives in the macOS Keychain and is read into
+`group`, `analyse` and `run` call the Claude API. Locally the key lives in the macOS Keychain and is read into
 the environment for that shell only (never printed, never on disk, never committed):
 
 ```
@@ -86,12 +88,57 @@ stage offline from a recorded response (no key needed).
 - **First live run (14 Oct 2026)**: 723 articles → 65 raw stories → 10 kept (34 had <3 outlets, 21 beyond top 10);
   83,924 in / 9,557 out tokens, $0.53, 137 s.
 - **stories.json is digest-shaped** (`schema_version, generated_at, date, meta, outlets, stories`) and validated against
-  `schema/digest.schema.json` by the CLI and in tests; phase 3 adds the analysis fields to each story.
+  `schema/digest.schema.json` by the CLI and in tests; the analysis arrays are present but empty until `analyse` runs.
+
+### Analysis (phase 3)
+
+- **One call per story** (`analyse.py: ClaudeAnalyser`) through the same wrapper as grouping (`llm.py`:
+  stream → `get_final_message`, `output_config.effort: high`, structured output `ANALYSIS_OUTPUT_SCHEMA`, refusal
+  fallback, usage captured). Stories run on a thread pool bounded to `analysis.concurrency` (4); results come back
+  in story order. System prompt `config/prompts/analyse.md`; user message = title, a header naming the leans and
+  blocs that actually have articles, then `id | outlet | lean | bloc | ownership | published_at | headline | snippet`
+  per article (`lean: n/a` for outlets off the UK/US scale, which belong to the bloc axis only).
+- **Two axes in one response**: lean (`agreed_facts`, `framing[]` per lean, `omissions[]`, `contested_claims[]`,
+  `opinion[]`) and West/East (`framing_by_bloc[]`, `east_west_contradictions[]` = one topic with a `west` and an
+  `east` side that state incompatible things; empty when they do not, shown as "none found", never padded).
+- **Failure is per story, not per run**: refusal / `max_tokens` / unparsable JSON → one retry (`analysis.retries`),
+  then the story ships with empty analysis arrays and a `meta.warnings[]` entry. Every attempt is billed and costed.
+  The command exits 1 only when every story failed.
+- **Citation validator** (`validate.py`, deterministic, runs after every response; integrity rule 2). An item is
+  dropped under the first failing rule and counted in `story.validation` and `meta.validation`
+  (`{kept, dropped_by_reason{reason: n}}`):
+
+  | reason | rule |
+  |---|---|
+  | `unknown_id` | any cited id (`sources`, `asserted_by`, `disputed_by`, `article_id`) is not an article of this story |
+  | `empty_sources` | `sources` / either side of a contested claim or contradiction is empty |
+  | `quote_not_found` | a headline quote is not a literal substring of the cited article's headline or snippet (case-insensitive, whitespace-collapsed, curly quotes/dashes folded to ASCII) |
+  | `side_without_articles` | a framing entry or omission names a lean/bloc with no article in this story |
+  | `source_outside_side` | a framing quote or emphasis item cites an article not of that lean/bloc (lean=null articles belong to no lean) |
+  | `omission_cites_omitter` | an omission is sourced to an article of the lean said to omit the point |
+  | `contested_same_outlet` | `asserted_by` and `disputed_by` share an outlet (the two sides must be disjoint outlet sets) |
+  | `contradiction_wrong_bloc` | `west.sources` not all West-bloc articles, or `east.sources` not all East-bloc |
+  | `empty_framing` | a framing entry has nothing left once its quotes and emphasis were checked |
+
+  Duplicate ids inside one item collapse; two entries for the same lean/bloc merge; texts over 200 chars are cut at a
+  word boundary (logged, not dropped). Nothing the validator did not pass reaches `digest.json`.
+- **Digest assembly** (`digest.py`): stories.json + validated analysis → `out/digest.json`, `meta.cost_usd` = grouping
+  + analysis (the standalone `analyse` command continues `out/runs/<date>.json` via `RunCost.load`), `meta.validation`
+  = totals, `generated_at` refreshed; validated against the schema before writing (all analysis arrays are required,
+  possibly empty).
+- **Replay recipe**: `analyse --raw-out-dir DIR` saves each story's raw response as `DIR/<story_id>.json` (fixture
+  shape `{model, stop_reason, usage, response}`); `analyse --replay-dir DIR` replays them with no key and no network.
+  `tests/fixtures/llm/analyse_live_2026-10-14/` holds the first live run; `tests/test_analyse_live_fixture.py`
+  rebuilds the digest from the phase-2 live fixtures + these and asserts 0 `unknown_id` drops.
+- **First live run (14 Oct 2026)**: 10 stories, 10 calls (no retries), 4 in flight; 51,052 in / 31,189 out tokens,
+  $0.83, 84 s wall (longest call 42.5 s). Validator: 318 items kept, 0 dropped; 0 East–West contradictions found
+  (the day's stories were not contested between blocs). Day total with grouping: $1.35 (≈ £32/month at one run a
+  day, above the plan's ~$0.75 estimate because `high` effort spends ~3k reasoning+output tokens per story).
 
 ## Integrity rules (from the spec — do not weaken)
 
 1. Never store or publish article text beyond headline + ≤200-char snippet (`Article.snippet` max_length, schema `maxLength`).
-2. Every analytical claim must cite article ids; unsourced ⇒ dropped (phase 3 validator).
+2. Every analytical claim must cite article ids; unsourced ⇒ dropped (`validate.py`, rules table above).
 3. Coverage/blindspot indicators are computed in code from outlet tags, never asked of the model.
 4. No secrets in the repo or the app; the Anthropic key is a GitHub Actions secret only.
 5. Tests never touch the network (see below).
@@ -103,12 +150,15 @@ suite. `tests/test_no_network.py` asserts this directly. Feed fixtures live in `
 four real feeds recorded once on 14 Oct 2026 (trimmed to 10 items; `conftest.RECORDED_AT` is the "now" tests
 use) plus synthetic Atom/RSS/malformed/60-item feeds for edge cases.
 
-The LLM is faked through the `Grouper` protocol: `ClaudeGrouper` (real SDK) and `FakeGrouper`, which replays
+The LLM is faked through the `Grouper` / `Analyser` protocols: `ClaudeGrouper` / `ClaudeAnalyser` (real SDK via
+`llm.py`) and `FakeGrouper` / `FakeAnalyser` (per-story `<story_id>.json` fixtures). `FakeGrouper` replays
 `tests/fixtures/llm/group_*.json` (`{model, stop_reason, usage, response: {stories[]}}`) and raises on a replayed
 `refusal`/`max_tokens` exactly like the real one. To record a fixture: run the stage live with
 `--raw-out <file>` (that is the fixture), then trim `articles.json` to the articles the response references
 (`articles_live_<date>.json`); `tests/test_group_live_fixture.py` shows the pair in use. `ClaudeGrouper` itself is
-tested with a stand-in client that records the request kwargs (model, effort, format, betas, fallbacks).
+tested with a stand-in client that records the request kwargs (model, effort, format, betas, fallbacks); so is
+`ClaudeAnalyser` (`tests/test_analyse.py`). `tests/test_validate.py` has one test per validator rule, each introducing
+exactly one violation into an otherwise fully valid response.
 
 ## How to add an outlet
 

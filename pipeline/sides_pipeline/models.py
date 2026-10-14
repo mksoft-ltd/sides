@@ -144,8 +144,94 @@ class Blindspot(BaseModel):
     bloc: Bloc | None
 
 
+# ── Phase 3: per-story analysis (every item cites article ids; validate.py drops anything unsourced) ──
+
+ANALYSIS_TEXT_MAX_CHARS = 200
+
+
+class Sourced(BaseModel):
+    """A single analytical point and the article ids it rests on."""
+
+    model_config = ConfigDict(extra="forbid")
+
+    text: str = Field(min_length=1, max_length=ANALYSIS_TEXT_MAX_CHARS)
+    sources: list[str] = Field(min_length=1)
+
+
+class HeadlineQuote(BaseModel):
+    """Verbatim wording lifted from one article's headline or snippet."""
+
+    model_config = ConfigDict(extra="forbid")
+
+    article_id: str
+    quote: str = Field(min_length=1)
+
+
+class LeanFraming(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+
+    lean: Lean
+    headline_quotes: list[HeadlineQuote]
+    emphasis: list[Sourced]
+
+
+class BlocFraming(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+
+    bloc: Bloc
+    headline_quotes: list[HeadlineQuote]
+    emphasis: list[Sourced]
+
+
+class Omission(BaseModel):
+    """A point lean X's coverage does not mention, sourced to the articles that DO carry it."""
+
+    model_config = ConfigDict(extra="forbid")
+
+    lean: Lean
+    text: str = Field(min_length=1, max_length=ANALYSIS_TEXT_MAX_CHARS)
+    sources: list[str] = Field(min_length=1)
+
+
+class ContestedClaim(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+
+    claim: str = Field(min_length=1, max_length=ANALYSIS_TEXT_MAX_CHARS)
+    asserted_by: list[str] = Field(min_length=1)
+    disputed_by: list[str] = Field(min_length=1)
+
+
+class Contradiction(BaseModel):
+    """West and East coverage stating incompatible things about one topic."""
+
+    model_config = ConfigDict(extra="forbid")
+
+    topic: str = Field(min_length=1, max_length=ANALYSIS_TEXT_MAX_CHARS)
+    west: Sourced
+    east: Sourced
+
+
+class ValidationCounts(BaseModel):
+    """What the citation validator kept and dropped (per story, and totalled in meta)."""
+
+    model_config = ConfigDict(extra="forbid")
+
+    kept: int = Field(ge=0, default=0)
+    dropped_by_reason: dict[str, int] = Field(default_factory=dict)
+
+    def add(self, other: "ValidationCounts") -> None:
+        self.kept += other.kept
+        for k, v in other.dropped_by_reason.items():
+            self.dropped_by_reason[k] = self.dropped_by_reason.get(k, 0) + v
+
+    @property
+    def dropped(self) -> int:
+        return sum(self.dropped_by_reason.values())
+
+
 class Story(BaseModel):
-    """One of the day's top stories. Analysis fields (framing, contradictions, …) arrive in phase 3."""
+    """One of the day's top stories. The analysis arrays are empty until phase 3 fills them (or when the
+    story's analysis call failed; see meta.warnings)."""
 
     model_config = ConfigDict(extra="forbid")
 
@@ -156,6 +242,14 @@ class Story(BaseModel):
     coverage: Coverage
     blindspot: Blindspot
     articles: list[Article] = Field(min_length=1)
+    agreed_facts: list[Sourced] = Field(default_factory=list)
+    framing: list[LeanFraming] = Field(default_factory=list)
+    omissions: list[Omission] = Field(default_factory=list)
+    contested_claims: list[ContestedClaim] = Field(default_factory=list)
+    opinion: list[Sourced] = Field(default_factory=list)
+    framing_by_bloc: list[BlocFraming] = Field(default_factory=list)
+    east_west_contradictions: list[Contradiction] = Field(default_factory=list)
+    validation: ValidationCounts = Field(default_factory=ValidationCounts)
 
 
 class DigestMeta(BaseModel):
@@ -166,6 +260,7 @@ class DigestMeta(BaseModel):
     outlets_polled: int = Field(ge=0)
     articles_collected: int = Field(ge=0)
     warnings: list[str] = Field(default_factory=list)
+    validation: ValidationCounts = Field(default_factory=ValidationCounts, description="citation-validator totals")
 
 
 class Digest(BaseModel):

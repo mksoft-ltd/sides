@@ -11,7 +11,6 @@ from __future__ import annotations
 
 import json
 import logging
-import time
 from dataclasses import dataclass
 from datetime import UTC, datetime
 from pathlib import Path
@@ -20,7 +19,8 @@ from typing import Protocol
 import yaml
 from pydantic import BaseModel, ConfigDict, Field
 
-from .cost import RunCost, Usage
+from .cost import RunCost
+from .llm import FALLBACK_BETA, LLMError, make_client, run_structured, structured_request_kwargs, usage_from_fixture
 from .models import Article, CollectResult, Digest, DigestMeta, OutletPublic
 from .stories import MIN_OUTLETS, MIN_STORIES, TOP_N, RawStory, ValidationReport, build_stories
 
@@ -29,7 +29,6 @@ log = logging.getLogger(__name__)
 CONFIG_DIR = Path(__file__).resolve().parent.parent / "config"
 DEFAULT_PIPELINE_CONFIG = CONFIG_DIR / "pipeline.yaml"
 STAGE = "grouping"
-FALLBACK_BETA = "server-side-fallback-2026-07-01"
 
 # JSON schema sent as output_config.format. Kept minimal (structured outputs reject many keywords);
 # title length and id validity are enforced in code afterwards.
@@ -147,63 +146,28 @@ class Grouper(Protocol):
 
 
 class ClaudeGrouper:
-    """Thin wrapper over the Anthropic SDK: one streamed, structured-output request per run."""
+    """One streamed, structured-output request per run through the shared wrapper in :mod:`llm`."""
 
     def __init__(self, cfg: GroupingConfig, client=None):  # noqa: ANN001 - anthropic.Anthropic or a test double
         self.cfg = cfg
-        if client is None:
-            import anthropic  # imported lazily so tests never need the real client
-
-            client = anthropic.Anthropic()  # key from ANTHROPIC_API_KEY (see README: Keychain recipe)
-        self.client = client
+        self.client = client if client is not None else make_client()
 
     def request_kwargs(self, system: str, user: str) -> dict:
-        return dict(
-            model=self.cfg.model,
-            max_tokens=self.cfg.max_tokens,
-            system=system,
-            messages=[{"role": "user", "content": user}],
-            # Thinking is always on for this model; effort is the only depth control (no `thinking`, no budget).
-            output_config={
-                "effort": self.cfg.effort,
-                "format": {"type": "json_schema", "schema": GROUPING_OUTPUT_SCHEMA},
-            },
-            # Server-side refusal fallback, routed by refusal category.
-            betas=[FALLBACK_BETA],
-            fallbacks="default",
+        return structured_request_kwargs(
+            model=self.cfg.model, max_tokens=self.cfg.max_tokens, effort=self.cfg.effort,
+            system=system, user=user, schema=GROUPING_OUTPUT_SCHEMA,
         )
 
     def group(self, system: str, user: str) -> GroupingResult:
-        started = time.monotonic()
-        with self.client.beta.messages.stream(**self.request_kwargs(system, user)) as stream:
-            message = stream.get_final_message()
-        seconds = time.monotonic() - started
-
-        usage = Usage.from_response_usage(message.usage)
-        served_by = getattr(message, "model", self.cfg.model) or self.cfg.model
-        if served_by != self.cfg.model:
-            log.warning("grouping was served by fallback model %s (requested %s)", served_by, self.cfg.model)
-        stop = message.stop_reason
-        if stop == "refusal":
-            details = getattr(message, "stop_details", None)
-            cat = getattr(details, "category", None)
-            expl = getattr(details, "explanation", None)
-            raise GroupingError(f"model refused the grouping request (category={cat!r}): {expl or 'no explanation'}")
-        if stop == "max_tokens":
-            raise GroupingError(
-                f"grouping response was truncated at max_tokens={self.cfg.max_tokens}; raise grouping.max_tokens"
-            )
-        if stop not in ("end_turn", "stop_sequence"):
-            raise GroupingError(f"unexpected stop_reason {stop!r} from grouping call")
-
-        text = next((b.text for b in message.content if getattr(b, "type", None) == "text"), None)
-        if text is None:
-            raise GroupingError("grouping response contained no text block")
         try:
-            response = GroupingResponse.model_validate_json(text)
+            res = run_structured(self.client, self.request_kwargs(system, user), stage=STAGE)
+        except LLMError as exc:
+            raise GroupingError(str(exc)) from exc
+        try:
+            response = GroupingResponse.model_validate_json(res.text)
         except ValueError as exc:
             raise GroupingError(f"grouping response was not valid grouping JSON: {exc}") from exc
-        return GroupingResult(response=response, usage=usage, model=served_by, stop_reason=stop, seconds=seconds)
+        return GroupingResult(response=response, usage=res.usage, model=res.model, stop_reason=res.stop_reason, seconds=res.seconds)
 
 
 class FakeGrouper:
@@ -225,13 +189,7 @@ class FakeGrouper:
             raise GroupingError("model refused the grouping request (replayed fixture)")
         if stop == "max_tokens":
             raise GroupingError("grouping response was truncated at max_tokens (replayed fixture)")
-        u = self.data.get("usage", {})
-        usage = Usage(
-            input_tokens=int(u.get("input_tokens", 0)),
-            output_tokens=int(u.get("output_tokens", 0)),
-            cache_read_tokens=int(u.get("cache_read_input_tokens", 0)),
-            cache_write_tokens=int(u.get("cache_creation_input_tokens", 0)),
-        )
+        usage = usage_from_fixture(self.data.get("usage", {}))
         return GroupingResult(
             response=GroupingResponse.model_validate(self.data["response"]),
             usage=usage,

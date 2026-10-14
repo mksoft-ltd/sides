@@ -1,0 +1,300 @@
+{
+  "model": "claude-opus-5-5",
+  "stop_reason": "end_turn",
+  "usage": {
+    "input_tokens": 5976,
+    "output_tokens": 4685,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+  },
+  "response": {
+    "agreed_facts": [
+      {
+        "text": "Ukraine accused SpaceX of restricting or limiting its Starlink access, disrupting military and drone operations.",
+        "sources": [
+          "4246a58e693e",
+          "630b1b83136c",
+          "c31b4298f437",
+          "6d922984addf"
+        ]
+      },
+      {
+        "text": "Elon Musk said any limits on Ukraine's access were the responsibility of the US government, military or President Trump, not his company.",
+        "sources": [
+          "aa34fbb1e609",
+          "134c713ce9e6",
+          "8118f1ec3328",
+          "087ad35ae6c7"
+        ]
+      },
+      {
+        "text": "Starlink is described as central to Ukraine's battlefield communications.",
+        "sources": [
+          "4246a58e693e",
+          "630b1b83136c",
+          "9e6a861a3549",
+          "4bbd8076410c"
+        ]
+      },
+      {
+        "text": "The restrictions came suddenly or unexpectedly, with one report placing them overnight into Wednesday.",
+        "sources": [
+          "0010602040ce",
+          "defe1ccbc089",
+          "b5cc7aac758d",
+          "6d922984addf"
+        ]
+      },
+      {
+        "text": "The episode is set against worsening ties or pressure between the Trump administration and Ukraine.",
+        "sources": [
+          "4246a58e693e",
+          "630b1b83136c",
+          "c31b4298f437",
+          "defe1ccbc089",
+          "b5cc7aac758d",
+          "7221558b5239"
+        ]
+      },
+      {
+        "text": "The restrictions coincided with Russian missile attacks on Ukraine.",
+        "sources": [
+          "c31b4298f437",
+          "0010602040ce"
+        ]
+      }
+    ],
+    "framing": [
+      {
+        "lean": "left",
+        "headline_quotes": [
+          {
+            "article_id": "630b1b83136c",
+            "quote": "disrupting military amid Trump pressure"
+          },
+          {
+            "article_id": "0010602040ce",
+            "quote": "suddenly restricted"
+          },
+          {
+            "article_id": "86410aa2be98",
+            "quote": "Restrictions on Starlink will only worsen the death toll"
+          },
+          {
+            "article_id": "7221558b5239",
+            "quote": "feels ‘betrayed’ by Donald Trump"
+          }
+        ],
+        "emphasis": [
+          {
+            "text": "Leads with Trump's pressure on Ukraine and Zelensky saying he feels personally betrayed by Trump.",
+            "sources": [
+              "630b1b83136c",
+              "7221558b5239"
+            ]
+          },
+          {
+            "text": "Foregrounds the impact on civilian casualties and air defences, and Russian missile launches without US warning.",
+            "sources": [
+              "86410aa2be98",
+              "0010602040ce"
+            ]
+          }
+        ]
+      },
+      {
+        "lean": "centre",
+        "headline_quotes": [
+          {
+            "article_id": "aa34fbb1e609",
+            "quote": "down to US, not his firm"
+          },
+          {
+            "article_id": "b5cc7aac758d",
+            "quote": "raise suspicions of Musk, Trump retaliation"
+          },
+          {
+            "article_id": "4bbd8076410c",
+            "quote": "'no surprise' after Musk condemned Ukraine strikes on Russian data centres"
+          },
+          {
+            "article_id": "9e6a861a3549",
+            "quote": "Why is Starlink internet so important on the battlefield in Ukraine?"
+          }
+        ],
+        "emphasis": [
+          {
+            "text": "Includes explainers on Starlink's battlefield role and on Starshield, SpaceX's military version.",
+            "sources": [
+              "9e6a861a3549",
+              "6d922984addf"
+            ]
+          },
+          {
+            "text": "Links the restrictions to Musk's condemnation of Ukrainian strikes on Russian data centres and to a Trump–Zelensky rupture over a diesel deal.",
+            "sources": [
+              "4bbd8076410c",
+              "b5cc7aac758d"
+            ]
+          },
+          {
+            "text": "Reports Ukraine seeking clarification from the US, SpaceX and NATO, and says access has improved though speed limits remain.",
+            "sources": [
+              "9cba2ddf1a8f",
+              "aa34fbb1e609"
+            ]
+          }
+        ]
+      },
+      {
+        "lean": "right",
+        "headline_quotes": [
+          {
+            "article_id": "defe1ccbc089",
+            "quote": "Fears US has cut off intel to Ukraine"
+          },
+          {
+            "article_id": "134c713ce9e6",
+            "quote": "Musk blames Trump and US military"
+          }
+        ],
+        "emphasis": [
+          {
+            "text": "Leads with fears that the US has stopped sending intelligence to Ukraine following the outage.",
+            "sources": [
+              "defe1ccbc089"
+            ]
+          },
+          {
+            "text": "Foregrounds Musk placing responsibility on Trump and the US military for Starshield restrictions.",
+            "sources": [
+              "134c713ce9e6"
+            ]
+          }
+        ]
+      }
+    ],
+    "omissions": [
+      {
+        "lean": "left",
+        "text": "Left coverage does not mention Musk's statement that the US government, not SpaceX, is responsible for the limits.",
+        "sources": [
+          "aa34fbb1e609",
+          "134c713ce9e6"
+        ]
+      },
+      {
+        "lean": "right",
+        "text": "Right coverage does not mention disruption to Ukrainian drone missions.",
+        "sources": [
+          "630b1b83136c",
+          "c31b4298f437",
+          "6d922984addf"
+        ]
+      },
+      {
+        "lean": "centre",
+        "text": "Centre coverage does not mention concerns about US intelligence sharing with Ukraine.",
+        "sources": [
+          "defe1ccbc089",
+          "86410aa2be98"
+        ]
+      }
+    ],
+    "contested_claims": [
+      {
+        "claim": "SpaceX is responsible for restricting Ukraine's Starlink access.",
+        "asserted_by": [
+          "630b1b83136c",
+          "c31b4298f437",
+          "4246a58e693e"
+        ],
+        "disputed_by": [
+          "aa34fbb1e609",
+          "134c713ce9e6",
+          "8118f1ec3328",
+          "087ad35ae6c7"
+        ]
+      }
+    ],
+    "opinion": [
+      {
+        "text": "A Guardian piece argues the Starlink restrictions will worsen Ukraine's civilian death toll and affect air defences more than strikes on refineries.",
+        "sources": [
+          "86410aa2be98"
+        ]
+      }
+    ],
+    "framing_by_bloc": [
+      {
+        "bloc": "west",
+        "headline_quotes": [
+          {
+            "article_id": "630b1b83136c",
+            "quote": "disrupting military amid Trump pressure"
+          },
+          {
+            "article_id": "defe1ccbc089",
+            "quote": "Fears US has cut off intel to Ukraine"
+          },
+          {
+            "article_id": "b5cc7aac758d",
+            "quote": "raise suspicions of Musk, Trump retaliation"
+          }
+        ],
+        "emphasis": [
+          {
+            "text": "Covers Trump–Zelensky tensions, Zelensky's sense of betrayal and possible retaliation.",
+            "sources": [
+              "630b1b83136c",
+              "7221558b5239",
+              "b5cc7aac758d"
+            ]
+          },
+          {
+            "text": "Includes explainers and analysis on Starlink's importance, Starshield and US intelligence concerns.",
+            "sources": [
+              "9e6a861a3549",
+              "6d922984addf",
+              "86410aa2be98",
+              "defe1ccbc089"
+            ]
+          }
+        ]
+      },
+      {
+        "bloc": "east",
+        "headline_quotes": [
+          {
+            "article_id": "4246a58e693e",
+            "quote": "Crippling Drone Missions as Ties With U.S. Worsen"
+          },
+          {
+            "article_id": "8118f1ec3328",
+            "quote": "Musk suggests US government behind any slowdown"
+          },
+          {
+            "article_id": "087ad35ae6c7",
+            "quote": "Elon Musk shifts responsibility to Trump"
+          }
+        ],
+        "emphasis": [
+          {
+            "text": "Foregrounds Musk attributing the restrictions to the US government and Trump.",
+            "sources": [
+              "8118f1ec3328",
+              "087ad35ae6c7"
+            ]
+          },
+          {
+            "text": "Describes Starlink as the lifeblood of Ukrainian battlefield communications since 2022.",
+            "sources": [
+              "4246a58e693e"
+            ]
+          }
+        ]
+      }
+    ],
+    "east_west_contradictions": []
+  }
+}

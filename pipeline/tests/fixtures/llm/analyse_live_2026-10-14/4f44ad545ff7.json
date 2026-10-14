@@ -1,0 +1,226 @@
+{
+  "model": "claude-opus-5-5",
+  "stop_reason": "end_turn",
+  "usage": {
+    "input_tokens": 4994,
+    "output_tokens": 3073,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+  },
+  "response": {
+    "agreed_facts": [
+      {
+        "text": "A building belonging to Saudi oil company Aramco was struck in an attack attributed to Yemen's Houthis.",
+        "sources": [
+          "686f128a0bba",
+          "9282e988c2f7",
+          "8dbc1dbffb92",
+          "be89d04bea91",
+          "038c46793633",
+          "53ff89e04534",
+          "4e69f8ec1937",
+          "8dac459bc729",
+          "9bdb44d13f1b"
+        ]
+      },
+      {
+        "text": "The Saudi Energy Ministry said the strike caused a limited fire in an administrative building belonging to Aramco.",
+        "sources": [
+          "9282e988c2f7",
+          "8dbc1dbffb92"
+        ]
+      },
+      {
+        "text": "The Houthis said they had targeted Aramco facilities and vowed further attacks.",
+        "sources": [
+          "038c46793633",
+          "53ff89e04534",
+          "4e69f8ec1937",
+          "8dac459bc729"
+        ]
+      },
+      {
+        "text": "The target is described as Aramco's headquarters or executive offices.",
+        "sources": [
+          "686f128a0bba",
+          "be89d04bea91",
+          "038c46793633",
+          "9bdb44d13f1b"
+        ]
+      },
+      {
+        "text": "The Houthis are described as Iran-backed.",
+        "sources": [
+          "be89d04bea91",
+          "9bdb44d13f1b"
+        ]
+      }
+    ],
+    "framing": [
+      {
+        "lean": "left",
+        "headline_quotes": [
+          {
+            "article_id": "686f128a0bba",
+            "quote": "War Spikes Between Houthis and Saudi Arabia"
+          },
+          {
+            "article_id": "9282e988c2f7",
+            "quote": "Limited Fire In Building At Aramco Compound"
+          },
+          {
+            "article_id": "be89d04bea91",
+            "quote": "Iran-Backed Houthis Struck Saudi Oil Giant Aramco's Executive Offices"
+          }
+        ],
+        "emphasis": [
+          {
+            "text": "Leads with an escalating war between the Houthis and Saudi Arabia, noting a prior Houthi warning and the Saudi-led coalition's targeting of Houthi capabilities.",
+            "sources": [
+              "686f128a0bba"
+            ]
+          },
+          {
+            "text": "Foregrounds the Saudi ministry's account of a limited fire.",
+            "sources": [
+              "9282e988c2f7"
+            ]
+          },
+          {
+            "text": "Describes the Houthis as Iran-backed and the strike as a demonstration of their ability to hit high-profile targets.",
+            "sources": [
+              "be89d04bea91"
+            ]
+          }
+        ]
+      },
+      {
+        "lean": "centre",
+        "headline_quotes": [
+          {
+            "article_id": "53ff89e04534",
+            "quote": "Houthis say targeted Saudi oil giant Aramco, vow more attacks"
+          },
+          {
+            "article_id": "4e69f8ec1937",
+            "quote": "Houthis threaten escalation"
+          }
+        ],
+        "emphasis": [
+          {
+            "text": "Leads with the Houthis' own claim of targeting Aramco and their threat of further attacks or escalation.",
+            "sources": [
+              "53ff89e04534",
+              "4e69f8ec1937"
+            ]
+          }
+        ]
+      }
+    ],
+    "omissions": [
+      {
+        "lean": "left",
+        "text": "Left coverage does not mention the Houthis vowing further attacks after the strike.",
+        "sources": [
+          "53ff89e04534",
+          "4e69f8ec1937"
+        ]
+      },
+      {
+        "lean": "centre",
+        "text": "Centre coverage does not describe the Houthis as Iran-backed.",
+        "sources": [
+          "be89d04bea91"
+        ]
+      },
+      {
+        "lean": "centre",
+        "text": "Centre coverage does not mention the Saudi ministry's report of a limited fire.",
+        "sources": [
+          "9282e988c2f7"
+        ]
+      }
+    ],
+    "contested_claims": [],
+    "opinion": [],
+    "framing_by_bloc": [
+      {
+        "bloc": "west",
+        "headline_quotes": [
+          {
+            "article_id": "686f128a0bba",
+            "quote": "War Spikes Between Houthis and Saudi Arabia"
+          },
+          {
+            "article_id": "be89d04bea91",
+            "quote": "Iran-Backed Houthis Struck Saudi Oil Giant Aramco's Executive Offices"
+          },
+          {
+            "article_id": "4e69f8ec1937",
+            "quote": "Houthis threaten escalation"
+          }
+        ],
+        "emphasis": [
+          {
+            "text": "Foregrounds the Saudi official account of the damage and the Houthis' claim and threats.",
+            "sources": [
+              "9282e988c2f7",
+              "53ff89e04534",
+              "4e69f8ec1937"
+            ]
+          },
+          {
+            "text": "Notes the Saudi-led coalition's response targeting Houthi capabilities.",
+            "sources": [
+              "686f128a0bba"
+            ]
+          }
+        ]
+      },
+      {
+        "bloc": "east",
+        "headline_quotes": [
+          {
+            "article_id": "038c46793633",
+            "quote": "vow more attacks on Saudi airports, oil facilities"
+          },
+          {
+            "article_id": "8dac459bc729",
+            "quote": "Houthis claim attacks on Saudi Aramco sites and Riyadh airport"
+          },
+          {
+            "article_id": "8dbc1dbffb92",
+            "quote": "wounded 4 in Riyadh"
+          },
+          {
+            "article_id": "9bdb44d13f1b",
+            "quote": "damaged the building's top three floors"
+          }
+        ],
+        "emphasis": [
+          {
+            "text": "Reports the Houthis' stated motive of retaliating for Saudi backing of Yemeni government forces in a war that restarted last month.",
+            "sources": [
+              "038c46793633"
+            ]
+          },
+          {
+            "text": "Mentions Houthi threats or claims involving Saudi airports, including Riyadh airport.",
+            "sources": [
+              "038c46793633",
+              "8dac459bc729"
+            ]
+          },
+          {
+            "text": "Gives damage and casualty details: four wounded in Riyadh, and no casualties with the top three floors damaged in the Aramco strike.",
+            "sources": [
+              "8dbc1dbffb92",
+              "9bdb44d13f1b"
+            ]
+          }
+        ]
+      }
+    ],
+    "east_west_contradictions": []
+  }
+}

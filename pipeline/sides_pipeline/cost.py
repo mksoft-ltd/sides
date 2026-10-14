@@ -129,6 +129,15 @@ class RunCost:
             "calls": [asdict(c) for c in self.calls],
         }
 
+    @classmethod
+    def load(cls, path: str | Path, pricing: dict[str, ModelPrice] | None = None) -> "RunCost":
+        """Continue an earlier stage's report (out/runs/<date>.json) so the day's total covers every stage."""
+        data = json.loads(Path(path).read_text())
+        rc = cls(pricing=pricing if pricing is not None else load_pricing())
+        rc.started_at = datetime.fromisoformat(data["started_at"].replace("Z", "+00:00"))
+        rc.calls = [CallCost(**c) for c in data.get("calls", [])]
+        return rc
+
     def write(self, path: str | Path) -> Path:
         path = Path(path)
         path.parent.mkdir(parents=True, exist_ok=True)

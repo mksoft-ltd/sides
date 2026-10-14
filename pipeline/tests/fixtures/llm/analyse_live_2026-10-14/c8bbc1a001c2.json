@@ -1,0 +1,344 @@
+{
+  "model": "claude-opus-5-5",
+  "stop_reason": "end_turn",
+  "usage": {
+    "input_tokens": 6495,
+    "output_tokens": 4116,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+  },
+  "response": {
+    "agreed_facts": [
+      {
+        "text": "Pope Leo XIV has been diagnosed with lung cancer, according to the Vatican.",
+        "sources": [
+          "7809db6abcec",
+          "51806545088e",
+          "a852e44e5606",
+          "db65207b4d7f",
+          "bd72fad1fe78",
+          "d34743d9c56c",
+          "83af684300f4",
+          "1658b591a0a2",
+          "e1504b347e9f",
+          "e19aa3ae86ba",
+          "e2963c3d619b",
+          "8deae52ff69a",
+          "ae9f1cb9df51",
+          "41e857c41167",
+          "821ccf9f90aa"
+        ]
+      },
+      {
+        "text": "Surgeons removed part of the Pope's right lung, described by several outlets as the lower lobe.",
+        "sources": [
+          "7809db6abcec",
+          "51806545088e",
+          "a852e44e5606",
+          "db65207b4d7f",
+          "bd72fad1fe78",
+          "d34743d9c56c",
+          "1658b591a0a2",
+          "d2dca7d1ec36",
+          "e1504b347e9f"
+        ]
+      },
+      {
+        "text": "The operation took place at Gemelli hospital in Rome.",
+        "sources": [
+          "7809db6abcec",
+          "1658b591a0a2",
+          "d2dca7d1ec36",
+          "05db260ca587"
+        ]
+      },
+      {
+        "text": "The cancer is lung adenocarcinoma, described as a common form of lung cancer.",
+        "sources": [
+          "5a5d9383de70",
+          "41e857c41167",
+          "e2963c3d619b",
+          "8deae52ff69a",
+          "ae9f1cb9df51"
+        ]
+      },
+      {
+        "text": "The surgery was described as successful.",
+        "sources": [
+          "db65207b4d7f",
+          "bd72fad1fe78",
+          "e1504b347e9f"
+        ]
+      },
+      {
+        "text": "Doctors say recovery is proceeding as planned or as expected.",
+        "sources": [
+          "17e33d649d55",
+          "41e857c41167",
+          "e19aa3ae86ba",
+          "821ccf9f90aa"
+        ]
+      },
+      {
+        "text": "The Pope has begun walking and eating after the operation.",
+        "sources": [
+          "17e33d649d55",
+          "e19aa3ae86ba",
+          "e2963c3d619b",
+          "821ccf9f90aa",
+          "8deae52ff69a",
+          "05db260ca587"
+        ]
+      },
+      {
+        "text": "The Pope is 71 years old.",
+        "sources": [
+          "d2dca7d1ec36",
+          "e19aa3ae86ba",
+          "e2963c3d619b",
+          "b54bd06c4870"
+        ]
+      },
+      {
+        "text": "The operation lasted 90 minutes.",
+        "sources": [
+          "d2dca7d1ec36",
+          "e19aa3ae86ba"
+        ]
+      },
+      {
+        "text": "Messages of support and prayers have been sent to the Pope.",
+        "sources": [
+          "5671f6334495",
+          "b54bd06c4870",
+          "ed74554d1a8d"
+        ]
+      }
+    ],
+    "framing": [
+      {
+        "lean": "left",
+        "headline_quotes": [
+          {
+            "article_id": "17e33d649d55",
+            "quote": "Pope Leo Is Eating And Recovering After Cancer Surgery"
+          },
+          {
+            "article_id": "83af684300f4",
+            "quote": "Tests a Papacy Still Taking Shape"
+          },
+          {
+            "article_id": "5671f6334495",
+            "quote": "Draws Outpouring From World Leaders"
+          }
+        ],
+        "emphasis": [
+          {
+            "text": "Leads with the Pope's day-to-day recovery, including eating, walking and a 'tranquil' night.",
+            "sources": [
+              "17e33d649d55",
+              "1658b591a0a2",
+              "e2963c3d619b",
+              "821ccf9f90aa",
+              "8deae52ff69a"
+            ]
+          },
+          {
+            "text": "Raises questions about the Pope's longevity and the urgency of his plans for the church.",
+            "sources": [
+              "83af684300f4"
+            ]
+          },
+          {
+            "text": "Highlights reactions from world leaders, messages of support and calls for early cancer screening.",
+            "sources": [
+              "5671f6334495",
+              "b54bd06c4870"
+            ]
+          },
+          {
+            "text": "Notes the Pope is expected to spend about a week in hospital.",
+            "sources": [
+              "b54bd06c4870"
+            ]
+          }
+        ]
+      },
+      {
+        "lean": "centre",
+        "headline_quotes": [
+          {
+            "article_id": "a852e44e5606",
+            "quote": "just hours after he underwent surgery"
+          },
+          {
+            "article_id": "ed74554d1a8d",
+            "quote": "Pope thanks wellwishers for prayers"
+          },
+          {
+            "article_id": "e1504b347e9f",
+            "quote": "What we know about the Pope's lung cancer diagnosis"
+          }
+        ],
+        "emphasis": [
+          {
+            "text": "Notes the Vatican disclosed the diagnosis within hours of the surgery.",
+            "sources": [
+              "a852e44e5606"
+            ]
+          },
+          {
+            "text": "Reports the Pope thanking wellwishers for their prayers.",
+            "sources": [
+              "ed74554d1a8d"
+            ]
+          },
+          {
+            "text": "Reports the Pope walking and recovering as expected after a successful operation.",
+            "sources": [
+              "e1504b347e9f",
+              "e19aa3ae86ba"
+            ]
+          }
+        ]
+      },
+      {
+        "lean": "right",
+        "headline_quotes": [
+          {
+            "article_id": "7809db6abcec",
+            "quote": "identified at a \"very early stage.\""
+          },
+          {
+            "article_id": "ae9f1cb9df51",
+            "quote": "says Leo’s disease ‘caught early’"
+          },
+          {
+            "article_id": "05db260ca587",
+            "quote": "Pope Leo undergoes blood tests, X-ray following cancer surgery"
+          }
+        ],
+        "emphasis": [
+          {
+            "text": "Emphasises that the cancer was detected at an early stage.",
+            "sources": [
+              "7809db6abcec",
+              "ae9f1cb9df51"
+            ]
+          },
+          {
+            "text": "Features the Pope's brother, who also has cancer, expressing optimism.",
+            "sources": [
+              "ae9f1cb9df51"
+            ]
+          },
+          {
+            "text": "Details post-operative blood tests and an X-ray.",
+            "sources": [
+              "05db260ca587"
+            ]
+          }
+        ]
+      }
+    ],
+    "omissions": [
+      {
+        "lean": "left",
+        "text": "Left coverage does not mention that the cancer was identified at an early stage.",
+        "sources": [
+          "7809db6abcec",
+          "ae9f1cb9df51"
+        ]
+      },
+      {
+        "lean": "centre",
+        "text": "Centre coverage does not name the cancer type as adenocarcinoma.",
+        "sources": [
+          "41e857c41167",
+          "e2963c3d619b",
+          "8deae52ff69a",
+          "ae9f1cb9df51"
+        ]
+      },
+      {
+        "lean": "right",
+        "text": "Right coverage does not mention messages of support or prayers for the Pope.",
+        "sources": [
+          "5671f6334495",
+          "b54bd06c4870",
+          "ed74554d1a8d"
+        ]
+      }
+    ],
+    "contested_claims": [],
+    "opinion": [],
+    "framing_by_bloc": [
+      {
+        "bloc": "west",
+        "headline_quotes": [
+          {
+            "article_id": "821ccf9f90aa",
+            "quote": "recovery from lung cancer surgery ‘progressing as planned’"
+          },
+          {
+            "article_id": "5671f6334495",
+            "quote": "Draws Outpouring From World Leaders"
+          },
+          {
+            "article_id": "ae9f1cb9df51",
+            "quote": "says Leo’s disease ‘caught early’"
+          }
+        ],
+        "emphasis": [
+          {
+            "text": "Focuses on the Pope's recovery progress, including walking, eating and medical checks.",
+            "sources": [
+              "17e33d649d55",
+              "e19aa3ae86ba",
+              "821ccf9f90aa",
+              "05db260ca587",
+              "8deae52ff69a"
+            ]
+          },
+          {
+            "text": "Covers reactions, messages of support and implications for the papacy.",
+            "sources": [
+              "5671f6334495",
+              "b54bd06c4870",
+              "ed74554d1a8d",
+              "83af684300f4"
+            ]
+          }
+        ]
+      },
+      {
+        "bloc": "east",
+        "headline_quotes": [
+          {
+            "article_id": "5a5d9383de70",
+            "quote": "What is lung adenocarcinoma?"
+          },
+          {
+            "article_id": "bd72fad1fe78",
+            "quote": "“successfully, on schedule and as planned”"
+          }
+        ],
+        "emphasis": [
+          {
+            "text": "Offers an explainer on lung adenocarcinoma and notes Leo was elected in May 2025.",
+            "sources": [
+              "5a5d9383de70"
+            ]
+          },
+          {
+            "text": "Quotes the Vatican statement that the operation was completed successfully and as planned.",
+            "sources": [
+              "bd72fad1fe78"
+            ]
+          }
+        ]
+      }
+    ],
+    "east_west_contradictions": []
+  }
+}

@@ -51,7 +51,21 @@ Outlets are configured in `pipeline/config/outlets.yaml`. Each has a lean (left/
 region, bloc (west/east), ownership and the public rating the lean comes from. Only headlines and
 summaries of at most 200 characters are ever stored; article bodies are never fetched.
 
-Later phases (analysis, publishing, the GitHub Actions schedule) are documented here as they land.
+Analyse the stories (one Claude call per story, four in flight; writes `pipeline/out/digest.json`, the finished
+digest, and extends the day's cost report; prints a per-story table of counts, the validator totals and the cost):
+
+```bash
+python -m sides_pipeline.cli analyse --in pipeline/out/stories.json --out pipeline/out/digest.json
+python -m sides_pipeline.cli show --story 1                # one story's full analysis with every source resolved
+python -m sides_pipeline.cli run --through analyse        # collect → group → analyse in one go
+```
+
+Every point in the digest cites article ids from its own story; the citation validator drops anything that does not
+(the drop counts are in `meta.validation`). A story whose analysis call fails ships with empty analysis and a warning.
+Add `--replay-dir pipeline/tests/fixtures/llm/analyse_live_2026-10-14` to run the stage offline; `--raw-out-dir DIR`
+records a new set of fixtures. The analysis prompt is `pipeline/config/prompts/analyse.md`.
+
+Later phases (publishing, the GitHub Actions schedule) are documented here as they land.
 
 ## App
 

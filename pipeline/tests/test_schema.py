@@ -44,8 +44,12 @@ def test_story_schema_rejects_long_titles_and_extra_fields():
     art = {"id": "0123456789ab", "outlet_id": "bbc", "headline": "H", "snippet": "s", "url": "https://x.example/a", "published_at": "2026-10-14T22:00:00Z"}
     good = {"id": "abcdefabcdef", "title": "T", "rank": 1, "outlet_count": 3,
             "coverage": {"lean": {"left": 1, "centre": 1, "right": 1}, "bloc": {"west": 3, "east": 0}},
-            "blindspot": {"lean": None, "bloc": "west"}, "articles": [art]}
+            "blindspot": {"lean": None, "bloc": "west"}, "articles": [art],
+            "agreed_facts": [], "framing": [], "omissions": [], "contested_claims": [], "opinion": [],
+            "framing_by_bloc": [], "east_west_contradictions": [], "validation": {"kept": 0, "dropped_by_reason": {}}}
     story.validate(good)
+    assert not story.is_valid({k: v for k, v in good.items() if k != "agreed_facts"})  # analysis arrays are required
+    assert not story.is_valid({**good, "agreed_facts": [{"text": "unsourced", "sources": []}]})  # never empty sources
     assert not story.is_valid({**good, "title": "x" * 91})
     assert not story.is_valid({**good, "blindspot": {"lean": "far-left", "bloc": None}})
     assert not story.is_valid({**good, "summary": "unsourced prose must not appear"})

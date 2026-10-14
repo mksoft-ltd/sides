@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://mksoft-ltd.github.io/sides/schema/digest.schema.json",
   "title": "Sides daily digest",
-  "description": "Contract between the Python pipeline and the Flutter app. Phase 1 defines outlets, articles and the collect-phase output; phase 2 adds stories (ranked, with coverage/blindspot) and meta; phase 3 adds the per-story analysis fields.",
+  "description": "Contract between the Python pipeline and the Flutter app. Phase 1 defines outlets, articles and the collect-phase output; phase 2 adds stories (ranked, with coverage/blindspot) and meta; phase 3 adds the per-story analysis arrays (every item cites article ids of that story; the pipeline's citation validator drops anything unsourced).",
   "type": "object",
   "properties": {
     "schema_version": {
@@ -239,7 +239,7 @@
     },
     "meta": {
       "type": "object",
-      "description": "Run metadata; cost_usd is the whole run's LLM spend from config/pricing.yaml.",
+      "description": "Run metadata; cost_usd is the whole run's LLM spend (grouping + analysis) from config/pricing.yaml; validation totals the citation validator across stories.",
       "properties": {
         "model": {
           "type": "string",
@@ -262,6 +262,9 @@
           "items": {
             "type": "string"
           }
+        },
+        "validation": {
+          "$ref": "#/$defs/validation"
         }
       },
       "required": [
@@ -269,7 +272,8 @@
         "cost_usd",
         "outlets_polled",
         "articles_collected",
-        "warnings"
+        "warnings",
+        "validation"
       ],
       "additionalProperties": false
     },
@@ -352,7 +356,7 @@
     },
     "story": {
       "type": "object",
-      "description": "A top story: ≥3 distinct outlets, ranked in code. Phase 3 adds agreed_facts, framing, framing_by_bloc, omissions, contested_claims, opinion, east_west_contradictions.",
+      "description": "A top story: ≥3 distinct outlets, ranked in code. The analysis arrays are required but may be empty (a story whose analysis call failed ships with empty arrays and a meta.warnings entry).",
       "properties": {
         "id": {
           "type": "string",
@@ -385,6 +389,51 @@
           "items": {
             "$ref": "#/$defs/article"
           }
+        },
+        "agreed_facts": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/sourced"
+          }
+        },
+        "framing": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/lean_framing"
+          }
+        },
+        "omissions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/omission"
+          }
+        },
+        "contested_claims": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/contested_claim"
+          }
+        },
+        "opinion": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/sourced"
+          }
+        },
+        "framing_by_bloc": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/bloc_framing"
+          }
+        },
+        "east_west_contradictions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/contradiction"
+          }
+        },
+        "validation": {
+          "$ref": "#/$defs/validation"
         }
       },
       "required": [
@@ -394,7 +443,217 @@
         "outlet_count",
         "coverage",
         "blindspot",
-        "articles"
+        "articles",
+        "agreed_facts",
+        "framing",
+        "omissions",
+        "contested_claims",
+        "opinion",
+        "framing_by_bloc",
+        "east_west_contradictions",
+        "validation"
+      ],
+      "additionalProperties": false
+    },
+    "article_ids": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "pattern": "^[0-9a-f]{12}$"
+      },
+      "description": "Article ids from the same story; never empty."
+    },
+    "sourced": {
+      "type": "object",
+      "description": "One analytical point and the article ids it rests on.",
+      "properties": {
+        "text": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200
+        },
+        "sources": {
+          "$ref": "#/$defs/article_ids"
+        }
+      },
+      "required": [
+        "text",
+        "sources"
+      ],
+      "additionalProperties": false
+    },
+    "headline_quote": {
+      "type": "object",
+      "description": "Verbatim substring of the cited article's headline or snippet.",
+      "properties": {
+        "article_id": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{12}$"
+        },
+        "quote": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "article_id",
+        "quote"
+      ],
+      "additionalProperties": false
+    },
+    "lean_framing": {
+      "type": "object",
+      "description": "How outlets of one lean frame the story; only leans with ≥1 article appear.",
+      "properties": {
+        "lean": {
+          "type": "string",
+          "enum": [
+            "left",
+            "centre",
+            "right"
+          ]
+        },
+        "headline_quotes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/headline_quote"
+          }
+        },
+        "emphasis": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/sourced"
+          }
+        }
+      },
+      "required": [
+        "lean",
+        "headline_quotes",
+        "emphasis"
+      ],
+      "additionalProperties": false
+    },
+    "bloc_framing": {
+      "type": "object",
+      "description": "How outlets of one bloc (West/East) frame the story; only blocs with ≥1 article appear.",
+      "properties": {
+        "bloc": {
+          "$ref": "#/$defs/bloc"
+        },
+        "headline_quotes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/headline_quote"
+          }
+        },
+        "emphasis": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/sourced"
+          }
+        }
+      },
+      "required": [
+        "bloc",
+        "headline_quotes",
+        "emphasis"
+      ],
+      "additionalProperties": false
+    },
+    "omission": {
+      "type": "object",
+      "description": "A point that lean X's coverage does not mention, sourced to the articles (of other leans) that do carry it.",
+      "properties": {
+        "lean": {
+          "type": "string",
+          "enum": [
+            "left",
+            "centre",
+            "right"
+          ]
+        },
+        "text": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200
+        },
+        "sources": {
+          "$ref": "#/$defs/article_ids"
+        }
+      },
+      "required": [
+        "lean",
+        "text",
+        "sources"
+      ],
+      "additionalProperties": false
+    },
+    "contested_claim": {
+      "type": "object",
+      "description": "A claim some articles assert and others dispute; the two sides come from different outlets.",
+      "properties": {
+        "claim": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200
+        },
+        "asserted_by": {
+          "$ref": "#/$defs/article_ids"
+        },
+        "disputed_by": {
+          "$ref": "#/$defs/article_ids"
+        }
+      },
+      "required": [
+        "claim",
+        "asserted_by",
+        "disputed_by"
+      ],
+      "additionalProperties": false
+    },
+    "contradiction": {
+      "type": "object",
+      "description": "West and East coverage stating incompatible things about one topic; west.sources are West-bloc articles, east.sources East-bloc.",
+      "properties": {
+        "topic": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200
+        },
+        "west": {
+          "$ref": "#/$defs/sourced"
+        },
+        "east": {
+          "$ref": "#/$defs/sourced"
+        }
+      },
+      "required": [
+        "topic",
+        "west",
+        "east"
+      ],
+      "additionalProperties": false
+    },
+    "validation": {
+      "type": "object",
+      "description": "Citation-validator counts: items kept, and items dropped per reason.",
+      "properties": {
+        "kept": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "dropped_by_reason": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "integer",
+            "minimum": 0
+          }
+        }
+      },
+      "required": [
+        "kept",
+        "dropped_by_reason"
       ],
       "additionalProperties": false
     }

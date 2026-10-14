@@ -13,3 +13,14 @@ grouping:
   top_n: 10
   min_stories: 5
   title_max_chars: 90
+
+analysis:
+  # One call per story; founder-approved depth for the perspective analysis.
+  effort: high
+  # Streamed; a hit is treated as a failed call (one retry, then the story ships with empty analysis).
+  max_tokens: 32000
+  prompt: prompts/analyse.md
+  # Stories analysed concurrently (bounded thread pool).
+  concurrency: 4
+  # Retries per story after a refusal / truncation / unparsable response.
+  retries: 1

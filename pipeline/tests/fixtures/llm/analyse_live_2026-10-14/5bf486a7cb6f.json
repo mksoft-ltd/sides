@@ -1,0 +1,282 @@
+{
+  "model": "claude-opus-5-5",
+  "stop_reason": "end_turn",
+  "usage": {
+    "input_tokens": 4570,
+    "output_tokens": 3260,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+  },
+  "response": {
+    "agreed_facts": [
+      {
+        "text": "A cargo or container ship sank in or near the Strait of Hormuz on Tuesday.",
+        "sources": [
+          "7a9c761ea52d",
+          "b791b3bfaeb7",
+          "22742c2a00c7",
+          "e5a73f42cbbb",
+          "d2464f770998",
+          "f8c68b391e4d"
+        ]
+      },
+      {
+        "text": "Iran or Iran's Guards reported that a ship sank after hitting a mine in the Strait of Hormuz.",
+        "sources": [
+          "b791b3bfaeb7",
+          "22742c2a00c7",
+          "d2464f770998",
+          "f8c68b391e4d"
+        ]
+      },
+      {
+        "text": "The ship reported to have hit a mine was carrying around 2,500 containers.",
+        "sources": [
+          "b791b3bfaeb7",
+          "f8c68b391e4d"
+        ]
+      },
+      {
+        "text": "A Singapore-flagged ship was hit by a projectile and sank, according to maritime authorities.",
+        "sources": [
+          "7a9c761ea52d",
+          "d2464f770998"
+        ]
+      }
+    ],
+    "framing": [
+      {
+        "lean": "left",
+        "headline_quotes": [
+          {
+            "article_id": "b791b3bfaeb7",
+            "quote": "claim Iran’s Guards"
+          },
+          {
+            "article_id": "e5a73f42cbbb",
+            "quote": "Two container ships sink near strait of Hormuz amid surge in Iranian attacks"
+          },
+          {
+            "article_id": "e5a73f42cbbb",
+            "quote": "suggests Iran is trying to close waterway before US midterm elections"
+          }
+        ],
+        "emphasis": [
+          {
+            "text": "Attributes the mine account to Iran's Guards and reports the vessel caught fire before sinking.",
+            "sources": [
+              "b791b3bfaeb7"
+            ]
+          },
+          {
+            "text": "Reports two container ships sinking after missile strikes amid a rise in Iranian attacks.",
+            "sources": [
+              "e5a73f42cbbb"
+            ]
+          },
+          {
+            "text": "Links the rise in strikes to a possible Iranian aim of closing the waterway before US midterm elections.",
+            "sources": [
+              "e5a73f42cbbb"
+            ]
+          }
+        ]
+      },
+      {
+        "lean": "centre",
+        "headline_quotes": [
+          {
+            "article_id": "7a9c761ea52d",
+            "quote": "Container ship hit by projectile sinks in Strait of Hormuz, Singapore says"
+          },
+          {
+            "article_id": "7a9c761ea52d",
+            "quote": "All 21 sailors on the Singapore-flagged GFS Pride were evacuated safely"
+          }
+        ],
+        "emphasis": [
+          {
+            "text": "Leads with the Singaporean account of a projectile strike and names the ship as GFS Pride.",
+            "sources": [
+              "7a9c761ea52d"
+            ]
+          },
+          {
+            "text": "Foregrounds the safe evacuation of all 21 sailors.",
+            "sources": [
+              "7a9c761ea52d"
+            ]
+          }
+        ]
+      },
+      {
+        "lean": "right",
+        "headline_quotes": [
+          {
+            "article_id": "f8c68b391e4d",
+            "quote": "Moment US helicopters blow up Iranian spy boat in huge blaze"
+          },
+          {
+            "article_id": "f8c68b391e4d",
+            "quote": "container ship carrying iPhones"
+          }
+        ],
+        "emphasis": [
+          {
+            "text": "Leads with US helicopters striking an Iranian spy boat with missiles.",
+            "sources": [
+              "f8c68b391e4d"
+            ]
+          },
+          {
+            "text": "Describes the sunken ship as carrying iPhones and as hitting an Iranian sea mine.",
+            "sources": [
+              "f8c68b391e4d"
+            ]
+          }
+        ]
+      }
+    ],
+    "omissions": [
+      {
+        "lean": "left",
+        "text": "Left coverage does not mention the safe evacuation of the crew.",
+        "sources": [
+          "7a9c761ea52d"
+        ]
+      },
+      {
+        "lean": "right",
+        "text": "Right coverage does not mention the safe evacuation of the crew.",
+        "sources": [
+          "7a9c761ea52d"
+        ]
+      },
+      {
+        "lean": "centre",
+        "text": "Centre coverage does not mention Iran's report that a ship sank after hitting a mine.",
+        "sources": [
+          "b791b3bfaeb7",
+          "f8c68b391e4d"
+        ]
+      },
+      {
+        "lean": "right",
+        "text": "Right coverage does not mention reports of a ship being hit by a projectile or missiles.",
+        "sources": [
+          "7a9c761ea52d",
+          "e5a73f42cbbb"
+        ]
+      },
+      {
+        "lean": "left",
+        "text": "Left coverage does not mention a US helicopter strike on an Iranian boat.",
+        "sources": [
+          "f8c68b391e4d"
+        ]
+      },
+      {
+        "lean": "centre",
+        "text": "Centre coverage does not mention a US helicopter strike on an Iranian boat.",
+        "sources": [
+          "f8c68b391e4d"
+        ]
+      }
+    ],
+    "contested_claims": [
+      {
+        "claim": "The ship sank after hitting a naval mine.",
+        "asserted_by": [
+          "b791b3bfaeb7",
+          "22742c2a00c7",
+          "f8c68b391e4d"
+        ],
+        "disputed_by": [
+          "7a9c761ea52d",
+          "e5a73f42cbbb"
+        ]
+      },
+      {
+        "claim": "Two container ships sank near the Strait of Hormuz, rather than one.",
+        "asserted_by": [
+          "e5a73f42cbbb"
+        ],
+        "disputed_by": [
+          "7a9c761ea52d",
+          "22742c2a00c7"
+        ]
+      }
+    ],
+    "opinion": [],
+    "framing_by_bloc": [
+      {
+        "bloc": "west",
+        "headline_quotes": [
+          {
+            "article_id": "7a9c761ea52d",
+            "quote": "Container ship hit by projectile sinks"
+          },
+          {
+            "article_id": "e5a73f42cbbb",
+            "quote": "amid surge in Iranian attacks"
+          },
+          {
+            "article_id": "f8c68b391e4d",
+            "quote": "US helicopters blow up Iranian spy boat"
+          }
+        ],
+        "emphasis": [
+          {
+            "text": "Includes accounts of projectile or missile strikes alongside the Iranian mine claim.",
+            "sources": [
+              "7a9c761ea52d",
+              "b791b3bfaeb7",
+              "e5a73f42cbbb",
+              "f8c68b391e4d"
+            ]
+          },
+          {
+            "text": "Places the sinking in the context of Iranian attacks and US military action.",
+            "sources": [
+              "e5a73f42cbbb",
+              "f8c68b391e4d"
+            ]
+          }
+        ]
+      },
+      {
+        "bloc": "east",
+        "headline_quotes": [
+          {
+            "article_id": "22742c2a00c7",
+            "quote": "Iran reports cargo ship sinks after hitting mine"
+          },
+          {
+            "article_id": "22742c2a00c7",
+            "quote": "first time Iran has reported a ship sinking after hitting a mine during the war"
+          },
+          {
+            "article_id": "d2464f770998",
+            "quote": "unclear if two statements refer to same vessel"
+          }
+        ],
+        "emphasis": [
+          {
+            "text": "Leads with Iran's report of a mine and notes it is the first such sinking Iran has reported during the war.",
+            "sources": [
+              "22742c2a00c7",
+              "d2464f770998"
+            ]
+          },
+          {
+            "text": "Sets the Iranian mine account beside the UK agency's projectile account and notes it is unclear if they concern the same ship.",
+            "sources": [
+              "d2464f770998"
+            ]
+          }
+        ]
+      }
+    ],
+    "east_west_contradictions": []
+  }
+}

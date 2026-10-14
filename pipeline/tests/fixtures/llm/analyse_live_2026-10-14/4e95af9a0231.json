@@ -1,0 +1,227 @@
+{
+  "model": "claude-opus-5-5",
+  "stop_reason": "end_turn",
+  "usage": {
+    "input_tokens": 4777,
+    "output_tokens": 3103,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+  },
+  "response": {
+    "agreed_facts": [
+      {
+        "text": "Russian strikes hit Kyiv and other parts of Ukraine overnight.",
+        "sources": [
+          "7337b1ba7427",
+          "c1a3965c021a",
+          "cacd22e65a57",
+          "8336662b491f",
+          "744dc02f3e2b",
+          "96b1376e2b37",
+          "e7d55f39823a"
+        ]
+      },
+      {
+        "text": "Ukraine says it received no warning or intelligence from allies before Russian strikes.",
+        "sources": [
+          "7337b1ba7427",
+          "95626059154e",
+          "96b1376e2b37"
+        ]
+      },
+      {
+        "text": "The United States had threatened to stop sharing intelligence with Ukraine that helps warn of Russian aerial attacks.",
+        "sources": [
+          "95626059154e",
+          "744dc02f3e2b"
+        ]
+      },
+      {
+        "text": "The strikes cut power in Kyiv.",
+        "sources": [
+          "7337b1ba7427",
+          "e7d55f39823a"
+        ]
+      },
+      {
+        "text": "People were killed in the strikes.",
+        "sources": [
+          "7337b1ba7427",
+          "c1a3965c021a"
+        ]
+      }
+    ],
+    "framing": [
+      {
+        "lean": "left",
+        "headline_quotes": [
+          {
+            "article_id": "cacd22e65a57",
+            "quote": "NATO fighter jets scrambled as Russia launches massive drone attack on Ukraine"
+          },
+          {
+            "article_id": "8336662b491f",
+            "quote": "Face of suffering: Vladimir Putin's war on Ukraine's civilians"
+          },
+          {
+            "article_id": "95626059154e",
+            "quote": "Ukraine Says It Received No Intelligence About Strikes 2 Nights in a Row"
+          },
+          {
+            "article_id": "e7d55f39823a",
+            "quote": "Ukraine’s Exposure Grows as Satellite Use Is Restricted and Russia Escalates"
+          }
+        ],
+        "emphasis": [
+          {
+            "text": "Leads with NATO scrambling fighter jets and air alerts on the alliance's eastern flank.",
+            "sources": [
+              "cacd22e65a57"
+            ]
+          },
+          {
+            "text": "Foregrounds the impact on civilians and Zelensky defying Trump demands to stop deep strikes on Russia.",
+            "sources": [
+              "8336662b491f"
+            ]
+          },
+          {
+            "text": "Emphasises the lack of US intelligence, Trump's statement that information continued to flow, and a curbed satellite internet programme.",
+            "sources": [
+              "95626059154e",
+              "e7d55f39823a"
+            ]
+          },
+          {
+            "text": "Reports that the attack cut power to 600,000 people in Kyiv.",
+            "sources": [
+              "e7d55f39823a"
+            ]
+          }
+        ]
+      },
+      {
+        "lean": "centre",
+        "headline_quotes": [
+          {
+            "article_id": "c1a3965c021a",
+            "quote": "Block of flats destroyed in Russian strikes on Ukraine"
+          }
+        ],
+        "emphasis": [
+          {
+            "text": "Leads with a destroyed block of flats and at least three deaths in Kyiv, via a correspondent on the ground.",
+            "sources": [
+              "c1a3965c021a"
+            ]
+          }
+        ]
+      }
+    ],
+    "omissions": [
+      {
+        "lean": "centre",
+        "text": "Centre coverage does not mention Ukraine's statement that it received no intelligence warning before the strikes.",
+        "sources": [
+          "95626059154e"
+        ]
+      },
+      {
+        "lean": "centre",
+        "text": "Centre coverage does not mention power cuts in Kyiv.",
+        "sources": [
+          "e7d55f39823a"
+        ]
+      },
+      {
+        "lean": "left",
+        "text": "Left coverage does not give a death toll for the strikes.",
+        "sources": [
+          "c1a3965c021a"
+        ]
+      }
+    ],
+    "contested_claims": [
+      {
+        "claim": "US intelligence information continued to flow to Ukraine, according to President Trump.",
+        "asserted_by": [
+          "95626059154e"
+        ],
+        "disputed_by": [
+          "7337b1ba7427",
+          "96b1376e2b37"
+        ]
+      }
+    ],
+    "opinion": [],
+    "framing_by_bloc": [
+      {
+        "bloc": "west",
+        "headline_quotes": [
+          {
+            "article_id": "c1a3965c021a",
+            "quote": "Block of flats destroyed in Russian strikes on Ukraine"
+          },
+          {
+            "article_id": "cacd22e65a57",
+            "quote": "NATO fighter jets scrambled"
+          },
+          {
+            "article_id": "95626059154e",
+            "quote": "President Trump said information continued to flow"
+          }
+        ],
+        "emphasis": [
+          {
+            "text": "Foregrounds civilian damage, NATO's response and the scale of the drone assault.",
+            "sources": [
+              "c1a3965c021a",
+              "cacd22e65a57",
+              "8336662b491f"
+            ]
+          },
+          {
+            "text": "Reports the intelligence and satellite restrictions alongside Trump's statement that information continued to flow.",
+            "sources": [
+              "95626059154e",
+              "e7d55f39823a"
+            ]
+          }
+        ]
+      },
+      {
+        "bloc": "east",
+        "headline_quotes": [
+          {
+            "article_id": "744dc02f3e2b",
+            "quote": "Ukraine accuses U.S. of helping Russia as missiles hit Kyiv"
+          },
+          {
+            "article_id": "96b1376e2b37",
+            "quote": "Russia attack hits Kyiv after reported intelligence lapse"
+          },
+          {
+            "article_id": "7337b1ba7427",
+            "quote": "Heavy Russian strikes on Ukraine kill six, cut power in Kyiv"
+          }
+        ],
+        "emphasis": [
+          {
+            "text": "Leads with Ukraine's accusation that the US is helping Russia and the reported intelligence lapse.",
+            "sources": [
+              "744dc02f3e2b",
+              "96b1376e2b37"
+            ]
+          },
+          {
+            "text": "Reports six deaths and power cuts, linking the strikes to Zelenskyy's statement of no Western warning.",
+            "sources": [
+              "7337b1ba7427"
+            ]
+          }
+        ]
+      }
+    ],
+    "east_west_contradictions": []
+  }
+}

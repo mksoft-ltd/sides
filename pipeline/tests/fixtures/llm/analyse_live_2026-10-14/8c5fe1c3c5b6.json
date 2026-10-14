@@ -1,0 +1,236 @@
+{
+  "model": "claude-opus-5-5",
+  "stop_reason": "end_turn",
+  "usage": {
+    "input_tokens": 4670,
+    "output_tokens": 2358,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+  },
+  "response": {
+    "agreed_facts": [
+      {
+        "text": "Sally Rooney's books are no longer being sold in the UK because of her support for Palestine Action.",
+        "sources": [
+          "9267dead62ca",
+          "e92a21256fc3",
+          "f874197f4081",
+          "6708c99068a6",
+          "705c2d655899",
+          "c27a18d40518",
+          "fba7fae78059"
+        ]
+      },
+      {
+        "text": "Palestine Action is a group banned in Britain.",
+        "sources": [
+          "9267dead62ca",
+          "e92a21256fc3",
+          "6708c99068a6",
+          "705c2d655899",
+          "c27a18d40518",
+          "fba7fae78059"
+        ]
+      },
+      {
+        "text": "Rooney is an Irish author.",
+        "sources": [
+          "9267dead62ca",
+          "705c2d655899",
+          "c27a18d40518"
+        ]
+      },
+      {
+        "text": "The issue stems from Rooney's plan to direct her royalties or book revenues to Palestine Action.",
+        "sources": [
+          "705c2d655899",
+          "fba7fae78059"
+        ]
+      },
+      {
+        "text": "Rooney is described as a bestselling author.",
+        "sources": [
+          "705c2d655899",
+          "c27a18d40518"
+        ]
+      },
+      {
+        "text": "Her publisher made a statement on the matter.",
+        "sources": [
+          "9267dead62ca",
+          "fba7fae78059"
+        ]
+      }
+    ],
+    "framing": [
+      {
+        "lean": "left",
+        "headline_quotes": [
+          {
+            "article_id": "fba7fae78059",
+            "quote": "Sally Rooney Withdraws Her Books From UK"
+          },
+          {
+            "article_id": "fba7fae78059",
+            "quote": "she could no longer receive royalties from British sales"
+          }
+        ],
+        "emphasis": [
+          {
+            "text": "Leads with Rooney as the one withdrawing her books and explains the royalty pledge as the cause.",
+            "sources": [
+              "fba7fae78059"
+            ]
+          }
+        ]
+      },
+      {
+        "lean": "centre",
+        "headline_quotes": [
+          {
+            "article_id": "e92a21256fc3",
+            "quote": "Sally Rooney books withdrawn from UK"
+          },
+          {
+            "article_id": "e92a21256fc3",
+            "quote": "the banned protest group Palestine Action"
+          }
+        ],
+        "emphasis": [
+          {
+            "text": "Attributes the account to Rooney herself and describes Palestine Action as a banned protest group.",
+            "sources": [
+              "e92a21256fc3"
+            ]
+          }
+        ]
+      },
+      {
+        "lean": "right",
+        "headline_quotes": [
+          {
+            "article_id": "c27a18d40518",
+            "quote": "a vocal supporter of Palestine Action"
+          },
+          {
+            "article_id": "c27a18d40518",
+            "quote": "proscribed by the British government under terrorism laws last year"
+          }
+        ],
+        "emphasis": [
+          {
+            "text": "Foregrounds Rooney's continued vocal support for the group after its proscription under terrorism laws.",
+            "sources": [
+              "c27a18d40518"
+            ]
+          }
+        ]
+      }
+    ],
+    "omissions": [
+      {
+        "lean": "right",
+        "text": "Does not mention the pledge to donate royalties or book revenues to Palestine Action.",
+        "sources": [
+          "fba7fae78059"
+        ]
+      },
+      {
+        "lean": "centre",
+        "text": "Does not mention the pledge to donate royalties or book revenues to Palestine Action.",
+        "sources": [
+          "fba7fae78059"
+        ]
+      },
+      {
+        "lean": "centre",
+        "text": "Does not mention that Palestine Action was proscribed under terrorism laws.",
+        "sources": [
+          "c27a18d40518"
+        ]
+      },
+      {
+        "lean": "left",
+        "text": "Does not mention that Palestine Action was proscribed under terrorism laws.",
+        "sources": [
+          "c27a18d40518"
+        ]
+      }
+    ],
+    "contested_claims": [],
+    "opinion": [],
+    "framing_by_bloc": [
+      {
+        "bloc": "west",
+        "headline_quotes": [
+          {
+            "article_id": "fba7fae78059",
+            "quote": "Sally Rooney Withdraws Her Books From UK"
+          },
+          {
+            "article_id": "c27a18d40518",
+            "quote": "proscribed by the British government under terrorism laws last year"
+          },
+          {
+            "article_id": "e92a21256fc3",
+            "quote": "the banned protest group Palestine Action"
+          }
+        ],
+        "emphasis": [
+          {
+            "text": "Covers the royalty pledge, Rooney's own account and the group's proscription under terrorism laws.",
+            "sources": [
+              "e92a21256fc3",
+              "c27a18d40518",
+              "fba7fae78059"
+            ]
+          }
+        ]
+      },
+      {
+        "bloc": "east",
+        "headline_quotes": [
+          {
+            "article_id": "6708c99068a6",
+            "quote": "I am wholly prepared to accept the consequences"
+          },
+          {
+            "article_id": "9267dead62ca",
+            "quote": "her publisher Faber said on Wednesday"
+          },
+          {
+            "article_id": "f874197f4081",
+            "quote": "Award-winning author Sally Rooney’s books are being withdrawn"
+          },
+          {
+            "article_id": "6708c99068a6",
+            "quote": "banned pro-Palestinian group"
+          }
+        ],
+        "emphasis": [
+          {
+            "text": "Quotes Rooney's statement accepting the consequences of her stance.",
+            "sources": [
+              "6708c99068a6"
+            ]
+          },
+          {
+            "text": "Attributes the news to publisher Faber and notes the royalty plan.",
+            "sources": [
+              "9267dead62ca",
+              "705c2d655899"
+            ]
+          },
+          {
+            "text": "Describes Rooney as award-winning and bestselling.",
+            "sources": [
+              "f874197f4081",
+              "705c2d655899"
+            ]
+          }
+        ]
+      }
+    ],
+    "east_west_contradictions": []
+  }
+}

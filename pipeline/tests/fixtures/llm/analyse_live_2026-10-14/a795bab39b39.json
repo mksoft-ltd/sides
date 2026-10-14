@@ -1,0 +1,232 @@
+{
+  "model": "claude-opus-5-5",
+  "stop_reason": "end_turn",
+  "usage": {
+    "input_tokens": 4709,
+    "output_tokens": 2569,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+  },
+  "response": {
+    "agreed_facts": [
+      {
+        "text": "Kimberly Guilfoyle has left her post as US ambassador to Greece.",
+        "sources": [
+          "8c6f20393425",
+          "6eb93cf3eeff",
+          "f590fb8e436f",
+          "d200cfba7ded",
+          "bb4ae9e69a92",
+          "963014c009df",
+          "d2191506ed88"
+        ]
+      },
+      {
+        "text": "The White House or President Trump asked her to step down.",
+        "sources": [
+          "8c6f20393425",
+          "6eb93cf3eeff",
+          "f590fb8e436f",
+          "d200cfba7ded"
+        ]
+      },
+      {
+        "text": "Her departure followed reports or allegations about her conduct as ambassador.",
+        "sources": [
+          "8c6f20393425",
+          "6eb93cf3eeff",
+          "f590fb8e436f",
+          "d200cfba7ded",
+          "d2191506ed88"
+        ]
+      },
+      {
+        "text": "The resignation request and announcement came on Tuesday.",
+        "sources": [
+          "8c6f20393425",
+          "6eb93cf3eeff",
+          "f590fb8e436f"
+        ]
+      },
+      {
+        "text": "Trump insiders are reported to fear she could release a 'burn book' about the Trump family after her ouster.",
+        "sources": [
+          "bb4ae9e69a92",
+          "963014c009df"
+        ]
+      }
+    ],
+    "framing": [
+      {
+        "lean": "centre",
+        "headline_quotes": [
+          {
+            "article_id": "8c6f20393425",
+            "quote": "White House pushes out Kimberly Guilfoyle after misconduct reports"
+          },
+          {
+            "article_id": "f590fb8e436f",
+            "quote": "mounting accusations of improper conduct"
+          }
+        ],
+        "emphasis": [
+          {
+            "text": "Leads with the White House request for her resignation and the misconduct allegations preceding it.",
+            "sources": [
+              "8c6f20393425",
+              "f590fb8e436f"
+            ]
+          }
+        ]
+      },
+      {
+        "lean": "left",
+        "headline_quotes": [
+          {
+            "article_id": "d200cfba7ded",
+            "quote": "Rise and Fall as Trump’s Ambassador to Greece"
+          },
+          {
+            "article_id": "d200cfba7ded",
+            "quote": "she suggested she will now fight to defend her reputation"
+          },
+          {
+            "article_id": "963014c009df",
+            "quote": "‘burn book’ with all the dirt on the president’s family"
+          }
+        ],
+        "emphasis": [
+          {
+            "text": "Foregrounds her past as a Trump insider and her possible response, including defending her reputation.",
+            "sources": [
+              "d200cfba7ded"
+            ]
+          },
+          {
+            "text": "Emphasises Trump insiders' reported worry that she could reveal information about the president's family.",
+            "sources": [
+              "963014c009df"
+            ]
+          }
+        ]
+      },
+      {
+        "lean": "right",
+        "headline_quotes": [
+          {
+            "article_id": "d2191506ed88",
+            "quote": "the scandal is far from over"
+          },
+          {
+            "article_id": "d2191506ed88",
+            "quote": "allegedly lavish lifestyle in Athens"
+          }
+        ],
+        "emphasis": [
+          {
+            "text": "Leads with scrutiny of her alleged lavish lifestyle in Athens, which the outlet says it revealed, and states her title was revoked.",
+            "sources": [
+              "d2191506ed88"
+            ]
+          }
+        ]
+      }
+    ],
+    "omissions": [
+      {
+        "lean": "centre",
+        "text": "Centre coverage does not mention insiders' reported fear that she could release a 'burn book' about the Trump family.",
+        "sources": [
+          "963014c009df"
+        ]
+      },
+      {
+        "lean": "right",
+        "text": "Right coverage does not mention insiders' reported fear that she could release a 'burn book' about the Trump family.",
+        "sources": [
+          "963014c009df"
+        ]
+      },
+      {
+        "lean": "left",
+        "text": "Left coverage does not mention allegations about a lavish lifestyle in Athens.",
+        "sources": [
+          "d2191506ed88"
+        ]
+      },
+      {
+        "lean": "centre",
+        "text": "Centre coverage does not mention allegations about a lavish lifestyle in Athens.",
+        "sources": [
+          "d2191506ed88"
+        ]
+      }
+    ],
+    "contested_claims": [],
+    "opinion": [],
+    "framing_by_bloc": [
+      {
+        "bloc": "west",
+        "headline_quotes": [
+          {
+            "article_id": "8c6f20393425",
+            "quote": "White House pushes out Kimberly Guilfoyle"
+          },
+          {
+            "article_id": "d200cfba7ded",
+            "quote": "President Trump cut her loose after damaging news reports"
+          },
+          {
+            "article_id": "d2191506ed88",
+            "quote": "the scandal is far from over"
+          }
+        ],
+        "emphasis": [
+          {
+            "text": "Emphasises the White House's role in her removal and the reports of misconduct.",
+            "sources": [
+              "8c6f20393425",
+              "f590fb8e436f",
+              "d200cfba7ded"
+            ]
+          },
+          {
+            "text": "Also covers her alleged lavish lifestyle and insiders' fears of a 'burn book'.",
+            "sources": [
+              "d2191506ed88",
+              "963014c009df"
+            ]
+          }
+        ]
+      },
+      {
+        "bloc": "east",
+        "headline_quotes": [
+          {
+            "article_id": "6eb93cf3eeff",
+            "quote": "improper and possibly illegal conduct"
+          },
+          {
+            "article_id": "bb4ae9e69a92",
+            "quote": "will bring down Trump family after her shocking ouster"
+          }
+        ],
+        "emphasis": [
+          {
+            "text": "Notes allegations of possibly illegal conduct and the administration's request that she leave.",
+            "sources": [
+              "6eb93cf3eeff"
+            ]
+          },
+          {
+            "text": "Leads with insiders' fear that she could damage the Trump family through a 'burn book'.",
+            "sources": [
+              "bb4ae9e69a92"
+            ]
+          }
+        ]
+      }
+    ],
+    "east_west_contradictions": []
+  }
+}

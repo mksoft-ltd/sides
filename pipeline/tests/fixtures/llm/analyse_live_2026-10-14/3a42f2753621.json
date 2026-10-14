@@ -1,0 +1,200 @@
+{
+  "model": "claude-opus-5-5",
+  "stop_reason": "end_turn",
+  "usage": {
+    "input_tokens": 4472,
+    "output_tokens": 2088,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+  },
+  "response": {
+    "agreed_facts": [
+      {
+        "text": "A shipwreck described as the world's oldest, or oldest known, has been found off the coast of Turkey.",
+        "sources": [
+          "5087a18b6c3d",
+          "5060be3b8345",
+          "5f682cd9f794",
+          "3dfeaa7f6827",
+          "94fd233992de",
+          "bf93a14fe9ae"
+        ]
+      },
+      {
+        "text": "The wreck is dated to as much as about 4,700 years old.",
+        "sources": [
+          "5087a18b6c3d",
+          "5f682cd9f794",
+          "3dfeaa7f6827"
+        ]
+      },
+      {
+        "text": "The wreck dates to the Early Bronze Age.",
+        "sources": [
+          "5087a18b6c3d",
+          "3dfeaa7f6827"
+        ]
+      },
+      {
+        "text": "The finding is attributed to archaeologists.",
+        "sources": [
+          "5087a18b6c3d",
+          "5060be3b8345",
+          "5f682cd9f794"
+        ]
+      }
+    ],
+    "framing": [
+      {
+        "lean": "left",
+        "headline_quotes": [
+          {
+            "article_id": "3dfeaa7f6827",
+            "quote": "thought to be 4,700 years old"
+          },
+          {
+            "article_id": "3dfeaa7f6827",
+            "quote": "around the same time as the Great Pyramid of Giza"
+          }
+        ],
+        "emphasis": [
+          {
+            "text": "Compares the ship's age with the building of the Great Pyramid of Giza.",
+            "sources": [
+              "3dfeaa7f6827"
+            ]
+          },
+          {
+            "text": "Leads with the estimated age of 4,700 years and the Early Bronze Age dating.",
+            "sources": [
+              "3dfeaa7f6827"
+            ]
+          }
+        ]
+      },
+      {
+        "lean": "centre",
+        "headline_quotes": [
+          {
+            "article_id": "5087a18b6c3d",
+            "quote": "dating to the Early Bronze Age"
+          },
+          {
+            "article_id": "5060be3b8345",
+            "quote": "according to archaeologists"
+          }
+        ],
+        "emphasis": [
+          {
+            "text": "Attributes the discovery and dating to archaeologists.",
+            "sources": [
+              "5087a18b6c3d",
+              "5060be3b8345"
+            ]
+          },
+          {
+            "text": "States the wreck is up to 4,700 years old, from the Early Bronze Age.",
+            "sources": [
+              "5087a18b6c3d"
+            ]
+          }
+        ]
+      }
+    ],
+    "omissions": [
+      {
+        "lean": "left",
+        "text": "Does not attribute the discovery or dating to archaeologists.",
+        "sources": [
+          "5087a18b6c3d",
+          "5060be3b8345"
+        ]
+      },
+      {
+        "lean": "centre",
+        "text": "Does not mention the comparison with the Great Pyramid of Giza.",
+        "sources": [
+          "3dfeaa7f6827"
+        ]
+      }
+    ],
+    "contested_claims": [],
+    "opinion": [],
+    "framing_by_bloc": [
+      {
+        "bloc": "west",
+        "headline_quotes": [
+          {
+            "article_id": "5087a18b6c3d",
+            "quote": "dating to the Early Bronze Age"
+          },
+          {
+            "article_id": "3dfeaa7f6827",
+            "quote": "around the same time as the Great Pyramid of Giza"
+          },
+          {
+            "article_id": "5060be3b8345",
+            "quote": "found off Turkish coast"
+          }
+        ],
+        "emphasis": [
+          {
+            "text": "Foregrounds the Early Bronze Age dating and a comparison with the Great Pyramid of Giza.",
+            "sources": [
+              "5087a18b6c3d",
+              "3dfeaa7f6827"
+            ]
+          },
+          {
+            "text": "Attributes the find to archaeologists.",
+            "sources": [
+              "5087a18b6c3d",
+              "5060be3b8345"
+            ]
+          }
+        ]
+      },
+      {
+        "bloc": "east",
+        "headline_quotes": [
+          {
+            "article_id": "bf93a14fe9ae",
+            "quote": "Clay analysis traces recovered storage jars"
+          },
+          {
+            "article_id": "94fd233992de",
+            "quote": "dating back nearly 5,000 years"
+          },
+          {
+            "article_id": "5f682cd9f794",
+            "quote": "which they believe could be the oldest yet discovered"
+          }
+        ],
+        "emphasis": [
+          {
+            "text": "Highlights recovered ceramics, with clay analysis tracing storage jars to workshops across the Jordan Valley.",
+            "sources": [
+              "bf93a14fe9ae",
+              "5f682cd9f794"
+            ]
+          },
+          {
+            "text": "Places the wreck off Turkey's Mediterranean coast and refers to the country as Turkiye in some headlines.",
+            "sources": [
+              "5f682cd9f794",
+              "94fd233992de",
+              "bf93a14fe9ae"
+            ]
+          },
+          {
+            "text": "Presents the oldest-ever status as the archaeologists' belief.",
+            "sources": [
+              "5f682cd9f794"
+            ]
+          }
+        ]
+      }
+    ],
+    "east_west_contradictions": []
+  }
+}
