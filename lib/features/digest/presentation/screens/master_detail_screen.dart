@@ -26,9 +26,11 @@ final Provider<MasterListScrollMemory> masterListScrollProvider =
 /// [listPaneWidth] pane on the left, the selected story on the right.
 ///
 /// The selection is the route: `/` shows story 1, `/story/:id` shows that
-/// story. Tapping a story calls `context.go`, and the story route uses one
-/// constant page key at tablet widths, so the page updates in place (no
-/// push, no transition) while the URL, deep links and back still work.
+/// story. Tapping a story calls `context.go`; between stories the route's
+/// page (keyed by the `/story/:id` pattern) updates in place, so nothing is
+/// pushed and nothing animates, while the URL, deep links and back work.
+/// The first selection from `/` adds that one story page over `/` (with no
+/// transition), which is what system back returns from.
 class MasterDetailScreen extends ConsumerStatefulWidget {
   const MasterDetailScreen({
     super.key,

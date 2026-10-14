@@ -20,18 +20,14 @@ abstract final class Routes {
       axis == PerspectiveAxis.bloc ? '/story/$id?axis=bloc' : '/story/$id';
 }
 
-/// One page key for every story at tablet widths, so `context.go` from one
-/// story to another updates the master-detail page in place (the list keeps
-/// its scroll position and nothing animates) instead of replacing it.
-const ValueKey<String> _tabletStoryPageKey = ValueKey<String>('story-pane');
-
 /// A fresh router per app instance (tests build their own app each time).
 /// Adaptive routes (phase 5): `/` and `/story/:id` each render a phone page
 /// or the tablet master-detail layout (see `adaptive_pages.dart`). Phones keep
 /// the phase 4 behaviour: a MaterialPage per story, pushed over the list. At
-/// tablet widths the story page is a NoTransitionPage with a constant key, so
-/// selecting a story is a `go` that swaps the detail pane in place while the
-/// URL still reads `/story/:id`.
+/// tablet widths selecting a story is a `context.go`: go_router keys a
+/// declarative match by its route pattern (`/story/:id`), not its location,
+/// so going from one story to another updates the same NoTransitionPage in
+/// place (no push, no animation) while the URL still reads `/story/:id`.
 GoRouter buildRouter({String initialLocation = Routes.home}) => GoRouter(
       initialLocation: initialLocation,
       routes: <RouteBase>[
@@ -62,10 +58,7 @@ GoRouter buildRouter({String initialLocation = Routes.home}) => GoRouter(
                     child: child,
                   );
                 }
-                return NoTransitionPage<void>(
-                  key: _tabletStoryPageKey,
-                  child: child,
-                );
+                return NoTransitionPage<void>(key: state.pageKey, child: child);
               },
             ),
             GoRoute(
