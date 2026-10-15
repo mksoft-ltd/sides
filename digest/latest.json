@@ -1,17 +1,17 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-14T23:43:24.898053Z",
-  "date": "2026-10-14",
+  "generated_at": "2026-10-15T01:13:27.629081Z",
+  "date": "2026-10-15",
   "meta": {
     "model": "claude-opus-5-5",
-    "cost_usd": 1.343432,
+    "cost_usd": 1.296984,
     "outlets_polled": 29,
-    "articles_collected": 667,
+    "articles_collected": 659,
     "warnings": [
       "2 feed(s) failed during collect"
     ],
     "validation": {
-      "kept": 324,
+      "kept": 320,
       "dropped_by_reason": {}
     }
   },
@@ -338,18 +338,18 @@
   ],
   "stories": [
     {
-      "id": "68dde26ff457",
-      "title": "Ukraine's Starlink access restricted; Musk blames US government, Zelensky alleges betrayal",
+      "id": "125b07176b3e",
+      "title": "Ukraine's military Starlink access restricted; Zelensky blames Trump, Musk points to US",
       "rank": 1,
-      "outlet_count": 13,
+      "outlet_count": 12,
       "coverage": {
         "lean": {
-          "left": 4,
+          "left": 3,
           "centre": 3,
           "right": 3
         },
         "bloc": {
-          "west": 10,
+          "west": 9,
           "east": 3
         }
       },
@@ -365,15 +365,6 @@
           "snippet": "Starlink has been the lifeblood of Ukrainian battlefield communications since Russia's full-scale invasion in 2022.",
           "url": "https://www.themoscowtimes.com/2026/10/14/ukraine-accuses-spacex-of-crippling-drone-missions-as-ties-with-us-worsen-a93970",
           "published_at": "2026-10-14T09:17:00Z",
-          "published_at_estimated": false
-        },
-        {
-          "id": "630b1b83136c",
-          "outlet_id": "nbc",
-          "headline": "Ukraine accuses SpaceX of restricting Starlink, disrupting military amid Trump pressure",
-          "snippet": "Ukrainian officials and military units accused Elon Musk’s SpaceX of throttling a technology at the heart of their battlefield communications and drone operations.",
-          "url": "https://www.nbcnews.com/world/ukraine/ukraine-starlink-restrictions-military-intel-trump-zelenskyy-russia-rcna603412",
-          "published_at": "2026-10-14T12:51:09Z",
           "published_at_estimated": false
         },
         {
@@ -410,6 +401,15 @@
           "snippet": "Launch of Russian ballistic missiles on Ukraine, with no US warning, coincides with outage of Starlink managed by Musk’s SpaceX Ukraine’s military has suddenly had its access to Starlink satellite…",
           "url": "https://www.theguardian.com/world/2026/oct/14/ukraine-soldiers-combat-access-starlink-satellite-internet-restricted",
           "published_at": "2026-10-14T16:18:46Z",
+          "published_at_estimated": false
+        },
+        {
+          "id": "9b466301e0c6",
+          "outlet_id": "huffpost",
+          "headline": "Ukraine Says Elon Musk’s SpaceX Hampers Drones For Attack And Defence, As U.S. Ties Fray",
+          "snippet": "Ukraine said Elon Musk’s SpaceX had limited Starlink services on Wednesday, hampering Ukrainian drones for attack missions and air defences.",
+          "url": "https://www.huffpost.com/entry/ukraine-zelenskyy-elon-musk-starlink_n_6acfbaa2e4b0bfd25653976d",
+          "published_at": "2026-10-14T17:30:43Z",
           "published_at_estimated": false
         },
         {
@@ -460,19 +460,10 @@
         {
           "id": "aa34fbb1e609",
           "outlet_id": "bbc",
-          "headline": "Musk says any limits on Ukraine's Starlink access down to US, not his firm",
+          "headline": "Musk says US government may be behind slowdown of Ukraine drone speeds",
           "snippet": "Ukraine says Starlink access has improved but it is still facing speed limits which are disrupting its battlefield \"missions\".",
           "url": "https://www.bbc.co.uk/news/articles/c8wy9veedgygo",
           "published_at": "2026-10-14T20:55:24Z",
-          "published_at_estimated": false
-        },
-        {
-          "id": "134c713ce9e6",
-          "outlet_id": "examiner",
-          "headline": "Musk blames Trump and US military for Ukraine’s Starshield restrictions",
-          "snippet": "SpaceX CEO Elon Musk said his company is not responsible for any speed restrictions on Starshield defense communications systems, saying that power is vested in the U.S. military and President…",
-          "url": "https://www.washingtonexaminer.com/policy/technology/4766151/musk-trump-us-military-ukraine-starshield/",
-          "published_at": "2026-10-14T21:08:53Z",
           "published_at_estimated": false
         },
         {
@@ -512,60 +503,69 @@
           "published_at_estimated": false
         },
         {
-          "id": "e7d55f39823a",
-          "outlet_id": "nyt",
-          "headline": "Ukraine’s Exposure Grows as Satellite Use Is Restricted and Russia Escalates",
-          "snippet": "A huge attack cut power to 600,000 people in Kyiv, and a Pentagon-funded satellite internet program appeared to be curbed without warning.",
-          "url": "https://www.nytimes.com/2026/10/14/world/europe/ukraine-starlink-energy.html",
-          "published_at": "2026-10-14T23:30:02Z",
+          "id": "9536da5c0ff9",
+          "outlet_id": "examiner",
+          "headline": "Will Trump’s contempt for Zelensky force Ukraine to choose between an election and survival?",
+          "snippet": "President Donald Trump has made it clear that he wants a change of leadership in Ukraine, and the apparent American tampering with the embattled nation’s defenses raises the question of how far he…",
+          "url": "https://www.washingtonexaminer.com/news/world/4765570/trump-contempt-zelensky-force-ukraine-choose-election-survival/",
+          "published_at": "2026-10-15T00:00:00Z",
           "published_at_estimated": false
         },
         {
           "id": "386163dd7c9a",
           "outlet_id": "dailymail",
           "headline": "Zelensky accuses Trump of 'betrayal' as Musk points the finger at US President for satellite 'sabotage'",
-          "snippet": "The Ukrainian president said it was a 'pity that we are losing a strong partner' and said 'people will die' as a consequence of damage to military defences.",
+          "snippet": "The Ukrainian president said it was a 'pity that we are losing a strong partner' and said 'people will die' as a consequence of the reduced defensive capabilities.",
           "url": "https://www.dailymail.com/news/article-16210061/Zelensky-accuses-Trump-betrayal-Musk-US-President-satellite.html",
-          "published_at": "2026-10-14T23:38:22Z",
+          "published_at": "2026-10-15T00:57:22Z",
           "published_at_estimated": false
         }
       ],
       "agreed_facts": [
         {
-          "text": "Ukraine's military access to Starlink was restricted or throttled, disrupting drone operations and other battlefield missions.",
+          "text": "Ukraine's military access to Starlink satellite services was restricted or limited, with Ukraine reporting the problem on Wednesday.",
           "sources": [
-            "630b1b83136c",
-            "c31b4298f437",
             "0010602040ce",
-            "6d922984addf",
-            "4246a58e693e",
+            "9b466301e0c6",
+            "c31b4298f437",
             "aa34fbb1e609",
-            "087ad35ae6c7",
+            "4bbd8076410c",
+            "4246a58e693e",
+            "9cba2ddf1a8f",
             "64af619ee8d4",
-            "b5cc7aac758d"
+            "7221558b5239"
           ]
         },
         {
-          "text": "Ukraine accused Elon Musk's SpaceX of limiting its Starlink services.",
+          "text": "The restrictions disrupted Ukrainian military operations, including drone missions and air defences.",
+          "sources": [
+            "9b466301e0c6",
+            "c31b4298f437",
+            "aa34fbb1e609",
+            "4246a58e693e",
+            "087ad35ae6c7"
+          ]
+        },
+        {
+          "text": "Ukraine accused Elon Musk's SpaceX of limiting Starlink services.",
           "sources": [
             "4246a58e693e",
-            "630b1b83136c",
-            "c31b4298f437"
+            "c31b4298f437",
+            "9b466301e0c6"
           ]
         },
         {
-          "text": "Musk said responsibility for any restrictions lay with the US government or the Trump administration, not his company.",
+          "text": "Musk said the US government or Trump administration, not SpaceX, was responsible for the disruption.",
           "sources": [
             "defe1ccbc089",
             "aa34fbb1e609",
-            "134c713ce9e6",
             "8118f1ec3328",
             "087ad35ae6c7",
             "386163dd7c9a"
           ]
         },
         {
-          "text": "Zelensky said he felt betrayed by Donald Trump over the Starlink restrictions.",
+          "text": "Zelensky said he felt betrayed by Donald Trump over the loss of access.",
           "sources": [
             "7221558b5239",
             "64af619ee8d4",
@@ -573,27 +573,20 @@
           ]
         },
         {
-          "text": "Starlink is central to Ukraine's battlefield communications.",
-          "sources": [
-            "4246a58e693e",
-            "630b1b83136c",
-            "9e6a861a3549"
-          ]
-        },
-        {
-          "text": "The restrictions coincided with Russian missile attacks that hit power infrastructure.",
-          "sources": [
-            "c31b4298f437",
-            "0010602040ce",
-            "e7d55f39823a"
-          ]
-        },
-        {
-          "text": "The episode comes as relations between Ukraine and the US worsen.",
+          "text": "The episode comes as ties between Ukraine and the US worsen.",
           "sources": [
             "4246a58e693e",
             "c31b4298f437",
+            "9b466301e0c6",
             "b5cc7aac758d"
+          ]
+        },
+        {
+          "text": "Starlink is central to Ukrainian battlefield communications.",
+          "sources": [
+            "4246a58e693e",
+            "9e6a861a3549",
+            "4bbd8076410c"
           ]
         }
       ],
@@ -602,56 +595,44 @@
           "lean": "left",
           "headline_quotes": [
             {
-              "article_id": "630b1b83136c",
-              "quote": "amid Trump pressure",
-              "field": "headline"
-            },
-            {
               "article_id": "0010602040ce",
               "quote": "suddenly restricted",
               "field": "headline"
             },
             {
-              "article_id": "64af619ee8d4",
-              "quote": "deliberately blocked Ukraine's access to Starlink overnight",
-              "field": "snippet"
+              "article_id": "86410aa2be98",
+              "quote": "Restrictions on Starlink will only worsen the death toll",
+              "field": "headline"
             },
             {
               "article_id": "7221558b5239",
-              "quote": "accused US president of picking the other side",
+              "quote": "feels personally betrayed by Donald Trump",
               "field": "snippet"
             },
             {
-              "article_id": "e7d55f39823a",
-              "quote": "Ukraine’s Exposure Grows",
-              "field": "headline"
+              "article_id": "64af619ee8d4",
+              "quote": "deliberately blocked Ukraine's access to Starlink",
+              "field": "snippet"
             }
           ],
           "emphasis": [
             {
-              "text": "Leads with Zelensky's accusation of betrayal by Trump.",
+              "text": "Leads with Zelensky's accusation of betrayal by Trump and his claim the block was deliberate.",
               "sources": [
                 "7221558b5239",
                 "64af619ee8d4"
               ]
             },
             {
-              "text": "Links the restrictions to Trump pressure on Ukraine.",
-              "sources": [
-                "630b1b83136c"
-              ]
-            },
-            {
-              "text": "Foregrounds concurrent Russian attacks and power cuts affecting Kyiv.",
-              "sources": [
-                "0010602040ce",
-                "e7d55f39823a"
-              ]
-            },
-            {
-              "text": "Highlights the likely impact on civilian casualties and air defences.",
+              "text": "Foregrounds the effect on civilian casualties and air defences.",
               "sources": [
                 "86410aa2be98"
+              ]
+            },
+            {
+              "text": "Notes the outage coincided with Russian ballistic missile launches made without US warning.",
+              "sources": [
+                "0010602040ce"
               ]
             }
           ]
@@ -660,13 +641,8 @@
           "lean": "centre",
           "headline_quotes": [
             {
-              "article_id": "9cba2ddf1a8f",
-              "quote": "Ukraine asking US, SpaceX and NATO to clarify Starlink limitations",
-              "field": "headline"
-            },
-            {
-              "article_id": "4bbd8076410c",
-              "quote": "'no surprise' after Musk condemned Ukraine strikes on Russian data centres",
+              "article_id": "c31b4298f437",
+              "quote": "Ukraine accuses SpaceX of crippling military missions as ties with US worsen",
               "field": "headline"
             },
             {
@@ -676,34 +652,39 @@
             },
             {
               "article_id": "aa34fbb1e609",
-              "quote": "Musk says any limits on Ukraine's Starlink access down to US, not his firm",
+              "quote": "Musk says US government may be behind slowdown of Ukraine drone speeds",
               "field": "headline"
+            },
+            {
+              "article_id": "4bbd8076410c",
+              "quote": "after Musk condemned Ukraine strikes on Russian data centres",
+              "field": "headline"
+            },
+            {
+              "article_id": "9e6a861a3549",
+              "quote": "backbone of military communications in Ukraine",
+              "field": "snippet"
             }
           ],
           "emphasis": [
             {
-              "text": "Reports Ukraine seeking clarification from the US, SpaceX and NATO.",
-              "sources": [
-                "9cba2ddf1a8f"
-              ]
-            },
-            {
-              "text": "Places the restrictions in the context of Musk's criticism of Ukrainian strikes on Russian data centres and a Trump–Zelensky rift over a diesel deal.",
-              "sources": [
-                "4bbd8076410c",
-                "b5cc7aac758d"
-              ]
-            },
-            {
-              "text": "Explains Starlink's and Starshield's role in Ukraine's military operations.",
+              "text": "Provides explainers on why Starlink matters on the battlefield and what Starshield is.",
               "sources": [
                 "9e6a861a3549",
                 "6d922984addf"
               ]
             },
             {
-              "text": "Reports that access has improved but speed limits remain.",
+              "text": "Places the restriction in the context of Musk condemning Ukrainian strikes and a Trump–Zelensky rupture over a diesel deal.",
               "sources": [
+                "4bbd8076410c",
+                "b5cc7aac758d"
+              ]
+            },
+            {
+              "text": "Reports Ukraine seeking clarification from the US, SpaceX and NATO, and that access improved but speed limits remain.",
+              "sources": [
+                "9cba2ddf1a8f",
                 "aa34fbb1e609"
               ]
             }
@@ -714,12 +695,17 @@
           "headline_quotes": [
             {
               "article_id": "defe1ccbc089",
-              "quote": "leaving them wide open to Putin’s deadly blitzes",
+              "quote": "Musk blames Trump admin for cutting off Ukraine from Starshield intel",
               "field": "headline"
             },
             {
-              "article_id": "134c713ce9e6",
-              "quote": "Musk blames Trump and US military for Ukraine’s Starshield restrictions",
+              "article_id": "9536da5c0ff9",
+              "quote": "Trump’s contempt for Zelensky",
+              "field": "headline"
+            },
+            {
+              "article_id": "386163dd7c9a",
+              "quote": "Zelensky accuses Trump of 'betrayal'",
               "field": "headline"
             },
             {
@@ -730,23 +716,22 @@
           ],
           "emphasis": [
             {
-              "text": "Leads with Musk placing responsibility on the Trump administration and US military.",
+              "text": "Leads with Musk placing responsibility on the Trump administration.",
               "sources": [
                 "defe1ccbc089",
-                "134c713ce9e6",
                 "386163dd7c9a"
               ]
             },
             {
-              "text": "Refers to the affected system as Starshield, the military version.",
+              "text": "Raises the question of Trump seeking a change of leadership in Ukraine.",
               "sources": [
-                "defe1ccbc089",
-                "134c713ce9e6"
+                "9536da5c0ff9"
               ]
             },
             {
-              "text": "Highlights Zelensky's warning that people will die.",
+              "text": "Stresses the consequences for Ukraine's defences against Russian attacks.",
               "sources": [
+                "defe1ccbc089",
                 "386163dd7c9a"
               ]
             }
@@ -756,17 +741,16 @@
       "omissions": [
         {
           "lean": "left",
-          "text": "Left coverage does not mention Musk's statement that the US government, not SpaceX, is responsible for the restrictions.",
+          "text": "Left coverage does not mention Musk's statement that the US government was responsible for the disruption.",
           "sources": [
             "aa34fbb1e609",
-            "134c713ce9e6",
             "defe1ccbc089",
             "386163dd7c9a"
           ]
         },
         {
           "lean": "centre",
-          "text": "Centre coverage does not mention Zelensky saying he feels betrayed by Trump.",
+          "text": "Centre coverage does not mention Zelensky saying he felt betrayed by Trump.",
           "sources": [
             "7221558b5239",
             "64af619ee8d4",
@@ -774,59 +758,42 @@
           ]
         },
         {
-          "lean": "left",
-          "text": "Left coverage does not mention Musk's earlier condemnation of Ukrainian strikes on Russian data centres.",
-          "sources": [
-            "4bbd8076410c"
-          ]
-        },
-        {
           "lean": "right",
-          "text": "Right coverage does not mention Musk's earlier condemnation of Ukrainian strikes on Russian data centres.",
+          "text": "Right coverage does not mention the effect on Ukrainian drone missions.",
           "sources": [
-            "4bbd8076410c"
-          ]
-        },
-        {
-          "lean": "right",
-          "text": "Right coverage does not mention Ukraine seeking clarification from the US, SpaceX and NATO.",
-          "sources": [
-            "9cba2ddf1a8f"
+            "9b466301e0c6",
+            "c31b4298f437",
+            "aa34fbb1e609"
           ]
         }
       ],
       "contested_claims": [
         {
-          "claim": "SpaceX is responsible for restricting Ukraine's Starlink access.",
+          "claim": "SpaceX or Musk was responsible for limiting Ukraine's access.",
           "asserted_by": [
-            "630b1b83136c",
             "c31b4298f437",
             "4246a58e693e",
+            "9b466301e0c6",
             "64af619ee8d4"
           ],
           "disputed_by": [
-            "aa34fbb1e609",
-            "134c713ce9e6",
             "8118f1ec3328",
-            "087ad35ae6c7"
-          ]
-        },
-        {
-          "claim": "Ukraine was cut off from the system, rather than facing speed limits.",
-          "asserted_by": [
+            "087ad35ae6c7",
             "defe1ccbc089"
-          ],
-          "disputed_by": [
-            "aa34fbb1e609",
-            "134c713ce9e6"
           ]
         }
       ],
       "opinion": [
         {
-          "text": "An analysis piece argues the Starlink restrictions will worsen the civilian death toll and affect Kyiv's air defences more than its refinery strikes.",
+          "text": "Analysis arguing Starlink restrictions will worsen Ukraine's civilian death toll and affect air defences more than refinery strikes.",
           "sources": [
             "86410aa2be98"
+          ]
+        },
+        {
+          "text": "Commentary asserting Trump wants a change of leadership in Ukraine and asking whether Ukraine must choose between an election and survival.",
+          "sources": [
+            "9536da5c0ff9"
           ]
         }
       ],
@@ -846,13 +813,13 @@
             },
             {
               "article_id": "defe1ccbc089",
-              "quote": "leaving them wide open to Putin’s deadly blitzes",
+              "quote": "Musk blames Trump admin for cutting off Ukraine from Starshield intel",
               "field": "headline"
             }
           ],
           "emphasis": [
             {
-              "text": "Foregrounds Zelensky's betrayal accusation and the US–Ukraine rift.",
+              "text": "Foregrounds Zelensky's betrayal accusation and the US–Ukraine rupture.",
               "sources": [
                 "7221558b5239",
                 "64af619ee8d4",
@@ -861,18 +828,10 @@
               ]
             },
             {
-              "text": "Reports Musk's attribution of responsibility to the US government.",
+              "text": "Includes explainers and analysis on Starlink's battlefield role and humanitarian impact.",
               "sources": [
-                "aa34fbb1e609",
-                "134c713ce9e6",
-                "defe1ccbc089"
-              ]
-            },
-            {
-              "text": "Highlights consequences for Ukraine's defences amid Russian attacks.",
-              "sources": [
-                "0010602040ce",
-                "e7d55f39823a",
+                "9e6a861a3549",
+                "6d922984addf",
                 "86410aa2be98"
               ]
             }
@@ -883,35 +842,30 @@
           "headline_quotes": [
             {
               "article_id": "4246a58e693e",
-              "quote": "Crippling Drone Missions",
+              "quote": "Ukraine Accuses SpaceX of Crippling Drone Missions",
               "field": "headline"
             },
             {
-              "article_id": "4246a58e693e",
-              "quote": "the lifeblood of Ukrainian battlefield communications",
-              "field": "snippet"
-            },
-            {
               "article_id": "8118f1ec3328",
-              "quote": "Musk suggests US government behind any slowdown",
+              "quote": "Musk suggests US government behind any slowdown in Ukraine’s Starshield",
               "field": "headline"
             },
             {
               "article_id": "087ad35ae6c7",
-              "quote": "sought to distance himself",
-              "field": "snippet"
+              "quote": "Elon Musk shifts responsibility to Trump over satellite restrictions affecting Ukraine",
+              "field": "headline"
             }
           ],
           "emphasis": [
             {
-              "text": "Leads with Musk shifting responsibility to the US government and Trump.",
+              "text": "Leads with Musk distancing himself and attributing the restrictions to the US government.",
               "sources": [
                 "8118f1ec3328",
                 "087ad35ae6c7"
               ]
             },
             {
-              "text": "Reports Ukraine's accusation against SpaceX and worsening ties with the US.",
+              "text": "Describes Starlink as the lifeblood of Ukrainian communications since 2022.",
               "sources": [
                 "4246a58e693e"
               ]
@@ -921,13 +875,13 @@
       ],
       "east_west_contradictions": [],
       "validation": {
-        "kept": 50,
+        "kept": 45,
         "dropped_by_reason": {}
       }
     },
     {
-      "id": "e8b6ef0b8923",
-      "title": "Pope Leo diagnosed with lung cancer after surgery to remove part of lung",
+      "id": "92e73e1da7ed",
+      "title": "Pope Leo diagnosed with lung cancer after surgery, recovering in hospital",
       "rank": 2,
       "outlet_count": 11,
       "coverage": {
@@ -1012,8 +966,8 @@
         {
           "id": "17e33d649d55",
           "outlet_id": "huffpost",
-          "headline": "Pope Leo Spent 'Tranquil Night' In Hospital After Cancer Surgery, Vatican Says",
-          "snippet": "Tests confirmed a diagnosis of lung adenocarcinoma, the Vatican said late Tuesday in a medical bulletin after the operation.",
+          "headline": "Pope Leo Is Eating And Recovering After Cancer Surgery, Doctors Say",
+          "snippet": "“Recovery is proceeding as planned,” Leo’s two doctors said.",
           "url": "https://www.huffpost.com/entry/vatican-pope-leo-surgery_n_6acf3854e4b0e26c18d0c30c",
           "published_at": "2026-10-14T08:21:15Z",
           "published_at_estimated": false
@@ -1073,15 +1027,6 @@
           "published_at_estimated": false
         },
         {
-          "id": "41e857c41167",
-          "outlet_id": "nbc",
-          "headline": "Vatican says Pope Leo's lung surgery recovery is 'proceeding as expected'",
-          "snippet": "Pope Leo XIV underwent thoracic surgery after being diagnosed with adenocarcinoma, a type of non-small cell lung cancer. NBC News' Claudio Lavanga shares the latest updates from the Vatican, while…",
-          "url": "https://www.nbcnews.com/video/vatican-says-pope-leo-s-lung-surgery-recovery-is-proceeding-as-expected-271564357749",
-          "published_at": "2026-10-14T15:12:19Z",
-          "published_at_estimated": false
-        },
-        {
           "id": "e19aa3ae86ba",
           "outlet_id": "bbc",
           "headline": "Pope walking and recovering 'as expected' after surgery, doctors say",
@@ -1121,7 +1066,7 @@
           "id": "ae9f1cb9df51",
           "outlet_id": "thesun",
           "headline": "Pope’s brother – who also has cancer – says Leo’s disease ‘caught early’ as Pontiff recovers from surgery",
-          "snippet": "POPE Leo’s lung cancer was caught in its early stages as his brother says he remains optimistic following the pontiff’s surgery. Doctors discovered a lung adenocarcinoma – a common form of cancer…",
+          "snippet": "POPE Leo’s lung cancer was caught in its early stages as his brother - who is also fighting the disease - says he remains optimistic following the pontiff’s surgery. Doctors discovered a lung…",
           "url": "https://www.thesun.co.uk/news/40690461/pope-brother-cancer-caught-early/",
           "published_at": "2026-10-14T20:57:05Z",
           "published_at_estimated": false
@@ -1134,11 +1079,20 @@
           "url": "https://www.theguardian.com/world/2026/oct/14/pope-leo-recovery-lung-cancer-surgery-progressing-as-planned",
           "published_at": "2026-10-14T22:31:18Z",
           "published_at_estimated": false
+        },
+        {
+          "id": "9216fddb262b",
+          "outlet_id": "nbc",
+          "headline": "Pope Leo recovers after lung surgery",
+          "snippet": "There are new details about Pope Leo’s recovery following his lung cancer diagnosis. Doctors say he is progressing as expected. NBC News’ Anne Thompson reports from Rome.",
+          "url": "https://www.nbcnews.com/nightly-news/video/pope-leo-recovers-after-lung-surgery-271593541966",
+          "published_at": "2026-10-14T22:56:11Z",
+          "published_at_estimated": false
         }
       ],
       "agreed_facts": [
         {
-          "text": "The Vatican said Pope Leo XIV has been diagnosed with lung cancer.",
+          "text": "Pope Leo XIV has been diagnosed with lung cancer, according to the Vatican and his doctors.",
           "sources": [
             "7809db6abcec",
             "51806545088e",
@@ -1146,15 +1100,17 @@
             "db65207b4d7f",
             "bd72fad1fe78",
             "d34743d9c56c",
-            "17e33d649d55",
+            "83af684300f4",
+            "e1504b347e9f",
             "e19aa3ae86ba",
             "8deae52ff69a",
             "ae9f1cb9df51",
-            "821ccf9f90aa"
+            "821ccf9f90aa",
+            "9216fddb262b"
           ]
         },
         {
-          "text": "Surgeons removed part of the Pope's right lung, described by several outlets as the lower lobe.",
+          "text": "Surgeons removed part of his right lung, described in several reports as the lower lobe.",
           "sources": [
             "7809db6abcec",
             "51806545088e",
@@ -1165,16 +1121,6 @@
             "1658b591a0a2",
             "d2dca7d1ec36",
             "e1504b347e9f"
-          ]
-        },
-        {
-          "text": "The cancer was identified as lung adenocarcinoma, described as a common form of lung cancer.",
-          "sources": [
-            "17e33d649d55",
-            "41e857c41167",
-            "ae9f1cb9df51",
-            "8deae52ff69a",
-            "5a5d9383de70"
           ]
         },
         {
@@ -1187,14 +1133,6 @@
           ]
         },
         {
-          "text": "The procedure lasted 90 minutes and the Pope is 71 years old.",
-          "sources": [
-            "d2dca7d1ec36",
-            "e19aa3ae86ba",
-            "b54bd06c4870"
-          ]
-        },
-        {
           "text": "The surgery was described as successful.",
           "sources": [
             "db65207b4d7f",
@@ -1203,28 +1141,37 @@
           ]
         },
         {
-          "text": "The Pope has begun walking and his recovery is proceeding as expected or planned, according to the Vatican and doctors.",
+          "text": "Doctors say his recovery is proceeding as planned or as expected.",
           "sources": [
+            "17e33d649d55",
+            "e19aa3ae86ba",
+            "821ccf9f90aa",
+            "9216fddb262b"
+          ]
+        },
+        {
+          "text": "The Pope has begun walking and/or eating after the operation.",
+          "sources": [
+            "17e33d649d55",
             "e19aa3ae86ba",
             "8deae52ff69a",
             "05db260ca587",
-            "821ccf9f90aa",
-            "41e857c41167"
+            "821ccf9f90aa"
           ]
         },
         {
-          "text": "The Vatican said the Pope spent a tranquil night in hospital after the surgery.",
+          "text": "The Pope is 71 years old.",
           "sources": [
-            "17e33d649d55",
-            "1658b591a0a2"
+            "d2dca7d1ec36",
+            "e19aa3ae86ba",
+            "b54bd06c4870"
           ]
         },
         {
-          "text": "Messages of support for the Pope have been reported, and he thanked wellwishers for their prayers.",
+          "text": "The procedure lasted 90 minutes.",
           "sources": [
-            "5671f6334495",
-            "b54bd06c4870",
-            "ed74554d1a8d"
+            "d2dca7d1ec36",
+            "e19aa3ae86ba"
           ]
         }
       ],
@@ -1244,37 +1191,43 @@
             },
             {
               "article_id": "17e33d649d55",
-              "quote": "Spent 'Tranquil Night' In Hospital",
+              "quote": "Pope Leo Is Eating And Recovering After Cancer Surgery",
               "field": "headline"
             },
             {
-              "article_id": "821ccf9f90aa",
-              "quote": "recovery from lung cancer surgery ‘progressing as planned’",
+              "article_id": "1658b591a0a2",
+              "quote": "spends 'tranquil' night in hospital",
               "field": "headline"
             }
           ],
           "emphasis": [
             {
-              "text": "Leads with the diagnosis and the removal of the lower lobe of the right lung, followed by day-by-day recovery updates.",
+              "text": "Leads with day-by-day recovery updates from doctors and the Vatican.",
               "sources": [
-                "51806545088e",
-                "d34743d9c56c",
+                "17e33d649d55",
                 "1658b591a0a2",
                 "821ccf9f90aa",
-                "41e857c41167"
+                "9216fddb262b",
+                "8deae52ff69a"
               ]
             },
             {
-              "text": "Reports reactions from world leaders, messages of support and calls for early cancer screening.",
+              "text": "Highlights messages of support from world leaders and others.",
               "sources": [
                 "5671f6334495",
                 "b54bd06c4870"
               ]
             },
             {
-              "text": "Raises questions about the Pope's longevity and the implications for his plans for the church.",
+              "text": "Raises questions about the Pope's longevity and plans for the church.",
               "sources": [
                 "83af684300f4"
+              ]
+            },
+            {
+              "text": "Notes calls for people to seek early cancer screenings.",
+              "sources": [
+                "5671f6334495"
               ]
             }
           ]
@@ -1284,7 +1237,7 @@
           "headline_quotes": [
             {
               "article_id": "a852e44e5606",
-              "quote": "Why it matters",
+              "quote": "just hours after he underwent surgery",
               "field": "snippet"
             },
             {
@@ -1294,7 +1247,12 @@
             },
             {
               "article_id": "ed74554d1a8d",
-              "quote": "Pope thanks wellwishers for prayers after cancer operation",
+              "quote": "Pope thanks wellwishers for prayers",
+              "field": "headline"
+            },
+            {
+              "article_id": "e19aa3ae86ba",
+              "quote": "walking and recovering 'as expected'",
               "field": "headline"
             }
           ],
@@ -1306,16 +1264,16 @@
               ]
             },
             {
-              "text": "Presents explanatory overviews and recovery updates, including the Pope walking.",
-              "sources": [
-                "e1504b347e9f",
-                "e19aa3ae86ba"
-              ]
-            },
-            {
               "text": "Reports the Pope thanking wellwishers for their prayers.",
               "sources": [
                 "ed74554d1a8d"
+              ]
+            },
+            {
+              "text": "Summarises known facts and recovery status.",
+              "sources": [
+                "e1504b347e9f",
+                "e19aa3ae86ba"
               ]
             }
           ]
@@ -1325,36 +1283,36 @@
           "headline_quotes": [
             {
               "article_id": "7809db6abcec",
-              "quote": "very early stage",
+              "quote": "identified at a \"very early stage.\"",
               "field": "snippet"
-            },
-            {
-              "article_id": "ae9f1cb9df51",
-              "quote": "who also has cancer",
-              "field": "headline"
             },
             {
               "article_id": "05db260ca587",
               "quote": "undergoes blood tests, X-ray following cancer surgery",
               "field": "headline"
+            },
+            {
+              "article_id": "ae9f1cb9df51",
+              "quote": "Pope’s brother – who also has cancer",
+              "field": "headline"
             }
           ],
           "emphasis": [
             {
-              "text": "Emphasises that the growth was found at an early stage.",
+              "text": "Emphasises that the cancer was found at an early stage.",
               "sources": [
                 "7809db6abcec",
                 "ae9f1cb9df51"
               ]
             },
             {
-              "text": "Reports comments from the Pope's brother, who also has cancer, expressing optimism.",
+              "text": "Includes comments from the Pope's brother, who also has cancer.",
               "sources": [
                 "ae9f1cb9df51"
               ]
             },
             {
-              "text": "Details recovery steps such as blood tests, an X-ray, walking and resuming eating.",
+              "text": "Details post-operative medical tests.",
               "sources": [
                 "05db260ca587"
               ]
@@ -1365,7 +1323,7 @@
       "omissions": [
         {
           "lean": "right",
-          "text": "Right-leaning coverage does not mention messages of support from world leaders and wellwishers.",
+          "text": "Right-leaning coverage does not mention messages of support or the Pope thanking wellwishers.",
           "sources": [
             "5671f6334495",
             "b54bd06c4870",
@@ -1374,7 +1332,7 @@
         },
         {
           "lean": "left",
-          "text": "Left-leaning coverage does not mention that the cancer was found at an early stage.",
+          "text": "Left-leaning coverage does not mention that the cancer was detected at an early stage.",
           "sources": [
             "7809db6abcec",
             "ae9f1cb9df51"
@@ -1382,7 +1340,7 @@
         },
         {
           "lean": "centre",
-          "text": "Centre coverage does not mention that the cancer was found at an early stage.",
+          "text": "Centre coverage does not mention that the cancer was detected at an early stage.",
           "sources": [
             "7809db6abcec",
             "ae9f1cb9df51"
@@ -1406,30 +1364,28 @@
               "field": "headline"
             },
             {
-              "article_id": "ae9f1cb9df51",
-              "quote": "who also has cancer",
+              "article_id": "821ccf9f90aa",
+              "quote": "‘progressing as planned’",
               "field": "headline"
             }
           ],
           "emphasis": [
             {
-              "text": "Covers the diagnosis, the surgery and detailed recovery updates from the Vatican and doctors.",
+              "text": "Follows recovery progress, including walking and eating.",
               "sources": [
-                "7809db6abcec",
-                "51806545088e",
-                "d34743d9c56c",
+                "17e33d649d55",
                 "e19aa3ae86ba",
                 "05db260ca587",
                 "821ccf9f90aa"
               ]
             },
             {
-              "text": "Reports reactions, messages of support and implications for the papacy.",
+              "text": "Covers reactions, support messages and implications for the papacy.",
               "sources": [
                 "5671f6334495",
                 "b54bd06c4870",
-                "83af684300f4",
-                "ed74554d1a8d"
+                "ed74554d1a8d",
+                "83af684300f4"
               ]
             }
           ]
@@ -1444,19 +1400,19 @@
             },
             {
               "article_id": "bd72fad1fe78",
-              "quote": "successfully, on schedule and as planned",
+              "quote": "“successfully, on schedule and as planned”",
               "field": "snippet"
             }
           ],
           "emphasis": [
             {
-              "text": "Explains the type of cancer, lung adenocarcinoma, and gives background on the Pope's election in May 2025.",
+              "text": "Explains the type of lung cancer and notes Leo's election in May 2025.",
               "sources": [
                 "5a5d9383de70"
               ]
             },
             {
-              "text": "Quotes the Vatican's statement that the operation was completed successfully and as planned.",
+              "text": "Quotes the Vatican statement that the operation went as planned.",
               "sources": [
                 "bd72fad1fe78"
               ]
@@ -1466,337 +1422,23 @@
       ],
       "east_west_contradictions": [],
       "validation": {
-        "kept": 40,
+        "kept": 41,
         "dropped_by_reason": {}
       }
     },
     {
-      "id": "8c5fe1c3c5b6",
-      "title": "Sally Rooney's books withdrawn from UK sale over Palestine Action support",
+      "id": "dbedc20ed84d",
+      "title": "Trump's deal easing sanctions on Russian diesel draws criticism and reactions",
       "rank": 3,
       "outlet_count": 7,
       "coverage": {
         "lean": {
           "left": 1,
-          "centre": 1,
-          "right": 1
-        },
-        "bloc": {
-          "west": 3,
-          "east": 4
-        }
-      },
-      "blindspot": {
-        "lean": null,
-        "bloc": null
-      },
-      "articles": [
-        {
-          "id": "9267dead62ca",
-          "outlet_id": "scmp",
-          "headline": "Sally Rooney books can’t be sold in UK amid Palestine Action ban, publisher says",
-          "snippet": "Irish author Sally Rooney can no longer sell her books in the UK because of her support for the activist group Palestine Action, her publisher Faber said on Wednesday. Rooney has previously…",
-          "url": "https://www.scmp.com/news/world/europe/article/3370918/sally-rooney-books-cant-be-sold-uk-amid-palestine-action-ban-publisher-says",
-          "published_at": "2026-10-14T16:41:07Z",
-          "published_at_estimated": false
-        },
-        {
-          "id": "e92a21256fc3",
-          "outlet_id": "sky",
-          "headline": "Sally Rooney books withdrawn from UK over Palestine Action support",
-          "snippet": "Author Sally Rooney has said she can no longer sell her books in the UK because of her support for the banned protest group Palestine Action.",
-          "url": "https://news.sky.com/story/sally-rooney-books-withdrawn-from-uk-over-palestine-action-support-13599356",
-          "published_at": "2026-10-14T18:45:00Z",
-          "published_at_estimated": false
-        },
-        {
-          "id": "f874197f4081",
-          "outlet_id": "aljazeera",
-          "headline": "Sally Rooney’s books pulled from UK over Palestine Action support",
-          "snippet": "Award-winning author Sally Rooney’s books are being withdrawn from the UK over her support for Palestine Action",
-          "url": "https://www.aljazeera.com/video/newsfeed/2026/10/14/sally-rooneys-books-pulled-from-uk-over-palestine-action-support",
-          "published_at": "2026-10-14T19:23:27Z",
-          "published_at_estimated": false
-        },
-        {
-          "id": "6708c99068a6",
-          "outlet_id": "thehindu",
-          "headline": "Sally Rooney's books no longer sold in U.K. over support for banned pro-Palestinian group",
-          "snippet": "“I have made every effort to be honest with the public about my beliefs and intentions and I am wholly prepared to accept the consequences,” the author said in a statement",
-          "url": "https://www.thehindu.com/books/sally-rooneys-books-no-longer-sold-in-uk-over-support-for-banned-pro-palestinian-group/article71585477.ece",
-          "published_at": "2026-10-14T19:39:04Z",
-          "published_at_estimated": false
-        },
-        {
-          "id": "705c2d655899",
-          "outlet_id": "thenational",
-          "headline": "Sally Rooney can no longer sell books in the UK due to Palestine Action support",
-          "snippet": "Irish novelist Sally Rooney's books will no longer be sold ​in ​the UK after she said she planned to use her royalties to ⁠support the banned campaign group Palestine Action. The bestselling author…",
-          "url": "https://www.thenationalnews.com/news/uk/2026/10/14/sally-rooney-can-no-longer-sell-books-in-the-uk-due-to-palestine-action-support/",
-          "published_at": "2026-10-14T20:08:20Z",
-          "published_at_estimated": false
-        },
-        {
-          "id": "c27a18d40518",
-          "outlet_id": "dailymail",
-          "headline": "Sally Rooney's books are no longer available in the UK due to her backing for Palestine Action",
-          "snippet": "The bestselling Irish writer has been a vocal supporter of Palestine Action, including after it was proscribed by the British government under terrorism laws last year.",
-          "url": "https://www.dailymail.com/news/article-16210053/Sally-Rooneys-books-no-longer-available-UK-Palestine-Action.html",
-          "published_at": "2026-10-14T21:48:32Z",
-          "published_at_estimated": false
-        },
-        {
-          "id": "fba7fae78059",
-          "outlet_id": "nyt",
-          "headline": "Sally Rooney Withdraws Her Books From UK Over Her Support of Palestine Action",
-          "snippet": "Ms. Rooney and her publisher said that she could no longer receive royalties from British sales because she pledged to donate book revenues to Palestine Action, which is banned in Britain.",
-          "url": "https://www.nytimes.com/2026/10/14/world/europe/rooney-britain-palestine-book-sales.html",
-          "published_at": "2026-10-14T21:52:20Z",
-          "published_at_estimated": false
-        }
-      ],
-      "agreed_facts": [
-        {
-          "text": "Sally Rooney's books can no longer be sold in the UK because of her support for Palestine Action.",
-          "sources": [
-            "9267dead62ca",
-            "e92a21256fc3",
-            "f874197f4081",
-            "6708c99068a6",
-            "705c2d655899",
-            "c27a18d40518",
-            "fba7fae78059"
-          ]
-        },
-        {
-          "text": "Palestine Action is a banned group in Britain.",
-          "sources": [
-            "e92a21256fc3",
-            "6708c99068a6",
-            "705c2d655899",
-            "c27a18d40518",
-            "fba7fae78059"
-          ]
-        },
-        {
-          "text": "Rooney is an Irish author.",
-          "sources": [
-            "9267dead62ca",
-            "705c2d655899",
-            "c27a18d40518"
-          ]
-        },
-        {
-          "text": "Rooney planned or pledged to give her royalties or book revenues to Palestine Action.",
-          "sources": [
-            "705c2d655899",
-            "fba7fae78059"
-          ]
-        },
-        {
-          "text": "Rooney's publisher stated that her books could no longer be sold in, or earn royalties from, the UK.",
-          "sources": [
-            "9267dead62ca",
-            "fba7fae78059"
-          ]
-        }
-      ],
-      "framing": [
-        {
-          "lean": "left",
-          "headline_quotes": [
-            {
-              "article_id": "fba7fae78059",
-              "quote": "Sally Rooney Withdraws Her Books From UK",
-              "field": "headline"
-            },
-            {
-              "article_id": "fba7fae78059",
-              "quote": "she could no longer receive royalties from British sales",
-              "field": "snippet"
-            }
-          ],
-          "emphasis": [
-            {
-              "text": "Leads with Rooney as the one withdrawing the books and explains it through her pledge to donate book revenues to Palestine Action.",
-              "sources": [
-                "fba7fae78059"
-              ]
-            }
-          ]
-        },
-        {
-          "lean": "centre",
-          "headline_quotes": [
-            {
-              "article_id": "e92a21256fc3",
-              "quote": "Sally Rooney books withdrawn from UK over Palestine Action support",
-              "field": "headline"
-            },
-            {
-              "article_id": "e92a21256fc3",
-              "quote": "the banned protest group Palestine Action",
-              "field": "snippet"
-            }
-          ],
-          "emphasis": [
-            {
-              "text": "Attributes the account to Rooney herself and describes Palestine Action as a banned protest group.",
-              "sources": [
-                "e92a21256fc3"
-              ]
-            }
-          ]
-        },
-        {
-          "lean": "right",
-          "headline_quotes": [
-            {
-              "article_id": "c27a18d40518",
-              "quote": "has been a vocal supporter of Palestine Action",
-              "field": "snippet"
-            },
-            {
-              "article_id": "c27a18d40518",
-              "quote": "proscribed by the British government under terrorism laws last year",
-              "field": "snippet"
-            }
-          ],
-          "emphasis": [
-            {
-              "text": "Foregrounds Rooney's continued vocal support for Palestine Action after its proscription under terrorism laws.",
-              "sources": [
-                "c27a18d40518"
-              ]
-            }
-          ]
-        }
-      ],
-      "omissions": [
-        {
-          "lean": "centre",
-          "text": "Does not mention Rooney's pledge to donate royalties or book revenues to Palestine Action.",
-          "sources": [
-            "fba7fae78059"
-          ]
-        },
-        {
-          "lean": "right",
-          "text": "Does not mention Rooney's pledge to donate royalties or book revenues to Palestine Action.",
-          "sources": [
-            "fba7fae78059"
-          ]
-        },
-        {
-          "lean": "left",
-          "text": "Does not mention that Palestine Action was proscribed under terrorism laws.",
-          "sources": [
-            "c27a18d40518"
-          ]
-        },
-        {
-          "lean": "centre",
-          "text": "Does not mention that Palestine Action was proscribed under terrorism laws.",
-          "sources": [
-            "c27a18d40518"
-          ]
-        }
-      ],
-      "contested_claims": [],
-      "opinion": [],
-      "framing_by_bloc": [
-        {
-          "bloc": "west",
-          "headline_quotes": [
-            {
-              "article_id": "fba7fae78059",
-              "quote": "Sally Rooney Withdraws Her Books From UK",
-              "field": "headline"
-            },
-            {
-              "article_id": "c27a18d40518",
-              "quote": "proscribed by the British government under terrorism laws last year",
-              "field": "snippet"
-            },
-            {
-              "article_id": "e92a21256fc3",
-              "quote": "the banned protest group Palestine Action",
-              "field": "snippet"
-            }
-          ],
-          "emphasis": [
-            {
-              "text": "Highlights the ban on Palestine Action, including its proscription under terrorism laws, and the royalties pledge.",
-              "sources": [
-                "e92a21256fc3",
-                "c27a18d40518",
-                "fba7fae78059"
-              ]
-            }
-          ]
-        },
-        {
-          "bloc": "east",
-          "headline_quotes": [
-            {
-              "article_id": "6708c99068a6",
-              "quote": "I am wholly prepared to accept the consequences",
-              "field": "snippet"
-            },
-            {
-              "article_id": "f874197f4081",
-              "quote": "Award-winning author Sally Rooney’s books are being withdrawn",
-              "field": "snippet"
-            },
-            {
-              "article_id": "9267dead62ca",
-              "quote": "her publisher Faber said on Wednesday",
-              "field": "snippet"
-            }
-          ],
-          "emphasis": [
-            {
-              "text": "Quotes Rooney's statement that she has been honest about her beliefs and accepts the consequences.",
-              "sources": [
-                "6708c99068a6"
-              ]
-            },
-            {
-              "text": "Attributes the news to her publisher Faber and describes Rooney as award-winning or bestselling.",
-              "sources": [
-                "9267dead62ca",
-                "f874197f4081",
-                "705c2d655899"
-              ]
-            },
-            {
-              "text": "Links the withdrawal to her plan to use royalties to support Palestine Action.",
-              "sources": [
-                "705c2d655899"
-              ]
-            }
-          ]
-        }
-      ],
-      "east_west_contradictions": [],
-      "validation": {
-        "kept": 28,
-        "dropped_by_reason": {}
-      }
-    },
-    {
-      "id": "2e4e6551d135",
-      "title": "Trump's deal easing sanctions on Russian diesel draws criticism and reactions",
-      "rank": 4,
-      "outlet_count": 6,
-      "coverage": {
-        "lean": {
-          "left": 1,
           "centre": 2,
-          "right": 1
+          "right": 2
         },
         "bloc": {
-          "west": 4,
+          "west": 5,
           "east": 2
         }
       },
@@ -1805,15 +1447,6 @@
         "bloc": null
       },
       "articles": [
-        {
-          "id": "53d4b009a35c",
-          "outlet_id": "axios",
-          "headline": "Five things to watch after Trump's Russian diesel deal",
-          "snippet": "President Trump is turning to Vladimir Putin to help ease a global diesel crunch, setting up a clash between Washington's energy priorities and its efforts to pressure Russia over its invasion of…",
-          "url": "https://www.axios.com/2026/10/13/trump-russia-diesel-deal",
-          "published_at": "2026-10-13T12:36:07Z",
-          "published_at_estimated": false
-        },
         {
           "id": "51a9ee3798c3",
           "outlet_id": "axios",
@@ -1905,6 +1538,15 @@
           "published_at_estimated": false
         },
         {
+          "id": "9c70289d4853",
+          "outlet_id": "thesun",
+          "headline": "Trump has betrayed us, Zelensky claims as he reveals Ukraine is ‘losing’ America & diesel deal will bring more death",
+          "snippet": "VOLODYMYR Zelensky has accused Donald Trump of betraying Ukraine and warned Kyiv is \"losing\" the US. The Ukrainian president hit out at his American counterpart's diesel deal with Vladimir Putin…",
+          "url": "https://www.thesun.co.uk/news/40689001/zelensky-trump-betrayal-ukraine-starlink-death/",
+          "published_at": "2026-10-14T18:53:29Z",
+          "published_at_estimated": false
+        },
+        {
           "id": "f8b4d6f9b4bd",
           "outlet_id": "nyt",
           "headline": "Why Trump Made a Diesel Deal With Putin",
@@ -1925,38 +1567,40 @@
       ],
       "agreed_facts": [
         {
-          "text": "President Trump has made or plans a deal with Russia that eases sanctions to allow purchases of Russian diesel.",
+          "text": "President Trump has made a deal with Russia that eases sanctions to allow Russian diesel to be supplied.",
           "sources": [
-            "53d4b009a35c",
             "51a9ee3798c3",
-            "e3a53e1727e9",
             "211871b4017d",
-            "9cbee2163641",
+            "e3a53e1727e9",
             "7fe50d0e71e8",
+            "efedd3c96701",
+            "f8b4d6f9b4bd",
+            "9c70289d4853",
+            "a702a4b15c80",
             "e2861d8e4285",
             "980daf4d9d20",
-            "a702a4b15c80",
-            "f8b4d6f9b4bd",
-            "c5e07b17a5d8"
+            "c5e07b17a5d8",
+            "9cbee2163641"
           ]
         },
         {
-          "text": "A bipartisan group of senators has criticised the deal and linked it to harm to Ukraine and help for Moscow.",
+          "text": "A bipartisan group of senators criticised the deal and called on Trump to drop it, saying it would help Moscow or betray Ukraine.",
           "sources": [
             "51a9ee3798c3",
             "211871b4017d"
           ]
         },
         {
-          "text": "The deal has drawn criticism or alarm abroad, including from Ukraine, its allies and Italy's prime minister.",
+          "text": "The deal has drawn criticism and alarm from Ukraine and from allies abroad, including Italy's prime minister and Ukraine's president.",
           "sources": [
             "e3a53e1727e9",
             "a702a4b15c80",
-            "e2861d8e4285"
+            "e2861d8e4285",
+            "9c70289d4853"
           ]
         },
         {
-          "text": "The deal is linked to the timing of the US midterm elections.",
+          "text": "The deal is linked in timing to the US midterm elections.",
           "sources": [
             "665553ffa79c",
             "c5e07b17a5d8"
@@ -1985,19 +1629,20 @@
           ],
           "emphasis": [
             {
-              "text": "Leads with the consequences for Ukraine, including a one-sided cease-fire plan as winter approaches.",
+              "text": "Leads with the deal's effect on Ukraine, linking it to a one-sided cease-fire plan as winter approaches.",
               "sources": [
-                "efedd3c96701"
+                "efedd3c96701",
+                "7fe50d0e71e8"
               ]
             },
             {
-              "text": "Describes the deal as a gain for Russia and ties it to Trump's political needs and inclinations towards Russia.",
+              "text": "Attributes the deal to Trump's political needs and longstanding inclinations toward Russia.",
               "sources": [
                 "7fe50d0e71e8"
               ]
             },
             {
-              "text": "Reports the call by 12 senators to drop the decision.",
+              "text": "Reports the call by 12 senators to reverse the deal.",
               "sources": [
                 "211871b4017d"
               ]
@@ -2009,8 +1654,8 @@
           "headline_quotes": [
             {
               "article_id": "51a9ee3798c3",
-              "quote": "is a betrayal of the people of Ukraine",
-              "field": "snippet"
+              "quote": "Russian diesel deal \"a betrayal,\" bipartisan coalition says",
+              "field": "headline"
             },
             {
               "article_id": "665553ffa79c",
@@ -2019,25 +1664,25 @@
             },
             {
               "article_id": "e3a53e1727e9",
-              "quote": "drawing criticism at home and abroad",
-              "field": "snippet"
+              "quote": "What's next after Trump's diesel deal with Russia?",
+              "field": "headline"
             }
           ],
           "emphasis": [
             {
-              "text": "Frames the deal as a clash between US energy priorities, including a global diesel crunch, and pressure on Russia.",
+              "text": "Foregrounds the bipartisan senators' description of the deal as a betrayal and a gift to an adversary.",
               "sources": [
-                "53d4b009a35c"
+                "51a9ee3798c3"
               ]
             },
             {
-              "text": "Emphasises the political risk for Republicans ahead of the midterms.",
+              "text": "Emphasises the domestic political risk for Republicans ahead of the midterms.",
               "sources": [
                 "665553ffa79c"
               ]
             },
             {
-              "text": "Offers explainers on what the deal means for Ukraine, Kyiv and Moscow.",
+              "text": "Offers explainers on what the deal means for Ukraine, Moscow and the US.",
               "sources": [
                 "e3a53e1727e9",
                 "a702a4b15c80"
@@ -2049,6 +1694,11 @@
           "lean": "right",
           "headline_quotes": [
             {
+              "article_id": "9c70289d4853",
+              "quote": "Trump has betrayed us, Zelensky claims",
+              "field": "headline"
+            },
+            {
               "article_id": "c5e07b17a5d8",
               "quote": "US expects Russian diesel to start flowing before midterms",
               "field": "headline"
@@ -2056,7 +1706,13 @@
           ],
           "emphasis": [
             {
-              "text": "Leads with the expected arrival of Russian diesel in the US market before the 3 November election, citing sources.",
+              "text": "Leads with Zelensky's accusation that Trump betrayed Ukraine and that the deal will bring more death.",
+              "sources": [
+                "9c70289d4853"
+              ]
+            },
+            {
+              "text": "Reports, citing sources, that Russian diesel is expected to reach the US market before the 3 November election.",
               "sources": [
                 "c5e07b17a5d8"
               ]
@@ -2067,26 +1723,15 @@
       "omissions": [
         {
           "lean": "right",
-          "text": "Right-leaning coverage does not mention criticism of the deal from senators, Ukraine or US allies.",
+          "text": "Does not mention the bipartisan senators' criticism of the deal or their call to reverse it.",
           "sources": [
             "51a9ee3798c3",
-            "211871b4017d",
-            "a702a4b15c80",
-            "e3a53e1727e9"
-          ]
-        },
-        {
-          "lean": "right",
-          "text": "Right-leaning coverage does not mention the deal's implications for the war in Ukraine.",
-          "sources": [
-            "211871b4017d",
-            "efedd3c96701",
-            "53d4b009a35c"
+            "211871b4017d"
           ]
         },
         {
           "lean": "left",
-          "text": "Left-leaning coverage does not mention the midterm elections in connection with the deal.",
+          "text": "Does not mention the midterm elections in connection with the deal.",
           "sources": [
             "665553ffa79c",
             "c5e07b17a5d8"
@@ -2094,30 +1739,36 @@
         },
         {
           "lean": "left",
-          "text": "Left-leaning coverage does not mention a global diesel crunch as a motive for the deal.",
+          "text": "Does not mention Zelensky's accusation that Trump betrayed Ukraine.",
           "sources": [
-            "53d4b009a35c"
+            "9c70289d4853"
           ]
         }
       ],
       "contested_claims": [
         {
-          "claim": "Russian diesel under the deal will be supplied to the US market.",
+          "claim": "Russian diesel under the deal is not for the US but is being released to world markets, according to Trump.",
           "asserted_by": [
+            "9cbee2163641"
+          ],
+          "disputed_by": [
             "980daf4d9d20",
             "c5e07b17a5d8",
             "f8b4d6f9b4bd"
-          ],
-          "disputed_by": [
-            "9cbee2163641"
           ]
         }
       ],
       "opinion": [
         {
-          "text": "Correspondent David E. Sanger gives an analysis of why Trump struck the diesel deal with Putin.",
+          "text": "A correspondent's analysis of why Trump struck the diesel deal with Putin.",
           "sources": [
             "f8b4d6f9b4bd"
+          ]
+        },
+        {
+          "text": "An explainer drawing on experts about the reasons for the decision and Ukraine's next steps.",
+          "sources": [
+            "e3a53e1727e9"
           ]
         }
       ],
@@ -2127,35 +1778,30 @@
           "headline_quotes": [
             {
               "article_id": "51a9ee3798c3",
-              "quote": "a gift to our adversary",
+              "quote": "a betrayal of the people of Ukraine",
               "field": "snippet"
             },
             {
-              "article_id": "efedd3c96701",
-              "quote": "Trump Squeezes Ukraine, Again",
+              "article_id": "7fe50d0e71e8",
+              "quote": "Trump Hands Victories to Putin",
               "field": "headline"
             },
             {
-              "article_id": "c5e07b17a5d8",
-              "quote": "US expects Russian diesel to start flowing before midterms",
+              "article_id": "9c70289d4853",
+              "quote": "Trump has betrayed us, Zelensky claims",
               "field": "headline"
             }
           ],
           "emphasis": [
             {
-              "text": "Emphasises domestic criticism, especially from bipartisan senators.",
+              "text": "Foregrounds criticism of the deal by US senators and Ukraine, and its consequences for Kyiv.",
               "sources": [
                 "51a9ee3798c3",
-                "211871b4017d"
-              ]
-            },
-            {
-              "text": "Focuses on consequences for Ukraine and gains for Russia.",
-              "sources": [
+                "211871b4017d",
                 "efedd3c96701",
                 "7fe50d0e71e8",
-                "a702a4b15c80",
-                "e3a53e1727e9"
+                "9c70289d4853",
+                "a702a4b15c80"
               ]
             },
             {
@@ -2188,19 +1834,19 @@
           ],
           "emphasis": [
             {
-              "text": "Leads with Trump's statement that the diesel is for world markets, not the US.",
+              "text": "Reports Trump's statement that the diesel is for world markets rather than the US.",
               "sources": [
                 "9cbee2163641"
               ]
             },
             {
-              "text": "Reports Meloni's criticism and an initial supply of more than 300,000 tonnes to US and global markets.",
+              "text": "Gives the initial volume of more than 300,000 metric tonnes and Meloni's criticism.",
               "sources": [
                 "e2861d8e4285"
               ]
             },
             {
-              "text": "Reports Russian officials welcoming the deal and finalising supply contracts, citing Alexander Novak.",
+              "text": "Reports Moscow's welcome and Novak's statement that supply contracts with US counterparts are being finalised.",
               "sources": [
                 "980daf4d9d20"
               ]
@@ -2210,24 +1856,24 @@
       ],
       "east_west_contradictions": [],
       "validation": {
-        "kept": 36,
+        "kept": 37,
         "dropped_by_reason": {}
       }
     },
     {
-      "id": "b09e37e5d967",
-      "title": "Kimberly Guilfoyle resigns as US ambassador to Greece after misconduct reports",
-      "rank": 5,
+      "id": "210b8bead217",
+      "title": "Russian strikes hit Kyiv as Ukraine says it got no US intelligence warning",
+      "rank": 4,
       "outlet_count": 6,
       "coverage": {
         "lean": {
-          "left": 1,
-          "centre": 2,
-          "right": 1
+          "left": 2,
+          "centre": 1,
+          "right": 0
         },
         "bloc": {
-          "west": 4,
-          "east": 2
+          "west": 3,
+          "east": 3
         }
       },
       "blindspot": {
@@ -2236,96 +1882,120 @@
       },
       "articles": [
         {
-          "id": "8c6f20393425",
-          "outlet_id": "axios",
-          "headline": "White House pushes out Kimberly Guilfoyle after misconduct reports",
-          "snippet": "Kimberly Guilfoyle, the U.S. ambassador to Greece, announced her resignation Tuesday, shortly after the White House asked her to step down and following reports alleging misconduct before and during…",
-          "url": "https://www.axios.com/2026/10/13/kimberly-guilfoyle-greece-ambassador-resigns-trump",
-          "published_at": "2026-10-13T16:24:13Z",
-          "published_at_estimated": false
-        },
-        {
-          "id": "6eb93cf3eeff",
+          "id": "7337b1ba7427",
           "outlet_id": "thehindu",
-          "headline": "Trump's Ambassador to Greece resigns after allegations of improper conduct",
-          "snippet": "Mr. Trump's administration said on Tuesday (October 13) it had asked her to leave her post after she faced severe criticism over allegations she engaged in improper and possibly illegal conduct…",
-          "url": "https://www.thehindu.com/news/international/trumps-ambassador-to-greece-resigns-after-allegations-of-improper-conduct/article71582055.ece",
-          "published_at": "2026-10-14T02:42:11Z",
+          "headline": "Heavy Russian strikes on Ukraine kill six, cut power in Kyiv",
+          "snippet": "The attacks on multiple regions came after President Volodymyr Zelenskyy said Ukraine had received no warning from Western allies before a Russian strike on a Kyiv power plant.",
+          "url": "https://www.thehindu.com/news/international/heavy-russian-strikes-on-ukraine-kill-six-cut-power-in-kyiv/article71582534.ece",
+          "published_at": "2026-10-14T08:15:46Z",
           "published_at_estimated": false
         },
         {
-          "id": "f590fb8e436f",
-          "outlet_id": "npr",
-          "headline": "Trump's ambassador to Greece, Kimberly Guilfoyle, resigns after allegations of improper conduct",
-          "snippet": "The White House publicly asked for U.S. Ambassador to Greece Kimberly Guilfoyle's resignation on Tuesday as she faced mounting accusations of improper conduct.",
-          "url": "https://www.npr.org/2026/10/14/g-s1-148027/trump-ambassador-greece-resignation",
-          "published_at": "2026-10-14T09:09:39Z",
+          "id": "c1a3965c021a",
+          "outlet_id": "bbc",
+          "headline": "Watch: Block of flats destroyed in Russian strikes on Ukraine",
+          "snippet": "BBC Ukraine Correspondent Dan Johnson is in Kyiv, where at least three people were killed in overnight strikes.",
+          "url": "https://www.bbc.co.uk/news/videos/cmx280x092x7o",
+          "published_at": "2026-10-14T09:25:03Z",
           "published_at_estimated": false
         },
         {
-          "id": "d200cfba7ded",
+          "id": "8336662b491f",
+          "outlet_id": "mirror",
+          "headline": "Face of suffering: Vladimir Putin's war on Ukraine's civilians with overnight barrage of missiles",
+          "snippet": "As Ukraine suffers multiple ballistic missile targetin of its capital President Zelensky defies Trump demands to stop deep strike operations against Russia, launching major attack on Moscow",
+          "url": "https://www.mirror.co.uk/news/world-news/ukraine-kyiv-missiles-putin-russia-37770754",
+          "published_at": "2026-10-14T11:11:09Z",
+          "published_at_estimated": false
+        },
+        {
+          "id": "95626059154e",
           "outlet_id": "nyt",
-          "headline": "Kimberly Guilfoyle’s Rise and Fall as Trump’s Ambassador to Greece",
-          "snippet": "President Trump cut her loose after damaging news reports about her tenure as ambassador to Greece. Once a prominent Trump insider, she suggested she will now fight to defend her reputation.",
-          "url": "https://www.nytimes.com/2026/10/13/us/politics/kimberly-guilfoyle-resigns-trump-ambassador-greece.html",
-          "published_at": "2026-10-14T14:17:27Z",
+          "headline": "Ukraine Says It Received No Intelligence About Strikes 2 Nights in a Row",
+          "snippet": "Asked about apparent U.S. threats to cut off intelligence sharing with Kyiv, which can warn of Russian aerial attacks, President Trump said information continued to flow.",
+          "url": "https://www.nytimes.com/2026/10/13/world/europe/ukraine-trump-intelligence.html",
+          "published_at": "2026-10-14T13:11:17Z",
           "published_at_estimated": false
         },
         {
-          "id": "bb4ae9e69a92",
-          "outlet_id": "toi",
-          "headline": "Kimberly Guilfoyle will bring down Trump family after her shocking ouster, insiders aware of her 'burn book' fear",
+          "id": "744dc02f3e2b",
+          "outlet_id": "thehindu",
+          "headline": "Ukraine accuses U.S. of helping Russia as missiles hit Kyiv",
+          "snippet": "A senior official in Kyiv confirmed that the United States had in recent days threatened to stop providing intelligence about Russian missile launches that Ukraine uses to thwart attacks. Donald…",
+          "url": "https://www.thehindu.com/news/international/ukraine-accuses-us-of-helping-russia-as-missiles-hit-kyiv/article71585115.ece",
+          "published_at": "2026-10-14T16:20:57Z",
+          "published_at_estimated": false
+        },
+        {
+          "id": "96b1376e2b37",
+          "outlet_id": "aljazeera",
+          "headline": "Russia attack hits Kyiv after reported intelligence lapse",
           "snippet": "",
-          "url": "https://timesofindia.indiatimes.com/world/us/kimberly-guilfoyle-will-bring-down-trump-family-after-her-shocking-ouster-insiders-aware-of-her-burn-book-fear/articleshow/134947874.cms",
-          "published_at": "2026-10-14T17:28:17Z",
+          "url": "https://www.aljazeera.com/video/newsfeed/2026/10/14/russia-attack-hits-kyiv-after-reported-intelligence-lapse",
+          "published_at": "2026-10-14T20:14:57Z",
           "published_at_estimated": false
         },
         {
-          "id": "d2191506ed88",
-          "outlet_id": "dailymail",
-          "headline": "Kimberly Guilfoyle is out... but the scandal is far from over. Read what's next in this week's DC Insider",
-          "snippet": "Former Ambassador to Greece Kimberly Guilfoyle's title has been revoked amid scrutiny over her allegedly lavish lifestyle in Athens as revealed by the Daily Mail.",
-          "url": "https://www.dailymail.com/news/us-politics/article-16209171/Kimberly-Guilfoyle-scandal-far-Read-whats-weeks-DC-Insider.html",
-          "published_at": "2026-10-14T21:27:40Z",
+          "id": "e7d55f39823a",
+          "outlet_id": "nyt",
+          "headline": "Ukraine’s Exposure Grows as Satellite Use Is Restricted and Russia Escalates",
+          "snippet": "A huge attack cut power to 600,000 people in Kyiv, and a Pentagon-funded satellite internet program appeared to be curbed without warning.",
+          "url": "https://www.nytimes.com/2026/10/14/world/europe/ukraine-starlink-energy.html",
+          "published_at": "2026-10-14T23:30:02Z",
+          "published_at_estimated": false
+        },
+        {
+          "id": "3742ec8284e2",
+          "outlet_id": "japantimes",
+          "headline": "Ukraine accuses U.S. of helping Russia as missiles hit Kyiv",
+          "snippet": "A senior official in Kyiv said the United States had in recent days threatened to stop providing intelligence about Russian missile launches.",
+          "url": "https://www.japantimes.co.jp/news/2026/10/15/world/ukraine-us-russia-help/",
+          "published_at": "2026-10-15T00:25:00Z",
           "published_at_estimated": false
         }
       ],
       "agreed_facts": [
         {
-          "text": "Kimberly Guilfoyle has left her post as US ambassador to Greece.",
+          "text": "Russian strikes hit Kyiv and other parts of Ukraine overnight.",
           "sources": [
-            "8c6f20393425",
-            "6eb93cf3eeff",
-            "f590fb8e436f",
-            "d200cfba7ded",
-            "bb4ae9e69a92",
-            "d2191506ed88"
+            "7337b1ba7427",
+            "c1a3965c021a",
+            "8336662b491f",
+            "95626059154e",
+            "744dc02f3e2b",
+            "96b1376e2b37",
+            "e7d55f39823a",
+            "3742ec8284e2"
           ]
         },
         {
-          "text": "The White House or Trump administration asked her to step down.",
+          "text": "Ukraine says it received no intelligence or warning before Russian strikes.",
           "sources": [
-            "8c6f20393425",
-            "6eb93cf3eeff",
-            "f590fb8e436f",
-            "d200cfba7ded"
+            "7337b1ba7427",
+            "95626059154e",
+            "96b1376e2b37"
           ]
         },
         {
-          "text": "Her departure followed reports or allegations of misconduct or improper conduct.",
+          "text": "The United States reportedly threatened to stop sharing intelligence with Kyiv that helps warn of Russian missile attacks.",
           "sources": [
-            "8c6f20393425",
-            "6eb93cf3eeff",
-            "f590fb8e436f",
-            "d200cfba7ded"
+            "95626059154e",
+            "744dc02f3e2b",
+            "3742ec8284e2"
           ]
         },
         {
-          "text": "The White House request and her resignation came on Tuesday.",
+          "text": "The strikes cut power in Kyiv.",
           "sources": [
-            "8c6f20393425",
-            "6eb93cf3eeff",
-            "f590fb8e436f"
+            "7337b1ba7427",
+            "e7d55f39823a"
+          ]
+        },
+        {
+          "text": "People were killed in the strikes; reported tolls are at least three in Kyiv and six across Ukraine.",
+          "sources": [
+            "c1a3965c021a",
+            "7337b1ba7427"
           ]
         }
       ],
@@ -2334,27 +2004,38 @@
           "lean": "left",
           "headline_quotes": [
             {
-              "article_id": "d200cfba7ded",
-              "quote": "Rise and Fall as Trump’s Ambassador to Greece",
+              "article_id": "8336662b491f",
+              "quote": "Vladimir Putin's war on Ukraine's civilians",
               "field": "headline"
             },
             {
-              "article_id": "d200cfba7ded",
-              "quote": "she suggested she will now fight to defend her reputation",
-              "field": "snippet"
+              "article_id": "95626059154e",
+              "quote": "Ukraine Says It Received No Intelligence About Strikes 2 Nights in a Row",
+              "field": "headline"
+            },
+            {
+              "article_id": "e7d55f39823a",
+              "quote": "Satellite Use Is Restricted and Russia Escalates",
+              "field": "headline"
             }
           ],
           "emphasis": [
             {
-              "text": "Frames the story as the rise and fall of a once prominent Trump insider.",
+              "text": "Leads with the absence of intelligence warnings on two consecutive nights and Trump's statement that information continued to flow.",
               "sources": [
-                "d200cfba7ded"
+                "95626059154e"
               ]
             },
             {
-              "text": "Reports that she suggested she will fight to defend her reputation.",
+              "text": "Reports a Pentagon-funded satellite internet programme appeared to be curbed without warning, and 600,000 people in Kyiv lost power.",
               "sources": [
-                "d200cfba7ded"
+                "e7d55f39823a"
+              ]
+            },
+            {
+              "text": "Foregrounds civilian suffering and reports Zelensky defying Trump demands to stop deep strikes, including an attack on Moscow.",
+              "sources": [
+                "8336662b491f"
               ]
             }
           ]
@@ -2363,57 +2044,21 @@
           "lean": "centre",
           "headline_quotes": [
             {
-              "article_id": "8c6f20393425",
-              "quote": "White House pushes out Kimberly Guilfoyle after misconduct reports",
+              "article_id": "c1a3965c021a",
+              "quote": "Block of flats destroyed in Russian strikes on Ukraine",
               "field": "headline"
             },
             {
-              "article_id": "f590fb8e436f",
-              "quote": "mounting accusations of improper conduct",
+              "article_id": "c1a3965c021a",
+              "quote": "at least three people were killed in overnight strikes",
               "field": "snippet"
             }
           ],
           "emphasis": [
             {
-              "text": "Leads with the White House publicly asking for her resignation.",
+              "text": "Focuses on on-the-ground damage in Kyiv, a destroyed block of flats and the death toll, via a correspondent report.",
               "sources": [
-                "8c6f20393425",
-                "f590fb8e436f"
-              ]
-            },
-            {
-              "text": "Notes the alleged misconduct covered the period before and during her tenure.",
-              "sources": [
-                "8c6f20393425"
-              ]
-            }
-          ]
-        },
-        {
-          "lean": "right",
-          "headline_quotes": [
-            {
-              "article_id": "d2191506ed88",
-              "quote": "the scandal is far from over",
-              "field": "headline"
-            },
-            {
-              "article_id": "d2191506ed88",
-              "quote": "allegedly lavish lifestyle in Athens",
-              "field": "snippet"
-            }
-          ],
-          "emphasis": [
-            {
-              "text": "Foregrounds scrutiny of her allegedly lavish lifestyle in Athens, citing its own reporting.",
-              "sources": [
-                "d2191506ed88"
-              ]
-            },
-            {
-              "text": "Describes her title as revoked and the scandal as continuing.",
-              "sources": [
-                "d2191506ed88"
+                "c1a3965c021a"
               ]
             }
           ]
@@ -2421,26 +2066,300 @@
       ],
       "omissions": [
         {
-          "lean": "right",
-          "text": "Right coverage does not attribute her departure to a request from the White House or Trump.",
+          "lean": "centre",
+          "text": "Centre coverage does not mention Ukraine's claim that it received no intelligence warning or the reported US threat to cut intelligence sharing.",
           "sources": [
-            "8c6f20393425",
-            "f590fb8e436f",
-            "d200cfba7ded"
+            "95626059154e"
           ]
         },
         {
           "lean": "centre",
-          "text": "Centre coverage does not mention the allegations about a lavish lifestyle in Athens.",
+          "text": "Centre coverage does not mention power cuts in Kyiv.",
           "sources": [
-            "d2191506ed88"
+            "e7d55f39823a"
           ]
         },
         {
           "lean": "left",
-          "text": "Left coverage does not mention the allegations about a lavish lifestyle in Athens.",
+          "text": "Left coverage does not give a death toll for the strikes.",
           "sources": [
-            "d2191506ed88"
+            "c1a3965c021a"
+          ]
+        }
+      ],
+      "contested_claims": [
+        {
+          "claim": "US intelligence continued to flow to Ukraine, according to President Trump.",
+          "asserted_by": [
+            "95626059154e"
+          ],
+          "disputed_by": [
+            "7337b1ba7427",
+            "96b1376e2b37"
+          ]
+        }
+      ],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "95626059154e",
+              "quote": "President Trump said information continued to flow",
+              "field": "snippet"
+            },
+            {
+              "article_id": "8336662b491f",
+              "quote": "President Zelensky defies Trump demands to stop deep strike operations against Russia",
+              "field": "snippet"
+            },
+            {
+              "article_id": "c1a3965c021a",
+              "quote": "Block of flats destroyed in Russian strikes on Ukraine",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Emphasises civilian harm and destruction in Kyiv.",
+              "sources": [
+                "c1a3965c021a",
+                "8336662b491f"
+              ]
+            },
+            {
+              "text": "Reports Trump's response on intelligence sharing and restrictions on satellite internet use.",
+              "sources": [
+                "95626059154e",
+                "e7d55f39823a"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "744dc02f3e2b",
+              "quote": "Ukraine accuses U.S. of helping Russia as missiles hit Kyiv",
+              "field": "headline"
+            },
+            {
+              "article_id": "7337b1ba7427",
+              "quote": "Heavy Russian strikes on Ukraine kill six, cut power in Kyiv",
+              "field": "headline"
+            },
+            {
+              "article_id": "96b1376e2b37",
+              "quote": "Russia attack hits Kyiv after reported intelligence lapse",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with Ukraine's accusation that the US is helping Russia, citing a senior Kyiv official on threats to stop intelligence.",
+              "sources": [
+                "744dc02f3e2b",
+                "3742ec8284e2"
+              ]
+            },
+            {
+              "text": "Reports Zelenskyy's statement that Western allies gave no warning before a strike on a Kyiv power plant.",
+              "sources": [
+                "7337b1ba7427"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "validation": {
+        "kept": 28,
+        "dropped_by_reason": {}
+      }
+    },
+    {
+      "id": "6a71a6024401",
+      "title": "Sally Rooney's books withdrawn from UK sale over Palestine Action support",
+      "rank": 5,
+      "outlet_count": 6,
+      "coverage": {
+        "lean": {
+          "left": 1,
+          "centre": 1,
+          "right": 0
+        },
+        "bloc": {
+          "west": 2,
+          "east": 4
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "9267dead62ca",
+          "outlet_id": "scmp",
+          "headline": "Sally Rooney books can’t be sold in UK amid Palestine Action ban, publisher says",
+          "snippet": "Irish author Sally Rooney can no longer sell her books in the UK because of her support for the activist group Palestine Action, her publisher Faber said on Wednesday. Rooney has previously…",
+          "url": "https://www.scmp.com/news/world/europe/article/3370918/sally-rooney-books-cant-be-sold-uk-amid-palestine-action-ban-publisher-says",
+          "published_at": "2026-10-14T16:41:07Z",
+          "published_at_estimated": false
+        },
+        {
+          "id": "e92a21256fc3",
+          "outlet_id": "sky",
+          "headline": "Sally Rooney books withdrawn from UK over Palestine Action support",
+          "snippet": "Author Sally Rooney has said she can no longer sell her books in the UK because of her support for the banned protest group Palestine Action.",
+          "url": "https://news.sky.com/story/sally-rooney-books-withdrawn-from-uk-over-palestine-action-support-13599356",
+          "published_at": "2026-10-14T18:45:00Z",
+          "published_at_estimated": false
+        },
+        {
+          "id": "f874197f4081",
+          "outlet_id": "aljazeera",
+          "headline": "Sally Rooney’s books pulled from UK over Palestine Action support",
+          "snippet": "Award-winning author Sally Rooney’s books are being withdrawn from the UK over her support for Palestine Action",
+          "url": "https://www.aljazeera.com/video/newsfeed/2026/10/14/sally-rooneys-books-pulled-from-uk-over-palestine-action-support",
+          "published_at": "2026-10-14T19:23:27Z",
+          "published_at_estimated": false
+        },
+        {
+          "id": "6708c99068a6",
+          "outlet_id": "thehindu",
+          "headline": "Sally Rooney's books no longer sold in U.K. over support for banned pro-Palestinian group",
+          "snippet": "“I have made every effort to be honest with the public about my beliefs and intentions and I am wholly prepared to accept the consequences,” the author said in a statement",
+          "url": "https://www.thehindu.com/books/sally-rooneys-books-no-longer-sold-in-uk-over-support-for-banned-pro-palestinian-group/article71585477.ece",
+          "published_at": "2026-10-14T19:39:04Z",
+          "published_at_estimated": false
+        },
+        {
+          "id": "705c2d655899",
+          "outlet_id": "thenational",
+          "headline": "Sally Rooney can no longer sell books in the UK due to Palestine Action support",
+          "snippet": "Irish novelist Sally Rooney's books will no longer be sold ​in ​the UK after she said she planned to use her royalties to ⁠support the banned campaign group Palestine Action. The bestselling author…",
+          "url": "https://www.thenationalnews.com/news/uk/2026/10/14/sally-rooney-can-no-longer-sell-books-in-the-uk-due-to-palestine-action-support/",
+          "published_at": "2026-10-14T20:08:20Z",
+          "published_at_estimated": false
+        },
+        {
+          "id": "fba7fae78059",
+          "outlet_id": "nyt",
+          "headline": "Sally Rooney Withdraws Her Books From UK Over Her Support of Palestine Action",
+          "snippet": "Ms. Rooney and her publisher said that she could no longer receive royalties from British sales because she pledged to donate book revenues to Palestine Action, which is banned in Britain.",
+          "url": "https://www.nytimes.com/2026/10/14/world/europe/rooney-britain-palestine-book-sales.html",
+          "published_at": "2026-10-14T21:52:20Z",
+          "published_at_estimated": false
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "Sally Rooney's books will no longer be sold in the UK because of her support for Palestine Action.",
+          "sources": [
+            "9267dead62ca",
+            "e92a21256fc3",
+            "f874197f4081",
+            "6708c99068a6",
+            "705c2d655899",
+            "fba7fae78059"
+          ]
+        },
+        {
+          "text": "Palestine Action is described as banned in the UK.",
+          "sources": [
+            "9267dead62ca",
+            "e92a21256fc3",
+            "6708c99068a6",
+            "705c2d655899",
+            "fba7fae78059"
+          ]
+        },
+        {
+          "text": "Rooney planned or pledged to direct her book royalties or revenues to Palestine Action.",
+          "sources": [
+            "705c2d655899",
+            "fba7fae78059"
+          ]
+        },
+        {
+          "text": "Rooney's publisher stated that she can no longer sell or receive royalties from her books in the UK.",
+          "sources": [
+            "9267dead62ca",
+            "fba7fae78059"
+          ]
+        },
+        {
+          "text": "Rooney is identified as Irish.",
+          "sources": [
+            "9267dead62ca",
+            "705c2d655899"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "fba7fae78059",
+              "quote": "Sally Rooney Withdraws Her Books From UK",
+              "field": "headline"
+            },
+            {
+              "article_id": "fba7fae78059",
+              "quote": "she pledged to donate book revenues to Palestine Action",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with Rooney as the one withdrawing her books, and explains the move through her pledge to donate revenues to the banned group.",
+              "sources": [
+                "fba7fae78059"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "e92a21256fc3",
+              "quote": "Sally Rooney books withdrawn from UK over Palestine Action support",
+              "field": "headline"
+            },
+            {
+              "article_id": "e92a21256fc3",
+              "quote": "the banned protest group Palestine Action",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Attributes the statement to Rooney herself and describes Palestine Action as a banned protest group.",
+              "sources": [
+                "e92a21256fc3"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not mention Rooney's pledge to donate royalties or book revenues to Palestine Action.",
+          "sources": [
+            "fba7fae78059"
+          ]
+        },
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not mention her publisher's involvement in the statement.",
+          "sources": [
+            "fba7fae78059"
           ]
         }
       ],
@@ -2451,35 +2370,22 @@
           "bloc": "west",
           "headline_quotes": [
             {
-              "article_id": "8c6f20393425",
-              "quote": "White House pushes out Kimberly Guilfoyle",
-              "field": "headline"
-            },
-            {
-              "article_id": "d200cfba7ded",
-              "quote": "President Trump cut her loose after damaging news reports",
+              "article_id": "e92a21256fc3",
+              "quote": "banned protest group Palestine Action",
               "field": "snippet"
             },
             {
-              "article_id": "d2191506ed88",
-              "quote": "the scandal is far from over",
-              "field": "headline"
+              "article_id": "fba7fae78059",
+              "quote": "could no longer receive royalties from British sales",
+              "field": "snippet"
             }
           ],
           "emphasis": [
             {
-              "text": "Emphasises the White House role in her exit following misconduct reports.",
+              "text": "Foregrounds the ban on Palestine Action and the royalties question as the reason sales stop.",
               "sources": [
-                "8c6f20393425",
-                "f590fb8e436f",
-                "d200cfba7ded"
-              ]
-            },
-            {
-              "text": "Raises what comes next, including her defending her reputation and an ongoing scandal.",
-              "sources": [
-                "d200cfba7ded",
-                "d2191506ed88"
+                "e92a21256fc3",
+                "fba7fae78059"
               ]
             }
           ]
@@ -2488,32 +2394,45 @@
           "bloc": "east",
           "headline_quotes": [
             {
-              "article_id": "6eb93cf3eeff",
-              "quote": "improper and possibly illegal conduct",
+              "article_id": "6708c99068a6",
+              "quote": "I am wholly prepared to accept the consequences",
               "field": "snippet"
             },
             {
-              "article_id": "bb4ae9e69a92",
-              "quote": "will bring down Trump family after her shocking ouster",
-              "field": "headline"
+              "article_id": "9267dead62ca",
+              "quote": "her publisher Faber said on Wednesday",
+              "field": "snippet"
             },
             {
-              "article_id": "bb4ae9e69a92",
-              "quote": "'burn book' fear",
-              "field": "headline"
+              "article_id": "f874197f4081",
+              "quote": "Award-winning author Sally Rooney’s books are being withdrawn",
+              "field": "snippet"
             }
           ],
           "emphasis": [
             {
-              "text": "Describes the allegations as involving possibly illegal conduct and severe criticism.",
+              "text": "Quotes Rooney's statement that she is prepared to accept the consequences of her beliefs.",
               "sources": [
-                "6eb93cf3eeff"
+                "6708c99068a6"
               ]
             },
             {
-              "text": "Leads with insiders' claims that she could damage the Trump family, referencing a 'burn book'.",
+              "text": "Attributes the announcement to her publisher Faber.",
               "sources": [
-                "bb4ae9e69a92"
+                "9267dead62ca"
+              ]
+            },
+            {
+              "text": "Describes Rooney as award-winning or bestselling.",
+              "sources": [
+                "f874197f4081",
+                "705c2d655899"
+              ]
+            },
+            {
+              "text": "Links the halt in sales to her plan to use royalties to support the banned group.",
+              "sources": [
+                "705c2d655899"
               ]
             }
           ]
@@ -2521,7 +2440,7 @@
       ],
       "east_west_contradictions": [],
       "validation": {
-        "kept": 29,
+        "kept": 23,
         "dropped_by_reason": {}
       }
     },
@@ -2612,7 +2531,7 @@
       ],
       "agreed_facts": [
         {
-          "text": "Russia has detained or arrested a Japanese journalist on allegations of spying.",
+          "text": "Russia detained or arrested a Japanese journalist on allegations of spying.",
           "sources": [
             "df43a1ddc0e2",
             "625a573867bb",
@@ -2640,7 +2559,7 @@
           ]
         },
         {
-          "text": "Russia's security service, the FSB, announced the detention.",
+          "text": "Russia's FSB security service announced the detention and made the allegation.",
           "sources": [
             "df43a1ddc0e2",
             "625a573867bb",
@@ -2648,7 +2567,7 @@
           ]
         },
         {
-          "text": "He is accused of collecting information about Russia's defences or military.",
+          "text": "The journalist is accused of collecting information about Russia's defences or military.",
           "sources": [
             "625a573867bb",
             "e700671ada82",
@@ -2663,7 +2582,12 @@
           "headline_quotes": [
             {
               "article_id": "df43a1ddc0e2",
-              "quote": "where he had been reporting on military recruitment",
+              "quote": "Russia Detains Japanese Journalist for Alleged Espionage",
+              "field": "headline"
+            },
+            {
+              "article_id": "df43a1ddc0e2",
+              "quote": "he had been reporting on military recruitment",
               "field": "snippet"
             },
             {
@@ -2673,28 +2597,28 @@
             },
             {
               "article_id": "625a573867bb",
-              "quote": "FSB security agency said reporter was arrested on island of Sakhalin",
-              "field": "snippet"
+              "quote": "Russia arrests Japanese journalist on allegations of spying",
+              "field": "headline"
             }
           ],
           "emphasis": [
             {
-              "text": "Notes the journalist had been reporting on military recruitment in the far east.",
+              "text": "Attributes the espionage allegation to Russia's security service, the FSB.",
+              "sources": [
+                "df43a1ddc0e2",
+                "625a573867bb"
+              ]
+            },
+            {
+              "text": "Notes the reporter had been covering military recruitment in the region.",
               "sources": [
                 "df43a1ddc0e2"
               ]
             },
             {
-              "text": "Leads with Japan's protest, reporting that Tokyo summoned Russia's ambassador.",
+              "text": "Reports Japan's protest, including Tokyo summoning Russia's ambassador.",
               "sources": [
                 "8807e44bc21b"
-              ]
-            },
-            {
-              "text": "Attributes the spying allegation to the FSB security agency.",
-              "sources": [
-                "625a573867bb",
-                "df43a1ddc0e2"
               ]
             }
           ]
@@ -2708,30 +2632,37 @@
           "bloc": "west",
           "headline_quotes": [
             {
-              "article_id": "8807e44bc21b",
-              "quote": "Tokyo summoned Russia’s ambassador",
-              "field": "snippet"
-            },
-            {
               "article_id": "df43a1ddc0e2",
               "quote": "Russia Detains Japanese Journalist for Alleged Espionage",
               "field": "headline"
             },
             {
+              "article_id": "8807e44bc21b",
+              "quote": "Tokyo summoned Russia’s ambassador",
+              "field": "snippet"
+            },
+            {
               "article_id": "625a573867bb",
-              "quote": "Russia arrests Japanese journalist on allegations of spying",
-              "field": "headline"
+              "quote": "FSB security agency said reporter was arrested on island of Sakhalin",
+              "field": "snippet"
             }
           ],
           "emphasis": [
             {
-              "text": "Reports Japan's diplomatic protest and the summoning of Russia's ambassador.",
+              "text": "Frames the spying accusation as an allegation attributed to the FSB.",
+              "sources": [
+                "df43a1ddc0e2",
+                "625a573867bb"
+              ]
+            },
+            {
+              "text": "Reports Japan's diplomatic protest and summoning of Russia's ambassador.",
               "sources": [
                 "8807e44bc21b"
               ]
             },
             {
-              "text": "Mentions the journalist's reporting on military recruitment.",
+              "text": "Mentions the reporter had been reporting on military recruitment.",
               "sources": [
                 "df43a1ddc0e2"
               ]
@@ -2753,25 +2684,30 @@
             },
             {
               "article_id": "428b34bd9bd9",
-              "quote": "The FSB claimed that the journalist had been gathering information on Russia's defense capabilities",
+              "quote": "The FSB claimed that the journalist had been gathering information on Russia's defense capabilities.",
               "field": "snippet"
+            },
+            {
+              "article_id": "e700671ada82",
+              "quote": "Russia detains Japanese journalist on suspicion of spying",
+              "field": "headline"
             }
           ],
           "emphasis": [
             {
-              "text": "Leads with Russian Foreign Ministry spokesperson Maria Zakharova's warning that Tokyo using correspondents to gather information will strain ties.",
+              "text": "Leads with Russian Foreign Ministry spokesperson Maria Zakharova's warning that Tokyo's use of correspondents to gather information will strain relations.",
               "sources": [
                 "e2f61158b6bc"
               ]
             },
             {
-              "text": "Places the arrest amid Russia-Japan tensions following Putin's August trip to the disputed Kuril Islands.",
+              "text": "Places the arrest in the context of Russia-Japan tensions after Putin's August trip to the disputed Kuril Islands.",
               "sources": [
                 "cffa69fe4dc8"
               ]
             },
             {
-              "text": "Attributes the defence-information allegation to the FSB and Moscow.",
+              "text": "Attributes the accusation of gathering defence information to the FSB or Moscow.",
               "sources": [
                 "428b34bd9bd9",
                 "e700671ada82"
@@ -2782,289 +2718,14 @@
       ],
       "east_west_contradictions": [],
       "validation": {
-        "kept": 22,
-        "dropped_by_reason": {}
-      }
-    },
-    {
-      "id": "435bb8a07bf5",
-      "title": "Container ships sink near Strait of Hormuz after attacks",
-      "rank": 7,
-      "outlet_count": 5,
-      "coverage": {
-        "lean": {
-          "left": 1,
-          "centre": 1,
-          "right": 1
-        },
-        "bloc": {
-          "west": 3,
-          "east": 2
-        }
-      },
-      "blindspot": {
-        "lean": null,
-        "bloc": null
-      },
-      "articles": [
-        {
-          "id": "ce335d873158",
-          "outlet_id": "japantimes",
-          "headline": "Iran shifting tactics to step up attacks on shipping before U.S. vote, officials say",
-          "snippet": "The strategy is designed to keep oil prices high, according to two senior Iranian officials.",
-          "url": "https://www.japantimes.co.jp/news/2026/10/14/world/politics/iran-tactics-shipping-attacks/",
-          "published_at": "2026-10-14T03:26:00Z",
-          "published_at_estimated": false
-        },
-        {
-          "id": "7a9c761ea52d",
-          "outlet_id": "bbc",
-          "headline": "Container ship hit by projectile sinks in Strait of Hormuz, Singapore says",
-          "snippet": "All 21 sailors on the Singapore-flagged GFS Pride were evacuated safely after it was hit by an projectile on Tuesday, maritime authorities say.",
-          "url": "https://www.bbc.co.uk/news/articles/crkg7q97z078o",
-          "published_at": "2026-10-14T15:34:19Z",
-          "published_at_estimated": false
-        },
-        {
-          "id": "22742c2a00c7",
-          "outlet_id": "thehindu",
-          "headline": "Iran reports cargo ship sinks after hitting mine in Strait of Hormuz",
-          "snippet": "It was the first time Iran has reported a ship sinking after hitting a mine during the war",
-          "url": "https://www.thehindu.com/news/international/iran-reports-cargo-ship-sinks-after-hitting-mine-in-strait-of-hormuz/article71585186.ece",
-          "published_at": "2026-10-14T16:41:54Z",
-          "published_at_estimated": false
-        },
-        {
-          "id": "e5a73f42cbbb",
-          "outlet_id": "guardian",
-          "headline": "Two container ships sink near strait of Hormuz amid surge in Iranian attacks",
-          "snippet": "Vessels were hit by missiles as rise in strikes suggests Iran is trying to close waterway before US midterm elections Two container ships near the strait of Hormuz have ⁠sunk after being struck by…",
-          "url": "https://www.theguardian.com/world/2026/oct/14/container-ship-sinks-strait-of-hormuz-surge-iranian-attacks-iran-us-midterm-elections",
-          "published_at": "2026-10-14T17:05:42Z",
-          "published_at_estimated": false
-        },
-        {
-          "id": "f8c68b391e4d",
-          "outlet_id": "thesun",
-          "headline": "Moment US helicopters blow up Iranian spy boat in huge blaze after sea mine sinks container ship carrying iPhones",
-          "snippet": "THIS is the moment US helicopters strike an Iranian spy boat with missiles sparking a huge onboard fireball. The strike came before a cargo ship carrying 2,500 containers hit an Iranian sea mine…",
-          "url": "https://www.thesun.co.uk/news/40690741/us-helicopters-destroy-iranian-spy-boat/",
-          "published_at": "2026-10-14T21:01:33Z",
-          "published_at_estimated": false
-        }
-      ],
-      "agreed_facts": [
-        {
-          "text": "A container or cargo ship sank in or near the Strait of Hormuz.",
-          "sources": [
-            "7a9c761ea52d",
-            "22742c2a00c7",
-            "e5a73f42cbbb",
-            "f8c68b391e4d"
-          ]
-        },
-        {
-          "text": "Iranian attacks on shipping are increasing.",
-          "sources": [
-            "ce335d873158",
-            "e5a73f42cbbb"
-          ]
-        },
-        {
-          "text": "The rise in attacks is linked to the timing of upcoming US elections.",
-          "sources": [
-            "ce335d873158",
-            "e5a73f42cbbb"
-          ]
-        },
-        {
-          "text": "A cargo ship sank after hitting a mine.",
-          "sources": [
-            "22742c2a00c7",
-            "f8c68b391e4d"
-          ]
-        }
-      ],
-      "framing": [
-        {
-          "lean": "left",
-          "headline_quotes": [
-            {
-              "article_id": "e5a73f42cbbb",
-              "quote": "Two container ships sink near strait of Hormuz amid surge in Iranian attacks",
-              "field": "headline"
-            },
-            {
-              "article_id": "e5a73f42cbbb",
-              "quote": "Iran is trying to close waterway before US midterm elections",
-              "field": "snippet"
-            }
-          ],
-          "emphasis": [
-            {
-              "text": "Leads with two ships sinking after missile strikes and presents this as part of a surge in Iranian attacks aimed at closing the waterway before US midterms.",
-              "sources": [
-                "e5a73f42cbbb"
-              ]
-            }
-          ]
-        },
-        {
-          "lean": "centre",
-          "headline_quotes": [
-            {
-              "article_id": "7a9c761ea52d",
-              "quote": "Container ship hit by projectile sinks in Strait of Hormuz, Singapore says",
-              "field": "headline"
-            },
-            {
-              "article_id": "7a9c761ea52d",
-              "quote": "All 21 sailors on the Singapore-flagged GFS Pride were evacuated safely",
-              "field": "snippet"
-            }
-          ],
-          "emphasis": [
-            {
-              "text": "Leads with a single Singapore-flagged ship hit by a projectile, attributing the account to Singapore's maritime authorities, and the safe evacuation of its 21 sailors.",
-              "sources": [
-                "7a9c761ea52d"
-              ]
-            }
-          ]
-        },
-        {
-          "lean": "right",
-          "headline_quotes": [
-            {
-              "article_id": "f8c68b391e4d",
-              "quote": "Moment US helicopters blow up Iranian spy boat in huge blaze",
-              "field": "headline"
-            },
-            {
-              "article_id": "f8c68b391e4d",
-              "quote": "sea mine sinks container ship carrying iPhones",
-              "field": "headline"
-            }
-          ],
-          "emphasis": [
-            {
-              "text": "Leads with US helicopters striking an Iranian spy boat, and describes the sunk ship as carrying 2,500 containers including iPhones after hitting an Iranian sea mine.",
-              "sources": [
-                "f8c68b391e4d"
-              ]
-            }
-          ]
-        }
-      ],
-      "omissions": [
-        {
-          "lean": "left",
-          "text": "Does not mention a US helicopter strike on an Iranian boat.",
-          "sources": [
-            "f8c68b391e4d"
-          ]
-        },
-        {
-          "lean": "centre",
-          "text": "Does not mention a US helicopter strike on an Iranian boat.",
-          "sources": [
-            "f8c68b391e4d"
-          ]
-        },
-        {
-          "lean": "centre",
-          "text": "Does not mention any link between the attacks and the US midterm elections.",
-          "sources": [
-            "e5a73f42cbbb"
-          ]
-        },
-        {
-          "lean": "right",
-          "text": "Does not mention any link between the attacks and the US midterm elections.",
-          "sources": [
-            "e5a73f42cbbb"
-          ]
-        }
-      ],
-      "contested_claims": [],
-      "opinion": [],
-      "framing_by_bloc": [
-        {
-          "bloc": "west",
-          "headline_quotes": [
-            {
-              "article_id": "7a9c761ea52d",
-              "quote": "Container ship hit by projectile sinks in Strait of Hormuz",
-              "field": "headline"
-            },
-            {
-              "article_id": "e5a73f42cbbb",
-              "quote": "Vessels were hit by missiles",
-              "field": "snippet"
-            },
-            {
-              "article_id": "f8c68b391e4d",
-              "quote": "US helicopters strike an Iranian spy boat with missiles",
-              "field": "snippet"
-            }
-          ],
-          "emphasis": [
-            {
-              "text": "Foregrounds the sinkings themselves, the crew evacuation, and a US military strike on an Iranian boat.",
-              "sources": [
-                "7a9c761ea52d",
-                "e5a73f42cbbb",
-                "f8c68b391e4d"
-              ]
-            }
-          ]
-        },
-        {
-          "bloc": "east",
-          "headline_quotes": [
-            {
-              "article_id": "ce335d873158",
-              "quote": "Iran shifting tactics to step up attacks on shipping before U.S. vote",
-              "field": "headline"
-            },
-            {
-              "article_id": "ce335d873158",
-              "quote": "designed to keep oil prices high",
-              "field": "snippet"
-            },
-            {
-              "article_id": "22742c2a00c7",
-              "quote": "Iran reports cargo ship sinks after hitting mine",
-              "field": "headline"
-            }
-          ],
-          "emphasis": [
-            {
-              "text": "Foregrounds Iranian sources: senior Iranian officials describing a strategy to keep oil prices high, and Iran's own report of a mine sinking.",
-              "sources": [
-                "ce335d873158",
-                "22742c2a00c7"
-              ]
-            },
-            {
-              "text": "Notes it was the first time Iran has reported a ship sinking after hitting a mine during the war.",
-              "sources": [
-                "22742c2a00c7"
-              ]
-            }
-          ]
-        }
-      ],
-      "east_west_contradictions": [],
-      "validation": {
-        "kept": 26,
+        "kept": 25,
         "dropped_by_reason": {}
       }
     },
     {
       "id": "196034b2a267",
-      "title": "Student protests in Albania turn violent as government buildings set alight",
-      "rank": 8,
+      "title": "Student protests in Albania turn violent as government buildings set on fire",
+      "rank": 7,
       "outlet_count": 5,
       "coverage": {
         "lean": {
@@ -3130,7 +2791,7 @@
       ],
       "agreed_facts": [
         {
-          "text": "Buildings were set on fire during protests in Albania.",
+          "text": "Student-led protests in Albania turned violent, with buildings set on fire.",
           "sources": [
             "1927cd3d9b18",
             "5ca9c5e4a2a5",
@@ -3140,16 +2801,7 @@
           ]
         },
         {
-          "text": "The protests were led by students.",
-          "sources": [
-            "1927cd3d9b18",
-            "5ca9c5e4a2a5",
-            "197aede13b7c",
-            "548b749f99ff"
-          ]
-        },
-        {
-          "text": "The unrest took place on the second day or night of protests.",
+          "text": "The unrest took place on the second day or night of demonstrations.",
           "sources": [
             "1927cd3d9b18",
             "5ca9c5e4a2a5",
@@ -3164,9 +2816,10 @@
           ]
         },
         {
-          "text": "Protesters clashed with police, and riot police were deployed.",
+          "text": "Thousands or tens of thousands of students took part.",
           "sources": [
-            "1927cd3d9b18",
+            "5ca9c5e4a2a5",
+            "29facbf10f43",
             "197aede13b7c",
             "548b749f99ff"
           ]
@@ -3179,10 +2832,8 @@
           ]
         },
         {
-          "text": "The protests involved thousands or tens of thousands of people.",
+          "text": "Protesters clashed with police.",
           "sources": [
-            "5ca9c5e4a2a5",
-            "29facbf10f43",
             "197aede13b7c",
             "548b749f99ff"
           ]
@@ -3201,11 +2852,6 @@
           "headline_quotes": [
             {
               "article_id": "197aede13b7c",
-              "quote": "demonstrators clash with police",
-              "field": "headline"
-            },
-            {
-              "article_id": "197aede13b7c",
               "quote": "Dozens of people detained",
               "field": "snippet"
             },
@@ -3217,13 +2863,13 @@
           ],
           "emphasis": [
             {
-              "text": "Leads with clashes with police and reports dozens of people detained.",
+              "text": "Emphasises detentions of dozens of people and clashes with police.",
               "sources": [
                 "197aede13b7c"
               ]
             },
             {
-              "text": "Gives education costs and corruption as the reasons for the march.",
+              "text": "Attributes the protests to education costs and corruption.",
               "sources": [
                 "197aede13b7c"
               ]
@@ -3240,38 +2886,32 @@
             },
             {
               "article_id": "5ca9c5e4a2a5",
-              "quote": "want better university conditions and job prospects",
-              "field": "snippet"
+              "quote": "Student protesters attack government buildings in Albania",
+              "field": "headline"
             },
             {
               "article_id": "29facbf10f43",
               "quote": "protestors demand PM Rama's resignation",
               "field": "headline"
-            },
-            {
-              "article_id": "29facbf10f43",
-              "quote": "turned violent for a second consecutive night",
-              "field": "snippet"
             }
           ],
           "emphasis": [
             {
-              "text": "Emphasises that this was the second day or night of protests.",
+              "text": "Leads with the fire at the Education Ministry and attacks on government buildings.",
               "sources": [
                 "1927cd3d9b18",
-                "5ca9c5e4a2a5",
-                "29facbf10f43"
+                "5ca9c5e4a2a5"
               ]
             },
             {
-              "text": "Foregrounds protesters' demands, from better university conditions and job prospects to Prime Minister Rama's resignation.",
+              "text": "Reports protesters' demands for better university conditions and job prospects, and for PM Rama's resignation.",
               "sources": [
                 "5ca9c5e4a2a5",
                 "29facbf10f43"
               ]
             },
             {
-              "text": "Names the Education Ministry as the site of a fire and likens the outbreak to protests in France.",
+              "text": "Notes the deployment of riot police and compares the outbreak to protests in France.",
               "sources": [
                 "1927cd3d9b18"
               ]
@@ -3299,13 +2939,13 @@
           ],
           "emphasis": [
             {
-              "text": "Describes participants as rioters and furious pupils, and leads with burning buildings and street blazes.",
+              "text": "Leads with burning buildings and street blazes, describing participants as rioters.",
               "sources": [
                 "548b749f99ff"
               ]
             },
             {
-              "text": "Reports protesters hurling rocks at police.",
+              "text": "Emphasises protesters throwing rocks at police.",
               "sources": [
                 "548b749f99ff"
               ]
@@ -3316,22 +2956,30 @@
       "omissions": [
         {
           "lean": "right",
-          "text": "Does not mention the protesters' stated demands over education, university conditions or jobs.",
+          "text": "Does not mention the protesters' stated grievances or demands, such as education costs, university conditions or the PM's resignation.",
           "sources": [
             "5ca9c5e4a2a5",
+            "29facbf10f43",
             "197aede13b7c"
           ]
         },
         {
           "lean": "right",
-          "text": "Does not mention detentions.",
+          "text": "Does not mention that people were detained.",
           "sources": [
             "197aede13b7c"
           ]
         },
         {
+          "lean": "left",
+          "text": "Does not mention the demand for PM Rama's resignation.",
+          "sources": [
+            "29facbf10f43"
+          ]
+        },
+        {
           "lean": "centre",
-          "text": "Does not mention detentions.",
+          "text": "Does not mention that dozens of people were detained.",
           "sources": [
             "197aede13b7c"
           ]
@@ -3342,22 +2990,6 @@
           "sources": [
             "197aede13b7c",
             "548b749f99ff"
-          ]
-        },
-        {
-          "lean": "left",
-          "text": "Does not mention the demand for Prime Minister Rama's resignation.",
-          "sources": [
-            "29facbf10f43"
-          ]
-        },
-        {
-          "lean": "left",
-          "text": "Does not mention that this was the second day of protests.",
-          "sources": [
-            "1927cd3d9b18",
-            "5ca9c5e4a2a5",
-            "29facbf10f43"
           ]
         }
       ],
@@ -3374,23 +3006,18 @@
             },
             {
               "article_id": "197aede13b7c",
-              "quote": "demonstrators clash with police",
+              "quote": "Student protests in Albania turn violent as demonstrators clash with police",
               "field": "headline"
             },
             {
               "article_id": "548b749f99ff",
               "quote": "rioters clash with cops",
               "field": "headline"
-            },
-            {
-              "article_id": "29facbf10f43",
-              "quote": "protestors demand PM Rama's resignation",
-              "field": "headline"
             }
           ],
           "emphasis": [
             {
-              "text": "Leads with buildings set alight and clashes with police during student protests.",
+              "text": "Leads with violence and buildings set on fire during student protests.",
               "sources": [
                 "1927cd3d9b18",
                 "5ca9c5e4a2a5",
@@ -3400,7 +3027,7 @@
               ]
             },
             {
-              "text": "Reports demands over education, jobs, corruption and the prime minister's resignation.",
+              "text": "Reports grievances over education, jobs and corruption, and calls for the PM's resignation.",
               "sources": [
                 "5ca9c5e4a2a5",
                 "29facbf10f43",
@@ -3412,19 +3039,19 @@
       ],
       "east_west_contradictions": [],
       "validation": {
-        "kept": 37,
+        "kept": 32,
         "dropped_by_reason": {}
       }
     },
     {
-      "id": "173d69be3106",
-      "title": "India's youth-led Cockroach protests face crackdown as leaders jailed",
-      "rank": 9,
+      "id": "7eeab6dd9e83",
+      "title": "Kimberly Guilfoyle resigns as US ambassador to Greece after misconduct reports",
+      "rank": 8,
       "outlet_count": 5,
       "coverage": {
         "lean": {
-          "left": 2,
-          "centre": 1,
+          "left": 1,
+          "centre": 2,
           "right": 0
         },
         "bloc": {
@@ -3438,127 +3065,86 @@
       },
       "articles": [
         {
-          "id": "ad122763d949",
-          "outlet_id": "nyt",
-          "headline": "After Lockdown, Sea of Protesters Flows Through India’s Capital",
-          "snippet": "The raucous demonstrations by opposition groups on Monday followed days of an effective lockdown and mass detentions of young protesters by security forces.",
-          "url": "https://www.nytimes.com/2026/10/12/world/asia/india-protests-congress-rahul-gandhi.html",
-          "published_at": "2026-10-13T21:30:32Z",
+          "id": "8c6f20393425",
+          "outlet_id": "axios",
+          "headline": "White House pushes out Kimberly Guilfoyle after misconduct reports",
+          "snippet": "Kimberly Guilfoyle, the U.S. ambassador to Greece, announced her resignation Tuesday, shortly after the White House asked her to step down and following reports alleging misconduct before and during…",
+          "url": "https://www.axios.com/2026/10/13/kimberly-guilfoyle-greece-ambassador-resigns-trump",
+          "published_at": "2026-10-13T16:24:13Z",
           "published_at_estimated": false
         },
         {
-          "id": "be037c10c46e",
-          "outlet_id": "guardian",
-          "headline": "‘How do you explain the deletion of 130 million names?’: why Indian voters are on the streets",
-          "snippet": "Anger at electoral roll changes has boiled over, sparking a crisis for Narendra Modi’s Hindu nationalist government Leaders of India’s Cockroach party jailed Born into a small village in West…",
-          "url": "https://www.theguardian.com/world/2026/oct/14/india-protests-election-commission-gyanesh-kumar",
-          "published_at": "2026-10-14T02:09:22Z",
-          "published_at_estimated": false
-        },
-        {
-          "id": "7b94b62e2e63",
-          "outlet_id": "guardian",
-          "headline": "Leaders of India’s Cockroach party jailed for violating ban on protest site",
-          "snippet": "Ashutosh Ranka and Saurav Das will spend spend five days in prison for entering Delhi’s Jantar Mantar – a historic protest site that has been closed by authorities Why Indian voters are on the…",
-          "url": "https://www.theguardian.com/world/2026/oct/14/leaders-of-indias-cockroach-party-jailed-for-violating-ban-on-protest-site",
-          "published_at": "2026-10-14T05:29:23Z",
-          "published_at_estimated": false
-        },
-        {
-          "id": "a7eda0f71f79",
-          "outlet_id": "scmp",
-          "headline": "India jails ‘cockroach’ leaders over protests against alleged voter roll manipulation",
-          "snippet": "Two leaders of India’s youth-led Cockroach Janta Party (CJP) were remanded in custody for five days on Wednesday, as police ratcheted up efforts to clamp down on anti-election commission protests…",
-          "url": "https://www.scmp.com/news/asia/south-asia/article/3370868/india-jails-cockroach-leaders-over-protests-against-alleged-voter-roll-manipulation",
-          "published_at": "2026-10-14T08:48:44Z",
-          "published_at_estimated": false
-        },
-        {
-          "id": "7c4c73ad062b",
-          "outlet_id": "nyt",
-          "headline": "Indian Protesters Describe Rough Treatment by the Police",
-          "snippet": "Some of those detained accused security forces of beating them during an intense crackdown on demonstrations in India’s capital over the weekend. Police have said they followed the law.",
-          "url": "https://www.nytimes.com/2026/10/14/world/asia/india-protests-police-brutality.html",
-          "published_at": "2026-10-14T09:52:43Z",
-          "published_at_estimated": false
-        },
-        {
-          "id": "665cf4050bc2",
-          "outlet_id": "france24",
-          "headline": "‘The idea that Modi must be feared because he holds all levers of power has gone out of the window’",
-          "snippet": "Is Narendra Modi losing his most powerful political asset: the perception of invincibility? As India's youth protest movement confronts an increasingly combative government, Dr. Subir Sinha…",
-          "url": "https://www.france24.com/en/the-idea-that-modi-must-be-feared-because-he-holds-all-levers-of-power-has-gone-out-of-the-window",
-          "published_at": "2026-10-14T16:51:51Z",
-          "published_at_estimated": false
-        },
-        {
-          "id": "f3fafd06f3f8",
-          "outlet_id": "guardian",
-          "headline": "India’s cockroach protesters defy Modi’s crackdown – The Latest",
-          "snippet": "A fresh wave of protests by India’s youth-led Cockroach movement has been met with a brutal crackdown by Narendra Modi’s government and the closure of a historic protest site in Delhi. Two of the…",
-          "url": "https://www.theguardian.com/news/audio/2026/oct/14/indias-cockroach-protesters-defy-modis-crackdown-the-latest",
-          "published_at": "2026-10-14T17:40:05Z",
-          "published_at_estimated": false
-        },
-        {
-          "id": "e1bd2ebe33c7",
-          "outlet_id": "france24",
-          "headline": "How far will cockroach movement go? India's youth-led protests defy Modi government",
-          "snippet": "It all started as a bit of online satire by a few young people fed up by corruption. Clearly though, the Cockroach movement's no longer a laughing matter for India’s government which has shut…",
-          "url": "https://www.france24.com/en/tv-shows/the-debate/20261014-how-far-will-cockroach-movement-go-india-s-youth-led-protests-defy-modi-government",
-          "published_at": "2026-10-14T18:40:21Z",
-          "published_at_estimated": false
-        },
-        {
-          "id": "12944d24257e",
+          "id": "6eb93cf3eeff",
           "outlet_id": "thehindu",
-          "headline": "U.S. lawmaker concerned over India’s actions to 'purge 130 million people’ from voter rolls",
-          "snippet": "Pramila Jayapal, the Democratic Congresswoman from Washington State, said she supported the non-violent protests to counter \"anti-democratic efforts in India”",
-          "url": "https://www.thehindu.com/news/international/us-lawmaker-pramila-jayapal-concerned-over-sir-voter-rolls-deletions/article71585479.ece",
-          "published_at": "2026-10-14T19:30:20Z",
+          "headline": "Trump's Ambassador to Greece resigns after allegations of improper conduct",
+          "snippet": "Mr. Trump's administration said on Tuesday (October 13) it had asked her to leave her post after she faced severe criticism over allegations she engaged in improper and possibly illegal conduct…",
+          "url": "https://www.thehindu.com/news/international/trumps-ambassador-to-greece-resigns-after-allegations-of-improper-conduct/article71582055.ece",
+          "published_at": "2026-10-14T02:42:11Z",
+          "published_at_estimated": false
+        },
+        {
+          "id": "f590fb8e436f",
+          "outlet_id": "npr",
+          "headline": "Trump's ambassador to Greece, Kimberly Guilfoyle, resigns after allegations of improper conduct",
+          "snippet": "The White House publicly asked for U.S. Ambassador to Greece Kimberly Guilfoyle's resignation on Tuesday as she faced mounting accusations of improper conduct.",
+          "url": "https://www.npr.org/2026/10/14/g-s1-148027/trump-ambassador-greece-resignation",
+          "published_at": "2026-10-14T09:09:39Z",
+          "published_at_estimated": false
+        },
+        {
+          "id": "d200cfba7ded",
+          "outlet_id": "nyt",
+          "headline": "Kimberly Guilfoyle’s Rise and Fall as Trump’s Ambassador to Greece",
+          "snippet": "President Trump cut her loose after damaging news reports about her tenure as ambassador to Greece. Once a prominent Trump insider, she suggested she will now fight to defend her reputation.",
+          "url": "https://www.nytimes.com/2026/10/13/us/politics/kimberly-guilfoyle-resigns-trump-ambassador-greece.html",
+          "published_at": "2026-10-14T14:17:27Z",
+          "published_at_estimated": false
+        },
+        {
+          "id": "bb4ae9e69a92",
+          "outlet_id": "toi",
+          "headline": "Kimberly Guilfoyle will bring down Trump family after her shocking ouster, insiders aware of her 'burn book' fear",
+          "snippet": "",
+          "url": "https://timesofindia.indiatimes.com/world/us/kimberly-guilfoyle-will-bring-down-trump-family-after-her-shocking-ouster-insiders-aware-of-her-burn-book-fear/articleshow/134947874.cms",
+          "published_at": "2026-10-14T17:28:17Z",
           "published_at_estimated": false
         }
       ],
       "agreed_facts": [
         {
-          "text": "Two leaders of India's youth-led Cockroach party were jailed or remanded in custody for five days.",
+          "text": "Kimberly Guilfoyle has left her post as US ambassador to Greece.",
           "sources": [
-            "7b94b62e2e63",
-            "a7eda0f71f79",
-            "be037c10c46e"
+            "8c6f20393425",
+            "6eb93cf3eeff",
+            "f590fb8e436f",
+            "d200cfba7ded",
+            "bb4ae9e69a92"
           ]
         },
         {
-          "text": "The protest movement is described as youth-led.",
+          "text": "The White House, or Trump's administration, asked her to leave the post.",
           "sources": [
-            "a7eda0f71f79",
-            "f3fafd06f3f8",
-            "e1bd2ebe33c7",
-            "665cf4050bc2"
+            "8c6f20393425",
+            "6eb93cf3eeff",
+            "f590fb8e436f",
+            "d200cfba7ded"
           ]
         },
         {
-          "text": "The protests are linked to changes to India's electoral rolls, with 130 million names cited as removed or targeted.",
+          "text": "Her departure followed reports or allegations of misconduct or improper conduct.",
           "sources": [
-            "be037c10c46e",
-            "a7eda0f71f79",
-            "12944d24257e"
+            "8c6f20393425",
+            "6eb93cf3eeff",
+            "f590fb8e436f",
+            "d200cfba7ded"
           ]
         },
         {
-          "text": "Authorities closed Jantar Mantar, a historic protest site in Delhi.",
+          "text": "The resignation and the White House request came on Tuesday.",
           "sources": [
-            "7b94b62e2e63",
-            "f3fafd06f3f8"
-          ]
-        },
-        {
-          "text": "Security forces carried out a crackdown on the protests, including detentions of young protesters in the capital.",
-          "sources": [
-            "ad122763d949",
-            "7c4c73ad062b",
-            "f3fafd06f3f8",
-            "a7eda0f71f79"
+            "8c6f20393425",
+            "6eb93cf3eeff",
+            "f590fb8e436f"
           ]
         }
       ],
@@ -3567,44 +3153,32 @@
           "lean": "left",
           "headline_quotes": [
             {
-              "article_id": "ad122763d949",
-              "quote": "Sea of Protesters Flows Through India’s Capital",
+              "article_id": "d200cfba7ded",
+              "quote": "Rise and Fall as Trump’s Ambassador to Greece",
               "field": "headline"
             },
             {
-              "article_id": "f3fafd06f3f8",
-              "quote": "met with a brutal crackdown",
+              "article_id": "d200cfba7ded",
+              "quote": "Once a prominent Trump insider",
               "field": "snippet"
             },
             {
-              "article_id": "7c4c73ad062b",
-              "quote": "accused security forces of beating them",
+              "article_id": "d200cfba7ded",
+              "quote": "she will now fight to defend her reputation",
               "field": "snippet"
-            },
-            {
-              "article_id": "be037c10c46e",
-              "quote": "How do you explain the deletion of 130 million names?",
-              "field": "headline"
             }
           ],
           "emphasis": [
             {
-              "text": "Leads with protesters' accounts of rough treatment and beatings by security forces, alongside police saying they followed the law.",
+              "text": "Frames the story as the arc of her career as a former Trump insider, with Trump described as having cut her loose.",
               "sources": [
-                "7c4c73ad062b"
+                "d200cfba7ded"
               ]
             },
             {
-              "text": "Describes anger over electoral roll changes as a crisis for Narendra Modi's Hindu nationalist government.",
+              "text": "Reports that she suggested she will fight to defend her reputation.",
               "sources": [
-                "be037c10c46e"
-              ]
-            },
-            {
-              "text": "Foregrounds the scale of protests following a lockdown and mass detentions.",
-              "sources": [
-                "ad122763d949",
-                "f3fafd06f3f8"
+                "d200cfba7ded"
               ]
             }
           ]
@@ -3613,32 +3187,33 @@
           "lean": "centre",
           "headline_quotes": [
             {
-              "article_id": "e1bd2ebe33c7",
-              "quote": "How far will cockroach movement go?",
+              "article_id": "8c6f20393425",
+              "quote": "White House pushes out Kimberly Guilfoyle",
               "field": "headline"
             },
             {
-              "article_id": "665cf4050bc2",
-              "quote": "the perception of invincibility",
+              "article_id": "f590fb8e436f",
+              "quote": "mounting accusations of improper conduct",
               "field": "snippet"
             },
             {
-              "article_id": "e1bd2ebe33c7",
-              "quote": "online satire by a few young people fed up by corruption",
+              "article_id": "f590fb8e436f",
+              "quote": "The White House publicly asked for",
               "field": "snippet"
             }
           ],
           "emphasis": [
             {
-              "text": "Emphasises the movement's origins as online satire by young people frustrated with corruption.",
+              "text": "Leads with the White House's role in asking for her resignation.",
               "sources": [
-                "e1bd2ebe33c7"
+                "8c6f20393425",
+                "f590fb8e436f"
               ]
             },
             {
-              "text": "Focuses on whether Modi's perceived invincibility is eroding as the movement confronts the government.",
+              "text": "Notes the alleged misconduct covered the period before and during her tenure.",
               "sources": [
-                "665cf4050bc2"
+                "8c6f20393425"
               ]
             }
           ]
@@ -3647,72 +3222,47 @@
       "omissions": [
         {
           "lean": "centre",
-          "text": "Centre coverage does not mention the jailing of the Cockroach party's leaders.",
+          "text": "Centre coverage does not mention that she suggested she will fight to defend her reputation.",
           "sources": [
-            "7b94b62e2e63",
-            "be037c10c46e"
-          ]
-        },
-        {
-          "lean": "centre",
-          "text": "Centre coverage does not mention electoral roll changes as a cause of the protests.",
-          "sources": [
-            "be037c10c46e"
-          ]
-        },
-        {
-          "lean": "left",
-          "text": "Left coverage does not mention the movement's origins in online satire about corruption.",
-          "sources": [
-            "e1bd2ebe33c7"
+            "d200cfba7ded"
           ]
         }
       ],
       "contested_claims": [],
-      "opinion": [
-        {
-          "text": "Dr Subir Sinha argues that the idea Modi must be feared because he holds all levers of power has gone out of the window.",
-          "sources": [
-            "665cf4050bc2"
-          ]
-        }
-      ],
+      "opinion": [],
       "framing_by_bloc": [
         {
           "bloc": "west",
           "headline_quotes": [
             {
-              "article_id": "f3fafd06f3f8",
-              "quote": "India’s cockroach protesters defy Modi’s crackdown",
+              "article_id": "8c6f20393425",
+              "quote": "White House pushes out Kimberly Guilfoyle",
               "field": "headline"
             },
             {
-              "article_id": "7c4c73ad062b",
-              "quote": "Indian Protesters Describe Rough Treatment by the Police",
-              "field": "headline"
+              "article_id": "f590fb8e436f",
+              "quote": "mounting accusations of improper conduct",
+              "field": "snippet"
             },
             {
-              "article_id": "665cf4050bc2",
-              "quote": "the perception of invincibility",
+              "article_id": "d200cfba7ded",
+              "quote": "President Trump cut her loose after damaging news reports",
               "field": "snippet"
             }
           ],
           "emphasis": [
             {
-              "text": "Foregrounds the crackdown, police treatment of detainees and the closure of the protest site.",
+              "text": "Focuses on the White House pushing her out following misconduct reports.",
               "sources": [
-                "f3fafd06f3f8",
-                "7c4c73ad062b",
-                "7b94b62e2e63",
-                "ad122763d949"
+                "8c6f20393425",
+                "f590fb8e436f",
+                "d200cfba7ded"
               ]
             },
             {
-              "text": "Frames the protests as a challenge to Modi and his government.",
+              "text": "Notes her past as a prominent Trump insider and her intention to defend her reputation.",
               "sources": [
-                "be037c10c46e",
-                "665cf4050bc2",
-                "e1bd2ebe33c7"
+                "d200cfba7ded"
               ]
             }
           ]
@@ -3721,32 +3271,37 @@
           "bloc": "east",
           "headline_quotes": [
             {
-              "article_id": "a7eda0f71f79",
-              "quote": "India jails ‘cockroach’ leaders over protests against alleged voter roll manipulation",
-              "field": "headline"
-            },
-            {
-              "article_id": "a7eda0f71f79",
-              "quote": "anti-election commission protests",
+              "article_id": "6eb93cf3eeff",
+              "quote": "improper and possibly illegal conduct",
               "field": "snippet"
             },
             {
-              "article_id": "12944d24257e",
-              "quote": "purge 130 million people",
+              "article_id": "6eb93cf3eeff",
+              "quote": "severe criticism",
+              "field": "snippet"
+            },
+            {
+              "article_id": "bb4ae9e69a92",
+              "quote": "will bring down Trump family after her shocking ouster",
+              "field": "headline"
+            },
+            {
+              "article_id": "bb4ae9e69a92",
+              "quote": "'burn book' fear",
               "field": "headline"
             }
           ],
           "emphasis": [
             {
-              "text": "Describes the protests as directed against the election commission and alleged voter roll manipulation.",
+              "text": "Describes the allegations as involving improper and possibly illegal conduct.",
               "sources": [
-                "a7eda0f71f79"
+                "6eb93cf3eeff"
               ]
             },
             {
-              "text": "Leads with US Congresswoman Pramila Jayapal's concern over the voter roll changes and her support for non-violent protests.",
+              "text": "Leads with insiders' claims that she could bring down the Trump family, citing fears of a 'burn book'.",
               "sources": [
-                "12944d24257e"
+                "bb4ae9e69a92"
               ]
             }
           ]
@@ -3754,14 +3309,14 @@
       ],
       "east_west_contradictions": [],
       "validation": {
-        "kept": 31,
+        "kept": 26,
         "dropped_by_reason": {}
       }
     },
     {
-      "id": "c9683817a71f",
-      "title": "Houthis strike Saudi Aramco building and threaten further attacks",
-      "rank": 10,
+      "id": "4f44ad545ff7",
+      "title": "Houthis strike Saudi Aramco building in Dhahran and vow more attacks",
+      "rank": 9,
       "outlet_count": 5,
       "coverage": {
         "lean": {
@@ -3804,6 +3359,15 @@
           "snippet": "A Saudi Energy Ministry official said an administrative building belonging to oil giant Aramco in Dhahran was struck on Tuesday (October 13, 2026) evening, resulting in a “limited fire” but “no…",
           "url": "https://www.thehindu.com/news/international/saudi-says-houthi-attacks-sparked-aramco-fire-wounded-4-in-riyadh/article71582466.ece",
           "published_at": "2026-10-14T07:22:38Z",
+          "published_at_estimated": false
+        },
+        {
+          "id": "be89d04bea91",
+          "outlet_id": "huffpost",
+          "headline": "Iran-Backed Houthis Struck Saudi Oil Giant Aramco's Executive Offices, Officials Say",
+          "snippet": "The strike marks the latest demonstration of the Houthis’ ability to attack high-profile targets.",
+          "url": "https://www.huffpost.com/entry/riyadh-explosions-houthi-rebels_n_6acf5645e4b08a0fe85498f8",
+          "published_at": "2026-10-14T10:20:19Z",
           "published_at_estimated": false
         },
         {
@@ -3854,11 +3418,12 @@
       ],
       "agreed_facts": [
         {
-          "text": "A building belonging to Saudi Aramco was struck or targeted in an attack.",
+          "text": "A building belonging to Saudi oil company Aramco was struck in an attack.",
           "sources": [
             "686f128a0bba",
             "9282e988c2f7",
             "8dbc1dbffb92",
+            "be89d04bea91",
             "038c46793633",
             "53ff89e04534",
             "4e69f8ec1937",
@@ -3866,7 +3431,14 @@
           ]
         },
         {
-          "text": "The Houthis said or claimed they had targeted Aramco facilities.",
+          "text": "Saudi Energy Ministry officials said the strike caused a limited fire in an Aramco administrative building.",
+          "sources": [
+            "9282e988c2f7",
+            "8dbc1dbffb92"
+          ]
+        },
+        {
+          "text": "The Houthis said they had targeted facilities or sites belonging to Saudi Aramco.",
           "sources": [
             "53ff89e04534",
             "4e69f8ec1937",
@@ -3874,14 +3446,7 @@
           ]
         },
         {
-          "text": "The Saudi Energy Ministry reported a limited fire in an Aramco administrative building.",
-          "sources": [
-            "9282e988c2f7",
-            "8dbc1dbffb92"
-          ]
-        },
-        {
-          "text": "The Houthis vowed or threatened further attacks after the strike.",
+          "text": "The Houthis vowed further attacks or threatened escalation after the strike.",
           "sources": [
             "038c46793633",
             "53ff89e04534",
@@ -3889,10 +3454,18 @@
           ]
         },
         {
-          "text": "The attack is linked to Aramco's headquarters.",
+          "text": "The targeted site is described as Aramco's headquarters or executive offices.",
           "sources": [
             "686f128a0bba",
+            "be89d04bea91",
             "038c46793633",
+            "9bdb44d13f1b"
+          ]
+        },
+        {
+          "text": "The Houthis are described as Iran-backed.",
+          "sources": [
+            "be89d04bea91",
             "9bdb44d13f1b"
           ]
         }
@@ -3908,21 +3481,32 @@
             },
             {
               "article_id": "9282e988c2f7",
-              "quote": "Saudi Ministry Of Energy Reports Limited Fire",
+              "quote": "Limited Fire In Building At Aramco Compound",
+              "field": "headline"
+            },
+            {
+              "article_id": "be89d04bea91",
+              "quote": "Iran-Backed Houthis Struck Saudi Oil Giant Aramco's Executive Offices",
               "field": "headline"
             }
           ],
           "emphasis": [
             {
-              "text": "Places the strike within an escalating Houthi–Saudi war and notes the Saudi-led coalition said it was targeting Houthi capabilities.",
+              "text": "Leads with an escalating war between the Houthis and Saudi Arabia and notes the Saudi-led coalition said it was targeting Houthi capabilities.",
               "sources": [
                 "686f128a0bba"
               ]
             },
             {
-              "text": "Leads with the Saudi Energy Ministry's account of a limited fire in an administrative building.",
+              "text": "Foregrounds the Saudi ministry's account of a limited fire.",
               "sources": [
                 "9282e988c2f7"
+              ]
+            },
+            {
+              "text": "Describes the strike as a demonstration of the Houthis' ability to attack high-profile targets.",
+              "sources": [
+                "be89d04bea91"
               ]
             }
           ]
@@ -3937,13 +3521,20 @@
             },
             {
               "article_id": "4e69f8ec1937",
-              "quote": "Houthis threaten escalation",
+              "quote": "Houthis threaten escalation after strike on Saudi oil giant Aramco",
               "field": "headline"
             }
           ],
           "emphasis": [
             {
-              "text": "Leads with the Houthis' own claim of targeting Aramco and their threat of further attacks or escalation.",
+              "text": "Leads with the Houthis' own claim of responsibility and their threats of further attacks.",
+              "sources": [
+                "53ff89e04534",
+                "4e69f8ec1937"
+              ]
+            },
+            {
+              "text": "Notes Saudi officials reported a strike on a building in an area housing Aramco's operations centre.",
               "sources": [
                 "53ff89e04534",
                 "4e69f8ec1937"
@@ -3955,7 +3546,7 @@
       "omissions": [
         {
           "lean": "left",
-          "text": "Left coverage does not mention the Houthis vowing more attacks or threatening escalation.",
+          "text": "Left coverage does not mention the Houthis vowing further attacks or threatening escalation after the strike.",
           "sources": [
             "53ff89e04534",
             "4e69f8ec1937"
@@ -3963,16 +3554,16 @@
         },
         {
           "lean": "centre",
-          "text": "Centre coverage does not mention the limited fire reported by the Saudi Energy Ministry.",
+          "text": "Centre coverage does not mention the Saudi ministry's report of a limited fire.",
           "sources": [
             "9282e988c2f7"
           ]
         },
         {
           "lean": "centre",
-          "text": "Centre coverage does not mention the Saudi-led coalition's statement that it was targeting Houthi capabilities.",
+          "text": "Centre coverage does not describe the Houthis as Iran-backed.",
           "sources": [
-            "686f128a0bba"
+            "be89d04bea91"
           ]
         }
       ],
@@ -3984,7 +3575,12 @@
           "headline_quotes": [
             {
               "article_id": "686f128a0bba",
-              "quote": "Saudi Energy Giant Struck",
+              "quote": "War Spikes Between Houthis and Saudi Arabia",
+              "field": "headline"
+            },
+            {
+              "article_id": "be89d04bea91",
+              "quote": "Iran-Backed Houthis Struck Saudi Oil Giant Aramco's Executive Offices",
               "field": "headline"
             },
             {
@@ -3995,14 +3591,20 @@
           ],
           "emphasis": [
             {
-              "text": "Emphasises the Saudi Energy Ministry's report of a limited fire and the Saudi-led coalition's targeting of Houthi capabilities.",
+              "text": "Foregrounds escalation between the Houthis and Saudi Arabia and the Saudi-led coalition's response.",
               "sources": [
                 "686f128a0bba",
+                "4e69f8ec1937"
+              ]
+            },
+            {
+              "text": "Reports the Saudi ministry's account of a limited fire.",
+              "sources": [
                 "9282e988c2f7"
               ]
             },
             {
-              "text": "Foregrounds the Houthi claim of responsibility and threat of escalation.",
+              "text": "Leads with the Houthis' claim of responsibility.",
               "sources": [
                 "53ff89e04534",
                 "4e69f8ec1937"
@@ -4015,39 +3617,49 @@
           "headline_quotes": [
             {
               "article_id": "8dbc1dbffb92",
-              "quote": "wounded 4 in Riyadh",
+              "quote": "Saudi says Houthi attacks sparked Aramco fire, wounded 4 in Riyadh",
               "field": "headline"
             },
             {
-              "article_id": "9bdb44d13f1b",
-              "quote": "Iran-backed Houthis strike Saudi oil company Aramco's headquarters",
+              "article_id": "038c46793633",
+              "quote": "Yemen’s Houthis vow more attacks on Saudi airports, oil facilities after Aramco HQ hit",
               "field": "headline"
             },
             {
               "article_id": "8dac459bc729",
               "quote": "Houthis claim attacks on Saudi Aramco sites and Riyadh airport",
               "field": "headline"
+            },
+            {
+              "article_id": "9bdb44d13f1b",
+              "quote": "There were no casualties in the attack",
+              "field": "snippet"
             }
           ],
           "emphasis": [
             {
-              "text": "Reports Houthi threats against Saudi airports and claimed attacks on Riyadh airport, and four people wounded in Riyadh.",
+              "text": "Reports attacks beyond Dhahran, including four wounded in Riyadh and a claimed attack on Riyadh airport.",
               "sources": [
-                "038c46793633",
-                "8dac459bc729",
-                "8dbc1dbffb92"
+                "8dbc1dbffb92",
+                "8dac459bc729"
               ]
             },
             {
-              "text": "States the Houthis say they are retaliating for Saudi backing of Yemeni government forces in a war that restarted last month.",
+              "text": "Gives the Houthis' stated reason: retaliation for Saudi backing of Yemeni government forces in a war that restarted last month.",
               "sources": [
                 "038c46793633"
               ]
             },
             {
-              "text": "Describes the Houthis as Iran-backed and reports damage to the building's top three floors with no casualties.",
+              "text": "Details damage: no casualties at the Aramco site and damage to the building's top three floors.",
               "sources": [
                 "9bdb44d13f1b"
+              ]
+            },
+            {
+              "text": "Notes Houthi threats against Saudi airports as well as oil facilities.",
+              "sources": [
+                "038c46793633"
               ]
             }
           ]
@@ -4055,7 +3667,315 @@
       ],
       "east_west_contradictions": [],
       "validation": {
-        "kept": 25,
+        "kept": 33,
+        "dropped_by_reason": {}
+      }
+    },
+    {
+      "id": "ae83cfc9b5cb",
+      "title": "Federal investigators seize Ilhan Omar's phone and subpoena relatives",
+      "rank": 10,
+      "outlet_count": 4,
+      "coverage": {
+        "lean": {
+          "left": 2,
+          "centre": 1,
+          "right": 1
+        },
+        "bloc": {
+          "west": 4,
+          "east": 0
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": "west"
+      },
+      "articles": [
+        {
+          "id": "6270d8d7d9ce",
+          "outlet_id": "axios",
+          "headline": "Rep. Ilhan Omar under investigation by Jeanine Pirro's office",
+          "snippet": "U.S. Attorney Jeanine Pirro said her office is probing Rep. Ilhan Omar's (D-Minn.) financial disclosures, the day after federal agents searched the congresswoman's Washington, D.C. home. The big…",
+          "url": "https://www.axios.com/2026/10/13/ilhan-omar-investigation-finances-pirro",
+          "published_at": "2026-10-13T20:52:07Z",
+          "published_at_estimated": false
+        },
+        {
+          "id": "ae105c1e7a09",
+          "outlet_id": "axios",
+          "headline": "Democrats fear \"more October surprises\" after \"bullshit\" raid on Ilhan Omar's home",
+          "snippet": "Congressional Democrats' private text chains lit up with fear and anger on Monday after Department of Homeland Security agents searched Rep. Ilhan Omar's (D-Minn.) home in Washington, D.C. Why it…",
+          "url": "https://www.axios.com/2026/10/13/ilhan-omar-raid-democrats-reaction-midterms-2026",
+          "published_at": "2026-10-13T23:25:36Z",
+          "published_at_estimated": false
+        },
+        {
+          "id": "0429252275e7",
+          "outlet_id": "nbc",
+          "headline": "Feds seized Rep. Ilhan Omar’s phone, subpoenaed family members in immigration status probe",
+          "snippet": "Federal agents seized Democratic Rep.",
+          "url": "https://www.nbcnews.com/politics/trump-administration/doj-issues-subpoenas-probe-rep-ilhan-omars-immigration-status-family-m-rcna603444",
+          "published_at": "2026-10-14T17:40:41Z",
+          "published_at_estimated": false
+        },
+        {
+          "id": "45aeac8f93e7",
+          "outlet_id": "guardian",
+          "headline": "Ilhan Omar’s phone seized and relatives subpoenaed in criminal inquiry, source says",
+          "snippet": "Federal authorities issued more than a dozen grand jury subpoenas in inquiry into potential immigration fraud US politics live – latest updates Federal authorities investigating the Minnesota…",
+          "url": "https://www.theguardian.com/us-news/2026/oct/14/ilhan-omar-phone-seized-relatives-subpoenaed",
+          "published_at": "2026-10-14T22:22:14Z",
+          "published_at_estimated": false
+        },
+        {
+          "id": "688a8212a442",
+          "outlet_id": "nypost",
+          "headline": "Rep. Ilhan Omar’s phone seized by feds during DHS raid tied to potential immigration fraud",
+          "snippet": "Investigators issued more than a dozen subpoenas to Omar's family members over questions about her immigration paperwork.",
+          "url": "https://nypost.com/2026/10/14/us-news/rep-ilhan-omars-phone-seized-by-feds-during-dhs-raid-tied-to-potential-immigration-fraud/",
+          "published_at": "2026-10-15T00:59:18Z",
+          "published_at_estimated": false
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "Federal agents carried out a search or raid connected to Rep. Ilhan Omar, with the Department of Homeland Security named as involved.",
+          "sources": [
+            "6270d8d7d9ce",
+            "ae105c1e7a09",
+            "688a8212a442"
+          ]
+        },
+        {
+          "text": "Omar's Washington, D.C. home was searched by federal agents.",
+          "sources": [
+            "6270d8d7d9ce",
+            "ae105c1e7a09"
+          ]
+        },
+        {
+          "text": "Federal investigators seized Omar's phone.",
+          "sources": [
+            "0429252275e7",
+            "45aeac8f93e7",
+            "688a8212a442"
+          ]
+        },
+        {
+          "text": "Omar's family members were subpoenaed, with more than a dozen subpoenas issued.",
+          "sources": [
+            "0429252275e7",
+            "45aeac8f93e7",
+            "688a8212a442"
+          ]
+        },
+        {
+          "text": "The inquiry concerns Omar's immigration status or potential immigration fraud.",
+          "sources": [
+            "0429252275e7",
+            "45aeac8f93e7",
+            "688a8212a442"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "0429252275e7",
+              "quote": "Feds seized Rep. Ilhan Omar’s phone, subpoenaed family members in immigration status probe",
+              "field": "headline"
+            },
+            {
+              "article_id": "45aeac8f93e7",
+              "quote": "relatives subpoenaed in criminal inquiry, source says",
+              "field": "headline"
+            },
+            {
+              "article_id": "45aeac8f93e7",
+              "quote": "more than a dozen grand jury subpoenas",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the phone seizure and the subpoenas issued to Omar's relatives.",
+              "sources": [
+                "0429252275e7",
+                "45aeac8f93e7"
+              ]
+            },
+            {
+              "text": "Describes the case as an immigration status probe or criminal inquiry into potential immigration fraud, attributed in one article to a source.",
+              "sources": [
+                "0429252275e7",
+                "45aeac8f93e7"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "6270d8d7d9ce",
+              "quote": "Rep. Ilhan Omar under investigation by Jeanine Pirro's office",
+              "field": "headline"
+            },
+            {
+              "article_id": "ae105c1e7a09",
+              "quote": "Democrats fear \"more October surprises\" after \"bullshit\" raid on Ilhan Omar's home",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Foregrounds U.S. Attorney Jeanine Pirro's statement that her office is probing Omar's financial disclosures.",
+              "sources": [
+                "6270d8d7d9ce"
+              ]
+            },
+            {
+              "text": "Emphasises congressional Democrats' private reaction of fear and anger to the search of Omar's home.",
+              "sources": [
+                "ae105c1e7a09"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "right",
+          "headline_quotes": [
+            {
+              "article_id": "688a8212a442",
+              "quote": "phone seized by feds during DHS raid tied to potential immigration fraud",
+              "field": "headline"
+            },
+            {
+              "article_id": "688a8212a442",
+              "quote": "questions about her immigration paperwork",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Links the phone seizure to a DHS raid and to potential immigration fraud.",
+              "sources": [
+                "688a8212a442"
+              ]
+            },
+            {
+              "text": "Reports the subpoenas to family members as relating to questions about Omar's immigration paperwork.",
+              "sources": [
+                "688a8212a442"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not mention the seizure of Omar's phone or the subpoenas issued to her relatives.",
+          "sources": [
+            "0429252275e7",
+            "45aeac8f93e7",
+            "688a8212a442"
+          ]
+        },
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not mention that the inquiry concerns immigration status or potential immigration fraud.",
+          "sources": [
+            "0429252275e7",
+            "45aeac8f93e7",
+            "688a8212a442"
+          ]
+        },
+        {
+          "lean": "left",
+          "text": "Left coverage does not mention Jeanine Pirro's office probing Omar's financial disclosures.",
+          "sources": [
+            "6270d8d7d9ce"
+          ]
+        },
+        {
+          "lean": "right",
+          "text": "Right coverage does not mention Jeanine Pirro's office probing Omar's financial disclosures.",
+          "sources": [
+            "6270d8d7d9ce"
+          ]
+        },
+        {
+          "lean": "left",
+          "text": "Left coverage does not mention the search of Omar's home or a DHS raid.",
+          "sources": [
+            "6270d8d7d9ce",
+            "ae105c1e7a09",
+            "688a8212a442"
+          ]
+        },
+        {
+          "lean": "left",
+          "text": "Left coverage does not mention congressional Democrats' reaction to the search.",
+          "sources": [
+            "ae105c1e7a09"
+          ]
+        },
+        {
+          "lean": "right",
+          "text": "Right coverage does not mention congressional Democrats' reaction to the search.",
+          "sources": [
+            "ae105c1e7a09"
+          ]
+        }
+      ],
+      "contested_claims": [],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "0429252275e7",
+              "quote": "Feds seized Rep. Ilhan Omar’s phone",
+              "field": "headline"
+            },
+            {
+              "article_id": "6270d8d7d9ce",
+              "quote": "under investigation by Jeanine Pirro's office",
+              "field": "headline"
+            },
+            {
+              "article_id": "688a8212a442",
+              "quote": "DHS raid tied to potential immigration fraud",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Reports the phone seizure, subpoenas to relatives and an immigration-related inquiry.",
+              "sources": [
+                "0429252275e7",
+                "45aeac8f93e7",
+                "688a8212a442"
+              ]
+            },
+            {
+              "text": "Also reports a probe of Omar's financial disclosures and Democrats' reaction to the home search.",
+              "sources": [
+                "6270d8d7d9ce",
+                "ae105c1e7a09"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "validation": {
+        "kept": 30,
         "dropped_by_reason": {}
       }
     }
