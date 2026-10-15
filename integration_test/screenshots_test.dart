@@ -8,7 +8,6 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:in_app_purchase/in_app_purchase.dart';
 import 'package:integration_test/integration_test.dart';
 import 'package:sides/app/app.dart';
-import 'package:sides/core/config/app_config.dart';
 import 'package:sides/core/constants/copy.dart';
 import 'package:sides/core/launcher/link_launcher.dart';
 import 'package:sides/core/layout/breakpoints.dart';
@@ -19,57 +18,44 @@ import 'package:sides/features/digest/presentation/providers/digest_controller.d
 import 'package:sides/features/digest/presentation/screens/master_detail_screen.dart';
 import 'package:sides/features/purchases/data/store_gateway.dart';
 import 'package:sides/features/purchases/presentation/ad_free_controller.dart';
+import 'package:sides/features/settings/presentation/providers/settings_controller.dart';
 import 'package:sides/features/story/presentation/widgets/story_detail_view.dart';
 
-/// Store-screenshot harness and on-device journey test.
+/// Store-screenshot harness. Shot names are the `raw` names in
+/// `store_assets/screenshots/specs.json` (and `screenshot_specs.md`), so the
+/// framer (`store_assets/screenshots/render.sh`) reads the captures as-is.
 ///
-/// Runs the real app on the bundled sample digest (`assets/sample_digest.json`,
-/// the real 14 Oct 2026 run) with every seam overridden, so no network, no
-/// ads SDK, no StoreKit/Play Billing and no SharedPreferences are touched. It
-/// is the same composition `main()` uses for `SCREENSHOT_MODE=true`, minus the
-/// native store gateway.
+/// Each shot pumps the real app afresh at its own route on the bundled sample
+/// digest (`assets/sample_digest.json`, the 14 Oct 2026 run) with every seam
+/// overridden: no network, no ads SDK, no StoreKit/Play Billing, no
+/// SharedPreferences. The theme is forced per shot through the settings store.
 ///
-/// Journey check on a simulator (no PNGs written):
+/// The device decides the set: < 744 dp wide = the six `phone_*` shots plus
+/// `iap_review_settings` (the App Store IAP review screenshot); >= 744 dp =
+/// the four `ipad_*` shots (landscape, so the >= 1100 dp column layout shows).
 ///
-///   flutter test integration_test/screenshots_test.dart -d DEVICE_ID
+/// Capture, never run by hand (both scripts check count, size and md5):
+///   iOS:     scripts/publish/capture_ios.py   (host-side `simctl io`; the
+///            in-app `takeScreenshot` returns the launch screen on iOS sims)
+///   Android: scripts/publish/capture_android.sh (`takeScreenshot` through
+///            test_driver/integration_test.dart into `SCREENSHOT_DIR`)
 ///
-/// Store captures (the driver writes PNGs to `SCREENSHOT_DIR`, default
-/// `store_assets/screenshots/raw/DEVICE`; set it per device so a second run
-/// does not overwrite the first):
+/// iOS host mode (`--dart-define=SCREENSHOT_HOST_DIR=<dir>`): at each shot the
+/// test prints `SIDES_SHOT_READY <name>`, keeps pumping frames, and waits for
+/// the host to create `<dir>/<name>.done` after grabbing the simulator screen.
 ///
-///   SCREENSHOT_DIR=store_assets/screenshots/raw/iphone_69 \
-///   flutter drive --driver=test_driver/integration_test.dart \
-///     --target=integration_test/screenshots_test.dart -d DEVICE_ID \
-///     [--dart-define=SCREENSHOT_PRICE=£2.99]
-///
-/// Shots, in marketing order (no docs/ASO.md yet; reorder here when it lands):
-///   phone  (< 744 dp): 01_list, 02_story_lean, 03_story_west_east,
-///                      04_sources, 05_settings
-///   tablet (>= 744 dp): 01_master_detail, 02_story_lean (columns at
-///                      >= 1100 dp), 03_story_west_east, 04_sources,
-///                      05_settings
-///
-/// Always `md5` the PNGs afterwards: on some iOS simulator builds
-/// `takeScreenshot` returns the launch screen for every shot while every
-/// assertion here passes (see docs/TEST_PLAN.md).
+/// `--dart-define=SCREENSHOT_PRICE=£2.99` sets the localised price on the
+/// settings shot (default £2.99, the UK storefront the IAP is priced in).
 void main() {
   final IntegrationTestWidgetsFlutterBinding binding =
       IntegrationTestWidgetsFlutterBinding.ensureInitialized();
 
-  /// The store's localised price is shown verbatim on the settings screen;
-  /// pass the live tier's string when capturing for a given storefront.
   const String price = String.fromEnvironment(
     'SCREENSHOT_PRICE',
     defaultValue: '£2.99',
   );
+  const String hostDir = String.fromEnvironment('SCREENSHOT_HOST_DIR');
 
-  /// Story 5 (Sally Rooney, 3 Western / 4 Eastern outlets) makes the richest
-  /// West / East shot in the sample; story 1 the richest lean shot.
-  const String leanStoryId = 'c8bbc1a001c2';
-  const String blocStoryId = '8c5fe1c3c5b6';
-
-  // convertFlutterSurfaceToImage may run once per test (it asserts it has not
-  // already run); it is Android-only.
   bool surfaceConverted = false;
   final List<String> shots = <String>[];
 
@@ -81,18 +67,6 @@ void main() {
     }
   }
 
-  Future<void> shoot(WidgetTester tester, String name) async {
-    if (Platform.isAndroid && !surfaceConverted) {
-      await binding.convertFlutterSurfaceToImage();
-      surfaceConverted = true;
-    }
-    await tester.pump();
-    await binding.takeScreenshot(name);
-    shots.add(name);
-  }
-
-  /// Fails with what it was looking for: this runs unattended in the
-  /// publish stage, and "found 0 widgets" names nothing.
   void require(Finder finder, String what) {
     if (finder.evaluate().isEmpty) {
       fail(
@@ -102,6 +76,60 @@ void main() {
     }
   }
 
+  Future<void> shoot(WidgetTester tester, String name) async {
+    await settle(tester, 10);
+    if (hostDir.isNotEmpty) {
+      final File done = File('$hostDir/$name.done');
+      if (done.existsSync()) done.deleteSync();
+      // ignore: avoid_print
+      print('SIDES_SHOT_READY $name');
+      final DateTime until = DateTime.now().add(const Duration(seconds: 60));
+      while (!done.existsSync()) {
+        if (DateTime.now().isAfter(until)) {
+          fail('host never captured $name (no $hostDir/$name.done)');
+        }
+        await tester.pump(const Duration(milliseconds: 100));
+      }
+    } else {
+      if (Platform.isAndroid && !surfaceConverted) {
+        await binding.convertFlutterSurfaceToImage();
+        surfaceConverted = true;
+      }
+      await tester.pump();
+      await binding.takeScreenshot(name);
+    }
+    shots.add(name);
+  }
+
+  Future<void> launch(
+    WidgetTester tester,
+    String route,
+    ThemeMode theme,
+  ) async {
+    await tester.pumpWidget(
+      ProviderScope(
+        key: UniqueKey(),
+        overrides: [
+          settingsStoreProvider.overrideWithValue(
+            InMemorySettingsStore(<String, Object>{
+              ThemeModeController.key: theme.name,
+            }),
+          ),
+          digestRepositoryProvider.overrideWithValue(
+            BundledDigestRepository(bundle: rootBundle),
+          ),
+          storeGatewayProvider.overrideWithValue(_ScreenshotStore(price)),
+          reconcileAtLaunchProvider.overrideWithValue(false),
+          adsServiceProvider.overrideWithValue(const DisabledAdsService()),
+          linkLauncherProvider.overrideWithValue(_NoLaunch()),
+        ],
+        child: SidesApp(key: UniqueKey(), initialLocation: route),
+      ),
+    );
+    await settle(tester, 30);
+    require(find.byType(SidesApp), 'the app');
+  }
+
   Finder detailScrollable() => find
       .descendant(
         of: find.byType(StoryDetailView),
@@ -109,195 +137,140 @@ void main() {
       )
       .first;
 
-  /// Scrolls [target] fully on screen before tapping: a tap on a widget
-  /// that is built but off-screen only warns and silently misses.
-  Future<void> tapOnScreen(
-    WidgetTester tester,
-    Finder target,
-    Finder scrollable,
-    String what,
-  ) async {
-    await tester.scrollUntilVisible(target, 200, scrollable: scrollable);
-    await tester.ensureVisible(target);
-    await settle(tester);
-    require(target.hitTestable(), '$what (on screen)');
-    await tester.tap(target.hitTestable().first);
-    await settle(tester);
-  }
-
-  /// Brings [target] in the story page on screen at [alignment] (0 = top,
-  /// 1 = bottom). scrollUntilVisible alone stops once the target is built,
-  /// which can be inside the cache extent below the screen.
-  Future<void> reveal(
+  /// Scrolls the story page until [target] sits [below] dp under the top of
+  /// the story's scroll viewport (just under the app bar on phones).
+  Future<void> scrollTo(
     WidgetTester tester,
     Finder target, {
-    required double alignment,
+    double below = 120,
   }) async {
     await tester.scrollUntilVisible(
       target,
       300,
       scrollable: detailScrollable(),
     );
-    await Scrollable.ensureVisible(
-      tester.element(target.first),
-      alignment: alignment,
-    );
+    await Scrollable.ensureVisible(tester.element(target.first));
     await settle(tester);
+    final ScrollableState s = tester.state<ScrollableState>(detailScrollable());
+    final double top = tester.getTopLeft(detailScrollable()).dy;
+    final double at = tester.getTopLeft(target.first).dy;
+    final double want = (s.position.pixels + (at - top) - below).clamp(
+      s.position.minScrollExtent,
+      s.position.maxScrollExtent,
+    );
+    s.position.jumpTo(want);
+    await settle(tester);
+    require(target.hitTestable(), 'the scroll anchor on screen');
   }
 
-  Future<void> chooseAxis(WidgetTester tester, String label) async {
-    final Finder f = find.descendant(
-      of: find.byType(SegmentedButton<PerspectiveAxis>),
-      matching: find.text(label),
-    );
-    require(f, 'the "$label" axis switch');
-    await tester.tap(f);
-    await settle(tester);
-  }
+  const String leanStory = '/story/c8bbc1a001c2';
+  const String blocStory = '/story/8c5fe1c3c5b6?axis=bloc';
+  const String blindspotStory = '/story/b4b715a72e0d';
+  const String agreedStory = '/story/aa7201957adf';
+  const String sourcesStory = '/story/728984a49b5c';
+  final Finder blindspotChip = find.text(
+    'Only left-leaning outlets covered this',
+  );
+  final Finder sourcesHeader = find.textContaining('${Copy.sources} (');
 
-  /// Back the way the system gesture goes, not by an icon (the chevron
-  /// differs between iOS and Android).
-  Future<void> goBack(WidgetTester tester) async {
-    final NavigatorState nav = tester.state<NavigatorState>(
-      find.byType(Navigator).first,
-    );
-    if (nav.canPop()) nav.pop();
-    await settle(tester);
-  }
-
-  testWidgets('journey + store screenshots on the sample digest', (
+  testWidgets('store screenshots on the sample digest', (
     WidgetTester tester,
   ) async {
-    final _ScreenshotStore store = _ScreenshotStore(price);
-    await tester.pumpWidget(
-      ProviderScope(
-        overrides: [
-          settingsStoreProvider.overrideWithValue(InMemorySettingsStore()),
-          digestRepositoryProvider.overrideWithValue(
-            BundledDigestRepository(bundle: rootBundle),
-          ),
-          storeGatewayProvider.overrideWithValue(store),
-          reconcileAtLaunchProvider.overrideWithValue(false),
-          adsServiceProvider.overrideWithValue(const DisabledAdsService()),
-          linkLauncherProvider.overrideWithValue(_NoLaunch()),
-        ],
-        child: const SidesApp(),
-      ),
-    );
-    await settle(tester, 30);
-
+    // Tablets are captured in landscape (the >= 1100 dp column layout).
+    final Size dp = tester.view.physicalSize / tester.view.devicePixelRatio;
+    if (dp.shortestSide >= 600) {
+      await SystemChrome.setPreferredOrientations(<DeviceOrientation>[
+        DeviceOrientation.landscapeLeft,
+        DeviceOrientation.landscapeRight,
+      ]);
+      for (int i = 0; i < 40; i++) {
+        await tester.pump(const Duration(milliseconds: 100));
+      }
+    }
+    await launch(tester, '/', ThemeMode.light);
     final LayoutSize layout = LayoutSize.of(
       tester.element(find.byType(Scaffold).first),
     );
     final bool tablet = layout != LayoutSize.compact;
-    debugPrint(
+    // ignore: avoid_print
+    print(
       'screenshots: ${tester.view.physicalSize / tester.view.devicePixelRatio}'
-      ' dp → $layout',
+      ' dp -> $layout',
     );
 
-    // ---- 01: the digest (list, or list + story 1 on tablets) -------------
-    require(
-      find.textContaining('Last updated').hitTestable(),
-      'the digest header',
-    );
-    final Finder storyOne = find.textContaining('Pope Leo');
-    require(storyOne, 'story 1 in the list');
-    if (tablet) {
+    if (!tablet) {
+      require(
+        find.textContaining('Last updated').hitTestable(),
+        'the digest header',
+      );
+      require(find.textContaining('Pope Leo'), 'story 1 in the list');
+      await shoot(tester, 'phone_01_digest');
+
+      await launch(tester, leanStory, ThemeMode.light);
+      require(find.widgetWithText(Tab, 'Left'), 'the Left tab');
+      await shoot(tester, 'phone_02_wording');
+
+      await launch(tester, blocStory, ThemeMode.dark);
+      require(find.widgetWithText(Tab, 'West'), 'the West tab');
+      await shoot(tester, 'phone_03_west_east');
+
+      await launch(tester, blindspotStory, ThemeMode.light);
+      require(
+        blindspotChip.hitTestable(),
+        'the left-only blindspot chip on screen',
+      );
+      await shoot(tester, 'phone_04_blindspot');
+
+      await launch(tester, agreedStory, ThemeMode.light);
+      await scrollTo(tester, find.text(Copy.agreed));
+      await shoot(tester, 'phone_05_agreed');
+
+      await launch(tester, sourcesStory, ThemeMode.dark);
+      await scrollTo(tester, sourcesHeader);
+      await shoot(tester, 'phone_06_sources');
+
+      await launch(tester, '/settings', ThemeMode.light);
+      require(
+        find.text('Remove ads — $price').hitTestable(),
+        'the ad-free price button',
+      );
+      await shoot(tester, 'iap_review_settings');
+      expect(shots, hasLength(7));
+    } else {
       require(
         find.byKey(MasterDetailScreen.detailPaneKey),
         'the tablet detail pane',
       );
-      await shoot(tester, '01_master_detail');
-    } else {
-      await shoot(tester, '01_list');
-      await tester.tap(storyOne.first);
-      await settle(tester);
-    }
-
-    // ---- 02: story 1 by political lean --------------------------------------
-    require(find.byType(StoryDetailView), 'the story page for story 1');
-    if (layout == LayoutSize.expanded &&
-        find.byType(PerspectiveColumns).evaluate().isNotEmpty) {
+      if (layout != LayoutSize.expanded) {
+        fail(
+          'tablet shots need the >= 1100 dp column layout (landscape); got $layout',
+        );
+      }
+      await launch(tester, leanStory, ThemeMode.light);
       require(find.byKey(PerspectiveColumns.keyFor('left')), 'the Left column');
-    } else {
-      require(find.widgetWithText(Tab, 'Left'), 'the Left tab');
-    }
-    // Phone: from the top (title, coverage, axis switch, tabs). Tablet: 01
-    // already shows that, so show the shared sections instead.
-    if (tablet) {
-      await reveal(tester, find.text(Copy.agreed), alignment: 0.05);
-    }
-    await shoot(tester, '02_story_lean');
+      await shoot(tester, 'ipad_01_lean_columns');
 
-    // ---- 03: West / East on the story with the most Eastern coverage -------
-    if (tablet) {
-      await tapOnScreen(
-        tester,
-        find.descendant(
-          of: find.byKey(MasterDetailScreen.listPaneKey),
-          matching: find.textContaining('Sally Rooney'),
-        ),
+      await launch(tester, blocStory, ThemeMode.dark);
+      require(find.byKey(PerspectiveColumns.keyFor('east')), 'the East column');
+      await shoot(tester, 'ipad_02_bloc_dark');
+
+      await launch(tester, blindspotStory, ThemeMode.light);
+      require(
         find
             .descendant(
-              of: find.byKey(MasterDetailScreen.listPaneKey),
-              matching: find.byType(Scrollable),
+              of: find.byKey(MasterDetailScreen.detailPaneKey),
+              matching: blindspotChip,
             )
-            .first,
-        'story 5 in the list pane',
+            .hitTestable(),
+        'the blindspot chip in the detail pane',
       );
-    } else {
-      await goBack(tester);
-      await tapOnScreen(
-        tester,
-        find.textContaining('Sally Rooney'),
-        find.byType(Scrollable).first,
-        'story 5 in the list',
-      );
+      await shoot(tester, 'ipad_03_blindspot');
+
+      await launch(tester, sourcesStory, ThemeMode.light);
+      await scrollTo(tester, sourcesHeader, below: 80);
+      await shoot(tester, 'ipad_04_sources');
+      expect(shots, hasLength(4));
     }
-    require(
-      find.descendant(
-        of: find.byType(StoryDetailView),
-        matching: find.textContaining('Sally Rooney'),
-      ),
-      'story 5 ($blocStoryId) in the detail view',
-    );
-    await chooseAxis(tester, Copy.axisBloc);
-    if (find.byType(PerspectiveColumns).evaluate().isEmpty) {
-      require(find.widgetWithText(Tab, 'East'), 'the East tab');
-      await tester.tap(find.widgetWithText(Tab, 'East'));
-      await settle(tester);
-    } else {
-      require(find.byKey(PerspectiveColumns.keyFor('east')), 'the East column');
-    }
-    // The axis switch and East tab at the top, East framing below it.
-    await reveal(
-      tester,
-      find.byType(SegmentedButton<PerspectiveAxis>),
-      alignment: 0.02,
-    );
-    await shoot(tester, '03_story_west_east');
-
-    // ---- 04: every point is sourced (the story's Sources list) -------------
-    final Finder sources = find.textContaining('${Copy.sources} (');
-    await reveal(tester, sources, alignment: 0.05);
-    require(sources.hitTestable(), 'the Sources header on screen');
-    await shoot(tester, '04_sources');
-
-    // ---- 05: settings (ad-free, how it works) -------------------------------
-    if (!tablet) await goBack(tester);
-    await tester.tap(find.byTooltip('Settings'));
-    await settle(tester);
-    require(find.text('Settings'), 'the Settings screen');
-    require(find.text('Remove ads — $price'), 'the ad-free price button');
-    await shoot(tester, '05_settings');
-    await goBack(tester);
-
-    expect(shots, hasLength(5));
-    expect(find.byType(SidesApp), findsOneWidget);
-    expect(leanStoryId, isNotEmpty);
-    // The harness's own guarantees: nothing left the device.
-    expect(store.buyCalls, 0);
-    expect(AppConfig.digestUrl, startsWith('https://'));
   });
 }
 
