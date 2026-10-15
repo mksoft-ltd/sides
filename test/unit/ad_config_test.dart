@@ -6,12 +6,13 @@ import 'package:sides/core/config/ad_config.dart';
 
 void main() {
   group('m3: ad request configuration', () {
-    test('max ad content rating is T; not child-directed, not under age', () {
+    test('max ad content rating is T; not child-directed; age tag unset', () {
       final RequestConfiguration c = AdConfig.requestConfiguration;
       expect(c.maxAdContentRating, 'T');
       expect(c.maxAdContentRating, MaxAdContentRating.t);
       expect(c.tagForChildDirectedTreatment, TagForChildDirectedTreatment.no);
-      expect(c.tagForUnderAgeOfConsent, TagForUnderAgeOfConsent.no);
+      expect(c.tagForUnderAgeOfConsent, isNull,
+          reason: '"no" would claim no user is under the age of consent');
     });
 
     test('banner requests stay non-personalised', () {

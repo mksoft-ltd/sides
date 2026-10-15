@@ -39,12 +39,13 @@ abstract final class AdConfig {
       !releaseMode || liveIds;
 
   /// Applied once before the SDK initialises (compliance m3). Sides is rated
-  /// 13+/Teen, so no ad above T; the audience is general, so requests are
-  /// explicitly tagged not child-directed and not under the age of consent.
+  /// 13+/Teen, so no ad above T; the app is not directed at children, so
+  /// requests are tagged not child-directed. The under-age-of-consent tag is
+  /// left unset on purpose: "no" would assert that no user is under the age
+  /// of consent, which may be untrue for EEA readers aged 13-15.
   static RequestConfiguration get requestConfiguration => RequestConfiguration(
         maxAdContentRating: MaxAdContentRating.t,
         tagForChildDirectedTreatment: TagForChildDirectedTreatment.no,
-        tagForUnderAgeOfConsent: TagForUnderAgeOfConsent.no,
       );
 
   /// Every banner request: non-personalised everywhere (no ATT, no IDFA).
