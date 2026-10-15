@@ -1,5 +1,68 @@
 # Sides 1.0.0: publish status
 
+## Binaries and submission state (15 Oct 2026, after the live AdMob IDs)
+
+| Store | What is there (read back) |
+|---|---|
+| Play internal track | **1.0.0 (versionCode 2)**, status `completed`, notes en-GB + en-US. Signer = upload key EA:80:6D…B6:95. versionCode 1 (uploaded first) crashed at launch and was replaced; code 1 is burnt. |
+| Play IAP | `com.froggyeye.sides.adfree`, option `adfree-buy`, **ACTIVE**, GB £2.99 (GBP 2.99), US $2.99, legacyCompatible, listings en-GB + en-US. |
+| ASC build | **1.0.0 (1)**, `VALID`, minOs 15.0, usesNonExemptEncryption false, attached to version 1.0.0 (read back). Signed Apple Distribution 696939LPWV. |
+| ASC IAP | `6822977312` **READY_TO_SUBMIT** (not yet in a submission: console step below). |
+| ASC review submission | Draft `0affeefb-fdda-4bb3-a2e6-b9abfb22ff6a` (state READY_FOR_REVIEW = draft, 0 items, never submitted). Adding the version is refused only by `APP_DATA_USAGES_REQUIRED` (privacy label not published). |
+
+**Live AdMob IDs** (commit 3aacab8): iOS app `~7295598634` / unit `/1517403205`; Android app `~9395893220` / unit
+`/5017664516`, publisher `pub-6255057925578575`. Debug/profile builds keep Google's test units by design. Release
+artifacts contain no sample ID: AAB `libapp.so` (all 3 ABIs) and the IPA's `App.framework` carry only live units;
+IPA Info.plist and AAB manifest carry the live app IDs.
+
+**Release smoke test (Android, emulator `sides_capture`, release APK of the shipped config):** launches, loads the live
+15 Oct digest, banner fills. The SDK's own request log:
+`AdRequestServiceImpl: Sending request: https://googleads.g.doubleclick.net/mads/gma?...client=ca-app-pub-6255057925578575...slotname=5017664516...`,
+then `onSdkImpression`. The creative is labelled "Test Ad" because Google auto-flags emulators as test devices
+("This request is sent from a test device"); the unit requested is the live one. **iOS**: no physical iPhone is
+attached and Flutter release builds cannot run on a simulator, so iOS evidence is the binary (live IDs only, above).
+
+**What tripped and how it was handled:**
+- The first minified Android release (versionCode 1, already on internal) **crashed at launch**:
+  `Unable to get provider androidx.startup.InitializationProvider … Failed to create an instance of
+  androidx.work.impl.WorkDatabase` (R8 stripped WorkManager's Room DB constructor; WorkManager comes in with the ads
+  SDK). Fixed with keep rules in `android/app/proguard-rules.pro` (374b22a), verified on the emulator, re-uploaded as
+  versionCode 2. pubspec is now `1.0.0+2`; iOS is still build 1 (the fix is Android-only). Next build number must be
+  ≥3 on both stores.
+- The release-guard unit test pinned "no live IDs yet"; it now pins the live state and checks nothing is cross-wired.
+- **UMP consent form not configured:** on launch UMP logs `Publisher misconfiguration: … no form(s) configured for
+  the input app ID … ca-app-pub-6255057925578575~9395893220`. The app then still requests non-personalised ads, but
+  UK/EEA users get no consent message. Founder: AdMob → Privacy & messaging → create and publish the GDPR (European
+  regulations) message for both Sides apps.
+- **AdMob apps are "not yet listed on a store" (Requires review).** Once each listing is live, link it in AdMob → App
+  settings → App store details, then app-ads.txt verification runs.
+
+## Play Console declarations (driven in the browser by the conductor, 15 Oct 2026; all read back "Actioned")
+
+Privacy policy URL; Sign-in details (formerly App access) = no restricted parts; Ads = Yes; Target audience 13–15,
+16–17, 18+; Data safety = collects and shares, encrypted in transit, no account creation, no deletion mechanism, 5 data
+types (Approximate location, App interactions, Crash logs, Diagnostics, Device or other IDs), each collected and shared,
+not ephemeral, required, purposes per `android/fastlane/data_safety_answers.md`; Government apps No; Financial features
+none; Health none; Advertising ID Yes (Advertising/marketing, Analytics, Fraud prevention). Store settings: category
+News & magazines, tags "News & magazines" + "News aggregator" (no Politics/World tag offered). Play no longer has a
+separate "News apps" declaration (click-path row 6 obsolete). Still open on Play: Content rating (IARC terms need the
+founder's OK), Countries/regions (production only), Send for review (founder). Console account index for
+froggyeye.ltd@gmail.com in this Chrome profile is now `/u/0/`; deep links bounce to Home.
+
+## Exact remaining clicks (nothing has been submitted)
+
+1. **[F] ASC App Privacy:** enter the 7 data types from `ios/fastlane/privacy_details.json` → **Publish**.
+2. **ASC IAP page** (In-App Purchases → "Remove ads" / com.froggyeye.sides.adfree) → **Add for Review** → choose the
+   existing draft "Draft iOS Submission — Started by API user Q2GWD76GUV" (never "Create New Submission").
+3. **ASC version 1.0.0 → Add for Review** into the SAME draft (or the publisher adds it by API once step 1 is done).
+4. Read back: the draft must hold **2 items** (version + IAP).
+5. **[F] Submit for review** (App Store) — founder-confirmed.
+6. **[F] Play:** IARC content rating (accept terms), Countries/regions, create the production release from
+   versionCode 2 (draft until first rollout) → Publishing overview → **Send changes for review**.
+7. **[F] AdMob:** publish the UMP GDPR message for both apps; link store listings once live.
+
+## Earlier stage-7 prep
+
 Stage 7 (store-publisher), 15 Oct 2026. Every "done" line below was verified by an API read-back, not by a tool's
 exit code. Records: ASC app `6822909350`, Play app `4973894667859335790`, bundle/package `com.froggyeye.sides`.
 
