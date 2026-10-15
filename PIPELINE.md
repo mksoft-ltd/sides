@@ -2,7 +2,7 @@
 
 Store records (14 Oct 2026): ASC app 6822909350 · Play app 4973894667859335790 · bundle/package `com.froggyeye.sides` · website slug `sides`.
 Approved architecture plan: `~/.claude/plans/curried-herding-yao.md` (copied into `docs/PRODUCT_SPEC.md` at stage 1).
-Founder decisions 14 Oct 2026: Claude Opus 5.5 for the daily pipeline (paid, ~£18/mo); free app with AdMob banners + ad-free IAP `com.froggyeye.sides.adfree`; West/East axis with East–West contradictions; iPad/tablet supported.
+Founder decisions 14–15 Oct 2026: Claude Opus 5.5 for the daily pipeline at full settings — cost lever declined 15 Oct, keep ~$1.35/day (~£32/mo); free app with AdMob banners + ad-free IAP `com.froggyeye.sides.adfree`; West/East axis with East–West contradictions; iPad/tablet supported.
 
 | # | Stage | Status | Date | Notes |
 |---|-------|--------|------|-------|
