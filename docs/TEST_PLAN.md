@@ -179,6 +179,11 @@ screening only the headline + stored snippet and dropping the over-broad phrases
 (putting "new instructions" back fails it). A fresh live collect then dropped 0 of 713 articles as instruction-like and
 1 as `link_off_domain` (a `toi.li` shortener link from Times of Israel, dropped by design).
 
+Gates after fix round 2 (2caff21): `flutter analyze` clean · `flutter test` 227 passed · pytest 179 passed ·
+`flutter build apk --debug` OK, merged manifest and `aapt dump permissions` free of `ACCESS_ADSERVICES_*` · CI green
+(run 38663551017) · daily `dry_run=true` green in both jobs, `publish` reporting "nothing to publish"
+(runs 38663266608 and, after the false-positive fix, 38663551757: 659 articles, 0 items dropped).
+
 ## Fix round (15 Oct 2026, 3f24d7d)
 
 - F1 fixed in 3f24d7d: cache write failures no longer strand the refresh spinner.
