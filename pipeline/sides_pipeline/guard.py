@@ -13,7 +13,10 @@ Three deterministic layers, all pure functions:
    6 of 8 words with the story.
 3. :func:`ground_title` replaces an ungrounded or suspect title with the best-matching member headline.
 
-The patterns are deliberately phrase-level: single words such as "ignore" occur in ordinary news headlines.
+The patterns are deliberately phrase-level: single words such as "ignore" occur in ordinary news headlines, and so
+do "new instructions" (estate agents), "developer mode" and "jailbreak" (tech news) and "as an assistant" (sport), which
+is why none of those is a pattern. The collector screens only the text that would reach a prompt (the headline and the
+≤200-char snippet), never the feed's full summary. Calibrated against every enabled live feed on 15 Oct 2026.
 """
 
 from __future__ import annotations
@@ -32,16 +35,17 @@ _URL = re.compile(
 _HANDLE = re.compile(r"(?<![\w.])@[A-Za-z0-9_]{2,}")
 _INSTRUCTION = re.compile(
     r"|".join([
-        r"\b(?:ignore|disregard|forget|override)\b[^.]{0,40}\b(?:previous|prior|above|earlier|all|any|your|the)\b[^.]{0,20}"
-        r"\b(?:instructions?|prompts?|rules|directions|guidelines|context)\b",
+        # "ignore previous instructions", "disregard all prior rules", "forget the above prompt"
+        r"\b(?:ignore|disregard|forget|override)\W+(?:(?:all|any|the|your|of|these)\W+){0,3}"
+        r"(?:previous|prior|above|earlier|preceding|system)\W+(?:\w+\W+){0,2}?"
+        r"(?:instructions?|prompts?|rules|directions|messages|context)\b",
         r"\bsystem\s+prompt\b",
-        r"\bdeveloper\s+(?:message|mode)\b",
-        r"\bnew\s+instructions?\b",
-        r"\bas\s+an?\s+(?:ai|language\s+model|llm|assistant)\b",
-        r"\byou\s+are\s+(?:now\s+)?(?:an?\s+)?(?:ai|chatgpt|claude|gpt|llm|language\s+model|assistant)\b",
-        r"\b(?:summari[sz]e|describe|report|present|treat)\s+this\s+as\b",
+        r"\bdeveloper\s+message\b",
+        r"\bas\s+an?\s+(?:ai\s+(?:language\s+)?model|large\s+language\s+model|language\s+model|llm)\b",
+        r"\byou\s+are\s+now\s+(?:an?|the|my)\s+\w+",
+        r"\byou\s+are\s+(?:an?\s+)?(?:ai\s+model|chatgpt|claude|gpt|llm|language\s+model)\b",
+        r"\bsummari[sz]e\s+this\s+(?:as|story\s+as)\b",
         r"\b(?:all|every)\s+(?:outlets|sources)\s+(?:agree|confirm)\b",
-        r"\bjailbreak\b",
         r"</?\s*(?:system|instructions?|articles?|assistant|user)\s*>",
         r"^\s*(?:assistant|system|user)\s*:",
     ]),

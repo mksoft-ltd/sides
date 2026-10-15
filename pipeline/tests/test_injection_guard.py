@@ -54,6 +54,15 @@ def test_suspect_text_flags_links_handles_and_instructions(text, kind):
     "Immune system: new study on vaccines",
     "Inflation rises to 3.7% in September",
     "Assistant coach sacked after defeat",
+    # Live false positive, The National, 15 Oct 2026 (estate-agent "instructions"):
+    "New instructions in this market decreased by 30.3 per cent over the same period",
+    "Apple adds developer mode to watchOS",
+    "Hackers jailbreak the new iPhone within a day",
+    "Hired as an assistant manager at 24",
+    "Working as an AI researcher in Abu Dhabi",
+    "Court overrides the rules on asylum appeals",
+    "PM ignores the guidelines on lobbying",
+    "You are now able to renew your passport online",
 ])
 def test_suspect_text_leaves_ordinary_news_alone(text):
     assert suspect_text(text) is None and not instruction_like(text)

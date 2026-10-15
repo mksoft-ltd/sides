@@ -173,6 +173,11 @@ working tree), the new test failed with the predicted symptom, and the copy was 
 
 Calibration: all 37 live titles of 14 Oct pass the grounding rule, and 0 of 318 live analysis texts / 257 live
 articles trip the injection patterns (`test_every_live_title_is_grounded_and_no_live_text_is_suspect`).
+The first CI dry run (run 38663266608) found one false positive: The National's "Addison Lee taxi founder takes near 50%
+hit on London mansion sale" was dropped because its full feed summary said "New instructions in this market…". Fixed by
+screening only the headline + stored snippet and dropping the over-broad phrases; the sentence is now a regression case
+(putting "new instructions" back fails it). A fresh live collect then dropped 0 of 713 articles as instruction-like and
+1 as `link_off_domain` (a `toi.li` shortener link from Times of Israel, dropped by design).
 
 ## Fix round (15 Oct 2026, 3f24d7d)
 

@@ -100,8 +100,9 @@ def parse_feed(
             drops["link_off_domain"] += 1
             log.warning("%s: dropped item linking off the outlet's host: %s", outlet.id, link[:120])
             continue
-        summary = _entry_summary(entry)
-        if instruction_like(headline) or instruction_like(summary):
+        snippet = make_snippet(_entry_summary(entry), headline)
+        # Screen exactly what could reach a prompt: the headline and the stored snippet (not the full summary).
+        if instruction_like(headline) or instruction_like(snippet):
             drops["instruction_text"] += 1
             log.warning("%s: dropped item with instruction-like text: %r", outlet.id, headline[:120])
             continue
@@ -126,7 +127,7 @@ def parse_feed(
                 id=article_id(outlet.id, url),
                 outlet_id=outlet.id,
                 headline=headline,
-                snippet=make_snippet(summary, headline),
+                snippet=snippet,
                 url=url,
                 published_at=published,
                 published_at_estimated=estimated,

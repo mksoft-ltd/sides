@@ -64,8 +64,12 @@ stage offline from a recorded response (no key needed).
 - **Feed text is untrusted (security audit SEC-1/2/4, fix round 2).** Every `feed_url` must be https (the `Outlet`
   model refuses http). An item whose link is not on `home_url`'s host or a listed `link_hosts` host (subdomains
   included) is dropped (`link_off_domain`); `http://` links are upgraded. An item whose headline or snippet reads like
-  an instruction to a model (`guard.instruction_like`: "ignore previous instructions", "system prompt", "as an AI",
-  "all outlets agree", role tags…, phrase-level so ordinary news passes) is dropped before any prompt (`instruction_text`).
+  an instruction to a model (`guard.instruction_like`: "ignore previous instructions", "system prompt", "as an AI model",
+  "all outlets agree", role tags…) is dropped before any prompt (`instruction_text`). Only the headline and the stored
+  ≤200-char snippet are screened, never the full summary, and patterns are phrase-level: the first live dry run dropped
+  The National's property story on "New instructions in this market decreased…", so "new instructions", "developer
+  mode", "jailbreak" and bare "as an assistant/AI" are deliberately not patterns (regression cases in
+  `test_injection_guard.py`; 0 of 713 live articles trip the screen, 15 Oct 2026).
   Both are counted per outlet in `articles.json` `item_drops[]` and summarised in `meta.warnings`.
 - **Network is isolated in `fetch.py`.** Everything else takes an injected `fetch(url) -> bytes`, so tests
   run entirely on fixtures.
