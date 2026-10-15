@@ -12,7 +12,7 @@ Founder decisions 14 Oct 2026: Claude Opus 5.5 for the daily pipeline (paid, ~£
 | 1d | build: phone app (phase 4) | done | 2026-10-15 | analyze clean, 65 tests, apk + xcodebuild sim builds OK (note: `flutter build ios --simulator` lipo step fails on Xcode 27 — use archive/xcodebuild); screenshots docs/screenshots/phase4; commits 89e0e07 cd2c90f 2c11f72 |
 | 1e | build: tablet layout (phase 5) | done | 2026-10-15 | 85 tests; master-detail ≥744dp (all iPads, both orientations); 90 tests; commit 71a95fc; columns ≥1100dp; iPad screenshots docs/screenshots/phase5; commits f82ec19 157b14b 959978b |
 | 1f | build: deployment (phase 6) | done | 2026-10-15 | daily.yml 06:00 UTC + ci.yml; gh-pages live at https://mksoft-ltd.github.io/sides/digest/latest.json; first run $1.34; 128 pipeline tests; commits 74c2e5f ddfaa79 |
-| 2 | design | in-progress | 2026-10-15 | ui-designer |
+| 2 | design | done | 2026-10-15 | BRAND.md, cube icon wired both platforms (apk + Runner.app verified), icon_512, feature graphic, screenshot specs + headlines; 6 polish items listed in BRAND.md for the fix round; commit 6469a3f |
 | 3 | test | in-progress | 2026-10-15 | mobile-qa-architect |
 | 4a | code-review | pending | | mobile-code-reviewer |
 | 4b | security | pending | | mobile-security-auditor |
