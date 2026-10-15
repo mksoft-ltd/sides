@@ -1,5 +1,21 @@
 # Sides 1.0.0: publish status
 
+## Play production draft via API: refused, nothing committed (15 Oct 2026)
+
+Asked: stage a production `draft` release of versionCode 3 with all countries, committed with
+`changesNotSentForReview=true` so nothing goes to review. Result, inside one edit:
+- `countryTargeting` (explicit 174-region list + includeRestOfWorld, and includeRestOfWorld alone) → **400 "Country
+  targeting is only supported for staged releases."** `countryAvailability/production` is read-only (GET 204, no
+  countries set). So production countries/regions cannot be set through the API for a full release: console only.
+- The draft release without targeting was accepted in the edit, but `:commit?changesNotSentForReview=true` → **400
+  "Changes are sent for review automatically. The query parameter changesNotSentForReview must not be set."** A commit
+  without the flag was not allowed by the conductor, so the edit was deleted. Read back: production track has **no
+  release**; internal still `1.0.0 (3)` completed.
+- Remaining on Play (console, founder): Production → Countries/regions (add all), create the production release from
+  versionCode 3, Publishing overview → Send for review. Content rating is Completed (IARC done by the conductor). Apple
+  privacy label is published; version 1.0.0 sits in draft submission 0affeefb; the IAP still needs the founder's
+  "Add for Review" click.
+
 ## Build 3: new newspaper icon (15 Oct 2026, afternoon) — supersedes the build table below
 
 | Store | Read back |
