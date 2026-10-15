@@ -138,4 +138,28 @@ Checked by the original auditor. Pipeline suite: 179 passed (socket-guarded). Re
 
 **Re-verification verdict:** no finding regressed and none is Critical or High. SEC-9 is Medium and should go in the next fix round.
 
+### SEC-9 re-verification (15 Oct 2026, `main` at c64904b)
+
+**SEC-9: Fixed.** Pipeline suite: 189 passed.
+- **Script:** `--push-only` now runs `check_staged_site` first. It refuses any `.git*` path anywhere, any symlink, anything outside `digest/*.json`, `runs/*.json`, `index.html`, `privacy_policy.html` and `.nojekyll`, and any nested directories. It copies only the allow-listed entries and writes `.nojekyll` itself. Every git call goes through `g()`, which sets `-c core.hooksPath=/dev/null -c core.fsmonitor=false`.
+- **Replayed attacks against the fixed script** (scratch bare repo, the real script):
+
+| Planted in the artifact | Result |
+|---|---|
+| `.git/hooks/pre-commit` (the original proof) | refused, exit 1, hook not run |
+| `.git/config` with `core.fsmonitor` | refused, not run |
+| `digest/.git/hooks/pre-commit` (nested) | refused, not run |
+| `.gitattributes` | refused |
+| symlink `digest/etc.json → /etc` | refused |
+| extra top-level file `evil.sh` | refused, not on the allow-list |
+| directory named `digest/x.json` | refused |
+| clean site (`index.html`, `.nojekyll`, `digest/latest.json`) | published |
+
+- **Workflow:** the site upload no longer sets `include-hidden-files`; the log shows `include-hidden-files: false`. Both checkouts use `persist-credentials: false`, and the log shows checkout running `--unset-all http.https://github.com/.extraheader` in both jobs. The token appears only in the gh-pages push URL and the keepalive push.
+- **Full live run** [38664281596](https://github.com/mksoft-ltd/sides/actions/runs/38664281596) at c64904b: build and publish both succeeded, gh-pages is at e643702 "Digest 2026-10-15", and the live `digest/index.json` lists 2026-10-15 and 2026-10-14. This closes the "not yet exercised live" note above.
+  - **Log:** the only masked values are `ANTHROPIC_API_KEY: ***`, the token in `SITE_REMOTE_URL`, the checkout `token: ***` and the transient extraheader. No unmasked `sk-ant`, `ghs_` or `x-access-token:` appears.
+  - **Artifacts:** `site-38664281596` holds only `index.html`, `digest/*.json` and `runs/*.json`, with no hidden files. `pipeline-out-38664281596` holds `articles.json`, `stories.json`, `digest.json` and `runs/2026-10-15.json`. Neither contains any secret string.
+
+Open for publish: SEC-5, SEC-7 (accepted) and SEC-8, unchanged.
+
 Verdict: PASS
