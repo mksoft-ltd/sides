@@ -1,0 +1,20 @@
+Sides is a daily news digest published by Froggy Eye Ltd. It is free with a banner ad, plus one optional non-consumable in-app purchase (com.froggyeye.sides.adfree) that removes the ads.
+
+NO LOGIN
+There are no accounts. All functionality is available without signing in, so no demo account is needed.
+
+WHERE THE CONTENT COMES FROM
+The app downloads one public, static JSON file (https://mksoft-ltd.github.io/sides/digest/latest.json), generated once a day by our automated pipeline. The pipeline reads the public RSS feeds of 29 English-language news outlets (headlines and feed summaries of up to 200 characters, never article text), groups them into the day's top stories, and uses an AI model to compare how outlets of different political lean (left, centre, right) and from Western and Eastern countries frame each story. Every point cites the articles it rests on, and points that cannot be matched to a cited headline or summary are removed automatically before publication. The description discloses that the analysis is AI-generated. Original articles open in the device's browser, not in an in-app web view. Nothing is user-generated.
+
+Settings > Outlets and ratings lists every content source with its political lean, region, ownership and the public media-bias rating it is based on (AllSides, Ad Fontes Media). State-controlled outlets such as CGTN are labelled "state media" and included for comparison only.
+
+HOW TO TEST
+1. Launch the app (the first launch needs a network connection; afterwards the last digest is cached for offline reading). The list shows today's stories.
+2. Tap a story. Switch between "Political lean" and "West / East" at the top. Sections include what all sources agree on, headline wording per side, what each side leaves out, contested claims and opinion. Tap any source to open the original article in the browser.
+3. Blindspots: on the list, a story covered by only one side carries a chip such as "Only left-leaning outlets covered this" or "Only Western outlets covered this". Whether a story has one depends on the day's news, so not every day shows one; scroll the full list to find it.
+4. Ad-free purchase: tap the gear icon (top right of the list) to open Settings. Under "Ads", tap "Remove ads" (shows the localised price) and complete the sandbox purchase. The banner disappears immediately and the tile changes to "Ad-free unlocked". "Restore purchases" is under the button.
+
+ADS AND PRIVACY
+A Google AdMob banner appears only at the bottom of the list and story screens, never inside the sourced coverage, and only once a digest has loaded. Every ad request is non-personalised. The app does not access the advertising identifier (IDFA) and shows no App Tracking Transparency prompt. Google's User Messaging Platform shows a consent form where UK/EEA rules require it, and "Ad privacy options" in Settings reopens it in those regions. The app requests no device permissions.
+
+Contact: info@froggyeye.com

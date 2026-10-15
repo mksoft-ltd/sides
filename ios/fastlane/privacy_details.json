@@ -1,0 +1,37 @@
+[
+  {
+    "category": "DEVICE_ID",
+    "purposes": ["THIRD_PARTY_ADVERTISING", "DEVELOPERS_ADVERTISING", "ANALYTICS"],
+    "data_protections": ["DATA_LINKED_TO_YOU"]
+  },
+  {
+    "category": "COARSE_LOCATION",
+    "purposes": ["THIRD_PARTY_ADVERTISING", "DEVELOPERS_ADVERTISING", "ANALYTICS", "APP_FUNCTIONALITY"],
+    "data_protections": ["DATA_LINKED_TO_YOU"]
+  },
+  {
+    "category": "ADVERTISING_DATA",
+    "purposes": ["THIRD_PARTY_ADVERTISING", "DEVELOPERS_ADVERTISING", "ANALYTICS"],
+    "data_protections": ["DATA_LINKED_TO_YOU"]
+  },
+  {
+    "category": "PRODUCT_INTERACTION",
+    "purposes": ["THIRD_PARTY_ADVERTISING", "DEVELOPERS_ADVERTISING", "ANALYTICS", "APP_FUNCTIONALITY"],
+    "data_protections": ["DATA_LINKED_TO_YOU"]
+  },
+  {
+    "category": "PERFORMANCE_DATA",
+    "purposes": ["THIRD_PARTY_ADVERTISING", "DEVELOPERS_ADVERTISING", "ANALYTICS", "APP_FUNCTIONALITY"],
+    "data_protections": ["DATA_NOT_LINKED_TO_YOU"]
+  },
+  {
+    "category": "OTHER_DIAGNOSTIC_DATA",
+    "purposes": ["THIRD_PARTY_ADVERTISING", "DEVELOPERS_ADVERTISING", "ANALYTICS"],
+    "data_protections": ["DATA_NOT_LINKED_TO_YOU"]
+  },
+  {
+    "category": "CRASH_DATA",
+    "purposes": ["ANALYTICS"],
+    "data_protections": ["DATA_NOT_LINKED_TO_YOU"]
+  }
+]

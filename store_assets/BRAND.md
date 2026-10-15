@@ -130,7 +130,7 @@ the same strings for the renderer, so change both together.
 
 | # | Screen and state | Headline | Subline | Capture theme |
 |---|---|---|---|---|
-| 1 | Digest list, top of list | Every story, every angle | Today's top stories and who covered each one | light |
+| 1 | Digest list, top of list | Today's top stories, side by side | Today's top stories and who covered each one | light |
 | 2 | Story 1, Political lean, Left tab, top | Compare how each side words it | Real headline quotes from left, centre and right | light |
 | 3 | Story 5, West / East, West tab, top | See how West and East differ | Western and Eastern outlets on the same story | dark |
 | 4 | Story 7 (left-only blindspot chip), top | See what only one side covered | Blindspot labels flag one-sided coverage | light |

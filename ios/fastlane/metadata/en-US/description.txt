@@ -1,0 +1,34 @@
+Sides puts the day's top news stories side by side, so you can compare how left, center and right outlets, and Western and Eastern outlets, cover the same events.
+
+ONCE A DAY, THE TOP STORIES
+Each morning Sides gathers headlines and short summaries from 29 English-language news outlets and groups them into a daily news digest of the top stories, usually 5 to 10. Each story is covered by at least three different outlets. The app downloads one file a day and keeps it, so the latest digest opens instantly and stays readable offline.
+
+COMPARE HEADLINES, SIDE BY SIDE
+• Headline wording: real quotes from each outlet's own headline or summary, grouped by political lean and labeled by outlet.
+• Coverage bars show which outlets, and which sides, covered each story.
+• Blindspots: a story covered only by left-leaning outlets, or only by Western outlets, is marked as such.
+• What all sources agree on, what each side leaves out, contested claims, and opinion pieces kept apart from the reporting.
+
+WESTERN AND EASTERN OUTLETS
+Alongside UK, US and European outlets, Sides reads outlets based in the Middle East, India, China, Japan and South Korea, plus The Moscow Times. A West / East view compares how each group frames a story and lists East–West contradictions when the day's coverage has them. When it does not, the app says none were found. State-controlled outlets such as CGTN carry a visible "state media" label. They are included so their framing can be compared, not endorsed.
+
+EVERY POINT LINKS TO ITS SOURCE
+Tap a source to read the original article on the outlet's own website. Sides shows headlines and short summaries only, never full articles.
+
+HOW IT WORKS, AND ITS LIMITS
+• The comparison is generated automatically by an AI model from headlines and short summaries, once a day. No human editor writes or reviews it.
+• Before publication, each point is checked automatically against the headlines and summaries it cites. Points that cannot be traced to a source are left out.
+• Political-lean labels come from published media-bias ratings by AllSides and Ad Fontes Media. Outlets outside the UK/US left–right scale, including state media, appear in the West / East comparison only.
+• Sides does not rate the accuracy of any outlet or story.
+• The content sources are listed in the app: Settings › Outlets and ratings shows each outlet with its lean, region, ownership and rating source.
+
+ALSO
+• Phone and tablet layouts. On larger tablets the sides appear in columns.
+• Light and dark themes, and your device's text size up to 200%.
+• No account and no sign-in.
+
+FREE, WITH ONE OPTIONAL PURCHASE
+Sides is free and shows a small banner ad at the bottom of the screen. Ads never appear inside the sourced coverage, and ad requests are non-personalised. A one-time in-app purchase removes the banner ads for good. There is no subscription. Restore purchases is in Settings.
+
+Sides is published by Froggy Eye Ltd. Questions and feedback: info@froggyeye.com
+Privacy policy: https://mksoft-ltd.github.io/sides/privacy_policy.html
