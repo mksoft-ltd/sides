@@ -59,11 +59,11 @@ stage 7 closes. Neither needs a change to `lib/` or the metadata text. M1 closed
 2. **M2: publish-stage swaps (stage 7), in this order.**
    - Create the AdMob apps and units. Replace the five IDs listed in `docs/RELEASE_CHECKLIST.md` §1 and check iOS and Android are not cross-wired.
    - Refresh `SKAdNetworkItems`.
-   - Re-check that no keystore exists (confirmed again today: no `key.properties`, no `*.jks`, Play tracks empty), generate it, and wire it per §7/§30. Verify the AAB signer SHA-1.
-   - PATCH the ASC version string to `1.0.0` so the build attaches.
+   - *Keystore: superseded 15 Oct 2026, generated and verified (SHA-1 EA:80:6D…B6:95). Never regenerate.* Re-check that no keystore exists (confirmed again today: no `key.properties`, no `*.jks`, Play tracks empty), generate it, and wire it per §7/§30. Verify the AAB signer SHA-1.
+   - PATCH the ASC version string to `1.0.0` so the build attaches. *Done 15 Oct 2026.*
    - Create the IAP in both consoles, add the IAP to the submission from its own page, and confirm **2 items** (§15).
    - Build the release from the commit with live IDs and smoke-test the banner and the purchase sheet on a device.
-3. **M3: re-capture and re-render the screenshots (stage 7).**
+3. **M3: re-capture and re-render the screenshots (stage 7).** *Superseded 15 Oct 2026 (store-publisher): done and uploaded, see docs/PUBLISH_STATUS.md. Do not act on this item.*
    - Align the harness output names with `specs.json` `raw` names, or the reverse.
    - Capture iOS (iPhone 6.9"/6.5", iPad 13") and Android phone/tablet separately, so no iPhone status bar lands on Play.
    - Re-render every target and open each PNG.

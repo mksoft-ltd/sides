@@ -1,5 +1,7 @@
 # Sides 1.0.0: release checklist (console-only work for the publish stage)
 
+Progress and read-back evidence from stage 7: `docs/PUBLISH_STATUS.md`.
+
 Written 15 Oct 2026 by release-manager (stage 5b). Store text is in `ios/fastlane/metadata/` and
 `android/fastlane/metadata/android/` (en-GB + en-US on both stores) and uploads verbatim. Console answers are in
 `android/fastlane/data_safety_answers.md` (Play) and `ios/fastlane/privacy_details.json` + `privacy_details_rationale.md`
@@ -26,7 +28,7 @@ Owner key: **[F]** founder-only click, **[A]** app change (a fix agent; release-
     (`ca-app-pub-3940256099942544~3347511713`) → live Android app ID
   Check the iOS and Android IDs are not cross-wired (an iOS unit in the Android build serves nothing). Keep the
   `testBanner*` constants: debug and profile builds must keep using them.
-- [ ] **[A] Refresh SKAdNetwork IDs.** `ios/Runner/Info.plist` holds 50 `SKAdNetworkItems`. Replace the list with
+- [x] **[A] Refresh SKAdNetwork IDs.** Checked 15 Oct 2026 (store-publisher): the 50 entries already equal Google's current list, set difference empty both ways; no edit. `ios/Runner/Info.plist` holds 50 `SKAdNetworkItems`. Replace the list with
   Google's current one from the Google Mobile Ads iOS quick-start page and keep any non-Google entries.
 - [x] **[P] Upload keystore (house-facts §7, §26, §30).** Done 15 Oct 2026 by store-publisher, after re-checking
   that no keystore or `key.properties` existed anywhere in the repo and that every Play track was empty.
@@ -69,15 +71,15 @@ Owner key: **[F]** founder-only click, **[A]** app change (a fix agent; release-
 
 ## 4. App Store Connect
 
-- [ ] [P] Upload metadata (`deliver`, en-GB primary + en-US), categories News / Education, copyright, review
+- [x] [P] Upload metadata (`deliver`, en-GB primary + en-US), categories News / Education, copyright, review
   information (phone `+447415533188`, no demo account).
-- [ ] [P] Age rating: apply `ios/fastlane/rating.json` (PATCH `ageRatingDeclarations`). Expected **13+**. Advertising =
+- [x] [P] Age rating: apply `ios/fastlane/rating.json` (PATCH `ageRatingDeclarations`). Expected **13+**. Advertising =
   Yes, UGC / chat / unrestricted web = No.
-- [ ] [P] **IAP** `com.froggyeye.sides.adfree`, Non-Consumable. Reference name "Ad-free". Display name "Remove ads".
+- [x] [P] **IAP** `com.froggyeye.sides.adfree`, Non-Consumable. Reference name "Ad-free". Display name "Remove ads".
   Description (≤55): `Removes the banner ads for good. One-time purchase.` (51). Price: base storefront United Kingdom
   **£2.99**, United States set explicitly to **$2.99**, others Apple-equalised. Review screenshot: the Settings
   "Remove ads" tile. Review note: "Removes the AdMob banner. No content is gated."
-- [ ] [P] **Availability: all storefronts except mainland China** (news-app licensing; the content quotes Chinese state
+- [x] [P] **Availability: all storefronts except mainland China** (news-app licensing; the content quotes Chinese state
   media alongside other outlets). Hong Kong, Macau and Taiwan stay on.
 - [ ] [P] App privacy: upload `ios/fastlane/privacy_details.json` (7 data types, none used for tracking).
 - [ ] **[F] App Privacy → Publish** (the API cannot publish it; house-facts §12).
@@ -86,7 +88,7 @@ Owner key: **[F]** founder-only click, **[A]** app change (a fix agent; release-
 
 ## 5. Google Play Console
 
-- [ ] [P] Listing: `supply` metadata for en-GB (default) and en-US only, title / short / full description,
+- [x] [P] Listing (raw API, see docs/PUBLISH_STATUS.md) metadata for en-GB (default) and en-US only, title / short / full description,
   `changelogs/1.txt`. Category News & Magazines; contact info@froggyeye.com; website sides.froggyeye.com.
 - [ ] [P] **IAP** `com.froggyeye.sides.adfree` (one-time product). Name "Remove ads", description
   "Removes the banner ads for good. One-time purchase, no subscription." GBP **£2.99** and USD **$2.99** set
