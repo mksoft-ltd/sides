@@ -98,4 +98,44 @@ void main() {
     await c.read(digestControllerProvider.notifier).onResumed();
     expect(requests, hasLength(1));
   });
+
+  test('resume just after UTC midnight revalidates a 10-minute-old cache',
+      () async {
+    now = DateTime.utc(2026, 10, 14, 23, 55);
+    final ProviderContainer c =
+        container(cachedAt(DateTime.utc(2026, 10, 14, 23, 50)));
+    await settle(c);
+    expect(requests, isEmpty, reason: 'same UTC day, 5 minutes old');
+
+    now = DateTime.utc(2026, 10, 15, 0, 0, 1);
+    await c.read(digestControllerProvider.notifier).onResumed();
+    expect(requests, hasLength(1));
+    expect(requests.single.headers['If-None-Match'], '"v1"');
+  });
+
+  test('resume while the launch read is still pending does not fetch',
+      () async {
+    final ProviderContainer c =
+        container(cachedAt(DateTime.utc(2025, 1, 1)));
+    c.read(digestControllerProvider);
+    // No pump: the cache has not been read yet.
+    await c.read(digestControllerProvider.notifier).onResumed();
+    expect(requests, isEmpty);
+    await pumpEventQueue();
+    expect(requests, hasLength(1), reason: 'launch itself revalidates once');
+  });
+
+  test('a failed refresh then a successful one clears the failure', () async {
+    now = DateTime.utc(2026, 10, 15, 7);
+    server = (_) => throw http.ClientException('offline');
+    final ProviderContainer c =
+        container(cachedAt(DateTime.utc(2026, 10, 14, 23)));
+    expect((await settle(c)).lastFailure, RefreshFailureKind.offline);
+
+    server = (_) => http.Response('', 304);
+    await c.read(digestControllerProvider.notifier).refresh();
+    final DigestState s = c.read(digestControllerProvider);
+    expect(s.lastFailure, isNull);
+    expect(s.loaded!.fetchedAt, now);
+  });
 }
