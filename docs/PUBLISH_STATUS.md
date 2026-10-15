@@ -1,5 +1,17 @@
 # Sides 1.0.0: publish status
 
+## BOTH STORES SUBMITTED (15 Oct 2026, ~21:30 UTC)
+
+- **Apple:** review submission `0affeefb…` WAITING_FOR_REVIEW since 20:49Z (version 1.0.0 build 3 + adfree IAP).
+- **Play:** "Send changes for review" confirmed by the conductor ~21:30Z → Publishing overview shows **"Changes in
+  review"** (12 changes: production 1.0.0 (3) full rollout, 177 countries + rest of world, en-GB/en-US listings,
+  content rating, target audience, privacy policy, ads, data safety, health, news declaration, category).
+- **AdMob:** both Sides apps added to the existing published EU (GDPR) message and the US state regulations message
+  (each now 10 apps), privacy policy URL https://mksoft-ltd.github.io/sides/privacy_policy.html set per app. This
+  clears the UMP "no form(s) configured" error. Home shows identity / payment address / payment method all verified
+  (no payments banner). Still to do once listings are live: AdMob → Apps → each Sides app → App settings → link the
+  store listing.
+
 ## 15 Oct 2026 evening: Apple SUBMITTED, Play draft production release staged (founder finishes 3 clicks)
 
 - **Apple: submitted for review by the founder at 20:49 UTC.** Review submission `0affeefb…` state `WAITING_FOR_REVIEW`,
