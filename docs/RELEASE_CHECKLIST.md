@@ -28,15 +28,20 @@ Owner key: **[F]** founder-only click, **[A]** app change (a fix agent; release-
   `testBanner*` constants: debug and profile builds must keep using them.
 - [ ] **[A] Refresh SKAdNetwork IDs.** `ios/Runner/Info.plist` holds 50 `SKAdNetworkItems`. Replace the list with
   Google's current one from the Google Mobile Ads iOS quick-start page and keep any non-Google entries.
-- [ ] **[P] Upload keystore (house-facts §7, §26, §30).** Checked 15 Oct 2026: no `android/key.properties`, no
-  `*.jks` anywhere in the repo (`android/` and `android/app/` both checked), `android/app/build.gradle.kts` release
-  `signingConfig` is still `debug` (security audit SEC-5), and nothing has been uploaded to Play for this app, so
-  generating a key now cannot orphan an uploaded artifact. Re-run those three checks immediately before generating
-  (another agent may have done it). Then: `keytool -genkeypair` → `android/upload-keystore.jks`, alias `upload`;
-  `android/key.properties` with `storeFile=../upload-keystore.jks` (Gradle resolves it against `android/app/`, §30) or
-  keep the keystore in `android/app/`; wire `signingConfigs.release` per `wheel_of_choices/android/app/build.gradle.kts`;
-  back the keystore and passwords up where the founder keeps the others. Verify the AAB's signing SHA-1 matches the
-  keystore. Both files are already git-ignored.
+- [x] **[P] Upload keystore (house-facts §7, §26, §30).** Done 15 Oct 2026 by store-publisher, after re-checking
+  that no keystore or `key.properties` existed anywhere in the repo and that every Play track was empty.
+  - Keystore: `android/upload-keystore.jks`, alias `upload`, RSA 2048, valid to 2 Mar 2054,
+    DN `CN=Froggy Eye Ltd, O=Froggy Eye Ltd, C=GB`.
+  - `android/key.properties` has `storeFile=../upload-keystore.jks`, which Gradle resolves against `android/app/` (§30).
+    Both files are git-ignored. The password is only in `key.properties` and the macOS login Keychain, service
+    `sides-upload-keystore`, account `upload`. Read it with `security find-generic-password -s sides-upload-keystore -w`.
+  - Upload certificate SHA-1 `EA:80:6D:C6:0D:14:F6:34:88:3C:00:01:8D:99:A0:D9:D4:EA:B6:95`,
+    SHA-256 `F1:C0:DC:6A:6F:A6:DB:4E:F0:E9:74:24:CC:22:F5:D5:B4:6D:13:A2:56:8D:6D:C7:7D:51:66:BC:09:0D:6E:90`.
+    Proven on a local release APK with `apksigner verify --print-certs`; that APK carried test AdMob IDs and was deleted.
+  - Release build type uses `signingConfigs.release` with minify, resource shrinking and `proguard-rules.pro`
+    (Flutter, Play Billing, Mobile Ads, UMP).
+  - **[F] Back up `android/upload-keystore.jks` and its Keychain password** to wherever the other upload keys live.
+    **Never regenerate this key.** Once an AAB is uploaded, a new key means an upload-key reset request to Google.
 
 ## 2. AdMob console [P]
 

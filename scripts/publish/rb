@@ -1,0 +1,5 @@
+#!/bin/zsh
+# Runs Ruby with fastlane's bundled gems (jwt, googleauth) and the store credentials from ~/.zshenv.
+source ~/.zshenv
+FL=$(ls -d /opt/homebrew/Cellar/fastlane/*/libexec | tail -1)
+GEM_HOME=$FL GEM_PATH=$FL exec /opt/homebrew/opt/ruby/bin/ruby "$@"
