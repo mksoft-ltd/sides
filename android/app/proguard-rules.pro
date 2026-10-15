@@ -16,3 +16,10 @@
 -dontwarn com.google.android.play.core.tasks.**
 
 -keepattributes *Annotation*
+
+# WorkManager (merged in by the ads SDK) builds its Room database by reflection
+# (WorkDatabase_Impl). R8 full mode stripped the constructor and the release
+# build crashed at launch in androidx.startup.InitializationProvider
+# (15 Oct 2026). Keep Room databases' no-arg constructors and WorkManager's impl.
+-keep class * extends androidx.room.RoomDatabase { <init>(); }
+-keep class androidx.work.impl.** { *; }
