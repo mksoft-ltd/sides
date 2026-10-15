@@ -73,6 +73,14 @@ stage offline from a recorded response (no key needed).
   Both are counted per outlet in `articles.json` `item_drops[]` and summarised in `meta.warnings`.
 - **Network is isolated in `fetch.py`.** Everything else takes an injected `fetch(url) -> bytes`, so tests
   run entirely on fixtures.
+- **Blocked/throttled feeds** (both full Actions runs of 14-15 Oct lost The Independent to 429 and Times of Israel to
+  403 from GitHub's IP range; both fine from the Mac): `fetch.USER_AGENT` is browser-shaped with `SidesNewsBot/<v>` and
+  our URL in its comment, `Accept: application/rss+xml, application/xml;q=0.9, */*;q=0.8`. `fetch_with_retry` retries
+  403/429/5xx and transport errors 3 times (1 s·2^n + jitter, at least `Retry-After`, capped at 30 s); other errors
+  fail at once. Then `collect` tries `feed_url_alternates[]` in order (https only); the first URL that fetches AND
+  parses wins, and only when all fail does the outlet land in `feed_errors[]` (message lists every URL). Alternates:
+  Independent `/rss`, `/news/world/europe/rss`; Times of Israel `/israel-and-the-region/feed/`, Feedburner copy (a
+  different host). Whether GitHub's IPs get through is only visible in a scheduled run's collect table.
 - Python 3.14 is what the dev Mac has; the package declares `>=3.12` and uses nothing newer than 3.12.
 
 ### Grouping (phase 2)

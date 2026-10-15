@@ -23,6 +23,8 @@ class Outlet(BaseModel):
     id: str = Field(pattern=r"^[a-z][a-z0-9_]{1,31}$")
     name: str = Field(min_length=1)
     feed_url: HttpUrl
+    # Tried in order when the primary feed cannot be fetched or parsed (e.g. a 429/403 from cloud IP ranges).
+    feed_url_alternates: list[HttpUrl] = Field(default_factory=list)
     home_url: HttpUrl
     lean: Lean | None
     lean_note: str | None = None
@@ -39,8 +41,9 @@ class Outlet(BaseModel):
     @model_validator(mode="after")
     def _https_feed(self) -> "Outlet":
         # SEC-2: a plain-HTTP feed lets anyone on the path rewrite headlines and links.
-        if self.feed_url.scheme != "https":
-            raise ValueError(f"{self.id}: feed_url must be https (got {self.feed_url})")
+        for u in (self.feed_url, *self.feed_url_alternates):
+            if u.scheme != "https":
+                raise ValueError(f"{self.id}: feed_url must be https (got {u})")
         return self
 
     def allowed_link_hosts(self) -> tuple[str, ...]:

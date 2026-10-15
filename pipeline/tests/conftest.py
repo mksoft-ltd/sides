@@ -45,13 +45,16 @@ def make_outlet(id: str = "guardian", **overrides) -> Outlet:
 class FakeFetcher:
     """Dependency-injected replacement for http_fetch: url → fixture bytes or raised exception."""
 
-    def __init__(self, mapping: dict[str, bytes | Exception]):
-        self.mapping = mapping
+    def __init__(self, mapping: dict[str, bytes | Exception | list]):
+        """A list value is a sequence of answers for successive calls (the last one repeats)."""
+        self.mapping = {k: (list(v) if isinstance(v, list) else v) for k, v in mapping.items()}
         self.calls: list[str] = []
 
     def __call__(self, url: str) -> bytes:
         self.calls.append(url)
         result = self.mapping[url]
+        if isinstance(result, list):
+            result = result.pop(0) if len(result) > 1 else result[0]
         if isinstance(result, Exception):
             raise result
         return result

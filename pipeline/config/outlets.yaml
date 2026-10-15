@@ -14,6 +14,8 @@
 #   rating_basis  which public rating the lean tag comes from, with a date, or why there is none
 #   enabled       default true; false keeps the outlet on record but the collector skips it
 #   note          free text (why disabled, caveats)
+#   feed_url_alternates  optional https feeds tried in order when feed_url cannot be fetched (after retries) or
+#                 parsed; the first that works wins. For outlets that block cloud IP ranges.
 #   link_hosts    optional list of extra hosts the outlet's article links may use (subdomains included); a feed item
 #                 linking anywhere else than home_url's host or these is dropped at collect (security SEC-4)
 #
@@ -38,6 +40,12 @@ outlets:
   - id: independent
     name: The Independent
     feed_url: https://www.independent.co.uk/news/world/rss
+    # Both full Actions runs (14-15 Oct 2026) got 429 here from GitHub's IP range; it works from a residential IP.
+    # Alternates verified live from the Mac 15 Oct 2026 (top stories 100 items, Europe 16; all links on
+    # independent.co.uk). Same host, so a per-IP block may hit them too: only the next scheduled run can tell.
+    feed_url_alternates:
+      - https://www.independent.co.uk/rss
+      - https://www.independent.co.uk/news/world/europe/rss
     home_url: https://www.independent.co.uk/
     lean: left
     region: uk
@@ -307,6 +315,13 @@ outlets:
   - id: timesofisrael
     name: The Times of Israel
     feed_url: https://www.timesofisrael.com/feed/
+    # Both full Actions runs (14-15 Oct 2026) got 403 here from GitHub's IP range; it works from a residential IP.
+    # Alternates verified live from the Mac 15 Oct 2026 (15 items each, links on timesofisrael.com). The Feedburner
+    # copy is served by a different host (Google), so it should survive a block on timesofisrael.com itself; it
+    # lags the site by a few hours. Confirmed only by the next scheduled run.
+    feed_url_alternates:
+      - https://www.timesofisrael.com/israel-and-the-region/feed/
+      - https://feeds.feedburner.com/TheTimesOfIsrael
     home_url: https://www.timesofisrael.com/
     lean: null
     lean_note: Non-Western outlet; the UK/US left–right scale is not applied. Analysed on the West/East axis.

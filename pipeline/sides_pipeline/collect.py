@@ -2,7 +2,10 @@
 
 Integrity rules enforced here:
 * headline + snippet (≤200 chars) only; article bodies are never fetched or stored;
-* a failing feed is recorded in ``feed_errors`` and skipped, never aborts the run;
+* a failing feed is recorded in ``feed_errors`` and skipped, never aborts the run. "Failing" means every URL
+  failed: the primary ``feed_url`` and then each ``feed_url_alternates`` entry in order, each fetched with
+  :func:`fetch.fetch_with_retry` (403/429/5xx retried with backoff + jitter, Retry-After honoured) and parsed;
+  the first URL that yields a usable feed wins;
 * items older than the window are dropped, each outlet capped at the N most recent;
 * an item whose link is not on the outlet's own host (``home_url`` or ``link_hosts``) is dropped
   (``link_off_domain``, SEC-4) and an ``http://`` link is upgraded to ``https://``;
@@ -15,14 +18,16 @@ from __future__ import annotations
 import calendar
 import hashlib
 import logging
+import time
 from collections import Counter
+from collections.abc import Callable
 from concurrent.futures import ThreadPoolExecutor
 from datetime import UTC, datetime, timedelta
 from urllib.parse import urlsplit
 
 import feedparser
 
-from .fetch import Fetcher, http_fetch
+from .fetch import Fetcher, fetch_with_retry, http_fetch
 from .guard import instruction_like
 from .models import Article, CollectResult, FeedError, ItemDrop, Outlet
 from .text import canonical_url, make_snippet, normalise_headline, normalise_ws
@@ -151,6 +156,7 @@ def collect(
     window_hours: int = WINDOW_HOURS,
     cap: int = PER_OUTLET_CAP,
     max_workers: int = MAX_WORKERS,
+    sleep: Callable[[float], None] = time.sleep,
 ) -> CollectResult:
     """Fetch all enabled outlets concurrently and assemble the articles.json payload."""
     now = now or datetime.now(tz=UTC)
@@ -159,11 +165,23 @@ def collect(
     if skipped:
         log.info("skipping disabled outlets: %s", ", ".join(skipped))
 
-    def fetch_one(outlet: Outlet) -> tuple[Outlet, bytes | None, BaseException | None]:
-        try:
-            return outlet, fetcher(str(outlet.feed_url)), None
-        except Exception as exc:  # noqa: BLE001 - any failure is a per-feed error, never fatal
-            return outlet, None, exc
+    def fetch_one(outlet: Outlet) -> tuple[Outlet, list[Article] | None, Counter, str | None]:
+        """Primary feed, then each alternate in order; the first one that fetches AND parses wins."""
+        urls = [str(outlet.feed_url), *(str(u) for u in outlet.feed_url_alternates)]
+        failures: list[str] = []
+        for i, url in enumerate(urls):
+            dropped: Counter = Counter()
+            try:
+                raw = fetch_with_retry(fetcher, url, sleep=sleep)
+                items = parse_feed(outlet, raw or b"", now, window_hours=window_hours, cap=cap, drops=dropped)
+            except Exception as exc:  # noqa: BLE001 - any failure is a per-feed error, never fatal
+                log.warning("%s: %s failed: %s", outlet.id, url, _describe(exc))
+                failures.append(_describe(exc) if len(urls) == 1 else f"{url}: {_describe(exc)}")
+                continue
+            if i:
+                log.warning("%s: primary feed failed; served by alternate %s", outlet.id, url)
+            return outlet, items, dropped, None
+        return outlet, None, Counter(), "; ".join(failures)[:_MAX_ERROR_CHARS * len(urls)]
 
     with ThreadPoolExecutor(max_workers=max(1, min(max_workers, len(enabled) or 1))) as pool:
         fetched = list(pool.map(fetch_one, enabled))
@@ -174,18 +192,9 @@ def collect(
     item_drops: list[ItemDrop] = []
     seen_urls: set[str] = set()
 
-    for outlet, raw, exc in fetched:
-        if exc is not None:
-            log.warning("%s: fetch failed: %s", outlet.id, _describe(exc))
-            errors.append(FeedError(outlet_id=outlet.id, error=_describe(exc)))
-            counts[outlet.id] = 0
-            continue
-        dropped: Counter = Counter()
-        try:
-            items = parse_feed(outlet, raw or b"", now, window_hours=window_hours, cap=cap, drops=dropped)
-        except Exception as exc:  # noqa: BLE001
-            log.warning("%s: parse failed: %s", outlet.id, _describe(exc))
-            errors.append(FeedError(outlet_id=outlet.id, error=_describe(exc)))
+    for outlet, items, dropped, error in fetched:
+        if items is None:
+            errors.append(FeedError(outlet_id=outlet.id, error=error or "no usable feed"))
             counts[outlet.id] = 0
             continue
         kept = []
