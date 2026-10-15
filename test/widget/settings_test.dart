@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:in_app_purchase/in_app_purchase.dart';
 import 'package:sides/core/config/app_config.dart';
+import 'package:sides/core/constants/copy.dart';
 import 'package:sides/features/purchases/presentation/ad_free_controller.dart';
 import 'package:sides/features/settings/presentation/providers/settings_controller.dart';
 
@@ -49,6 +50,52 @@ void main() {
       h.ads.consent.complete(true);
       await tester.pumpAndSettle();
       expect(find.text(tile), findsNothing);
+    });
+  });
+
+  group('About: publisher and contact (Play News apps policy)', () {
+    const Size tall = Size(390, 3000);
+
+    testWidgets('shows publisher, contact address and privacy policy',
+        (WidgetTester tester) async {
+      await pumpSidesApp(tester, initialLocation: '/settings', size: tall);
+      expect(find.text(Copy.publishedBy), findsOneWidget);
+      expect(find.text(Copy.contact), findsOneWidget);
+      expect(find.text('info@froggyeye.com'), findsOneWidget);
+      expect(find.text(Copy.privacyPolicy), findsOneWidget);
+    });
+
+    testWidgets('contact tap composes a mailto to the publisher',
+        (WidgetTester tester) async {
+      final TestHarness h = await pumpSidesApp(tester,
+          initialLocation: '/settings', size: tall);
+      await tester.tap(find.text(Copy.contact));
+      await tester.pumpAndSettle();
+      expect(h.launcher.composed.single.toString(),
+          'mailto:info@froggyeye.com');
+      expect(h.launcher.opened, isEmpty,
+          reason: 'mail must not go through the http/https article path');
+      expect(find.text(Copy.contactFailed), findsNothing);
+    });
+
+    testWidgets('contact tap with no mail app shows the address',
+        (WidgetTester tester) async {
+      final TestHarness h = TestHarness()..launcher.result = false;
+      await pumpSidesApp(tester,
+          harness: h, initialLocation: '/settings', size: tall);
+      await tester.tap(find.text(Copy.contact));
+      await tester.pumpAndSettle();
+      expect(find.text(Copy.contactFailed), findsOneWidget);
+    });
+
+    testWidgets('privacy tap opens the privacy policy URL',
+        (WidgetTester tester) async {
+      final TestHarness h = await pumpSidesApp(tester,
+          initialLocation: '/settings', size: tall);
+      await tester.tap(find.text(Copy.privacyPolicy));
+      await tester.pumpAndSettle();
+      expect(h.launcher.opened.single.toString(), AppConfig.privacyPolicyUrl);
+      expect(h.launcher.composed, isEmpty);
     });
   });
 

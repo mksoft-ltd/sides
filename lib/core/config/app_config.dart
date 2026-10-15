@@ -13,6 +13,10 @@ abstract final class AppConfig {
 
   static const String copyright = '© 2026 Froggy Eye Ltd';
 
+  /// Publisher contact shown in Settings › About (Play News apps policy).
+  static const String contactEmail = 'info@froggyeye.com';
+  static final Uri contactMailto = Uri(scheme: 'mailto', path: contactEmail);
+
   /// Non-consumable that removes the banner ads (house-facts §4).
   static const String adFreeProductId = 'com.froggyeye.sides.adfree';
 

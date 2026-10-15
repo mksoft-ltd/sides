@@ -345,4 +345,6 @@ class _ScreenshotStore implements StoreGateway {
 class _NoLaunch implements LinkLauncher {
   @override
   Future<bool> open(Uri uri) async => false;
+  @override
+  Future<bool> compose(Uri mailto) async => false;
 }

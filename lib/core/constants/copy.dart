@@ -1,4 +1,5 @@
 import '../../features/digest/domain/digest.dart';
+import '../config/app_config.dart';
 
 /// Every fixed UI string about the news content, in one place so the
 /// neutrality rule can be reviewed in a single file: the app describes what
@@ -75,4 +76,11 @@ abstract final class Copy {
       'Political-lean labels come from published media-bias ratings '
       '(listed for each outlet below). Outlets without a rating, such as '
       'state media, appear only in the West / East comparison.';
+
+  /// Settings › About: publisher and contact (Play News apps policy).
+  static const String publishedBy = 'Published by Froggy Eye Ltd';
+  static const String contact = 'Contact';
+  static const String privacyPolicy = 'Privacy policy';
+  static const String contactFailed =
+      'No mail app found. Email us at ${AppConfig.contactEmail}.';
 }

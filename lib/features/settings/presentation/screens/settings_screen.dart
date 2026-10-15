@@ -93,9 +93,28 @@ class SettingsScreen extends ConsumerWidget {
           ),
           const Divider(),
           const _Header('About'),
+          const ListTile(
+            leading: Icon(Icons.business_outlined),
+            title: Text(Copy.publishedBy),
+          ),
+          ListTile(
+            leading: const Icon(Icons.mail_outline),
+            title: const Text(Copy.contact),
+            subtitle: const Text(AppConfig.contactEmail),
+            onTap: () async {
+              final bool ok = await ref
+                  .read(linkLauncherProvider)
+                  .compose(AppConfig.contactMailto);
+              if (!ok && context.mounted) {
+                ScaffoldMessenger.of(context).showSnackBar(
+                  const SnackBar(content: Text(Copy.contactFailed)),
+                );
+              }
+            },
+          ),
           ListTile(
             leading: const Icon(Icons.privacy_tip_outlined),
-            title: const Text('Privacy policy'),
+            title: const Text(Copy.privacyPolicy),
             trailing: const Icon(Icons.open_in_new, size: 18),
             onTap: () => ref
                 .read(linkLauncherProvider)

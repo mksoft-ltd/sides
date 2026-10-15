@@ -15,6 +15,14 @@ class FakeLinkLauncher implements LinkLauncher {
     opened.add(uri);
     return result;
   }
+
+  final List<Uri> composed = <Uri>[];
+
+  @override
+  Future<bool> compose(Uri mailto) async {
+    composed.add(mailto);
+    return result;
+  }
 }
 
 /// Never touches the Mobile Ads SDK; renders a keyed placeholder.

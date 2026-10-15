@@ -23,7 +23,7 @@ Once a day a central pipeline (`pipeline/`) collects headlines and ≤200-charac
   - Sources: every article with outlet, lean/bloc/region tags, a visible "state media" tag for state-controlled outlets, headline and link.
   - Every point shows its sources as chips "Outlet — headline" that open the original article in the external browser.
 - Offline: cached digest shown instantly; revalidated on launch/resume when the digest date is before today (UTC) or it was fetched more than 6 h ago; conditional GET with `If-None-Match`; offline-with-cache note; offline-without-cache empty state with Retry.
-- Settings/About: theme (System/Light/Dark), text-size note (follows device up to 200%), ad-free purchase + restore, Google UMP "Ad privacy options" where required, how it works, outlets and rating basis, privacy policy, © 2026 Froggy Eye Ltd.
+- Settings/About: theme (System/Light/Dark), text-size note (follows device up to 200%), ad-free purchase + restore, Google UMP "Ad privacy options" where required, how it works, outlets and rating basis, "Published by Froggy Eye Ltd", Contact (info@froggyeye.com, opens the mail app via mailto:), privacy policy, © 2026 Froggy Eye Ltd. The publisher and contact satisfy Play's News apps policy.
 - Monetisation: AdMob banner at the bottom of the list and story screens (never inside sourced content, hidden until a digest loads), one-time non-consumable `com.froggyeye.sides.adfree` removes ads instantly.
 
 **Tablet (phase 5, built)**

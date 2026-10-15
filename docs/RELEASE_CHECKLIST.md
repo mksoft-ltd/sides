@@ -11,11 +11,11 @@ Owner key: **[F]** founder-only click, **[A]** app change (a fix agent; release-
 
 ## 1. App changes needed before the release build
 
-- [ ] **[A] Contact email visible in the app (Play News policy).** Settings › About shows the app name and
-  "© 2026 Froggy Eye Ltd" and links the privacy policy, but **no contact email is shown anywhere in the app**
-  (checked `lib/features/settings/presentation/screens/settings_screen.dart`, 15 Oct 2026). Add a "Contact"
-  ListTile in the About section reading `info@froggyeye.com` (optionally a `mailto:` link via the existing
-  `linkLauncherProvider`), and a "Published by Froggy Eye Ltd" line. Put the strings in `AppConfig` beside `copyright`.
+- [x] **[A] Contact email visible in the app (Play News policy).** Done 15 Oct 2026. Settings › About now shows
+  "Published by Froggy Eye Ltd", a "Contact" tile reading `info@froggyeye.com` that opens `mailto:` through
+  `LinkLauncher.compose` (mailto only; the article path `open` stays http/https only), the existing "Privacy policy"
+  tile, and "© 2026 Froggy Eye Ltd". Address in `AppConfig.contactEmail`, labels in `Copy`. Pinned by
+  `test/widget/settings_test.dart` (About group) and `test/unit/link_launcher_scheme_test.dart`.
 - [ ] **[A]/[P] Live AdMob IDs** (create in AdMob first, see §2). Replace exactly these four test values:
   - `lib/core/config/ad_config.dart` line 21 `_releaseBannerAndroid` (now `testBannerAndroid`) → live Android banner unit
   - `lib/core/config/ad_config.dart` line 22 `_releaseBannerIos` (now `testBannerIos`) → live iOS banner unit
