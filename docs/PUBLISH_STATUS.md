@@ -32,8 +32,8 @@ exit code. Records: ASC app `6822909350`, Play app `4973894667859335790`, bundle
 2. **Android binary**: `cd android && fastlane build_upload_play_internal` (internal track; checks the AAB signer). Then `scripts/publish/rb scripts/publish/play_iap.rb`.
 3. **iOS binary**: set Runner Release signing to manual with profile "Sides App Store" if the archive refuses automatic signing, then `cd ios && fastlane build_upload_testflight`. Check the IPA's version/mtime; poll the build ≤20 min, then TestFlight → Build Uploads if it never appears.
 4. **[F] Apple privacy label**: enter answers + **Publish** (above).
-5. **Content rights** (ASC, API-settable): the app shows third-party headlines and feed summaries. Recommended answer: uses third-party content, has the rights (public syndication feeds, attribution, links out; compliance m5). Needs a founder/conductor OK before PATCHing `contentRightsDeclaration`.
-6. **Play App content** (browser, answers in `android/fastlane/data_safety_answers.md`): privacy policy, app access, ads = Yes, content rating (IARC), target audience 13+, News app = Yes, Data safety, Advertising ID = Yes, government/financial/health none, then countries/regions.
+5. **Content rights**: done 15 Oct 2026 with conductor approval: `contentRightsDeclaration = USES_THIRD_PARTY_CONTENT` (read back on the full app GET; a `fields[apps]=` sparse read returns null for it).
+6. **Play App content** (browser, click-path in `docs/PLAY_DECLARATIONS_CLICKPATH.md`, answers in `android/fastlane/data_safety_answers.md`): privacy policy, app access, ads = Yes, content rating (IARC), target audience 13+, News app = Yes, Data safety, Advertising ID = Yes, government/financial/health none, then countries/regions.
 7. **Submission (founder-confirmed)**: attach build to version 1.0.0 → IAP page "Add for Review" into the version's draft submission → version "Add for Review" into the SAME draft → confirm **2 items** → submit. Play: promote/send for review from Publishing overview.
 
 ## Re-release one-liners
