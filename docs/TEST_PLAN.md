@@ -29,7 +29,7 @@ U = unit, W = widget, I = integration (simulator). The file names are under `tes
 | Controller: launch, resume, pull-to-refresh, midnight resume, failure clearing | ✓ | | | `unit/digest_controller_test.dart` |
 | Network: ETag 304/200, bad bodies, UTF-8, HTTP errors | ✓ | | | `unit/digest_repository_test.dart`, `unit/digest_repository_edges_test.dart` |
 | Cache corruption recovery (torn body, bad meta, temp files, schema) | ✓ | | | `unit/digest_repository_edges_test.dart` |
-| Cache write failure (disk full) | ✓ (skipped: F1) | | | `unit/digest_repository_edges_test.dart` |
+| Cache write failure (disk full) | ✓ (F1 fixed) | | | `unit/digest_repository_edges_test.dart` |
 | Ad-free IAP: buy, cancel, pending, error, restore, Play pending, order of persist and complete, double tap, store down | ✓ | ✓ | | `unit/ad_free_controller_test.dart`, `widget/settings_test.dart` |
 | Banner gating (buy, restore, pending, cancel, error, no digest, stale story, tablet) | | ✓ | | `widget/ad_banner_gating_test.dart`, `widget/digest_list_test.dart` |
 | List: rank, coverage, blindspot chips, offline states | | ✓ | ✓ | `widget/digest_list_test.dart` |
@@ -38,19 +38,19 @@ U = unit, W = widget, I = integration (simulator). The file names are under `tes
 | Deep links (`/story/:id?axis=bloc`, stale id, bogus axis, cold start) | | ✓ | | `widget/navigation_state_test.dart`, `widget/story_detail_test.dart` |
 | Axis and tab state across navigation and layout swaps | | ✓ | | `widget/navigation_state_test.dart`, `widget/tablet_layout_test.dart` |
 | Degenerate digests (0 stories, failed analysis) | | ✓ | | `widget/navigation_state_test.dart` |
-| Semantics labels (literal), tap targets | | ✓ (tap action skipped: F2) | | `widget/accessibility_test.dart` |
+| Semantics labels (literal), tap targets | | ✓ (tap action, F2 fixed) | | `widget/accessibility_test.dart` |
 | Text scale 2.0: every story, axis and tab, scrolled top to bottom at 320, 360 and 390 dp, iPad mini and 12.9" | | ✓ | | `widget/accessibility_test.dart` |
 | Settings, theme, outlets screen | | ✓ | ✓ | `widget/settings_test.dart` |
 | Release-only guards (sample digest, screenshot route, ads off) and contract literals | ✓ | | | `unit/release_guards_test.dart` |
 | Pipeline: collect, group, analyse, validator, schema, publish | ✓ | | | `pipeline/tests/` (128 existing tests) |
 | Pipeline publish gate (`run` exit codes) and publish refusing a broken digest | ✓ | | | `pipeline/tests/test_run_gate.py` |
 
-## Open findings (app bugs; tests written, skipped until fixed)
+## Findings (app bugs found by QA)
 
 | Id | Severity | Finding | Test to unskip |
 |---|---|---|---|
-| F1 | High | When a cache write fails (full disk, permissions), `NetworkDigestRepository.refresh` lets the `FileSystemException` escape. `DigestController._refresh` then never clears `refreshing`. On a first launch this is a permanent "Loading today's digest" spinner with no Retry, and the downloaded digest is never shown. Pull-to-refresh also throws into `RefreshIndicator`. The fix is to catch write and touch failures in the repository and still return the parsed digest. A `try`/`catch` around the write and the touch makes both tests pass; this was checked as a positive control. | `unit/digest_repository_edges_test.dart`, the two tests with `skip: f1` |
-| F2 | High (accessibility) | `SourceChip` and the Sources-list rows wrap their `InkWell` in `Semantics(excludeSemantics: true)` without `onTap`. The tap action is stripped, so the node is announced as a link button but exposes no action. On Android, TalkBack and Switch Access likely cannot open the source articles, which is the app's core link-out. iOS VoiceOver may fall back to a simulated touch. Device check pending. The fix is to add `onTap: () => openArticle(...)` to both `Semantics` widgets. That fix makes the test pass; this was checked as a positive control. | `widget/accessibility_test.dart`, "expose a tap action" (`skip: true`) |
+| F1 | High | When a cache write fails (full disk, permissions), `NetworkDigestRepository.refresh` lets the `FileSystemException` escape. `DigestController._refresh` then never clears `refreshing`. On a first launch this is a permanent "Loading today's digest" spinner with no Retry, and the downloaded digest is never shown. Pull-to-refresh also throws into `RefreshIndicator`. The fix is to catch write and touch failures in the repository and still return the parsed digest. A `try`/`catch` around the write and the touch makes both tests pass; this was checked as a positive control. | `unit/digest_repository_edges_test.dart`, cache write failures group. **Fixed in 3f24d7d**: repository saves quietly and still returns the digest; controller clears `refreshing` on any exception. Un-skipped, plus one controller-guard test. |
+| F2 | High (accessibility) | `SourceChip` and the Sources-list rows wrap their `InkWell` in `Semantics(excludeSemantics: true)` without `onTap`. The tap action is stripped, so the node is announced as a link button but exposes no action. On Android, TalkBack and Switch Access likely cannot open the source articles, which is the app's core link-out. iOS VoiceOver may fall back to a simulated touch. Device check pending. The fix is to add `onTap: () => openArticle(...)` to both `Semantics` widgets. That fix makes the test pass; this was checked as a positive control. | `widget/accessibility_test.dart`, "expose a tap action". **Fixed in 3f24d7d**: `onTap` on both `Semantics` wrappers. Un-skipped. |
 
 ## Remaining risks (not blocking, ranked)
 
@@ -64,7 +64,7 @@ U = unit, W = widget, I = integration (simulator). The file names are under `tes
 
 Run on every release candidate, in this order:
 
-1. `flutter analyze`, `flutter test`, and pytest must all be green. Then unskip F1 and F2 once they are fixed.
+1. `flutter analyze`, `flutter test`, and pytest must all be green, with nothing skipped.
 2. Run the on-device journey on one iPhone and one iPad simulator. If an emulator is available, also run it on Android, which is the preferred platform for captures.
 3. Do these manual checks on a device:
    - Airplane mode with a cache shows the cached digest and the offline note.
@@ -126,6 +126,11 @@ Each mutation was injected into a scratch copy of the repo and run against the n
 | run_gate → publish refuses a broken digest | `latest.json` written before validation | Site changed |
 | Positive control F1 | `try`/`catch` around cache write and touch | Both skipped tests passed |
 | Positive control F2 | `onTap` added to both `Semantics` wrappers | Skipped test passed |
+| F1 fix (3f24d7d), both layers reverted | Repository and controller back to the pre-fix code | All 3 tests failed: `refreshing` expected false, got true |
+| F1 fix, controller guard only | Repository save unguarded | "first launch on a full disk" failed: `digest` expected not null, got null |
+| F1 fix, repository guard only | Controller catch removed | "any exception from the repository" failed: `refreshing` stayed true |
+| F2 fix (3f24d7d), both reverted / chip only fixed | `onTap` removed from both / from the Sources row only | "expose a tap action" failed both times: `hasAction(tap)` false |
+| UI polish (3f24d7d) | Pre-change widgets | 7 of 10 `ui_polish_test.dart` tests failed; the 3 that pin unchanged behaviour (phone 2 lines, mark colours, geometry) passed |
 
 Not verifiable by mutation:
 - "a fetched-at given in local time is compared as UTC" pins behaviour only, because `DateTime.difference` is instant-based.
@@ -141,7 +146,19 @@ Not verifiable by mutation:
 - The settings shot shows `SCREENSHOT_PRICE` (default £2.99). Pass the live tier's price when capturing.
 - Captures in this stage went to the scratchpad, not `store_assets/`.
 
-## Latest run (15 Oct 2026)
+## Fix round (15 Oct 2026, 3f24d7d)
+
+- F1 fixed in 3f24d7d: cache write failures no longer strand the refresh spinner.
+- F2 fixed in 3f24d7d: source chips and Sources rows expose the tap action.
+- Polish 1 fixed in 3f24d7d: nested quotes fold to single curly quotes (`unit/quotes_test.dart`, `widget/ui_polish_test.dart`).
+- Polish 2 fixed in 3f24d7d: detail title "1 of 10", spoken "Story 1 of 10".
+- Polish 3 fixed in 3f24d7d: cube mark before "Sides" in both list app bars.
+- Polish 4 fixed in 3f24d7d: launch screens use the theme surface (`#F5FAFD` / `#0F1417`); checked in the built APK and Runner.app, not by tests.
+- Polish 5 fixed in 3f24d7d: source chips show 3 lines at ≥ 744 dp.
+- Polish 6 fixed in 3f24d7d: rank badge uses `surfaceContainerHighest`.
+- `flutter test`: 214 passed, 0 skipped. analyze clean; `flutter build apk --debug` and the iOS simulator xcodebuild both succeeded.
+
+## Previous run (15 Oct 2026, test stage)
 
 | Gate | Result |
 |---|---|

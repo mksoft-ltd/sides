@@ -154,16 +154,16 @@ bundled sample day found none, so no screenshot can show one honestly.
 
 Observed on the phase-4/5 captures. These are suggestions only: design did not change any screen.
 
-1. **Nested quote marks.** A quote that itself contains quotes renders as `“identified at a "very early stage.""`
+1. [x] (done in 3f24d7d) **Nested quote marks.** A quote that itself contains quotes renders as `“identified at a "very early stage.""`
    (Fox News, story 1, Right column). Fold inner straight double quotes to single curly quotes when wrapping.
-2. **Detail app bar title "Story 1".** A rank is not a name. Consider "1 of 10" or an empty title, since the
+2. [x] (done in 3f24d7d) **Detail app bar title "Story 1".** A rank is not a name. Consider "1 of 10" or an empty title, since the
    story headline sits directly below.
-3. **Wordmark in the list app bar.** The list's app bar shows plain "Sides". A 20 dp cube mark before it,
+3. [x] (done in 3f24d7d) **Wordmark in the list app bar.** The list's app bar shows plain "Sides". A 20 dp cube mark before it,
    painted from the same geometry as `icon/build_icon.py`, would tie the app to its icon.
-4. **Launch screens are white in dark mode.** Both platforms use the Flutter default launch background. Set the
+4. [x] (done in 3f24d7d) **Launch screens are white in dark mode.** Both platforms use the Flutter default launch background. Set the
    iOS LaunchScreen and Android `launch_background` (`values-night` too) to the theme surface, so dark-mode users
    do not get a white flash.
-5. **Source chips truncate at 2 lines** ("…Doctors Say" lost on tablets). On widths ≥ 744 dp, 3 lines would show
+5. [x] (done in 3f24d7d) **Source chips truncate at 2 lines** ("…Doctors Say" lost on tablets). On widths ≥ 744 dp, 3 lines would show
    most full headlines without crowding.
-6. **Rank badge tint.** The pale-blue `primaryContainer` circle is the only cool accent on the light list that is
+6. [x] (done in 3f24d7d) **Rank badge tint.** The pale-blue `primaryContainer` circle is the only cool accent on the light list that is
    not a perspective colour. A neutral `surfaceContainerHighest` badge would keep the colour budget for the sides.
