@@ -49,8 +49,8 @@ U = unit, W = widget, I = integration (simulator). The file names are under `tes
 
 | Id | Severity | Finding | Test to unskip |
 |---|---|---|---|
-| F1 | High | When a cache write fails (full disk, permissions), `NetworkDigestRepository.refresh` lets the `FileSystemException` escape. `DigestController._refresh` then never clears `refreshing`. On a first launch this is a permanent "Loading today's digest" spinner with no Retry, and the downloaded digest is never shown. Pull-to-refresh also throws into `RefreshIndicator`. The fix is to catch write and touch failures in the repository and still return the parsed digest. A `try`/`catch` around the write and the touch makes both tests pass; this was checked as a positive control. | `unit/digest_repository_edges_test.dart`, cache write failures group. **Fixed in 3f24d7d**: repository saves quietly and still returns the digest; controller clears `refreshing` on any exception. Un-skipped, plus one controller-guard test. |
-| F2 | High (accessibility) | `SourceChip` and the Sources-list rows wrap their `InkWell` in `Semantics(excludeSemantics: true)` without `onTap`. The tap action is stripped, so the node is announced as a link button but exposes no action. On Android, TalkBack and Switch Access likely cannot open the source articles, which is the app's core link-out. iOS VoiceOver may fall back to a simulated touch. Device check pending. The fix is to add `onTap: () => openArticle(...)` to both `Semantics` widgets. That fix makes the test pass; this was checked as a positive control. | `widget/accessibility_test.dart`, "expose a tap action". **Fixed in 3f24d7d**: `onTap` on both `Semantics` wrappers. Un-skipped. |
+| F1 | High | When a cache write fails (full disk, permissions), `NetworkDigestRepository.refresh` lets the `FileSystemException` escape. `DigestController._refresh` then never clears `refreshing`. On a first launch this is a permanent "Loading today's digest" spinner with no Retry, and the downloaded digest is never shown. Pull-to-refresh also throws into `RefreshIndicator`. The fix is to catch write and touch failures in the repository and still return the parsed digest. A `try`/`catch` around the write and the touch makes both tests pass; this was checked as a positive control. | `unit/digest_repository_edges_test.dart`, cache write failures group. **Fixed in 3f24d7d**: repository saves quietly and still returns the digest; controller clears `refreshing` on any exception. Un-skipped, plus one controller-guard test. **Re-verified by QA 15 Oct 2026** (independent scratch-copy reverts, see below). |
+| F2 | High (accessibility) | `SourceChip` and the Sources-list rows wrap their `InkWell` in `Semantics(excludeSemantics: true)` without `onTap`. The tap action is stripped, so the node is announced as a link button but exposes no action. On Android, TalkBack and Switch Access likely cannot open the source articles, which is the app's core link-out. iOS VoiceOver may fall back to a simulated touch. Device check pending. The fix is to add `onTap: () => openArticle(...)` to both `Semantics` widgets. That fix makes the test pass; this was checked as a positive control. | `widget/accessibility_test.dart`, "expose a tap action". **Fixed in 3f24d7d**: `onTap` on both `Semantics` wrappers. Un-skipped. **Re-verified by QA 15 Oct 2026**; the TalkBack device check is still pending. |
 
 ## Remaining risks (not blocking, ranked)
 
@@ -130,6 +130,11 @@ Each mutation was injected into a scratch copy of the repo and run against the n
 | F1 fix, controller guard only | Repository save unguarded | "first launch on a full disk" failed: `digest` expected not null, got null |
 | F1 fix, repository guard only | Controller catch removed | "any exception from the repository" failed: `refreshing` stayed true |
 | F2 fix (3f24d7d), both reverted / chip only fixed | `onTap` removed from both / from the Sources row only | "expose a tap action" failed both times: `hasAction(tap)` false |
+| **QA re-verification (15 Oct 2026, scratch copy of 51860ab)**: F1, both layers reverted | Repository and controller restored to the pre-fix code | 3 of 3 failed: `refreshing` expected false, got true |
+| QA: F1, repository layer only reverted | Cache write unguarded; controller catch kept | 1 failed: "first launch on a full disk", `digest` expected not null, got null |
+| QA: F1, controller layer only reverted | Controller catch removed; repository guard kept | 1 failed: "any exception from the repository", `refreshing` stayed true |
+| QA: F2, both / SourceChip only / Sources row only reverted | `onTap` removed from the `Semantics` wrapper(s) | Failed all three times: `hasAction(tap)` false |
+| QA: polish did not weaken earlier guards | Legend overflow, coverage label wording, chip label wording and chip link flag mutations re-run on the polished code | All 4 still failed as before (6 sweeps overflowed; 4 literal label tests; label not found; `isLink` false) |
 | UI polish (3f24d7d) | Pre-change widgets | 7 of 10 `ui_polish_test.dart` tests failed; the 3 that pin unchanged behaviour (phone 2 lines, mark colours, geometry) passed |
 
 Not verifiable by mutation:
@@ -163,6 +168,7 @@ Not verifiable by mutation:
 | Gate | Result |
 |---|---|
 | `flutter analyze` | No issues found |
-| `flutter test` | 195 passed, 3 skipped (F1 ×2, F2), 0 failed. Before this stage: 90. Unit 108 + 2 skipped; widget 87 + 1 skipped. |
+| `flutter test` (QA re-verification after the 3f24d7d fixes) | 214 passed, 0 skipped, 0 failed. `flutter analyze` clean; pytest 138 passed. Integration journey re-run on the iPhone 17 Pro simulator: green, 5 md5-distinct captures showing the new wordmark and "1 of 10" titles. |
+| `flutter test` (stage 3, before fixes) | 195 passed, 3 skipped (F1 ×2, F2), 0 failed. Before this stage: 90. Unit 108 + 2 skipped; widget 87 + 1 skipped. |
 | pytest | 138 passed. Before this stage: 128. |
 | Integration, iPhone 17 Pro and iPad Pro 11" simulators | Passed; 5 + 5 distinct captures |
