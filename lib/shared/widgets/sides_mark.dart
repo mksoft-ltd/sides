@@ -5,11 +5,19 @@ import 'package:flutter/material.dart';
 import '../../core/config/app_config.dart';
 import '../../core/theme/app_theme.dart';
 
-/// The app icon's cube, seen from the corner: three faces pulled apart along
-/// their normals so a Y-shaped seam separates them. Same geometry as
-/// `store_assets/icon/build_icon.py` (`faces()`: gap = 18 / 340 of the
-/// circumradius), painted in the theme's lean colours so it stays crisp and
-/// clears 3:1 against the app bar in both themes.
+/// The app icon's newspaper, drawn as vectors: a front page with a headline
+/// bar, a photo block and three columns of text bars, and two sheets fanned
+/// out behind it, violet on the left and orange on the right.
+///
+/// The outline follows `store_assets/icon/icon_mark.png` (760 x 491 px), the
+/// tight mark `store_assets/icon/build_icon.py` cuts from the generated icon.
+/// The page furniture is simplified so it still reads at the 20 dp app-bar
+/// size: fewer, thicker text bars. As in the icon, the furniture is cut out of
+/// the page, so whatever surface the mark sits on shows through as the ink.
+///
+/// The three fills are the active theme's lean colours, not the icon's brand
+/// hexes, so each one clears 3:1 against the app bar in both themes. The icon's
+/// dark plate is not part of the mark.
 class SidesMark extends StatelessWidget {
   const SidesMark({super.key, this.size = 20});
   final double size;
@@ -20,11 +28,7 @@ class SidesMark extends StatelessWidget {
     return ExcludeSemantics(
       child: CustomPaint(
         size: Size.square(size),
-        painter: SidesMarkPainter(
-          top: c.centre,
-          left: c.left,
-          right: c.right,
-        ),
+        painter: SidesMarkPainter(page: c.centre, left: c.left, right: c.right),
       ),
     );
   }
@@ -32,63 +36,101 @@ class SidesMark extends StatelessWidget {
 
 class SidesMarkPainter extends CustomPainter {
   const SidesMarkPainter({
-    required this.top,
+    required this.page,
     required this.left,
     required this.right,
   });
 
-  final Color top;
+  final Color page;
   final Color left;
   final Color right;
 
-  static const double _gapRatio = 18 / 340;
-  static final double _cos30 = math.cos(math.pi / 6);
+  /// The design space: `icon_mark.png`'s pixel grid.
+  static const Size designSize = Size(760, 491);
 
-  /// Unit-circumradius quads (top, left, right), already pulled apart.
-  static List<List<Offset>> unitFaces() {
-    final double c = _cos30;
-    const Offset o = Offset.zero;
-    const Offset top = Offset(0, -1);
-    final Offset ur = Offset(c, -0.5);
-    final Offset lr = Offset(c, 0.5);
-    const Offset bot = Offset(0, 1);
-    final Offset ll = Offset(-c, 0.5);
-    final Offset ul = Offset(-c, -0.5);
-    List<Offset> pull(List<Offset> pts, Offset n) =>
-        <Offset>[for (final Offset p in pts) p + n * _gapRatio];
-    return <List<Offset>>[
-      pull(<Offset>[top, ur, o, ul], const Offset(0, -1)),
-      pull(<Offset>[ul, o, bot, ll], Offset(-c, 0.5)),
-      pull(<Offset>[o, ur, lr, bot], Offset(c, 0.5)),
+  /// The front page.
+  static const Rect pageRect = Rect.fromLTRB(181, 0, 578, 491);
+
+  /// The violet sheet peeking out on the left.
+  static const List<Offset> leftSheet = <Offset>[
+    Offset(0, 101),
+    Offset(164, 28),
+    Offset(164, 463),
+  ];
+
+  /// The orange sheet peeking out on the right.
+  static const List<Offset> rightSheet = <Offset>[
+    Offset(596, 30),
+    Offset(760, 102),
+    Offset(596, 463),
+  ];
+
+  /// The holes cut out of the front page: headline bar, photo block, two lines
+  /// beside the photo, then three rows of three text columns.
+  static List<Rect> pageHoles() {
+    const double l = 217, r = 543, gap = 24;
+    const double colW = (r - l - 2 * gap) / 3;
+    final List<Rect> holes = <Rect>[
+      const Rect.fromLTRB(l, 38, r, 92), // headline bar
+      const Rect.fromLTRB(l, 128, 360, 232), // photo block
+      const Rect.fromLTRB(392, 128, r, 162),
+      const Rect.fromLTRB(392, 198, 500, 232),
     ];
+    for (final (int row, double top) in <(int, double)>[
+      (0, 270),
+      (1, 340),
+      (2, 410),
+    ]) {
+      for (int col = 0; col < 3; col++) {
+        final double x = l + col * (colW + gap);
+        // The last line of the last column is short, like a paragraph end.
+        final double w = row == 2 && col == 2 ? colW * 0.6 : colW;
+        holes.add(Rect.fromLTWH(x, top, w, 34));
+      }
+    }
+    return holes;
   }
 
   @override
   void paint(Canvas canvas, Size size) {
-    final List<List<Offset>> faces = unitFaces();
-    final double reach = faces
-        .expand((List<Offset> q) => q)
-        .map((Offset p) => p.distance)
-        .reduce(math.max);
-    final double scale = size.shortestSide / 2 / reach;
-    final Offset centre = size.center(Offset.zero);
-    final List<Color> colours = <Color>[top, left, right];
-    for (int i = 0; i < faces.length; i++) {
-      final Path path = Path()
-        ..addPolygon(
-          <Offset>[for (final Offset p in faces[i]) centre + p * scale],
-          true,
-        );
-      canvas.drawPath(path, Paint()..color = colours[i]);
+    final double scale = math.min(
+      size.width / designSize.width,
+      size.height / designSize.height,
+    );
+    final Offset origin =
+        size.center(Offset.zero) -
+        Offset(designSize.width, designSize.height) * scale / 2;
+    Offset at(Offset p) => origin + p * scale;
+    Rect rect(Rect r) => Rect.fromPoints(at(r.topLeft), at(r.bottomRight));
+
+    canvas
+      ..drawPath(
+        Path()
+          ..addPolygon(<Offset>[for (final Offset p in leftSheet) at(p)], true),
+        Paint()..color = left,
+      )
+      ..drawPath(
+        Path()..addPolygon(<Offset>[
+          for (final Offset p in rightSheet) at(p),
+        ], true),
+        Paint()..color = right,
+      );
+
+    final Path front = Path()
+      ..fillType = PathFillType.evenOdd
+      ..addRect(rect(pageRect));
+    for (final Rect hole in pageHoles()) {
+      front.addRect(rect(hole));
     }
+    canvas.drawPath(front, Paint()..color = page);
   }
 
   @override
   bool shouldRepaint(SidesMarkPainter old) =>
-      old.top != top || old.left != left || old.right != right;
+      old.page != page || old.left != left || old.right != right;
 }
 
-/// "Sides" with the cube mark before it, for the list app bars.
+/// "Sides" with the newspaper mark before it, for the list app bars.
 class SidesWordmark extends StatelessWidget {
   const SidesWordmark({super.key});
 
@@ -99,7 +141,9 @@ class SidesWordmark extends StatelessWidget {
       children: <Widget>[
         SidesMark(),
         SizedBox(width: 8),
-        Flexible(child: Text(AppConfig.appName, overflow: TextOverflow.ellipsis)),
+        Flexible(
+          child: Text(AppConfig.appName, overflow: TextOverflow.ellipsis),
+        ),
       ],
     );
   }

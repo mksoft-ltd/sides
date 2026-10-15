@@ -63,7 +63,7 @@ void main() {
       ('phone', phoneSize),
       ('tablet master-detail', const Size(834, 1194)),
     ]) {
-      testWidgets('$name list app bar: cube mark then "Sides"',
+      testWidgets('$name list app bar: newspaper mark then "Sides"',
           (WidgetTester tester) async {
         await pumpSidesApp(tester, size: size);
         final Finder mark = find.descendant(
@@ -98,7 +98,7 @@ void main() {
             )
             .painter! as SidesMarkPainter;
         final PerspectiveColors c = theme.extension<PerspectiveColors>()!;
-        expect(<Color>[p.left, p.top, p.right], <Color>[
+        expect(<Color>[p.left, p.page, p.right], <Color>[
           c.left,
           c.centre,
           c.right,
@@ -106,12 +106,38 @@ void main() {
       }
     });
 
-    test('geometry matches build_icon.py: three faces, Y seam of 18/340', () {
-      final List<List<Offset>> f = SidesMarkPainter.unitFaces();
-      expect(f, hasLength(3));
-      // The top face's shared corner sits GAP above the centre.
-      expect(f[0][2].dy, closeTo(-18 / 340, 1e-9));
-      expect(f[0][2].dx, closeTo(0, 1e-9));
+    test('geometry: front page between two fanned sheets, furniture inside',
+        () {
+      const Rect page = SidesMarkPainter.pageRect;
+      final Rect design = Offset.zero & SidesMarkPainter.designSize;
+      // The sheets sit either side of the page, never under it, so the page
+      // furniture (holes) shows the surface and not a sheet colour.
+      for (final Offset p in SidesMarkPainter.leftSheet) {
+        expect(p.dx, lessThan(page.left));
+        expect(design.contains(p), isTrue);
+      }
+      for (final Offset p in SidesMarkPainter.rightSheet) {
+        expect(p.dx, greaterThan(page.right));
+        expect(p.dx, lessThanOrEqualTo(design.right));
+      }
+      final List<Rect> holes = SidesMarkPainter.pageHoles();
+      // Headline + photo + 2 lines beside it + 3 rows of 3 columns.
+      expect(holes, hasLength(13));
+      final Rect inner = page.deflate(30);
+      for (int i = 0; i < holes.length; i++) {
+        expect(inner.contains(holes[i].topLeft), isTrue, reason: 'hole $i');
+        expect(inner.contains(holes[i].bottomRight), isTrue,
+            reason: 'hole $i');
+        for (int j = i + 1; j < holes.length; j++) {
+          // Even-odd fill: overlapping holes would re-fill their overlap.
+          expect(holes[i].overlaps(holes[j]), isFalse, reason: 'holes $i/$j');
+        }
+      }
+      // Thin furniture stays about 0.9 dp tall at the 20 dp app-bar size.
+      const double dp = 20 / 760;
+      for (final Rect h in holes) {
+        expect(h.height * dp, greaterThan(0.85));
+      }
     });
   });
 
