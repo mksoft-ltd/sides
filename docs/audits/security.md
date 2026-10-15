@@ -107,4 +107,35 @@ token.
 
 No Critical or High findings. SEC-1 to SEC-3 are Medium and should be fixed in the pipeline before or soon after launch. SEC-5 must be fixed before the publish stage regardless.
 
+## Re-verification — fix round 2 (15 Oct 2026, `main` at 44bda98; fixes 99fec96, 2caff21, 136d51d)
+
+Checked by the original auditor. Pipeline suite: 179 passed (socket-guarded). Release APK rebuilt from this commit.
+
+| Finding | Status | Evidence |
+|---|---|---|
+| SEC-1 prompt injection | **Fixed** (residual Low) | Both prompts now wrap feed lines in `<articles>…</articles>` and state that feed text is untrusted data. A forged `<articles>` tag in a headline is neutralised (`group.py` `_TAG`). The collector drops items whose headline or ≤200-char snippet is instruction-shaped (`guard.instruction_like`). The validator drops any point, claim, topic, contradiction side or quote carrying a URL, `@handle` or instruction phrase (`untrusted_text`). Titles are grounded in member headlines or replaced (`guard.ground_title`). `tests/test_injection_guard.py` drives `fixtures/feeds/synthetic_injection.xml` end to end into the digest. Residual: the screens are phrase-level regexes, so a paraphrased injection gets past them, and point texts have no lexical-overlap check (only titles do). The prompt rule is the main defence, and the regexes are a backstop. Accepted. |
+| SEC-2 HTTP feeds | **Fixed** | `Outlet._https_feed` rejects any non-https `feed_url`, and a config test asserts it. People's Daily is now on `https://en.people.cn/...`. CNN is `enabled: false`. |
+| SEC-3 CI job split | **Fixed, with one bypass, filed as SEC-9 below** | The build job has `contents: read`, `persist-credentials: false`, the secret, and runs `pip install --require-hashes --no-deps -r pipeline/requirements.lock`. The publish job has the write token and no secret. `ci.yml` is also hash-locked. Asserted by `tests/test_workflows.py` and confirmed in run 38663551757's log (`persist-credentials: false`, `ANTHROPIC_API_KEY: ***`). |
+| SEC-4 link hosts | **Fixed** | `collect.link_on_outlet_host` limits links to the outlet's `home_url` host or its `link_hosts`, subdomains included. `http://` links are upgraded to `https://`. Drops are counted in `item_drops` and in `meta.warnings`. Only four `link_hosts` entries exist, all publisher-owned: bbc.com, dailymail.com, today.com, people.com.cn. |
+| SEC-6 Privacy Sandbox permissions | **Fixed** | `tools:node="remove"` is set for the three permissions. `aapt2 dump permissions` on the rebuilt release APK lists only INTERNET, AD_ID, ACCESS_NETWORK_STATE, BILLING, WAKE_LOCK, FOREGROUND_SERVICE and the app's own receiver permission. |
+| Key exposure, two-job shape | **Clean** | The secret is masked (`***`) in the run log. The `pipeline-out` artifact from dry run 38663551757 holds `articles.json` only, with no secret strings. A local `--stage-only` run produces only `.nojekyll`, `index.html`, `digest/*.json` and `runs/*.json`, with no `.git` and no secret strings. The stage step has no secret in its env and clones anonymously. |
+
+**Not yet exercised live.** Both CI dry runs, 38663266608 and 38663551757, were collect-only. The staged-site upload, the artifact hand-off and `--push-only` have not yet run in Actions. Before relying on the schedule, trigger one full `gh workflow run daily.yml` and confirm the publish job pushes gh-pages.
+
+### SEC-9 — The publish job executes git hooks shipped inside the build job's artifact — **Medium (new, non-blocking)**
+- **Affected component:** `daily.yml` "Upload the staged site" (`include-hidden-files: true`), and `scripts/publish_site.sh --push-only`, which runs `cp -R "$FROM_DIR"/. "$SITE_DIR"/` over a clone whose `.git` it keeps. The publish job's checkout also keeps the default `persist-credentials: true`.
+- **Description:** The split assumes the publish job "runs no pipeline code". But the artifact is produced by the job SEC-3 treats as possibly compromised, and hidden files are uploaded. A `.git/hooks/pre-commit` or a `.git/config` with `core.hooksPath` or `core.fsmonitor` in the artifact replaces the clone's own. It then runs at `git add`/`git commit` in the job holding `contents: write` + `actions: write`, which can push to `main`.
+- **Proof (local, scratch repos):** I put a staged dir containing `.git/hooks/pre-commit` through `publish_site.sh --push-only`. The hook ran (`HOOK-RAN-WITH-WRITE-TOKEN`) and the push succeeded.
+- **Why Medium, not High:** it needs a compromised build job first. Hash-locked dependencies make that much harder, and a compromised build job can already publish arbitrary site content by design. What SEC-9 adds is escalation from site content to repo write, including `main`.
+- **Fix:**
+  1. In `--push-only`, fail if `find "$FROM_DIR" \( -name .git -o -name .gitmodules -o -name .gitattributes \)` finds anything. Or copy only an allow-list: `digest/`, `runs/`, `index.html`, `privacy_policy.html`, `.nojekyll`.
+  2. Run the publish job's git with `-c core.hooksPath=/dev/null -c core.fsmonitor=false`.
+  3. Write `.nojekyll` in the publish job and drop `include-hidden-files: true`.
+  4. Set `persist-credentials: false` on the publish checkout. The keepalive push can use the token URL explicitly.
+  5. Add a `test_workflows.py`/`test_publish.py` case that feeds a staged dir containing `.git/hooks/pre-commit` and asserts the hook does not run.
+
+**Unchanged for publish:** SEC-5 (debug-signed release), SEC-7 (accepted) and SEC-8 remain as written above.
+
+**Re-verification verdict:** no finding regressed and none is Critical or High. SEC-9 is Medium and should go in the next fix round.
+
 Verdict: PASS
