@@ -1,0 +1,92 @@
+default_platform(:ios)
+
+# Sides — App Store lanes. Credentials come from ~/.zshenv (house-facts §11):
+# ASC_KEY_ID, ASC_ISSUER_ID, ASC_KEY_PATH. Run from ios/: `fastlane <lane>`.
+#
+# ASC app 6822909350, primary locale en-GB, en-US mirrored (both folders exist).
+#
+# Deliberately NOT done through fastlane:
+#   * screenshots — deliver's read-back races ASC and appends duplicates under a
+#     "Successfully uploaded" line; scripts/publish/asc_screenshots.rb uploads
+#     per display type and reads back counts + checksums.
+#   * age rating, price, availability, IAP — raw API scripts in scripts/publish/
+#     (deliver's price PATCH is broken; the 2026 age-rating attributes are not
+#     in deliver's rating config).
+#   * submission — founder-confirmed step, done from the IAP's own page so the
+#     IAP rides the version (house-facts §15).
+
+ROOT = File.expand_path("../..", __dir__)
+RB = "#{ROOT}/scripts/publish/rb"
+TEST_ADMOB = "ca-app-pub-3940256099942544"
+
+def asc_key
+  app_store_connect_api_key(
+    key_id: ENV.fetch("ASC_KEY_ID"),
+    issuer_id: ENV.fetch("ASC_ISSUER_ID"),
+    key_filepath: File.expand_path(ENV.fetch("ASC_KEY_PATH"))
+  )
+end
+
+platform :ios do
+  desc "Precheck-style validation of the local store text (limits, URLs, banned wording)"
+  lane :validate do
+    sh("/opt/homebrew/opt/ruby/bin/ruby", "#{ROOT}/scripts/publish/validate_metadata.rb")
+  end
+
+  desc "Upload text metadata, categories, review info and age rating (no binary, no screenshots)"
+  lane :metadata do
+    validate
+    deliver(
+      api_key: asc_key,
+      app_version: "1.0.0",
+      skip_binary_upload: true,
+      skip_screenshots: true,
+      skip_app_version_update: false,
+      force: true,
+      run_precheck_before_submit: false,
+      submit_for_review: false
+    )
+    sh(RB, "#{ROOT}/scripts/publish/asc_age_rating.rb")
+  end
+
+  desc "Upload store screenshots (6.9\" iPhone + 13\" iPad) via the API, with read-back"
+  lane :screenshots_upload do
+    sh(RB, "#{ROOT}/scripts/publish/asc_screenshots.rb")
+  end
+
+  desc "Build the release IPA and upload it to TestFlight (refuses Google's test AdMob IDs)"
+  lane :build_upload_testflight do
+    plist = File.read("#{ROOT}/ios/Runner/Info.plist")
+    UI.user_error!("Info.plist still has Google's test AdMob app ID") if plist.include?(TEST_ADMOB)
+    Dir.chdir(ROOT) do
+      sh("flutter", "build", "ipa", "--release",
+         "--export-options-plist=ios/ExportOptions.plist")
+    end
+    # flutter build ipa exits 0 on an archive failure and leaves the previous IPA.
+    ipa = Dir["#{ROOT}/build/ios/ipa/*.ipa"].max_by { |f| File.mtime(f) }
+    UI.user_error!("no IPA in build/ios/ipa") unless ipa
+    UI.user_error!("IPA is stale (older than 10 min): #{ipa}") if Time.now - File.mtime(ipa) > 600
+    pilot(
+      api_key: asc_key,
+      ipa: ipa,
+      skip_waiting_for_build_processing: true,
+      skip_submission: true
+    )
+  end
+
+  desc "Upload the App Privacy answers (needs an interactive Apple ID: FASTLANE_USER; the API key cannot do this)"
+  lane :privacy do
+    upload_app_privacy_details_to_app_store(
+      username: ENV.fetch("FASTLANE_USER"),
+      team_id: "696939LPWV",
+      app_identifier: "com.froggyeye.sides",
+      json_path: "#{ROOT}/ios/fastlane/privacy_details.json"
+    )
+    UI.important("Now click App Privacy -> Publish in App Store Connect (no API exists for that).")
+  end
+
+  desc "Run Apple's precheck against what is now on App Store Connect"
+  lane :precheck_live do
+    precheck(api_key: asc_key, include_in_app_purchases: false, default_rule_level: :error)
+  end
+end

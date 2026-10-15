@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>method</key>
+	<string>app-store-connect</string>
+	<key>teamID</key>
+	<string>696939LPWV</string>
+	<key>signingStyle</key>
+	<string>manual</string>
+	<!-- SHA-1 of ASC certificate 48CDM5Z29C (expires 2027-10-11). The keychain holds two identities
+	     named "Apple Distribution: Froggy Eye Ltd"; a name-only export picks the wrong one. -->
+	<key>signingCertificate</key>
+	<string>535BD1B4D06EB87093EF3C80E35A6F5CEC2BA2C5</string>
+	<key>provisioningProfiles</key>
+	<dict>
+		<key>com.froggyeye.sides</key>
+		<string>Sides App Store</string>
+	</dict>
+	<key>manageAppVersionAndBuildNumber</key>
+	<false/>
+	<key>uploadSymbols</key>
+	<true/>
+	<key>destination</key>
+	<string>export</string>
+</dict>
+</plist>

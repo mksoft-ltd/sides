@@ -1,0 +1,42 @@
+default_platform(:android)
+
+# Sides — Google Play lanes. Credentials: PLAY_JSON_KEY in ~/.zshenv.
+# Run from android/: `fastlane <lane>`.
+#
+# The lanes call the raw androidpublisher scripts in scripts/publish/ instead of
+# `supply`, because:
+#   * supply cannot upload AABs from this machine (house-facts §28);
+#   * a metadata-only supply run aborts on an app with no release in any track
+#     ("Could not find release for version code ''").
+# Listing locales are en-GB (default) and en-US. Release notes are written only
+# for locales the live listing has (house-facts §19).
+
+ROOT = File.expand_path("../..", __dir__)
+RB = "#{ROOT}/scripts/publish/rb"
+TEST_ADMOB = "ca-app-pub-3940256099942544"
+
+platform :android do
+  desc "Precheck-style validation of the local store text"
+  lane :validate do
+    sh("/opt/homebrew/opt/ruby/bin/ruby", "#{ROOT}/scripts/publish/validate_metadata.rb")
+  end
+
+  desc "Upload listing text (en-GB + en-US), icon and feature graphic"
+  lane :metadata do
+    validate
+    sh(RB, "#{ROOT}/scripts/publish/play_listing.rb", "--text", "--graphics")
+  end
+
+  desc "Replace the phone and 10-inch tablet screenshots"
+  lane :screenshots_upload do
+    sh(RB, "#{ROOT}/scripts/publish/play_listing.rb", "--screenshots")
+  end
+
+  desc "Build the release AAB and upload it to the internal track (refuses Google's test AdMob IDs)"
+  lane :build_upload_play_internal do
+    manifest = File.read("#{ROOT}/android/app/src/main/AndroidManifest.xml")
+    UI.user_error!("AndroidManifest still has Google's test AdMob app ID") if manifest.include?(TEST_ADMOB)
+    Dir.chdir(ROOT) { sh("flutter", "build", "appbundle", "--release") }
+    sh(RB, "#{ROOT}/scripts/publish/play_upload.rb", "--track=internal")
+  end
+end
