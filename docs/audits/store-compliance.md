@@ -108,4 +108,25 @@ stage 7 closes. Neither needs a change to `lib/` or the metadata text. M1 closed
 - [ ] ASC submission shows **2 items** (version + IAP) before Submit
 - [ ] Founder: name decision (m1) made before metadata upload
 
+## Re-verification — minors fix round (15 Oct 2026, `main` at c7aed64; fix 5883f8b)
+
+Checked by the original auditor. `flutter analyze` is clean and `flutter test` passes 247. Each fix was reverted in
+the working tree and its test failed, then the change was restored (tree clean afterwards).
+
+| Finding | Status | Evidence |
+|---|---|---|
+| m1 name suffix "Every Angle" | **Open: founder call** | Not yet answered. Decide before the stage-7 metadata upload. |
+| m2 AI disclosure + reporting | **Fixed** | `Copy.howItWorks` now says the comparison "is generated automatically by an AI model … and is not reviewed by a human editor". `ReportStoryTile` appears in Settings › How it works and at the foot of every story, including tablet. It sends through `LinkLauncher.compose` (mailto only). The subject is "Sides story report", and from a story the body carries the title and digest date, percent-encoded with no `+`. A failed launch shows the address. Mutation (AI sentence removed) failed `story_report_test`. |
+| m3 max ad content rating | **Fixed** | `AdConfig.requestConfiguration` sets `MaxAdContentRating.t`, not child-directed. `updateRequestConfiguration` runs after UMP consent and before `MobileAds.initialize()`. Mutation (call removed) failed `ad_config_test`. |
+| m4 release guard | **Fixed** | `liveIdsConfigured` is now derived from the unit IDs. `main` installs `AdMobAdsService` only when `AdConfig.mayStartAds(releaseMode: kReleaseMode)` is true, so a release build still on test units never starts the SDK. Mutation (guard forced true) failed `ad_config_test`. |
+| m6 doc drift | **Fixed** | `data_safety_answers.md` §5 shows the in-app contact as done. §6 explains that base `FOREGROUND_SERVICE` is present but untyped, so there is no declaration. |
+
+Residuals (Minor, no regression):
+- **The guard fails closed into a different mismatch.** A release that misses the ID swap ships with no banner. The
+  listing says the app shows one, and Settings still sells "Remove ads". That is far better than test ads, but stage 7
+  must confirm a live banner on the release smoke test (already in M2) before submitting.
+- **`tagForUnderAgeOfConsent: no` is an assertion, not a default.** Play's target audience includes 13–15. In
+  EEA countries whose digital age of consent is 16, that statement is not true of every user. Requests are already
+  non-personalised, so the practical effect is small. Leaving TFUA unspecified would avoid asserting it. Optional.
+
 Verdict: PASS
