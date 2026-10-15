@@ -15,7 +15,7 @@ Founder decisions 14–15 Oct 2026: Claude Opus 5.5 for the daily pipeline at fu
 | 2 | design | done | 2026-10-15 | BRAND.md, cube icon wired both platforms (apk + Runner.app verified), icon_512, feature graphic, screenshot specs + headlines; 6 polish items listed in BRAND.md for the fix round; commit 6469a3f |
 | 3 | test | done | 2026-10-15 | 195 app tests (+3 skipped pending bugs F1 full-disk spinner, F2 chip semantics onTap), 138 pipeline tests, 49 mutation checks, integration screenshots run on iPhone + iPad sims; TEST_PLAN.md; commit e94f80d. Fix round 3f24d7d 6f69c20: F1, F2 + 6 polish fixed, 214 tests; QA re-verified F1/F2 (7cb5fe6) VERIFIED |
 | 4a | code-review | in-progress | 2026-10-15 | mobile-code-reviewer |
-| 4b | security | in-progress | 2026-10-15 | mobile-security-auditor |
+| 4b | security | done | 2026-10-15 | PASS: 0 Critical/High; Medium SEC-1 feed prompt injection into model free text, SEC-2 two HTTP feeds, SEC-3 daily job unpinned pip + write token in one job; Low SEC-4..8 (SEC-5 debug-signed release = publish blocker); privacy-label data map in docs/audits/security.md |
 | 5 | metadata | pending | | growth-monetization → release-manager |
 | 6 | compliance | pending | | app-store-review-auditor |
 | 7 | publish | pending | | store-publisher; AdMob IDs + IAP product are console items |
