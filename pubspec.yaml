@@ -34,6 +34,7 @@ dev_dependencies:
   flutter_lints: ^6.0.0
   mocktail: ^1.0.5
   fake_async: ^1.3.3
+  flutter_launcher_icons: ^0.14.4
 
 flutter:
   uses-material-design: true
@@ -49,3 +50,17 @@ flutter:
     # The real 14 Oct 2026 pipeline digest. Test fixture and debug/screenshot
     # preview only (guarded by !kReleaseMode); never shown as live content.
     - assets/sample_digest.json
+
+# App icon. Sources + regeneration recipe: store_assets/icon/ (build_icon.py) and
+# store_assets/README.md. After `dart run flutter_launcher_icons`, revert the
+# pbxproj line the package corrupts (see the README).
+flutter_launcher_icons:
+  image_path: "store_assets/icon/icon_master.png"
+  android: true
+  ios: true
+  # iOS rejects an app icon with an alpha channel; the master is opaque anyway.
+  remove_alpha_ios: true
+  adaptive_icon_background: "#15252C"
+  adaptive_icon_foreground: "store_assets/icon/icon_foreground.png"
+  adaptive_icon_monochrome: "store_assets/icon/icon_monochrome.png"
+  min_sdk_android: 21

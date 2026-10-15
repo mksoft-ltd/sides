@@ -1,0 +1,109 @@
+{
+  "_comment": "Shot list for render.sh. Headline copy is owned by store_assets/BRAND.md ('Screenshot headlines'); keep the two identical. Each target reads captures from its raw_dir (iOS captures for Apple, Android captures for Play: no iPhone status bar on a Play listing).",
+  "targets": {
+    "ios_69": {
+      "w": 1320,
+      "h": 2868,
+      "kind": "phone",
+      "raw_dir": "raw"
+    },
+    "ios_65": {
+      "w": 1284,
+      "h": 2778,
+      "kind": "phone",
+      "raw_dir": "raw"
+    },
+    "ipad_13": {
+      "w": 2752,
+      "h": 2064,
+      "kind": "tablet",
+      "raw_dir": "raw"
+    },
+    "play_phone": {
+      "w": 1080,
+      "h": 1920,
+      "kind": "phone",
+      "raw_dir": "raw_android"
+    },
+    "play_tablet": {
+      "w": 2560,
+      "h": 1600,
+      "kind": "tablet",
+      "raw_dir": "raw_android"
+    }
+  },
+  "phone": [
+    {
+      "id": "01_digest",
+      "raw": "phone_01_digest.png",
+      "theme": "light",
+      "head": "Every story, every angle",
+      "sub": "Today's top stories and who covered each one"
+    },
+    {
+      "id": "02_wording",
+      "raw": "phone_02_wording.png",
+      "theme": "light",
+      "head": "Compare how each side words it",
+      "sub": "Real headline quotes from left, centre and right"
+    },
+    {
+      "id": "03_west_east",
+      "raw": "phone_03_west_east.png",
+      "theme": "dark",
+      "head": "See how West and East differ",
+      "sub": "Western and Eastern outlets on the same story"
+    },
+    {
+      "id": "04_blindspot",
+      "raw": "phone_04_blindspot.png",
+      "theme": "light",
+      "head": "See what only one side covered",
+      "sub": "Blindspot labels flag one-sided coverage"
+    },
+    {
+      "id": "05_agreed",
+      "raw": "phone_05_agreed.png",
+      "theme": "light",
+      "head": "Shared facts and contested claims",
+      "sub": "Plus what each side leaves out"
+    },
+    {
+      "id": "06_sources",
+      "raw": "phone_06_sources.png",
+      "theme": "dark",
+      "head": "Every point links to its source",
+      "sub": "Read the original on the outlet's own site"
+    }
+  ],
+  "tablet": [
+    {
+      "id": "01_lean_columns",
+      "raw": "ipad_01_lean_columns.png",
+      "theme": "light",
+      "head": "Every side, side by side",
+      "sub": "Left, centre and right in columns on tablets"
+    },
+    {
+      "id": "02_bloc_dark",
+      "raw": "ipad_02_bloc_dark.png",
+      "theme": "dark",
+      "head": "West and East, column by column",
+      "sub": "How Western and Eastern outlets frame the story"
+    },
+    {
+      "id": "03_blindspot",
+      "raw": "ipad_03_blindspot.png",
+      "theme": "light",
+      "head": "See what only one side covered",
+      "sub": "Blindspot labels flag one-sided coverage"
+    },
+    {
+      "id": "04_sources",
+      "raw": "ipad_04_sources.png",
+      "theme": "light",
+      "head": "Every point links to its source",
+      "sub": "Read the original on the outlet's own site"
+    }
+  ]
+}

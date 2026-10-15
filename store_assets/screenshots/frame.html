@@ -1,0 +1,48 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<!-- Store screenshot frame. Query: ?src=raw/x.png&w=1320&h=2868&kind=phone&theme=light&head=...&sub=...
+     No device frame: a rounded capture on the brand plate. Colours from BRAND.md. -->
+<style>
+  html,body{margin:0;overflow:hidden}
+  body{font-family:-apple-system,"SF Pro Display","Helvetica Neue",Arial,sans-serif;
+       background:linear-gradient(180deg,#1D313A 0%,#0F1C22 100%);color:#EEF2F4;position:relative}
+  body.light{background:linear-gradient(180deg,#F4F8FA 0%,#DCE6EA 100%);color:#13232A}
+  .copy{position:absolute;left:0;right:0;text-align:center}
+  h1{margin:0;font-weight:700;letter-spacing:-.02em;line-height:1.08}
+  p{margin:0;font-weight:400;opacity:.78;line-height:1.25}
+  img{position:absolute;left:50%;transform:translateX(-50%);display:block;
+      box-shadow:0 0 0 2px rgba(127,140,148,.35),0 30px 80px rgba(0,0,0,.35)}
+</style></head>
+<body>
+<div class="copy"><h1 id="h"></h1><p id="s"></p></div>
+<img id="i" alt="">
+<script>
+  const q = new URLSearchParams(location.search);
+  const W = +q.get('w'), H = +q.get('h'), kind = q.get('kind');
+  document.body.style.width = W + 'px'; document.body.style.height = H + 'px';
+  // The plate contrasts with the capture: a light capture sits on the dark plate.
+  if (q.get('theme') === 'dark') document.body.classList.add('light');
+  const h = document.getElementById('h'), s = document.getElementById('s'), i = document.getElementById('i');
+  h.textContent = q.get('head'); s.textContent = q.get('sub') || '';
+  const copy = document.querySelector('.copy');
+  if (kind === 'phone') {
+    const u = W / 1320;                         // design unit: the 6.9" canvas
+    const imgW = W * (H / W > 2 ? 0.83 : 0.74); // narrower on Play's 16:9 canvas
+    copy.style.top = (H * 0.055) + 'px'; copy.style.padding = '0 ' + (90 * u) + 'px';
+    h.style.fontSize = (104 * u) + 'px'; s.style.fontSize = (50 * u) + 'px'; s.style.marginTop = (28 * u) + 'px';
+    i.style.width = imgW + 'px';
+    // The capture starts a fixed gap below the measured copy, so a two-line
+    // headline pushes it down instead of colliding with it.
+    i.style.top = (copy.offsetTop + copy.offsetHeight + 90 * u) + 'px';
+    i.style.borderRadius = (imgW * 0.085) + 'px';
+  } else {
+    const u = W / 2752;
+    copy.style.top = (H * 0.05) + 'px';
+    h.style.fontSize = (96 * u) + 'px'; s.style.fontSize = (46 * u) + 'px'; s.style.marginTop = (20 * u) + 'px';
+    const imgW = W * 0.84;
+    i.style.width = imgW + 'px'; i.style.top = (copy.offsetTop + copy.offsetHeight + 80 * u) + 'px';
+    i.style.borderRadius = (imgW * 0.022) + 'px';
+  }
+  i.src = q.get('src');
+</script>
+</body></html>

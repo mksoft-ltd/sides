@@ -1,0 +1,38 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<!-- Play feature graphic, 1024 x 500. Rendered by render.sh (headless Chrome).
+     Colours: store_assets/BRAND.md. No tick/badge/seal/star (house-facts 29).
+     Everything that matters sits inside the central 824 x 300 safe area. -->
+<style>
+  html,body{margin:0;width:1024px;height:500px;overflow:hidden}
+  body{background:linear-gradient(180deg,#1D313A 0%,#0F1C22 100%);
+       font-family:-apple-system,"SF Pro Display","Helvetica Neue",Arial,sans-serif;color:#EEF2F4;
+       display:flex;align-items:center;justify-content:center;gap:44px}
+  .brand{display:flex;align-items:center;gap:26px}
+  .brand img{width:120px;height:120px}
+  h1{margin:0;font-size:70px;font-weight:600;letter-spacing:-1.5px;line-height:1}
+  p{margin:14px 0 0;font-size:25px;font-weight:400;color:#A7B3BB;letter-spacing:-.2px}
+  .card{width:236px;padding:22px 24px;border-radius:20px;background:#1A2B32;border:1px solid #2E434C}
+  .lab{font-size:17px;font-weight:600;color:#DDE4E8;margin:0 0 10px}
+  .bar{display:flex;gap:4px;height:12px;margin-bottom:10px}
+  .bar span{border-radius:6px}
+  .key{display:flex;gap:12px;font-size:14px;color:#A7B3BB;margin-bottom:22px}
+  .key:last-child{margin-bottom:0}
+  .key i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px}
+</style></head>
+<body>
+  <div class="brand">
+    <img src="../icon/icon_mark.svg" alt="">
+    <div><h1>Sides</h1><p>The news, every angle.</p></div>
+  </div>
+  <!-- Abstract coverage card in the app's own visual language. Deliberately no
+       counts and no headline: art never shows invented news data. -->
+  <div class="card">
+    <div class="lab">Political lean</div>
+    <div class="bar"><span style="flex:4;background:#B79CEB"></span><span style="flex:3;background:#A7B3BB"></span><span style="flex:3;background:#F0A35E"></span></div>
+    <div class="key"><span><i style="background:#B79CEB"></i>Left</span><span><i style="background:#A7B3BB"></i>Centre</span><span><i style="background:#F0A35E"></i>Right</span></div>
+    <div class="lab">West / East</div>
+    <div class="bar"><span style="flex:3;background:#6CC5C0"></span><span style="flex:2;background:#E0BE55"></span></div>
+    <div class="key"><span><i style="background:#6CC5C0"></i>West</span><span><i style="background:#E0BE55"></i>East</span></div>
+  </div>
+</body></html>
