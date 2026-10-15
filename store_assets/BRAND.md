@@ -43,7 +43,7 @@ partisan to half the audience. Never use a perspective colour decoratively, e.g.
 | Ink on paper | `#13232A` | headlines on the light plate |
 | App seed | `#34505C` | Material 3 seed for both in-app themes (deep slate-teal) |
 
-Icon faces: top `#C3CDD3`, left `#8F63D2`, right `#E8914A`, which are the lean colours tuned to sit on the dark plate.
+Icon sheets: front page `#C3CDD3`, left sheet `#8F63D2`, right sheet `#E8914A`, which are the lean colours tuned to sit on the dark plate.
 
 ## Typography
 
@@ -55,23 +55,53 @@ Icon faces: top `#C3CDD3`, left `#8F63D2`, right `#E8914A`, which are the lean c
 
 ## Iconography and the app icon
 
-The mark is **one cube seen from its corner, so three faces show at once**: the same object, three sides.
-The faces are pulled slightly apart along their normals, leaving a Y-shaped seam so the three sides stay
-distinct at 48 px. The colours echo the in-app lean palette: violet face on the left, orange face on the right,
-lit slate face on top between them. All three faces have equal area, so no side is bigger than another.
+The mark is **a newspaper front page with two more sheets fanned out behind it**. The front page is pale slate,
+with a thick headline bar, a photo block and three columns of text bars, so a stranger sees "newspaper" and
+knows it is a news app even at 48 px. Behind it, a violet sheet fans out to the left and an orange sheet to
+the right. These are the lean colours in their in-app positions, so the icon says "the same news, from several
+sides". The text bars are abstract: no letters, no masthead lettering, no headline anyone could read.
 
-- No outlet logos, flags, globes, newspaper mastheads or real-world brands.
-- Generated from primitives by `icon/build_icon.py`; proofs at 180/120/48 px and inside the round
-  launcher mask (`icon/preview_*.png`). The adaptive foreground keeps its farthest corner at 28.5 dp from
-  the centre, inside the 33 dp safe circle. The themed (monochrome) icon separates the faces by opacity.
+- No outlet logos, flags, globes, real mastheads or real-world brands.
+- Generated with OpenArt (record below), then finished in code by `icon/build_icon.py`. The script keys the
+  mark off the model's background, snaps every pixel to the exact brand hex, clips the corner fragments the
+  model left above and below the front page, and places the mark at 78% of the master's width on the plate
+  gradient. The dark text bars are holes in the page, so the plate shows through as the ink.
+- Proofs at 180/120/48 px and inside the round launcher mask (`icon/preview_*.png`). The adaptive foreground
+  keeps its farthest corner at 30 dp from the centre, inside the 33 dp safe circle. The themed (monochrome)
+  icon shows the front page solid and the two back sheets at 62% opacity.
+- `icon/icon_mark.png` is the tight transparent mark used by the feature graphic.
 - In-app icons: Material Symbols outlined, default weight, so they match the M3 components already in use.
+- The in-app app-bar mark (`SidesMark`) still paints the earlier cube icon. Repaint it from this mark in a
+  future code round.
+
+### Generated artwork
+
+Credits are OpenArt credits. The balance was 22,880 before this pass and 22,680 after, so the pass used 200.
+Raw outputs and prompt files are in `icon/openart/`.
+
+| Asset | Model | Prompt | Creation id | Date | Credits | File | Verdict |
+|---|---|---|---|---|---|---|---|
+| Icon, fanned pages | nano-banana-pro, text-to-image, 1:1 | prompt V1 | `SmPCb1HxhulYDGRW1dHo` | 2026-10-15 | 40 | `openart/v1_fanned.png` | Best news read; side pages messy outlines. Refined. |
+| Icon, split page | nano-banana-pro, text-to-image, 1:1 | prompt V2 | `y4fHnCAGLyQ3uT3ac6FA` | 2026-10-15 | 40 | `openart/v2_split.png` | Rejected: reads as a barcode or radiator, not a newspaper. |
+| Icon, folded paper | nano-banana-pro, text-to-image, 1:1 | prompt V3 | `UGPqDkVlh6q7QqNc610u` | 2026-10-15 | 40 | `openart/v3_folded.png` | Rejected: fold reads as a folder tab; the sides idea is weak. |
+| Icon, refinement 1 | nano-banana-pro, image-to-image from V1 | prompt R1 | `emkR0nfdiKbVKa2NrGkW` | 2026-10-15 | 40 | `openart/r1_fanned.png` | Front page clean; back sheets still outlines. |
+| **Icon, chosen** | nano-banana-pro, image-to-image from R1 | prompt R2 | `ZLzSgWDROF32MFaeIUlm` | 2026-10-15 | 40 | `openart/r2_fanned.png` | **Chosen.** Corner fragments clipped in code. |
+| Feature graphic | none | n/a | n/a | 2026-10-15 | 0 | `feature_graphic.png` | Re-rendered in code with `icon/icon_mark.png`. |
+
+Full prompts:
+
+- **V1:** A newspaper front page icon: three newspaper front pages fanned out like a hand of cards from a shared bottom pivot, each page tilted at a different angle. The left page is violet #8F63D2, the middle page is pale slate #C3CDD3 and sits in front, the right page is orange #E8914A. Each page clearly reads as a newspaper front page: a thick headline bar across the top, a rectangular photo block, and several columns of short horizontal text-line bars, all drawn as solid shapes in dark slate #15252C. Flat vector app icon artwork, single centred mark with generous empty margins (mark fills about 60 percent of the frame), on a perfectly flat solid background of exact colour #15252C (dark slate), no gradient, no texture, no vignette. Abstract blank text bars only, no readable letters, no text, no words, no numbers, no masthead lettering. No badges, ticks, check marks, seals, stars, ribbons, laurels, logos or trademarks. No device, no hands, no shadows, no photo-realism, no glossy 3D, no bevels. Crisp geometric shapes, minimal, premium, readable at 48 pixels.
+- **V2:** A newspaper front page icon: a single upright newspaper front page, cut vertically into three equal strips that are pulled slightly apart by thin even gaps, so it reads as one page seen from three sides. Left strip violet #8F63D2, middle strip pale slate #C3CDD3, right strip orange #E8914A. The page clearly reads as a newspaper: a thick headline bar spanning the top, a rectangular photo block, and columns of short horizontal text-line bars, all drawn as solid shapes in dark slate #15252C, continuing across the three strips. Slightly rounded outer corners. Flat vector app icon artwork, single centred mark with generous empty margins (mark fills about 60 percent of the frame), on a perfectly flat solid background of exact colour #15252C (dark slate), no gradient, no texture, no vignette. Abstract blank text bars only, no readable letters, no text, no words, no numbers, no masthead lettering. No badges, ticks, check marks, seals, stars, ribbons, laurels, logos or trademarks. No device, no hands, no shadows, no photo-realism, no glossy 3D, no bevels. Crisp geometric shapes, minimal, premium, readable at 48 pixels.
+- **V3:** A newspaper icon: a folded broadsheet newspaper seen from the front, slightly angled, with a visible fold at the top edge giving it a recognisable newspaper silhouette. The page is pale slate #C3CDD3 with a thick dark headline bar across the top, and below it three text columns; the left column block is tinted violet #8F63D2, the middle column stays pale slate, the right column block is tinted orange #E8914A, each column filled with short horizontal text-line bars in dark slate #15252C. Flat vector app icon artwork, single centred mark with generous empty margins (mark fills about 60 percent of the frame), on a perfectly flat solid background of exact colour #15252C (dark slate), no gradient, no texture, no vignette. Abstract blank text bars only, no readable letters, no text, no words, no numbers, no masthead lettering. No badges, ticks, check marks, seals, stars, ribbons, laurels, logos or trademarks. No device, no hands, no shadows, no photo-realism, no glossy 3D, no bevels. Crisp geometric shapes, minimal, premium, readable at 48 pixels.
+- **R1:** Redraw this icon more cleanly and boldly. Keep the same idea: three newspaper front pages fanned out from a shared bottom pivot, the pale slate #C3CDD3 page in front in the middle, a violet #8F63D2 page tilted behind to the left, an orange #E8914A page tilted behind to the right. Make the two back pages SOLID filled pages exactly like the front page (not outlines), each showing only its top-left headline bar and a few text-line bars in dark slate #15252C where it peeks out. Fan them less widely (about 15 degrees each side) so the whole mark is compact and roughly square, and make the mark larger, filling about 70 percent of the frame, centred, with even margins. Front page: one thick headline bar across the top, a rectangular photo block at top left with a few short text lines beside it, and three columns of short text-line bars below, all solid dark slate #15252C. Perfectly flat solid background exact colour #15252C, no gradient, no texture. Flat vector, crisp geometric shapes, symmetric, no shadows, no glossy 3D. Abstract blank text bars only, no readable letters, no text, no numbers. No badges, ticks, seals, stars, ribbons, logos.
+- **R2:** Clean up this icon. Keep the front pale slate #C3CDD3 newspaper page exactly as it is (headline bar, photo block, text lines, three columns, all dark slate #15252C). Fix the two pages behind it: each must be ONE plain, completely solid filled rotated rectangle the same size as the front page, with NO inner detail, NO outlines, NO dark interior and NO text bars. The violet #8F63D2 sheet is rotated about 12 degrees counter-clockwise and peeks out evenly on the left side; the orange #E8914A sheet is rotated about 12 degrees clockwise and peeks out evenly on the right side; both rotate around the same point at the bottom centre of the front page, mirror-symmetric. Remove all stray triangles and fragments; nothing peeks out above or below except the clean corners of the two sheets. Thin even gap of background colour #15252C around the front page so the three sheets stay distinct. Centred, mark fills about 70 percent of the frame. Perfectly flat solid background exact colour #15252C. Flat vector, crisp, no shadows, no gradients, no 3D. No readable letters, no text, no numbers, no badges, ticks, seals, stars, ribbons, logos.
 
 ### Store-art rule (house-facts §29, Google Play Metadata policy)
 
 **No tick, badge, seal, rosette, laurel, ribbon, medal or star in any store art**: app icon, adaptive
 icon, Play hi-res icon, feature graphic, or screenshot framing. Play reads them as claims about awards,
 ranking or endorsement and rejects the listing (Passport Photo Studio, 11 Aug 2026). Glyphs inside genuine
-app UI captures are fine. Do not add a "verified" or "trusted" mark to the cube, ever.
+app UI captures are fine. Do not add a "verified" or "trusted" mark to the icon, ever.
 
 ## Tone of voice
 
@@ -100,7 +130,7 @@ app UI captures are fine. Do not add a "verified" or "trusted" mark to the cube,
 
 ### Feature graphic
 
-Dark plate gradient. Left: the cube mark (120 px) beside the "Sides" wordmark (70 px Semibold) and the line
+Dark plate gradient. Left: the newspaper mark (`icon/icon_mark.png`, 96 px tall) beside the "Sides" wordmark (70 px Semibold) and the line
 "The news, every angle." (25 px, muted). Right: an abstract coverage card in the app's own visual language,
 with a Political lean bar (Left / Centre / Right) and a West / East bar. It shows no counts and no headline,
 because store art never shows invented news data. Everything sits inside the central 824 × 300 px, since Play
