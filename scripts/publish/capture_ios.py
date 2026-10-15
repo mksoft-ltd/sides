@@ -50,7 +50,7 @@ for line in proc.stdout:
             sh("xcrun", "simctl", "io", udid, "screenshot", "--type=png", str(dest))
             im = Image.open(dest).convert("RGB")
             w, h = im.size
-            island = w < h and all(im.getpixel((w // 2 + dx, round(h * 0.033))) == (0, 0, 0)
+            island = w / h < 0.6 and all(im.getpixel((w // 2 + dx, round(h * 0.033))) == (0, 0, 0)
                                    for dx in (-60, 0, 60))
             if not island:
                 break
