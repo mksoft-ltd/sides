@@ -35,7 +35,7 @@ def req(method, path, body = nil)
   r = klass.new(uri)
   r['Authorization'] = "Bearer #{TOK}"
   r['Content-Type'] = 'application/json'
-  r.body = JSON.dump(body) if body
+  r.body = body ? JSON.dump(body) : (%w[POST PUT PATCH].include?(method) ? "" : nil) # body-less POST (e.g. :commit) 404s without Content-Length: 0
   res = Net::HTTP.start(uri.hostname, uri.port, use_ssl: true) { |h| h.request(r) }
   parsed = begin
     res.body.nil? || res.body.empty? ? nil : JSON.parse(res.body)

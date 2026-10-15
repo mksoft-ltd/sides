@@ -1,5 +1,20 @@
 # Sides 1.0.0: publish status
 
+## 15 Oct 2026 evening: Apple SUBMITTED, Play draft production release staged (founder finishes 3 clicks)
+
+- **Apple: submitted for review by the founder at 20:49 UTC.** Review submission `0affeefb…` state `WAITING_FOR_REVIEW`,
+  submittedDate 2026-10-15T20:49:36Z, containing version 1.0.0 (appStoreState WAITING_FOR_REVIEW, build 1.0.0 (3)) and
+  IAP `com.froggyeye.sides.adfree` (state WAITING_FOR_REVIEW). Nothing more to do on Apple until the review result.
+- **Play: founder set Production countries/regions (177 + rest of world).** Conductor then staged the production
+  release by API: track `production`, release `1.0.0 (3)`, versionCode 3, notes en-GB/en-US from `changelogs/3.txt`,
+  **status `draft`** (validate: "Only releases with status draft may be created on draft app" — a never-published app
+  cannot get a `completed` production release via the API), edit committed, read back = draft present. Dashboard shows
+  "Create a new release" ticked. The Chrome auto-mode classifier denies "Preview and confirm the release" / "Send for
+  review" ("Production Deploy"), so the founder clicks: Dashboard → "Preview and confirm the release" → Next → **Start
+  rollout to Production** (or Save), then Publishing overview → **Send app for review**.
+- `scripts/publish/play.rb` fix: a body-less POST (`:commit`) returned Google's HTML 404; it now sends an empty body with
+  `Content-Length: 0`, which works (`:validate` never needed it).
+
 ## Play production draft via API: refused, nothing committed (15 Oct 2026)
 
 Asked: stage a production `draft` release of versionCode 3 with all countries, committed with
