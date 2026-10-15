@@ -128,11 +128,9 @@ void main() {
       semantics.dispose();
     });
 
-    // OPEN APP BUG (docs/TEST_PLAN.md, finding F2): SourceChip and the
-    // Sources-list rows wrap their InkWell in Semantics(excludeSemantics:
-    // true) without an onTap, which strips the tap action. Verified 15 Oct
-    // 2026: actions == 0 on both. Remove the skip once the Semantics widgets
-    // carry onTap (or merge instead of exclude).
+    // Regression for F2 (docs/TEST_PLAN.md): Semantics(excludeSemantics:
+    // true) without onTap stripped the InkWell's tap action, so TalkBack and
+    // Switch Access could not open a source.
     testWidgets('a source chip and a Sources row expose a tap action to '
         'assistive tech', (WidgetTester tester) async {
       final SemanticsHandle semantics = tester.ensureSemantics();
@@ -186,7 +184,7 @@ void main() {
         isTrue,
       );
       semantics.dispose();
-    }, skip: true); // F2: link-outs expose no semantic tap action (open bug)
+    });
 
     testWidgets('source chips meet the 48 dp minimum tap height', (
       WidgetTester tester,

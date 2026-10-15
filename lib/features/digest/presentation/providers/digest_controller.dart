@@ -91,8 +91,16 @@ class DigestController extends Notifier<DigestState> {
 
   Future<void> _refresh() async {
     state = state.copyWith(refreshing: true);
-    final RefreshOutcome outcome =
-        await _repo.refresh(current: state.loaded);
+    RefreshOutcome outcome;
+    try {
+      outcome = await _repo.refresh(current: state.loaded);
+    } on Object catch (e) {
+      // Anything unexpected still ends the refresh: a stuck `refreshing`
+      // is an endless spinner with no Retry on a first launch (F1). The
+      // cached digest, if any, stays on screen under the failure banner.
+      debugPrint('Digest refresh failed: $e');
+      outcome = const RefreshFailed(RefreshFailureKind.server);
+    }
     if (!ref.mounted) return;
     state = switch (outcome) {
       RefreshUpdated(:final LoadedDigest loaded) ||

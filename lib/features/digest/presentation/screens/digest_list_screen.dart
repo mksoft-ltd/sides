@@ -3,7 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../../../app/router.dart';
-import '../../../../core/config/app_config.dart';
+import '../../../../shared/widgets/sides_mark.dart';
 import '../../../ads/presentation/ad_banner_slot.dart';
 import '../../domain/digest.dart';
 import '../providers/digest_controller.dart';
@@ -19,7 +19,7 @@ class DigestListScreen extends ConsumerWidget {
     );
     return Scaffold(
       appBar: AppBar(
-        title: const Text(AppConfig.appName),
+        title: const SidesWordmark(),
         actions: <Widget>[
           IconButton(
             tooltip: 'Settings',

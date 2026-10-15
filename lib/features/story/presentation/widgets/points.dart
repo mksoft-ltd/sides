@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../../core/constants/copy.dart';
+import '../../../../core/text/quotes.dart';
 import '../../../../core/theme/app_theme.dart';
 import '../../../digest/domain/digest.dart';
 import 'source_chips.dart';
@@ -69,7 +70,7 @@ class QuoteCard extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
             Text(
-              '“${quote.quote}”',
+              Quotes.wrap(quote.quote),
               style: theme.textTheme.bodyLarge
                   ?.copyWith(fontStyle: FontStyle.italic),
             ),

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../../../core/launcher/link_launcher.dart';
+import '../../../../core/layout/breakpoints.dart';
 import '../../../digest/domain/digest.dart';
 
 /// Opens an article in the external browser, with a snackbar on failure.
@@ -33,11 +34,16 @@ class SourceChip extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final ThemeData theme = Theme.of(context);
     final ColorScheme cs = theme.colorScheme;
+    // Tablets have room for most full headlines; phones keep two lines.
+    final int maxLines = LayoutSize.of(context) == LayoutSize.compact ? 2 : 3;
     return Semantics(
       button: true,
       link: true,
       label: semanticsLabelFor(article, outlet),
       excludeSemantics: true,
+      // excludeSemantics drops the InkWell's own action, so re-expose it or
+      // TalkBack and Switch Access cannot open the article (F2).
+      onTap: () => openArticle(context, ref, article),
       child: Material(
         color: cs.surfaceContainerHigh,
         borderRadius: BorderRadius.circular(10),
@@ -61,7 +67,7 @@ class SourceChip extends ConsumerWidget {
                           TextSpan(text: ' — ${article.headline}'),
                         ],
                       ),
-                      maxLines: 2,
+                      maxLines: maxLines,
                       overflow: TextOverflow.ellipsis,
                       style: theme.textTheme.bodySmall,
                     ),

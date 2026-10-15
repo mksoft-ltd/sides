@@ -114,7 +114,8 @@ class NetworkDigestRepository implements DigestRepository {
           // We sent no ETag, so a 304 is a misbehaving cache in between.
           return const RefreshFailed(RefreshFailureKind.server);
         }
-        await _cache.touch(fetchedAt: now, etag: etag);
+        // A failed save (full disk) must not hide a digest we already have.
+        await _saveQuietly(() => _cache.touch(fetchedAt: now, etag: etag));
         return RefreshUnchanged(
           LoadedDigest(
             digest: current.digest,
@@ -130,13 +131,26 @@ class NetworkDigestRepository implements DigestRepository {
           // Never overwrite a good cache with a bad file.
           return RefreshFailed(parsed.failure!);
         }
-        await _cache.write(
-          CachedDigest(body: body, fetchedAt: now, etag: etag),
+        // The body parsed, so show it even if it cannot be saved (F1).
+        await _saveQuietly(
+          () => _cache.write(
+            CachedDigest(body: body, fetchedAt: now, etag: etag),
+          ),
         );
         return RefreshUpdated(
           LoadedDigest(digest: digest, fetchedAt: now, etag: etag),
         );
     }
+  }
+}
+
+/// Runs a cache write. A storage failure (full disk, revoked permissions)
+/// costs only persistence: the next launch fetches again.
+Future<void> _saveQuietly(Future<void> Function() save) async {
+  try {
+    await save();
+  } on Exception catch (e) {
+    debugPrint('Digest cache not saved: $e');
   }
 }
 

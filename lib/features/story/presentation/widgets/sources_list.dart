@@ -81,6 +81,7 @@ class _SourceTile extends ConsumerWidget {
         if (o?.isStateControlled ?? false) 'State media.',
       ].join(' '),
       excludeSemantics: true,
+      onTap: () => openArticle(context, ref, article), // F2, see SourceChip
       child: InkWell(
         onTap: () => openArticle(context, ref, article),
         child: Padding(

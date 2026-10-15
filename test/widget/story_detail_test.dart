@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:sides/core/constants/copy.dart';
+import 'package:sides/core/text/quotes.dart';
 import 'package:sides/features/digest/domain/digest.dart';
 import 'package:sides/features/story/presentation/widgets/source_chips.dart';
 import 'package:sides/features/story/presentation/widgets/story_detail_view.dart';
@@ -72,7 +73,7 @@ void main() {
         .firstWhere((HeadlineQuote q) => q.field == QuoteField.snippet);
     final String outlet =
         digest.outlet(s.article(snippetQuote.articleId)!.outletId)!.name;
-    expect(find.text('“${snippetQuote.quote}”'), findsOneWidget);
+    expect(find.text(Quotes.wrap(snippetQuote.quote)), findsOneWidget);
     expect(find.text('snippet · $outlet'), findsOneWidget);
     expect(find.textContaining('headline · '), findsWidgets);
   });

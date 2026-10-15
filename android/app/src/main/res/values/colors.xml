@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="ic_launcher_background">#15252C</color>
+    <!-- The app's light theme surface (ColorScheme.fromSeed(#34505C)), so the
+         launch window matches the first Flutter frame. Dark: values-night. -->
+    <color name="launch_background">#F5FAFD</color>
 </resources>

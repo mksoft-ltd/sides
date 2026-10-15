@@ -27,6 +27,11 @@ abstract final class Copy {
         Lean.right => 'Not in right-leaning coverage',
       };
 
+  /// Detail app-bar title: a rank is a position, not a name.
+  static String storyPosition(int rank, int total) => '$rank of $total';
+  static String storyPositionSpoken(int rank, int total) =>
+      'Story $rank of $total';
+
   static String outletCount(int n) => n == 1 ? '1 outlet' : '$n outlets';
 
   static String unratedNote(int n) => n == 1

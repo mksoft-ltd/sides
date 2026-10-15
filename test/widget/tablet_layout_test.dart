@@ -461,7 +461,7 @@ void main() {
       await resize(tester, phoneSize);
       expect(find.byType(MasterDetailScreen), findsNothing);
       expect(find.byType(StoryDetailScreen), findsOneWidget);
-      expect(find.text('Story 3'), findsOneWidget);
+      expect(find.text('3 of 10'), findsOneWidget);
       expect(find.text('Eastern outlets'), findsOneWidget);
 
       // Back still leads to the phone list.
@@ -506,7 +506,7 @@ void main() {
       await tester.tap(find.text(s1.title));
       await tester.pumpAndSettle();
       expect(find.byType(StoryDetailScreen), findsOneWidget);
-      expect(find.text('Story 1'), findsOneWidget);
+      expect(find.text('1 of 10'), findsOneWidget);
       expect(tab('Left'), findsOneWidget);
       expect(find.byType(PerspectiveColumns), findsNothing);
     });

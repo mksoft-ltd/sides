@@ -340,15 +340,9 @@ void main() {
   });
 
   group('cache write failures (disk full, permissions)', () {
-    // OPEN APP BUG (docs/TEST_PLAN.md, finding F1): NetworkDigestRepository
-    // awaits DigestCache.write/touch unguarded, so a FileSystemException
-    // escapes DigestController._refresh before `refreshing` is cleared.
-    // Verified failing on 15 Oct 2026 with `refreshing == true` forever.
-    // Remove the skip once the repository/controller catch it.
-    const String f1 =
-        'F1: cache write failure strands refreshing=true '
-        '(open app bug, see docs/TEST_PLAN.md)';
-
+    // Regression for F1 (docs/TEST_PLAN.md): a FileSystemException from
+    // DigestCache.write/touch used to escape DigestController._refresh and
+    // leave `refreshing == true` forever.
     test('first launch on a full disk: the downloaded digest is shown and '
         'the spinner clears', () async {
       server = (_) => ok(bodyDated('2026-10-15'), etag: '"v2"');
@@ -374,7 +368,7 @@ void main() {
         isNotNull,
         reason: 'the body parsed; failing to save it should not hide it',
       );
-    }, skip: f1);
+    });
 
     test('pull-to-refresh on a full disk completes without throwing', () async {
       server = (_) => ok(bodyDated('2026-10-15'), etag: '"v2"');
@@ -403,8 +397,47 @@ void main() {
         reason: 'RefreshIndicator awaits this future',
       );
       expect(c.read(digestControllerProvider).refreshing, isFalse);
-    }, skip: f1);
+    });
+
+    test('any exception from the repository ends the refresh, keeps the '
+        'cached digest and surfaces a failure', () async {
+      final ProviderContainer c = ProviderContainer(
+        overrides: <Override>[
+          digestRepositoryProvider.overrideWithValue(
+            _ExplodingRepository(repo(goodCache())),
+          ),
+        ],
+      );
+      addTearDown(c.dispose);
+      c.read(digestControllerProvider);
+      await pumpEventQueue();
+
+      final DigestState s = c.read(digestControllerProvider);
+      expect(s.refreshing, isFalse);
+      expect(s.digest, isNotNull, reason: 'the cache stays on screen');
+      expect(s.lastFailure, RefreshFailureKind.server);
+      await expectLater(
+        c.read(digestControllerProvider.notifier).refresh(),
+        completes,
+      );
+    });
   });
+}
+
+/// Reads the real cache but fails every refresh with an unexpected error.
+class _ExplodingRepository implements DigestRepository {
+  _ExplodingRepository(this._inner);
+  final DigestRepository _inner;
+
+  @override
+  Future<LoadedDigest?> loadCached() => _inner.loadCached();
+
+  @override
+  bool needsRevalidation(LoadedDigest current) => true;
+
+  @override
+  Future<RefreshOutcome> refresh({LoadedDigest? current}) async =>
+      throw const FileSystemException('No space left on device');
 }
 
 /// A cache whose writes fail as `FileDigestCache` does on a full disk.

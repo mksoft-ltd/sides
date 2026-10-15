@@ -133,7 +133,7 @@ void main() {
     await pumpSidesApp(tester);
     await tester.tap(find.text(digest.stories.first.title));
     await tester.pumpAndSettle();
-    expect(find.text('Story 1'), findsOneWidget);
+    expect(find.text('1 of ${digest.stories.length}'), findsOneWidget);
     expect(find.text('Political lean'), findsWidgets);
   });
 

@@ -125,7 +125,7 @@ void main() {
         initialLocation: '/story/${s1.id}?axis=bloc',
       );
       expect(h.requests, hasLength(1));
-      expect(find.text('Story 1'), findsOneWidget);
+      expect(find.text('1 of 10'), findsOneWidget);
       expect(tab('West'), findsOneWidget);
       expect(find.byKey(FakeAdsService.bannerKey), findsOneWidget);
     });

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../../../../core/constants/copy.dart';
 import '../../../../shared/widgets/message_state.dart';
 import '../../../ads/presentation/ad_banner_slot.dart';
 import '../../../digest/domain/digest.dart';
@@ -22,7 +23,17 @@ class StoryDetailScreen extends ConsumerWidget {
         ref.watch(digestControllerProvider.select((DigestState s) => s.digest));
     final Story? story = digest?.story(storyId);
     return Scaffold(
-      appBar: AppBar(title: Text(story == null ? 'Story' : 'Story ${story.rank}')),
+      appBar: AppBar(
+        title: story == null || digest == null
+            ? const Text('Story')
+            : Text(
+                Copy.storyPosition(story.rank, digest.stories.length),
+                semanticsLabel: Copy.storyPositionSpoken(
+                  story.rank,
+                  digest.stories.length,
+                ),
+              ),
+      ),
       body: digest == null || story == null
           ? const MessageState(
               icon: Icons.article_outlined,

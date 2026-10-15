@@ -51,13 +51,14 @@ class StoryCard extends StatelessWidget {
                           const BoxConstraints(minWidth: 28, minHeight: 28),
                       alignment: Alignment.center,
                       decoration: BoxDecoration(
-                        color: theme.colorScheme.primaryContainer,
+                        // Neutral: colour is kept for the perspectives (BRAND.md).
+                        color: theme.colorScheme.surfaceContainerHighest,
                         shape: BoxShape.circle,
                       ),
                       child: Text(
                         '${story.rank}',
                         style: theme.textTheme.labelLarge?.copyWith(
-                          color: theme.colorScheme.onPrimaryContainer,
+                          color: theme.colorScheme.onSurface,
                         ),
                       ),
                     ),
