@@ -68,3 +68,21 @@ def test_lock_files_pin_every_package_with_hashes_and_cover_pyproject():
         for direct in ("anthropic", "feedparser", "httpx", "jsonschema", "pydantic", "pyyaml"):
             assert direct in names, f"{name} misses {direct}"
     assert "pytest-socket" in (ROOT / "pipeline" / "requirements-dev.lock").read_text()
+
+
+def test_publish_job_cannot_be_handed_git_metadata_or_a_persisted_token():
+    """SEC-9: no hidden files in the staged-site artifact, no persisted token in the publish checkout, and every
+    git call in the publish job (script and keepalive) ignores hooks."""
+    upload = next(s for s in _steps(DAILY["jobs"]["build"]) if s.get("name") == "Upload the staged site")
+    assert upload["with"].get("include-hidden-files", False) is False
+    publish = DAILY["jobs"]["publish"]
+    checkout = next(s for s in _steps(publish) if str(s.get("uses", "")).startswith("actions/checkout@"))
+    assert checkout.get("with", {}).get("persist-credentials") is False
+    keepalive = next(s for s in _steps(publish) if s.get("name") == "Keep the schedule alive")["run"]
+    for line in keepalive.splitlines():
+        if re.match(r"\s*git (add|commit|push)\b", line):
+            raise AssertionError(f"bare git call in the keepalive: {line.strip()}")
+    assert "core.hooksPath=/dev/null" in keepalive
+    script = (ROOT / "scripts" / "publish_site.sh").read_text()
+    assert 'g() { git -c core.hooksPath=/dev/null -c core.fsmonitor=false "$@"; }' in script
+    assert not re.search(r"^\s*(?:if\s+)?git (?:add|commit|push|clone|init)\b", script, re.MULTILINE)

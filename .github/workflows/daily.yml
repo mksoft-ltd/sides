@@ -94,7 +94,8 @@ jobs:
         with:
           name: site-${{ github.run_id }}
           path: ${{ runner.temp }}/site
-          include-hidden-files: true   # .nojekyll
+          # Hidden files are NOT uploaded (the default): .nojekyll is written by the publish job, and nothing
+          # like .git/hooks can ride along into the job with the write token (SEC-9).
           retention-days: 1
           if-no-files-found: error
 
@@ -116,6 +117,8 @@ jobs:
       actions: write    # re-enable this workflow (keepalive)
     steps:
       - uses: actions/checkout@v5   # the publish script + main's history for the keepalive
+        with:
+          persist-credentials: false   # the token is passed only to the two pushes below (SEC-9)
 
       - name: Nothing to publish (dry run, or stopped before analyse)
         if: needs.build.outputs.through != 'analyse'
@@ -158,7 +161,8 @@ jobs:
           echo "main last changed ${age_days} day(s) ago"
           if [ "$age_days" -ge 45 ]; then
             date -u +%F > .github/keepalive
-            git add .github/keepalive
-            git commit -m "Keepalive: scheduled-workflow activity $(date -u +%F)"
-            git push origin HEAD:main
+            g() { git -c core.hooksPath=/dev/null -c core.fsmonitor=false "$@"; }
+            g add .github/keepalive
+            g commit -m "Keepalive: scheduled-workflow activity $(date -u +%F)"
+            g push "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" HEAD:main
           fi

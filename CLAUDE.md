@@ -290,10 +290,14 @@ test/               fixtures (= assets/sample_digest.json), helpers/ (fakes, pum
   with `persist-credentials: false`; it installs `pipeline/requirements.lock` with `pip --require-hashes --no-deps`
   (the package is not installed; `PYTHONPATH=pipeline`), runs the pipeline, stages the site read-only
   (`publish_site.sh --stage-only`, which also writes the step summary) and uploads it as artifact `site-<run_id>`
-  (1 day, hidden files included for `.nojekyll`) plus `pipeline-out-<run_id>` (14 days). `publish` (`needs: build`) has
+  (1 day, no hidden files) plus `pipeline-out-<run_id>` (14 days). `publish` (`needs: build`) has
   `contents: write` + `actions: write`, no secret and no Python deps: it downloads the site
   (`actions/download-artifact@v6`), runs `publish_site.sh --push-only DIR` (clone gh-pages, mirror DIR over it, commit,
-  push) and the keepalive. On a dry run or a run stopping before analyse, `publish` still runs green and writes
+  push) and the keepalive. The artifact is untrusted (SEC-9): `--push-only` accepts only `digest/*.json`,
+  `runs/*.json`, `index.html`, `privacy_policy.html` (and ignores `.nojekyll`, which it writes itself); any `.git*`,
+  symlink, nested dir or other file aborts before git runs. Every git call in the script and the keepalive runs with
+  `-c core.hooksPath=/dev/null -c core.fsmonitor=false`; the publish checkout has `persist-credentials: false` and the
+  token is given only to the pushes (`tests/test_publish_site_script.py` drives the real script against local repos). On a dry run or a run stopping before analyse, `publish` still runs green and writes
   "nothing to publish" to the summary. `tests/test_workflows.py` pins this shape. `concurrency: daily-digest`
   (no cancel), build `timeout-minutes: 30` (a full run is ~4 min). Actions pinned to majors: `actions/checkout@v5`,
   `actions/setup-python@v6`, `actions/upload-artifact@v6` / `download-artifact@v6` (Node 24),
