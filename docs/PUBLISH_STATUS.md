@@ -12,6 +12,11 @@
   "Create a new release" ticked. The Chrome auto-mode classifier denies "Preview and confirm the release" / "Send for
   review" ("Production Deploy"), so the founder clicks: Dashboard → "Preview and confirm the release" → Next → **Start
   rollout to Production** (or Save), then Publishing overview → **Send app for review**.
+- **Later 15 Oct:** production release advanced to "Start full rollout" (Publishing overview lists 12 changes). Quick
+  checks flagged one blocker, the **News and magazine apps declaration**, which the conductor completed (on behalf of
+  Froggy Eye Ltd; contact URL https://sides.froggyeye.com; Commercial/Private; news aggregator Yes; no credentials
+  required). "Submit 12 changes for review" is enabled; the final confirm button **"Send changes for review" is
+  blocked by the Chrome classifier** → founder clicks it in the open dialog.
 - `scripts/publish/play.rb` fix: a body-less POST (`:commit`) returned Google's HTML 404; it now sends an empty body with
   `Content-Length: 0`, which works (`:validate` never needed it).
 
