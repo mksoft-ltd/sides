@@ -1,117 +1,117 @@
 {
-  "started_at": "2026-10-15T01:11:44.643808Z",
-  "finished_at": "2026-10-15T01:14:40.327737Z",
-  "total_usd": 1.296984,
+  "started_at": "2026-10-15T11:07:24.393144Z",
+  "finished_at": "2026-10-15T11:10:19.296107Z",
+  "total_usd": 1.281848,
   "calls": [
     {
       "stage": "grouping",
       "model": "claude-opus-5-5",
-      "input_tokens": 76965,
-      "output_tokens": 8157,
+      "input_tokens": 82145,
+      "output_tokens": 8269,
       "cache_read_tokens": 0,
       "cache_write_tokens": 0,
-      "usd": 0.471,
-      "seconds": 101.9
+      "usd": 0.49396,
+      "seconds": 104.3
     },
     {
       "stage": "analysis",
       "model": "claude-opus-5-5",
-      "input_tokens": 6454,
-      "output_tokens": 5445,
+      "input_tokens": 6141,
+      "output_tokens": 4945,
       "cache_read_tokens": 0,
       "cache_write_tokens": 0,
-      "usd": 0.134716,
-      "seconds": 45.5
+      "usd": 0.123464,
+      "seconds": 44.3
     },
     {
       "stage": "analysis",
       "model": "claude-opus-5-5",
-      "input_tokens": 6521,
-      "output_tokens": 3897,
+      "input_tokens": 5436,
+      "output_tokens": 4004,
       "cache_read_tokens": 0,
       "cache_write_tokens": 0,
-      "usd": 0.104024,
-      "seconds": 32.3
+      "usd": 0.101824,
+      "seconds": 34.8
     },
     {
       "stage": "analysis",
       "model": "claude-opus-5-5",
-      "input_tokens": 5643,
-      "output_tokens": 3769,
+      "input_tokens": 5297,
+      "output_tokens": 4470,
       "cache_read_tokens": 0,
       "cache_write_tokens": 0,
-      "usd": 0.097952,
-      "seconds": 33.2
+      "usd": 0.110588,
+      "seconds": 37.9
     },
     {
       "stage": "analysis",
       "model": "claude-opus-5-5",
-      "input_tokens": 4937,
-      "output_tokens": 3159,
+      "input_tokens": 6003,
+      "output_tokens": 3945,
       "cache_read_tokens": 0,
       "cache_write_tokens": 0,
-      "usd": 0.082928,
-      "seconds": 25.5
+      "usd": 0.102912,
+      "seconds": 32.6
     },
     {
       "stage": "analysis",
       "model": "claude-opus-5-5",
-      "input_tokens": 4729,
-      "output_tokens": 1831,
+      "input_tokens": 5318,
+      "output_tokens": 1085,
       "cache_read_tokens": 0,
       "cache_write_tokens": 0,
-      "usd": 0.055536,
-      "seconds": 15.2
+      "usd": 0.042972,
+      "seconds": 10.6
     },
     {
       "stage": "analysis",
       "model": "claude-opus-5-5",
-      "input_tokens": 4823,
-      "output_tokens": 2054,
+      "input_tokens": 4724,
+      "output_tokens": 2492,
       "cache_read_tokens": 0,
       "cache_write_tokens": 0,
-      "usd": 0.060372,
-      "seconds": 16.9
+      "usd": 0.068736,
+      "seconds": 19.4
     },
     {
       "stage": "analysis",
       "model": "claude-opus-5-5",
-      "input_tokens": 4585,
-      "output_tokens": 2429,
+      "input_tokens": 4700,
+      "output_tokens": 2319,
       "cache_read_tokens": 0,
       "cache_write_tokens": 0,
-      "usd": 0.06692,
-      "seconds": 21.5
+      "usd": 0.06518,
+      "seconds": 19.4
     },
     {
       "stage": "analysis",
       "model": "claude-opus-5-5",
-      "input_tokens": 4622,
-      "output_tokens": 2128,
+      "input_tokens": 4610,
+      "output_tokens": 2075,
       "cache_read_tokens": 0,
       "cache_write_tokens": 0,
-      "usd": 0.061048,
-      "seconds": 17.8
+      "usd": 0.05994,
+      "seconds": 17.5
     },
     {
       "stage": "analysis",
       "model": "claude-opus-5-5",
-      "input_tokens": 5180,
-      "output_tokens": 3385,
+      "input_tokens": 4568,
+      "output_tokens": 2012,
       "cache_read_tokens": 0,
       "cache_write_tokens": 0,
-      "usd": 0.08842,
-      "seconds": 27.1
+      "usd": 0.058512,
+      "seconds": 17.2
     },
     {
       "stage": "analysis",
       "model": "claude-opus-5-5",
-      "input_tokens": 4627,
-      "output_tokens": 2778,
+      "input_tokens": 4435,
+      "output_tokens": 1801,
       "cache_read_tokens": 0,
       "cache_write_tokens": 0,
-      "usd": 0.074068,
-      "seconds": 21.5
+      "usd": 0.05376,
+      "seconds": 15.1
     }
   ],
   "warnings": []
