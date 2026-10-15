@@ -19,4 +19,4 @@ Founder decisions 14–15 Oct 2026: Claude Opus 5.5 for the daily pipeline at fu
 | 5 | metadata | done | 2026-10-15 | docs/ASO.md (b8fe026); fastlane metadata both stores, review notes, rating.json, privacy_details.json, data_safety_answers.md, PRIVACY_POLICY.md + privacy_policy.html, RELEASE_CHECKLIST.md (83fb0e2); privacy html pushed to gh-pages by conductor |
 | 6 | compliance | in-progress | 2026-10-15 | app-store-review-auditor; contact tile f049f70 landed first |
 | 7 | publish | pending | | store-publisher; AdMob IDs + IAP product are console items |
-| 8 | website | pending | | froggyeye.com `sides` subdomain |
+| 8 | website | done (store buttons pending listings) | 2026-10-15 | https://sides.froggyeye.com live 200, app-ads.txt served at root + subdomain; website commits befda30 e0a29dd; rerun refresh_store_urls + fetch_store_assets + deploy once listings are live |
