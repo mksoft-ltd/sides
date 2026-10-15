@@ -17,6 +17,6 @@ Founder decisions 14–15 Oct 2026: Claude Opus 5.5 for the daily pipeline at fu
 | 4a | code-review | done | 2026-10-15 | PASS on re-verification (fix round 2: 99fec96 2caff21 136d51d): M1–M3 resolved, each fix reverted in scratch and caught by its tests; 5 Minor residuals; analyze clean, 227 flutter, 179 pytest; docs/audits/code-review.md |
 | 4b | security | done | 2026-10-15 | PASS (re-verified 15 Oct: SEC-1/2/3/4/6/9 fixed, b38067b 50af757); SEC-5 signing, SEC-7/8 for publish; Medium SEC-1 feed prompt injection into model free text, SEC-2 two HTTP feeds, SEC-3 daily job unpinned pip + write token in one job; Low SEC-4..8 (SEC-5 debug-signed release = publish blocker); privacy-label data map in docs/audits/security.md |
 | 5 | metadata | done | 2026-10-15 | docs/ASO.md (b8fe026); fastlane metadata both stores, review notes, rating.json, privacy_details.json, data_safety_answers.md, PRIVACY_POLICY.md + privacy_policy.html, RELEASE_CHECKLIST.md (83fb0e2); privacy html pushed to gh-pages by conductor |
-| 6 | compliance | pending | | app-store-review-auditor |
+| 6 | compliance | in-progress | 2026-10-15 | app-store-review-auditor; contact tile f049f70 landed first |
 | 7 | publish | pending | | store-publisher; AdMob IDs + IAP product are console items |
 | 8 | website | pending | | froggyeye.com `sides` subdomain |
