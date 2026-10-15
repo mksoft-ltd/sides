@@ -16,10 +16,11 @@ Owner key: **[F]** founder-only click, **[A]** app change (a fix agent; release-
   `LinkLauncher.compose` (mailto only; the article path `open` stays http/https only), the existing "Privacy policy"
   tile, and "© 2026 Froggy Eye Ltd". Address in `AppConfig.contactEmail`, labels in `Copy`. Pinned by
   `test/widget/settings_test.dart` (About group) and `test/unit/link_launcher_scheme_test.dart`.
-- [ ] **[A]/[P] Live AdMob IDs** (create in AdMob first, see §2). Replace exactly these four test values:
-  - `lib/core/config/ad_config.dart` line 21 `_releaseBannerAndroid` (now `testBannerAndroid`) → live Android banner unit
-  - `lib/core/config/ad_config.dart` line 22 `_releaseBannerIos` (now `testBannerIos`) → live iOS banner unit
-  - `lib/core/config/ad_config.dart` line 25 `liveIdsConfigured = false` → `true`
+- [ ] **[A]/[P] Live AdMob IDs** (create in AdMob first, see §2). Replace exactly these four test values
+  (`AdConfig.liveIdsConfigured` is derived from the two unit IDs and needs no edit; until both differ from the test units a
+  release build does not start the ads SDK at all, so a missed swap ships without ads rather than with test ads):
+  - `lib/core/config/ad_config.dart` line 22 `_releaseBannerAndroid` (now `testBannerAndroid`) → live Android banner unit
+  - `lib/core/config/ad_config.dart` line 23 `_releaseBannerIos` (now `testBannerIos`) → live iOS banner unit
   - `ios/Runner/Info.plist` line 28 `GADApplicationIdentifier` (`ca-app-pub-3940256099942544~1458002511`) → live iOS app ID
   - `android/app/src/main/AndroidManifest.xml` line 48 `com.google.android.gms.ads.APPLICATION_ID`
     (`ca-app-pub-3940256099942544~3347511713`) → live Android app ID

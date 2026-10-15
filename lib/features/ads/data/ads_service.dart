@@ -64,6 +64,8 @@ class AdMobAdsService implements AdsService {
     try {
       await _gatherConsent();
       if (!await ConsentInformation.instance.canRequestAds()) return false;
+      await MobileAds.instance
+          .updateRequestConfiguration(AdConfig.requestConfiguration);
       await MobileAds.instance.initialize();
       return true;
     } on Object catch (e) {
@@ -161,7 +163,7 @@ class _AdMobBannerState extends State<_AdMobBanner> {
     final BannerAd ad = BannerAd(
       adUnitId: AdConfig.bannerUnitId(platform),
       size: size,
-      request: const AdRequest(nonPersonalizedAds: true),
+      request: AdConfig.bannerRequest,
       listener: BannerAdListener(
         onAdLoaded: (Ad a) {
           if (!mounted) {

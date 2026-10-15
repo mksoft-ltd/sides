@@ -27,7 +27,28 @@ void main() {
   });
 
   test('screenshot mode switches real ads off rather than on', () {
-    expect(mainSrc, contains('if (mobile && !useSample)'));
+    expect(mainSrc, contains('if (mobile && !useSample && '));
+  });
+
+  test('release builds never start the ads SDK on test units (m4)', () {
+    expect(
+      mainSrc,
+      contains(
+        'final bool adsAllowed = AdConfig.mayStartAds(releaseMode: kReleaseMode);',
+      ),
+    );
+    expect(mainSrc, contains('if (mobile && !useSample && adsAllowed)'));
+    final String adConfig = File(
+      'lib/core/config/ad_config.dart',
+    ).readAsStringSync();
+    expect(
+      RegExp(
+        r'liveIdsConfigured\s*=\s*_releaseBannerAndroid\s*!=\s*'
+        r'testBannerAndroid\s*&&\s*_releaseBannerIos\s*!=\s*testBannerIos;',
+      ).hasMatch(adConfig),
+      isTrue,
+      reason: 'the flag must be derived from the unit IDs, not hand-set',
+    );
   });
 
   test('orientation overrides apply only to the screenshot harness', () {

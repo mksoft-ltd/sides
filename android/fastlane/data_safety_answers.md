@@ -74,7 +74,7 @@ Requirements of Play's News policy, and where each is met:
 |---|---|---|
 | Category News & Magazines | Store settings | Set at listing time |
 | Publisher of the app identified | Listing: "Sides is published by Froggy Eye Ltd" in the full description; developer name Froggy Eye Ltd. In app: Settings › About shows "© 2026 Froggy Eye Ltd" | Done |
-| Contact information for the publisher | Listing: info@froggyeye.com in the full description and the developer contact. In app: **not shown yet** (see `docs/RELEASE_CHECKLIST.md`, app change needed) | **Open: app change** |
+| Contact information for the publisher | Listing: info@froggyeye.com in the full description and the developer contact. In app: Settings › About shows a "Contact" tile reading info@froggyeye.com that opens the mail app (f049f70, 15 Oct 2026) | Done |
 | Sources of content identified | Every point and quote names its outlet; Settings › Outlets and ratings lists all 29 outlets with lean, region, ownership and rating source; the description says so | Done |
 | Content not primarily affiliate or ad-driven | Banner only, never inside content | Done |
 | Website | https://sides.froggyeye.com (support/marketing URL) | **Must return 200 before submission** |
@@ -93,7 +93,7 @@ The declaration may ask for a news-publisher website and contact email: use `htt
 | Advertising ID | **Yes, uses Advertising ID.** Purpose: Advertising or marketing; Analytics; Fraud prevention, security and compliance. Matches `AD_ID` in the manifest. (Unlike house apps without ads, the answer here is Yes.) |
 | Sign-in details | Not required (all functionality without login) |
 | Photo and video permissions | Not applicable: no `READ_MEDIA_*` in the merged manifest |
-| Foreground service / full-screen intent / exact alarm | Not applicable: none in the merged manifest. **Do not file** any of these. |
+| Foreground service / full-screen intent / exact alarm | Not applicable. The merged manifest has the base `FOREGROUND_SERVICE` permission (from WorkManager, merged via the ads SDK), but its service declares no `foregroundServiceType` and there is no typed `FOREGROUND_SERVICE_*` permission, so Play's foreground service declaration does not apply. No `USE_FULL_SCREEN_INTENT`, `SCHEDULE_EXACT_ALARM` or `USE_EXACT_ALARM`. **Do not file** any of these. |
 | Privacy policy URL | `https://mksoft-ltd.github.io/sides/privacy_policy.html` |
 
 ## 7. Content rating (IARC questionnaire)

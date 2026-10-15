@@ -20,8 +20,11 @@ void main() {
       )
       .first;
 
+  // 200, not 300: the list's extents are estimated lazily, and a 300 dp
+  // step after ensureVisible(Contested) can park the list where the Opinion
+  // section is never built (seen when the report tile joined the end).
   Future<void> scrollTo(WidgetTester tester, Finder f) =>
-      tester.scrollUntilVisible(f, 300, scrollable: detailScrollable());
+      tester.scrollUntilVisible(f, 200, scrollable: detailScrollable());
 
   Finder tab(String label) => find.widgetWithText(Tab, label);
 

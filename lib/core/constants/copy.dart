@@ -67,10 +67,26 @@ abstract final class Copy {
       'outlets across the political spectrum and from Western and Eastern '
       'countries, groups them into the day\'s top stories, and compares how '
       'each side frames them.\n\n'
-      'The comparison is based on headlines and short summaries only, '
-      'generated once a day. Every point links to its source, so you can read '
+      'The comparison is generated automatically by an AI model from '
+      'headlines and short summaries only, once a day, and is not reviewed by '
+      'a human editor. Every point links to its source, so you can read '
       'the original article on the outlet\'s own site. Points that cannot be '
       'traced to a source are left out.';
+
+  /// Settings › How it works and the story page: report a wrong or
+  /// offensive story (compliance m2, AI-generated content reporting).
+  static const String reportStory = 'Report a problem with a story';
+  static const String reportThisStory = 'Report a problem with this story';
+  static const String reportStorySubtitle =
+      'Tell us if a summary is wrong, misleading or offensive';
+  static const String reportStorySubject = 'Sides story report';
+  static String reportStoryBody({String? title, String? date}) => <String>[
+        if (title != null) 'Story: $title',
+        if (date != null) 'Digest date: $date',
+        if (title != null || date != null) '',
+        'What is wrong with it:',
+        '',
+      ].join('\n');
 
   static const String ratingBasis =
       'Political-lean labels come from published media-bias ratings '

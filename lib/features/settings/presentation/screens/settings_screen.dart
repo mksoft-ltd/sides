@@ -6,6 +6,7 @@ import '../../../../app/router.dart';
 import '../../../../core/config/app_config.dart';
 import '../../../../core/constants/copy.dart';
 import '../../../../core/launcher/link_launcher.dart';
+import '../../../../shared/widgets/report_story_tile.dart';
 import '../../../ads/data/ads_service.dart';
 import '../../../purchases/presentation/ad_free_controller.dart';
 import '../providers/settings_controller.dart';
@@ -83,6 +84,7 @@ class SettingsScreen extends ConsumerWidget {
             padding: const EdgeInsets.fromLTRB(16, 4, 16, 12),
             child: Text(Copy.howItWorks, style: theme.textTheme.bodyMedium),
           ),
+          const ReportStoryTile(),
           ListTile(
             leading: const Icon(Icons.newspaper_outlined),
             title: const Text('Outlets and ratings'),

@@ -22,9 +22,10 @@ Once a day a central pipeline (`pipeline/`) collects headlines and ≤200-charac
   - West / East: West and East tabs (blocs present); "East–West contradictions" as West/East pairs, or "No contradictions found in today's coverage".
   - Sources: every article with outlet, lean/bloc/region tags, a visible "state media" tag for state-controlled outlets, headline and link.
   - Every point shows its sources as chips "Outlet — headline" that open the original article in the external browser.
+  - "Report a problem with this story" at the end opens a mailto: to info@froggyeye.com with the subject "Sides story report" and the story title and digest date in the body (compliance m2).
 - Offline: cached digest shown instantly; revalidated on launch/resume when the digest date is before today (UTC) or it was fetched more than 6 h ago; conditional GET with `If-None-Match`; offline-with-cache note; offline-without-cache empty state with Retry.
-- Settings/About: theme (System/Light/Dark), text-size note (follows device up to 200%), ad-free purchase + restore, Google UMP "Ad privacy options" where required, how it works, outlets and rating basis, "Published by Froggy Eye Ltd", Contact (info@froggyeye.com, opens the mail app via mailto:), privacy policy, © 2026 Froggy Eye Ltd. The publisher and contact satisfy Play's News apps policy.
-- Monetisation: AdMob banner at the bottom of the list and story screens (never inside sourced content, hidden until a digest loads), one-time non-consumable `com.froggyeye.sides.adfree` removes ads instantly.
+- Settings/About: theme (System/Light/Dark), text-size note (follows device up to 200%), ad-free purchase + restore, Google UMP "Ad privacy options" where required, how it works (says the comparison is generated automatically by an AI model from headlines and short summaries and not reviewed by a human editor), "Report a problem with a story" (mailto: info@froggyeye.com, subject "Sides story report"), outlets and rating basis, "Published by Froggy Eye Ltd", Contact (info@froggyeye.com, opens the mail app via mailto:), privacy policy, © 2026 Froggy Eye Ltd. The publisher and contact satisfy Play's News apps policy.
+- Monetisation: AdMob banner at the bottom of the list and story screens (never inside sourced content, hidden until a digest loads), every request non-personalised with max ad content rating T and tagged not child-directed / not under the age of consent (compliance m3); a release build with Google's test units still in `AdConfig` never starts the ads SDK (compliance m4), one-time non-consumable `com.froggyeye.sides.adfree` removes ads instantly.
 
 **Tablet (phase 5, built)**
 - ≥ 744 dp window width (every iPad, both orientations): master-detail. Left pane = the digest list (360 dp; 320 dp below 900 dp so the detail pane keeps ≥ 380 dp, pull-to-refresh, selected story tinted, outlined and announced as selected); right pane = the selected story, story 1 by default; "No story selected" placeholder while there is no digest. Selecting a story swaps the pane in place and the URL reads `/story/:id` (axis carried over as `?axis=bloc`). The banner sits under the detail pane only.
@@ -71,7 +72,7 @@ Privacy declarations must reflect AdMob (advertising data, device identifiers on
 
 ## Release-stage to-dos owned elsewhere
 
-- AdMob: create the app + banner units, then replace the test IDs in `lib/core/config/ad_config.dart`, `ios/Runner/Info.plist` (`GADApplicationIdentifier`) and `AndroidManifest.xml` (`APPLICATION_ID`) and set `AdConfig.liveIdsConfigured = true`.
+- AdMob: create the app + banner units, then replace the test IDs in `lib/core/config/ad_config.dart`, `ios/Runner/Info.plist` (`GADApplicationIdentifier`) and `AndroidManifest.xml` (`APPLICATION_ID`) (`AdConfig.liveIdsConfigured` is derived from the unit IDs, so it turns true by itself; until then a release build ships without ads).
 - Create `com.froggyeye.sides.adfree` in both consoles.
 - Android release keystore (house-facts §7); app icon (design stage).
 

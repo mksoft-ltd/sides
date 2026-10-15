@@ -6,6 +6,7 @@ import '../../../../core/layout/breakpoints.dart';
 import '../../../../core/theme/app_theme.dart';
 import '../../../../shared/widgets/blindspot_chips.dart';
 import '../../../../shared/widgets/coverage_indicator.dart';
+import '../../../../shared/widgets/report_story_tile.dart';
 import '../../../../shared/widgets/section.dart';
 import '../../../digest/domain/digest.dart';
 import '../providers/story_view_controller.dart';
@@ -140,6 +141,7 @@ class StoryDetailView extends ConsumerWidget {
               title: '${Copy.sources} (${story.articles.length})',
               children: <Widget>[SourcesList(story: story, digest: digest)],
             ),
+            ReportStoryTile(title: story.title, date: digest.date),
           ],
         );
       },

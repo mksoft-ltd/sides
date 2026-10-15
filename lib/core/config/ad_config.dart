@@ -1,4 +1,5 @@
 import 'package:flutter/foundation.dart';
+import 'package:google_mobile_ads/google_mobile_ads.dart';
 
 /// Every AdMob identifier the app uses, in one place.
 ///
@@ -21,8 +22,33 @@ abstract final class AdConfig {
   static const String _releaseBannerAndroid = testBannerAndroid;
   static const String _releaseBannerIos = testBannerIos;
 
-  /// Whether live IDs have been filled in. The release checklist reads this.
-  static const bool liveIdsConfigured = false;
+  /// Whether live IDs have been filled in. Derived from the unit IDs, so it
+  /// cannot drift from them; [mayStartAds] reads it.
+  static const bool liveIdsConfigured =
+      _releaseBannerAndroid != testBannerAndroid &&
+          _releaseBannerIos != testBannerIos;
+
+  /// Release guard (compliance m4): a release build with Google's test units
+  /// still in place does not initialise the Mobile Ads SDK at all, so a
+  /// forgotten ID swap ships an ad-free build rather than test ads. Debug and
+  /// profile builds always may (they only ever request test units).
+  static bool mayStartAds({
+    required bool releaseMode,
+    bool liveIds = liveIdsConfigured,
+  }) =>
+      !releaseMode || liveIds;
+
+  /// Applied once before the SDK initialises (compliance m3). Sides is rated
+  /// 13+/Teen, so no ad above T; the audience is general, so requests are
+  /// explicitly tagged not child-directed and not under the age of consent.
+  static RequestConfiguration get requestConfiguration => RequestConfiguration(
+        maxAdContentRating: MaxAdContentRating.t,
+        tagForChildDirectedTreatment: TagForChildDirectedTreatment.no,
+        tagForUnderAgeOfConsent: TagForUnderAgeOfConsent.no,
+      );
+
+  /// Every banner request: non-personalised everywhere (no ATT, no IDFA).
+  static const AdRequest bannerRequest = AdRequest(nonPersonalizedAds: true);
 
   static String bannerUnitId(TargetPlatform platform) {
     const bool live = kReleaseMode;

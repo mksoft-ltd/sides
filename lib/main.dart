@@ -6,6 +6,7 @@ import 'package:http/http.dart' as http;
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'app/app.dart';
+import 'core/config/ad_config.dart';
 import 'core/config/app_config.dart';
 import 'core/storage/settings_store.dart';
 import 'features/ads/data/ads_service.dart';
@@ -48,6 +49,14 @@ Future<void> main() async {
       (defaultTargetPlatform == TargetPlatform.iOS ||
           defaultTargetPlatform == TargetPlatform.android);
 
+  // Release guard: never start the ads SDK on Google's test units in a
+  // release build (AdConfig.mayStartAds). Debug says so once per launch.
+  final bool adsAllowed = AdConfig.mayStartAds(releaseMode: kReleaseMode);
+  if (kDebugMode && !AdConfig.liveIdsConfigured) {
+    debugPrint('AdConfig: live AdMob IDs not configured; a release build '
+        'would start without ads.');
+  }
+
   runApp(
     ProviderScope(
       overrides: [
@@ -55,7 +64,7 @@ Future<void> main() async {
             .overrideWithValue(SharedPreferencesSettingsStore(prefs)),
         digestRepositoryProvider.overrideWithValue(repository),
         storeGatewayProvider.overrideWithValue(NativeStoreGateway()),
-        if (mobile && !useSample)
+        if (mobile && !useSample && adsAllowed)
           adsServiceProvider.overrideWithValue(AdMobAdsService()),
       ],
       child: const SidesApp(
