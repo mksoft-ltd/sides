@@ -1,6 +1,20 @@
 # Sides 1.0.0: publish status
 
-## Binaries and submission state (15 Oct 2026, after the live AdMob IDs)
+## Build 3: new newspaper icon (15 Oct 2026, afternoon) — supersedes the build table below
+
+| Store | Read back |
+|---|---|
+| Play internal | **1.0.0 (versionCode 3)**, `completed`, replaces 2 (notes en-GB + en-US). Signer = upload key EA:80:6D…B6:95. |
+| Play listing images | en-GB and en-US: icon = 1, featureGraphic = 1, each **SHA-256 equal** to `store_assets/icon_512.png` / `feature_graphic.png` (the new newspaper art); 6 phone + 4 ten-inch screenshots unchanged. |
+| ASC build | **1.0.0 (3)** `cd9e68c3-b182-448e-88d7-72e09b2ab9d1`, `VALID`, usesNonExemptEncryption false, **attached to version 1.0.0** (replaces build 1; read back on the version's build relationship). IPA: Apple Distribution 696939LPWV, live AdMob app ID, 0 sample IDs. |
+| ASC review submission | Draft `0affeefb…` untouched: READY_FOR_REVIEW (draft), submittedDate null, 0 items; still the only submission on the app. |
+
+Icon evidence (all in `docs/screenshots/publish/`): `build3_launcher_home.png` + `build3_launcher_icon_crop.png`
+(release APK versionCode 3 on the `sides_capture` emulator: newspaper mark in the dock), `build3_app_running.png`
+(release build 3 launched, live digest, no FATAL in logcat — the R8 lesson re-checked before upload),
+`build3_ios_appicon.png` (AppIcon60x60@2x from the uploaded IPA). Store screenshots were not recaptured: they show
+the in-app content, and the old app-bar mark is a 20 dp detail in the list shot only.
+
 
 | Store | What is there (read back) |
 |---|---|

@@ -71,8 +71,8 @@ sides". The text bars are abstract: no letters, no masthead lettering, no headli
   icon shows the front page solid and the two back sheets at 62% opacity.
 - `icon/icon_mark.png` is the tight transparent mark used by the feature graphic.
 - In-app icons: Material Symbols outlined, default weight, so they match the M3 components already in use.
-- The in-app app-bar mark (`SidesMark`) still paints the earlier cube icon. Repaint it from this mark in a
-  future code round.
+- The in-app app-bar mark (`SidesMark`) paints this newspaper mark (front page between the violet and orange
+  sheets), repainted in b23cc74; it no longer draws the earlier cube.
 
 ### Generated artwork
 
