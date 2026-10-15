@@ -6,6 +6,8 @@
 - **Play:** "Send changes for review" confirmed by the conductor ~21:30Z → Publishing overview shows **"Changes in
   review"** (12 changes: production 1.0.0 (3) full rollout, 177 countries + rest of world, en-GB/en-US listings,
   content rating, target audience, privacy policy, ads, data safety, health, news declaration, category).
+- **Internal testing opt-in link (16 Oct 2026):** https://play.google.com/apps/internaltest/4700266578556660578 — tester
+  lists attached: Family (kcyconsulting.ltd@gmail.com + 1), Founder testers, Froggy Eye internal testers. Build 1.0.0 (3).
 - **AdMob:** both Sides apps added to the existing published EU (GDPR) message and the US state regulations message
   (each now 10 apps), privacy policy URL https://mksoft-ltd.github.io/sides/privacy_policy.html set per app. This
   clears the UMP "no form(s) configured" error. Home shows identity / payment address / payment method all verified
