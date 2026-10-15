@@ -16,7 +16,7 @@ Founder decisions 14–15 Oct 2026: Claude Opus 5.5 for the daily pipeline at fu
 | 3 | test | done | 2026-10-15 | 195 app tests (+3 skipped pending bugs F1 full-disk spinner, F2 chip semantics onTap), 138 pipeline tests, 49 mutation checks, integration screenshots run on iPhone + iPad sims; TEST_PLAN.md; commit e94f80d. Fix round 3f24d7d 6f69c20: F1, F2 + 6 polish fixed, 214 tests; QA re-verified F1/F2 (7cb5fe6) VERIFIED |
 | 4a | code-review | done | 2026-10-15 | PASS on re-verification (fix round 2: 99fec96 2caff21 136d51d): M1–M3 resolved, each fix reverted in scratch and caught by its tests; 5 Minor residuals; analyze clean, 227 flutter, 179 pytest; docs/audits/code-review.md |
 | 4b | security | done | 2026-10-15 | PASS (re-verified 15 Oct: SEC-1/2/3/4/6/9 fixed, b38067b 50af757); SEC-5 signing, SEC-7/8 for publish; Medium SEC-1 feed prompt injection into model free text, SEC-2 two HTTP feeds, SEC-3 daily job unpinned pip + write token in one job; Low SEC-4..8 (SEC-5 debug-signed release = publish blocker); privacy-label data map in docs/audits/security.md |
-| 5 | metadata | in-progress | 2026-10-15 | growth-monetization (ASO) started; release-manager next |
+| 5 | metadata | done | 2026-10-15 | docs/ASO.md (b8fe026); fastlane metadata both stores, review notes, rating.json, privacy_details.json, data_safety_answers.md, PRIVACY_POLICY.md + privacy_policy.html, RELEASE_CHECKLIST.md (83fb0e2); privacy html pushed to gh-pages by conductor |
 | 6 | compliance | pending | | app-store-review-auditor |
 | 7 | publish | pending | | store-publisher; AdMob IDs + IAP product are console items |
 | 8 | website | pending | | froggyeye.com `sides` subdomain |
