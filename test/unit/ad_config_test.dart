@@ -46,16 +46,31 @@ void main() {
       expect(AdConfig.mayStartAds(releaseMode: false, liveIds: false), isTrue);
     });
 
-    test(
-      'liveIdsConfigured is false while the release units are test units',
-      () {
-        expect(AdConfig.liveIdsConfigured, isFalse);
-        expect(
-          AdConfig.mayStartAds(releaseMode: true),
-          isFalse,
-          reason: 'today a release build must start without ads',
-        );
-      },
-    );
+    test('live units are configured, so a release build starts ads', () {
+      expect(AdConfig.liveIdsConfigured, isTrue);
+      expect(AdConfig.mayStartAds(releaseMode: true), isTrue);
+    });
+
+    test('release IDs are the live publisher, never Google samples, and '
+        'iOS / Android are not cross-wired', () {
+      const String sample = 'ca-app-pub-3940256099942544';
+      const String live = 'ca-app-pub-6255057925578575';
+      final String plist = File('ios/Runner/Info.plist').readAsStringSync();
+      final String manifest = File(
+        'android/app/src/main/AndroidManifest.xml',
+      ).readAsStringSync();
+      expect(plist, isNot(contains(sample)));
+      expect(manifest, isNot(contains(sample)));
+      expect(plist, contains('$live~7295598634'));
+      expect(manifest, contains('$live~9395893220'));
+      final String src = File(
+        'lib/core/config/ad_config.dart',
+      ).readAsStringSync();
+      expect(src, contains("_releaseBannerIos =\n      '$live/1517403205'"));
+      expect(
+        src,
+        contains("_releaseBannerAndroid =\n      '$live/5017664516'"),
+      );
+    });
   });
 }

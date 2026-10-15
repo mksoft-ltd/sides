@@ -17,10 +17,12 @@ abstract final class AdConfig {
       'ca-app-pub-3940256099942544/9214589741';
   static const String testBannerIos = 'ca-app-pub-3940256099942544/2435281174';
 
-  // Publish stage: replace with the live units. Until then release builds
-  // also serve test ads, which is safe (they earn nothing) and visible.
-  static const String _releaseBannerAndroid = testBannerAndroid;
-  static const String _releaseBannerIos = testBannerIos;
+  // Live units (AdMob publisher pub-6255057925578575, created 15 Oct 2026).
+  // Used only by release builds; debug and profile keep the test units above.
+  static const String _releaseBannerAndroid =
+      'ca-app-pub-6255057925578575/5017664516';
+  static const String _releaseBannerIos =
+      'ca-app-pub-6255057925578575/1517403205';
 
   /// Whether live IDs have been filled in. Derived from the unit IDs, so it
   /// cannot drift from them; [mayStartAds] reads it.

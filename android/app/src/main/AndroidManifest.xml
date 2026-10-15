@@ -45,7 +45,7 @@
              publish stage, together with the unit IDs in lib/core/config/ad_config.dart. -->
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-3940256099942544~3347511713"/>
+            android:value="ca-app-pub-6255057925578575~9395893220"/>
         <meta-data
             android:name="flutterEmbedding"
             android:value="2" />
