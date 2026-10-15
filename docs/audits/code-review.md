@@ -195,4 +195,41 @@ readers keep working.
 - The M3 widget test must assert that `Copy.noneFound` and `Copy.noContradictions` are absent. Asserting only that the
   new notice is present would not catch a regression.
 
-Verdict: FAIL — M1 (Android cancel/error ignored: 75 s spinner, no notice, itemAlreadyOwned path unreachable), M2 (refusal fallback served by an unpriced model raises PricingError: paid run lost, nothing published, no cost report; failed-attempt usage not counted), M3 (story with failed analysis rendered as "None found" / "No contradictions found")
+## Re-verification — 2026-10-15 (fix round 2: 99fec96, 2caff21, 136d51d)
+
+The original reviewer re-verified at `44bda98`, not from the fixer's notes. Gates re-run: `flutter analyze` clean ·
+`flutter test` 227 passed · `pytest` 179 passed · CI on main green. Each Major fix was reverted in a scratch worktree
+to confirm its new tests fail against the original defect.
+
+| Finding | Status | Evidence |
+|---|---|---|
+| **M1** Android id-less cancel/error | **Resolved** | `_isOurs` binds an event with an empty product id and status `canceled`/`error` to a purchase in flight (`_purchasing`, cleared by `_finish` and by the busy ceiling). A stray id-less event with no purchase in flight is ignored. The new tests build the exact 0.5.4 shape (`productID: ''`, `IAPError.message` = response code). Restoring the old product-id filter fails 3 tests: cancel, error and itemAlreadyOwned. |
+| **M2** Fallback model unpriced, run lost | **Resolved** | `claude-opus-5` and `claude-opus-4-8` are priced at $5 / $25 input/output, matching the claude-api skill table. `RunCost.record` no longer raises: an unpriced model is recorded with `usd: null` and the warning reaches `meta.warnings`. `attempts_from_message` costs every `usage.iterations` entry. Declined attempts are `message` entries on the requested model and the serving attempt is `fallback_message`, which matches the skill's refusal-fallback section. A refused grouping call is still costed before re-raising. The total for a grouping fallback was checked by hand at $0.0285 and matched. Reverting to a raising recorder fails the unpriced-model test. Reverting to top-level-only usage fails 3 tests. |
+| **M3** Failed analysis shown as "None found" | **Resolved** | `Story.analysisUnavailable` is true when `validation.kept == 0` and every analysis list is empty. The story page then replaces the axis switch and all sections with "Analysis isn't available for this story today. Its sources are listed below." On both axes the test asserts that `Copy.noneFound`, `Copy.noContradictions` and the no-contradictions key are absent. A control test keeps "None found" for an analysed story. Forcing the getter to `false` fails the tests. |
+| m2 exact quote span | Resolved | `source_span` maps the folded match back to the original text. Checked independently: a quote matched case-insensitively against `PM Slams “plan” — again` is stored with the outlet's own casing, curly quotes and dash. |
+| m4 cache-read exception | Resolved | `_start` treats any exception from `loadCached` as a cache miss, so the first screen can no longer spin forever. |
+| m5 off-thread parse | Resolved | `NetworkDigestRepository` parses through `compute(parseDigest, …)` by default, and widget tests inject the inline parser. The cache existence check is now async. |
+| m6 ad-privacy tile before consent | Resolved | The tile awaits `consentGathered`, which completes from the UMP callbacks, before asking for the requirement status. Settings tests cover before and after consent. |
+| m8 unpinned pipeline dependencies | Resolved | `daily.yml` and `ci.yml` install from hashed lockfiles with `--require-hashes`. |
+| m1, m3, m7, m9–m11, Nits | Open, non-blocking | Not taken in this round. |
+
+**Residual observations (Minor, non-blocking):**
+- **R1.** The itemAlreadyOwned path is reachable when Play reports the result on the purchase stream. If
+  `launchBillingFlow` instead returns non-OK synchronously, `buy()` shows "failed" and clears `_purchasing` first, so a
+  later id-less event is ignored. Restore still works, and the launch reconcile normally grants an owner before Buy is
+  shown. Not verified on a device.
+- **R2.** Per-iteration token fields are read with the same names as top-level `usage`. A missing field would cost
+  that attempt $0 rather than crash. An attempt declined before any output may not be billed, so counting it can
+  over-report slightly. That is the conservative direction.
+- **R3.** `analysisUnavailable` keys on `kept == 0`. A story whose kept items were all stripped on read would still say
+  "None found". The pipeline's validator makes that unreachable today.
+- **R4.** The new `untrusted_text` rule (SEC-1) drops model-written text with domain-like tokens, such as a quote
+  containing "X.com", or with phrases like "all outlets agree". This costs content, never sourcing. It is owned by
+  the security audit.
+- **R5.** An ungrounded or suspect story title is replaced by one member outlet's headline, shown as the story title
+  without attribution. The live calibration says this is rare (37 of 37 titles passed). Preferring a centre or
+  public-service outlet's headline would keep it neutral.
+
+No new Critical or Major issue was introduced by the fix round.
+
+Verdict: PASS
