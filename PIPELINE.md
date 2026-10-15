@@ -13,7 +13,7 @@ Founder decisions 14–15 Oct 2026: Claude Opus 5.5 for the daily pipeline at fu
 | 1e | build: tablet layout (phase 5) | done | 2026-10-15 | 85 tests; master-detail ≥744dp (all iPads, both orientations); 90 tests; commit 71a95fc; columns ≥1100dp; iPad screenshots docs/screenshots/phase5; commits f82ec19 157b14b 959978b |
 | 1f | build: deployment (phase 6) | done | 2026-10-15 | daily.yml 06:00 UTC + ci.yml; gh-pages live at https://mksoft-ltd.github.io/sides/digest/latest.json; first run $1.34; 128 pipeline tests; commits 74c2e5f ddfaa79 |
 | 2 | design | done | 2026-10-15 | BRAND.md, cube icon wired both platforms (apk + Runner.app verified), icon_512, feature graphic, screenshot specs + headlines; 6 polish items listed in BRAND.md for the fix round; commit 6469a3f |
-| 3 | test | done | 2026-10-15 | 195 app tests (+3 skipped pending bugs F1 full-disk spinner, F2 chip semantics onTap), 138 pipeline tests, 49 mutation checks, integration screenshots run on iPhone + iPad sims; TEST_PLAN.md; commit e94f80d. Fix round 3f24d7d 6f69c20: F1, F2 + 6 polish fixed, 214 tests; QA re-verifying |
+| 3 | test | done | 2026-10-15 | 195 app tests (+3 skipped pending bugs F1 full-disk spinner, F2 chip semantics onTap), 138 pipeline tests, 49 mutation checks, integration screenshots run on iPhone + iPad sims; TEST_PLAN.md; commit e94f80d. Fix round 3f24d7d 6f69c20: F1, F2 + 6 polish fixed, 214 tests; QA re-verified F1/F2 (7cb5fe6) VERIFIED |
 | 4a | code-review | in-progress | 2026-10-15 | mobile-code-reviewer |
 | 4b | security | in-progress | 2026-10-15 | mobile-security-auditor |
 | 5 | metadata | pending | | growth-monetization → release-manager |
