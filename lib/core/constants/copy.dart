@@ -52,6 +52,10 @@ abstract final class Copy {
   static const String noContradictions =
       'No contradictions found in today\'s coverage';
   static const String noneFound = 'None found in today\'s coverage.';
+  static const String analysisUnavailableTitle = 'Analysis';
+  static const String analysisUnavailable =
+      'Analysis isn\'t available for this story today. '
+      'Its sources are listed below.';
   static const String assertedBy = 'Stated by';
   static const String disputedBy = 'Disputed by';
   static const String sources = 'Sources';

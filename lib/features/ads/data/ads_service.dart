@@ -13,7 +13,14 @@ abstract class AdsService {
   /// initialises the SDK. Idempotent; banners await it before loading.
   Future<bool> initialize();
 
+  /// Completes once Google UMP has been asked for this session's consent
+  /// information: true when that succeeded (and any required form was
+  /// shown), false when it failed. Never completes if ads never start.
+  Future<bool> get consentGathered;
+
   /// Whether the user's region requires a "Privacy options" entry point.
+  /// False until [consentGathered] has completed with true: before that UMP
+  /// has no answer, and the entry must not appear (code review m6).
   Future<bool> privacyOptionsRequired();
   Future<void> showPrivacyOptions();
 
@@ -27,6 +34,8 @@ class DisabledAdsService implements AdsService {
   const DisabledAdsService();
   @override
   Future<bool> initialize() async => false;
+  @override
+  Future<bool> get consentGathered async => false;
   @override
   Future<bool> privacyOptionsRequired() async => false;
   @override
@@ -43,6 +52,10 @@ class DisabledAdsService implements AdsService {
 /// alive without ATT authorisation.
 class AdMobAdsService implements AdsService {
   Future<bool>? _ready;
+  final Completer<bool> _consent = Completer<bool>();
+
+  @override
+  Future<bool> get consentGathered => _consent.future;
 
   @override
   Future<bool> initialize() => _ready ??= _initialize();
@@ -55,6 +68,7 @@ class AdMobAdsService implements AdsService {
       return true;
     } on Object catch (e) {
       debugPrint('Ads init failed: $e');
+      if (!_consent.isCompleted) _consent.complete(false);
       return false;
     }
   }
@@ -71,10 +85,12 @@ class AdMobAdsService implements AdsService {
         } on Object catch (e) {
           debugPrint('UMP form failed: $e');
         }
+        if (!_consent.isCompleted) _consent.complete(true);
         if (!done.isCompleted) done.complete();
       },
       (FormError e) {
         debugPrint('UMP update failed: ${e.message}');
+        if (!_consent.isCompleted) _consent.complete(false);
         if (!done.isCompleted) done.complete();
       },
     );
@@ -83,6 +99,7 @@ class AdMobAdsService implements AdsService {
 
   @override
   Future<bool> privacyOptionsRequired() async {
+    if (!_consent.isCompleted || !await _consent.future) return false;
     try {
       return await ConsentInformation.instance
               .getPrivacyOptionsRequirementStatus() ==

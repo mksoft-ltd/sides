@@ -11,6 +11,7 @@ from __future__ import annotations
 
 import json
 import logging
+import re
 from dataclasses import dataclass
 from datetime import UTC, datetime
 from pathlib import Path
@@ -19,7 +20,7 @@ from typing import Protocol
 import yaml
 from pydantic import BaseModel, ConfigDict, Field
 
-from .cost import RunCost
+from .cost import Attempt, RunCost
 from .llm import FALLBACK_BETA, LLMError, make_client, run_structured, structured_request_kwargs, usage_from_fixture
 from .models import Article, CollectResult, Digest, DigestMeta, OutletPublic
 from .stories import MIN_OUTLETS, MIN_STORIES, TOP_N, RawStory, ValidationReport, build_stories
@@ -54,7 +55,12 @@ GROUPING_OUTPUT_SCHEMA: dict = {
 
 
 class GroupingError(RuntimeError):
-    """The grouping call did not produce a usable response; the run must fail, never emit a partial digest."""
+    """The grouping call did not produce a usable response; the run must fail, never emit a partial digest.
+    ``attempts`` is what the failed call was billed for, so the cost report still accounts for it."""
+
+    def __init__(self, message: str, attempts: tuple[Attempt, ...] = ()):
+        super().__init__(message)
+        self.attempts = attempts
 
 
 # ── config ────────────────────────────────────────────────────────────────────
@@ -95,8 +101,17 @@ def load_grouping_config(path: str | Path = DEFAULT_PIPELINE_CONFIG) -> Grouping
 # ── prompt ────────────────────────────────────────────────────────────────────
 
 
+_TAG = re.compile(r"</?\s*articles\s*>", re.IGNORECASE)
+
+
 def _cell(s: str) -> str:
-    return " ".join(s.replace("|", "/").split())
+    """One column of an article line: no ``|`` (column forgery), no line breaks (row forgery) and no
+    ``<articles>`` tag (delimiter forgery — feed text must stay inside the data block, SEC-1)."""
+    return " ".join(_TAG.sub("[articles]", s).replace("|", "/").split())
+
+
+def wrap_articles(lines: list[str]) -> str:
+    return "<articles>\n" + "\n".join(lines) + "\n</articles>"
 
 
 def article_line(a: Article) -> str:
@@ -106,7 +121,7 @@ def article_line(a: Article) -> str:
 
 def build_user_message(articles: list[Article], *, date: str) -> str:
     lines = [article_line(a) for a in sorted(articles, key=lambda a: (a.outlet_id, a.published_at, a.id))]
-    return f"Articles collected for {date} ({len(lines)} items):\n\n" + "\n".join(lines)
+    return f"Articles collected for {date} ({len(lines)} items):\n\n" + wrap_articles(lines)
 
 
 def load_system_prompt(path: Path) -> str:
@@ -139,6 +154,11 @@ class GroupingResult:
     model: str
     stop_reason: str
     seconds: float
+    attempts: tuple[Attempt, ...] = ()  # every billed attempt (refusal fallback); empty = the one (model, usage)
+
+    @property
+    def billed(self) -> tuple[Attempt, ...]:
+        return self.attempts or (Attempt(self.model, self.usage),)
 
 
 class Grouper(Protocol):
@@ -162,12 +182,13 @@ class ClaudeGrouper:
         try:
             res = run_structured(self.client, self.request_kwargs(system, user), stage=STAGE)
         except LLMError as exc:
-            raise GroupingError(str(exc)) from exc
+            raise GroupingError(str(exc), exc.attempts) from exc
         try:
             response = GroupingResponse.model_validate_json(res.text)
         except ValueError as exc:
-            raise GroupingError(f"grouping response was not valid grouping JSON: {exc}") from exc
-        return GroupingResult(response=response, usage=res.usage, model=res.model, stop_reason=res.stop_reason, seconds=res.seconds)
+            raise GroupingError(f"grouping response was not valid grouping JSON: {exc}", res.attempts) from exc
+        return GroupingResult(response=response, usage=res.usage, model=res.model, stop_reason=res.stop_reason,
+                              seconds=res.seconds, attempts=res.attempts)
 
 
 class FakeGrouper:
@@ -185,11 +206,12 @@ class FakeGrouper:
     def group(self, system: str, user: str) -> GroupingResult:
         self.calls.append((system, user))
         stop = self.data.get("stop_reason", "end_turn")
-        if stop == "refusal":
-            raise GroupingError("model refused the grouping request (replayed fixture)")
-        if stop == "max_tokens":
-            raise GroupingError("grouping response was truncated at max_tokens (replayed fixture)")
         usage = usage_from_fixture(self.data.get("usage", {}))
+        billed = (Attempt(self.data.get("model", "fake"), usage),)
+        if stop == "refusal":
+            raise GroupingError("model refused the grouping request (replayed fixture)", billed)
+        if stop == "max_tokens":
+            raise GroupingError("grouping response was truncated at max_tokens (replayed fixture)", billed)
         return GroupingResult(
             response=GroupingResponse.model_validate(self.data["response"]),
             usage=usage,
@@ -225,8 +247,12 @@ def group_articles(
     system = system_prompt if system_prompt is not None else load_system_prompt(cfg.prompt_path)
     user = build_user_message(collected.articles, date=date)
 
-    result = grouper.group(system, user)
-    cost.record(STAGE, result.model, result.usage, seconds=result.seconds)
+    try:
+        result = grouper.group(system, user)
+    except GroupingError as exc:
+        cost.record_attempts(STAGE, exc.attempts)  # a refused/truncated call was still billed
+        raise
+    cost.record_attempts(STAGE, result.billed, seconds=result.seconds)
     log.info(
         "grouping: %d raw stories, %d in / %d out tokens, %.1fs",
         len(result.response.stories), result.usage.input_tokens, result.usage.output_tokens, result.seconds,
@@ -237,9 +263,15 @@ def group_articles(
         raw, collected.articles, collected.outlets,
         min_outlets=cfg.min_outlets, top_n=cfg.top_n, min_stories=cfg.min_stories,
     )
-    warnings = list(report.warnings)
+    warnings = list(report.warnings) + list(cost.warnings)
     if collected.feed_errors:
         warnings.append(f"{len(collected.feed_errors)} feed(s) failed during collect")
+    if collected.item_drops:
+        by_reason: dict[str, int] = {}
+        for d in collected.item_drops:
+            by_reason[d.reason] = by_reason.get(d.reason, 0) + d.count
+        detail = ", ".join(f"{r}={n}" for r, n in sorted(by_reason.items()))
+        warnings.append(f"{sum(by_reason.values())} feed item(s) dropped at collect ({detail})")
 
     digest = Digest(
         generated_at=now,

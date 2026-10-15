@@ -21,8 +21,8 @@ from typing import Protocol
 import yaml
 from pydantic import BaseModel, ConfigDict, Field
 
-from .cost import RunCost, Usage
-from .group import CONFIG_DIR, DEFAULT_PIPELINE_CONFIG, _cell, load_system_prompt
+from .cost import Attempt, RunCost, Usage
+from .group import CONFIG_DIR, DEFAULT_PIPELINE_CONFIG, _cell, load_system_prompt, wrap_articles
 from .llm import EFFORT_LEVELS, LLMError, make_client, run_structured, structured_request_kwargs, usage_from_fixture
 from .models import Article, OutletPublic, Story
 
@@ -182,10 +182,10 @@ def build_story_message(story: Story, outlets: dict[str, OutletPublic]) -> str:
     bloc_line = ", ".join(f"{x} ({blocs[x]})" for x in order_b)
     lines = [story_article_line(a, outlets.get(a.outlet_id)) for a in story.articles]
     return (
-        f"Story: {story.title}\n"
+        f"Story: {_cell(story.title)}\n"
         f"Leans with articles: {lean_line}\n"
         f"Blocs with articles: {bloc_line}\n"
-        f"Articles ({len(lines)}):\n\n" + "\n".join(lines)
+        f"Articles ({len(lines)}):\n\n" + wrap_articles(lines)
     )
 
 
@@ -253,6 +253,11 @@ class AnalysisResult:
     model: str
     stop_reason: str
     seconds: float
+    attempts: tuple[Attempt, ...] = ()  # every billed attempt (refusal fallback); empty = the one (model, usage)
+
+    @property
+    def billed(self) -> tuple[Attempt, ...]:
+        return self.attempts or (Attempt(self.model, self.usage),)
 
 
 class Analyser(Protocol):
@@ -282,14 +287,17 @@ class ClaudeAnalyser:
         except LLMError as exc:
             err = AnalysisError(f"story {story_id}: {exc}")
             err.usage, err.model, err.kind = exc.usage, exc.model, exc.kind  # type: ignore[attr-defined]
+            err.attempts = exc.attempts  # type: ignore[attr-defined]
             raise err from exc
         try:
             response = AnalysisResponse.model_validate_json(res.text)
         except ValueError as exc:
             err = AnalysisError(f"story {story_id}: analysis response was not valid analysis JSON: {exc}")
             err.usage, err.model, err.kind = res.usage, res.model, "bad_json"  # type: ignore[attr-defined]
+            err.attempts = res.attempts  # type: ignore[attr-defined]
             raise err from exc
-        return AnalysisResult(response=response, usage=res.usage, model=res.model, stop_reason=res.stop_reason, seconds=res.seconds)
+        return AnalysisResult(response=response, usage=res.usage, model=res.model, stop_reason=res.stop_reason,
+                              seconds=res.seconds, attempts=res.attempts)
 
 
 class FakeAnalyser:
@@ -340,7 +348,7 @@ class StoryAnalysis:
     response: AnalysisResponse | None
     attempts: int
     error: str | None = None
-    usage: list[Usage] = field(default_factory=list)
+    billed: list[Attempt] = field(default_factory=list)  # every billed attempt of every call, each with its own model
     model: str | None = None
     seconds: float = 0.0
     raw_fixture: dict | None = None  # the last successful response in fixture shape (for --raw-out-dir)
@@ -358,14 +366,17 @@ def analyse_one(story: Story, analyser: Analyser, cfg: AnalysisConfig, system: s
         try:
             res = analyser.analyse(system, user, story_id=story.id)
         except AnalysisError as exc:
+            attempts = getattr(exc, "attempts", None)
             u = getattr(exc, "usage", None)
-            if u is not None:
-                out.usage.append(u)
-                out.model = getattr(exc, "model", None) or out.model
+            if attempts:
+                out.billed.extend(attempts)
+            elif u is not None:
+                out.billed.append(Attempt(getattr(exc, "model", None) or cfg.model, u))
+            out.model = getattr(exc, "model", None) or out.model
             out.error = str(exc)
             log.warning("analysis attempt %d/%d failed for story %s (%s): %s", attempt + 1, 1 + cfg.retries, story.id, getattr(exc, "kind", "?"), exc)
             continue
-        out.usage.append(res.usage)
+        out.billed.extend(res.billed)
         out.model = res.model
         out.seconds = res.seconds
         out.response = res.response
@@ -402,10 +413,9 @@ def analyse_stories(
     with ThreadPoolExecutor(max_workers=min(cfg.concurrency, len(stories))) as pool:
         results = list(pool.map(lambda s: analyse_one(s, analyser, cfg, system, outlet_map), stories))
     for r in results:
-        for u in r.usage:
-            cost.record(STAGE, r.model or cfg.model, u, seconds=r.seconds if r.ok else None)
+        cost.record_attempts(STAGE, r.billed, seconds=r.seconds if r.ok else None)
     ok = sum(1 for r in results if r.ok)
-    log.info("analysis: %d/%d stories analysed, %d calls", ok, len(results), sum(len(r.usage) for r in results))
+    log.info("analysis: %d/%d stories analysed, %d billed attempts", ok, len(results), sum(len(r.billed) for r in results))
     return results
 
 

@@ -27,6 +27,9 @@ void main() {
               }),
             ),
             clock: () => now,
+            // These tests settle with pumpEventQueue, which does not wait for
+            // an isolate; the background parse has its own repository tests.
+            parse: parseDigestInline,
           ),
         ),
       ],

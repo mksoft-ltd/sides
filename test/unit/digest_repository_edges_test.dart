@@ -9,6 +9,7 @@ import 'package:http/testing.dart';
 import 'package:sides/features/digest/data/digest_cache.dart';
 import 'package:sides/features/digest/data/digest_remote.dart';
 import 'package:sides/features/digest/data/digest_repository.dart';
+import 'package:sides/features/digest/domain/digest.dart';
 import 'package:sides/features/digest/presentation/providers/digest_controller.dart';
 
 import '../fixtures/fixtures.dart';
@@ -32,6 +33,9 @@ void main() {
       }),
     ),
     clock: () => now,
+    // Controller tests here settle with pumpEventQueue, which does not wait
+    // for an isolate; digest_repository_test.dart runs the background parse.
+    parse: parseDigestInline,
   );
 
   /// The sample with a different `date`, so a replaced body is detectable.
@@ -339,6 +343,43 @@ void main() {
     });
   });
 
+  group('fix round 2', () {
+    test('m4: an unexpected cache-read exception is a miss, not an endless '
+        'first-screen spinner', () async {
+      server = (_) => ok(bodyDated('2026-10-15'), etag: '"v2"');
+      final ProviderContainer c = ProviderContainer(
+        overrides: <Override>[
+          digestRepositoryProvider.overrideWithValue(
+            _CacheReadExplodes(repo(InMemoryDigestCache())),
+          ),
+        ],
+      );
+      addTearDown(c.dispose);
+      final DigestState s = await launched(c);
+      expect(s.initialising, isFalse, reason: 'the spinner must clear');
+      expect(requests, hasLength(1), reason: 'treated as a miss: fetch');
+      expect(s.digest?.date, '2026-10-15');
+    });
+
+    test('m5: the default parser runs off the UI isolate and returns the '
+        'same digest as the pure parse', () async {
+      final String body = sampleDigestBody();
+      final ParsedDigest bg = await parseDigestInBackground(body);
+      final ParsedDigest inline = parseDigest(body);
+      expect(bg.failure, isNull);
+      expect(
+        bg.digest!.stories.map((Story s) => s.id).toList(),
+        inline.digest!.stories.map((Story s) => s.id).toList(),
+      );
+      expect((await parseDigestInBackground('{not json')).failure,
+          RefreshFailureKind.invalid);
+      // Production builds the repository without a parser (lib/main.dart),
+      // so the default is what keeps the parse off the UI isolate.
+      expect(NetworkDigestRepository.defaultParser,
+          same(parseDigestInBackground));
+    });
+  });
+
   group('cache write failures (disk full, permissions)', () {
     // Regression for F1 (docs/TEST_PLAN.md): a FileSystemException from
     // DigestCache.write/touch used to escape DigestController._refresh and
@@ -425,6 +466,19 @@ void main() {
 }
 
 /// Reads the real cache but fails every refresh with an unexpected error.
+/// `loadCached` throws something no parser catches (code review m4).
+class _CacheReadExplodes extends _ExplodingRepository {
+  _CacheReadExplodes(super.inner);
+
+  @override
+  Future<LoadedDigest?> loadCached() async =>
+      throw StateError('asset bundle unavailable');
+
+  @override
+  Future<RefreshOutcome> refresh({LoadedDigest? current}) =>
+      _inner.refresh(current: current);
+}
+
 class _ExplodingRepository implements DigestRepository {
   _ExplodingRepository(this._inner);
   final DigestRepository _inner;

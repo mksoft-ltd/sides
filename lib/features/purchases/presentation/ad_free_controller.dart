@@ -98,6 +98,13 @@ class AdFreeController extends Notifier<AdFreeState> {
   bool _restoring = false;
   bool _restoreFound = false;
 
+  /// True from a started [buy] until its outcome (or the busy ceiling).
+  /// Play reports a cancel or a failed purchase with no purchase attached,
+  /// i.e. with an EMPTY product id (in_app_purchase_android 0.5.4,
+  /// `_getPurchaseDetailsFromResult`); such an event belongs to the purchase
+  /// in flight, and only to it.
+  bool _purchasing = false;
+
   StoreGateway get _store => ref.read(storeGatewayProvider);
 
   @override
@@ -175,6 +182,7 @@ class AdFreeController extends Notifier<AdFreeState> {
       return;
     }
     _setBusy();
+    _purchasing = true;
     try {
       final bool started = await _store.buyNonConsumable(product);
       if (!started) _finish(AdFreeNotice.failed);
@@ -210,7 +218,7 @@ class AdFreeController extends Notifier<AdFreeState> {
 
   Future<void> _onPurchases(List<PurchaseDetails> list) async {
     for (final PurchaseDetails p in list) {
-      if (p.productID != AppConfig.adFreeProductId) {
+      if (!_isOurs(p)) {
         if (p.pendingCompletePurchase) await _complete(p);
         continue;
       }
@@ -254,6 +262,17 @@ class AdFreeController extends Notifier<AdFreeState> {
     }
   }
 
+  /// Our product, or Play's id-less cancel/error for the purchase in flight.
+  /// An id-less event with no purchase in flight (e.g. a stray billing
+  /// result) is ignored rather than shown as a notice.
+  bool _isOurs(PurchaseDetails p) {
+    if (p.productID == AppConfig.adFreeProductId) return true;
+    return p.productID.isEmpty &&
+        _purchasing &&
+        (p.status == PurchaseStatus.canceled ||
+            p.status == PurchaseStatus.error);
+  }
+
   /// Play reports a purchase still awaiting payment as `restored` after a
   /// restore; only the billing-client state tells the truth. A type guard,
   /// so it is simply false on iOS.
@@ -273,6 +292,7 @@ class AdFreeController extends Notifier<AdFreeState> {
   void _setBusy() {
     _busyTimer?.cancel();
     _busyTimer = Timer(busyCeiling, () {
+      _purchasing = false;
       if (ref.mounted && state.busy) state = state.copyWith(busy: false);
     });
     state = state.copyWith(busy: true);
@@ -280,6 +300,7 @@ class AdFreeController extends Notifier<AdFreeState> {
 
   void _finish(AdFreeNotice notice) {
     _busyTimer?.cancel();
+    _purchasing = false;
     if (!ref.mounted) return;
     state = state.copyWith(busy: false, notice: notice);
   }

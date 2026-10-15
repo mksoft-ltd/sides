@@ -14,6 +14,13 @@ dropped under the FIRST failing reason below and counted in ``ValidationCounts.d
   contested_same_outlet      asserted_by and disputed_by share an outlet (the two sides must be disjoint outlet sets)
   contradiction_wrong_bloc   west.sources are not all West-bloc articles, or east.sources not all East-bloc
   empty_framing              a framing entry has nothing left after its quotes and emphasis were checked
+  untrusted_text             a point text, claim, topic, contradiction side or quote carries a URL, an @handle or an
+                             instruction-shaped phrase (guard.suspect_text; feed text is untrusted data, SEC-1)
+  title_ungrounded /         (counted at grouping, carried in story.validation) the model's story title was replaced
+  untrusted_text_title       by a member headline: it was not grounded in the story's headlines, or it was suspect
+
+A kept quote is stored as the outlet's own text: the matched span of the headline/snippet, not the model's
+wording (the match ignores case, quote style and dashes, so the model's copy could differ in exactly those).
 
 Texts longer than 200 characters are cut at a word boundary (logged, not a drop).
 """
@@ -37,6 +44,7 @@ from .models import (
     Story,
     ValidationCounts,
 )
+from .guard import suspect_text
 from .text import normalise_ws, truncate_words
 
 log = logging.getLogger(__name__)
@@ -50,7 +58,36 @@ _WS = re.compile(r"\s+")
 
 def fold(s: str) -> str:
     """Comparison form for the quote check: lower-case, typographic quotes/dashes folded, whitespace collapsed."""
-    return _WS.sub(" ", (s or "").translate(_FOLD)).strip().lower()
+    return fold_with_map(s)[0]
+
+
+def fold_with_map(s: str) -> tuple[str, list[int]]:
+    """``fold(s)`` plus, for every folded character, the index of the original character it came from."""
+    out: list[str] = []
+    idx: list[int] = []
+    for i, ch in enumerate((s or "").translate(_FOLD)):
+        if ch.isspace():
+            if out and out[-1] != " ":
+                out.append(" ")
+                idx.append(i)
+            continue
+        for c in ch.lower():  # lower() can expand one character (e.g. "İ")
+            out.append(c)
+            idx.append(i)
+    if out and out[-1] == " ":
+        out.pop()
+        idx.pop()
+    return "".join(out), idx
+
+
+def source_span(original: str, needle_folded: str) -> str | None:
+    """The exact substring of ``original`` whose folded form is ``needle_folded`` (whitespace collapsed)."""
+    folded, idx = fold_with_map(original)
+    pos = folded.find(needle_folded)
+    if pos < 0 or not needle_folded:
+        return None
+    start, end = idx[pos], idx[pos + len(needle_folded) - 1] + 1
+    return normalise_ws(original[start:end])
 
 
 class _Ctx:
@@ -62,6 +99,7 @@ class _Ctx:
         self.lean_of = {a.id: (outlets[a.outlet_id].lean if a.outlet_id in outlets else None) for a in story.articles}
         self.bloc_of = {a.id: (outlets[a.outlet_id].bloc if a.outlet_id in outlets else None) for a in story.articles}
         self.haystack = {a.id: (fold(a.headline), fold(a.snippet)) for a in story.articles}
+        self.source = {a.id: (a.headline, a.snippet) for a in story.articles}
         leans, blocs = sides_present(story, outlets)
         self.leans_present = set(leans)
         self.blocs_present = set(blocs)
@@ -93,14 +131,20 @@ class _Ctx:
 
     def quote_field(self, q: AnalysisResponse.Quote) -> str | None:
         """'headline' / 'snippet' naming where the quote appears verbatim (headline wins), or None when nowhere."""
+        found = self.quote_source(q)
+        return found[0] if found else None
+
+    def quote_source(self, q: AnalysisResponse.Quote) -> tuple[str, str] | None:
+        """``(field, exact outlet text)`` for a quote found in the cited headline/snippet, else None."""
         head, snip = self.haystack[q.article_id]
         needle = fold(q.quote)
         if not needle:
             return None
-        if needle in head:
-            return "headline"
-        if needle in snip:
-            return "snippet"
+        for name, hay, original in (("headline", head, self.source[q.article_id][0]), ("snippet", snip, self.source[q.article_id][1])):
+            if needle in hay:
+                span = source_span(original, needle)
+                if span:
+                    return name, span
         return None
 
 
@@ -113,6 +157,8 @@ def _sourced(ctx: _Ctx, item: AnalysisResponse.Sourced, *, side_of=None, side=No
     reason = ctx.check_ids(ids)
     if reason is None and side is not None and any(side_of[i] != side for i in ids):
         reason = "source_outside_side"
+    if reason is None and suspect_text(item.text):
+        reason = "untrusted_text"
     if reason:
         ctx.drop(reason, f"{label} {item.text[:60]!r} {ids}")
         return None
@@ -139,15 +185,17 @@ def _framing(ctx: _Ctx, entries, *, kind: str) -> list:  # noqa: ANN001
             reason = ctx.check_ids([q.article_id])
             if reason is None and side_of[q.article_id] != side:
                 reason = "source_outside_side"
-            field = ctx.quote_field(q) if reason is None else None
-            if reason is None and field is None:
+            found = ctx.quote_source(q) if reason is None else None
+            if reason is None and found is None:
                 reason = "quote_not_found"
+            if reason is None and suspect_text(found[1]):
+                reason = "untrusted_text"
             if reason:
                 ctx.drop(reason, f"quote {q.quote[:60]!r} ({q.article_id})")
                 continue
             seen.add((q.article_id, q.quote))
             ctx.keep()
-            quotes.append(HeadlineQuote(article_id=q.article_id, quote=normalise_ws(q.quote), field=field))
+            quotes.append(HeadlineQuote(article_id=q.article_id, quote=found[1], field=found[0]))
         for item in e.emphasis:
             s = _sourced(ctx, item, side_of=side_of, side=side, label=f"emphasis[{side}]")
             if s is not None:
@@ -168,6 +216,7 @@ def _framing(ctx: _Ctx, entries, *, kind: str) -> list:  # noqa: ANN001
 def validate_analysis(response: AnalysisResponse, story: Story, outlets: dict[str, OutletPublic]) -> tuple[Story, ValidationCounts]:
     """Return a copy of ``story`` with the validated analysis attached, plus what was kept/dropped."""
     ctx = _Ctx(story, outlets)
+    ctx.counts.dropped_by_reason.update(title_counts(story))
 
     agreed = [s for s in (_sourced(ctx, i, label="agreed_fact") for i in response.agreed_facts) if s]
     opinion = [s for s in (_sourced(ctx, i, label="opinion") for i in response.opinion) if s]
@@ -182,6 +231,8 @@ def validate_analysis(response: AnalysisResponse, story: Story, outlets: dict[st
             reason = "side_without_articles"
         if reason is None and any(ctx.lean_of[i] == o.lean for i in ids):
             reason = "omission_cites_omitter"
+        if reason is None and suspect_text(o.text):
+            reason = "untrusted_text"
         if reason:
             ctx.drop(reason, f"omission[{o.lean}] {o.text[:60]!r}")
             continue
@@ -197,6 +248,8 @@ def validate_analysis(response: AnalysisResponse, story: Story, outlets: dict[st
             d_out = {ctx.outlet_of[i] for i in d_ids}
             if a_out & d_out:
                 reason = "contested_same_outlet"
+        if reason is None and suspect_text(c.claim):
+            reason = "untrusted_text"
         if reason:
             ctx.drop(reason, f"contested {c.claim[:60]!r}")
             continue
@@ -209,6 +262,8 @@ def validate_analysis(response: AnalysisResponse, story: Story, outlets: dict[st
         reason = ctx.check_ids(w_ids) or ctx.check_ids(e_ids)
         if reason is None and (any(ctx.bloc_of[i] != "west" for i in w_ids) or any(ctx.bloc_of[i] != "east" for i in e_ids)):
             reason = "contradiction_wrong_bloc"
+        if reason is None and any(suspect_text(t) for t in (x.topic, x.west.text, x.east.text)):
+            reason = "untrusted_text"
         if reason:
             ctx.drop(reason, f"contradiction {x.topic[:60]!r}")
             continue
@@ -229,9 +284,18 @@ def validate_analysis(response: AnalysisResponse, story: Story, outlets: dict[st
     return analysed, counts
 
 
+TITLE_REASONS = ("title_ungrounded", "untrusted_text_title")
+
+
+def title_counts(story: Story) -> dict[str, int]:
+    """The grouping-time title replacement (if any) recorded on the story, carried into its analysis counts."""
+    return {k: n for k, n in story.validation.dropped_by_reason.items() if k in TITLE_REASONS}
+
+
 def empty_analysis(story: Story) -> Story:
     """The story with every analysis array empty (used when its analysis call failed)."""
     return story.model_copy(update=dict(
         agreed_facts=[], framing=[], omissions=[], contested_claims=[], opinion=[],
-        framing_by_bloc=[], east_west_contradictions=[], validation=ValidationCounts(),
+        framing_by_bloc=[], east_west_contradictions=[],
+        validation=ValidationCounts(dropped_by_reason=title_counts(story)),
     ))

@@ -67,7 +67,16 @@ class DigestController extends Notifier<DigestState> {
 
   Future<void> _start() async {
     if (!ref.mounted) return;
-    final LoadedDigest? cached = await _repo.loadCached();
+    LoadedDigest? cached;
+    try {
+      cached = await _repo.loadCached();
+    } on Object catch (e) {
+      // Anything unexpected reading the cache (an asset or isolate failure,
+      // a plugin error) is a cache miss, never an endless first-screen
+      // spinner with no Retry (code review m4).
+      debugPrint('Digest cache read failed: $e');
+      cached = null;
+    }
     if (!ref.mounted) return;
     state = state.copyWith(loaded: cached, initialising: false);
     if (cached == null || _repo.needsRevalidation(cached)) {

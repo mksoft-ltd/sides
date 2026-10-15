@@ -53,6 +53,26 @@ GooglePlayPurchaseDetails playPurchase(
       ),
     );
 
+/// Exactly what in_app_purchase_android 0.5.4 emits for a non-OK billing
+/// result with no purchase attached (`_getPurchaseDetailsFromResult`): an
+/// EMPTY product id, the response code as the error message.
+PurchaseDetails playIdlessResult(PurchaseStatus status, String responseCode) =>
+    PurchaseDetails(
+      purchaseID: '',
+      productID: '',
+      status: status,
+      transactionDate: null,
+      verificationData: PurchaseVerificationData(
+        localVerificationData: '',
+        serverVerificationData: '',
+        source: 'google_play',
+      ),
+    )..error = IAPError(
+        source: 'google_play',
+        code: 'purchase_error',
+        message: responseCode,
+      );
+
 void main() {
   late FakeStoreGateway store;
   late InMemorySettingsStore settings;
@@ -115,6 +135,63 @@ void main() {
     expect(s.busy, isFalse);
     expect(s.owned, isFalse);
     expect(s.notice, AdFreeNotice.cancelled);
+  });
+
+  group('M1: Play reports cancel/error with an empty product id', () {
+    test('cancel clears busy and shows the cancelled notice at once',
+        () async {
+      final ProviderContainer c = make();
+      await pumpEventQueue();
+      await c.read(adFreeControllerProvider.notifier).buy();
+      expect(c.read(adFreeControllerProvider).busy, isTrue);
+      store.emit(playIdlessResult(
+          PurchaseStatus.canceled, 'BillingResponse.userCanceled'));
+      await pumpEventQueue();
+      final AdFreeState s = c.read(adFreeControllerProvider);
+      expect(s.busy, isFalse);
+      expect(s.notice, AdFreeNotice.cancelled);
+      expect(s.owned, isFalse);
+    });
+
+    test('error clears busy and shows the failed notice at once', () async {
+      final ProviderContainer c = make();
+      await pumpEventQueue();
+      await c.read(adFreeControllerProvider.notifier).buy();
+      store.emit(playIdlessResult(
+          PurchaseStatus.error, 'BillingResponse.serviceUnavailable'));
+      await pumpEventQueue();
+      final AdFreeState s = c.read(adFreeControllerProvider);
+      expect(s.busy, isFalse);
+      expect(s.notice, AdFreeNotice.failed);
+    });
+
+    test('itemAlreadyOwned with no purchase attached restores the grant',
+        () async {
+      final ProviderContainer c = make();
+      await pumpEventQueue();
+      store.owned = <PurchaseDetails>[p(PurchaseStatus.purchased)];
+      await c.read(adFreeControllerProvider.notifier).buy();
+      store.emit(playIdlessResult(
+          PurchaseStatus.error, 'BillingResponse.itemAlreadyOwned'));
+      await pumpEventQueue();
+      expect(store.restoreCalls, 1);
+      final AdFreeState s = c.read(adFreeControllerProvider);
+      expect(s.owned, isTrue);
+      expect(s.busy, isFalse);
+      expect(s.notice, AdFreeNotice.restored);
+    });
+
+    test('an id-less event with no purchase in flight is ignored', () async {
+      final ProviderContainer c = make();
+      await pumpEventQueue();
+      store.emit(playIdlessResult(
+          PurchaseStatus.error, 'BillingResponse.serviceUnavailable'));
+      await pumpEventQueue();
+      final AdFreeState s = c.read(adFreeControllerProvider);
+      expect(s.notice, isNull);
+      expect(s.busy, isFalse);
+      expect(store.restoreCalls, 0);
+    });
   });
 
   test('pending clears busy and keeps Restore usable', () async {

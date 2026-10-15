@@ -34,24 +34,24 @@ def test_unknown_ids_are_dropped_and_counted():
 
 def test_article_in_two_stories_goes_to_story_with_more_distinct_outlets():
     articles = arts(("a", "l1"), ("b", "c1"), ("c", "r1"), ("d", "e1"), ("x", "l2"), ("y", "l3"), ("z", "c2"))
-    big = RawStory("big", [aid("a"), aid("b"), aid("c"), aid("d"), aid("x")])  # 5 outlets
+    big = RawStory("XL", [aid("a"), aid("b"), aid("c"), aid("d"), aid("x")])  # 5 outlets
     small = RawStory("small", [aid("x"), aid("y"), aid("z")])  # 3 outlets, shares x
     stories, rep = build_stories([small, big], articles, OUTLETS)
     assert rep.duplicate_memberships_resolved == 1
     by_title = {s.title: s for s in stories}
-    assert aid("x") in {a.id for a in by_title["big"].articles}
+    assert aid("x") in {a.id for a in by_title["XL"].articles}
     # "small" lost x, leaving 2 distinct outlets → dropped by the threshold
     assert "small" not in by_title and rep.below_min_outlets_dropped == 1
 
 
 def test_duplicate_membership_tie_goes_to_first_story():
     articles = arts(("a", "l1"), ("b", "c1"), ("c", "r1"), ("p", "l2"), ("q", "c2"))
-    first = RawStory("first", [aid("a"), aid("b"), aid("c")])
-    second = RawStory("second", [aid("c"), aid("p"), aid("q")])  # also 3 outlets, shares c
+    first = RawStory("N1", [aid("a"), aid("b"), aid("c")])
+    second = RawStory("N2", [aid("c"), aid("p"), aid("q")])  # also 3 outlets, shares c
     stories, _ = build_stories([first, second], articles, OUTLETS)
     titles = {s.title: s for s in stories}
-    assert aid("c") in {a.id for a in titles["first"].articles}
-    assert "second" not in titles  # down to 2 outlets
+    assert aid("c") in {a.id for a in titles["N1"].articles}
+    assert "N2" not in titles  # down to 2 outlets
 
 
 def test_fewer_than_three_distinct_outlets_dropped_and_same_outlet_counts_once():

@@ -60,7 +60,8 @@ Local storage: `<documents>/digest/latest.json` + `latest.meta.json` (`fetched_a
 |---|---|---|
 | Android | `INTERNET` | Download the daily digest; load ads; billing. |
 | Android | `com.google.android.gms.permission.AD_ID` | Required by Google Mobile Ads on Android 13+ (frequency capping, fraud prevention). Requests are non-personalised. |
-| Android (merged from the Mobile Ads SDK) | `ACCESS_NETWORK_STATE`, `ACCESS_ADSERVICES_AD_ID`, `ACCESS_ADSERVICES_ATTRIBUTION`, `ACCESS_ADSERVICES_TOPICS`, `WAKE_LOCK`, `FOREGROUND_SERVICE` | Added by `play-services-ads`; the app itself uses none directly. Security/compliance stages may decide to strip the Privacy Sandbox ones with `tools:node="remove"`. |
+| Android (merged from the Mobile Ads SDK) | `ACCESS_NETWORK_STATE`, `WAKE_LOCK`, `FOREGROUND_SERVICE` | Added by `play-services-ads`; the app itself uses none directly. |
+| Android (removed) | `ACCESS_ADSERVICES_AD_ID`, `ACCESS_ADSERVICES_ATTRIBUTION`, `ACCESS_ADSERVICES_TOPICS` | Merged by `play-services-ads` for Privacy Sandbox targeting and measurement; stripped with `tools:node="remove"` because Sides requests non-personalised ads only (security audit SEC-6, 15 Oct 2026; verified absent from the built APK). |
 | Android (merged from Billing) | `com.android.vending.BILLING` | Ad-free in-app purchase. |
 | iOS | none requested at runtime | No ATT prompt and no `NSUserTrackingUsageDescription`: Sides does not track; all ad requests are non-personalised (house convention). `SKAdNetworkItems` (Google's list, 50 entries) and `GADApplicationIdentifier` are in Info.plist. `ITSAppUsesNonExemptEncryption = false`. |
 

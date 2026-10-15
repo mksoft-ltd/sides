@@ -92,7 +92,18 @@ class StoryDetailView extends ConsumerWidget {
               ),
             ],
             const SizedBox(height: 24),
-            SegmentedButton<PerspectiveAxis>(
+            if (story.analysisUnavailable)
+              const Section(
+                title: Copy.analysisUnavailableTitle,
+                children: <Widget>[
+                  NoneFound(
+                    key: StoryDetailView.analysisUnavailableKey,
+                    text: Copy.analysisUnavailable,
+                  ),
+                ],
+              )
+            else ...<Widget>[
+              SegmentedButton<PerspectiveAxis>(
               showSelectedIcon: false,
               segments: const <ButtonSegment<PerspectiveAxis>>[
                 ButtonSegment<PerspectiveAxis>(
@@ -124,6 +135,7 @@ class StoryDetailView extends ConsumerWidget {
                 // Contradiction rows always need a West and an East column.
                 columns: columns(2),
               ),
+            ],
             Section(
               title: '${Copy.sources} (${story.articles.length})',
               children: <Widget>[SourcesList(story: story, digest: digest)],
@@ -319,6 +331,7 @@ class StoryDetailView extends ConsumerWidget {
   }
 
   static const Key noContradictionsKey = Key('no-contradictions');
+  static const Key analysisUnavailableKey = Key('analysis-unavailable');
 }
 
 /// Equal-width perspective columns that scroll with the page. Each column

@@ -58,6 +58,7 @@ def _collect_table(outlets: list[Outlet], result: CollectResult) -> str:
     lines.append(
         f"outlets: {len(enabled)} enabled / {len(outlets) - len(enabled)} disabled   "
         f"articles: {len(result.articles)}   feed errors: {len(result.feed_errors)}   "
+        f"items dropped: {sum(d.count for d in result.item_drops)}   "
         f"collected_at: {result.collected_at.isoformat()}"
     )
     return "\n".join(lines)

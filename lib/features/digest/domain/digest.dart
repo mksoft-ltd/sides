@@ -310,6 +310,23 @@ class Blindspot {
 }
 
 @immutable
+/// What the pipeline's citation validator kept and dropped for one story.
+@immutable
+class StoryValidation {
+  const StoryValidation({required this.kept, required this.droppedByReason});
+  final int kept;
+  final Map<String, int> droppedByReason;
+
+  factory StoryValidation.fromJson(Map<String, Object?> j) => StoryValidation(
+        kept: _int(j, 'kept'),
+        droppedByReason: <String, int>{
+          for (final MapEntry<String, Object?> e
+              in _map(j, 'dropped_by_reason').entries)
+            if (e.value case final int n) e.key: n,
+        },
+      );
+}
+
 class Story {
   Story._({
     required this.id,
@@ -326,6 +343,7 @@ class Story {
     required this.opinion,
     required this.framingByBloc,
     required this.contradictions,
+    this.validation,
   }) : _articleById = <String, Article>{
           for (final Article a in articles) a.id: a,
         };
@@ -345,7 +363,26 @@ class Story {
   final List<Framing<Bloc>> framingByBloc;
   final List<Contradiction> contradictions;
 
+  /// The pipeline's validation counts (schema-required; null only for an
+  /// older file without them, which then renders as before).
+  final StoryValidation? validation;
+
   final Map<String, Article> _articleById;
+
+  /// True when the analysis did not run or nothing of it survived: the
+  /// validator kept nothing and every analysis list is empty. "None found"
+  /// would then be a claim about an analysis that never happened, so the
+  /// story page shows an "analysis unavailable" notice instead (code review
+  /// M3).
+  bool get analysisUnavailable =>
+      validation?.kept == 0 &&
+      agreedFacts.isEmpty &&
+      framingByLean.isEmpty &&
+      omissions.isEmpty &&
+      contestedClaims.isEmpty &&
+      opinion.isEmpty &&
+      framingByBloc.isEmpty &&
+      contradictions.isEmpty;
 
   Article? article(String id) => _articleById[id];
 
@@ -452,6 +489,9 @@ class Story {
               case (final SourcedPoint w, final SourcedPoint e))
             Contradiction(topic: _str(m, 'topic'), west: w, east: e),
       ],
+      validation: j['validation'] == null
+          ? null
+          : StoryValidation.fromJson(_map(j, 'validation')),
     );
   }
 }

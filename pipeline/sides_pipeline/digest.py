@@ -57,6 +57,9 @@ def assemble_digest(
         out.per_story[story.id] = counts
         totals.add(counts)
 
+    for w in cost.warnings:  # e.g. a fallback model with no price row (recorded unpriced, never fatal)
+        if w not in warnings:
+            warnings.append(w)
     meta = stories_digest.meta.model_copy(update=dict(
         model=model,
         cost_usd=cost.total_usd,

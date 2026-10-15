@@ -23,7 +23,9 @@ from .models import (
     LeanCoverage,
     OutletPublic,
     Story,
+    ValidationCounts,
 )
+from .guard import ground_title
 from .text import normalise_ws, truncate_words
 
 log = logging.getLogger(__name__)
@@ -51,6 +53,7 @@ class ValidationReport:
     empty_stories_dropped: int = 0
     below_min_outlets_dropped: int = 0
     beyond_top_n_dropped: int = 0
+    titles_replaced: int = 0
     stories_out: int = 0
     warnings: list[str] = field(default_factory=list)
 
@@ -62,6 +65,7 @@ class ValidationReport:
             f"stories with no valid articles dropped: {self.empty_stories_dropped}",
             f"stories with < {MIN_OUTLETS} distinct outlets dropped: {self.below_min_outlets_dropped}",
             f"stories beyond top {TOP_N} dropped: {self.beyond_top_n_dropped}",
+            f"titles replaced by a member headline (ungrounded or suspect): {self.titles_replaced}",
             f"stories kept: {self.stories_out}",
         ]
 
@@ -183,8 +187,16 @@ def build_stories(
     report.beyond_top_n_dropped = max(0, len(scored) - top_n)
     scored = scored[:top_n]
 
-    stories = [
-        Story(
+    stories = []
+    for i, (_, title, arts, cov) in enumerate(scored, start=1):
+        # SEC-1: the title is model-written free text with no citation; ground it in the story's own headlines.
+        title, replaced = ground_title(normalise_ws(title), arts)
+        counts = ValidationCounts()
+        if replaced:
+            report.titles_replaced += 1
+            counts.dropped_by_reason[replaced] = 1
+            log.warning("story %d title replaced by a member headline (%s)", i, replaced)
+        stories.append(Story(
             id=story_id([a.id for a in arts]),
             title=clean_title(title),
             rank=i,
@@ -192,9 +204,8 @@ def build_stories(
             coverage=cov,
             blindspot=compute_blindspot(cov),
             articles=arts,
-        )
-        for i, (_, title, arts, cov) in enumerate(scored, start=1)
-    ]
+            validation=counts,
+        ))
     report.stories_out = len(stories)
     if len(stories) < min_stories:
         msg = f"only {len(stories)} stories qualified (target {min_stories}, need ≥{min_outlets} distinct outlets each)"

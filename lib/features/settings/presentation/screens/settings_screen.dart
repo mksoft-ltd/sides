@@ -185,7 +185,9 @@ class _AdFreeTile extends ConsumerWidget {
   }
 }
 
-/// Google UMP "Privacy options", shown only where regulation requires it.
+/// Google UMP "Privacy options", shown only where regulation requires it,
+/// and only once UMP has actually gathered this session's consent info:
+/// asking earlier reads "unknown", and opening the form then does nothing.
 class _PrivacyOptionsTile extends ConsumerStatefulWidget {
   const _PrivacyOptionsTile();
 
@@ -195,8 +197,11 @@ class _PrivacyOptionsTile extends ConsumerStatefulWidget {
 }
 
 class _PrivacyOptionsTileState extends ConsumerState<_PrivacyOptionsTile> {
-  late final Future<bool> _required =
-      ref.read(adsServiceProvider).privacyOptionsRequired();
+  late final Future<bool> _required = () async {
+    final AdsService ads = ref.read(adsServiceProvider);
+    if (!await ads.consentGathered) return false;
+    return ads.privacyOptionsRequired();
+  }();
 
   @override
   Widget build(BuildContext context) {

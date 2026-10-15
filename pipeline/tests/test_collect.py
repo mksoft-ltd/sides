@@ -149,6 +149,6 @@ def test_collect_output_round_trips_through_json(now):
     result = collect(outlets, fetcher=FakeFetcher({"https://g.example/rss": read_fixture("real_guardian_world.xml")}), now=now)
     dumped = result.model_dump(mode="json")
     assert dumped["collected_at"] == "2026-10-14T22:00:00Z"
-    assert set(dumped) == {"collected_at", "outlets", "articles", "feed_errors", "per_outlet_counts"}
+    assert set(dumped) == {"collected_at", "outlets", "articles", "feed_errors", "per_outlet_counts", "item_drops"}
     assert CollectResult.model_validate(dumped) == result
     assert set(dumped["outlets"][0]) == {"id", "name", "lean", "region", "bloc", "ownership", "country", "home_url", "rating_basis"}

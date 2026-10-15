@@ -11,10 +11,11 @@ Publisher: Froggy Eye Ltd (house-facts §3). Bundle/package `com.froggyeye.sides
 ```
 pipeline/                 Python 3.12+ package (flat layout, no src/)
   pyproject.toml          deps, `pip install -e pipeline[dev]`, pytest config (socket guard)
-  sides_pipeline/         models.py · config.py · text.py · fetch.py · collect.py · llm.py · group.py · stories.py · analyse.py · validate.py · digest.py · cost.py · schema.py · cli.py
+  sides_pipeline/         models.py · config.py · text.py · fetch.py · collect.py · llm.py · group.py · stories.py · analyse.py · validate.py · guard.py · digest.py · cost.py · schema.py · cli.py
+  requirements.lock       hash-locked runtime deps for CI (requirements-dev.lock adds pytest); see "Deployment"
   config/outlets.yaml     the outlet pool (see "How to add an outlet")
   config/pipeline.yaml    LLM model + per-stage effort/max_tokens/thresholds (the one place to downgrade the model)
-  config/pricing.yaml     USD per MTok per model (cost.py refuses to price an unlisted model)
+  config/pricing.yaml     USD per MTok per model, incl. the refusal-fallback models (an unlisted model is recorded unpriced + warned, never fatal)
   config/prompts/*.md     prompt text, never inline in code (group.md, analyse.md)
   tests/                  pytest, fixtures/feeds/*.xml, fixtures/llm/*.json + analyse_live_<date>/<story_id>.json, conftest.py
   out/                    run artifacts (git-ignored): articles.json, stories.json, digest.json, runs/<date>.json (cost report)
@@ -60,6 +61,12 @@ stage offline from a recorded response (no key needed).
   (tracking params stripped) and by (outlet, normalised headline), missing dates fall back to fetch time with
   `published_at_estimated: true`, a failing feed goes to `feed_errors[]` and never aborts the run.
   `enabled: false` outlets are skipped but stay on record.
+- **Feed text is untrusted (security audit SEC-1/2/4, fix round 2).** Every `feed_url` must be https (the `Outlet`
+  model refuses http). An item whose link is not on `home_url`'s host or a listed `link_hosts` host (subdomains
+  included) is dropped (`link_off_domain`); `http://` links are upgraded. An item whose headline or snippet reads like
+  an instruction to a model (`guard.instruction_like`: "ignore previous instructions", "system prompt", "as an AI",
+  "all outlets agree", role tags…, phrase-level so ordinary news passes) is dropped before any prompt (`instruction_text`).
+  Both are counted per outlet in `articles.json` `item_drops[]` and summarised in `meta.warnings`.
 - **Network is isolated in `fetch.py`.** Everything else takes an injected `fetch(url) -> bytes`, so tests
   run entirely on fixtures.
 - Python 3.14 is what the dev Mac has; the package declares `>=3.12` and uses nothing newer than 3.12.
@@ -74,7 +81,9 @@ stage offline from a recorded response (no key needed).
   `stop_reason` `refusal` / `max_tokens` / anything but `end_turn` raises `GroupingError` and fails the run (exit 2) —
   a partial digest is never written. The SDK is read from the `claude-api` skill, not memory; re-check it before changing the call.
 - **Clean prefix**: stable system prompt (`config/prompts/group.md`) first, the day's article lines last
-  (`id | outlet_id | published_at | headline | snippet`, one line each, sorted by outlet then time).
+  (`id | outlet_id | published_at | headline | snippet`, one line each, sorted by outlet then time), wrapped in
+  `<articles>…</articles>`. Both prompts state that headlines/snippets are untrusted data, never instructions. `_cell`
+  strips `|` (column forgery), line breaks (row forgery) and any `<articles>` tag in feed text (delimiter forgery).
 - **The model only proposes groups.** `stories.py` enforces everything else, deterministically: drop unknown ids;
   an article in two stories stays where there are more distinct outlets (tie → first listed); a story needs
   ≥3 **distinct** outlets (several articles from one outlet count once but all stay in `articles[]`); rank by distinct
@@ -82,9 +91,19 @@ stage offline from a recorded response (no key needed).
   stories that qualify plus a `meta.warnings[]` entry. `coverage.lean/bloc` count distinct outlets per tag (lean=null
   outlets count in bloc only); `blindspot.lean/bloc` is the single tag covering the story when all others are 0.
   Story `id` = 12-hex sha1 of the sorted article ids. Titles are capped at 90 chars in code.
-- **Cost accounting** (`cost.py`): every call's `usage` (input, output, cache read/write) × `config/pricing.yaml`
+- **Titles are grounded** (`guard.ground_title`, SEC-1): a model title stands only if one member headline shares ≥2
+  content words with it and ≥2/3 of its content words appear in the story's headlines/snippets (all 37 live titles of
+  14 Oct pass); a title with a URL/handle/instruction or failing that is replaced by the best-matching member headline
+  and counted in `story.validation.dropped_by_reason` as `untrusted_text_title` / `title_ungrounded`.
+- **Cost accounting** (`cost.py`): every billed *attempt* (input, output, cache read/write) × `config/pricing.yaml`
   → `RunCost`; written to `pipeline/out/runs/<date>.json`, copied into `meta.cost_usd`, printed as
-  `grouping: N in / M out tokens → $x.xxxx`. A failed call is still recorded (it was billed).
+  `grouping: N in / M out tokens → $x.xxxx`. A failed call is still recorded (it was billed), grouping included.
+  With the refusal fallback, `message.model` is the model that served the call and top-level `usage` covers only that
+  attempt; `llm.attempts_from_message` reads `usage.iterations` (a declined `message` entry on the requested model, then
+  a `fallback_message` entry on the serving model) and each attempt is priced at its own model. `pricing.yaml` lists the
+  fallback targets `claude-opus-5` and `claude-opus-4-8` ($5/$25, cache read $0.50, 5-min write $6.25). A model with no
+  row is recorded with `usd: null`, a `RunCost.warnings` entry and a `meta.warnings` line: accounting never discards a
+  paid run (code review M2).
 - **First live run (14 Oct 2026)**: 723 articles → 65 raw stories → 10 kept (34 had <3 outlets, 21 beyond top 10);
   83,924 in / 9,557 out tokens, $0.53, 137 s.
 - **stories.json is digest-shaped** (`schema_version, generated_at, date, meta, outlets, stories`) and validated against
@@ -119,7 +138,11 @@ stage offline from a recorded response (no key needed).
   | `contested_same_outlet` | `asserted_by` and `disputed_by` share an outlet (the two sides must be disjoint outlet sets) |
   | `contradiction_wrong_bloc` | `west.sources` not all West-bloc articles, or `east.sources` not all East-bloc |
   | `empty_framing` | a framing entry has nothing left once its quotes and emphasis were checked |
+  | `untrusted_text` | a point text, claim, topic, contradiction side or kept quote carries a URL, an `@handle` or an instruction-shaped phrase (`guard.suspect_text`, SEC-1) |
+  | `title_ungrounded` / `untrusted_text_title` | counted at grouping when the title was replaced (see Grouping); carried into the story's counts |
 
+  A kept quote is stored as the outlet's exact text (the matched span of the headline/snippet, whitespace collapsed),
+  never the model's copy, which could differ in case, quote style or dashes.
   Duplicate ids inside one item collapse; two entries for the same lean/bloc merge; texts over 200 chars are cut at a
   word boundary (logged, not dropped). Nothing the validator did not pass reaches `digest.json`.
 - **Digest assembly** (`digest.py`): stories.json + validated analysis → `out/digest.json`, `meta.cost_usd` = grouping
@@ -164,7 +187,9 @@ exactly one violation into an otherwise fully valid response.
 
 1. Find the outlet's public RSS/Atom feed for top or world stories (English-language only). Check it live
    once (items, dates within the last day or two, no bot challenge).
-2. Add a row to `pipeline/config/outlets.yaml` with every field (see the header comment). Choose `lean`
+2. Add a row to `pipeline/config/outlets.yaml` with every field (see the header comment). The feed must be https. If
+   its item links use a host other than `home_url`'s (e.g. dailymail.com for dailymail.co.uk), list it in `link_hosts`
+   or those items are dropped as `link_off_domain`; never list a URL shortener. Choose `lean`
    from a public rating and name it in `rating_basis`; set `lean: null` + `lean_note` for non-Western
    outlets; `state-controlled` outlets must be `lean: null`.
 3. `pytest` — `tests/test_outlets_config.py` checks required fields, unique ids, enum values and the lean rules.
@@ -201,12 +226,20 @@ test/               fixtures (= assets/sample_digest.json), helpers/ (fakes, pum
 - **Refresh policy**: cache first; revalidate on launch/resume when digest `date` < today (UTC) or fetched > 6 h
   ago; pull-to-refresh always fetches; conditional on ETag; a bad body never overwrites the cache; body decoded as UTF-8.
 - **Integrity in the UI**: `Story.fromJson` strips unknown source ids and drops any point left unsourced; quotes need
-  a resolvable article. Never render article text beyond headline + snippet; content copy lives in `Copy` and stays
+  a resolvable article. `Story.validation` is parsed; `analysisUnavailable` (kept == 0 and every analysis list empty, i.e.
+  the analysis failed or nothing survived) replaces the axis switch and every section with one "Analysis isn't
+  available" notice: "None found" is only ever said about an analysis that ran (code review M3).
+- **Digest parse off the UI isolate**: `parseDigest` is pure; `NetworkDigestRepository.defaultParser` is
+  `parseDigestInBackground` (`compute`). Widget/controller tests pass `parse: parseDigestInline` because a real
+  isolate's reply never arrives inside fake async. Any exception reading the cache is a miss (no endless spinner). Never render article text beyond headline + snippet; content copy lives in `Copy` and stays
   descriptive (never judges an outlet). Lean colours are violet/slate/orange, not red/blue (opposite meanings in UK/US).
 - **Ads**: banner only in `bottomNavigationBar` of list/detail, hidden until a digest exists and the instant ad-free
   is owned. No ATT prompt: every request is `nonPersonalizedAds: true`, Google UMP gathers consent. Test IDs until
-  publish (`AdConfig`, Info.plist `GADApplicationIdentifier`, manifest `APPLICATION_ID`).
-- **IAP**: outcomes only arrive on `purchaseStream`; busy has a 75 s ceiling; entitlement persisted before
+  publish (`AdConfig`, Info.plist `GADApplicationIdentifier`, manifest `APPLICATION_ID`). "Ad privacy options" in
+  Settings waits for `AdsService.consentGathered` (UMP update succeeded) and only then asks whether it is required.
+  The merged Privacy Sandbox permissions (`ACCESS_ADSERVICES_*`) are stripped in the manifest (SEC-6).
+- **IAP**: outcomes only arrive on `purchaseStream`; Play reports a cancel/failed purchase with an EMPTY product id, which
+  is routed to the purchase in flight (and ignored when none is); busy has a 75 s ceiling; entitlement persisted before
   `completePurchase`; Play-only silent restore at launch/resume; Play pending purchases are not granted.
 - **Native**: SPM disabled in pubspec (ads pod is CocoaPods-only); iOS min 15.0 (pbxproj + Podfile post_install);
   UIScene adopted (FlutterSceneDelegate + FlutterImplicitEngineDelegate, iOS 27 safe). google_mobile_ads 9.1.0
@@ -248,10 +281,23 @@ test/               fixtures (= assets/sample_digest.json), helpers/ (fakes, pum
   `runs/<date>.json` on the site and `pipeline/out/runs/<date>.json` inside the run's artifact (14-day retention).
 - **daily.yml mechanics**: `schedule: "0 6 * * *"` + `workflow_dispatch` inputs `through` (collect | group | analyse,
   default analyse) and `dry_run` (true ⇒ collect only). The "Resolve stages" step turns those into one value;
-  publishing runs only when it is `analyse` (group/collect runs leave the site untouched). `permissions: contents: write`
-  (push gh-pages / keepalive), `actions: write` (re-enable), `concurrency: daily-digest` (no cancel), `timeout-minutes: 30`
-  (a full run is ~4 min). Actions pinned to majors: `actions/checkout@v5`, `actions/setup-python@v6`,
-  `actions/upload-artifact@v6` (Node 24; v5 warns), `subosito/flutter-action@v2` with `flutter-version: 3.44.4`.
+  publishing runs only when it is `analyse` (group/collect runs leave the site untouched).
+  **Two jobs (SEC-3, fix round 2)**: `build` holds `ANTHROPIC_API_KEY`, has `permissions: contents: read` and checks out
+  with `persist-credentials: false`; it installs `pipeline/requirements.lock` with `pip --require-hashes --no-deps`
+  (the package is not installed; `PYTHONPATH=pipeline`), runs the pipeline, stages the site read-only
+  (`publish_site.sh --stage-only`, which also writes the step summary) and uploads it as artifact `site-<run_id>`
+  (1 day, hidden files included for `.nojekyll`) plus `pipeline-out-<run_id>` (14 days). `publish` (`needs: build`) has
+  `contents: write` + `actions: write`, no secret and no Python deps: it downloads the site
+  (`actions/download-artifact@v6`), runs `publish_site.sh --push-only DIR` (clone gh-pages, mirror DIR over it, commit,
+  push) and the keepalive. On a dry run or a run stopping before analyse, `publish` still runs green and writes
+  "nothing to publish" to the summary. `tests/test_workflows.py` pins this shape. `concurrency: daily-digest`
+  (no cancel), build `timeout-minutes: 30` (a full run is ~4 min). Actions pinned to majors: `actions/checkout@v5`,
+  `actions/setup-python@v6`, `actions/upload-artifact@v6` / `download-artifact@v6` (Node 24),
+  `subosito/flutter-action@v2` with `flutter-version: 3.44.4`.
+- **Dependency locks**: regenerate both together after changing `pyproject.toml` (uv in any throwaway venv):
+  `uv pip compile pipeline/pyproject.toml [--extra dev] --generate-hashes --python-version 3.12 --python-platform
+  x86_64-unknown-linux-gnu --no-header -o pipeline/requirements[-dev].lock`. CI (`ci.yml`) installs
+  `requirements-dev.lock` the same way. Locally `pip install -e "pipeline[dev]"` still works.
   Pushes made with `GITHUB_TOKEN` do not trigger other workflows, so the gh-pages commit and the keepalive commit never
   start CI. Pages was auto-enabled by GitHub the moment the `gh-pages` branch was pushed (the POST
   `/repos/mksoft-ltd/sides/pages` call returned 409 "already enabled"); `gh api repos/mksoft-ltd/sides/pages` shows the config.

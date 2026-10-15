@@ -14,6 +14,10 @@
 #   rating_basis  which public rating the lean tag comes from, with a date, or why there is none
 #   enabled       default true; false keeps the outlet on record but the collector skips it
 #   note          free text (why disabled, caveats)
+#   link_hosts    optional list of extra hosts the outlet's article links may use (subdomains included); a feed item
+#                 linking anywhere else than home_url's host or these is dropped at collect (security SEC-4)
+#
+# feed_url must be https (SEC-2; enforced by the Outlet model and tests/test_outlets_config.py).
 #
 # Excluded on purpose: RT, Sputnik, Press TV (UK-sanctioned; store takedown risk).
 # Feed URLs were verified live on 14 Oct 2026; see CLAUDE.md "How to add an outlet".
@@ -57,6 +61,7 @@ outlets:
     name: BBC News
     feed_url: https://feeds.bbci.co.uk/news/world/rss.xml
     home_url: https://www.bbc.co.uk/news
+    link_hosts: [bbc.com]
     lean: centre
     region: uk
     bloc: west
@@ -90,6 +95,7 @@ outlets:
     name: Daily Mail
     feed_url: https://www.dailymail.co.uk/news/index.rss
     home_url: https://www.dailymail.co.uk/
+    link_hosts: [dailymail.com]  # most items link to www.dailymail.com (seen 14 Oct 2026)
     lean: right
     region: uk
     bloc: west
@@ -138,7 +144,7 @@ outlets:
 
   - id: cnn
     name: CNN
-    feed_url: http://rss.cnn.com/rss/edition_world.rss
+    feed_url: https://rss.cnn.com/rss/edition_world.rss
     home_url: https://edition.cnn.com/
     lean: left
     region: us
@@ -150,11 +156,15 @@ outlets:
     note: >-
       CNN's official RSS feeds (rss.cnn.com edition_world / cnn_world / cnn_topstories / edition / cnn_latest)
       still load but have been frozen since 2023–Aug 2024 (checked 14 Oct 2026). No current official feed exists.
+      They are also served over plain HTTP only: rss.cnn.com has no working TLS endpoint (SSL_ERROR_SYSCALL on
+      :443, checked 15 Oct 2026), so the https URL above does not load and the http one is refused (SEC-2).
+      Stay disabled until CNN publishes an HTTPS feed.
 
   - id: nbc
     name: NBC News
     feed_url: https://feeds.nbcnews.com/nbcnews/public/news
     home_url: https://www.nbcnews.com/
+    link_hosts: [today.com]  # the feed carries TODAY items (same publisher)
     lean: left
     region: us
     bloc: west
@@ -379,7 +389,8 @@ outlets:
 
   - id: peoplesdaily
     name: People's Daily (English)
-    feed_url: http://en.people.cn/rss/World.xml
+    feed_url: https://en.people.cn/rss/World.xml
+    link_hosts: [people.com.cn]  # its items link to english.people.com.cn
     home_url: https://en.people.cn/
     lean: null
     region: asia
@@ -390,7 +401,8 @@ outlets:
     enabled: false
     note: >-
       Feeds exist but are frozen (checked 14 Oct 2026): rss/World.xml newest item Dec 2012, rss/China.xml Aug 2011,
-      rss/90777.xml Jun 2025. Re-enable if a live feed appears.
+      rss/90777.xml Jun 2025. Re-enable if a live feed appears. The HTTPS feed URL serves the same file
+      (200 text/xml, checked 15 Oct 2026).
 
   - id: scmp
     name: South China Morning Post

@@ -3,7 +3,11 @@
 Integrity rules enforced here:
 * headline + snippet (≤200 chars) only; article bodies are never fetched or stored;
 * a failing feed is recorded in ``feed_errors`` and skipped, never aborts the run;
-* items older than the window are dropped, each outlet capped at the N most recent.
+* items older than the window are dropped, each outlet capped at the N most recent;
+* an item whose link is not on the outlet's own host (``home_url`` or ``link_hosts``) is dropped
+  (``link_off_domain``, SEC-4) and an ``http://`` link is upgraded to ``https://``;
+* an item whose headline or snippet reads like an instruction to a model is dropped before it can reach a prompt
+  (``instruction_text``, SEC-1). Both are counted per outlet in ``item_drops``.
 """
 
 from __future__ import annotations
@@ -11,13 +15,16 @@ from __future__ import annotations
 import calendar
 import hashlib
 import logging
+from collections import Counter
 from concurrent.futures import ThreadPoolExecutor
 from datetime import UTC, datetime, timedelta
+from urllib.parse import urlsplit
 
 import feedparser
 
 from .fetch import Fetcher, http_fetch
-from .models import Article, CollectResult, FeedError, Outlet
+from .guard import instruction_like
+from .models import Article, CollectResult, FeedError, ItemDrop, Outlet
 from .text import canonical_url, make_snippet, normalise_headline, normalise_ws
 
 log = logging.getLogger(__name__)
@@ -56,6 +63,11 @@ def _entry_summary(entry) -> str:  # noqa: ANN001
     return ""
 
 
+def link_on_outlet_host(outlet: Outlet, link: str) -> bool:
+    host = (urlsplit(link).hostname or "").lower()
+    return any(host == h or host.endswith("." + h) for h in outlet.allowed_link_hosts() if h)
+
+
 def parse_feed(
     outlet: Outlet,
     raw: bytes,
@@ -63,8 +75,11 @@ def parse_feed(
     *,
     window_hours: int = WINDOW_HOURS,
     cap: int = PER_OUTLET_CAP,
+    drops: Counter | None = None,
 ) -> list[Article]:
-    """Parse one feed's bytes into deduplicated, windowed, capped Article records (newest first)."""
+    """Parse one feed's bytes into deduplicated, windowed, capped Article records (newest first).
+    Security drops are counted by reason into ``drops`` when given."""
+    drops = drops if drops is not None else Counter()
     parsed = feedparser.parse(raw)
     if not parsed.entries:
         if parsed.bozo:
@@ -81,6 +96,17 @@ def parse_feed(
         link = (entry.get("link") or "").strip()
         if not headline or not link.startswith(("http://", "https://")):
             continue
+        if not link_on_outlet_host(outlet, link):
+            drops["link_off_domain"] += 1
+            log.warning("%s: dropped item linking off the outlet's host: %s", outlet.id, link[:120])
+            continue
+        summary = _entry_summary(entry)
+        if instruction_like(headline) or instruction_like(summary):
+            drops["instruction_text"] += 1
+            log.warning("%s: dropped item with instruction-like text: %r", outlet.id, headline[:120])
+            continue
+        if link.startswith("http://"):
+            link = "https://" + link[len("http://"):]
         url = canonical_url(link)
         head_key = normalise_headline(headline)
         if url in seen_urls or head_key in seen_heads:
@@ -100,7 +126,7 @@ def parse_feed(
                 id=article_id(outlet.id, url),
                 outlet_id=outlet.id,
                 headline=headline,
-                snippet=make_snippet(_entry_summary(entry), headline),
+                snippet=make_snippet(summary, headline),
                 url=url,
                 published_at=published,
                 published_at_estimated=estimated,
@@ -144,6 +170,7 @@ def collect(
     articles: list[Article] = []
     errors: list[FeedError] = []
     counts: dict[str, int] = {}
+    item_drops: list[ItemDrop] = []
     seen_urls: set[str] = set()
 
     for outlet, raw, exc in fetched:
@@ -152,8 +179,9 @@ def collect(
             errors.append(FeedError(outlet_id=outlet.id, error=_describe(exc)))
             counts[outlet.id] = 0
             continue
+        dropped: Counter = Counter()
         try:
-            items = parse_feed(outlet, raw or b"", now, window_hours=window_hours, cap=cap)
+            items = parse_feed(outlet, raw or b"", now, window_hours=window_hours, cap=cap, drops=dropped)
         except Exception as exc:  # noqa: BLE001
             log.warning("%s: parse failed: %s", outlet.id, _describe(exc))
             errors.append(FeedError(outlet_id=outlet.id, error=_describe(exc)))
@@ -168,6 +196,7 @@ def collect(
             kept.append(a)
         counts[outlet.id] = len(kept)
         articles.extend(kept)
+        item_drops += [ItemDrop(outlet_id=outlet.id, reason=r, count=n) for r, n in sorted(dropped.items())]
 
     return CollectResult(
         collected_at=now,
@@ -175,4 +204,5 @@ def collect(
         articles=articles,
         feed_errors=errors,
         per_outlet_counts=counts,
+        item_drops=item_drops,
     )

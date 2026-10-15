@@ -12,6 +12,46 @@ import '../helpers/fakes.dart';
 import '../helpers/pump_app.dart';
 
 void main() {
+  group('m6: "Ad privacy options" waits for UMP consent', () {
+    // Tall surface: the settings list builds every tile, so "absent" means
+    // absent, not "not built yet".
+    const Size tall = Size(390, 3000);
+    const String tile = 'Ad privacy options';
+
+    testWidgets('hidden until consent is gathered, then shown when required',
+        (WidgetTester tester) async {
+      final TestHarness h = TestHarness()..ads.privacyRequired = true;
+      await pumpSidesApp(tester,
+          harness: h, initialLocation: '/settings', size: tall);
+      expect(find.text(tile), findsNothing,
+          reason: 'before UMP answers, the status is unknown');
+
+      h.ads.consent.complete(true);
+      await tester.pumpAndSettle();
+      expect(find.text(tile), findsOneWidget);
+    });
+
+    testWidgets('stays hidden when consent gathering failed',
+        (WidgetTester tester) async {
+      final TestHarness h = TestHarness()..ads.privacyRequired = true;
+      await pumpSidesApp(tester,
+          harness: h, initialLocation: '/settings', size: tall);
+      h.ads.consent.complete(false);
+      await tester.pumpAndSettle();
+      expect(find.text(tile), findsNothing);
+    });
+
+    testWidgets('stays hidden when UMP says it is not required',
+        (WidgetTester tester) async {
+      final TestHarness h = TestHarness();
+      await pumpSidesApp(tester,
+          harness: h, initialLocation: '/settings', size: tall);
+      h.ads.consent.complete(true);
+      await tester.pumpAndSettle();
+      expect(find.text(tile), findsNothing);
+    });
+  });
+
   testWidgets('settings: theme, ad-free with store price, about',
       (WidgetTester tester) async {
     final TestHarness h = await pumpSidesApp(tester, initialLocation: '/settings');

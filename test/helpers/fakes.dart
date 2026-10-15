@@ -22,10 +22,19 @@ class FakeAdsService implements AdsService {
   static const Key bannerKey = Key('fake-banner');
   int bannersBuilt = 0;
 
+  /// Completed by a test to model UMP finishing its consent update.
+  final Completer<bool> consent = Completer<bool>();
+
+  /// What UMP reports once consent has been gathered.
+  bool privacyRequired = false;
+
   @override
   Future<bool> initialize() async => true;
   @override
-  Future<bool> privacyOptionsRequired() async => false;
+  Future<bool> get consentGathered => consent.future;
+  @override
+  Future<bool> privacyOptionsRequired() async =>
+      consent.isCompleted && await consent.future && privacyRequired;
   @override
   Future<void> showPrivacyOptions() async {}
   @override

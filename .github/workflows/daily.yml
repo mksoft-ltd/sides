@@ -1,5 +1,14 @@
 # Daily digest: collect → group → analyse (Claude, paid) → publish to the gh-pages branch (GitHub Pages).
 #
+# Two jobs (security audit SEC-3):
+#   build   holds ANTHROPIC_API_KEY and runs the pipeline (third-party PyPI code, hostile feed input) with a
+#           READ-ONLY token (contents: read, checkout persist-credentials: false). Dependencies come from the
+#           hashed lock pipeline/requirements.lock (pip --require-hashes), never a fresh resolve. It stages the
+#           gh-pages site as plain files and uploads it as an artifact.
+#   publish has the write token (contents/actions: write) and no API key; it runs no pipeline code, only git:
+#           downloads the staged site, commits it to gh-pages, and does the keepalive. On a dry run or a run that
+#           stops before analyse it runs and says so explicitly, publishing nothing.
+#
 # Fails red when any stage exits non-zero, so GitHub emails the failure. The per-run cost is in the job summary,
 # in runs/<date>.json on the site and in the uploaded pipeline/out/ artifact (14 days).
 #
@@ -25,28 +34,35 @@ on:
         default: false
 
 permissions:
-  contents: write   # push gh-pages (and the keepalive marker to main)
-  actions: write    # re-enable this workflow (keepalive)
+  contents: read   # per job below; only `publish` gets write
 
 concurrency:
   group: daily-digest
   cancel-in-progress: false
 
 jobs:
-  digest:
+  build:
     runs-on: ubuntu-latest
     timeout-minutes: 30
+    permissions:
+      contents: read
+    outputs:
+      through: ${{ steps.stages.outputs.through }}
     steps:
       - uses: actions/checkout@v5
+        with:
+          persist-credentials: false   # no token left in .git/config for pipeline code to find
 
       - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
           cache: pip
-          cache-dependency-path: pipeline/pyproject.toml
+          cache-dependency-path: pipeline/requirements.lock
 
-      - name: Install pipeline
-        run: pip install -e pipeline
+      - name: Install pipeline dependencies (hash-locked)
+        # The package itself is not installed (an editable install would resolve setuptools unpinned);
+        # PYTHONPATH below puts pipeline/ on the path instead.
+        run: python -m pip install --require-hashes --no-deps -r pipeline/requirements.lock
 
       - name: Resolve stages
         id: stages
@@ -59,11 +75,62 @@ jobs:
       - name: Run pipeline
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          PYTHONPATH: pipeline
           PYTHONUNBUFFERED: "1"
         run: python -m sides_pipeline.cli run --through "${{ steps.stages.outputs.through }}"
 
-      - name: Publish to gh-pages
+      - name: Stage the site
+        # Read-only: clones the public gh-pages branch anonymously, builds the next site into a plain directory.
         if: steps.stages.outputs.through == 'analyse'
+        env:
+          PYTHONPATH: pipeline
+          SITE_REMOTE_URL: https://github.com/${{ github.repository }}.git
+          SITE_DIR: ${{ runner.temp }}/site
+        run: SUMMARY_OUT="$GITHUB_STEP_SUMMARY" scripts/publish_site.sh --stage-only
+
+      - name: Upload the staged site
+        if: steps.stages.outputs.through == 'analyse'
+        uses: actions/upload-artifact@v6
+        with:
+          name: site-${{ github.run_id }}
+          path: ${{ runner.temp }}/site
+          include-hidden-files: true   # .nojekyll
+          retention-days: 1
+          if-no-files-found: error
+
+      - name: Upload run artifacts
+        if: always()
+        uses: actions/upload-artifact@v6
+        with:
+          name: pipeline-out-${{ github.run_id }}
+          path: pipeline/out/
+          retention-days: 14
+          if-no-files-found: ignore
+
+  publish:
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write   # push gh-pages (and the keepalive marker to main)
+      actions: write    # re-enable this workflow (keepalive)
+    steps:
+      - uses: actions/checkout@v5   # the publish script + main's history for the keepalive
+
+      - name: Nothing to publish (dry run, or stopped before analyse)
+        if: needs.build.outputs.through != 'analyse'
+        run: |
+          echo "Ran through '${{ needs.build.outputs.through }}': nothing to publish; gh-pages left untouched." | tee -a "$GITHUB_STEP_SUMMARY"
+
+      - name: Download the staged site
+        if: needs.build.outputs.through == 'analyse'
+        uses: actions/download-artifact@v6
+        with:
+          name: site-${{ github.run_id }}
+          path: ${{ runner.temp }}/staged
+
+      - name: Publish to gh-pages
+        if: needs.build.outputs.through == 'analyse'
         env:
           SITE_REMOTE_URL: https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git
           SITE_DIR: ${{ runner.temp }}/site
@@ -71,7 +138,7 @@ jobs:
           GIT_AUTHOR_EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
           GIT_COMMITTER_NAME: github-actions[bot]
           GIT_COMMITTER_EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
-        run: SUMMARY_OUT="$GITHUB_STEP_SUMMARY" scripts/publish_site.sh
+        run: scripts/publish_site.sh --push-only "${{ runner.temp }}/staged"
 
       - name: Keep the schedule alive
         # GitHub disables cron workflows on a public repo after 60 days without repository activity. The daily
@@ -95,12 +162,3 @@ jobs:
             git commit -m "Keepalive: scheduled-workflow activity $(date -u +%F)"
             git push origin HEAD:main
           fi
-
-      - name: Upload run artifacts
-        if: always()
-        uses: actions/upload-artifact@v6
-        with:
-          name: pipeline-out-${{ github.run_id }}
-          path: pipeline/out/
-          retention-days: 14
-          if-no-files-found: ignore

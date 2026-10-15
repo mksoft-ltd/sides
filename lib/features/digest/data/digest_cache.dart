@@ -78,7 +78,7 @@ class FileDigestCache implements DigestCache {
   @override
   Future<CachedDigest?> read() async {
     try {
-      if (!_body.existsSync() || !_meta.existsSync()) return null;
+      if (!await _body.exists() || !await _meta.exists()) return null;
       final Object? meta = jsonDecode(await _meta.readAsString());
       if (meta is! Map<String, Object?>) return null;
       final DateTime? fetchedAt =

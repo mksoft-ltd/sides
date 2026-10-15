@@ -19,8 +19,14 @@ def read_fixture(name: str) -> bytes:
     return (FIXTURES / name).read_bytes()
 
 
+# Synthetic feeds link to *.example.com; the four recorded real feeds link to their outlets' own hosts. The
+# collector drops items linking anywhere else (SEC-4), so test outlets allow both unless a test overrides it.
+TEST_LINK_HOSTS = ["example.com", "theguardian.com", "bbc.co.uk", "bbc.com", "aljazeera.com", "indiatimes.com"]
+
+
 def make_outlet(id: str = "guardian", **overrides) -> Outlet:
     base = dict(
+        link_hosts=list(TEST_LINK_HOSTS),
         id=id,
         name=id.title(),
         feed_url=f"https://{id}.example.com/rss",

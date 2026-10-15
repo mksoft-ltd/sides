@@ -61,6 +61,8 @@ class TestHarness {
               }),
             ),
             clock: () => sampleNow,
+            // Fake-async zone: a real isolate's reply would never arrive.
+            parse: parseDigestInline,
           ),
         ),
         linkLauncherProvider.overrideWithValue(launcher),

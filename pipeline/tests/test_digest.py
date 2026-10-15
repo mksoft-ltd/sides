@@ -21,7 +21,7 @@ OUTLETS = [make_public("l1"), make_public("c1", lean="centre"), make_public("r1"
 
 def _stories_digest() -> Digest:
     arts = [make_article(x, o, headline=f"Headline {x}") for x, o in (("a", "l1"), ("b", "c1"), ("c", "r1"), ("d", "e1"), ("x", "l1"), ("y", "c1"), ("z", "r1"))]
-    raw = [RawStory("First story", [aid("a"), aid("b"), aid("c"), aid("d")]), RawStory("Second story", [aid("x"), aid("y"), aid("z")])]
+    raw = [RawStory("No 1", [aid("a"), aid("b"), aid("c"), aid("d")]), RawStory("No 2", [aid("x"), aid("y"), aid("z")])]
     stories, _ = build_stories(raw, arts, OUTLETS)
     return Digest(
         generated_at=RECORDED_AT, date="2026-10-14",
@@ -89,7 +89,7 @@ def test_assembly_attaches_validated_analysis_keeps_failed_story_and_totals_cost
     assert Digest.model_validate_json(p.read_text()) == dg
 
     table = analysis_table(out)
-    assert "FAILED" in table.splitlines()[-1] and "First story" in table
+    assert "FAILED" in table.splitlines()[-1] and "No 1" in table
     shown = show_story(dg, dg.stories[0])
     assert "AGREED FACTS (1)" in shown and "↳ L1 — Headline a" in shown and 'headline: "Headline" — L1' in shown
     assert "validator: kept 3, dropped 1 (unknown_id=1)" in shown
@@ -146,5 +146,5 @@ def test_cli_analyse_replay_and_show(tmp_path, capsys):
 
     assert main(["show", "--in", str(out), "--story", "2"]) == 0
     shown = capsys.readouterr().out
-    assert shown.startswith("#2  Second story") and "EAST–WEST CONTRADICTIONS (0)" in shown and "none found" in shown
+    assert shown.startswith("#2  No 2") and "EAST–WEST CONTRADICTIONS (0)" in shown and "none found" in shown
     assert main(["show", "--in", str(out), "--story", "9"]) == 1

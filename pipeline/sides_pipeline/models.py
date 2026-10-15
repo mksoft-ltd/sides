@@ -33,6 +33,19 @@ class Outlet(BaseModel):
     rating_basis: str = Field(min_length=1)
     enabled: bool = True
     note: str | None = None
+    # Hosts (besides home_url's) that this outlet's article links may point at; subdomains included (SEC-4).
+    link_hosts: list[str] = Field(default_factory=list)
+
+    @model_validator(mode="after")
+    def _https_feed(self) -> "Outlet":
+        # SEC-2: a plain-HTTP feed lets anyone on the path rewrite headlines and links.
+        if self.feed_url.scheme != "https":
+            raise ValueError(f"{self.id}: feed_url must be https (got {self.feed_url})")
+        return self
+
+    def allowed_link_hosts(self) -> tuple[str, ...]:
+        home = (self.home_url.host or "").lower().removeprefix("www.")
+        return tuple(dict.fromkeys([home, *(h.lower().removeprefix("www.") for h in self.link_hosts)]))
 
     @model_validator(mode="after")
     def _lean_rules(self) -> "Outlet":
@@ -94,6 +107,16 @@ class FeedError(BaseModel):
     error: str
 
 
+class ItemDrop(BaseModel):
+    """Feed items one outlet lost at collect for a security reason (``link_off_domain`` / ``instruction_text``)."""
+
+    model_config = ConfigDict(extra="forbid")
+
+    outlet_id: str
+    reason: str
+    count: int = Field(ge=1)
+
+
 class CollectResult(BaseModel):
     """Contents of articles.json."""
 
@@ -104,6 +127,7 @@ class CollectResult(BaseModel):
     articles: list[Article]
     feed_errors: list[FeedError]
     per_outlet_counts: dict[str, int]
+    item_drops: list[ItemDrop] = Field(default_factory=list)
 
 
 # ── Phase 2: stories ───────────────────────────────────────────────────────────

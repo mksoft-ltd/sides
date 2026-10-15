@@ -39,7 +39,7 @@ OUTLETS = [
 OUTLET_MAP = {o.id: o for o in OUTLETS}
 
 
-def make_story(*pairs, title="Story") -> Story:
+def make_story(*pairs, title="S0") -> Story:
     """pairs: (short_id, outlet_id). Builds a real Story through the phase-2 ranker."""
     arts = [make_article(p[0], p[1]) for p in pairs]
     stories, _ = build_stories([RawStory(title, [a.id for a in arts])], arts, OUTLETS)
@@ -72,10 +72,12 @@ def test_pipeline_yaml_has_analysis_section_with_high_effort_and_prompt():
 def test_story_message_lists_sides_present_and_one_line_per_article():
     story = make_story(("a", "l1"), ("b", "c1"), ("c", "e1"))
     msg = build_story_message(story, OUTLET_MAP)
-    assert msg.startswith("Story: Story\n")
+    assert msg.startswith("Story: S0\n")
     assert "Leans with articles: left (1), centre (1)" in msg  # the lean=null East outlet is on no lean
     assert "Blocs with articles: west (2), east (1)" in msg
-    lines = msg.split("\n")[5:]
+    block = msg.split("\n")[5:]
+    assert block[0] == "<articles>" and block[-1] == "</articles>"  # SEC-1: feed text delimited as data
+    lines = block[1:-1]
     assert len(lines) == 3
     parts = lines[0].split(" | ")
     assert len(parts) == 8 and parts[0] == story.articles[0].id

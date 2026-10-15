@@ -66,22 +66,44 @@ abstract class DigestRepository {
   Future<RefreshOutcome> refresh({LoadedDigest? current});
 }
 
+/// Turns a digest body into a [Digest] (or the reason it was refused).
+typedef DigestParser = Future<ParsedDigest> Function(String body);
+
+typedef ParsedDigest = ({Digest? digest, RefreshFailureKind? failure});
+
+/// The default parser: [parseDigest] on a background isolate. A digest is
+/// ~150 KB, so decoding and modelling it on the UI isolate costs a visible
+/// frame on low-end Android (code review m5). The parse is a pure top-level
+/// function over a String and its result is plain immutable data, so it
+/// crosses the isolate boundary as-is.
+Future<ParsedDigest> parseDigestInBackground(String body) =>
+    compute(parseDigest, body, debugLabel: 'parseDigest');
+
+/// Same parse on the calling isolate. Widget tests use it: they run in a
+/// fake-async zone where a real isolate's reply would never be awaited.
+Future<ParsedDigest> parseDigestInline(String body) async => parseDigest(body);
+
 class NetworkDigestRepository implements DigestRepository {
   NetworkDigestRepository({
     required this._cache,
     required this._remote,
     this._clock = systemClock,
+    this._parse = defaultParser,
   });
+
+  /// What production uses (main.dart passes no parser): off the UI isolate.
+  static const DigestParser defaultParser = parseDigestInBackground;
 
   final DigestCache _cache;
   final DigestRemote _remote;
   final Clock _clock;
+  final DigestParser _parse;
 
   @override
   Future<LoadedDigest?> loadCached() async {
     final CachedDigest? cached = await _cache.read();
     if (cached == null) return null;
-    final Digest? digest = _tryParse(cached.body).digest;
+    final Digest? digest = (await _parse(cached.body)).digest;
     if (digest == null) return null;
     return LoadedDigest(
       digest: digest,
@@ -124,8 +146,7 @@ class NetworkDigestRepository implements DigestRepository {
           ),
         );
       case FetchedDigest(:final String body, :final String? etag):
-        final ({Digest? digest, RefreshFailureKind? failure}) parsed =
-            _tryParse(body);
+        final ParsedDigest parsed = await _parse(body);
         final Digest? digest = parsed.digest;
         if (digest == null) {
           // Never overwrite a good cache with a bad file.
@@ -163,7 +184,7 @@ class BundledDigestRepository implements DigestRepository {
 
   Future<LoadedDigest?> _load() async {
     final String body = await _bundle.loadString(AppConfig.sampleDigestAsset);
-    final Digest? digest = _tryParse(body).digest;
+    final Digest? digest = parseDigest(body).digest;
     if (digest == null) return null;
     return LoadedDigest(digest: digest, fetchedAt: digest.generatedAt);
   }
@@ -184,7 +205,9 @@ class BundledDigestRepository implements DigestRepository {
   }
 }
 
-({Digest? digest, RefreshFailureKind? failure}) _tryParse(String body) {
+/// Pure: body in, digest or refusal out. No I/O, no globals, so it runs
+/// unchanged on a background isolate ([parseDigestInBackground]).
+ParsedDigest parseDigest(String body) {
   try {
     final Object? json = jsonDecode(body);
     if (json is! Map<String, Object?>) {

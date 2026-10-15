@@ -16,7 +16,7 @@ OUTLETS = [make_public("l1"), make_public("c1", lean="centre"), make_public("r1"
 
 def _digest(date: str, cost_usd: float = 1.25, n_stories: int = 2) -> Digest:
     arts = [make_article(x, o, headline=f"Headline {x}") for x, o in (("a", "l1"), ("b", "c1"), ("c", "r1"), ("d", "e1"), ("x", "l1"), ("y", "c1"), ("z", "r1"))]
-    raw = [RawStory("First | story", [aid("a"), aid("b"), aid("c"), aid("d")]), RawStory("Second story", [aid("x"), aid("y"), aid("z")])][:n_stories]
+    raw = [RawStory("No | 1", [aid("a"), aid("b"), aid("c"), aid("d")]), RawStory("No 2", [aid("x"), aid("y"), aid("z")])][:n_stories]
     stories, _ = build_stories(raw, arts, OUTLETS)
     return Digest(
         generated_at=RECORDED_AT, date=date,
@@ -132,8 +132,8 @@ def test_step_summary_leads_with_cost_and_lists_stories(tmp_path):
     assert "- grouping: 100,000 in / 10,000 out tokens → $0.6000" in lines
     assert "- analysis: 50,000 in / 20,000 out tokens → $0.6000" in lines
     assert "- total: $1.2000 over 2 call(s)" in lines
-    assert "| 1 | First \\| story | 4 | 1/1/1 | 3/1 | - |" in lines
-    assert "| 2 | Second story | 3 | 1/1/1 | 3/0 | bloc=west |" in lines
+    assert "| 1 | No \\| 1 | 4 | 1/1/1 | 3/1 | - |" in lines
+    assert "| 2 | No 2 | 3 | 1/1/1 | 3/0 | bloc=west |" in lines
     assert lines.index("**Cost**") < lines.index("| # | Story | Outlets | L/C/R | W/E | Blindspot |")
     # no per-call report → falls back to meta.cost_usd
     assert "**Cost**: $1.2500" in step_summary(Digest.model_validate_json(dp.read_text()), None)
