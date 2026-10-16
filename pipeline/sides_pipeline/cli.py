@@ -394,11 +394,14 @@ def cmd_publish(args: argparse.Namespace) -> int:
     digest_path = Path(args.digest)
     runs_dir = Path(args.runs_dir)
     privacy = Path(args.privacy_html) if args.privacy_html else None
-    result = publish(digest_path, runs_dir, Path(args.site), privacy_html=privacy)
+    articles = Path(args.articles) if args.articles else None
+    result = publish(digest_path, runs_dir, Path(args.site), privacy_html=privacy, articles_path=articles)
     for w in result.written:
         print(f"wrote {w}")
     if not result.run_report_copied:
         print(f"WARNING: no cost report for {result.date} in {runs_dir}", file=sys.stderr)
+    if articles is not None and not result.articles_copied:
+        print(f"WARNING: no article pool at {articles}; articles/{result.date}.json not published", file=sys.stderr)
     if privacy is not None and not result.privacy_copied:
         print(f"note: {privacy} does not exist yet; privacy_policy.html not published")
     print(f"index: {len(result.index)} digest(s), latest {result.index[0].date if result.index else '-'}")
@@ -471,6 +474,7 @@ def build_parser() -> argparse.ArgumentParser:
     pb.add_argument("--runs-dir", default=str(DEFAULT_OUT_DIR / "runs"), help="where <date>.json cost reports are")
     pb.add_argument("--site", required=True, help="site directory (the gh-pages checkout); created if missing")
     pb.add_argument("--privacy-html", default="privacy_policy.html", help="copied to the site root when it exists (default: repo-root privacy_policy.html)")
+    pb.add_argument("--articles", default=str(DEFAULT_OUT_DIR / "articles.json"), help="articles.json of the run; published trimmed as articles/<date>.json + latest.json")
     pb.add_argument("--summary-out", default=None, help="also write a Markdown run summary (cost + stories) here, e.g. $GITHUB_STEP_SUMMARY")
     pb.set_defaults(func=cmd_publish)
     return p

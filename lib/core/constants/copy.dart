@@ -50,6 +50,53 @@ abstract final class Copy {
   static const String analysisUnavailableShort = 'Analysis unavailable';
   static const String compare = 'Compare coverage';
 
+  /// Search tab.
+  static const String tabSearch = 'Search';
+  static const String searchTitle = 'Search the news';
+  static const String searchIntro =
+      'Find a story in today\'s digest and the last two weeks, or have '
+      'today\'s coverage of a topic compared.';
+  static const String searchHint = 'Topic, place or name';
+  static const String searchAction = 'Search';
+  static const String searching = 'Searching the archive…';
+  static String searchResults(int hits, int days) {
+    final String h = hits == 1 ? '1 story' : '$hits stories';
+    final String d = days == 1 ? '1 day' : '$days days';
+    return '$h across $d';
+  }
+  static const String archiveUnavailable =
+      'The archive could not be reached; only days saved on this device '
+      'were searched.';
+  static const String today = 'Today\'s digest';
+  static const String topicTitle = 'Compare today\'s coverage of this topic';
+  static const String topicPitch =
+      'Not the story you meant? Sides can compare how outlets covered these '
+      'words today, from the headlines it collected this morning.';
+  static const String topicPitchNoHits =
+      'No digest story matches. Sides can compare how outlets covered these '
+      'words today, from the headlines it collected this morning.';
+  static const String topicNote =
+      'The comparison needs three or more outlets on the topic, takes up to '
+      'a minute the first time, and is shared with other readers who search '
+      'for the same thing today. The words you typed are sent to our '
+      'server; see the privacy policy.';
+  static const String topicAction = 'Compare coverage of this topic';
+  static const String topicRetry = 'Try again';
+  static const String topicWorking =
+      'Comparing today\'s coverage… this can take up to a minute.';
+  static const String topicReady = 'Ready: here is how the outlets covered it.';
+  static const String topicReadyCached =
+      'Another reader asked about this today, so it is ready now.';
+  static const String topicNoMatch =
+      'Fewer than three outlets wrote about those words today, so there is '
+      'nothing to compare yet. Try broader words.';
+  static const String topicCapped =
+      'Today\'s comparison budget is used up. Topics already compared today '
+      'still open; new ones return tomorrow.';
+  static const String topicRateLimited =
+      'That is a lot of new topics in one hour. Please try again later.';
+  static const String topicFailed = 'The comparison could not be made.';
+
   /// Home shell and front page.
   static const String tabToday = 'Today';
   static const String tabBySide = 'By side';

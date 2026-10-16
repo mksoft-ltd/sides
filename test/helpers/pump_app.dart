@@ -13,6 +13,7 @@ import 'package:sides/features/digest/data/digest_remote.dart';
 import 'package:sides/features/digest/data/digest_repository.dart';
 import 'package:sides/features/digest/presentation/providers/digest_controller.dart';
 import 'package:sides/features/purchases/presentation/ad_free_controller.dart';
+import 'package:sides/features/search/presentation/search_controller.dart';
 
 import '../fixtures/fixtures.dart';
 import 'fakes.dart';
@@ -36,6 +37,8 @@ class TestHarness {
   final InMemorySettingsStore settings;
   final http.Response Function(http.Request) _server;
   final FakeLinkLauncher launcher = FakeLinkLauncher();
+  final FakeArchiveRepository archive = FakeArchiveRepository();
+  final FakeTopicRepository topic = FakeTopicRepository();
   final FakeAdsService ads = FakeAdsService();
   final FakeStoreGateway store = FakeStoreGateway();
   final List<http.Request> requests = <http.Request>[];
@@ -66,6 +69,8 @@ class TestHarness {
           ),
         ),
         linkLauncherProvider.overrideWithValue(launcher),
+        archiveRepositoryProvider.overrideWithValue(archive),
+        topicRepositoryProvider.overrideWithValue(topic),
         adsServiceProvider.overrideWithValue(ads),
         storeGatewayProvider.overrideWithValue(store),
         reconcileAtLaunchProvider.overrideWithValue(false),

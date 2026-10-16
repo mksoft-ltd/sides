@@ -8,6 +8,7 @@ import '../../../../shared/widgets/message_state.dart';
 import '../../../ads/presentation/ad_banner_slot.dart';
 import '../../../digest/domain/digest.dart';
 import '../../../digest/presentation/providers/digest_controller.dart';
+import '../../../search/presentation/search_controller.dart';
 import '../providers/story_view_controller.dart';
 import '../widgets/story_detail_view.dart';
 
@@ -18,17 +19,27 @@ class StoryDetailScreen extends ConsumerWidget {
     super.key,
     required this.storyId,
     this.initialAxis = PerspectiveAxis.lean,
+    this.digestHandle,
   });
   final String storyId;
   final PerspectiveAxis initialAxis;
+
+  /// Null for today's digest; otherwise a key into `extraDigestsProvider`.
+  final String? digestHandle;
 
   static const Key previousKey = Key('previous-story');
   static const Key nextKey = Key('next-story');
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final Digest? digest =
-        ref.watch(digestControllerProvider.select((DigestState s) => s.digest));
+    final String? handle = digestHandle;
+    final Digest? digest = handle == null
+        ? ref.watch(
+            digestControllerProvider.select((DigestState s) => s.digest),
+          )
+        : ref.watch(
+            extraDigestsProvider.select((Map<String, Digest> m) => m[handle]),
+          );
     final Story? story = digest?.story(storyId);
     final int index = digest == null || story == null
         ? -1
@@ -39,7 +50,11 @@ class StoryDetailScreen extends ConsumerWidget {
     void goTo(Story next) {
       final PerspectiveAxis axis =
           ref.read(storyViewProvider(storyId)).axisOr(initialAxis);
-      context.pushReplacement(Routes.story(next.id, axis: axis));
+      context.pushReplacement(
+        handle == null
+            ? Routes.story(next.id, axis: axis)
+            : Routes.storyIn(handle, next.id, axis: axis),
+      );
     }
 
     return Scaffold(

@@ -7,8 +7,8 @@ from pathlib import Path
 from conftest import RECORDED_AT, aid, make_article, make_public
 from sides_pipeline.cli import main
 from sides_pipeline.cost import ModelPrice, RunCost, Usage
-from sides_pipeline.models import Digest, DigestMeta
-from sides_pipeline.publish import IndexEntry, build_index, publish, step_summary
+from sides_pipeline.models import CollectResult, Digest, DigestMeta
+from sides_pipeline.publish import IndexEntry, build_index, public_article_pool, publish, step_summary
 from sides_pipeline.stories import RawStory, build_stories
 
 OUTLETS = [make_public("l1"), make_public("c1", lean="centre"), make_public("r1", lean="right"), make_public("e1", lean=None, bloc="east")]
@@ -152,3 +152,50 @@ def test_cli_publish_writes_site_and_summary(tmp_path, capsys):
     assert (site / "digest" / "latest.json").exists() and (site / "runs" / "2026-10-15.json").exists()
     assert "privacy_policy.html not published" in out and "index: 1 digest(s), latest 2026-10-15" in out
     assert summary.read_text().startswith("## Sides digest 2026-10-15")
+
+
+def _write_articles(out: Path) -> Path:
+    """pipeline/out/articles.json as collect writes it (with the operational fields the site must not carry)."""
+    arts = [make_article(x, o, headline=f"Headline {x}") for x, o in (("a", "l1"), ("b", "c1"), ("c", "r1"), ("d", "e1"))]
+    result = CollectResult(
+        collected_at=RECORDED_AT, outlets=OUTLETS, articles=arts,
+        feed_errors=[{"outlet_id": "x1", "error": "HTTP 403"}], per_outlet_counts={"l1": 1, "c1": 1, "r1": 1, "e1": 1},
+        item_drops=[],
+    )
+    path = out / "articles.json"
+    path.write_text(json.dumps(result.model_dump(mode="json"), ensure_ascii=False))
+    return path
+
+
+def test_article_pool_is_published_trimmed_for_the_topic_worker(tmp_path):
+    digest_path, _ = _write_run(tmp_path / "out", "2026-10-15")
+    articles = _write_articles(tmp_path / "out")
+    site = tmp_path / "site"
+    res = publish(digest_path, tmp_path / "out" / "runs", site, articles_path=articles)
+    assert res.articles_copied
+    dated = json.loads((site / "articles" / "2026-10-15.json").read_text())
+    assert (site / "articles" / "latest.json").read_bytes() == (site / "articles" / "2026-10-15.json").read_bytes()
+    assert dated["date"] == "2026-10-15" and dated["collected_at"] == "2026-10-14T22:00:00Z"
+    assert {o["id"] for o in dated["outlets"]} == {"l1", "c1", "r1", "e1"} and "home_url" in dated["outlets"][0]
+    assert len(dated["articles"]) == 4
+    assert set(dated["articles"][0]) == {"id", "outlet_id", "headline", "snippet", "url", "published_at"}
+    assert "feed_errors" not in dated and "per_outlet_counts" not in dated and "item_drops" not in dated
+    # Integrity: headline + ≤200-char snippet, never more.
+    assert all(len(a["snippet"]) <= 200 for a in dated["articles"])
+    assert "articles/latest.json" in (site / "index.html").read_text()
+
+
+def test_missing_article_pool_is_tolerated(tmp_path):
+    digest_path, _ = _write_run(tmp_path / "out", "2026-10-15")
+    res = publish(digest_path, tmp_path / "out" / "runs", tmp_path / "site", articles_path=tmp_path / "out" / "articles.json")
+    assert not res.articles_copied and not (tmp_path / "site" / "articles").exists()
+
+
+def test_public_article_pool_rejects_a_pool_with_a_long_snippet():
+    arts = [make_article("a", "l1")]
+    raw = json.dumps(CollectResult(collected_at=RECORDED_AT, outlets=OUTLETS, articles=arts, feed_errors=[], per_outlet_counts={}).model_dump(mode="json"))
+    assert len(public_article_pool(raw.encode())["articles"]) == 1
+    bad = raw.replace("Snippet for a", "x" * 201)
+    import pytest
+    with pytest.raises(ValueError):
+        public_article_pool(bad.encode())

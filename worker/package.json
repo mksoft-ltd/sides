@@ -1,0 +1,23 @@
+{
+  "name": "sides-topic",
+  "private": true,
+  "version": "1.0.0",
+  "description": "On-demand topic analysis for the Sides app: matches a reader's search against the day's published article pool, runs the same analysis prompt as the daily pipeline, validates every citation and caches the result for 24 hours.",
+  "type": "module",
+  "scripts": {
+    "deploy": "wrangler deploy",
+    "dev": "wrangler dev",
+    "test": "node --import tsx --test \"test/**/*.test.ts\"",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^5.20261006.1",
+    "@types/node": "^22.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0",
+    "wrangler": "^4.0.0"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "latest"
+  }
+}

@@ -60,7 +60,7 @@ def good_response() -> dict:
     }
 
 
-GOOD_KEPT = 2 + 1 + (1 + 1) + 1 + 1 + 1 + 1 + 1 + (1 + 1) + (1 + 1) + 1  # = 16 leaf items (summary + conclusion first)
+GOOD_KEPT = 2 + 1 + (1 + 1) + 1 + 1 + 1 + 1 + 1 + (1 + 1) + (1 + 1) + 1  # = 15 leaf items (summary + conclusion first)
 
 
 def run(resp: dict):

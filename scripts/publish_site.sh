@@ -53,20 +53,20 @@ check_staged_site() {
     echo "refusing $dir: git metadata or symlinks in the staged site:" >&2; echo "$bad" >&2; return 1
   fi
   bad=$(cd "$dir" && find . -mindepth 1 \
-    ! -path ./digest ! -path ./runs ! -path ./index.html ! -path ./privacy_policy.html ! -path ./.nojekyll \
-    ! \( -path './digest/*.json' -type f \) ! \( -path './runs/*.json' -type f \) -print)
+    ! -path ./digest ! -path ./runs ! -path ./articles ! -path ./index.html ! -path ./privacy_policy.html ! -path ./.nojekyll \
+    ! \( -path './digest/*.json' -type f \) ! \( -path './runs/*.json' -type f \) ! \( -path './articles/*.json' -type f \) -print)
   if [ -n "$bad" ]; then
     echo "refusing $dir: not on the site allow-list:" >&2; echo "$bad" >&2; return 1
   fi
-  for f in digest runs; do
+  for f in digest runs articles; do
     if [ -e "$dir/$f" ] && [ ! -d "$dir/$f" ]; then echo "refusing $dir: $f is not a directory" >&2; return 1; fi
   done
   for f in index.html privacy_policy.html .nojekyll; do
     if [ -e "$dir/$f" ] && [ ! -f "$dir/$f" ]; then echo "refusing $dir: $f is not a regular file" >&2; return 1; fi
   done
   # digest/<x>.json must not hide in a nested dir: -path './digest/*.json' also matches ./digest/a/b.json
-  if [ -n "$(cd "$dir" && find ./digest ./runs -mindepth 2 -print 2>/dev/null)" ]; then
-    echo "refusing $dir: nested directories under digest/ or runs/" >&2; return 1
+  if [ -n "$(cd "$dir" && find ./digest ./runs ./articles -mindepth 2 -print 2>/dev/null)" ]; then
+    echo "refusing $dir: nested directories under digest/, runs/ or articles/" >&2; return 1
   fi
 }
 
@@ -92,7 +92,7 @@ if [ "$MODE" = push ]; then
   # did not touch (older dated digests, a hand-pruned day) are already in FROM_DIR. Only allow-listed entries
   # are copied (checked above); .nojekyll is written here, never taken from the artifact.
   find "$SITE_DIR" -mindepth 1 -maxdepth 1 ! -name .git -exec rm -rf {} +
-  for f in digest runs index.html privacy_policy.html; do
+  for f in digest runs articles index.html privacy_policy.html; do
     if [ -e "$FROM_DIR/$f" ]; then cp -R "$FROM_DIR/$f" "$SITE_DIR/"; fi
   done
   : > "$SITE_DIR/.nojekyll"
@@ -102,7 +102,7 @@ else
   DATE=$("$PYTHON" -c "import json,sys; print(json.load(open(sys.argv[1]))['date'])" "$DIGEST")
   clone_site
 
-  ARGS=(publish --digest "$DIGEST" --runs-dir "$REPO_ROOT/pipeline/out/runs" --site "$SITE_DIR" --privacy-html "$REPO_ROOT/privacy_policy.html")
+  ARGS=(publish --digest "$DIGEST" --runs-dir "$REPO_ROOT/pipeline/out/runs" --site "$SITE_DIR" --privacy-html "$REPO_ROOT/privacy_policy.html" --articles "$REPO_ROOT/pipeline/out/articles.json")
   [ -n "${SUMMARY_OUT:-}" ] && ARGS+=(--summary-out "$SUMMARY_OUT")
   (cd "$REPO_ROOT" && "$PYTHON" -m sides_pipeline.cli "${ARGS[@]}")
 

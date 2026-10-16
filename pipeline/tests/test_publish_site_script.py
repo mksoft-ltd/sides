@@ -48,6 +48,9 @@ def _staged(tmp_path) -> Path:
     (d / "digest" / "latest.json").write_text('{"date": "2026-10-15"}')
     (d / "digest" / "index.json").write_text("[]")
     (d / "runs" / "2026-10-15.json").write_text("{}")
+    (d / "articles").mkdir()
+    (d / "articles" / "2026-10-15.json").write_text('{"date": "2026-10-15", "articles": []}')
+    (d / "articles" / "latest.json").write_text('{"date": "2026-10-15", "articles": []}')
     (d / "index.html").write_text("<html></html>")
     return d
 

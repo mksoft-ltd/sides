@@ -246,7 +246,13 @@ lib/features/digest domain/digest.dart (models + on-read integrity), domain/refr
                     tablet master pane still uses; StoryCard with variants standard / lead / compact / row)
 lib/features/story  StoryDetailView (body) + StoryDetailScreen (n of N, previous/next); widgets/ points (SideBlock, QuoteRow,
                     PointTile, ContestedClaimCard, ContradictionCard), source_pills (SourcePills, SourcesSheet), sources_list (SourceTile)
+lib/features/search domain/search.dart (searchStories: on-device match over digests), data/ (ArchiveRepository: index + dated
+                    digests cached under <documents>/digest/archive; TopicRepository: the worker client, polls `pending`),
+                    presentation/ (SearchController, SearchView tab, extraDigestsProvider for archive days + topic results)
 lib/features/{settings,purchases,ads}   theme mode, AdFreeController over StoreGateway, AdsService + AdBannerSlot
+worker/             Cloudflare Worker `sides-topic` (TypeScript, wrangler): GET /v1/topic?q= → on-demand analysis of the day's
+                    published article pool, same prompt + output schema as the pipeline, validator ported (src/validate.ts),
+                    KV cache 24 h, daily cap + per-IP hourly limit. `npm test` (node --test), `npx wrangler deploy`.
 test/               fixtures (= assets/sample_digest.json), helpers/ (fakes, pumpSidesApp at 390×844), unit/, widget/
 ```
 
@@ -334,6 +340,34 @@ test/               fixtures (= assets/sample_digest.json), helpers/ (fakes, pum
   orientations; large phones in landscape too), `expandedMin` = 1100 dp. List pane 360 dp, 320 dp below 900 dp
   (`MasterDetailScreen.listPaneWidthFor`) so the detail pane stays ≥ 380 dp at 744.
 - Tablet tests: `test/widget/tablet_layout_test.dart` (sizes in dp; pumpSidesApp renders at 3×).
+
+## Search and the topic worker (16 Oct 2026)
+
+- **Route 1, archive search (no server)**: the Search tab matches the words against today's digest plus the last 14 archive
+  days (`digest/index.json` → `digest/<date>.json`, cached on the device, searched offline when the index is unreachable).
+  `searchStories` (domain/search.dart) scores title/summary hits ×3 over headline/snippet hits, every term first, then a
+  looser pass; each story once. Hits from an archive day open `/d/archive:<date>/story/:id`: `StoryDetailScreen` takes a
+  `digestHandle` into `extraDigestsProvider` (also used for topic results, handle `topic:<story id>`), always the phone
+  story page whatever the width. Fakes: `FakeArchiveRepository` / `FakeTopicRepository` in `test/helpers/fakes.dart`,
+  wired by `TestHarness` so no test touches the network.
+- **Route 2, on-demand topic analysis (`worker/`)**: `https://sides-topic.froggyeye.workers.dev/v1/topic?q=<words>`
+  (Cloudflare account "Froggyeye.ltd@gmail.com's Account", subdomain `froggyeye`, KV namespace `TOPICS`
+  5838b6c0d3664574bf7a5e5b19a12ccd, secret `ANTHROPIC_API_KEY` set with `wrangler secret put` from the Keychain). The daily
+  job now also publishes `articles/<date>.json` + `articles/latest.json` (`publish.public_article_pool`: outlets + id /
+  outlet_id / headline / ≤200-char snippet / url / published_at, nothing operational; allow-listed in `publish_site.sh`).
+  The worker: normalises the words (`match.ts`, stop words out, sorted → cache key `topic:v1:<date>:<sha1>`), returns a
+  KV hit at once, else selects articles (every term in headline+snippet; looser pass if < 3 outlets; ≤ 2 per outlet, ≤ 30),
+  builds the pipeline's exact user message with a fixed neutral title (the reader's words never reach the model), calls
+  the API through `@anthropic-ai/sdk` (`client.beta.messages.create`, `output_config.format` json_schema with the same
+  `$defs` schema, `fallbacks: "default"`, non-streaming, `max_tokens` 16000) inside the request (a Worker's wall time
+  is unlimited while the client waits; `waitUntil` would be cut at 30 s), validates with the TS port of validate.py,
+  and stores a digest-shaped document (one story, `rank` 1, title = the reader's words) so the app parses it with
+  `parseDigest` unchanged. Statuses: ready / pending (another request is on it; the app polls every 5 s) / no_match
+  (cached 1 h) / capped (`DAILY_CAP` 40 new analyses a day ≈ $4) / rate_limited (`HOURLY_PER_IP` 10) / error. A failed
+  analysis still returns a story with empty arrays (the app shows "Analysis unavailable") cached for 5 min only. First
+  live call 16 Oct: "Starlink Ukraine" 29 s, $0.084, 29 items kept, 0 dropped; the rephrased query hit the cache.
+  Privacy policy §"Searching for a topic" describes it; Play Data safety needs "App activity › other actions: search
+  queries, not linked" adding in the console.
 
 ## Deployment (phase 6)
 

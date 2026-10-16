@@ -1,0 +1,24 @@
+# Sides topic worker: GET /v1/topic?q=<words>[&date=YYYY-MM-DD]
+# Secrets: ANTHROPIC_API_KEY (wrangler secret put). KV: TOPICS (results, pending markers, rate counters).
+name = "sides-topic"
+main = "src/index.ts"
+compatibility_date = "2025-09-01"
+compatibility_flags = ["nodejs_compat"]
+
+[vars]
+SITE_BASE = "https://mksoft-ltd.github.io/sides"
+MODEL = "claude-opus-5-5"
+EFFORT = "high"
+MAX_TOKENS = "16000"
+DAILY_CAP = "40"
+HOURLY_PER_IP = "10"
+MIN_OUTLETS = "3"
+MAX_ARTICLES = "30"
+
+[[kv_namespaces]]
+binding = "TOPICS"
+id = "5838b6c0d3664574bf7a5e5b19a12ccd"
+
+[[rules]]
+type = "Text"
+globs = ["**/*.md"]

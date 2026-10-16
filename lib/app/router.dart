@@ -5,6 +5,7 @@ import 'adaptive_pages.dart';
 
 import '../core/layout/breakpoints.dart';
 import '../features/settings/presentation/screens/outlets_screen.dart';
+import '../features/story/presentation/screens/story_detail_screen.dart';
 import '../features/settings/presentation/screens/settings_screen.dart';
 import '../features/story/presentation/widgets/story_detail_view.dart';
 
@@ -18,6 +19,19 @@ abstract final class Routes {
     PerspectiveAxis axis = PerspectiveAxis.lean,
   }) =>
       axis == PerspectiveAxis.bloc ? '/story/$id?axis=bloc' : '/story/$id';
+
+  /// A story from a digest other than today's (an archive day or a topic
+  /// result) held in `extraDigestsProvider` under [handle].
+  static String storyIn(
+    String handle,
+    String id, {
+    PerspectiveAxis axis = PerspectiveAxis.lean,
+  }) {
+    final String h = Uri.encodeComponent(handle);
+    return axis == PerspectiveAxis.bloc
+        ? '/d/$h/story/$id?axis=bloc'
+        : '/d/$h/story/$id';
+  }
 }
 
 /// A fresh router per app instance (tests build their own app each time).
@@ -60,6 +74,19 @@ GoRouter buildRouter({String initialLocation = Routes.home}) => GoRouter(
                 }
                 return NoTransitionPage<void>(key: state.pageKey, child: child);
               },
+            ),
+            GoRoute(
+              // Archive days and topic results: always the phone story page,
+              // whatever the width (the master pane shows today's list).
+              path: 'd/:handle/story/:id',
+              builder: (BuildContext context, GoRouterState state) =>
+                  StoryDetailScreen(
+                storyId: state.pathParameters['id']!,
+                digestHandle: state.pathParameters['handle'],
+                initialAxis: state.uri.queryParameters['axis'] == 'bloc'
+                    ? PerspectiveAxis.bloc
+                    : PerspectiveAxis.lean,
+              ),
             ),
             GoRoute(
               path: 'settings',

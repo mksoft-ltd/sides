@@ -1,6 +1,12 @@
 # Sides: publish status
 
-## Internal testing builds 4 to 8 (16 Oct 2026): UI redesign, In brief, graphical layer, motion, front page
+## Internal testing builds 4 to 9 (16 Oct 2026): UI redesign, In brief, graphical layer, motion, front page, search
+
+- **1.3.0 (versionCode 9)**: Search tab (archive search on the device + on-demand topic comparison through the new
+  Cloudflare worker `sides-topic`). Replaces 8 on the internal track. **Console to-do before any production release of
+  1.3.0**: Play Data safety → add "App activity: other user-generated content / search queries" (collected, not shared,
+  not linked to identity, optional, purpose app functionality); Apple App Privacy → "Search History" not linked, app
+  functionality. The privacy policy already describes the service (effective 16 Oct 2026).
 
 - **1.2.0 (versionCode 8)**: news-app front page (lead story on the plate, Top stories strip, rows, lens filters), By
   side tab, bottom tabs. Replaces 7 on the internal track.

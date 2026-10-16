@@ -6,6 +6,7 @@ import '../../../../app/router.dart';
 import '../../../../core/constants/copy.dart';
 import '../../../../shared/widgets/sides_mark.dart';
 import '../../../ads/presentation/ad_banner_slot.dart';
+import '../../../search/presentation/search_view.dart';
 import '../../../settings/presentation/screens/outlets_screen.dart';
 import '../../../story/presentation/providers/story_view_controller.dart';
 import '../../domain/digest.dart';
@@ -18,7 +19,7 @@ import '../widgets/sides_browse_view.dart';
 final NotifierProvider<HomeTabController, HomeTab> homeTabProvider =
     NotifierProvider<HomeTabController, HomeTab>(HomeTabController.new);
 
-enum HomeTab { today, bySide, outlets }
+enum HomeTab { today, search, bySide, outlets }
 
 class HomeTabController extends Notifier<HomeTab> {
   @override
@@ -41,6 +42,11 @@ class DigestListScreen extends ConsumerWidget {
     final Widget body = switch (tab) {
       HomeTab.today => DigestFeedView(
           onOpenStory: (Story s) => context.push(Routes.story(s.id)),
+        ),
+      HomeTab.search => SearchView(
+          onOpenStory: (Story s, String? handle) => context.push(
+            handle == null ? Routes.story(s.id) : Routes.storyIn(handle, s.id),
+          ),
         ),
       HomeTab.bySide => SidesBrowseView(
           onOpenStory: (Story s, PerspectiveAxis axis) =>
@@ -75,6 +81,11 @@ class DigestListScreen extends ConsumerWidget {
                 icon: Icon(Icons.today_outlined),
                 selectedIcon: Icon(Icons.today),
                 label: Copy.tabToday,
+              ),
+              NavigationDestination(
+                icon: Icon(Icons.search),
+                selectedIcon: Icon(Icons.search),
+                label: Copy.tabSearch,
               ),
               NavigationDestination(
                 icon: Icon(Icons.view_agenda_outlined),

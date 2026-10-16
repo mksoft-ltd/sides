@@ -8,6 +8,17 @@ abstract final class AppConfig {
   static const String digestUrl =
       'https://mksoft-ltd.github.io/sides/digest/latest.json';
 
+  /// The site root; the archive and the article pool live under it.
+  static const String siteBase = 'https://mksoft-ltd.github.io/sides';
+  static const String archiveIndexUrl = '$siteBase/digest/index.json';
+  static String archiveDigestUrl(String date) => '$siteBase/digest/$date.json';
+
+  /// The on-demand topic service (worker/): GET with `q=` the words. A new topic
+  /// takes 30 to 90 seconds; a cached one answers at once.
+  static const String topicUrl =
+      'https://sides-topic.froggyeye.workers.dev/v1/topic';
+  static const Duration topicTimeout = Duration(seconds: 150);
+
   static const String privacyPolicyUrl =
       'https://mksoft-ltd.github.io/sides/privacy_policy.html';
 

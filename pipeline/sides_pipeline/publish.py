@@ -5,6 +5,8 @@ Site layout (served at https://mksoft-ltd.github.io/sides/):
     digest/latest.json        byte-identical copy of digest/<date>.json for the newest date
     digest/<date>.json        one file per day, never rewritten by a later day
     digest/index.json         newest-first list of {date, generated_at, stories, cost_usd} for every digest on the site
+    articles/<date>.json      the day's article pool (outlets + headline/snippet/url per article, nothing operational):
+    articles/latest.json      what the on-demand topic worker searches; same integrity limits as the digest
     runs/<date>.json          the day's cost report (every paid call, token counts, USD)
     privacy_policy.html       copied from the repo root when it exists (house-facts §5); absent otherwise
     index.html, .nojekyll     a one-paragraph landing page; .nojekyll stops Pages running Jekyll over the JSON
@@ -22,7 +24,7 @@ from dataclasses import dataclass, field
 from pathlib import Path
 
 from .cost import RunCost
-from .models import Digest
+from .models import CollectResult, Digest
 
 log = logging.getLogger(__name__)
 
@@ -45,6 +47,7 @@ summaries are ever stored.</p>
 <ul>
 <li><a href="digest/latest.json">digest/latest.json</a> — today's digest</li>
 <li><a href="digest/index.json">digest/index.json</a> — every available date with story count and run cost</li>
+<li><a href="articles/latest.json">articles/latest.json</a> — the day's article pool (headlines and short summaries only), read by the topic search</li>
 <li><code>digest/YYYY-MM-DD.json</code> and <code>runs/YYYY-MM-DD.json</code> — one digest and one cost report per day</li>
 </ul>
 <p>Published by Froggy Eye Ltd. Source: <a href="https://github.com/mksoft-ltd/sides">github.com/mksoft-ltd/sides</a>.</p>
@@ -77,6 +80,24 @@ class PublishResult:
     index: list[IndexEntry] = field(default_factory=list)
     privacy_copied: bool = False
     run_report_copied: bool = False
+    articles_copied: bool = False
+
+
+def public_article_pool(raw: bytes) -> dict:
+    """articles.json trimmed to what the topic worker needs: outlets (public tags) and articles (headline, ≤200-char
+    snippet, url, time). Feed errors, drop counts and per-outlet counts stay in the run artifact."""
+    result = CollectResult.model_validate_json(raw)
+    return {
+        "collected_at": result.collected_at.isoformat().replace("+00:00", "Z"),
+        "outlets": [o.model_dump(mode="json") for o in result.outlets],
+        "articles": [
+            {
+                "id": a.id, "outlet_id": a.outlet_id, "headline": a.headline, "snippet": a.snippet,
+                "url": str(a.url), "published_at": a.published_at.isoformat().replace("+00:00", "Z"),
+            }
+            for a in result.articles
+        ],
+    }
 
 
 def load_index(path: Path) -> dict[str, IndexEntry]:
@@ -111,8 +132,10 @@ def publish(
     site_dir: Path,
     *,
     privacy_html: Path | None = None,
+    articles_path: Path | None = None,
 ) -> PublishResult:
-    """Write ``digest_path`` and its cost report into ``site_dir`` and refresh the index and landing page."""
+    """Write ``digest_path``, its cost report and (when given) the day's article pool into ``site_dir`` and refresh
+    the index and landing page."""
     raw = Path(digest_path).read_bytes()
     digest = Digest.model_validate_json(raw)  # fail loudly on a broken digest before anything is written
     date = digest.date
@@ -140,6 +163,16 @@ def publish(
         result.run_report_copied = True
     else:
         log.warning("no cost report at %s; runs/%s.json not published", run_report, date)
+
+    if articles_path is not None and Path(articles_path).exists():
+        pool = public_article_pool(Path(articles_path).read_bytes())
+        pool["date"] = date
+        body = json.dumps(pool, ensure_ascii=False, separators=(",", ":")) + "\n"
+        put(site_dir / "articles" / f"{date}.json", body)
+        put(site_dir / "articles" / "latest.json", body)
+        result.articles_copied = True
+    elif articles_path is not None:
+        log.warning("no article pool at %s; articles/%s.json not published", articles_path, date)
 
     result.index = build_index(digest_dir, load_index(digest_dir / "index.json"))
     put(digest_dir / "index.json", json.dumps([e.to_dict() for e in result.index], indent=2) + "\n")

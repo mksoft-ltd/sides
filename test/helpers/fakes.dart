@@ -3,8 +3,52 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:in_app_purchase/in_app_purchase.dart';
 import 'package:sides/core/launcher/link_launcher.dart';
+import 'package:sides/features/digest/domain/digest.dart';
+import 'package:sides/features/search/data/archive_repository.dart';
+import 'package:sides/features/search/data/topic_repository.dart';
 import 'package:sides/features/ads/data/ads_service.dart';
 import 'package:sides/features/purchases/data/store_gateway.dart';
+
+/// An archive of in-memory digests by date (newest first in [index]).
+class FakeArchiveRepository implements ArchiveRepository {
+  FakeArchiveRepository([Map<String, Digest>? days]) : days = days ?? <String, Digest>{};
+  final Map<String, Digest> days;
+
+  /// True to behave as if the index could not be fetched.
+  bool offline = false;
+  int indexCalls = 0;
+
+  @override
+  Future<List<ArchiveEntry>> index() async {
+    indexCalls++;
+    if (offline) return const <ArchiveEntry>[];
+    final List<String> dates = days.keys.toList()..sort((String a, String b) => b.compareTo(a));
+    return <ArchiveEntry>[
+      for (final String d in dates)
+        ArchiveEntry(date: d, stories: days[d]!.stories.length),
+    ];
+  }
+
+  @override
+  Future<Digest?> digest(String date) async => days[date];
+}
+
+/// Answers every topic request with [outcome]; records the queries.
+class FakeTopicRepository implements TopicRepository {
+  FakeTopicRepository([this.outcome = const TopicNoMatch()]);
+  TopicOutcome outcome;
+  final List<String> queries = <String>[];
+
+  /// When set, the answer waits for it (to observe the working state).
+  Completer<void>? gate;
+
+  @override
+  Future<TopicOutcome> analyse(String query) async {
+    queries.add(query);
+    if (gate != null) await gate!.future;
+    return outcome;
+  }
+}
 
 class FakeLinkLauncher implements LinkLauncher {
   final List<Uri> opened = <Uri>[];
