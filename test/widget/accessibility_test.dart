@@ -98,8 +98,8 @@ void main() {
       },
     );
 
-    testWidgets('a source pill reads its outlet and side; the sheet row it '
-        'opens reads outlet, headline and that it opens a browser', (
+    testWidgets('a sources link reads its count; the sheet row it opens '
+        'reads outlet, headline and that it opens a browser', (
       WidgetTester tester,
     ) async {
       final SemanticsHandle semantics = tester.ensureSemantics();
@@ -107,11 +107,8 @@ void main() {
         tester,
         initialLocation: '/story/${digest.stories.first.id}',
       );
-      // Article 7809db6abcec (Fox News, right-leaning) is the first source
-      // of story 1's first agreed fact.
-      const String pillLabel =
-          'Source: Fox News, right-leaning. Shows the articles behind this '
-          'point.';
+      // Article 7809db6abcec (Fox News) is the first source of story 1's
+      // first agreed fact.
       const String rowLabel =
           'Source: Fox News — Pope Leo diagnosed with lung '
           'cancer after surgeons remove part of right lung, Vatican says. '
@@ -129,15 +126,17 @@ void main() {
       );
       await tester.drag(scrollable, const Offset(0, -200));
       await tester.pumpAndSettle();
-      final Finder pill = find.bySemanticsLabel(pillLabel);
-      expect(pill, findsWidgets);
+      final Finder link = find.bySemanticsLabel(
+        RegExp(r'^\d+ sources?\. Shows the articles behind this point\.$'),
+      );
+      expect(link, findsWidgets);
       expect(
-        tester.getSemantics(pill.first).getSemanticsData().flagsCollection
+        tester.getSemantics(link.first).getSemanticsData().flagsCollection
             .isButton,
         isTrue,
       );
 
-      await tester.tap(pill.first);
+      await tester.tap(link.first);
       await tester.pumpAndSettle();
       final Finder row = find.bySemanticsLabel(rowLabel);
       expect(row, findsOneWidget);
@@ -150,7 +149,7 @@ void main() {
     // Regression for F2 (docs/TEST_PLAN.md): Semantics(excludeSemantics:
     // true) without onTap stripped the InkWell's tap action, so TalkBack and
     // Switch Access could not open a source.
-    testWidgets('a source pill, a sheet row and a Sources row expose a tap '
+    testWidgets('a sources link, a sheet row and a Sources row expose a tap '
         'action to assistive tech', (WidgetTester tester) async {
       final SemanticsHandle semantics = tester.ensureSemantics();
       final TestHarness h = await pumpSidesApp(
@@ -164,23 +163,23 @@ void main() {
           )
           .first;
       await tester.scrollUntilVisible(
-        find.byType(SourcePill).first,
+        find.byType(SourcesLink).first,
         200,
         scrollable: scrollable,
       );
-      final SemanticsNode pill = tester.getSemantics(
-        find.byType(SourcePill).first,
+      final SemanticsNode link = tester.getSemantics(
+        find.byType(SourcesLink).first,
       );
       expect(
-        pill.getSemanticsData().hasAction(SemanticsAction.tap),
+        link.getSemanticsData().hasAction(SemanticsAction.tap),
         isTrue,
         reason: 'TalkBack / Switch Access activate via the tap action',
       );
 
-      // The pill's action opens the sheet; the sheet row's action opens
+      // The link's action opens the sheet; the sheet row's action opens
       // the article.
       tester.semantics.tap(
-        find.semantics.byLabel(RegExp(r'^Source: .*Shows the articles')).first,
+        find.semantics.byLabel(RegExp(r'^\d+ sources?\. Shows the articles')).first,
       );
       await tester.pumpAndSettle();
       expect(find.byType(SourcesSheet), findsOneWidget);

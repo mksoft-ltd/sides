@@ -123,7 +123,11 @@ abstract final class AppTheme {
           fontWeight: FontWeight.w600,
           height: 1.3,
         ),
-        bodyLarge: text.bodyLarge?.copyWith(height: 1.4),
+        bodyLarge: text.bodyLarge?.copyWith(fontSize: 17, height: 1.5),
+        bodyMedium: text.bodyMedium?.copyWith(fontSize: 15, height: 1.45),
+        bodySmall: text.bodySmall?.copyWith(fontSize: 13, height: 1.4),
+        labelLarge: text.labelLarge?.copyWith(fontSize: 14),
+        labelMedium: text.labelMedium?.copyWith(fontSize: 13),
       ),
       appBarTheme: AppBarTheme(
         centerTitle: false,

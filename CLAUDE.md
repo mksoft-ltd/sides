@@ -293,6 +293,17 @@ test/               fixtures (= assets/sample_digest.json), helpers/ (fakes, pum
   West, East) as a strip of cards = story title + that side's first headline quote + outlet avatar, opening the story
   on that axis. `OutletsBody` is the outlets list without a scaffold (settings route and the tab share it). Tablets keep
   master-detail with `DigestListView`.
+- **Readability pass (build 10, after Kevin found the layout busy and hard to read)**: content first, one visual
+  system, reading-size text, explicit affordances. Story page order: title → `StoryMeta` (one muted line of facts:
+  outlets · contested · contradictions · blindspots, each its own Text) → two silent slim bars → In brief as plain
+  paragraphs (What happened / Across the sides, each with one `SourcesLink`) → a counts line
+  ("Agree on 5 points · 1 contested claim · no East–West contradictions") → disagreement rows → axis switch + jump bar →
+  sections → **Who covered it** (the full spectrum, tappable zones, unrated note) → Sources. No stat tiles, no signal
+  chips, no section icons, no avatars on pills or quote rows (avatars only in the spectrum, Sources and the sheet).
+  `SourcesLink` ("7 sources ›", whole line tappable, 44 dp) replaced `SourcePills`; `StoryMeta` replaced
+  `StorySignals`. Type: bodyLarge 17/1.5, bodyMedium 15, bodySmall 13. Cards: lead = eyebrow, headline, summary, facts
+  line, slim bars, "Compare coverage ›"; rows = title, facts, slim bars, chevron. Every tappable has a chevron, an
+  open-in-browser icon or is a button.
 - **Motion (build 7)**: `shared/widgets/motion.dart`. `Reveal` (fade + 14 dp rise, 320 ms, staggered 45 ms per block)
   wraps each top-level block of the story page; `AxisSwitcher` (AnimatedSwitcher, 260 ms fade + 8 % slide, direction
   by axis order) wraps the axis's sections, so the two axes' `Section` anchors must have distinct `GlobalKey`s

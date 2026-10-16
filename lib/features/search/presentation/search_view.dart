@@ -3,7 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:intl/intl.dart';
 
 import '../../../core/constants/copy.dart';
-import '../../../shared/widgets/story_signals.dart';
+import '../../../shared/widgets/story_meta.dart';
 import '../../digest/domain/digest.dart';
 import '../../digest/presentation/providers/digest_controller.dart';
 import '../../digest/presentation/widgets/story_card.dart';
@@ -251,7 +251,8 @@ class _TopicPanel extends StatelessWidget {
             ),
             const SizedBox(height: 10),
             Text(state.topicStory!.title, style: theme.textTheme.titleMedium),
-            StorySignals(story: state.topicStory!),
+            const SizedBox(height: 4),
+            StoryMeta(story: state.topicStory!),
             const SizedBox(height: 12),
             FilledButton.icon(
               onPressed: onOpen,

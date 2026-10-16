@@ -119,6 +119,5 @@ void main() {
       ),
       findsNothing,
     );
-    expect(find.byType(CountUp), findsWidgets);
   });
 }

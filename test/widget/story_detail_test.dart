@@ -185,37 +185,29 @@ void main() {
     expect(find.text(Copy.noContradictions), findsOneWidget);
   });
 
-  testWidgets('a point shows up to three outlet pills (one per outlet) then '
-      '"+N more"; the pills open a sources sheet whose rows open the article',
-      (WidgetTester tester) async {
+  testWidgets('a point shows one "N sources" link; it opens a sheet listing '
+      'every article, whose rows open the article', (WidgetTester tester) async {
     final Story s = digest.stories[0];
     final TestHarness h = await open(tester, s);
     final SourcedPoint fact = s.agreedFacts.first;
     final int outlets = distinctOutlets(resolveArticles(s, fact.sources)).length;
     expect(outlets, greaterThan(3)); // sample precondition
-    expect(fact.sources.length, greaterThan(outlets),
-        reason: 'the sample has an outlet with two articles on this point');
     await scrollTo(tester, find.text(fact.text));
     final Finder tile = find.ancestor(
       of: find.text(fact.text),
       matching: find.byType(PointTile),
     );
-    final Finder pills = find.descendant(
+    final Finder link = find.descendant(
       of: tile,
-      matching: find.byType(SourcePill),
+      matching: find.byType(SourcesLink),
     );
-    expect(pills, findsNWidgets(4));
+    expect(link, findsOneWidget);
     expect(
-      find.descendant(
-        of: tile,
-        matching: find.text(Copy.moreSources(outlets - 3)),
-      ),
+      find.descendant(of: tile, matching: find.text(Copy.sourcesLink(outlets))),
       findsOneWidget,
     );
 
-    // Tap the second pill: the sheet lists every source, that one first.
-    final SourcePill second = tester.widget<SourcePill>(pills.at(1));
-    await tester.tap(pills.at(1));
+    await tester.tap(link);
     await tester.pumpAndSettle();
     expect(find.byType(SourcesSheet), findsOneWidget);
     expect(find.text(Copy.sourcesForPoint), findsOneWidget);
@@ -227,15 +219,15 @@ void main() {
       of: find.byType(SourcesSheet),
       matching: find.byType(SourceTile),
     );
-    expect(tester.widget<SourceTile>(rows.first).article.id,
-        second.article!.id);
+    final SourceTile first = tester.widget<SourceTile>(rows.first);
+    expect(first.article.id, fact.sources.first);
 
     await tester.tap(rows.first);
     await tester.pumpAndSettle();
-    expect(h.launcher.opened, <Uri>[Uri.parse(second.article!.url)]);
+    expect(h.launcher.opened, <Uri>[Uri.parse(first.article.url)]);
   });
 
-  testWidgets('every pill and sheet row has a semantics label',
+  testWidgets('every sources link has a semantics label',
       (WidgetTester tester) async {
     final Story s = digest.stories[0];
     await open(tester, s);
@@ -243,12 +235,15 @@ void main() {
     await scrollTo(tester, find.text(Copy.agreed));
     await tester.pumpAndSettle();
     int checked = 0;
-    for (final SourcePill pill
-        in tester.widgetList<SourcePill>(find.byType(SourcePill))) {
-      final String label = pill.article == null
-          ? SourcePill.moreSemanticsLabel(pill.moreCount!)
-          : SourcePill.semanticsLabelFor(pill.article!, pill.outlet);
-      expect(find.bySemanticsLabel(label), findsWidgets);
+    for (final SourcesLink link
+        in tester.widgetList<SourcesLink>(find.byType(SourcesLink))) {
+      final int n = distinctOutlets(resolveArticles(s, link.ids)).length;
+      expect(
+        find.bySemanticsLabel(
+          SourcesLink.semanticsLabelFor(link.label ?? Copy.sourcesLink(n)),
+        ),
+        findsWidgets,
+      );
       checked++;
     }
     expect(checked, greaterThan(3));
@@ -392,20 +387,19 @@ void main() {
       );
       final Finder card = find.byKey(InBriefCard.cardKey);
       expect(card, findsOneWidget);
-      expect(find.text(Copy.inBrief), findsOneWidget);
       expect(find.text(Copy.summaryTitle), findsOneWidget);
       expect(
         find.text('The Vatican says the Pope has lung cancer after surgery.'),
         findsOneWidget,
       );
       expect(find.text(Copy.conclusionTitle), findsOneWidget);
-      // The unknown id was stripped on read: one pill, the real article.
+      // The unknown id was stripped on read: one source, the real article.
       final Finder summaryTile = find.ancestor(
         of: find.text('The Vatican says the Pope has lung cancer after surgery.'),
         matching: find.byType(PointTile),
       );
       expect(
-        find.descendant(of: summaryTile, matching: find.byType(SourcePill)),
+        find.descendant(of: summaryTile, matching: find.text(Copy.sourcesLink(1))),
         findsOneWidget,
       );
 

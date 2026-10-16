@@ -11,7 +11,7 @@ import '../../../../shared/widgets/coverage_indicator.dart';
 import '../../../../shared/widgets/motion.dart';
 import '../../../../shared/widgets/report_story_tile.dart';
 import '../../../../shared/widgets/section.dart';
-import '../../../../shared/widgets/story_signals.dart';
+import '../../../../shared/widgets/story_meta.dart';
 import '../../../digest/domain/digest.dart';
 import '../providers/story_view_controller.dart';
 import 'in_brief_card.dart';
@@ -174,60 +174,27 @@ class _StoryDetailViewState extends ConsumerState<StoryDetailView> {
                         style: theme.textTheme.headlineSmall,
                       ),
                     ),
-                    const SizedBox(height: 6),
-                    Text(
-                      'Covered by ${Copy.outletCount(story.outletCount)}',
-                      style: theme.textTheme.bodyMedium?.copyWith(
-                        color: theme.colorScheme.onSurfaceVariant,
+                    const SizedBox(height: 8),
+                    StoryMeta(story: story),
+                    const SizedBox(height: 10),
+                    // Two slim bars: the spread at a glance; the full
+                    // "Who covered it" picture (the one spoken node) sits
+                    // below the comparison, so these stay silent.
+                    ExcludeSemantics(
+                      child: CoverageIndicator(
+                        story: story,
+                        digest: digest,
+                        minimal: true,
                       ),
                     ),
                   ],
                 ),
               ),
-              const SizedBox(height: 14),
-              reveal(
-                CoverageIndicator(
-                  story: story,
-                  digest: digest,
-                  compact: false,
-                  onSideTap: (String side, List<Outlet> outlets) {
-                    final Set<String> ids = <String>{
-                      for (final Outlet o in outlets) o.id,
-                    };
-                    showSourcesSheet(
-                      context,
-                      story: story,
-                      digest: digest,
-                      ids: <String>[
-                        for (final Article a in story.articles)
-                          if (ids.contains(a.outletId)) a.id,
-                      ],
-                    );
-                  },
-                ),
-              ),
-              reveal(
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.stretch,
-                  children: <Widget>[
-                    StorySignals(story: story, topPadding: 12),
-                    if (unrated > 0) ...<Widget>[
-                      const SizedBox(height: 8),
-                      Text(
-                        Copy.unratedNote(unrated),
-                        style: theme.textTheme.bodySmall?.copyWith(
-                          color: theme.colorScheme.onSurfaceVariant,
-                        ),
-                      ),
-                    ],
-                  ],
-                ),
-              ),
-              const SizedBox(height: 16),
+              const SizedBox(height: 24),
               reveal(
                 InBriefCard(story: story, digest: digest, onJump: _jumpOnAxis),
               ),
-              const SizedBox(height: 20),
+              const SizedBox(height: 24),
               if (story.analysisUnavailable)
                 reveal(
                   const Section(
@@ -286,10 +253,45 @@ class _StoryDetailViewState extends ConsumerState<StoryDetailView> {
               ],
               reveal(
                 Section(
+                  title: Copy.whoCovered,
+                  subtitle: Copy.whoCoveredNote,
+                  children: <Widget>[
+                    CoverageIndicator(
+                      story: story,
+                      digest: digest,
+                      compact: false,
+                      onSideTap: (String side, List<Outlet> outlets) {
+                        final Set<String> ids = <String>{
+                          for (final Outlet o in outlets) o.id,
+                        };
+                        showSourcesSheet(
+                          context,
+                          story: story,
+                          digest: digest,
+                          ids: <String>[
+                            for (final Article a in story.articles)
+                              if (ids.contains(a.outletId)) a.id,
+                          ],
+                        );
+                      },
+                    ),
+                    if (unrated > 0) ...<Widget>[
+                      const SizedBox(height: 10),
+                      Text(
+                        Copy.unratedNote(unrated),
+                        style: theme.textTheme.bodySmall?.copyWith(
+                          color: theme.colorScheme.onSurfaceVariant,
+                        ),
+                      ),
+                    ],
+                  ],
+                ),
+              ),
+              reveal(
+                Section(
                   key: _anchor(_Jump.sources, null),
                   highlighted: _flash == _anchorId(_Jump.sources, null),
                   title: '${Copy.sources} (${story.articles.length})',
-                  icon: SectionIcons.sources,
                   children: <Widget>[SourcesList(story: story, digest: digest)],
                 ),
               ),
@@ -392,7 +394,6 @@ class _StoryDetailViewState extends ConsumerState<StoryDetailView> {
         key: _anchor(_Jump.headlines, PerspectiveAxis.lean),
         highlighted: _flash == _anchorId(_Jump.headlines, PerspectiveAxis.lean),
         title: Copy.headlines,
-        icon: SectionIcons.headlines,
         children: <Widget>[
           sides(
             (Framing<Lean> f) => QuoteList(
@@ -407,7 +408,6 @@ class _StoryDetailViewState extends ConsumerState<StoryDetailView> {
         key: _anchor(_Jump.emphasis, PerspectiveAxis.lean),
         highlighted: _flash == _anchorId(_Jump.emphasis, PerspectiveAxis.lean),
         title: Copy.emphasis,
-        icon: SectionIcons.emphasis,
         children: <Widget>[
           sides(
             (Framing<Lean> f) =>
@@ -419,7 +419,6 @@ class _StoryDetailViewState extends ConsumerState<StoryDetailView> {
         key: _anchor(_Jump.agreed, PerspectiveAxis.lean),
         highlighted: _flash == _anchorId(_Jump.agreed, PerspectiveAxis.lean),
         title: Copy.agreed,
-        icon: SectionIcons.agreed,
         children: <Widget>[
           PointList(points: story.agreedFacts, story: story, digest: digest),
         ],
@@ -428,7 +427,6 @@ class _StoryDetailViewState extends ConsumerState<StoryDetailView> {
         key: _anchor(_Jump.omissions, PerspectiveAxis.lean),
         highlighted: _flash == _anchorId(_Jump.omissions, PerspectiveAxis.lean),
         title: Copy.omissions,
-        icon: SectionIcons.omissions,
         children: <Widget>[
           if (omissionsByLean.isEmpty) const NoneFound(),
           for (final MapEntry<Lean, List<Omission>> e
@@ -453,7 +451,6 @@ class _StoryDetailViewState extends ConsumerState<StoryDetailView> {
         key: _anchor(_Jump.contested, PerspectiveAxis.lean),
         highlighted: _flash == _anchorId(_Jump.contested, PerspectiveAxis.lean),
         title: Copy.contested,
-        icon: SectionIcons.contested,
         children: <Widget>[
           if (story.contestedClaims.isEmpty) const NoneFound(),
           for (final ContestedClaim c in story.contestedClaims)
@@ -464,7 +461,6 @@ class _StoryDetailViewState extends ConsumerState<StoryDetailView> {
         key: _anchor(_Jump.opinion, PerspectiveAxis.lean),
         highlighted: _flash == _anchorId(_Jump.opinion, PerspectiveAxis.lean),
         title: Copy.opinion,
-        icon: SectionIcons.opinion,
         subtitle: Copy.opinionNote,
         tinted: true,
         children: <Widget>[
@@ -494,7 +490,6 @@ class _StoryDetailViewState extends ConsumerState<StoryDetailView> {
         key: _anchor(_Jump.headlines, PerspectiveAxis.bloc),
         highlighted: _flash == _anchorId(_Jump.headlines, PerspectiveAxis.bloc),
         title: Copy.headlines,
-        icon: SectionIcons.headlines,
         children: <Widget>[
           sides(
             (Framing<Bloc> f) => QuoteList(
@@ -509,7 +504,6 @@ class _StoryDetailViewState extends ConsumerState<StoryDetailView> {
         key: _anchor(_Jump.emphasis, PerspectiveAxis.bloc),
         highlighted: _flash == _anchorId(_Jump.emphasis, PerspectiveAxis.bloc),
         title: Copy.emphasis,
-        icon: SectionIcons.emphasis,
         children: <Widget>[
           sides(
             (Framing<Bloc> f) =>
@@ -522,7 +516,6 @@ class _StoryDetailViewState extends ConsumerState<StoryDetailView> {
         highlighted:
             _flash == _anchorId(_Jump.contradictions, PerspectiveAxis.bloc),
         title: Copy.contradictions,
-        icon: SectionIcons.contradictions,
         subtitle: Copy.contradictionsNote,
         children: <Widget>[
           // Spans the full width, i.e. both bloc columns, in column mode.
@@ -617,11 +610,6 @@ class _JumpBar extends StatelessWidget {
                 onTap: () => onJump(items[i].id),
                 child: ActionChip(
                   key: ValueKey<String>('jump-${items[i].id}'),
-                  avatar: Icon(
-                    SectionIcons.forSection(items[i].id),
-                    size: 16,
-                    color: theme.colorScheme.primary,
-                  ),
                   label: Row(
                     mainAxisSize: MainAxisSize.min,
                     children: <Widget>[

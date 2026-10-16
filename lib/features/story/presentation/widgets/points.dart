@@ -5,7 +5,6 @@ import '../../../../core/constants/copy.dart';
 import '../../../../core/text/quotes.dart';
 import '../../../../core/theme/app_theme.dart';
 import '../../../../shared/widgets/motion.dart';
-import '../../../../shared/widgets/outlet_avatar.dart';
 import '../../../digest/domain/digest.dart';
 import 'source_pills.dart';
 
@@ -14,8 +13,8 @@ import 'source_pills.dart';
 enum RailSide { left, top }
 
 /// One side's content, framed by a rail in the side's colour and headed by
-/// the side's name and outlet count, so the reader always knows whose
-/// coverage they are looking at while scrolling.
+/// the side's name and outlet count. Colour is the only thing that marks a
+/// side, and it is never used for anything else on the page.
 class SideBlock extends StatelessWidget {
   const SideBlock({
     super.key,
@@ -39,7 +38,7 @@ class SideBlock extends StatelessWidget {
       explicitChildNodes: true,
       child: Container(
         padding: rail == RailSide.left
-            ? const EdgeInsets.only(left: 12)
+            ? const EdgeInsets.only(left: 14)
             : const EdgeInsets.only(top: 12),
         decoration: BoxDecoration(
           border: rail == RailSide.left
@@ -50,7 +49,7 @@ class SideBlock extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
             SideHeading(label: label, color: color, count: count),
-            const SizedBox(height: 10),
+            const SizedBox(height: 8),
             child,
           ],
         ),
@@ -79,7 +78,7 @@ class SideHeading extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
         Padding(
-          padding: const EdgeInsets.only(top: 6),
+          padding: const EdgeInsets.only(top: 7),
           child: Container(
             width: 10,
             height: 10,
@@ -97,7 +96,7 @@ class SideHeading extends StatelessWidget {
           const SizedBox(width: 8),
           Text(
             Copy.outletCount(count!),
-            style: theme.textTheme.labelMedium?.copyWith(
+            style: theme.textTheme.bodySmall?.copyWith(
               color: theme.colorScheme.onSurfaceVariant,
             ),
           ),
@@ -107,19 +106,22 @@ class SideHeading extends StatelessWidget {
   }
 }
 
-/// A point and its sources. Never rendered without at least one source:
-/// the model layer already drops unsourced items, and this guards again.
+/// A point and, under it, one "N sources ›" link. Never rendered without at
+/// least one source: the model layer already drops unsourced items, and
+/// this guards again.
 class PointTile extends StatelessWidget {
   const PointTile({
     super.key,
     required this.point,
     required this.story,
     required this.digest,
+    this.last = false,
   });
 
   final SourcedPoint point;
   final Story story;
   final Digest digest;
+  final bool last;
 
   @override
   Widget build(BuildContext context) {
@@ -127,13 +129,12 @@ class PointTile extends StatelessWidget {
       return const SizedBox.shrink();
     }
     return Padding(
-      padding: const EdgeInsets.only(bottom: 10),
+      padding: EdgeInsets.only(bottom: last ? 0 : 10),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
           Text(point.text, style: Theme.of(context).textTheme.bodyLarge),
-          const SizedBox(height: 2),
-          SourcePills(ids: point.sources, story: story, digest: digest),
+          SourcesLink(ids: point.sources, story: story, digest: digest),
         ],
       ),
     );
@@ -142,7 +143,8 @@ class PointTile extends StatelessWidget {
 
 /// A verbatim quote from a headline or feed summary, with the outlet it is
 /// from. The row itself opens the article: the quote is the evidence, so
-/// there is nothing to repeat beneath it.
+/// there is nothing to repeat beneath it. The open-in-browser icon is the
+/// affordance.
 class QuoteRow extends ConsumerWidget {
   const QuoteRow({
     super.key,
@@ -176,28 +178,17 @@ class QuoteRow extends ConsumerWidget {
         borderRadius: BorderRadius.circular(8),
         onTap: () => openArticle(context, ref, article),
         child: Padding(
-          padding: const EdgeInsets.symmetric(vertical: 10),
+          padding: const EdgeInsets.symmetric(vertical: 12),
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-              Padding(
-                padding: const EdgeInsets.only(top: 1),
-                child: OutletAvatar(
-                  outlet: outlet,
-                  fallbackName: article.outletId,
-                  size: 26,
-                ),
-              ),
-              const SizedBox(width: 10),
               Expanded(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
                     Text(
                       Quotes.wrap(quote.quote),
-                      style: theme.textTheme.bodyLarge?.copyWith(
-                        fontStyle: FontStyle.italic,
-                      ),
+                      style: theme.textTheme.bodyLarge,
                     ),
                     const SizedBox(height: 4),
                     Text(
@@ -205,19 +196,19 @@ class QuoteRow extends ConsumerWidget {
                         outlet?.name ?? article.outletId,
                         quote.field,
                       ),
-                      style: theme.textTheme.labelMedium?.copyWith(
+                      style: theme.textTheme.bodySmall?.copyWith(
                         color: theme.colorScheme.onSurfaceVariant,
                       ),
                     ),
                   ],
                 ),
               ),
-              const SizedBox(width: 8),
+              const SizedBox(width: 12),
               Padding(
                 padding: const EdgeInsets.only(top: 4),
                 child: Icon(
                   Icons.open_in_new,
-                  size: 16,
+                  size: 18,
                   color: theme.colorScheme.primary,
                 ),
               ),
@@ -276,15 +267,21 @@ class PointList extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: <Widget>[
-        for (final SourcedPoint p in points)
-          PointTile(point: p, story: story, digest: digest),
+        for (int i = 0; i < points.length; i++)
+          PointTile(
+            point: points[i],
+            story: story,
+            digest: digest,
+            last: i == points.length - 1,
+          ),
       ],
     );
   }
 }
 
-/// A claim some outlets state and others dispute, with both sets of
-/// outlets named. The two sides are disjoint outlet sets (validator rule).
+/// A claim some outlets state and others dispute: the claim, a bar showing
+/// how the outlets split, and one link per side. The two sides are disjoint
+/// outlet sets (validator rule).
 class ContestedClaimCard extends StatelessWidget {
   const ContestedClaimCard({
     super.key,
@@ -302,25 +299,22 @@ class ContestedClaimCard extends StatelessWidget {
     final ThemeData theme = Theme.of(context);
     final TextTheme t = theme.textTheme;
     final ColorScheme cs = theme.colorScheme;
-    final Color muted = cs.onSurfaceVariant;
-    final int stated = distinctOutlets(
-      resolveArticles(story, claim.assertedBy),
-    ).length;
-    final int disputed = distinctOutlets(
-      resolveArticles(story, claim.disputedBy),
-    ).length;
+    final int stated =
+        distinctOutlets(resolveArticles(story, claim.assertedBy)).length;
+    final int disputed =
+        distinctOutlets(resolveArticles(story, claim.disputedBy)).length;
     return Card(
       margin: const EdgeInsets.only(bottom: 12),
       child: Padding(
-        padding: const EdgeInsets.fromLTRB(16, 14, 16, 12),
+        padding: const EdgeInsets.fromLTRB(16, 14, 16, 8),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
             Text(claim.claim, style: t.bodyLarge),
-            const SizedBox(height: 10),
+            const SizedBox(height: 12),
             // How the outlets split: stated (primary) against disputed
             // (tertiary), both brand colours, never a side's colour.
-            if (stated + disputed > 0) ...<Widget>[
+            if (stated + disputed > 0)
               GrowIn(
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(4),
@@ -346,27 +340,24 @@ class ContestedClaimCard extends StatelessWidget {
                   ),
                 ),
               ),
-              const SizedBox(height: 4),
-              Wrap(
-                alignment: WrapAlignment.spaceBetween,
-                children: <Widget>[
-                  Text(
-                    '${Copy.assertedBy} ${Copy.outletCount(stated)}',
-                    style: t.labelSmall?.copyWith(color: cs.primary),
-                  ),
-                  Text(
-                    '${Copy.disputedBy} ${Copy.outletCount(disputed)}',
-                    style: t.labelSmall?.copyWith(color: cs.tertiary),
-                  ),
-                ],
-              ),
-              const SizedBox(height: 8),
-            ],
-            Text(Copy.assertedBy, style: t.labelMedium?.copyWith(color: muted)),
-            SourcePills(ids: claim.assertedBy, story: story, digest: digest),
-            const SizedBox(height: 6),
-            Text(Copy.disputedBy, style: t.labelMedium?.copyWith(color: muted)),
-            SourcePills(ids: claim.disputedBy, story: story, digest: digest),
+            const SizedBox(height: 4),
+            Wrap(
+              spacing: 16,
+              children: <Widget>[
+                SourcesLink(
+                  ids: claim.assertedBy,
+                  story: story,
+                  digest: digest,
+                  label: Copy.statedByCount(stated),
+                ),
+                SourcesLink(
+                  ids: claim.disputedBy,
+                  story: story,
+                  digest: digest,
+                  label: Copy.disputedByCount(disputed),
+                ),
+              ],
+            ),
           ],
         ),
       ),
@@ -402,7 +393,7 @@ class ContradictionCard extends StatelessWidget {
       key: ValueKey<String>('contradiction-${b.wire}'),
       color: colors.forBloc(b),
       label: Copy.blocGroup(b),
-      child: PointTile(point: p, story: story, digest: digest),
+      child: PointTile(point: p, story: story, digest: digest, last: true),
     );
     final Widget topic = Semantics(
       header: sideBySide,
@@ -457,9 +448,9 @@ class NoneFound extends StatelessWidget {
   final String text;
   @override
   Widget build(BuildContext context) => Text(
-    text,
-    style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-      color: Theme.of(context).colorScheme.onSurfaceVariant,
-    ),
-  );
+        text,
+        style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+              color: Theme.of(context).colorScheme.onSurfaceVariant,
+            ),
+      );
 }

@@ -3,29 +3,30 @@ import 'package:flutter/material.dart';
 import '../../../../core/constants/copy.dart';
 import '../../../../core/theme/app_theme.dart';
 import '../../../../shared/widgets/coverage_indicator.dart';
-import '../../../../shared/widgets/story_signals.dart';
+import '../../../../shared/widgets/story_meta.dart';
 import '../../domain/digest.dart';
 
 /// How a story card is laid out in the feed (a news-app home page has one
 /// large lead, a strip of top stories and compact rows for the rest).
 enum StoryCardVariant {
-  /// The default card: rank, title, bars, avatar strip, signals, cue.
+  /// The default card: rank, title, bars and avatar strip, one line of facts.
   standard,
 
-  /// The lead story: a dark plate with the headline, the summary and the
-  /// outlet strip, where a news app would put its photo.
+  /// The lead story: a dark plate with the headline and the summary, where
+  /// a news app would put its photo.
   lead,
 
-  /// A carousel card: rank, title and bars, fixed width.
+  /// A carousel card: rank, title, one line of facts; fixed width.
   compact,
 
-  /// A list row: title and a metadata line, with the bars at the right.
+  /// A list row: rank, title, one line of facts, a chevron.
   row,
 }
 
 /// One story in the digest. Every variant carries the rank badge, the
-/// title and a [CoverageIndicator], so each story is presented once and the
-/// same way wherever it appears.
+/// title, one plain line of facts and a [CoverageIndicator] (full on the
+/// standard card, two slim bars elsewhere), and every variant is tappable
+/// with a visible cue.
 class StoryCard extends StatelessWidget {
   const StoryCard({
     super.key,
@@ -99,22 +100,28 @@ class _RankBadge extends StatelessWidget {
   }
 }
 
-/// "15 outlets · 1 contested claim": the metadata line of a row.
-String _metaLine(Story story) {
-  final List<String> parts = <String>[Copy.outletCount(story.outletCount)];
-  if (story.analysisUnavailable) {
-    parts.add(Copy.analysisUnavailableShort);
-  } else {
-    if (story.contestedClaims.isNotEmpty) {
-      parts.add(Copy.contestedCount(story.contestedClaims.length));
-    }
-    if (story.contradictions.isNotEmpty) {
-      parts.add(Copy.contradictionCount(story.contradictions.length));
-    }
+/// "Compare coverage ›": the one cue that a card opens the comparison.
+class _Cue extends StatelessWidget {
+  const _Cue({this.color});
+  final Color? color;
+
+  @override
+  Widget build(BuildContext context) {
+    final ThemeData theme = Theme.of(context);
+    final Color c = color ?? theme.colorScheme.primary;
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.end,
+      children: <Widget>[
+        Flexible(
+          child: Text(
+            Copy.compare,
+            style: theme.textTheme.labelLarge?.copyWith(color: c),
+          ),
+        ),
+        Icon(Icons.chevron_right, size: 20, color: c),
+      ],
+    );
   }
-  if (story.blindspot.lean case final Lean l) parts.add(Copy.blindspotLean(l));
-  if (story.blindspot.bloc case final Bloc b) parts.add(Copy.blindspotBloc(b));
-  return parts.join(' · ');
 }
 
 class _Standard extends StatelessWidget {
@@ -138,7 +145,7 @@ class _Standard extends StatelessWidget {
       child: InkWell(
         onTap: card.onTap,
         child: Padding(
-          padding: const EdgeInsets.fromLTRB(16, 14, 16, 10),
+          padding: const EdgeInsets.fromLTRB(16, 14, 16, 12),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
@@ -152,39 +159,12 @@ class _Standard extends StatelessWidget {
                   ),
                 ],
               ),
+              const SizedBox(height: 10),
+              StoryMeta(story: story, style: theme.textTheme.bodySmall),
               const SizedBox(height: 12),
               CoverageIndicator(story: story, digest: card.digest),
-              StorySignals(story: story),
-              const SizedBox(height: 8),
-              Wrap(
-                alignment: WrapAlignment.spaceBetween,
-                crossAxisAlignment: WrapCrossAlignment.center,
-                children: <Widget>[
-                  Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 6),
-                    child: Text(
-                      Copy.outletCount(story.outletCount),
-                      style: theme.textTheme.labelMedium?.copyWith(
-                        color: cs.onSurfaceVariant,
-                      ),
-                    ),
-                  ),
-                  Row(
-                    mainAxisSize: MainAxisSize.min,
-                    children: <Widget>[
-                      Flexible(
-                        child: Text(
-                          Copy.compare,
-                          style: theme.textTheme.labelLarge?.copyWith(
-                            color: cs.primary,
-                          ),
-                        ),
-                      ),
-                      Icon(Icons.chevron_right, size: 20, color: cs.primary),
-                    ],
-                  ),
-                ],
-              ),
+              const SizedBox(height: 10),
+              const _Cue(),
             ],
           ),
         ),
@@ -194,7 +174,7 @@ class _Standard extends StatelessWidget {
 }
 
 /// The lead story on the brand plate: eyebrow, big headline, the sourced
-/// summary when the digest has one, the outlet strip and the signals.
+/// summary when the digest has one, one line of facts, two slim bars.
 class _Lead extends StatelessWidget {
   const _Lead(this.card);
   final StoryCard card;
@@ -203,16 +183,11 @@ class _Lead extends StatelessWidget {
   Widget build(BuildContext context) {
     final ThemeData theme = Theme.of(context);
     final Story story = card.story;
-    // On the dark plate the bars, legends and avatars use the dark theme's
-    // perspective colours and the plate's muted ink.
     final ThemeData onPlate = theme.copyWith(
       extensions: <ThemeExtension<dynamic>>[PerspectiveColors.dark],
       colorScheme: theme.colorScheme.copyWith(
         onSurfaceVariant: StoryCard.mutedOnPlate,
         onSurface: StoryCard.inkOnPlate,
-        surfaceContainerHighest: StoryCard.inkOnPlate.withValues(alpha: 0.16),
-        secondaryContainer: StoryCard.inkOnPlate.withValues(alpha: 0.14),
-        onSecondaryContainer: StoryCard.inkOnPlate,
       ),
     );
     return Card(
@@ -230,7 +205,7 @@ class _Lead extends StatelessWidget {
             ),
           ),
           child: Padding(
-            padding: const EdgeInsets.fromLTRB(18, 16, 18, 14),
+            padding: const EdgeInsets.fromLTRB(20, 18, 20, 16),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: <Widget>[
@@ -240,16 +215,16 @@ class _Lead extends StatelessWidget {
                     const SizedBox(width: 10),
                     Expanded(
                       child: Text(
-                        '${Copy.leadStory} · ${Copy.outletCount(story.outletCount)}',
+                        Copy.leadStory,
                         style: theme.textTheme.labelLarge?.copyWith(
                           color: StoryCard.mutedOnPlate,
-                          letterSpacing: 0.6,
+                          letterSpacing: 0.8,
                         ),
                       ),
                     ),
                   ],
                 ),
-                const SizedBox(height: 12),
+                const SizedBox(height: 14),
                 Text(
                   story.title,
                   style: theme.textTheme.headlineSmall?.copyWith(
@@ -258,14 +233,13 @@ class _Lead extends StatelessWidget {
                   ),
                 ),
                 if (story.summary case final SourcedPoint s) ...<Widget>[
-                  const SizedBox(height: 10),
+                  const SizedBox(height: 12),
                   Text(
                     s.text,
                     maxLines: 4,
                     overflow: TextOverflow.ellipsis,
-                    style: theme.textTheme.bodyMedium?.copyWith(
-                      color: StoryCard.inkOnPlate.withValues(alpha: 0.86),
-                      height: 1.4,
+                    style: theme.textTheme.bodyLarge?.copyWith(
+                      color: StoryCard.inkOnPlate.withValues(alpha: 0.88),
                     ),
                   ),
                 ],
@@ -275,30 +249,18 @@ class _Lead extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: <Widget>[
-                      CoverageIndicator(story: story, digest: card.digest),
-                      StorySignals(story: story),
+                      StoryMeta(story: story, style: theme.textTheme.bodySmall),
+                      const SizedBox(height: 10),
+                      CoverageIndicator(
+                        story: story,
+                        digest: card.digest,
+                        minimal: true,
+                      ),
                     ],
                   ),
                 ),
-                const SizedBox(height: 12),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: <Widget>[
-                    Flexible(
-                      child: Text(
-                        Copy.compare,
-                        style: theme.textTheme.labelLarge?.copyWith(
-                          color: StoryCard.inkOnPlate,
-                        ),
-                      ),
-                    ),
-                    const Icon(
-                      Icons.chevron_right,
-                      size: 20,
-                      color: StoryCard.inkOnPlate,
-                    ),
-                  ],
-                ),
+                const SizedBox(height: 14),
+                const _Cue(color: StoryCard.inkOnPlate),
               ],
             ),
           ),
@@ -308,7 +270,7 @@ class _Lead extends StatelessWidget {
   }
 }
 
-/// A carousel card of fixed width: rank, title and the bars.
+/// A carousel card of fixed width: rank, title, facts, slim bars, cue.
 class _Compact extends StatelessWidget {
   const _Compact(this.card);
   final StoryCard card;
@@ -324,7 +286,7 @@ class _Compact extends StatelessWidget {
         child: InkWell(
           onTap: card.onTap,
           child: Padding(
-            padding: const EdgeInsets.fromLTRB(14, 12, 14, 12),
+            padding: const EdgeInsets.fromLTRB(14, 12, 14, 10),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: <Widget>[
@@ -343,17 +305,12 @@ class _Compact extends StatelessWidget {
                     ),
                   ],
                 ),
-                const SizedBox(height: 10),
-                CoverageIndicator(story: story, digest: card.digest),
                 const SizedBox(height: 8),
-                Text(
-                  _metaLine(story),
-                  maxLines: 2,
-                  overflow: TextOverflow.ellipsis,
-                  style: theme.textTheme.labelSmall?.copyWith(
-                    color: theme.colorScheme.onSurfaceVariant,
-                  ),
-                ),
+                StoryMeta(story: story, style: theme.textTheme.bodySmall),
+                const SizedBox(height: 10),
+                CoverageIndicator(story: story, digest: card.digest, minimal: true),
+                const SizedBox(height: 8),
+                const _Cue(),
               ],
             ),
           ),
@@ -363,7 +320,8 @@ class _Compact extends StatelessWidget {
   }
 }
 
-/// A list row: rank, title and metadata on the left, the bars on the right.
+/// A list row: rank, title and facts, a chevron. The bars sit under the
+/// facts, not beside the title, so the row reads left to right.
 class _Row extends StatelessWidget {
   const _Row(this.card);
   final StoryCard card;
@@ -375,7 +333,7 @@ class _Row extends StatelessWidget {
     return InkWell(
       onTap: card.onTap,
       child: Padding(
-        padding: const EdgeInsets.symmetric(vertical: 12),
+        padding: const EdgeInsets.symmetric(vertical: 14),
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
@@ -383,30 +341,30 @@ class _Row extends StatelessWidget {
             const SizedBox(width: 12),
             Expanded(
               child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: <Widget>[
                   Text(story.title, style: theme.textTheme.titleSmall),
                   const SizedBox(height: 6),
-                  Text(
-                    Copy.outletCount(story.outletCount),
-                    style: theme.textTheme.labelSmall?.copyWith(
-                      color: theme.colorScheme.onSurfaceVariant,
+                  StoryMeta(story: story, style: theme.textTheme.bodySmall),
+                  const SizedBox(height: 8),
+                  SizedBox(
+                    width: 120,
+                    child: CoverageIndicator(
+                      story: story,
+                      digest: card.digest,
+                      minimal: true,
                     ),
                   ),
-                  StorySignals(story: story, topPadding: 8),
                 ],
               ),
             ),
-            const SizedBox(width: 12),
+            const SizedBox(width: 8),
             Padding(
-              padding: const EdgeInsets.only(top: 6),
-              child: SizedBox(
-                width: 72,
-                child: CoverageIndicator(
-                  story: story,
-                  digest: card.digest,
-                  minimal: true,
-                ),
+              padding: const EdgeInsets.only(top: 2),
+              child: Icon(
+                Icons.chevron_right,
+                size: 22,
+                color: theme.colorScheme.primary,
               ),
             ),
           ],

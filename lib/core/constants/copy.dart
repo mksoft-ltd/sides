@@ -130,6 +130,19 @@ abstract final class Copy {
       'No contested claims or East–West contradictions found in today\'s '
       'coverage.';
   static const String contestedLabel = 'Contested';
+  static String agreedCount(int n) => switch (n) {
+        0 => 'No agreed points',
+        1 => 'Agree on 1 point',
+        _ => 'Agree on $n points',
+      };
+  static const String noContested = 'no contested claims';
+  static const String noContradictionsShort = 'no East–West contradictions';
+  static String statedByCount(int n) => 'Stated by ${outletCount(n)}';
+  static String disputedByCount(int n) => 'Disputed by ${outletCount(n)}';
+  static String sourcesLink(int n) => n == 1 ? '1 source' : '$n sources';
+  static const String whoCovered = 'Who covered it';
+  static const String whoCoveredNote =
+      'Tap a side to see its articles.';
   static const String tileAgreed = 'agreed facts';
   static const String tileContested = 'contested claims';
   static const String tileContradictions = 'West–East contradictions';
