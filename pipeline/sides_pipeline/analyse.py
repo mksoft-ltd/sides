@@ -34,34 +34,46 @@ DEFAULT_RETRIES = 1
 
 # JSON schema sent as output_config.format. Structured outputs reject length/number constraints, so text
 # length, id validity and side/bloc consistency are enforced afterwards in validate.py.
-_IDS = {"type": "array", "items": {"type": "string"}}
-_SOURCED = {
-    "type": "object",
-    "properties": {"text": {"type": "string"}, "sources": {**_IDS, "description": "article ids from this story"}},
-    "required": ["text", "sources"],
-    "additionalProperties": False,
-}
-_QUOTE = {
-    "type": "object",
-    "properties": {
-        "article_id": {"type": "string"},
-        "quote": {"type": "string", "description": "verbatim substring of that article's headline or snippet"},
-    },
-    "required": ["article_id", "quote"],
-    "additionalProperties": False,
-}
-_SYNTHESIS = {
-    "type": "object",
-    "properties": {
-        "text": {"type": "string", "description": "two or three plain sentences, at most 400 characters"},
-        "sources": {**_IDS, "description": "article ids from this story that carry every statement in the text"},
-    },
-    "required": ["text", "sources"],
-    "additionalProperties": False,
-}
+#
+# Shapes that repeat (a sourced point, a quote, an id list, a framing body) are defined once under ``$defs`` and
+# referenced with ``$ref``: the API compiles the schema into a grammar with an internal size limit, and the
+# inlined version tipped over it ("The compiled grammar is too large", 400) the moment ``summary`` and
+# ``conclusion`` were added (16 Oct 2026). Descriptions do not count; duplicated structure does.
+_IDS = {"$ref": "#/$defs/ids"}
+_SOURCED = {"$ref": "#/$defs/sourced"}
+_QUOTE = {"$ref": "#/$defs/quote"}
+_SYNTHESIS = {"$ref": "#/$defs/synthesis"}
 _FRAMING_PROPS = {"headline_quotes": {"type": "array", "items": _QUOTE}, "emphasis": {"type": "array", "items": _SOURCED}}
+
 ANALYSIS_OUTPUT_SCHEMA: dict = {
     "type": "object",
+    "$defs": {
+        "ids": {"type": "array", "items": {"type": "string"}, "description": "article ids from this story"},
+        "sourced": {
+            "type": "object",
+            "properties": {"text": {"type": "string"}, "sources": _IDS},
+            "required": ["text", "sources"],
+            "additionalProperties": False,
+        },
+        "synthesis": {
+            "type": "object",
+            "properties": {
+                "text": {"type": "string", "description": "two or three plain sentences, at most 400 characters"},
+                "sources": {**_IDS, "description": "article ids from this story that carry every statement in the text"},
+            },
+            "required": ["text", "sources"],
+            "additionalProperties": False,
+        },
+        "quote": {
+            "type": "object",
+            "properties": {
+                "article_id": {"type": "string"},
+                "quote": {"type": "string", "description": "verbatim substring of that article's headline or snippet"},
+            },
+            "required": ["article_id", "quote"],
+            "additionalProperties": False,
+        },
+    },
     "properties": {
         "summary": _SYNTHESIS,
         "agreed_facts": {"type": "array", "items": _SOURCED},

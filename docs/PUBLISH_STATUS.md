@@ -1,4 +1,16 @@
-# Sides 1.0.0: publish status
+# Sides: publish status
+
+## Internal testing builds 4 and 5 (16 Oct 2026, ~00:20–00:45 UTC): UI redesign + In brief
+
+- **Play internal track: 1.1.0 (versionCode 4)** uploaded `completed` with en-GB/en-US notes (commit 09a3894: the
+  compare-by-dimension story page, source pills + sheet, jump bar, previous/next, signal chips). Replaced minutes later by
+  **1.1.0 (versionCode 5)** (commit 669fefa: adds the In brief card — summary, conclusion across the sides, disagreements
+  list). Testers on the internal opt-in link (above) get build 5. Production stays 1.0.0 (3) in review; nothing there
+  was touched. Apple was not rebuilt (the redesign is not on TestFlight yet).
+- **Pipeline**: the daily run was dispatched by hand at 00:31 UTC (run 38829982325) so `digest/latest.json` carries the
+  new `summary` / `conclusion` fields for the In brief card; the 06:00 UTC schedule continues as before. The 1.0.0 app
+  ignores the two new keys (its parser reads known keys only), so the live digest stays safe for the version in review.
+
 
 ## BOTH STORES SUBMITTED (15 Oct 2026, ~21:30 UTC)
 

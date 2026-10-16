@@ -141,6 +141,12 @@ stage offline from a recorded response (no key needed).
   `AnalysisResponse` default them to None, so the 14 Oct fixtures still replay). The app shows them in the "In brief"
   card at the top of a story (`in_brief_card.dart`: What happened · Across the sides · Where they disagree, the last
   listing contested claims and contradictions with rows that jump to their section, switching axis when needed).
+  **Schema size**: structured outputs compile the schema to a grammar with an internal size limit; the inlined
+  schema tipped over it ("The compiled grammar is too large", 400, run 38829982325) when the two paragraphs were
+  added. `ANALYSIS_OUTPUT_SCHEMA` therefore defines the repeated shapes once under `$defs` (`ids`, `sourced`,
+  `synthesis`, `quote`) and uses `$ref` (supported; descriptions do not count, duplicated structure does). An API 400
+  is not a per-story failure: it aborts the run before anything is published (latest.json keeps the previous day),
+  so any schema change gets one live `analyse` on a one-story stories.json (≈ $0.12) before it is pushed.
 - **Failure is per story, not per run**: refusal / `max_tokens` / unparsable JSON → one retry (`analysis.retries`),
   then the story ships with empty analysis arrays and a `meta.warnings[]` entry. Every attempt is billed and costed.
   The command exits 1 only when every story failed.
