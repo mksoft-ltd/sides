@@ -12,11 +12,13 @@ class StoryCard extends StatelessWidget {
   const StoryCard({
     super.key,
     required this.story,
+    required this.digest,
     required this.onTap,
     this.selected = false,
   });
 
   final Story story;
+  final Digest digest;
   final VoidCallback onTap;
 
   /// The story shown in the tablet detail pane: tinted, outlined and
@@ -73,7 +75,7 @@ class StoryCard extends StatelessWidget {
                 ],
               ),
               const SizedBox(height: 12),
-              CoverageIndicator(coverage: story.coverage),
+              CoverageIndicator(story: story, digest: digest),
               StorySignals(story: story),
               const SizedBox(height: 8),
               // Outlet count left, the cue right; the cue drops to its own

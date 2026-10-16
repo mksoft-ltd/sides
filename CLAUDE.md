@@ -263,6 +263,16 @@ test/               fixtures (= assets/sample_digest.json), helpers/ (fakes, pum
   descriptive (never judges an outlet). Lean colours are violet/slate/orange, not red/blue (opposite meanings in UK/US).
   Story cards carry `StorySignals` chips (blindspots, "N contested claims", "N East–West contradictions", "Analysis
   unavailable"): counts of validated items, computed in the app, never a judgement.
+- **Graphical layer (16 Oct 2026, build 6)**: `OutletAvatar` (`shared/widgets/outlet_avatar.dart`) = a circle in the
+  outlet's lean colour (bloc colour off the lean scale) with `outletInitials(name)` (an all-caps first word ≤4 letters as
+  is: BBC, CGTN; else initials of up to three words after "The": NYT, NYP, SCM; single word: AX). Letters only, never
+  outlet logos (trademarks, store risk). Avatars appear on pills, quote rows, source tiles, the card's outlet strip and
+  the story header's **spectrum** (`CoverageIndicator(compact: false)`: Left · Centre · Right zones, then West · East,
+  each zone a colour rail + dense avatars + "Left 6"; the zone is the 48 dp tap target and opens the sources sheet with
+  that side's articles via `onSideTap`). Compact cards keep the proportional bars plus one avatar strip. Sections and
+  jump chips share `SectionIcons`; the In brief card opens with three stat tiles (agreed facts, contested claims,
+  West–East contradictions); a contested claim shows a stated-vs-disputed bar in primary vs tertiary (brand colours,
+  never a side's). Avatars are `ExcludeSemantics` (the name is always beside them) and do not scale with text.
 - **Ads**: banner only in `bottomNavigationBar` of list/detail, hidden until a digest exists and the instant ad-free
   is owned. No ATT prompt: every request is `nonPersonalizedAds: true`, Google UMP gathers consent. Test IDs until
   publish (`AdConfig`, Info.plist `GADApplicationIdentifier`, manifest `APPLICATION_ID`). "Ad privacy options" in

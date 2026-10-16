@@ -1,0 +1,1 @@
+Redesigned story pages: an In brief card (what happened, where the views stand across the sides, where they disagree), outlet avatars and a coverage spectrum showing who covered each story by side, every side on the page at once, headlines side by side, source pills with a sources sheet, a jump bar, and previous / next story.

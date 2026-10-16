@@ -8,10 +8,14 @@ class Section extends StatelessWidget {
     required this.title,
     required this.children,
     this.subtitle,
+    this.icon,
     this.tinted = false,
   });
 
   final String title;
+
+  /// Leading icon in the heading, in the primary colour.
+  final IconData? icon;
   final String? subtitle;
   final List<Widget> children;
 
@@ -25,9 +29,23 @@ class Section extends StatelessWidget {
     final Widget body = Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: <Widget>[
-        Semantics(
-          header: true,
-          child: Text(title, style: theme.textTheme.titleMedium),
+        Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            if (icon != null) ...<Widget>[
+              Padding(
+                padding: const EdgeInsets.only(top: 2),
+                child: Icon(icon, size: 20, color: theme.colorScheme.primary),
+              ),
+              const SizedBox(width: 8),
+            ],
+            Expanded(
+              child: Semantics(
+                header: true,
+                child: Text(title, style: theme.textTheme.titleMedium),
+              ),
+            ),
+          ],
         ),
         if (subtitle != null) ...<Widget>[
           const SizedBox(height: 4),

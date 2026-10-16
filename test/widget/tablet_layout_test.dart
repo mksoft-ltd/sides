@@ -14,6 +14,7 @@ import 'package:sides/features/digest/presentation/screens/master_detail_screen.
 import 'package:sides/features/digest/presentation/widgets/story_card.dart';
 import 'package:sides/features/story/presentation/screens/story_detail_screen.dart';
 import 'package:sides/features/story/presentation/widgets/story_detail_view.dart';
+import 'package:sides/shared/widgets/section.dart';
 
 import '../fixtures/fixtures.dart';
 import '../helpers/fakes.dart';
@@ -62,6 +63,8 @@ void main() {
       );
 
   Future<void> chooseBloc(WidgetTester tester) async {
+    await tester.ensureVisible(axisSwitch(Copy.axisBloc));
+    await tester.pumpAndSettle();
     await tester.tap(axisSwitch(Copy.axisBloc));
     await tester.pumpAndSettle();
   }
@@ -282,8 +285,15 @@ void main() {
         scrollable: detailScrollable(),
       );
       final Rect cols = tester.getRect(find.byType(PerspectiveColumns).last);
-      final Rect agreed = tester.getRect(inDetail(find.text(Copy.agreed)));
-      expect(agreed.top, greaterThan(cols.bottom));
+      final Rect agreed = tester.getRect(
+        find.ancestor(
+          of: inDetail(find.text(Copy.agreed)),
+          matching: find.byType(Section),
+        ),
+      );
+      // The Section box starts where the columns end (its 28 dp top padding
+      // is inside the box), so "below" is >=, not >.
+      expect(agreed.top, greaterThanOrEqualTo(cols.bottom));
       expect(agreed.left, closeTo(cols.left, 0.5));
       expect(agreed.width, closeTo(cols.width, 0.5));
       // Column headers are announced as headers.
@@ -412,6 +422,8 @@ void main() {
       // The axis carries over to the next story: still West / East.
       expect(location(tester), '/story/${s8.id}?axis=bloc');
       expect(column('west'), findsWidgets);
+      await tester.ensureVisible(axisSwitch(Copy.axisLean));
+      await tester.pumpAndSettle();
       await tester.tap(axisSwitch(Copy.axisLean));
       await tester.pumpAndSettle();
       expect(column('left'), findsWidgets);

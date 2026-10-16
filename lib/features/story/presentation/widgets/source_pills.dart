@@ -3,7 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../../../core/constants/copy.dart';
 import '../../../../core/launcher/link_launcher.dart';
-import '../../../../core/theme/app_theme.dart';
+import '../../../../shared/widgets/outlet_avatar.dart';
 import '../../../digest/domain/digest.dart';
 import 'sources_list.dart';
 
@@ -21,8 +21,9 @@ Future<void> openArticle(BuildContext context, WidgetRef ref, Article a) async {
 /// The sources of one point as a row of outlet pills: one pill per outlet
 /// (an outlet with two articles on the point gets one pill), the first
 /// [maxVisible] by citation order, the rest folded into "+N more". Each pill
-/// carries a dot in the outlet's lean colour (bloc colour for outlets off the
-/// lean scale), so a reader sees at a glance which sides back a point.
+/// carries the outlet's avatar (initials on its lean colour, bloc colour for
+/// outlets off the lean scale), so a reader sees at a glance which sides
+/// back a point.
 /// Tapping any pill opens [SourcesSheet] for the point, with the tapped
 /// outlet's article first; the sheet lists every article and its rows open
 /// the originals.
@@ -136,7 +137,6 @@ class SourcePill extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final ThemeData theme = Theme.of(context);
-    final PerspectiveColors colors = PerspectiveColors.of(context);
     final Article? a = article;
     final Outlet? o = outlet;
 
@@ -149,18 +149,7 @@ class SourcePill extends StatelessWidget {
     } else {
       label = o?.name ?? a.outletId;
       semanticsLabel = semanticsLabelFor(a, o);
-      final Color? dot = switch (o) {
-        null => null,
-        Outlet(lean: final Lean l) => colors.forLean(l),
-        Outlet(bloc: final Bloc b) => colors.forBloc(b),
-      };
-      if (dot != null) {
-        avatar = Container(
-          width: 8,
-          height: 8,
-          decoration: BoxDecoration(color: dot, shape: BoxShape.circle),
-        );
-      }
+      avatar = OutletAvatar(outlet: o, fallbackName: a.outletId, size: 20);
     }
 
     return Semantics(
@@ -169,9 +158,10 @@ class SourcePill extends StatelessWidget {
       excludeSemantics: true,
       onTap: onTap,
       child: ActionChip(
-        avatar: avatar == null
+        avatar: avatar,
+        labelPadding: avatar == null
             ? null
-            : SizedBox(width: 10, child: Center(child: avatar)),
+            : const EdgeInsets.only(left: 4, right: 2),
         label: Text(label),
         labelStyle: a == null
             ? theme.textTheme.labelMedium?.copyWith(

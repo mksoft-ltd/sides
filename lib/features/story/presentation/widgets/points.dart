@@ -4,6 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../../../core/constants/copy.dart';
 import '../../../../core/text/quotes.dart';
 import '../../../../core/theme/app_theme.dart';
+import '../../../../shared/widgets/outlet_avatar.dart';
 import '../../../digest/domain/digest.dart';
 import 'source_pills.dart';
 
@@ -178,6 +179,15 @@ class QuoteRow extends ConsumerWidget {
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
+              Padding(
+                padding: const EdgeInsets.only(top: 1),
+                child: OutletAvatar(
+                  outlet: outlet,
+                  fallbackName: article.outletId,
+                  size: 26,
+                ),
+              ),
+              const SizedBox(width: 10),
               Expanded(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -288,8 +298,14 @@ class ContestedClaimCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final TextTheme t = Theme.of(context).textTheme;
-    final Color muted = Theme.of(context).colorScheme.onSurfaceVariant;
+    final ThemeData theme = Theme.of(context);
+    final TextTheme t = theme.textTheme;
+    final ColorScheme cs = theme.colorScheme;
+    final Color muted = cs.onSurfaceVariant;
+    final int stated =
+        distinctOutlets(resolveArticles(story, claim.assertedBy)).length;
+    final int disputed =
+        distinctOutlets(resolveArticles(story, claim.disputedBy)).length;
     return Card(
       margin: const EdgeInsets.only(bottom: 12),
       child: Padding(
@@ -299,6 +315,48 @@ class ContestedClaimCard extends StatelessWidget {
           children: <Widget>[
             Text(claim.claim, style: t.bodyLarge),
             const SizedBox(height: 10),
+            // How the outlets split: stated (primary) against disputed
+            // (tertiary), both brand colours, never a side's colour.
+            if (stated + disputed > 0) ...<Widget>[
+              ClipRRect(
+                borderRadius: BorderRadius.circular(4),
+                child: SizedBox(
+                  height: 6,
+                  child: Row(
+                    children: <Widget>[
+                      if (stated > 0)
+                        Expanded(
+                          flex: stated,
+                          child: Container(
+                            margin: const EdgeInsets.only(right: 1.5),
+                            color: cs.primary,
+                          ),
+                        ),
+                      if (disputed > 0)
+                        Expanded(
+                          flex: disputed,
+                          child: ColoredBox(color: cs.tertiary),
+                        ),
+                    ],
+                  ),
+                ),
+              ),
+              const SizedBox(height: 4),
+              Wrap(
+                alignment: WrapAlignment.spaceBetween,
+                children: <Widget>[
+                  Text(
+                    '${Copy.assertedBy} ${Copy.outletCount(stated)}',
+                    style: t.labelSmall?.copyWith(color: cs.primary),
+                  ),
+                  Text(
+                    '${Copy.disputedBy} ${Copy.outletCount(disputed)}',
+                    style: t.labelSmall?.copyWith(color: cs.tertiary),
+                  ),
+                ],
+              ),
+              const SizedBox(height: 8),
+            ],
             Text(
               Copy.assertedBy,
               style: t.labelMedium?.copyWith(color: muted),

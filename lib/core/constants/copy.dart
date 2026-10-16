@@ -66,6 +66,9 @@ abstract final class Copy {
       'No contested claims or East–West contradictions found in today\'s '
       'coverage.';
   static const String contestedLabel = 'Contested';
+  static const String tileAgreed = 'agreed facts';
+  static const String tileContested = 'contested claims';
+  static const String tileContradictions = 'West–East contradictions';
   static const String contradictionLabel = 'West vs East';
 
   static const String axisLean = 'Political lean';

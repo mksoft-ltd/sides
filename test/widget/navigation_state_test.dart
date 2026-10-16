@@ -125,6 +125,8 @@ void main() {
       WidgetTester tester,
     ) async {
       await pumpSidesApp(tester, size: tabletPortrait);
+      await tester.ensureVisible(axisSwitch(Copy.axisBloc));
+      await tester.pumpAndSettle();
       await tester.tap(axisSwitch(Copy.axisBloc));
       await tester.pumpAndSettle();
       expect(inDetail(side(Copy.blocGroup(Bloc.west))), findsWidgets);
@@ -148,6 +150,8 @@ void main() {
       await pumpSidesApp(tester);
       await tester.tap(find.text(s1.title));
       await tester.pumpAndSettle();
+      await tester.ensureVisible(axisSwitch(Copy.axisBloc));
+      await tester.pumpAndSettle();
       await tester.tap(axisSwitch(Copy.axisBloc));
       await tester.pumpAndSettle();
       expect(side(Copy.blocGroup(Bloc.west)), findsWidgets);
@@ -166,6 +170,8 @@ void main() {
     testWidgets('phone: a story\'s state is its own; another story starts '
         'at Political lean', (WidgetTester tester) async {
       await pumpSidesApp(tester, initialLocation: '/story/${s1.id}');
+      await tester.ensureVisible(axisSwitch(Copy.axisBloc));
+      await tester.pumpAndSettle();
       await tester.tap(axisSwitch(Copy.axisBloc));
       await tester.pumpAndSettle();
       expect(side(Copy.blocGroup(Bloc.west)), findsWidgets);
@@ -192,6 +198,8 @@ void main() {
       WidgetTester tester,
     ) async {
       await pumpSidesApp(tester, initialLocation: '/story/${s1.id}');
+      await tester.ensureVisible(axisSwitch(Copy.axisBloc));
+      await tester.pumpAndSettle();
       await tester.tap(axisSwitch(Copy.axisBloc));
       await tester.pumpAndSettle();
       expect(side(Copy.blocGroup(Bloc.east)), findsWidgets);
@@ -282,6 +290,8 @@ void main() {
         -300,
         scrollable: scrollable,
       );
+      await tester.ensureVisible(axisSwitch(Copy.axisBloc));
+      await tester.pumpAndSettle();
       await tester.tap(axisSwitch(Copy.axisBloc));
       await tester.pumpAndSettle();
       expect(tester.takeException(), isNull);

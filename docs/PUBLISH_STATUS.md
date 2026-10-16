@@ -1,6 +1,9 @@
 # Sides: publish status
 
-## Internal testing builds 4 and 5 (16 Oct 2026, ~00:20–00:45 UTC): UI redesign + In brief
+## Internal testing builds 4, 5 and 6 (16 Oct 2026): UI redesign, In brief, graphical layer
+
+- **1.1.0 (versionCode 6)** (~07:50 UTC): outlet avatars, the header coverage spectrum (tappable zones), section icons,
+  In brief stat tiles, stated-vs-disputed bars. Replaces 5 on the internal track.
 
 - **Play internal track: 1.1.0 (versionCode 4)** uploaded `completed` with en-GB/en-US notes (commit 09a3894: the
   compare-by-dimension story page, source pills + sheet, jump bar, previous/next, signal chips). Replaced minutes later by

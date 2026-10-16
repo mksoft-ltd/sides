@@ -13,6 +13,7 @@ import '../../../digest/domain/digest.dart';
 import '../providers/story_view_controller.dart';
 import 'in_brief_card.dart';
 import 'points.dart';
+import 'source_pills.dart';
 import 'sources_list.dart';
 
 export '../providers/story_view_controller.dart' show PerspectiveAxis;
@@ -135,7 +136,25 @@ class _StoryDetailViewState extends ConsumerState<StoryDetailView> {
                 ),
               ),
               const SizedBox(height: 14),
-              CoverageIndicator(coverage: story.coverage, compact: false),
+              CoverageIndicator(
+                story: story,
+                digest: digest,
+                compact: false,
+                onSideTap: (String side, List<Outlet> outlets) {
+                  final Set<String> ids = <String>{
+                    for (final Outlet o in outlets) o.id,
+                  };
+                  showSourcesSheet(
+                    context,
+                    story: story,
+                    digest: digest,
+                    ids: <String>[
+                      for (final Article a in story.articles)
+                        if (ids.contains(a.outletId)) a.id,
+                    ],
+                  );
+                },
+              ),
               StorySignals(story: story, topPadding: 12),
               if (unrated > 0) ...<Widget>[
                 const SizedBox(height: 8),
@@ -191,6 +210,7 @@ class _StoryDetailViewState extends ConsumerState<StoryDetailView> {
               Section(
                 key: _anchor(_Jump.sources),
                 title: '${Copy.sources} (${story.articles.length})',
+                icon: SectionIcons.sources,
                 children: <Widget>[SourcesList(story: story, digest: digest)],
               ),
               const SizedBox(height: 8),
@@ -294,6 +314,7 @@ class _StoryDetailViewState extends ConsumerState<StoryDetailView> {
       Section(
         key: _anchor(_Jump.headlines),
         title: Copy.headlines,
+        icon: SectionIcons.headlines,
         children: <Widget>[
           sides(
             (Framing<Lean> f) => QuoteList(
@@ -307,6 +328,7 @@ class _StoryDetailViewState extends ConsumerState<StoryDetailView> {
       Section(
         key: _anchor(_Jump.emphasis),
         title: Copy.emphasis,
+        icon: SectionIcons.emphasis,
         children: <Widget>[
           sides(
             (Framing<Lean> f) =>
@@ -317,6 +339,7 @@ class _StoryDetailViewState extends ConsumerState<StoryDetailView> {
       Section(
         key: _anchor(_Jump.agreed),
         title: Copy.agreed,
+        icon: SectionIcons.agreed,
         children: <Widget>[
           PointList(points: story.agreedFacts, story: story, digest: digest),
         ],
@@ -324,6 +347,7 @@ class _StoryDetailViewState extends ConsumerState<StoryDetailView> {
       Section(
         key: _anchor(_Jump.omissions),
         title: Copy.omissions,
+        icon: SectionIcons.omissions,
         children: <Widget>[
           if (omissionsByLean.isEmpty) const NoneFound(),
           for (final MapEntry<Lean, List<Omission>> e
@@ -347,6 +371,7 @@ class _StoryDetailViewState extends ConsumerState<StoryDetailView> {
       Section(
         key: _anchor(_Jump.contested),
         title: Copy.contested,
+        icon: SectionIcons.contested,
         children: <Widget>[
           if (story.contestedClaims.isEmpty) const NoneFound(),
           for (final ContestedClaim c in story.contestedClaims)
@@ -356,6 +381,7 @@ class _StoryDetailViewState extends ConsumerState<StoryDetailView> {
       Section(
         key: _anchor(_Jump.opinion),
         title: Copy.opinion,
+        icon: SectionIcons.opinion,
         subtitle: Copy.opinionNote,
         tinted: true,
         children: <Widget>[
@@ -387,6 +413,7 @@ class _StoryDetailViewState extends ConsumerState<StoryDetailView> {
       Section(
         key: _anchor(_Jump.headlines),
         title: Copy.headlines,
+        icon: SectionIcons.headlines,
         children: <Widget>[
           sides(
             (Framing<Bloc> f) => QuoteList(
@@ -400,6 +427,7 @@ class _StoryDetailViewState extends ConsumerState<StoryDetailView> {
       Section(
         key: _anchor(_Jump.emphasis),
         title: Copy.emphasis,
+        icon: SectionIcons.emphasis,
         children: <Widget>[
           sides(
             (Framing<Bloc> f) =>
@@ -410,6 +438,7 @@ class _StoryDetailViewState extends ConsumerState<StoryDetailView> {
       Section(
         key: _anchor(_Jump.contradictions),
         title: Copy.contradictions,
+        icon: SectionIcons.contradictions,
         subtitle: Copy.contradictionsNote,
         children: <Widget>[
           // Spans the full width, i.e. both bloc columns, in column mode.
@@ -430,6 +459,29 @@ class _StoryDetailViewState extends ConsumerState<StoryDetailView> {
       ),
     ];
   }
+}
+
+/// One icon per section, shared by the section headings and the jump bar.
+abstract final class SectionIcons {
+  static const IconData headlines = Icons.format_quote_outlined;
+  static const IconData emphasis = Icons.highlight_outlined;
+  static const IconData agreed = Icons.handshake_outlined;
+  static const IconData omissions = Icons.visibility_off_outlined;
+  static const IconData contested = Icons.compare_arrows;
+  static const IconData opinion = Icons.chat_bubble_outline;
+  static const IconData contradictions = Icons.swap_horiz;
+  static const IconData sources = Icons.newspaper_outlined;
+
+  static IconData forSection(String id) => switch (id) {
+        _Jump.headlines => headlines,
+        _Jump.emphasis => emphasis,
+        _Jump.agreed => agreed,
+        _Jump.omissions => omissions,
+        _Jump.contested => contested,
+        _Jump.opinion => opinion,
+        _Jump.contradictions => contradictions,
+        _ => sources,
+      };
 }
 
 /// A jump-bar entry: section id, short label, optional count.
@@ -481,6 +533,11 @@ class _JumpBar extends StatelessWidget {
                 onTap: () => onJump(items[i].id),
                 child: ActionChip(
                   key: ValueKey<String>('jump-${items[i].id}'),
+                  avatar: Icon(
+                    SectionIcons.forSection(items[i].id),
+                    size: 16,
+                    color: theme.colorScheme.primary,
+                  ),
                   label: Row(
                     mainAxisSize: MainAxisSize.min,
                     children: <Widget>[

@@ -1,9 +1,12 @@
+import 'dart:math' as math;
+
 import 'package:flutter/material.dart';
 
 import '../../../../core/constants/copy.dart';
 import '../../../digest/domain/digest.dart';
 import '../providers/story_view_controller.dart';
 import 'points.dart';
+import 'story_detail_view.dart' show SectionIcons;
 
 /// Where a disagreement row sends the reader.
 typedef JumpTo = void Function(String sectionId, PerspectiveAxis axis);
@@ -91,6 +94,8 @@ class InBriefCard extends StatelessWidget {
                 ),
               ],
             ),
+            const SizedBox(height: 12),
+            _StatTiles(story: story),
             if (summary != null)
               part(
                 Copy.summaryTitle,
@@ -131,6 +136,95 @@ class InBriefCard extends StatelessWidget {
                       padding: EdgeInsets.only(bottom: 6),
                       child: NoneFound(text: Copy.noDisagreements),
                     ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+/// Three tiles: how much the sources agree on, how many claims are
+/// contested, how many West–East contradictions. Counts of validated items.
+class _StatTiles extends StatelessWidget {
+  const _StatTiles({required this.story});
+  final Story story;
+
+  @override
+  Widget build(BuildContext context) {
+    return LayoutBuilder(
+      builder: (BuildContext context, BoxConstraints c) {
+        const double gap = 8;
+        // A layout swap can hand a transient near-zero width: never negative.
+        final double w = c.maxWidth.isFinite
+            ? math.max(0, (c.maxWidth - gap * 2) / 3)
+            : 120;
+        return Wrap(
+          spacing: gap,
+          runSpacing: gap,
+          children: <Widget>[
+            _StatTile(
+              width: w,
+              icon: SectionIcons.agreed,
+              value: story.agreedFacts.length,
+              label: Copy.tileAgreed,
+            ),
+            _StatTile(
+              width: w,
+              icon: SectionIcons.contested,
+              value: story.contestedClaims.length,
+              label: Copy.tileContested,
+            ),
+            _StatTile(
+              width: w,
+              icon: SectionIcons.contradictions,
+              value: story.contradictions.length,
+              label: Copy.tileContradictions,
+            ),
+          ],
+        );
+      },
+    );
+  }
+}
+
+class _StatTile extends StatelessWidget {
+  const _StatTile({
+    required this.width,
+    required this.icon,
+    required this.value,
+    required this.label,
+  });
+  final double width;
+  final IconData icon;
+  final int value;
+  final String label;
+
+  @override
+  Widget build(BuildContext context) {
+    final ThemeData theme = Theme.of(context);
+    final ColorScheme cs = theme.colorScheme;
+    return Semantics(
+      label: '$value $label',
+      excludeSemantics: true,
+      child: Container(
+        width: width,
+        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+        decoration: BoxDecoration(
+          color: cs.surfaceContainerHigh,
+          borderRadius: BorderRadius.circular(12),
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            Icon(icon, size: 20, color: cs.primary),
+            const SizedBox(height: 6),
+            Text('$value', style: theme.textTheme.titleLarge),
+            Text(
+              label,
+              style: theme.textTheme.labelSmall?.copyWith(
+                color: cs.onSurfaceVariant,
+              ),
             ),
           ],
         ),

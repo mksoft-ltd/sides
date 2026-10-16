@@ -78,6 +78,7 @@ class DigestListView extends ConsumerWidget {
           final Story story = digest.stories[i - 1];
           return StoryCard(
             story: story,
+            digest: digest,
             selected: story.id == selectedStoryId,
             onTap: () => onOpenStory(story),
           );

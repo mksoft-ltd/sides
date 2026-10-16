@@ -168,6 +168,10 @@ void main() {
     await open(tester, digest.stories[0]);
     expect(find.text(Copy.blocGroup(Bloc.west)), findsNothing);
 
+    await tester.ensureVisible(axisSwitch(Copy.axisBloc));
+
+    await tester.pumpAndSettle();
+
     await tester.tap(axisSwitch(Copy.axisBloc));
     await tester.pumpAndSettle();
 
@@ -435,6 +439,10 @@ void main() {
     final Finder previous = find.byKey(StoryDetailScreen.previousKey);
     final Finder next = find.byKey(StoryDetailScreen.nextKey);
     expect(tester.widget<IconButton>(previous).onPressed, isNull);
+
+    await tester.ensureVisible(axisSwitch(Copy.axisBloc));
+
+    await tester.pumpAndSettle();
 
     await tester.tap(axisSwitch(Copy.axisBloc));
     await tester.pumpAndSettle();
