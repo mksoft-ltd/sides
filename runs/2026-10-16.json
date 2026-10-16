@@ -1,117 +1,117 @@
 {
-  "started_at": "2026-10-16T00:37:56.295875Z",
-  "finished_at": "2026-10-16T00:40:10.200125Z",
-  "total_usd": 1.314772,
+  "started_at": "2026-10-16T11:02:40.097058Z",
+  "finished_at": "2026-10-16T11:05:11.995148Z",
+  "total_usd": 1.316548,
   "calls": [
     {
       "stage": "grouping",
       "model": "claude-opus-5-5",
-      "input_tokens": 77592,
-      "output_tokens": 3660,
+      "input_tokens": 78557,
+      "output_tokens": 4670,
       "cache_read_tokens": 0,
       "cache_write_tokens": 0,
-      "usd": 0.383568,
-      "seconds": 44.7
+      "usd": 0.407628,
+      "seconds": 60.5
     },
     {
       "stage": "analysis",
       "model": "claude-opus-5-5",
-      "input_tokens": 5281,
-      "output_tokens": 4417,
+      "input_tokens": 7064,
+      "output_tokens": 5556,
       "cache_read_tokens": 0,
       "cache_write_tokens": 0,
-      "usd": 0.109464,
-      "seconds": 37.0
+      "usd": 0.139376,
+      "seconds": 49.8
     },
     {
       "stage": "analysis",
       "model": "claude-opus-5-5",
-      "input_tokens": 5571,
-      "output_tokens": 4630,
+      "input_tokens": 6340,
+      "output_tokens": 5823,
       "cache_read_tokens": 0,
       "cache_write_tokens": 0,
-      "usd": 0.114884,
-      "seconds": 40.1
+      "usd": 0.14182,
+      "seconds": 72.8
     },
     {
       "stage": "analysis",
       "model": "claude-opus-5-5",
-      "input_tokens": 5566,
-      "output_tokens": 3919,
+      "input_tokens": 5557,
+      "output_tokens": 4477,
       "cache_read_tokens": 0,
       "cache_write_tokens": 0,
-      "usd": 0.100644,
-      "seconds": 33.4
+      "usd": 0.111768,
+      "seconds": 37.8
     },
     {
       "stage": "analysis",
       "model": "claude-opus-5-5",
-      "input_tokens": 5561,
-      "output_tokens": 4885,
+      "input_tokens": 5033,
+      "output_tokens": 3377,
       "cache_read_tokens": 0,
       "cache_write_tokens": 0,
-      "usd": 0.119944,
-      "seconds": 42.8
+      "usd": 0.087672,
+      "seconds": 27.6
     },
     {
       "stage": "analysis",
       "model": "claude-opus-5-5",
-      "input_tokens": 5355,
-      "output_tokens": 3431,
+      "input_tokens": 4687,
+      "output_tokens": 3020,
       "cache_read_tokens": 0,
       "cache_write_tokens": 0,
-      "usd": 0.09004,
-      "seconds": 28.1
+      "usd": 0.079148,
+      "seconds": 24.8
     },
     {
       "stage": "analysis",
       "model": "claude-opus-5-5",
-      "input_tokens": 5225,
-      "output_tokens": 2957,
+      "input_tokens": 4623,
+      "output_tokens": 3130,
       "cache_read_tokens": 0,
       "cache_write_tokens": 0,
-      "usd": 0.08004,
-      "seconds": 24.2
+      "usd": 0.081092,
+      "seconds": 25.5
     },
     {
       "stage": "analysis",
       "model": "claude-opus-5-5",
-      "input_tokens": 4740,
-      "output_tokens": 2828,
+      "input_tokens": 4745,
+      "output_tokens": 2721,
       "cache_read_tokens": 0,
       "cache_write_tokens": 0,
-      "usd": 0.07552,
-      "seconds": 24.1
+      "usd": 0.0734,
+      "seconds": 23.4
     },
     {
       "stage": "analysis",
       "model": "claude-opus-5-5",
-      "input_tokens": 4759,
-      "output_tokens": 3313,
+      "input_tokens": 4815,
+      "output_tokens": 2541,
       "cache_read_tokens": 0,
       "cache_write_tokens": 0,
-      "usd": 0.085296,
-      "seconds": 29.4
+      "usd": 0.07008,
+      "seconds": 21.1
     },
     {
       "stage": "analysis",
       "model": "claude-opus-5-5",
-      "input_tokens": 4681,
-      "output_tokens": 2692,
+      "input_tokens": 4783,
+      "output_tokens": 2228,
       "cache_read_tokens": 0,
       "cache_write_tokens": 0,
-      "usd": 0.072564,
-      "seconds": 22.7
+      "usd": 0.063692,
+      "seconds": 20.0
     },
     {
       "stage": "analysis",
       "model": "claude-opus-5-5",
-      "input_tokens": 4592,
-      "output_tokens": 3222,
+      "input_tokens": 4448,
+      "output_tokens": 2154,
       "cache_read_tokens": 0,
       "cache_write_tokens": 0,
-      "usd": 0.082808,
-      "seconds": 26.4
+      "usd": 0.060872,
+      "seconds": 17.4
     }
   ],
   "warnings": []
