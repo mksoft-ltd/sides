@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:sides/core/theme/app_theme.dart';
 import 'package:sides/features/digest/presentation/widgets/story_card.dart';
-import 'package:sides/features/story/presentation/widgets/source_chips.dart';
+import 'package:sides/features/story/presentation/widgets/points.dart';
 import 'package:sides/features/story/presentation/widgets/story_detail_view.dart';
 import 'package:sides/shared/widgets/sides_mark.dart';
 
@@ -24,8 +24,6 @@ void main() {
         tester,
         initialLocation: '/story/${digest.stories.first.id}',
       );
-      await tester.tap(find.widgetWithText(Tab, 'Right'));
-      await tester.pumpAndSettle();
       // Fox News, story 1: `identified at a "very early stage."`
       const String expected = '“identified at a ‘very early stage.’”';
       await tester.scrollUntilVisible(
@@ -141,25 +139,16 @@ void main() {
     });
   });
 
-  group('5. source chip lines', () {
-    int chipMaxLines(WidgetTester tester) => tester
-        .widget<Text>(
-          find
-              .descendant(
-                of: find.byType(SourceChip).first,
-                matching: find.byType(Text),
-              )
-              .first,
-        )
-        .maxLines!;
-
-    testWidgets('2 lines on a phone', (WidgetTester tester) async {
-      await pumpSidesApp(
+  group('5. quote rows carry no duplicate chip', () {
+    testWidgets('a headline quote names its outlet once and opens the '
+        'article itself', (WidgetTester tester) async {
+      final TestHarness h = await pumpSidesApp(
         tester,
         initialLocation: '/story/${digest.stories.first.id}',
       );
+      final Finder row = find.byType(QuoteRow).first;
       await tester.scrollUntilVisible(
-        find.byType(SourceChip).first,
+        row,
         200,
         scrollable: find
             .descendant(
@@ -168,33 +157,18 @@ void main() {
             )
             .first,
       );
-      expect(chipMaxLines(tester), 2);
+      final QuoteRow quote = tester.widget<QuoteRow>(row);
+      final String outlet = digest
+          .outlet(digest.stories.first.article(quote.quote.articleId)!.outletId)!
+          .name;
+      expect(
+        find.descendant(of: row, matching: find.textContaining(outlet)),
+        findsOneWidget,
+      );
+      await tester.tap(row);
+      await tester.pumpAndSettle();
+      expect(h.launcher.opened, hasLength(1));
     });
-
-    for (final Size size in <Size>[
-      const Size(744, 1133),
-      const Size(1366, 1024),
-    ]) {
-      testWidgets('3 lines at ${size.width.toInt()} dp',
-          (WidgetTester tester) async {
-        await pumpSidesApp(
-          tester,
-          size: size,
-          initialLocation: '/story/${digest.stories.first.id}',
-        );
-        await tester.scrollUntilVisible(
-          find.byType(SourceChip).first,
-          200,
-          scrollable: find
-              .descendant(
-                of: find.byType(StoryDetailView),
-                matching: find.byType(Scrollable),
-              )
-              .first,
-        );
-        expect(chipMaxLines(tester), 3);
-      });
-    }
   });
 
   group('6. rank badge', () {

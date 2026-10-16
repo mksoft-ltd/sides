@@ -143,6 +143,12 @@ void main() {
     addTearDown(tester.platformDispatcher.clearTextScaleFactorTestValue);
     await pumpSidesApp(tester);
     expect(tester.takeException(), isNull);
+    // At 200% the date header and intro fill the first screen.
+    await tester.scrollUntilVisible(
+      find.text(digest.stories.first.title),
+      200,
+      scrollable: find.byType(Scrollable).first,
+    );
     await tester.tap(find.text(digest.stories.first.title));
     await tester.pumpAndSettle();
     expect(tester.takeException(), isNull);

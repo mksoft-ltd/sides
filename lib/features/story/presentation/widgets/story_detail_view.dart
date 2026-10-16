@@ -4,10 +4,10 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../../../core/constants/copy.dart';
 import '../../../../core/layout/breakpoints.dart';
 import '../../../../core/theme/app_theme.dart';
-import '../../../../shared/widgets/blindspot_chips.dart';
 import '../../../../shared/widgets/coverage_indicator.dart';
 import '../../../../shared/widgets/report_story_tile.dart';
 import '../../../../shared/widgets/section.dart';
+import '../../../../shared/widgets/story_signals.dart';
 import '../../../digest/domain/digest.dart';
 import '../providers/story_view_controller.dart';
 import 'points.dart';
@@ -16,13 +16,16 @@ import 'sources_list.dart';
 export '../providers/story_view_controller.dart' show PerspectiveAxis;
 
 /// The whole story page without a scaffold: the phone page and the tablet
-/// detail pane both host it. The axis and tab choice live in
-/// [storyViewProvider], so swapping layouts keeps the reader's place.
+/// detail pane both host it. The axis choice lives in [storyViewProvider],
+/// so swapping layouts keeps the reader's place.
 ///
-/// Perspectives render as tabs, or — at [LayoutSize.expanded] when every
-/// column still gets [minColumnWidth] at the current text scale — as
-/// side-by-side columns (see [columnsFit]).
-class StoryDetailView extends ConsumerWidget {
+/// The comparison is organised by what is compared, not by side: every
+/// section ("Headlines, side by side", "What each side emphasises") shows
+/// every side at once, stacked with a colour rail each, or — at
+/// [LayoutSize.expanded] when every column still gets [minColumnWidth] at
+/// the current text scale — as side-by-side columns (see [columnsFit]).
+/// A jump bar under the axis switch lists the sections with their counts.
+class StoryDetailView extends ConsumerStatefulWidget {
   const StoryDetailView({
     super.key,
     required this.story,
@@ -37,10 +40,14 @@ class StoryDetailView extends ConsumerWidget {
   final PerspectiveAxis initialAxis;
 
   /// Narrowest perspective column, in dp at text scale 1.0. Scaled with the
-  /// text, so at 200% a column needs 560 dp or the view falls back to tabs.
+  /// text, so at 200% a column needs 560 dp or the view falls back to
+  /// stacked sides.
   static const double minColumnWidth = 280;
   static const double columnGap = ContradictionCard.columnGap;
   static const EdgeInsets padding = EdgeInsets.fromLTRB(16, 8, 16, 32);
+
+  static const Key noContradictionsKey = Key('no-contradictions');
+  static const Key analysisUnavailableKey = Key('analysis-unavailable');
 
   /// Whether [count] columns fit side by side in [width] (the content width,
   /// padding already removed) at this context's text scale.
@@ -51,155 +58,209 @@ class StoryDetailView extends ConsumerWidget {
   }
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
+  ConsumerState<StoryDetailView> createState() => _StoryDetailViewState();
+}
+
+class _StoryDetailViewState extends ConsumerState<StoryDetailView> {
+  /// One anchor per section id; the jump bar scrolls to them. The page is a
+  /// single column (not a lazy list) so every anchor is always laid out.
+  final Map<String, GlobalKey> _anchors = <String, GlobalKey>{};
+
+  GlobalKey _anchor(String id) => _anchors.putIfAbsent(id, GlobalKey.new);
+
+  void _jumpTo(String id) {
+    final BuildContext? target = _anchors[id]?.currentContext;
+    if (target == null) return;
+    Scrollable.ensureVisible(
+      target,
+      duration: const Duration(milliseconds: 300),
+      curve: Curves.easeOutCubic,
+    );
+  }
+
+  Story get story => widget.story;
+  Digest get digest => widget.digest;
+
+  @override
+  Widget build(BuildContext context) {
     final StoryViewState view = ref.watch(storyViewProvider(story.id));
     final StoryViewController controller = ref.read(
       storyViewProvider(story.id).notifier,
     );
-    final PerspectiveAxis axis = view.axisOr(initialAxis);
+    final PerspectiveAxis axis = view.axisOr(widget.initialAxis);
     final bool expanded = LayoutSize.of(context) == LayoutSize.expanded;
     final ThemeData theme = Theme.of(context);
     final int unrated = story.outletCount - story.coverage.leanTotal;
 
     return LayoutBuilder(
       builder: (BuildContext context, BoxConstraints c) {
-        final double content = c.maxWidth - padding.horizontal;
-        bool columns(int n) => expanded && columnsFit(context, content, n);
+        final double content = c.maxWidth - StoryDetailView.padding.horizontal;
+        bool columns(int n) =>
+            expanded && StoryDetailView.columnsFit(context, content, n);
 
-        return ListView(
-          padding: padding,
-          children: <Widget>[
-            Semantics(
-              header: true,
-              child: Text(story.title, style: theme.textTheme.headlineSmall),
-            ),
-            const SizedBox(height: 6),
-            Text(
-              'Covered by ${Copy.outletCount(story.outletCount)}',
-              style: theme.textTheme.bodyMedium?.copyWith(
-                color: theme.colorScheme.onSurfaceVariant,
+        return SingleChildScrollView(
+          padding: StoryDetailView.padding,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: <Widget>[
+              Semantics(
+                header: true,
+                child: Text(story.title, style: theme.textTheme.headlineSmall),
               ),
-            ),
-            const SizedBox(height: 16),
-            CoverageIndicator(coverage: story.coverage, compact: false),
-            BlindspotChips(blindspot: story.blindspot),
-            if (unrated > 0) ...<Widget>[
-              const SizedBox(height: 10),
+              const SizedBox(height: 6),
               Text(
-                Copy.unratedNote(unrated),
-                style: theme.textTheme.bodySmall?.copyWith(
+                'Covered by ${Copy.outletCount(story.outletCount)}',
+                style: theme.textTheme.bodyMedium?.copyWith(
                   color: theme.colorScheme.onSurfaceVariant,
                 ),
               ),
-            ],
-            const SizedBox(height: 24),
-            if (story.analysisUnavailable)
-              const Section(
-                title: Copy.analysisUnavailableTitle,
-                children: <Widget>[
-                  NoneFound(
-                    key: StoryDetailView.analysisUnavailableKey,
-                    text: Copy.analysisUnavailable,
+              const SizedBox(height: 14),
+              CoverageIndicator(coverage: story.coverage, compact: false),
+              StorySignals(story: story, topPadding: 12),
+              if (unrated > 0) ...<Widget>[
+                const SizedBox(height: 8),
+                Text(
+                  Copy.unratedNote(unrated),
+                  style: theme.textTheme.bodySmall?.copyWith(
+                    color: theme.colorScheme.onSurfaceVariant,
                   ),
-                ],
-              )
-            else ...<Widget>[
-              SegmentedButton<PerspectiveAxis>(
-              showSelectedIcon: false,
-              segments: const <ButtonSegment<PerspectiveAxis>>[
-                ButtonSegment<PerspectiveAxis>(
-                  value: PerspectiveAxis.lean,
-                  label: Text(Copy.axisLean),
-                ),
-                ButtonSegment<PerspectiveAxis>(
-                  value: PerspectiveAxis.bloc,
-                  label: Text(Copy.axisBloc),
                 ),
               ],
-              selected: <PerspectiveAxis>{axis},
-              onSelectionChanged: (Set<PerspectiveAxis> s) =>
-                  controller.setAxis(s.first),
-            ),
-            const SizedBox(height: 8),
-            if (axis == PerspectiveAxis.lean)
-              ..._leanView(
-                context,
-                view,
-                controller,
-                columns: columns(story.leansPresent.length),
-              )
-            else
-              ..._blocView(
-                context,
-                view,
-                controller,
-                // Contradiction rows always need a West and an East column.
-                columns: columns(2),
+              const SizedBox(height: 20),
+              if (story.analysisUnavailable)
+                const Section(
+                  title: Copy.analysisUnavailableTitle,
+                  children: <Widget>[
+                    NoneFound(
+                      key: StoryDetailView.analysisUnavailableKey,
+                      text: Copy.analysisUnavailable,
+                    ),
+                  ],
+                )
+              else ...<Widget>[
+                SegmentedButton<PerspectiveAxis>(
+                  showSelectedIcon: false,
+                  segments: const <ButtonSegment<PerspectiveAxis>>[
+                    ButtonSegment<PerspectiveAxis>(
+                      value: PerspectiveAxis.lean,
+                      label: Text(Copy.axisLean),
+                    ),
+                    ButtonSegment<PerspectiveAxis>(
+                      value: PerspectiveAxis.bloc,
+                      label: Text(Copy.axisBloc),
+                    ),
+                  ],
+                  selected: <PerspectiveAxis>{axis},
+                  onSelectionChanged: (Set<PerspectiveAxis> s) =>
+                      controller.setAxis(s.first),
+                ),
+                const SizedBox(height: 10),
+                _JumpBar(
+                  items: axis == PerspectiveAxis.lean
+                      ? _leanJumps()
+                      : _blocJumps(),
+                  onJump: _jumpTo,
+                ),
+                if (axis == PerspectiveAxis.lean)
+                  ..._leanSections(context, columns)
+                else
+                  ..._blocSections(context, columns),
+              ],
+              Section(
+                key: _anchor(_Jump.sources),
+                title: '${Copy.sources} (${story.articles.length})',
+                children: <Widget>[SourcesList(story: story, digest: digest)],
               ),
+              const SizedBox(height: 8),
+              ReportStoryTile(title: story.title, date: digest.date),
             ],
-            Section(
-              title: '${Copy.sources} (${story.articles.length})',
-              children: <Widget>[SourcesList(story: story, digest: digest)],
-            ),
-            ReportStoryTile(title: story.title, date: digest.date),
-          ],
+          ),
         );
       },
     );
   }
 
-  List<Widget> _leanView(
-    BuildContext context,
-    StoryViewState view,
-    StoryViewController controller, {
+  List<_Jump> _leanJumps() => <_Jump>[
+        const _Jump(_Jump.headlines, Copy.jumpHeadlines),
+        const _Jump(_Jump.emphasis, Copy.jumpEmphasis),
+        _Jump(_Jump.agreed, Copy.jumpAgreed, story.agreedFacts.length),
+        _Jump(_Jump.omissions, Copy.jumpOmissions, story.omissions.length),
+        _Jump(_Jump.contested, Copy.jumpContested, story.contestedClaims.length),
+        _Jump(_Jump.opinion, Copy.jumpOpinion, story.opinion.length),
+        _Jump(_Jump.sources, Copy.jumpSources, story.articles.length),
+      ];
+
+  List<_Jump> _blocJumps() => <_Jump>[
+        const _Jump(_Jump.headlines, Copy.jumpHeadlines),
+        const _Jump(_Jump.emphasis, Copy.jumpEmphasis),
+        _Jump(
+          _Jump.contradictions,
+          Copy.jumpContradictions,
+          story.contradictions.length,
+        ),
+        _Jump(_Jump.sources, Copy.jumpSources, story.articles.length),
+      ];
+
+  /// Every side of the axis, as columns when they fit, else stacked with a
+  /// rail each. [cell] builds one side's content.
+  Widget _sides<G>({
+    required List<G> sides,
     required bool columns,
+    required Color Function(G) color,
+    required String Function(G) label,
+    required int Function(G) count,
+    required String Function(G) wire,
+    required Widget Function(G) cell,
   }) {
+    if (sides.isEmpty) return const NoneFound();
+    if (columns) {
+      return PerspectiveColumns(
+        columns: <PerspectiveColumn>[
+          for (final G g in sides)
+            PerspectiveColumn(
+              key: PerspectiveColumns.keyFor(wire(g)),
+              color: color(g),
+              label: label(g),
+              count: count(g),
+              child: cell(g),
+            ),
+        ],
+      );
+    }
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: <Widget>[
+        for (int i = 0; i < sides.length; i++)
+          Padding(
+            padding: EdgeInsets.only(bottom: i == sides.length - 1 ? 0 : 18),
+            child: SideBlock(
+              color: color(sides[i]),
+              label: label(sides[i]),
+              count: count(sides[i]),
+              child: cell(sides[i]),
+            ),
+          ),
+      ],
+    );
+  }
+
+  List<Widget> _leanSections(
+    BuildContext context,
+    bool Function(int) columns,
+  ) {
     final List<Lean> leans = story.leansPresent;
     final PerspectiveColors colors = PerspectiveColors.of(context);
+    final bool asColumns = columns(leans.length);
 
-    FramingPanel panel(Framing<Lean> f) => FramingPanel(
-      groupLabel: Copy.leanGroup(f.group),
-      quotes: f.headlineQuotes,
-      emphasis: f.emphasis,
-      story: story,
-      digest: digest,
-    );
-
-    final List<Widget> perspectives;
-    if (columns) {
-      perspectives = <Widget>[
-        const SizedBox(height: 16),
-        PerspectiveColumns(
-          columns: <PerspectiveColumn>[
-            for (final Lean l in leans)
-              PerspectiveColumn(
-                key: PerspectiveColumns.keyFor(l.wire),
-                color: colors.forLean(l),
-                child: panel(story.framingFor(l)!),
-              ),
-          ],
-        ),
-      ];
-    } else {
-      final int index = view.leanTab.clamp(
-        0,
-        leans.isEmpty ? 0 : leans.length - 1,
-      );
-      final Framing<Lean>? framing = leans.isEmpty
-          ? null
-          : story.framingFor(leans[index]);
-      perspectives = <Widget>[
-        if (leans.isNotEmpty)
-          _Tabs(
-            key: ValueKey<String>('lean-${story.id}'),
-            labels: <String>[for (final Lean l in leans) l.label],
-            index: index,
-            onTap: controller.setLeanTab,
-          ),
-        const SizedBox(height: 16),
-        if (framing != null) panel(framing) else const NoneFound(),
-      ];
-    }
+    Widget sides(Widget Function(Framing<Lean>) cell) => _sides<Lean>(
+          sides: leans,
+          columns: asColumns,
+          color: colors.forLean,
+          label: Copy.leanGroup,
+          count: story.coverage.forLean,
+          wire: (Lean l) => l.wire,
+          cell: (Lean l) => cell(story.framingFor(l)!),
+        );
 
     final Map<Lean, List<Omission>> omissionsByLean = <Lean, List<Omission>>{
       for (final Lean l in Lean.values)
@@ -208,34 +269,61 @@ class StoryDetailView extends ConsumerWidget {
     };
 
     return <Widget>[
-      ...perspectives,
       Section(
-        title: Copy.agreed,
+        key: _anchor(_Jump.headlines),
+        title: Copy.headlines,
         children: <Widget>[
-          if (story.agreedFacts.isEmpty) const NoneFound(),
-          for (final SourcedPoint p in story.agreedFacts)
-            SourcedPointTile(point: p, story: story, digest: digest),
+          sides(
+            (Framing<Lean> f) => QuoteList(
+              quotes: f.headlineQuotes,
+              story: story,
+              digest: digest,
+            ),
+          ),
         ],
       ),
       Section(
+        key: _anchor(_Jump.emphasis),
+        title: Copy.emphasis,
+        children: <Widget>[
+          sides(
+            (Framing<Lean> f) =>
+                PointList(points: f.emphasis, story: story, digest: digest),
+          ),
+        ],
+      ),
+      Section(
+        key: _anchor(_Jump.agreed),
+        title: Copy.agreed,
+        children: <Widget>[
+          PointList(points: story.agreedFacts, story: story, digest: digest),
+        ],
+      ),
+      Section(
+        key: _anchor(_Jump.omissions),
         title: Copy.omissions,
         children: <Widget>[
           if (omissionsByLean.isEmpty) const NoneFound(),
           for (final MapEntry<Lean, List<Omission>> e
-              in omissionsByLean.entries) ...<Widget>[
+              in omissionsByLean.entries)
             Padding(
-              padding: const EdgeInsets.only(bottom: 8),
-              child: Text(
-                Copy.omissionHeading(e.key),
-                style: Theme.of(context).textTheme.labelLarge,
+              padding: const EdgeInsets.only(bottom: 18),
+              child: SideBlock(
+                color: colors.forLean(e.key),
+                label: Copy.omissionHeading(e.key),
+                child: PointList(
+                  points: <SourcedPoint>[
+                    for (final Omission o in e.value) o.point,
+                  ],
+                  story: story,
+                  digest: digest,
+                ),
               ),
             ),
-            for (final Omission o in e.value)
-              SourcedPointTile(point: o.point, story: story, digest: digest),
-          ],
         ],
       ),
       Section(
+        key: _anchor(_Jump.contested),
         title: Copy.contested,
         children: <Widget>[
           if (story.contestedClaims.isEmpty) const NoneFound(),
@@ -244,75 +332,63 @@ class StoryDetailView extends ConsumerWidget {
         ],
       ),
       Section(
+        key: _anchor(_Jump.opinion),
         title: Copy.opinion,
         subtitle: Copy.opinionNote,
         tinted: true,
         children: <Widget>[
-          if (story.opinion.isEmpty) const NoneFound(),
-          for (final SourcedPoint p in story.opinion)
-            SourcedPointTile(point: p, story: story, digest: digest),
+          PointList(points: story.opinion, story: story, digest: digest),
         ],
       ),
     ];
   }
 
-  List<Widget> _blocView(
+  List<Widget> _blocSections(
     BuildContext context,
-    StoryViewState view,
-    StoryViewController controller, {
-    required bool columns,
-  }) {
+    bool Function(int) columns,
+  ) {
     final List<Bloc> blocs = story.blocsPresent;
     final PerspectiveColors colors = PerspectiveColors.of(context);
+    final bool asColumns = columns(blocs.length);
 
-    FramingPanel panel(Framing<Bloc> f) => FramingPanel(
-      groupLabel: Copy.blocGroup(f.group),
-      quotes: f.headlineQuotes,
-      emphasis: f.emphasis,
-      story: story,
-      digest: digest,
-    );
-
-    final List<Widget> perspectives;
-    if (columns) {
-      perspectives = <Widget>[
-        const SizedBox(height: 16),
-        PerspectiveColumns(
-          columns: <PerspectiveColumn>[
-            for (final Bloc b in blocs)
-              PerspectiveColumn(
-                key: PerspectiveColumns.keyFor(b.wire),
-                color: colors.forBloc(b),
-                child: panel(story.framingForBloc(b)!),
-              ),
-          ],
-        ),
-      ];
-    } else {
-      final int index = view.blocTab.clamp(
-        0,
-        blocs.isEmpty ? 0 : blocs.length - 1,
-      );
-      final Framing<Bloc>? framing = blocs.isEmpty
-          ? null
-          : story.framingForBloc(blocs[index]);
-      perspectives = <Widget>[
-        if (blocs.isNotEmpty)
-          _Tabs(
-            key: ValueKey<String>('bloc-${story.id}'),
-            labels: <String>[for (final Bloc b in blocs) b.label],
-            index: index,
-            onTap: controller.setBlocTab,
-          ),
-        const SizedBox(height: 16),
-        if (framing != null) panel(framing) else const NoneFound(),
-      ];
-    }
+    Widget sides(Widget Function(Framing<Bloc>) cell) => _sides<Bloc>(
+          sides: blocs,
+          columns: asColumns,
+          color: colors.forBloc,
+          label: Copy.blocGroup,
+          count: story.coverage.forBloc,
+          wire: (Bloc b) => b.wire,
+          cell: (Bloc b) => cell(story.framingForBloc(b)!),
+        );
 
     return <Widget>[
-      ...perspectives,
       Section(
+        key: _anchor(_Jump.headlines),
+        title: Copy.headlines,
+        children: <Widget>[
+          sides(
+            (Framing<Bloc> f) => QuoteList(
+              quotes: f.headlineQuotes,
+              story: story,
+              digest: digest,
+            ),
+          ),
+        ],
+      ),
+      Section(
+        key: _anchor(_Jump.emphasis),
+        title: Copy.emphasis,
+        children: <Widget>[
+          sides(
+            (Framing<Bloc> f) =>
+                PointList(points: f.emphasis, story: story, digest: digest),
+          ),
+        ],
+      ),
+      Section(
+        key: _anchor(_Jump.contradictions),
         title: Copy.contradictions,
+        subtitle: Copy.contradictionsNote,
         children: <Widget>[
           // Spans the full width, i.e. both bloc columns, in column mode.
           if (story.contradictions.isEmpty)
@@ -325,15 +401,88 @@ class StoryDetailView extends ConsumerWidget {
               contradiction: c,
               story: story,
               digest: digest,
-              sideBySide: columns,
+              // Contradiction rows always need a West and an East column.
+              sideBySide: columns(2),
             ),
         ],
       ),
     ];
   }
+}
 
-  static const Key noContradictionsKey = Key('no-contradictions');
-  static const Key analysisUnavailableKey = Key('analysis-unavailable');
+/// A jump-bar entry: section id, short label, optional count.
+class _Jump {
+  const _Jump(this.id, this.label, [this.count]);
+  final String id;
+  final String label;
+  final int? count;
+
+  static const String headlines = 'headlines';
+  static const String emphasis = 'emphasis';
+  static const String agreed = 'agreed';
+  static const String omissions = 'omissions';
+  static const String contested = 'contested';
+  static const String opinion = 'opinion';
+  static const String contradictions = 'contradictions';
+  static const String sources = 'sources';
+}
+
+/// "On this page": one chip per section, with its count, scrolling the page
+/// to that section. Horizontal, so it never grows the page.
+class _JumpBar extends StatelessWidget {
+  const _JumpBar({required this.items, required this.onJump});
+
+  final List<_Jump> items;
+  final ValueChanged<String> onJump;
+
+  @override
+  Widget build(BuildContext context) {
+    final ThemeData theme = Theme.of(context);
+    return Semantics(
+      container: true,
+      label: Copy.onThisPage,
+      explicitChildNodes: true,
+      child: SingleChildScrollView(
+        scrollDirection: Axis.horizontal,
+        clipBehavior: Clip.none,
+        child: Row(
+          children: <Widget>[
+            for (int i = 0; i < items.length; i++) ...<Widget>[
+              if (i > 0) const SizedBox(width: 6),
+              Semantics(
+                button: true,
+                label: items[i].count == null
+                    ? '${items[i].label}. Jumps to the section.'
+                    : '${items[i].label}, ${items[i].count}. '
+                        'Jumps to the section.',
+                excludeSemantics: true,
+                onTap: () => onJump(items[i].id),
+                child: ActionChip(
+                  key: ValueKey<String>('jump-${items[i].id}'),
+                  label: Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: <Widget>[
+                      Text(items[i].label),
+                      if (items[i].count case final int n) ...<Widget>[
+                        const SizedBox(width: 5),
+                        Text(
+                          '$n',
+                          style: theme.textTheme.labelSmall?.copyWith(
+                            color: theme.colorScheme.onSurfaceVariant,
+                          ),
+                        ),
+                      ],
+                    ],
+                  ),
+                  onPressed: () => onJump(items[i].id),
+                ),
+              ),
+            ],
+          ],
+        ),
+      ),
+    );
+  }
 }
 
 /// Equal-width perspective columns that scroll with the page. Each column
@@ -361,55 +510,27 @@ class PerspectiveColumns extends StatelessWidget {
   }
 }
 
+/// One side as a column: a [SideBlock] with its rail along the top.
 class PerspectiveColumn extends StatelessWidget {
   const PerspectiveColumn({
     super.key,
     required this.color,
+    required this.label,
     required this.child,
+    this.count,
   });
 
   final Color color;
+  final String label;
+  final int? count;
   final Widget child;
 
   @override
-  Widget build(BuildContext context) {
-    return Semantics(
-      container: true,
-      explicitChildNodes: true,
-      child: Container(
-        padding: const EdgeInsets.only(top: 12),
-        decoration: BoxDecoration(
-          border: Border(top: BorderSide(color: color, width: 4)),
-        ),
+  Widget build(BuildContext context) => SideBlock(
+        color: color,
+        label: label,
+        count: count,
+        rail: RailSide.top,
         child: child,
-      ),
-    );
-  }
-}
-
-/// Material tabs that switch the panel below them in place (no
-/// TabBarView, which needs a fixed height and fights the outer scroll).
-class _Tabs extends StatelessWidget {
-  const _Tabs({
-    super.key,
-    required this.labels,
-    required this.index,
-    required this.onTap,
-  });
-
-  final List<String> labels;
-  final int index;
-  final ValueChanged<int> onTap;
-
-  @override
-  Widget build(BuildContext context) {
-    return DefaultTabController(
-      length: labels.length,
-      initialIndex: index,
-      child: TabBar(
-        onTap: onTap,
-        tabs: <Widget>[for (final String l in labels) Tab(text: l)],
-      ),
-    );
-  }
+      );
 }

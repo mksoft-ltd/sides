@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 
 import '../../../../core/constants/copy.dart';
-import '../../../../shared/widgets/blindspot_chips.dart';
 import '../../../../shared/widgets/coverage_indicator.dart';
+import '../../../../shared/widgets/story_signals.dart';
 import '../../domain/digest.dart';
 
+/// One story in the digest list: rank and title, the coverage bars, the
+/// signals that make it worth comparing (blindspots, contested claims,
+/// contradictions), and the outlet count with a "Compare coverage" cue.
 class StoryCard extends StatelessWidget {
   const StoryCard({
     super.key,
@@ -36,7 +39,7 @@ class StoryCard extends StatelessWidget {
       child: InkWell(
         onTap: onTap,
         child: Padding(
-          padding: const EdgeInsets.all(16),
+          padding: const EdgeInsets.fromLTRB(16, 14, 16, 10),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
@@ -52,13 +55,13 @@ class StoryCard extends StatelessWidget {
                       alignment: Alignment.center,
                       decoration: BoxDecoration(
                         // Neutral: colour is kept for the perspectives (BRAND.md).
-                        color: theme.colorScheme.surfaceContainerHighest,
+                        color: cs.surfaceContainerHighest,
                         shape: BoxShape.circle,
                       ),
                       child: Text(
                         '${story.rank}',
                         style: theme.textTheme.labelLarge?.copyWith(
-                          color: theme.colorScheme.onSurface,
+                          color: cs.onSurface,
                         ),
                       ),
                     ),
@@ -69,16 +72,41 @@ class StoryCard extends StatelessWidget {
                   ),
                 ],
               ),
-              const SizedBox(height: 10),
-              Text(
-                Copy.outletCount(story.outletCount),
-                style: theme.textTheme.labelMedium?.copyWith(
-                  color: theme.colorScheme.onSurfaceVariant,
-                ),
-              ),
-              const SizedBox(height: 8),
+              const SizedBox(height: 12),
               CoverageIndicator(coverage: story.coverage),
-              BlindspotChips(blindspot: story.blindspot),
+              StorySignals(story: story),
+              const SizedBox(height: 8),
+              // Outlet count left, the cue right; the cue drops to its own
+              // line when both do not fit (narrow phones, large text).
+              Wrap(
+                alignment: WrapAlignment.spaceBetween,
+                crossAxisAlignment: WrapCrossAlignment.center,
+                children: <Widget>[
+                  Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 6),
+                    child: Text(
+                      Copy.outletCount(story.outletCount),
+                      style: theme.textTheme.labelMedium?.copyWith(
+                        color: cs.onSurfaceVariant,
+                      ),
+                    ),
+                  ),
+                  Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: <Widget>[
+                      Flexible(
+                        child: Text(
+                          Copy.compare,
+                          style: theme.textTheme.labelLarge?.copyWith(
+                            color: cs.primary,
+                          ),
+                        ),
+                      ),
+                      Icon(Icons.chevron_right, size: 20, color: cs.primary),
+                    ],
+                  ),
+                ],
+              ),
             ],
           ),
         ),

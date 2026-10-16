@@ -18,7 +18,7 @@ import '../helpers/fakes.dart';
 import '../helpers/pump_app.dart';
 
 /// Deep links (`/story/:id?axis=bloc`), stale links, cold-start links, and
-/// the per-story axis/tab state across navigation and layout swaps.
+/// the per-story axis state across navigation and layout swaps.
 void main() {
   final Digest digest = sampleDigest();
   final Story s1 = digest.stories[0];
@@ -26,7 +26,8 @@ void main() {
   const Size tabletPortrait = Size(1024, 1366);
   const Size tabletLandscape = Size(1366, 1024);
 
-  Finder tab(String label) => find.widgetWithText(Tab, label);
+  /// A side's heading, present only while that axis is shown.
+  Finder side(String label) => find.text(label);
   Finder detailPane() => find.byKey(MasterDetailScreen.detailPaneKey);
   Finder inDetail(Finder f) => find.descendant(of: detailPane(), matching: f);
   Finder axisSwitch(String label) => find.descendant(
@@ -38,18 +39,6 @@ void main() {
   String location(WidgetTester tester) => GoRouter.of(
     tester.element(find.byType(Scaffold).last),
   ).routerDelegate.currentConfiguration.uri.toString();
-
-  bool selected(WidgetTester tester, String label) {
-    final TabBar bar = tester.widget<TabBar>(
-      find.ancestor(of: tab(label), matching: find.byType(TabBar)),
-    );
-    final TabController? c = DefaultTabController.maybeOf(
-      tester.element(find.byWidget(bar)),
-    );
-    return c != null &&
-        bar.tabs.indexWhere((Widget t) => t is Tab && t.text == label) ==
-            c.index;
-  }
 
   group('deep links', () {
     testWidgets('a stale story id on phone: friendly message, no banner, '
@@ -92,8 +81,8 @@ void main() {
         tester,
         initialLocation: '/story/${s1.id}?axis=everything',
       );
-      expect(tab('Left'), findsOneWidget);
-      expect(tab('West'), findsNothing);
+      expect(side(Copy.leanGroup(Lean.left)), findsWidgets);
+      expect(side(Copy.blocGroup(Bloc.west)), findsNothing);
     });
 
     testWidgets('?axis=bloc at 1366 dp opens the West / East columns', (
@@ -104,8 +93,8 @@ void main() {
         size: tabletLandscape,
         initialLocation: '/story/${s1.id}?axis=bloc',
       );
-      expect(column('west'), findsOneWidget);
-      expect(column('east'), findsOneWidget);
+      expect(column('west'), findsWidgets);
+      expect(column('east'), findsWidgets);
       expect(column('left'), findsNothing);
     });
 
@@ -126,19 +115,19 @@ void main() {
       );
       expect(h.requests, hasLength(1));
       expect(find.text('1 of 10'), findsOneWidget);
-      expect(tab('West'), findsOneWidget);
+      expect(side(Copy.blocGroup(Bloc.west)), findsWidgets);
       expect(find.byKey(FakeAdsService.bannerKey), findsOneWidget);
     });
   });
 
-  group('axis and tab state', () {
+  group('axis state', () {
     testWidgets('tablet: the reader\'s axis carries over to the next story', (
       WidgetTester tester,
     ) async {
       await pumpSidesApp(tester, size: tabletPortrait);
       await tester.tap(axisSwitch(Copy.axisBloc));
       await tester.pumpAndSettle();
-      expect(inDetail(tab('West')), findsOneWidget);
+      expect(inDetail(side(Copy.blocGroup(Bloc.west))), findsWidgets);
 
       await tester.tap(
         find.descendant(
@@ -149,8 +138,8 @@ void main() {
       await tester.pumpAndSettle();
       expect(location(tester), '/story/${s3.id}?axis=bloc');
       expect(inDetail(find.text(s3.title)), findsOneWidget);
-      expect(inDetail(tab('West')), findsOneWidget);
-      expect(inDetail(tab('Left')), findsNothing);
+      expect(inDetail(side(Copy.blocGroup(Bloc.west))), findsWidgets);
+      expect(inDetail(side(Copy.leanGroup(Lean.left))), findsNothing);
     });
 
     testWidgets('phone: reopening a story afresh starts from its route axis', (
@@ -161,25 +150,25 @@ void main() {
       await tester.pumpAndSettle();
       await tester.tap(axisSwitch(Copy.axisBloc));
       await tester.pumpAndSettle();
-      expect(tab('West'), findsOneWidget);
+      expect(side(Copy.blocGroup(Bloc.west)), findsWidgets);
 
       await tester.pageBack();
       await tester.pumpAndSettle();
       await tester.tap(find.text(s1.title));
       await tester.pumpAndSettle();
       expect(
-        tab('Left'),
-        findsOneWidget,
+        side(Copy.leanGroup(Lean.left)),
+        findsWidgets,
         reason: 'state is per visit (autoDispose), not sticky forever',
       );
     });
 
     testWidgets('phone: a story\'s state is its own; another story starts '
-        'at Left', (WidgetTester tester) async {
+        'at Political lean', (WidgetTester tester) async {
       await pumpSidesApp(tester, initialLocation: '/story/${s1.id}');
-      await tester.tap(tab('Right'));
+      await tester.tap(axisSwitch(Copy.axisBloc));
       await tester.pumpAndSettle();
-      expect(selected(tester, 'Right'), isTrue);
+      expect(side(Copy.blocGroup(Bloc.west)), findsWidgets);
 
       unawaited(
         GoRouter.of(
@@ -187,33 +176,35 @@ void main() {
         ).push<void>('/story/${s3.id}'),
       );
       await tester.pumpAndSettle();
-      expect(selected(tester, 'Left'), isTrue);
+      expect(side(Copy.leanGroup(Lean.left)), findsWidgets);
+      expect(side(Copy.blocGroup(Bloc.west)), findsNothing);
 
       await tester.pageBack();
       await tester.pumpAndSettle();
       expect(
-        selected(tester, 'Right'),
-        isTrue,
-        reason: 'story 1 is still on screen underneath, so its tab stays',
+        side(Copy.blocGroup(Bloc.west)),
+        findsWidgets,
+        reason: 'story 1 is still on screen underneath, so its axis stays',
       );
     });
 
-    testWidgets('the lean tab survives phone -> columns -> phone', (
+    testWidgets('the axis survives phone -> columns -> phone', (
       WidgetTester tester,
     ) async {
       await pumpSidesApp(tester, initialLocation: '/story/${s1.id}');
-      await tester.tap(tab('Right'));
+      await tester.tap(axisSwitch(Copy.axisBloc));
       await tester.pumpAndSettle();
-      expect(find.text(Copy.leanGroup(Lean.right)), findsWidgets);
+      expect(side(Copy.blocGroup(Bloc.east)), findsWidgets);
 
       tester.view.physicalSize = tabletLandscape * 3;
       await tester.pumpAndSettle();
-      expect(column('right'), findsOneWidget);
+      expect(column('east'), findsWidgets);
 
       tester.view.physicalSize = phoneSize * 3;
       await tester.pumpAndSettle();
       expect(find.byType(StoryDetailScreen), findsOneWidget);
-      expect(selected(tester, 'Right'), isTrue);
+      expect(side(Copy.blocGroup(Bloc.east)), findsWidgets);
+      expect(side(Copy.leanGroup(Lean.left)), findsNothing);
     });
   });
 

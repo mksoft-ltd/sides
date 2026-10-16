@@ -32,6 +32,8 @@ abstract final class Copy {
   static String storyPosition(int rank, int total) => '$rank of $total';
   static String storyPositionSpoken(int rank, int total) =>
       'Story $rank of $total';
+  static const String previousStory = 'Previous story';
+  static const String nextStory = 'Next story';
 
   static String outletCount(int n) => n == 1 ? '1 outlet' : '$n outlets';
 
@@ -39,10 +41,27 @@ abstract final class Copy {
       ? '1 outlet has no political-lean rating, so it counts only in West / East.'
       : '$n outlets have no political-lean rating, so they count only in West / East.';
 
+  /// Signal chips on a story card: counts of what the analysis found. They
+  /// say where the disagreement is, never who is right.
+  static String contestedCount(int n) =>
+      n == 1 ? '1 contested claim' : '$n contested claims';
+  static String contradictionCount(int n) =>
+      n == 1 ? '1 East–West contradiction' : '$n East–West contradictions';
+  static const String analysisUnavailableShort = 'Analysis unavailable';
+  static const String compare = 'Compare coverage';
+
+  /// Under the date on the digest list.
+  static const String digestIntro =
+      'How outlets across the political spectrum, and from West and East, '
+      'covered today\'s top stories.';
+
   static const String axisLean = 'Political lean';
   static const String axisBloc = 'West / East';
-  static const String headlineWording = 'Headline wording';
-  static const String emphasis = 'What they emphasise';
+
+  /// Section titles. The comparison sections put every side on the page at
+  /// once, grouped by what is being compared rather than by side.
+  static const String headlines = 'Headlines, side by side';
+  static const String emphasis = 'What each side emphasises';
   static const String agreed = 'What all sources agree on';
   static const String omissions = 'What each side leaves out';
   static const String contested = 'Contested claims';
@@ -50,6 +69,8 @@ abstract final class Copy {
   static const String opinionNote =
       'Commentary and analysis pieces, kept apart from the reporting above.';
   static const String contradictions = 'East–West contradictions';
+  static const String contradictionsNote =
+      'Topics where Western and Eastern outlets state incompatible things.';
   static const String noContradictions =
       'No contradictions found in today\'s coverage';
   static const String noneFound = 'None found in today\'s coverage.';
@@ -61,6 +82,28 @@ abstract final class Copy {
   static const String disputedBy = 'Disputed by';
   static const String sources = 'Sources';
   static const String noLeanRating = 'No lean rating';
+
+  /// Jump-bar labels: short, and never the same text as a section title, so
+  /// each appears on the page exactly once.
+  static const String jumpHeadlines = 'Headlines';
+  static const String jumpEmphasis = 'Emphasis';
+  static const String jumpAgreed = 'Agreed';
+  static const String jumpOmissions = 'Left out';
+  static const String jumpContested = 'Contested';
+  static const String jumpOpinion = 'Opinion';
+  static const String jumpContradictions = 'Contradictions';
+  static const String jumpSources = 'Sources';
+  static const String onThisPage = 'On this page';
+
+  /// Under a quote: which outlet it is from and whether it is the headline
+  /// or the feed summary ("snippet" in the data, "summary" to a reader).
+  static String quoteOrigin(String outlet, QuoteField field) =>
+      '$outlet · ${field == QuoteField.headline ? 'headline' : 'summary'}';
+
+  static const String sourcesForPoint = 'Sources for this point';
+  static String sourcesSheetCount(int n) =>
+      n == 1 ? '1 article backs this point' : '$n articles back this point';
+  static String moreSources(int n) => '+$n more';
 
   static const String howItWorks =
       'Once a day Sides collects headlines and short summaries from news '

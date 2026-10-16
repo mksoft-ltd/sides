@@ -10,7 +10,8 @@ import 'package:sides/features/digest/data/digest_cache.dart';
 import 'package:sides/features/digest/domain/digest.dart';
 import 'package:sides/features/digest/presentation/screens/master_detail_screen.dart';
 import 'package:sides/features/story/presentation/providers/story_view_controller.dart';
-import 'package:sides/features/story/presentation/widgets/source_chips.dart';
+import 'package:sides/features/story/presentation/widgets/source_pills.dart';
+import 'package:sides/features/story/presentation/widgets/sources_list.dart';
 import 'package:sides/features/story/presentation/widgets/story_detail_view.dart';
 import 'package:sides/shared/widgets/coverage_indicator.dart';
 
@@ -20,7 +21,7 @@ import '../helpers/pump_app.dart';
 /// Screen-reader labels pinned to hand-written literals (the existing tests
 /// build the expected label from the same function the widget uses, which
 /// proves agreement, not wording), plus a 200 % text sweep of every story,
-/// both axes and every tab, scrolled top to bottom, on the smallest phone
+/// both axes, scrolled top to bottom, on the smallest phone
 /// iOS 15 still supports and on two iPad sizes.
 void main() {
   final Digest digest = sampleDigest();
@@ -92,20 +93,24 @@ void main() {
       },
     );
 
-    testWidgets('a source chip reads outlet, headline, and that it opens a '
-        'browser; it is a link button', (WidgetTester tester) async {
+    testWidgets('a source pill reads its outlet and side; the sheet row it '
+        'opens reads outlet, headline and that it opens a browser', (
+      WidgetTester tester,
+    ) async {
       final SemanticsHandle semantics = tester.ensureSemantics();
       await pumpSidesApp(
         tester,
         initialLocation: '/story/${digest.stories.first.id}',
       );
-      // Article 7809db6abcec (Fox News) is the first source of story 1's
-      // first agreed fact.
-      const String label =
+      // Article 7809db6abcec (Fox News, right-leaning) is the first source
+      // of story 1's first agreed fact.
+      const String pillLabel =
+          'Source: Fox News, right-leaning. Shows the articles behind this '
+          'point.';
+      const String rowLabel =
           'Source: Fox News — Pope Leo diagnosed with lung '
           'cancer after surgeons remove part of right lung, Vatican says. '
           'Opens in your browser.';
-      final Finder chip = find.bySemanticsLabel(label);
       final Finder scrollable = find
           .descendant(
             of: find.byType(StoryDetailView),
@@ -117,12 +122,21 @@ void main() {
         300,
         scrollable: scrollable,
       );
-      await tester.drag(scrollable, const Offset(0, -300));
+      await tester.drag(scrollable, const Offset(0, -200));
       await tester.pumpAndSettle();
-      expect(chip, findsWidgets);
-      final SemanticsData data = tester
-          .getSemantics(chip.first)
-          .getSemanticsData();
+      final Finder pill = find.bySemanticsLabel(pillLabel);
+      expect(pill, findsWidgets);
+      expect(
+        tester.getSemantics(pill.first).getSemanticsData().flagsCollection
+            .isButton,
+        isTrue,
+      );
+
+      await tester.tap(pill.first);
+      await tester.pumpAndSettle();
+      final Finder row = find.bySemanticsLabel(rowLabel);
+      expect(row, findsOneWidget);
+      final SemanticsData data = tester.getSemantics(row).getSemanticsData();
       expect(data.flagsCollection.isButton, isTrue);
       expect(data.flagsCollection.isLink, isTrue);
       semantics.dispose();
@@ -131,8 +145,8 @@ void main() {
     // Regression for F2 (docs/TEST_PLAN.md): Semantics(excludeSemantics:
     // true) without onTap stripped the InkWell's tap action, so TalkBack and
     // Switch Access could not open a source.
-    testWidgets('a source chip and a Sources row expose a tap action to '
-        'assistive tech', (WidgetTester tester) async {
+    testWidgets('a source pill, a sheet row and a Sources row expose a tap '
+        'action to assistive tech', (WidgetTester tester) async {
       final SemanticsHandle semantics = tester.ensureSemantics();
       final TestHarness h = await pumpSidesApp(
         tester,
@@ -145,25 +159,41 @@ void main() {
           )
           .first;
       await tester.scrollUntilVisible(
-        find.byType(SourceChip).first,
+        find.byType(SourcePill).first,
         200,
         scrollable: scrollable,
       );
-      final SemanticsNode chip = tester.getSemantics(
-        find.byType(SourceChip).first,
+      final SemanticsNode pill = tester.getSemantics(
+        find.byType(SourcePill).first,
       );
       expect(
-        chip.getSemanticsData().hasAction(SemanticsAction.tap),
+        pill.getSemanticsData().hasAction(SemanticsAction.tap),
         isTrue,
         reason: 'TalkBack / Switch Access activate via the tap action',
       );
 
-      // The action must actually open the article.
+      // The pill's action opens the sheet; the sheet row's action opens
+      // the article.
       tester.semantics.tap(
-        find.semantics.byLabel(RegExp(r'^Source: .*Opens in ')).first,
+        find.semantics.byLabel(RegExp(r'^Source: .*Shows the articles')).first,
       );
       await tester.pumpAndSettle();
+      expect(find.byType(SourcesSheet), findsOneWidget);
+      final FinderBase<SemanticsNode> sheetRow =
+          find.semantics.byLabel(RegExp(r'^Source: .*Opens in ')).first;
+      expect(
+        tester.getSemantics(find.byType(SourceTile).first)
+            .getSemanticsData()
+            .hasAction(SemanticsAction.tap),
+        isTrue,
+      );
+      tester.semantics.tap(sheetRow);
+      await tester.pumpAndSettle();
       expect(h.launcher.opened, hasLength(1));
+      // Close the sheet.
+      await tester.tapAt(const Offset(5, 5));
+      await tester.pumpAndSettle();
+      expect(find.byType(SourcesSheet), findsNothing);
 
       final Finder sourcesHeader = find.text(
         '${Copy.sources} (${digest.stories.first.articles.length})',
@@ -186,7 +216,7 @@ void main() {
       semantics.dispose();
     });
 
-    testWidgets('source chips meet the 48 dp minimum tap height', (
+    testWidgets('every tappable on the story page meets the 48 dp minimum', (
       WidgetTester tester,
     ) async {
       await pumpSidesApp(
@@ -199,7 +229,7 @@ void main() {
     });
   });
 
-  group('text scale 2.0: every story, both axes, every tab, top to bottom', () {
+  group('text scale 2.0: every story, both axes, top to bottom', () {
     Future<void> withTextScale(WidgetTester tester) async {
       tester.platformDispatcher.textScaleFactorTestValue = 2.0;
       addTearDown(tester.platformDispatcher.clearTextScaleFactorTestValue);
@@ -273,26 +303,13 @@ void main() {
         reason: '$where: story ${s.rank} is on screen',
       );
       StoryViewController ctl() => c.read(storyViewProvider(s.id).notifier);
-      for (int i = 0; i < s.leansPresent.length; i++) {
-        ctl()
-          ..setAxis(PerspectiveAxis.lean)
-          ..setLeanTab(i);
+      for (final PerspectiveAxis axis in PerspectiveAxis.values) {
+        ctl().setAxis(axis);
         await tester.pump();
         await sweep(
           tester,
           detailScrollable(),
-          '$where story ${s.rank} lean tab $i',
-        );
-      }
-      for (int i = 0; i < s.blocsPresent.length; i++) {
-        ctl()
-          ..setAxis(PerspectiveAxis.bloc)
-          ..setBlocTab(i);
-        await tester.pump();
-        await sweep(
-          tester,
-          detailScrollable(),
-          '$where story ${s.rank} bloc tab $i',
+          '$where story ${s.rank} ${axis.name}',
         );
       }
     }

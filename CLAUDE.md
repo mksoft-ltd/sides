@@ -227,7 +227,8 @@ lib/core/           config/ (AppConfig URLs + product id + SCREENSHOT_* defines;
                     (all content-facing UI strings), theme/ (PerspectiveColors), layout/breakpoints.dart, launcher/, storage/, time/
 lib/features/digest domain/digest.dart (models + on-read integrity), domain/refresh_policy.dart, data/ (cache, remote, repository),
                     presentation/ (DigestController, DigestListView body + DigestListScreen scaffold, StoryCard)
-lib/features/story  StoryDetailView (body) + StoryDetailScreen; widgets/ points, source chips, sources list
+lib/features/story  StoryDetailView (body) + StoryDetailScreen (n of N, previous/next); widgets/ points (SideBlock, QuoteRow,
+                    PointTile, ContestedClaimCard, ContradictionCard), source_pills (SourcePills, SourcesSheet), sources_list (SourceTile)
 lib/features/{settings,purchases,ads}   theme mode, AdFreeController over StoreGateway, AdsService + AdBannerSlot
 test/               fixtures (= assets/sample_digest.json), helpers/ (fakes, pumpSidesApp at 390×844), unit/, widget/
 ```
@@ -245,6 +246,8 @@ test/               fixtures (= assets/sample_digest.json), helpers/ (fakes, pum
   `parseDigestInBackground` (`compute`). Widget/controller tests pass `parse: parseDigestInline` because a real
   isolate's reply never arrives inside fake async. Any exception reading the cache is a miss (no endless spinner). Never render article text beyond headline + snippet; content copy lives in `Copy` and stays
   descriptive (never judges an outlet). Lean colours are violet/slate/orange, not red/blue (opposite meanings in UK/US).
+  Story cards carry `StorySignals` chips (blindspots, "N contested claims", "N East–West contradictions", "Analysis
+  unavailable"): counts of validated items, computed in the app, never a judgement.
 - **Ads**: banner only in `bottomNavigationBar` of list/detail, hidden until a digest exists and the instant ad-free
   is owned. No ATT prompt: every request is `nonPersonalizedAds: true`, Google UMP gathers consent. Test IDs until
   publish (`AdConfig`, Info.plist `GADApplicationIdentifier`, manifest `APPLICATION_ID`). "Ad privacy options" in
@@ -264,11 +267,21 @@ test/               fixtures (= assets/sample_digest.json), helpers/ (fakes, pum
   declarative match by its route pattern, so story → story updates the same `NoTransitionPage` in place. The first
   selection from `/` adds that page over `/` (system back returns to story 1). Phones keep `MaterialPage` + push.
   The list scroll offset survives that first hop via `masterListScrollProvider`.
-- Axis + tab per story live in `storyViewProvider` (autoDispose family by story id; `axis == null` means "use the
+- **Story page = compare by dimension (UI redesign, 16 Oct 2026; screens in `docs/screenshots/redesign/`).** No
+  per-side tabs: "Headlines, side by side" and "What each side emphasises" show every lean/bloc present at once, each
+  as a `SideBlock` (colour rail + side name + outlet count); the shared sections follow (agreed, left out, contested,
+  opinion / contradictions), then Sources. The body is one `SingleChildScrollView` column (not a lazy list) so the jump
+  bar's `GlobalKey` anchors are always laid out and `Scrollable.ensureVisible` works; `find.text` therefore sees every
+  section from the start in tests. A quote is a `QuoteRow` that opens its article; a point is `PointTile` = text +
+  `SourcePills` (one pill per outlet, ≤3 then "+N more", lean-coloured dot) whose tap opens `SourcesSheet` (every
+  article, tapped outlet first, rows open the browser). Jump chips are keyed `jump-<section>`; the bar scrolls
+  horizontally, so tests `ensureVisible` a chip before tapping it.
+- Axis per story lives in `storyViewProvider` (autoDispose family by story id; `axis == null` means "use the
   route's `?axis=`"), not widget state — a layout swap re-subscribes in the same frame so the reader's place survives.
 - Columns: `StoryDetailView.columnsFit` — only at `LayoutSize.expanded` and only when every column gets ≥ 280 dp ×
-  text scale; else tabs. Contradiction rows (`ContradictionCard(sideBySide:)`) drop the card inset so they align
-  with the bloc columns.
+  text scale; else the sides stay stacked. Each comparison section is its own `PerspectiveColumns` row (so
+  `PerspectiveColumns.keyFor('left')` matches twice on a story with both sections). Contradiction rows
+  (`ContradictionCard(sideBySide:)`) drop the card inset so they align with the bloc columns.
 - Breakpoints: `LayoutSize.mediumMin` = 744 dp (iPad mini portrait, so every iPad is master-detail in both
   orientations; large phones in landscape too), `expandedMin` = 1100 dp. List pane 360 dp, 320 dp below 900 dp
   (`MasterDetailScreen.listPaneWidthFor`) so the detail pane stays ≥ 380 dp at 744.

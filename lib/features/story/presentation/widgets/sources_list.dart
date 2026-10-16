@@ -5,7 +5,7 @@ import '../../../../core/constants/copy.dart';
 import '../../../../core/theme/app_theme.dart';
 import '../../../../shared/widgets/tag.dart';
 import '../../../digest/domain/digest.dart';
-import 'source_chips.dart';
+import 'source_pills.dart';
 
 /// Lean / bloc / region / ownership tags for an outlet.
 class OutletTags extends StatelessWidget {
@@ -35,7 +35,8 @@ class OutletTags extends StatelessWidget {
   }
 }
 
-/// Every article in the story: outlet, tags, headline, link.
+/// Every article in the story: outlet, tags, headline, link. Western
+/// outlets first (by lean), then Eastern, so the list reads like the axes.
 class SourcesList extends StatelessWidget {
   const SourcesList({super.key, required this.story, required this.digest});
   final Story story;
@@ -57,17 +58,27 @@ class SourcesList extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: <Widget>[
-        for (final Article a in sorted)
-          _SourceTile(article: a, outlet: digest.outlet(a.outletId)),
+        for (int i = 0; i < sorted.length; i++) ...<Widget>[
+          if (i > 0) const Divider(),
+          SourceTile(
+            article: sorted[i],
+            outlet: digest.outlet(sorted[i].outletId),
+          ),
+        ],
       ],
     );
   }
 }
 
-class _SourceTile extends ConsumerWidget {
-  const _SourceTile({required this.article, required this.outlet});
+/// One article: outlet name, tags, headline, opening in the browser. Used by
+/// the Sources section and by the per-point sources sheet.
+class SourceTile extends ConsumerWidget {
+  const SourceTile({super.key, required this.article, required this.outlet});
   final Article article;
   final Outlet? outlet;
+
+  static String semanticsLabelFor(Article a, Outlet? o) =>
+      'Source: ${o?.name ?? a.outletId} — ${a.headline}. Opens in your browser.';
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -76,12 +87,14 @@ class _SourceTile extends ConsumerWidget {
     return Semantics(
       button: true,
       link: true,
-      label: [
-        SourceChip.semanticsLabelFor(article, o),
+      label: <String>[
+        semanticsLabelFor(article, o),
         if (o?.isStateControlled ?? false) 'State media.',
       ].join(' '),
       excludeSemantics: true,
-      onTap: () => openArticle(context, ref, article), // F2, see SourceChip
+      // excludeSemantics drops the InkWell's own action, so re-expose it or
+      // TalkBack and Switch Access cannot open the article (F2).
+      onTap: () => openArticle(context, ref, article),
       child: InkWell(
         onTap: () => openArticle(context, ref, article),
         child: Padding(
@@ -93,11 +106,13 @@ class _SourceTile extends ConsumerWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
-                    Text(o?.name ?? article.outletId,
-                        style: theme.textTheme.titleSmall),
+                    Text(
+                      o?.name ?? article.outletId,
+                      style: theme.textTheme.titleSmall,
+                    ),
                     const SizedBox(height: 6),
                     if (o != null) OutletTags(outlet: o),
-                    const SizedBox(height: 6),
+                    const SizedBox(height: 8),
                     Text(article.headline, style: theme.textTheme.bodyMedium),
                   ],
                 ),
@@ -105,8 +120,11 @@ class _SourceTile extends ConsumerWidget {
               const SizedBox(width: 8),
               Padding(
                 padding: const EdgeInsets.only(top: 2),
-                child: Icon(Icons.open_in_new,
-                    size: 18, color: theme.colorScheme.primary),
+                child: Icon(
+                  Icons.open_in_new,
+                  size: 18,
+                  color: theme.colorScheme.primary,
+                ),
               ),
             ],
           ),

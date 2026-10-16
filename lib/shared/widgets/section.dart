@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-/// A titled block on the story page.
+/// A titled block on the story page. Give it a [GlobalKey] to make it a
+/// jump-bar target.
 class Section extends StatelessWidget {
   const Section({
     super.key,
@@ -36,7 +37,7 @@ class Section extends StatelessWidget {
                 ?.copyWith(color: theme.colorScheme.onSurfaceVariant),
           ),
         ],
-        const SizedBox(height: 12),
+        const SizedBox(height: 14),
         ...children,
       ],
     );

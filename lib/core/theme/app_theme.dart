@@ -101,13 +101,30 @@ abstract final class AppTheme {
       );
 
   static ThemeData _build(ColorScheme scheme, PerspectiveColors colors) {
-    return ThemeData(
+    final ThemeData base = ThemeData(
       colorScheme: scheme,
       useMaterial3: true,
       // 48 dp minimum tap targets everywhere, including on iOS.
       materialTapTargetSize: MaterialTapTargetSize.padded,
       visualDensity: VisualDensity.standard,
       extensions: <ThemeExtension<dynamic>>[colors],
+    );
+    final TextTheme text = base.textTheme;
+    return base.copyWith(
+      // Reading app: headings carry a little more weight than M3's default,
+      // body text keeps the platform font and a comfortable line height.
+      textTheme: text.copyWith(
+        headlineSmall: text.headlineSmall?.copyWith(
+          fontWeight: FontWeight.w600,
+          height: 1.25,
+        ),
+        titleLarge: text.titleLarge?.copyWith(fontWeight: FontWeight.w600),
+        titleMedium: text.titleMedium?.copyWith(
+          fontWeight: FontWeight.w600,
+          height: 1.3,
+        ),
+        bodyLarge: text.bodyLarge?.copyWith(height: 1.4),
+      ),
       appBarTheme: AppBarTheme(
         centerTitle: false,
         backgroundColor: scheme.surface,
@@ -123,7 +140,25 @@ abstract final class AppTheme {
           side: BorderSide(color: scheme.outlineVariant),
         ),
       ),
+      // Source pills and jump chips: compact, outlined, stadium-shaped. The
+      // 48 dp tap target comes from materialTapTargetSize.padded.
+      chipTheme: ChipThemeData(
+        backgroundColor: scheme.surfaceContainerHigh,
+        side: BorderSide(color: scheme.outlineVariant),
+        shape: const StadiumBorder(),
+        labelStyle: text.labelMedium?.copyWith(color: scheme.onSurface),
+        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+        labelPadding: const EdgeInsets.symmetric(horizontal: 2),
+        iconTheme: IconThemeData(size: 16, color: scheme.onSurfaceVariant),
+      ),
       dividerTheme: DividerThemeData(color: scheme.outlineVariant, space: 1),
+      bottomSheetTheme: BottomSheetThemeData(
+        backgroundColor: scheme.surfaceContainerLow,
+        showDragHandle: true,
+        shape: const RoundedRectangleBorder(
+          borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
+        ),
+      ),
     );
   }
 }

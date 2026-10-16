@@ -41,7 +41,9 @@ void main() {
   final Finder detailPane = find.byKey(MasterDetailScreen.detailPaneKey);
   Finder inDetail(Finder f) => find.descendant(of: detailPane, matching: f);
   Finder inList(Finder f) => find.descendant(of: listPane, matching: f);
-  Finder tab(String label) => find.widgetWithText(Tab, label);
+  /// Stacked sides (the phone layout inside the pane): a side heading with
+  /// a left rail, i.e. no perspective columns.
+  Finder stacked(String label) => find.text(label);
   Finder column(String wire) =>
       find.byKey(PerspectiveColumns.keyFor(wire), skipOffstage: true);
 
@@ -79,6 +81,10 @@ void main() {
       200,
       scrollable: listScrollable(),
     );
+    // scrollUntilVisible stops once the item is built, which happens in the
+    // list's cache extent just below the viewport; bring it fully on screen.
+    await tester.ensureVisible(inList(find.text(s.title)));
+    await tester.pumpAndSettle();
     await tester.tap(inList(find.text(s.title)));
   }
 
@@ -99,8 +105,8 @@ void main() {
           .singleWhere((StoryCard c) => c.selected);
       expect(selected.story.id, s1.id);
 
-      // 1024 < 1100: perspectives stay as tabs inside the detail pane.
-      expect(inDetail(tab('Left')), findsOneWidget);
+      // 1024 < 1100: sides stay stacked inside the detail pane.
+      expect(inDetail(stacked(Copy.leanGroup(Lean.left))), findsWidgets);
       expect(find.byType(PerspectiveColumns), findsNothing);
     });
 
@@ -150,7 +156,7 @@ void main() {
       await pumpSidesApp(tester,
           size: ipad129Portrait, initialLocation: '/story/${s5.id}?axis=bloc');
       expect(inDetail(find.text(s5.title)), findsOneWidget);
-      expect(inDetail(tab('West')), findsOneWidget);
+      expect(inDetail(stacked(Copy.blocGroup(Bloc.west))), findsWidgets);
     });
 
     testWidgets('the selected card is announced as selected',
@@ -216,7 +222,8 @@ void main() {
       ('Air 11" (820 dp)', ipadAirPortrait),
       ('Pro 11" (834 dp)', ipad11Portrait),
     ]) {
-      testWidgets('every iPad portrait is master-detail with tabs: $name',
+      testWidgets('every iPad portrait is master-detail, sides stacked: '
+          '$name',
           (WidgetTester tester) async {
         await pumpSidesApp(tester, size: size);
         expect(find.byType(DigestListScreen), findsNothing);
@@ -226,7 +233,7 @@ void main() {
             MasterDetailScreen.narrowListPaneWidth);
         expect(tester.getSize(detailPane).width, greaterThanOrEqualTo(380));
         expect(inDetail(find.text(s1.title)), findsOneWidget);
-        expect(inDetail(tab('Left')), findsOneWidget);
+        expect(inDetail(stacked(Copy.leanGroup(Lean.left))), findsWidgets);
         expect(find.byType(PerspectiveColumns), findsNothing);
         expect(tester.takeException(), isNull);
       });
@@ -241,30 +248,32 @@ void main() {
       expect(detailPane, findsOneWidget);
     });
 
-    testWidgets('10.2" landscape (1080 dp) keeps tabs even for two leans',
-        (WidgetTester tester) async {
+    testWidgets('10.2" landscape (1080 dp) keeps sides stacked even for two '
+        'leans', (WidgetTester tester) async {
       await pumpSidesApp(tester,
           size: ipad102Landscape, initialLocation: '/story/${s8.id}');
       expect(detailPane, findsOneWidget);
-      expect(inDetail(tab('Left')), findsOneWidget);
+      expect(inDetail(stacked(Copy.leanGroup(Lean.left))), findsWidgets);
       expect(find.byType(PerspectiveColumns), findsNothing);
     });
   });
 
   group('perspective columns (>= 1100 dp)', () {
-    testWidgets('12.9" landscape: one column per lean present, no tabs',
+    testWidgets('12.9" landscape: one column per lean present in each '
+        'comparison section (headlines, emphasis)',
         (WidgetTester tester) async {
       final SemanticsHandle semantics = tester.ensureSemantics();
       await pumpSidesApp(tester, size: ipad129Landscape);
 
-      expect(column('left'), findsOneWidget);
-      expect(column('centre'), findsOneWidget);
-      expect(column('right'), findsOneWidget);
-      expect(inDetail(tab('Left')), findsNothing);
+      // Two comparison sections, each with a column per lean.
+      expect(find.byType(PerspectiveColumns), findsNWidgets(2));
+      expect(column('left'), findsNWidgets(2));
+      expect(column('centre'), findsNWidgets(2));
+      expect(column('right'), findsNWidgets(2));
       // Equal widths.
-      final double w = tester.getSize(column('left')).width;
-      expect(tester.getSize(column('centre')).width, closeTo(w, 0.5));
-      expect(tester.getSize(column('right')).width, closeTo(w, 0.5));
+      final double w = tester.getSize(column('left').first).width;
+      expect(tester.getSize(column('centre').first).width, closeTo(w, 0.5));
+      expect(tester.getSize(column('right').first).width, closeTo(w, 0.5));
       expect(w, greaterThanOrEqualTo(StoryDetailView.minColumnWidth));
       // Shared sections sit below the columns, full width.
       await tester.scrollUntilVisible(
@@ -272,7 +281,7 @@ void main() {
         300,
         scrollable: detailScrollable(),
       );
-      final Rect cols = tester.getRect(find.byType(PerspectiveColumns));
+      final Rect cols = tester.getRect(find.byType(PerspectiveColumns).last);
       final Rect agreed = tester.getRect(inDetail(find.text(Copy.agreed)));
       expect(agreed.top, greaterThan(cols.bottom));
       expect(agreed.left, closeTo(cols.left, 0.5));
@@ -283,7 +292,7 @@ void main() {
         'Centre outlets',
         'Right-leaning outlets',
       ]) {
-        expect(tester.getSemantics(find.text(h)),
+        expect(tester.getSemantics(find.text(h).first),
             isSemantics(isHeader: true, label: h));
       }
       semantics.dispose();
@@ -293,8 +302,8 @@ void main() {
         (WidgetTester tester) async {
       await pumpSidesApp(tester,
           size: ipad129Landscape, initialLocation: '/story/${s8.id}');
-      expect(column('left'), findsOneWidget);
-      expect(column('centre'), findsOneWidget);
+      expect(column('left'), findsNWidgets(2));
+      expect(column('centre'), findsNWidgets(2));
       expect(column('right'), findsNothing);
     });
 
@@ -303,11 +312,10 @@ void main() {
       await pumpSidesApp(tester, size: ipad129Landscape);
       await chooseBloc(tester);
 
-      expect(column('west'), findsOneWidget);
-      expect(column('east'), findsOneWidget);
-      expect(inDetail(tab('West')), findsNothing);
-      final Rect west = tester.getRect(column('west'));
-      final Rect east = tester.getRect(column('east'));
+      expect(column('west'), findsNWidgets(2));
+      expect(column('east'), findsNWidgets(2));
+      final Rect west = tester.getRect(column('west').first);
+      final Rect east = tester.getRect(column('east').first);
       expect(west.right, lessThan(east.left));
 
       // Horizontal edges only: they do not change as the pane scrolls.
@@ -366,8 +374,8 @@ void main() {
       await chooseBloc(tester);
 
       // Column x positions first; they do not change as the pane scrolls.
-      final Rect westCol = tester.getRect(column('west'));
-      final Rect eastCol = tester.getRect(column('east'));
+      final Rect westCol = tester.getRect(column('west').first);
+      final Rect eastCol = tester.getRect(column('east').first);
       final Finder topic = find.text('Who is responsible');
       await tester.scrollUntilVisible(
         find.byKey(const ValueKey<String>('contradiction-east')),
@@ -390,36 +398,36 @@ void main() {
           findsOneWidget);
     });
 
-    testWidgets('11" landscape (1194 dp): three leans collapse to tabs, '
+    testWidgets('11" landscape (1194 dp): three leans stay stacked, '
         'two leans and the blocs fit as columns', (WidgetTester tester) async {
       await pumpSidesApp(tester, size: ipad11Landscape);
-      expect(inDetail(tab('Left')), findsOneWidget);
+      expect(inDetail(stacked(Copy.leanGroup(Lean.left))), findsWidgets);
       expect(find.byType(PerspectiveColumns), findsNothing);
       await chooseBloc(tester);
-      expect(column('west'), findsOneWidget);
+      expect(column('west'), findsWidgets);
 
       await tapStory(tester, s8);
       await tester.pumpAndSettle();
       // The axis carries over to the next story: still West / East.
       expect(location(tester), '/story/${s8.id}?axis=bloc');
-      expect(column('west'), findsOneWidget);
+      expect(column('west'), findsWidgets);
       await tester.tap(axisSwitch(Copy.axisLean));
       await tester.pumpAndSettle();
-      expect(column('left'), findsOneWidget);
-      expect(column('centre'), findsOneWidget);
+      expect(column('left'), findsWidgets);
+      expect(column('centre'), findsWidgets);
     });
 
-    testWidgets('text scale 2.0 collapses columns back to tabs',
+    testWidgets('text scale 2.0 collapses columns back to stacked sides',
         (WidgetTester tester) async {
       tester.platformDispatcher.textScaleFactorTestValue = 2.0;
       addTearDown(tester.platformDispatcher.clearTextScaleFactorTestValue);
       await pumpSidesApp(tester, size: ipad129Landscape);
       expect(tester.takeException(), isNull);
       expect(find.byType(PerspectiveColumns), findsNothing);
-      expect(inDetail(tab('Left')), findsOneWidget);
+      expect(inDetail(stacked(Copy.leanGroup(Lean.left))), findsWidgets);
       await chooseBloc(tester);
       expect(find.byType(PerspectiveColumns), findsNothing);
-      expect(inDetail(tab('West')), findsOneWidget);
+      expect(inDetail(stacked(Copy.blocGroup(Bloc.west))), findsWidgets);
       expect(tester.takeException(), isNull);
     });
 
@@ -432,37 +440,35 @@ void main() {
         Theme.of(tester.element(detailPane)).brightness,
         Brightness.dark,
       );
-      expect(column('left'), findsOneWidget);
+      expect(column('left'), findsWidgets);
       expect(tester.takeException(), isNull);
     });
   });
 
   group('rotation and resizing', () {
-    testWidgets('phone -> tablet -> phone keeps the story, axis and tab',
+    testWidgets('phone -> tablet -> phone keeps the story and axis',
         (WidgetTester tester) async {
       await pumpSidesApp(tester, initialLocation: '/story/${s3.id}');
       expect(find.byType(StoryDetailScreen), findsOneWidget);
       await tester.tap(axisSwitch(Copy.axisBloc));
       await tester.pumpAndSettle();
-      await tester.tap(tab('East'));
-      await tester.pumpAndSettle();
-      expect(find.text('Eastern outlets'), findsOneWidget);
+      expect(find.text('Eastern outlets'), findsWidgets);
 
       await resize(tester, ipad129Landscape);
       expect(find.byType(StoryDetailScreen), findsNothing);
       expect(inDetail(find.text(s3.title)), findsOneWidget);
-      expect(column('west'), findsOneWidget, reason: 'axis kept: West / East');
+      expect(column('west'), findsWidgets, reason: 'axis kept: West / East');
 
       await resize(tester, ipad129Portrait);
-      expect(inDetail(tab('East')), findsOneWidget);
-      expect(find.text('Eastern outlets'), findsOneWidget,
-          reason: 'tab kept: East');
+      expect(find.byType(PerspectiveColumns), findsNothing);
+      expect(inDetail(find.text('Eastern outlets')), findsWidgets,
+          reason: 'axis kept: East still on the page');
 
       await resize(tester, phoneSize);
       expect(find.byType(MasterDetailScreen), findsNothing);
       expect(find.byType(StoryDetailScreen), findsOneWidget);
       expect(find.text('3 of 10'), findsOneWidget);
-      expect(find.text('Eastern outlets'), findsOneWidget);
+      expect(find.text('Eastern outlets'), findsWidgets);
 
       // Back still leads to the phone list.
       await tester.pageBack();
@@ -507,7 +513,7 @@ void main() {
       await tester.pumpAndSettle();
       expect(find.byType(StoryDetailScreen), findsOneWidget);
       expect(find.text('1 of 10'), findsOneWidget);
-      expect(tab('Left'), findsOneWidget);
+      expect(stacked(Copy.leanGroup(Lean.left)), findsWidgets);
       expect(find.byType(PerspectiveColumns), findsNothing);
     });
 

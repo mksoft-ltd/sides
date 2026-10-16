@@ -1,0 +1,1 @@
+Redesigned story pages: every side is on the page at once, headlines side by side, compact source pills with a sources sheet, a jump bar, and previous / next story. Story cards now show contested claims and East–West contradictions at a glance.

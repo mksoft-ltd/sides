@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:intl/intl.dart';
 
+import '../../../../core/constants/copy.dart';
 import '../../../../shared/widgets/message_state.dart';
 import '../../data/digest_repository.dart';
 import '../../domain/digest.dart';
@@ -137,14 +138,21 @@ class _DigestHeader extends StatelessWidget {
         ],
         Semantics(
           header: true,
-          child: Text(dayLabel, style: theme.textTheme.titleLarge),
+          child: Text(dayLabel, style: theme.textTheme.headlineSmall),
         ),
-        const SizedBox(height: 2),
+        const SizedBox(height: 4),
         Text(
           'Last updated $updated · ${digest.stories.length} top stories',
           style: theme.textTheme.bodySmall
               ?.copyWith(color: theme.colorScheme.onSurfaceVariant),
         ),
+        const SizedBox(height: 8),
+        Text(
+          Copy.digestIntro,
+          style: theme.textTheme.bodyMedium
+              ?.copyWith(color: theme.colorScheme.onSurfaceVariant),
+        ),
+        const SizedBox(height: 4),
       ],
     );
   }

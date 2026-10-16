@@ -1,15 +1,114 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../../../core/constants/copy.dart';
 import '../../../../core/text/quotes.dart';
 import '../../../../core/theme/app_theme.dart';
 import '../../../digest/domain/digest.dart';
-import 'source_chips.dart';
+import 'source_pills.dart';
+
+/// Where a side block draws its colour rail: down the left (stacked sides on
+/// phones) or along the top (side-by-side columns on wide tablets).
+enum RailSide { left, top }
+
+/// One side's content, framed by a rail in the side's colour and headed by
+/// the side's name and outlet count, so the reader always knows whose
+/// coverage they are looking at while scrolling.
+class SideBlock extends StatelessWidget {
+  const SideBlock({
+    super.key,
+    required this.color,
+    required this.label,
+    required this.child,
+    this.count,
+    this.rail = RailSide.left,
+  });
+
+  final Color color;
+  final String label;
+  final int? count;
+  final Widget child;
+  final RailSide rail;
+
+  @override
+  Widget build(BuildContext context) {
+    return Semantics(
+      container: true,
+      explicitChildNodes: true,
+      child: Container(
+        padding: rail == RailSide.left
+            ? const EdgeInsets.only(left: 12)
+            : const EdgeInsets.only(top: 12),
+        decoration: BoxDecoration(
+          border: rail == RailSide.left
+              ? Border(left: BorderSide(color: color, width: 3))
+              : Border(top: BorderSide(color: color, width: 4)),
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: <Widget>[
+            SideHeading(label: label, color: color, count: count),
+            const SizedBox(height: 10),
+            child,
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+/// Colour dot, side name (announced as a header) and outlet count.
+class SideHeading extends StatelessWidget {
+  const SideHeading({
+    super.key,
+    required this.label,
+    required this.color,
+    this.count,
+  });
+
+  final String label;
+  final Color color;
+  final int? count;
+
+  @override
+  Widget build(BuildContext context) {
+    final ThemeData theme = Theme.of(context);
+    return Row(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: <Widget>[
+        Padding(
+          padding: const EdgeInsets.only(top: 6),
+          child: Container(
+            width: 10,
+            height: 10,
+            decoration: BoxDecoration(color: color, shape: BoxShape.circle),
+          ),
+        ),
+        const SizedBox(width: 8),
+        Expanded(
+          child: Semantics(
+            header: true,
+            child: Text(label, style: theme.textTheme.titleSmall),
+          ),
+        ),
+        if (count != null) ...<Widget>[
+          const SizedBox(width: 8),
+          Text(
+            Copy.outletCount(count!),
+            style: theme.textTheme.labelMedium?.copyWith(
+              color: theme.colorScheme.onSurfaceVariant,
+            ),
+          ),
+        ],
+      ],
+    );
+  }
+}
 
 /// A point and its sources. Never rendered without at least one source:
 /// the model layer already drops unsourced items, and this guards again.
-class SourcedPointTile extends StatelessWidget {
-  const SourcedPointTile({
+class PointTile extends StatelessWidget {
+  const PointTile({
     super.key,
     required this.point,
     required this.story,
@@ -26,21 +125,24 @@ class SourcedPointTile extends StatelessWidget {
       return const SizedBox.shrink();
     }
     return Padding(
-      padding: const EdgeInsets.only(bottom: 16),
+      padding: const EdgeInsets.only(bottom: 10),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
           Text(point.text, style: Theme.of(context).textTheme.bodyLarge),
-          SourceChipList(ids: point.sources, story: story, digest: digest),
+          const SizedBox(height: 2),
+          SourcePills(ids: point.sources, story: story, digest: digest),
         ],
       ),
     );
   }
 }
 
-/// A verbatim quote from a headline or snippet, labelled with which.
-class QuoteCard extends StatelessWidget {
-  const QuoteCard({
+/// A verbatim quote from a headline or feed summary, with the outlet it is
+/// from. The row itself opens the article: the quote is the evidence, so
+/// there is nothing to repeat beneath it.
+class QuoteRow extends ConsumerWidget {
+  const QuoteRow({
     super.key,
     required this.quote,
     required this.story,
@@ -51,92 +153,127 @@ class QuoteCard extends StatelessWidget {
   final Story story;
   final Digest digest;
 
+  static String semanticsLabelFor(HeadlineQuote q, Outlet? o, Article a) =>
+      'Quote from ${o?.name ?? a.outletId}, '
+      '${q.field == QuoteField.headline ? 'headline' : 'summary'}: '
+      '${q.quote}. Opens the article in your browser.';
+
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     final Article? article = story.article(quote.articleId);
     if (article == null) return const SizedBox.shrink();
     final ThemeData theme = Theme.of(context);
     final Outlet? outlet = digest.outlet(article.outletId);
-    return Padding(
-      padding: const EdgeInsets.only(bottom: 16),
-      child: Container(
-        padding: const EdgeInsets.only(left: 12),
-        decoration: BoxDecoration(
-          border: Border(
-            left: BorderSide(color: theme.colorScheme.outline, width: 3),
+    return Semantics(
+      button: true,
+      link: true,
+      label: semanticsLabelFor(quote, outlet, article),
+      excludeSemantics: true,
+      onTap: () => openArticle(context, ref, article),
+      child: InkWell(
+        borderRadius: BorderRadius.circular(8),
+        onTap: () => openArticle(context, ref, article),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(vertical: 10),
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    Text(
+                      Quotes.wrap(quote.quote),
+                      style: theme.textTheme.bodyLarge?.copyWith(
+                        fontStyle: FontStyle.italic,
+                      ),
+                    ),
+                    const SizedBox(height: 4),
+                    Text(
+                      Copy.quoteOrigin(
+                        outlet?.name ?? article.outletId,
+                        quote.field,
+                      ),
+                      style: theme.textTheme.labelMedium?.copyWith(
+                        color: theme.colorScheme.onSurfaceVariant,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              const SizedBox(width: 8),
+              Padding(
+                padding: const EdgeInsets.only(top: 4),
+                child: Icon(
+                  Icons.open_in_new,
+                  size: 16,
+                  color: theme.colorScheme.primary,
+                ),
+              ),
+            ],
           ),
-        ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: <Widget>[
-            Text(
-              Quotes.wrap(quote.quote),
-              style: theme.textTheme.bodyLarge
-                  ?.copyWith(fontStyle: FontStyle.italic),
-            ),
-            const SizedBox(height: 4),
-            Text(
-              '${quote.field.wire} · ${outlet?.name ?? article.outletId}',
-              style: theme.textTheme.labelMedium
-                  ?.copyWith(color: theme.colorScheme.onSurfaceVariant),
-            ),
-            SourceChipList(
-              ids: <String>[article.id],
-              story: story,
-              digest: digest,
-            ),
-          ],
         ),
       ),
     );
   }
 }
 
-/// Headline wording + emphasis for one lean or bloc.
-class FramingPanel extends StatelessWidget {
-  const FramingPanel({
+/// A side's headline quotes, one row each, separated by hairlines.
+class QuoteList extends StatelessWidget {
+  const QuoteList({
     super.key,
-    required this.groupLabel,
     required this.quotes,
-    required this.emphasis,
     required this.story,
     required this.digest,
   });
 
-  final String groupLabel;
   final List<HeadlineQuote> quotes;
-  final List<SourcedPoint> emphasis;
   final Story story;
   final Digest digest;
 
   @override
   Widget build(BuildContext context) {
-    final TextTheme t = Theme.of(context).textTheme;
+    if (quotes.isEmpty) return const NoneFound();
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: <Widget>[
-        // Announced as a header: in column mode it heads its column.
-        Semantics(
-          header: true,
-          child: Text(groupLabel, style: t.titleMedium),
-        ),
-        const SizedBox(height: 12),
-        Text(Copy.headlineWording, style: t.labelLarge),
-        const SizedBox(height: 8),
-        if (quotes.isEmpty) const _PaddedNone(),
-        for (final HeadlineQuote q in quotes)
-          QuoteCard(quote: q, story: story, digest: digest),
-        const SizedBox(height: 4),
-        Text(Copy.emphasis, style: t.labelLarge),
-        const SizedBox(height: 8),
-        if (emphasis.isEmpty) const _PaddedNone(),
-        for (final SourcedPoint p in emphasis)
-          SourcedPointTile(point: p, story: story, digest: digest),
+        for (int i = 0; i < quotes.length; i++) ...<Widget>[
+          if (i > 0) const Divider(),
+          QuoteRow(quote: quotes[i], story: story, digest: digest),
+        ],
       ],
     );
   }
 }
 
+/// A side's emphasis points.
+class PointList extends StatelessWidget {
+  const PointList({
+    super.key,
+    required this.points,
+    required this.story,
+    required this.digest,
+  });
+
+  final List<SourcedPoint> points;
+  final Story story;
+  final Digest digest;
+
+  @override
+  Widget build(BuildContext context) {
+    if (points.isEmpty) return const NoneFound();
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: <Widget>[
+        for (final SourcedPoint p in points)
+          PointTile(point: p, story: story, digest: digest),
+      ],
+    );
+  }
+}
+
+/// A claim some outlets state and others dispute, with both sets of
+/// outlets named. The two sides are disjoint outlet sets (validator rule).
 class ContestedClaimCard extends StatelessWidget {
   const ContestedClaimCard({
     super.key,
@@ -152,27 +289,37 @@ class ContestedClaimCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final TextTheme t = Theme.of(context).textTheme;
-    return Padding(
-      padding: const EdgeInsets.only(bottom: 20),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: <Widget>[
-          Text(claim.claim, style: t.bodyLarge),
-          const SizedBox(height: 8),
-          Text(Copy.assertedBy, style: t.labelMedium),
-          SourceChipList(ids: claim.assertedBy, story: story, digest: digest),
-          const SizedBox(height: 8),
-          Text(Copy.disputedBy, style: t.labelMedium),
-          SourceChipList(ids: claim.disputedBy, story: story, digest: digest),
-        ],
+    final Color muted = Theme.of(context).colorScheme.onSurfaceVariant;
+    return Card(
+      margin: const EdgeInsets.only(bottom: 12),
+      child: Padding(
+        padding: const EdgeInsets.fromLTRB(16, 14, 16, 12),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: <Widget>[
+            Text(claim.claim, style: t.bodyLarge),
+            const SizedBox(height: 10),
+            Text(
+              Copy.assertedBy,
+              style: t.labelMedium?.copyWith(color: muted),
+            ),
+            SourcePills(ids: claim.assertedBy, story: story, digest: digest),
+            const SizedBox(height: 6),
+            Text(
+              Copy.disputedBy,
+              style: t.labelMedium?.copyWith(color: muted),
+            ),
+            SourcePills(ids: claim.disputedBy, story: story, digest: digest),
+          ],
+        ),
       ),
     );
   }
 }
 
-/// One topic with its West and East statements: stacked (phones, tabs) or,
-/// with [sideBySide], the topic spanning both columns and West / East in
-/// two aligned columns that line up with the bloc columns above.
+/// One topic with its West and East statements: stacked (phones), or, with
+/// [sideBySide], the topic spanning both columns and West / East in two
+/// aligned columns that line up with the bloc columns above.
 class ContradictionCard extends StatelessWidget {
   const ContradictionCard({
     super.key,
@@ -194,21 +341,11 @@ class ContradictionCard extends StatelessWidget {
   Widget build(BuildContext context) {
     final ThemeData theme = Theme.of(context);
     final PerspectiveColors colors = PerspectiveColors.of(context);
-    Widget side(Bloc b, SourcedPoint p) => Container(
+    Widget side(Bloc b, SourcedPoint p) => SideBlock(
       key: ValueKey<String>('contradiction-${b.wire}'),
-      margin: const EdgeInsets.only(top: 10),
-      padding: const EdgeInsets.only(left: 12),
-      decoration: BoxDecoration(
-        border: Border(left: BorderSide(color: colors.forBloc(b), width: 4)),
-      ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: <Widget>[
-          Text(b.label, style: theme.textTheme.labelLarge),
-          const SizedBox(height: 4),
-          SourcedPointTile(point: p, story: story, digest: digest),
-        ],
-      ),
+      color: colors.forBloc(b),
+      label: Copy.blocGroup(b),
+      child: PointTile(point: p, story: story, digest: digest),
     );
     final Widget topic = Semantics(
       header: sideBySide,
@@ -222,9 +359,10 @@ class ContradictionCard extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
-            Divider(height: 1, color: theme.colorScheme.outlineVariant),
+            const Divider(),
             const SizedBox(height: 12),
             topic,
+            const SizedBox(height: 10),
             Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
@@ -245,22 +383,15 @@ class ContradictionCard extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
             topic,
+            const SizedBox(height: 12),
             side(Bloc.west, contradiction.west),
+            const SizedBox(height: 12),
             side(Bloc.east, contradiction.east),
           ],
         ),
       ),
     );
   }
-}
-
-class _PaddedNone extends StatelessWidget {
-  const _PaddedNone();
-  @override
-  Widget build(BuildContext context) => const Padding(
-        padding: EdgeInsets.only(bottom: 12),
-        child: NoneFound(),
-      );
 }
 
 /// The neutral "nothing here" line.
