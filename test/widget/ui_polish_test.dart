@@ -175,13 +175,15 @@ void main() {
     testWidgets('uses the neutral surfaceContainerHighest, not primary',
         (WidgetTester tester) async {
       await pumpSidesApp(tester);
-      final BuildContext ctx = tester.element(find.byType(StoryCard).first);
+      // The lead card sits on the dark plate; the rule is for the cards on
+      // the surface. Story 2 is the first carousel card.
+      final Finder card = find.byWidgetPredicate(
+        (Widget w) => w is StoryCard && w.story.rank == 2,
+      );
+      final BuildContext ctx = tester.element(card);
       final ColorScheme cs = Theme.of(ctx).colorScheme;
       final Finder badge = find.ancestor(
-        of: find.descendant(
-          of: find.byType(StoryCard).first,
-          matching: find.text('1'),
-        ),
+        of: find.descendant(of: card, matching: find.text('2')),
         matching: find.byWidgetPredicate(
           (Widget w) =>
               w is Container &&
@@ -194,7 +196,7 @@ void main() {
           tester.widget<Container>(badge).decoration! as BoxDecoration;
       expect(d.color, cs.surfaceContainerHighest);
       final Text rank = tester.widget<Text>(
-        find.descendant(of: badge, matching: find.text('1')),
+        find.descendant(of: badge, matching: find.text('2')),
       );
       expect(rank.style?.color, cs.onSurface);
     });

@@ -241,7 +241,9 @@ lib/app/            app.dart (MaterialApp.router, theme, text scale clamp 2.0, l
 lib/core/           config/ (AppConfig URLs + product id + SCREENSHOT_* defines; AdConfig = every AdMob id), constants/copy.dart
                     (all content-facing UI strings), theme/ (PerspectiveColors), layout/breakpoints.dart, launcher/, storage/, time/
 lib/features/digest domain/digest.dart (models + on-read integrity), domain/refresh_policy.dart, data/ (cache, remote, repository),
-                    presentation/ (DigestController, DigestListView body + DigestListScreen scaffold, StoryCard)
+                    presentation/ (DigestController; DigestListScreen = phone home shell with the Today / By side / Outlets
+                    NavigationBar; DigestFeedView = front page; SidesBrowseView = By side; DigestListView = the plain list the
+                    tablet master pane still uses; StoryCard with variants standard / lead / compact / row)
 lib/features/story  StoryDetailView (body) + StoryDetailScreen (n of N, previous/next); widgets/ points (SideBlock, QuoteRow,
                     PointTile, ContestedClaimCard, ContradictionCard), source_pills (SourcePills, SourcesSheet), sources_list (SourceTile)
 lib/features/{settings,purchases,ads}   theme mode, AdFreeController over StoreGateway, AdsService + AdBannerSlot
@@ -273,6 +275,18 @@ test/               fixtures (= assets/sample_digest.json), helpers/ (fakes, pum
   jump chips share `SectionIcons`; the In brief card opens with three stat tiles (agreed facts, contested claims,
   West–East contradictions); a contested claim shows a stated-vs-disputed bar in primary vs tertiary (brand colours,
   never a side's). Avatars are `ExcludeSemantics` (the name is always beside them) and do not scale with text.
+- **Front page (build 8, modelled on a news app's home: lead block, "Top stories" strip, rows, bottom tabs; no
+  outlet branding, no BBC colours or type)**: `DigestFeedView` = date header, lens `ChoiceChip`s (`FeedLens` All /
+  Contested / Blindspots in `feedLensProvider`, rank order kept, filter only), the lead story as
+  `StoryCard(variant: lead)` on the brand plate (`plateTop`/`plateBottom` from BRAND.md, dark `PerspectiveColors` and
+  muted ink via a nested `Theme`, the pipeline's `summary` where a photo would be), stories 2–4 as `compact` cards in a
+  non-lazy horizontal strip (`IntrinsicHeight` + `Row`, all built, so tests find every title and the height follows the
+  text scale), the rest as `row` cards (`CoverageIndicator(minimal: true)` bars-only at 72 dp, chips below). Every
+  story appears exactly once and every variant carries the rank badge and a `CoverageIndicator`, which the list tests
+  rely on. `homeTabProvider` holds the tab; `SidesBrowseView` lists one section per side present (Left, Centre, Right,
+  West, East) as a strip of cards = story title + that side's first headline quote + outlet avatar, opening the story
+  on that axis. `OutletsBody` is the outlets list without a scaffold (settings route and the tab share it). Tablets keep
+  master-detail with `DigestListView`.
 - **Motion (build 7)**: `shared/widgets/motion.dart`. `Reveal` (fade + 14 dp rise, 320 ms, staggered 45 ms per block)
   wraps each top-level block of the story page; `AxisSwitcher` (AnimatedSwitcher, 260 ms fade + 8 % slide, direction
   by axis order) wraps the axis's sections, so the two axes' `Section` anchors must have distinct `GlobalKey`s

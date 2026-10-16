@@ -44,7 +44,7 @@ class DigestListView extends ConsumerWidget {
         );
       }
       final ({String title, String message}) copy =
-          _failureCopy(state.lastFailure!, hasCache: false);
+          failureCopy(state.lastFailure!, hasCache: false);
       return RefreshIndicator(
         onRefresh: controller.refresh,
         child: MessageState(
@@ -88,7 +88,7 @@ class DigestListView extends ConsumerWidget {
   }
 }
 
-({String title, String message}) _failureCopy(
+({String title, String message}) failureCopy(
   RefreshFailureKind kind, {
   required bool hasCache,
 }) {
@@ -131,8 +131,8 @@ class _DigestHeader extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: <Widget>[
         if (failure != null) ...<Widget>[
-          _NoticeBanner(
-            text: _failureCopy(failure!, hasCache: true).message,
+          NoticeBanner(
+            text: failureCopy(failure!, hasCache: true).message,
             offline: failure == RefreshFailureKind.offline,
           ),
           const SizedBox(height: 12),
@@ -159,8 +159,8 @@ class _DigestHeader extends StatelessWidget {
   }
 }
 
-class _NoticeBanner extends StatelessWidget {
-  const _NoticeBanner({required this.text, required this.offline});
+class NoticeBanner extends StatelessWidget {
+  const NoticeBanner({super.key, required this.text, required this.offline});
   final String text;
   final bool offline;
 

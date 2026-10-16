@@ -1,6 +1,9 @@
 # Sides: publish status
 
-## Internal testing builds 4 to 7 (16 Oct 2026): UI redesign, In brief, graphical layer, motion
+## Internal testing builds 4 to 8 (16 Oct 2026): UI redesign, In brief, graphical layer, motion, front page
+
+- **1.2.0 (versionCode 8)**: news-app front page (lead story on the plate, Top stories strip, rows, lens filters), By
+  side tab, bottom tabs. Replaces 7 on the internal track.
 
 - **1.1.0 (versionCode 7)**: motion on the story page (staggered reveal, axis-switch slide, avatar pop-in, stat
   count-up, stance-bar growth, jump highlight; all off under reduced motion). Replaces 6 on the internal track.

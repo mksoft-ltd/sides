@@ -1,0 +1,1 @@
+New front page: the lead story with its summary, a Top stories strip, the rest as rows, and filters for contested stories and blindspots. A By side tab browses the day's coverage as each side led with it. Story pages compare every side at once, with an In brief card, outlet avatars, a coverage spectrum and a jump bar.

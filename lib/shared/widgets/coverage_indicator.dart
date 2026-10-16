@@ -25,12 +25,17 @@ class CoverageIndicator extends StatelessWidget {
     required this.story,
     required this.digest,
     this.compact = true,
+    this.minimal = false,
     this.onSideTap,
   });
 
   final Story story;
   final Digest digest;
   final bool compact;
+
+  /// Compact mode with the bars only (no legend, no avatars): for a narrow
+  /// slot such as a list row's trailing box.
+  final bool minimal;
 
   /// Full mode only: tapping a side's zone, with that side's outlets.
   final void Function(String side, List<Outlet> outlets)? onSideTap;
@@ -62,7 +67,12 @@ class CoverageIndicator extends StatelessWidget {
     final Coverage coverage = story.coverage;
     final List<Outlet> outlets = _outlets();
     final Widget body = compact
-        ? _Compact(coverage: coverage, outlets: outlets, colors: colors)
+        ? _Compact(
+            coverage: coverage,
+            outlets: outlets,
+            colors: colors,
+            minimal: minimal,
+          )
         : Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
@@ -251,10 +261,12 @@ class _Compact extends StatelessWidget {
     required this.coverage,
     required this.outlets,
     required this.colors,
+    this.minimal = false,
   });
   final Coverage coverage;
   final List<Outlet> outlets;
   final PerspectiveColors colors;
+  final bool minimal;
 
   @override
   Widget build(BuildContext context) {
@@ -275,8 +287,9 @@ class _Compact extends StatelessWidget {
           ],
           emptyLabel: 'No lean-rated outlets',
           empty: colors.empty,
+          legend: !minimal,
         ),
-        const SizedBox(height: 8),
+        SizedBox(height: minimal ? 6 : 8),
         _Bar(
           segments: <_Segment>[
             for (final Bloc b in Bloc.values)
@@ -284,8 +297,9 @@ class _Compact extends StatelessWidget {
           ],
           emptyLabel: 'No outlets',
           empty: colors.empty,
+          legend: !minimal,
         ),
-        if (ordered.isNotEmpty) ...<Widget>[
+        if (!minimal && ordered.isNotEmpty) ...<Widget>[
           const SizedBox(height: 10),
           Wrap(
             spacing: 3,
@@ -312,11 +326,13 @@ class _Bar extends StatelessWidget {
     required this.segments,
     required this.emptyLabel,
     required this.empty,
+    this.legend = true,
   });
 
   final List<_Segment> segments;
   final String emptyLabel;
   final Color empty;
+  final bool legend;
 
   @override
   Widget build(BuildContext context) {
@@ -349,10 +365,13 @@ class _Bar extends StatelessWidget {
                   ),
           ),
         ),
-        const SizedBox(height: 4),
-        if (total == 0)
-          Text(emptyLabel, style: legendStyle)
-        else
+        if (!legend)
+          const SizedBox.shrink()
+        else if (total == 0) ...<Widget>[
+          const SizedBox(height: 4),
+          Text(emptyLabel, style: legendStyle),
+        ] else ...<Widget>[
+          const SizedBox(height: 4),
           Wrap(
             spacing: 10,
             runSpacing: 2,
@@ -375,6 +394,7 @@ class _Bar extends StatelessWidget {
                 ),
             ],
           ),
+        ],
       ],
     );
   }

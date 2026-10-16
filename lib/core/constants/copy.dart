@@ -50,6 +50,23 @@ abstract final class Copy {
   static const String analysisUnavailableShort = 'Analysis unavailable';
   static const String compare = 'Compare coverage';
 
+  /// Home shell and front page.
+  static const String tabToday = 'Today';
+  static const String tabBySide = 'By side';
+  static const String tabOutlets = 'Outlets';
+  static const String leadStory = 'TOP STORY';
+  static const String topStories = 'Top stories';
+  static const String moreStories = 'More of today\'s stories';
+  static const String lensAll = 'All';
+  static const String lensContested = 'Contested';
+  static const String lensBlindspots = 'Blindspots';
+  static const String lensEmpty =
+      'No story in today\'s digest matches this filter.';
+  static const String bySideTitle = 'Today, side by side';
+  static const String bySideIntro =
+      'The same stories as each side led with them. Tap a card to compare.';
+  static String storyCount(int n) => n == 1 ? '1 story' : '$n stories';
+
   /// Under the date on the digest list.
   static const String digestIntro =
       'How outlets across the political spectrum, and from West and East, '

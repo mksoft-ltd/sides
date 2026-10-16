@@ -69,7 +69,12 @@ void main() {
         'Coverage by political lean: 2 left, 0 centre, 0 right. '
         'Coverage by West and East: 2 Western, 4 Eastern.',
       );
-      await tester.scrollUntilVisible(label, 300);
+      // The front page has a lens row and a carousel: scroll the main list.
+      await tester.scrollUntilVisible(
+        label,
+        300,
+        scrollable: find.byType(Scrollable).first,
+      );
       expect(label, findsOneWidget);
       semantics.dispose();
     });
