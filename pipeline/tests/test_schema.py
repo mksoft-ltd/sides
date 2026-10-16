@@ -57,4 +57,9 @@ def test_story_schema_rejects_long_titles_and_extra_fields():
     assert not story.is_valid({**good, "title": "x" * 91})
     assert not story.is_valid({**good, "blindspot": {"lean": "far-left", "bloc": None}})
     assert not story.is_valid({**good, "summary": "unsourced prose must not appear"})
+    assert story.is_valid({**good, "summary": None, "conclusion": None})
+    syn = {"text": "What happened.", "sources": ["0123456789ab"]}
+    assert story.is_valid({**good, "summary": syn, "conclusion": syn})
+    assert not story.is_valid({**good, "summary": {"text": "x" * 401, "sources": ["0123456789ab"]}})
+    assert not story.is_valid({**good, "conclusion": {"text": "unsourced", "sources": []}})
     assert not story.is_valid({**good, "articles": []})

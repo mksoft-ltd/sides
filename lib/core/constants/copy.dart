@@ -55,6 +55,19 @@ abstract final class Copy {
       'How outlets across the political spectrum, and from West and East, '
       'covered today\'s top stories.';
 
+  /// The "In brief" card at the top of a story: the summary, the conclusion
+  /// across the sides, and the list of disagreements. Each part is sourced
+  /// like any point; the card says where the sides differ, never who is right.
+  static const String inBrief = 'In brief';
+  static const String summaryTitle = 'What happened';
+  static const String conclusionTitle = 'Across the sides';
+  static const String disagreementsTitle = 'Where they disagree';
+  static const String noDisagreements =
+      'No contested claims or East–West contradictions found in today\'s '
+      'coverage.';
+  static const String contestedLabel = 'Contested';
+  static const String contradictionLabel = 'West vs East';
+
   static const String axisLean = 'Political lean';
   static const String axisBloc = 'West / East';
 

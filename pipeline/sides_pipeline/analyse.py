@@ -50,10 +50,20 @@ _QUOTE = {
     "required": ["article_id", "quote"],
     "additionalProperties": False,
 }
+_SYNTHESIS = {
+    "type": "object",
+    "properties": {
+        "text": {"type": "string", "description": "two or three plain sentences, at most 400 characters"},
+        "sources": {**_IDS, "description": "article ids from this story that carry every statement in the text"},
+    },
+    "required": ["text", "sources"],
+    "additionalProperties": False,
+}
 _FRAMING_PROPS = {"headline_quotes": {"type": "array", "items": _QUOTE}, "emphasis": {"type": "array", "items": _SOURCED}}
 ANALYSIS_OUTPUT_SCHEMA: dict = {
     "type": "object",
     "properties": {
+        "summary": _SYNTHESIS,
         "agreed_facts": {"type": "array", "items": _SOURCED},
         "framing": {
             "type": "array",
@@ -105,8 +115,10 @@ ANALYSIS_OUTPUT_SCHEMA: dict = {
                 "additionalProperties": False,
             },
         },
+        "conclusion": _SYNTHESIS,
     },
-    "required": ["agreed_facts", "framing", "omissions", "contested_claims", "opinion", "framing_by_bloc", "east_west_contradictions"],
+    "required": ["summary", "agreed_facts", "framing", "omissions", "contested_claims", "opinion", "framing_by_bloc",
+                 "east_west_contradictions", "conclusion"],
     "additionalProperties": False,
 }
 
@@ -237,6 +249,7 @@ class AnalysisResponse(BaseModel):
         west: "AnalysisResponse.Sourced"
         east: "AnalysisResponse.Sourced"
 
+    summary: Sourced | None = None  # absent from fixtures recorded before 16 Oct 2026
     agreed_facts: list[Sourced] = Field(default_factory=list)
     framing: list[LeanFraming] = Field(default_factory=list)
     omissions: list[Omission] = Field(default_factory=list)
@@ -244,6 +257,7 @@ class AnalysisResponse(BaseModel):
     opinion: list[Sourced] = Field(default_factory=list)
     framing_by_bloc: list[BlocFraming] = Field(default_factory=list)
     east_west_contradictions: list[Contradiction] = Field(default_factory=list)
+    conclusion: Sourced | None = None
 
 
 @dataclass(frozen=True)

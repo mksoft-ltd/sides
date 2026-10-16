@@ -132,6 +132,15 @@ stage offline from a recorded response (no key needed).
 - **Two axes in one response**: lean (`agreed_facts`, `framing[]` per lean, `omissions[]`, `contested_claims[]`,
   `opinion[]`) and West/East (`framing_by_bloc[]`, `east_west_contradictions[]` = one topic with a `west` and an
   `east` side that state incompatible things; empty when they do not, shown as "none found", never padded).
+- **Two sourced paragraphs across the story (16 Oct 2026)**: `summary` (what happened, ≤400 chars) and `conclusion`
+  (what every side establishes, how the sides frame it differently, what stays contested; states the disagreement,
+  never resolves it). Both are `Synthesis` (`models.py`: text ≤ `SYNTHESIS_TEXT_MAX_CHARS` 400 + sources), required in
+  the output schema, validated by `validate._synthesis` under the same rules as a point (`unknown_id` / `empty_sources`
+  / `untrusted_text`) and shipped as `null` when dropped or on a failed story. Schema: `$defs.synthesis`, story
+  properties `summary` / `conclusion` (`anyOf` synthesis | null, not required: files before 16 Oct lack them; the app and
+  `AnalysisResponse` default them to None, so the 14 Oct fixtures still replay). The app shows them in the "In brief"
+  card at the top of a story (`in_brief_card.dart`: What happened · Across the sides · Where they disagree, the last
+  listing contested claims and contradictions with rows that jump to their section, switching axis when needed).
 - **Failure is per story, not per run**: refusal / `max_tokens` / unparsable JSON → one retry (`analysis.retries`),
   then the story ships with empty analysis arrays and a `meta.warnings[]` entry. Every attempt is billed and costed.
   The command exits 1 only when every story failed.

@@ -22,7 +22,9 @@ dropped under the FIRST failing reason below and counted in ``ValidationCounts.d
 A kept quote is stored as the outlet's own text: the matched span of the headline/snippet, not the model's
 wording (the match ignores case, quote style and dashes, so the model's copy could differ in exactly those).
 
-Texts longer than 200 characters are cut at a word boundary (logged, not a drop).
+Texts longer than 200 characters are cut at a word boundary (logged, not a drop); the ``summary`` and
+``conclusion`` paragraphs get 400. Each of those two is a single sourced item under the same rules
+(unknown_id / empty_sources / untrusted_text) and ships as null when dropped.
 """
 
 from __future__ import annotations
@@ -33,6 +35,7 @@ import re
 from .analyse import AnalysisResponse, sides_present
 from .models import (
     ANALYSIS_TEXT_MAX_CHARS,
+    SYNTHESIS_TEXT_MAX_CHARS,
     BlocFraming,
     ContestedClaim,
     Contradiction,
@@ -42,6 +45,7 @@ from .models import (
     OutletPublic,
     Sourced,
     Story,
+    Synthesis,
     ValidationCounts,
 )
 from .guard import suspect_text
@@ -122,11 +126,11 @@ class _Ctx:
             return "empty_sources"
         return None
 
-    def text(self, s: str) -> str:
+    def text(self, s: str, limit: int = ANALYSIS_TEXT_MAX_CHARS) -> str:
         s = normalise_ws(s)
-        if len(s) > ANALYSIS_TEXT_MAX_CHARS:
+        if len(s) > limit:
             self.truncated += 1
-            s = truncate_words(s, ANALYSIS_TEXT_MAX_CHARS)
+            s = truncate_words(s, limit)
         return s or "…"
 
     def quote_field(self, q: AnalysisResponse.Quote) -> str | None:
@@ -164,6 +168,21 @@ def _sourced(ctx: _Ctx, item: AnalysisResponse.Sourced, *, side_of=None, side=No
         return None
     ctx.keep()
     return Sourced(text=ctx.text(item.text), sources=ids)
+
+
+def _synthesis(ctx: _Ctx, item: AnalysisResponse.Sourced | None, *, label: str) -> Synthesis | None:
+    """The summary / conclusion paragraph: same rules as a point, a longer text limit, None when dropped or absent."""
+    if item is None:
+        return None
+    ids = _dedupe(item.sources)
+    reason = ctx.check_ids(ids)
+    if reason is None and suspect_text(item.text):
+        reason = "untrusted_text"
+    if reason:
+        ctx.drop(reason, f"{label} {item.text[:60]!r} {ids}")
+        return None
+    ctx.keep()
+    return Synthesis(text=ctx.text(item.text, SYNTHESIS_TEXT_MAX_CHARS), sources=ids)
 
 
 def _framing(ctx: _Ctx, entries, *, kind: str) -> list:  # noqa: ANN001
@@ -218,6 +237,8 @@ def validate_analysis(response: AnalysisResponse, story: Story, outlets: dict[st
     ctx = _Ctx(story, outlets)
     ctx.counts.dropped_by_reason.update(title_counts(story))
 
+    summary = _synthesis(ctx, response.summary, label="summary")
+    conclusion = _synthesis(ctx, response.conclusion, label="conclusion")
     agreed = [s for s in (_sourced(ctx, i, label="agreed_fact") for i in response.agreed_facts) if s]
     opinion = [s for s in (_sourced(ctx, i, label="opinion") for i in response.opinion) if s]
     framing = _framing(ctx, response.framing, kind="lean")
@@ -279,7 +300,8 @@ def validate_analysis(response: AnalysisResponse, story: Story, outlets: dict[st
         log.warning("story %s: %d analysis text(s) cut to %d chars", story.id, ctx.truncated, ANALYSIS_TEXT_MAX_CHARS)
     analysed = story.model_copy(update=dict(
         agreed_facts=agreed, framing=framing, omissions=omissions, contested_claims=contested, opinion=opinion,
-        framing_by_bloc=framing_by_bloc, east_west_contradictions=contradictions, validation=counts,
+        framing_by_bloc=framing_by_bloc, east_west_contradictions=contradictions,
+        summary=summary, conclusion=conclusion, validation=counts,
     ))
     return analysed, counts
 
@@ -296,6 +318,6 @@ def empty_analysis(story: Story) -> Story:
     """The story with every analysis array empty (used when its analysis call failed)."""
     return story.model_copy(update=dict(
         agreed_facts=[], framing=[], omissions=[], contested_claims=[], opinion=[],
-        framing_by_bloc=[], east_west_contradictions=[],
+        framing_by_bloc=[], east_west_contradictions=[], summary=None, conclusion=None,
         validation=ValidationCounts(dropped_by_reason=title_counts(story)),
     ))

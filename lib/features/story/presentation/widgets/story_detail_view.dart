@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../../../core/constants/copy.dart';
@@ -10,6 +11,7 @@ import '../../../../shared/widgets/section.dart';
 import '../../../../shared/widgets/story_signals.dart';
 import '../../../digest/domain/digest.dart';
 import '../providers/story_view_controller.dart';
+import 'in_brief_card.dart';
 import 'points.dart';
 import 'sources_list.dart';
 
@@ -78,6 +80,24 @@ class _StoryDetailViewState extends ConsumerState<StoryDetailView> {
     );
   }
 
+  /// A disagreement row in the "In brief" card: switch axis when the target
+  /// section lives on the other one, then scroll once that axis has built.
+  void _jumpOnAxis(String id, PerspectiveAxis axis) {
+    final StoryViewController controller = ref.read(
+      storyViewProvider(story.id).notifier,
+    );
+    final PerspectiveAxis current =
+        ref.read(storyViewProvider(story.id)).axisOr(widget.initialAxis);
+    if (current == axis) {
+      _jumpTo(id);
+      return;
+    }
+    controller.setAxis(axis);
+    SchedulerBinding.instance.addPostFrameCallback((_) {
+      if (mounted) _jumpTo(id);
+    });
+  }
+
   Story get story => widget.story;
   Digest get digest => widget.digest;
 
@@ -126,6 +146,8 @@ class _StoryDetailViewState extends ConsumerState<StoryDetailView> {
                   ),
                 ),
               ],
+              const SizedBox(height: 16),
+              InBriefCard(story: story, digest: digest, onJump: _jumpOnAxis),
               const SizedBox(height: 20),
               if (story.analysisUnavailable)
                 const Section(

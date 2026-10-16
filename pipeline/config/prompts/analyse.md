@@ -20,6 +20,8 @@ You see ONLY headlines and snippets of at most 200 characters. You know nothing 
 
 ## What to produce
 
+`summary` — What happened, in two or three plain sentences (at most 400 characters), using only facts that the headlines and snippets state. Cite every article that carries what you say. This is the one place you summarise the story; write it for a reader who has not seen any of the headlines yet.
+
 `agreed_facts` — Points of fact that articles across different outlets state in common. Cite every article that carries each fact. If coverage broadly agrees, this is where most of the content belongs.
 
 `framing` — One entry per lean that has at least one article in this story, and no entry for any lean that has none.
@@ -36,6 +38,8 @@ You see ONLY headlines and snippets of at most 200 characters. You know nothing 
 
 `east_west_contradictions` — Only where West-bloc articles and East-bloc articles state incompatible things about the same topic (who did what, numbers, legality, what the event is called, who is responsible). Each item names the `topic`, then `west` (text + West-bloc ids) and `east` (text + East-bloc ids). Different emphasis is not a contradiction; leave this list empty unless the two sets of articles genuinely cannot both be true. An empty list is the normal, correct result for most stories.
 
+`conclusion` — Across the sides, in two or three plain sentences (at most 400 characters): what every side establishes, how the leans or blocs frame it differently, and what stays contested or contradicted between them. Cite the articles behind each part. State the disagreement; never resolve it, never say which side is right, never advise the reader. When the coverage simply agrees, say so and cite it.
+
 ## Rules of wording
 
 1. Never invent a side. If a lean or bloc has no articles in the header line, it does not appear anywhere in your output.
@@ -44,4 +48,4 @@ You see ONLY headlines and snippets of at most 200 characters. You know nothing 
 4. Quotes are verbatim substrings of the cited article's headline or snippet. Do not fix spelling, change punctuation, add ellipses or merge two fragments.
 5. Cite only ids from this story's article list; never cite an id that is not there; never leave `sources` empty.
 6. British English. Each `text`, `claim` and `topic` is one or two plain sentences of at most 200 characters.
-7. Do not describe what you are doing, do not summarise the story, do not address the reader. Output only the structured result.
+7. Do not describe what you are doing, do not summarise the story anywhere but in `summary`, do not address the reader. Output only the structured result.

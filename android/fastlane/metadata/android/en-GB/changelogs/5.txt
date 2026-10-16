@@ -1,0 +1,1 @@
+Redesigned story pages: an In brief card (what happened, where the views stand across the sides, and where they disagree), every side on the page at once, headlines side by side, source pills with a sources sheet, a jump bar, and previous / next story. Story cards show contested claims and East–West contradictions at a glance.

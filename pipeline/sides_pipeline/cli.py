@@ -293,6 +293,14 @@ def show_story(digest: Digest, story: Story) -> str:
         tag = f"{o.lean or 'n/a'}/{o.bloc}" if o else "?"
         lines.append(_wrap(f"{a.id}  {o.name if o else a.outlet_id} ({tag}): {a.headline}", 2))
     lines.append("")
+    for label, syn in (("SUMMARY", story.summary), ("CONCLUSION", story.conclusion)):
+        lines.append(label)
+        if syn is None:
+            lines.append("  none")
+        else:
+            lines.append(_wrap(f"• {syn.text}", 2))
+            lines += refs(syn.sources)
+        lines.append("")
     lines += sourced_block(story.agreed_facts, "AGREED FACTS")
     lines.append("")
     lines += framing_block(story.framing, "lean", "FRAMING BY LEAN")

@@ -233,11 +233,22 @@
           "items": {
             "type": "object",
             "properties": {
-              "outlet_id": {"type": "string"},
-              "reason": {"type": "string"},
-              "count": {"type": "integer", "minimum": 1}
+              "outlet_id": {
+                "type": "string"
+              },
+              "reason": {
+                "type": "string"
+              },
+              "count": {
+                "type": "integer",
+                "minimum": 1
+              }
             },
-            "required": ["outlet_id", "reason", "count"],
+            "required": [
+              "outlet_id",
+              "reason",
+              "count"
+            ],
             "additionalProperties": false
           }
         }
@@ -404,6 +415,17 @@
             "$ref": "#/$defs/article"
           }
         },
+        "summary": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/synthesis"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "What happened, in two or three sentences, sourced. Optional: files before 16 Oct 2026 omit it."
+        },
         "agreed_facts": {
           "type": "array",
           "items": {
@@ -445,6 +467,17 @@
           "items": {
             "$ref": "#/$defs/contradiction"
           }
+        },
+        "conclusion": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/synthesis"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "Across the sides: what is agreed, framed differently and still contested, sourced. Optional as above."
         },
         "validation": {
           "$ref": "#/$defs/validation"
@@ -676,6 +709,25 @@
       "required": [
         "kept",
         "dropped_by_reason"
+      ],
+      "additionalProperties": false
+    },
+    "synthesis": {
+      "type": "object",
+      "description": "A sourced paragraph across the whole story (summary: what happened; conclusion: where the coverage agrees, differs and stays contested). Like a point, it rests only on cited articles; null when the model gave none or the validator dropped it.",
+      "properties": {
+        "text": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 400
+        },
+        "sources": {
+          "$ref": "#/$defs/article_ids"
+        }
+      },
+      "required": [
+        "text",
+        "sources"
       ],
       "additionalProperties": false
     }

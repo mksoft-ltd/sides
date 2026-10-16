@@ -1,9 +1,13 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:sides/core/constants/copy.dart';
 import 'package:sides/core/text/quotes.dart';
+import 'package:sides/features/digest/data/digest_cache.dart';
 import 'package:sides/features/digest/domain/digest.dart';
 import 'package:sides/features/story/presentation/screens/story_detail_screen.dart';
+import 'package:sides/features/story/presentation/widgets/in_brief_card.dart';
 import 'package:sides/features/story/presentation/widgets/points.dart';
 import 'package:sides/features/story/presentation/widgets/source_pills.dart';
 import 'package:sides/features/story/presentation/widgets/sources_list.dart';
@@ -293,6 +297,132 @@ void main() {
         initialLocation: '/story/${digest.stories[0].id}?axis=bloc');
     expect(find.text(Copy.blocGroup(Bloc.west)), findsWidgets);
     expect(find.text(Copy.leanGroup(Lean.left)), findsNothing);
+  });
+
+  group('In brief card', () {
+    testWidgets('a sample story with nothing contested and no summary shows '
+        'no card; one with a contested claim lists it and jumps to it',
+        (WidgetTester tester) async {
+      await open(tester, digest.stories[0]);
+      expect(find.byKey(InBriefCard.cardKey), findsNothing);
+
+      final Story s2 = digest.stories[1];
+      expect(s2.contestedClaims, hasLength(1)); // sample precondition
+      // pumpSidesApp over a running app reuses its router: relaunch.
+      await tester.pumpWidget(const SizedBox());
+      await open(tester, s2);
+      expect(find.byKey(InBriefCard.cardKey), findsOneWidget);
+      expect(find.text(Copy.disagreementsTitle), findsOneWidget);
+      expect(find.text(Copy.summaryTitle), findsNothing);
+      final Finder row = find.descendant(
+        of: find.byKey(InBriefCard.cardKey),
+        matching: find.text(s2.contestedClaims.first.claim),
+      );
+      expect(row, findsOneWidget);
+      final Rect view = tester.getRect(find.byType(StoryDetailView));
+      expect(tester.getRect(find.text(Copy.contested)).top,
+          greaterThan(view.bottom));
+      await tester.ensureVisible(row);
+      await tester.pumpAndSettle();
+      await tester.tap(row);
+      await tester.pumpAndSettle();
+      final Rect heading = tester.getRect(find.text(Copy.contested));
+      expect(heading.top, greaterThanOrEqualTo(view.top));
+      expect(heading.bottom, lessThanOrEqualTo(view.bottom));
+    });
+
+    testWidgets('a digest with summary, conclusion and a contradiction shows '
+        'all three parts; the contradiction row switches to West / East',
+        (WidgetTester tester) async {
+      final Map<String, Object?> json = sampleDigestJson();
+      final Map<String, Object?> story =
+          (json['stories']! as List<Object?>).first! as Map<String, Object?>;
+      final List<Map<String, Object?>> articles =
+          (story['articles']! as List<Object?>).cast<Map<String, Object?>>();
+      String firstOf(String bloc) {
+        final Set<String> outlets = <String>{
+          for (final Object? o in json['outlets']! as List<Object?>)
+            if ((o! as Map<String, Object?>)['bloc'] == bloc)
+              (o as Map<String, Object?>)['id']! as String,
+        };
+        return articles
+            .firstWhere((Map<String, Object?> a) =>
+                outlets.contains(a['outlet_id']))['id']! as String;
+      }
+
+      story['summary'] = <String, Object?>{
+        'text': 'The Vatican says the Pope has lung cancer after surgery.',
+        'sources': <String>[articles[0]['id']! as String, 'ffffffffffff'],
+      };
+      story['conclusion'] = <String, Object?>{
+        'text': 'Every side reports the diagnosis; the right leads with the '
+            'early detection, the left with the recovery.',
+        'sources': <String>[articles[0]['id']! as String],
+      };
+      story['east_west_contradictions'] = <Object?>[
+        <String, Object?>{
+          'topic': 'How early it was found',
+          'west': <String, Object?>{
+            'text': 'Western outlets say early.',
+            'sources': <String>[firstOf('west')],
+          },
+          'east': <String, Object?>{
+            'text': 'Eastern outlets say late.',
+            'sources': <String>[firstOf('east')],
+          },
+        },
+      ];
+      final TestHarness h = TestHarness(
+        cache: InMemoryDigestCache(
+          CachedDigest(
+            body: jsonEncode(json),
+            fetchedAt: sampleNow.subtract(const Duration(minutes: 15)),
+            etag: '"brief"',
+          ),
+        ),
+      );
+      await pumpSidesApp(
+        tester,
+        harness: h,
+        initialLocation: '/story/${story['id']}',
+      );
+      final Finder card = find.byKey(InBriefCard.cardKey);
+      expect(card, findsOneWidget);
+      expect(find.text(Copy.inBrief), findsOneWidget);
+      expect(find.text(Copy.summaryTitle), findsOneWidget);
+      expect(
+        find.text('The Vatican says the Pope has lung cancer after surgery.'),
+        findsOneWidget,
+      );
+      expect(find.text(Copy.conclusionTitle), findsOneWidget);
+      // The unknown id was stripped on read: one pill, the real article.
+      final Finder summaryTile = find.ancestor(
+        of: find.text('The Vatican says the Pope has lung cancer after surgery.'),
+        matching: find.byType(PointTile),
+      );
+      expect(
+        find.descendant(of: summaryTile, matching: find.byType(SourcePill)),
+        findsOneWidget,
+      );
+
+      // The contradiction row is on the lean axis page too, and jumps to the
+      // bloc axis section.
+      expect(find.text(Copy.blocGroup(Bloc.west)), findsNothing);
+      final Finder row = find.descendant(
+        of: card,
+        matching: find.text('How early it was found'),
+      );
+      await tester.ensureVisible(row);
+      await tester.pumpAndSettle();
+      await tester.tap(row);
+      await tester.pumpAndSettle();
+      expect(find.text(Copy.blocGroup(Bloc.west)), findsWidgets);
+      final Rect view = tester.getRect(find.byType(StoryDetailView));
+      final Rect heading = tester.getRect(find.text(Copy.contradictions));
+      expect(heading.top, greaterThanOrEqualTo(view.top));
+      expect(heading.bottom, lessThanOrEqualTo(view.bottom));
+      expect(find.text('Western outlets say early.'), findsOneWidget);
+    });
   });
 
   testWidgets('previous / next in the app bar step through the digest and '

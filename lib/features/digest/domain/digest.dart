@@ -343,6 +343,8 @@ class Story {
     required this.opinion,
     required this.framingByBloc,
     required this.contradictions,
+    this.summary,
+    this.conclusion,
     this.validation,
   }) : _articleById = <String, Article>{
           for (final Article a in articles) a.id: a,
@@ -362,6 +364,14 @@ class Story {
   final List<SourcedPoint> opinion;
   final List<Framing<Bloc>> framingByBloc;
   final List<Contradiction> contradictions;
+
+  /// What happened, in two or three sentences, sourced like any point; null
+  /// for a digest from before 16 Oct 2026 or when the validator dropped it.
+  final SourcedPoint? summary;
+
+  /// Across the sides: what is agreed, framed differently and still
+  /// contested, sourced; null as for [summary].
+  final SourcedPoint? conclusion;
 
   /// The pipeline's validation counts (schema-required; null only for an
   /// older file without them, which then renders as before).
@@ -489,6 +499,9 @@ class Story {
               case (final SourcedPoint w, final SourcedPoint e))
             Contradiction(topic: _str(m, 'topic'), west: w, east: e),
       ],
+      summary: j['summary'] == null ? null : sourced(_map(j, 'summary')),
+      conclusion:
+          j['conclusion'] == null ? null : sourced(_map(j, 'conclusion')),
       validation: j['validation'] == null
           ? null
           : StoryValidation.fromJson(_map(j, 'validation')),

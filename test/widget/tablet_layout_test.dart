@@ -376,7 +376,8 @@ void main() {
       // Column x positions first; they do not change as the pane scrolls.
       final Rect westCol = tester.getRect(column('west').first);
       final Rect eastCol = tester.getRect(column('east').first);
-      final Finder topic = find.text('Who is responsible');
+      // The In brief card lists the topic too; the section's own is last.
+      final Finder topic = find.text('Who is responsible').last;
       await tester.scrollUntilVisible(
         find.byKey(const ValueKey<String>('contradiction-east')),
         300,
@@ -450,6 +451,9 @@ void main() {
         (WidgetTester tester) async {
       await pumpSidesApp(tester, initialLocation: '/story/${s3.id}');
       expect(find.byType(StoryDetailScreen), findsOneWidget);
+      // Story 3's In brief card pushes the axis switch below the fold.
+      await tester.ensureVisible(axisSwitch(Copy.axisBloc));
+      await tester.pumpAndSettle();
       await tester.tap(axisSwitch(Copy.axisBloc));
       await tester.pumpAndSettle();
       expect(find.text('Eastern outlets'), findsWidgets);

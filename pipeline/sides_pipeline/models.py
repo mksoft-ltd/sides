@@ -174,6 +174,7 @@ class Blindspot(BaseModel):
 # ── Phase 3: per-story analysis (every item cites article ids; validate.py drops anything unsourced) ──
 
 ANALYSIS_TEXT_MAX_CHARS = 200
+SYNTHESIS_TEXT_MAX_CHARS = 400
 
 
 class Sourced(BaseModel):
@@ -182,6 +183,17 @@ class Sourced(BaseModel):
     model_config = ConfigDict(extra="forbid")
 
     text: str = Field(min_length=1, max_length=ANALYSIS_TEXT_MAX_CHARS)
+    sources: list[str] = Field(min_length=1)
+
+
+class Synthesis(BaseModel):
+    """A sourced paragraph that reads across the whole story: the ``summary`` (what happened, from the headlines
+    and snippets) and the ``conclusion`` (where the coverage agrees, differs and stays contested). Longer than a
+    point, still nothing but cited material; the validator drops it like any other item when it is not."""
+
+    model_config = ConfigDict(extra="forbid")
+
+    text: str = Field(min_length=1, max_length=SYNTHESIS_TEXT_MAX_CHARS)
     sources: list[str] = Field(min_length=1)
 
 
@@ -281,6 +293,8 @@ class Story(BaseModel):
     opinion: list[Sourced] = Field(default_factory=list)
     framing_by_bloc: list[BlocFraming] = Field(default_factory=list)
     east_west_contradictions: list[Contradiction] = Field(default_factory=list)
+    summary: Synthesis | None = Field(default=None, description="what happened, sourced; None until analysed or when dropped")
+    conclusion: Synthesis | None = Field(default=None, description="where the coverage agrees, differs and stays contested")
     validation: ValidationCounts = Field(default_factory=ValidationCounts)
 
 
