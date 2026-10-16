@@ -77,6 +77,8 @@ Future<TestHarness> pumpSidesApp(
   TestHarness? harness,
   String initialLocation = '/',
   Size size = phoneSize,
+  /// False to stop after the first frame (to observe animations mid-way).
+  bool settle = true,
 }) async {
   final TestHarness h = harness ?? TestHarness();
   tester.view
@@ -89,6 +91,10 @@ Future<TestHarness> pumpSidesApp(
       child: SidesApp(initialLocation: initialLocation),
     ),
   );
-  await tester.pumpAndSettle();
+  if (settle) {
+    await tester.pumpAndSettle();
+  } else {
+    await tester.pump();
+  }
   return h;
 }

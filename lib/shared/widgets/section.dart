@@ -10,7 +10,11 @@ class Section extends StatelessWidget {
     this.subtitle,
     this.icon,
     this.tinted = false,
+    this.highlighted = false,
   });
+
+  /// Briefly true after a jump lands here: a soft tint that fades away.
+  final bool highlighted;
 
   final String title;
 
@@ -59,8 +63,18 @@ class Section extends StatelessWidget {
         ...children,
       ],
     );
-    return Padding(
-      padding: const EdgeInsets.only(top: 28),
+    return AnimatedContainer(
+      duration: const Duration(milliseconds: 400),
+      curve: Curves.easeOut,
+      margin: const EdgeInsets.only(top: 28),
+      padding: EdgeInsets.symmetric(horizontal: highlighted ? 8 : 0),
+      transform: Matrix4.translationValues(highlighted ? -8 : 0, 0, 0),
+      decoration: BoxDecoration(
+        color: highlighted
+            ? theme.colorScheme.secondaryContainer.withValues(alpha: 0.55)
+            : theme.colorScheme.secondaryContainer.withValues(alpha: 0),
+        borderRadius: BorderRadius.circular(12),
+      ),
       child: tinted
           ? Container(
               padding: const EdgeInsets.all(16),

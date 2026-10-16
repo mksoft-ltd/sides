@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -6,6 +8,7 @@ import '../../../../core/constants/copy.dart';
 import '../../../../core/layout/breakpoints.dart';
 import '../../../../core/theme/app_theme.dart';
 import '../../../../shared/widgets/coverage_indicator.dart';
+import '../../../../shared/widgets/motion.dart';
 import '../../../../shared/widgets/report_story_tile.dart';
 import '../../../../shared/widgets/section.dart';
 import '../../../../shared/widgets/story_signals.dart';
@@ -65,20 +68,49 @@ class StoryDetailView extends ConsumerStatefulWidget {
 }
 
 class _StoryDetailViewState extends ConsumerState<StoryDetailView> {
-  /// One anchor per section id; the jump bar scrolls to them. The page is a
-  /// single column (not a lazy list) so every anchor is always laid out.
+  /// One anchor per section per axis; the jump bar scrolls to them. The
+  /// page is a single column (not a lazy list) so every anchor is always
+  /// laid out. Keys are per axis because, while the axis switch animates,
+  /// both axes' sections are in the tree at once.
   final Map<String, GlobalKey> _anchors = <String, GlobalKey>{};
 
-  GlobalKey _anchor(String id) => _anchors.putIfAbsent(id, GlobalKey.new);
+  /// The section briefly highlighted after a jump, by anchor key.
+  String? _flash;
+  Timer? _flashTimer;
 
-  void _jumpTo(String id) {
-    final BuildContext? target = _anchors[id]?.currentContext;
+  /// The axis last built, to pick the slide direction of the switch.
+  PerspectiveAxis? _lastAxis;
+
+  static String _anchorId(String id, PerspectiveAxis? axis) =>
+      id == _Jump.sources ? 'shared-$id' : '${axis!.name}-$id';
+
+  GlobalKey _anchor(String id, PerspectiveAxis? axis) =>
+      _anchors.putIfAbsent(_anchorId(id, axis), GlobalKey.new);
+
+  PerspectiveAxis get _axis =>
+      ref.read(storyViewProvider(story.id)).axisOr(widget.initialAxis);
+
+  void _jumpTo(String id, [PerspectiveAxis? axis]) {
+    final String key = _anchorId(id, axis ?? _axis);
+    final BuildContext? target = _anchors[key]?.currentContext;
     if (target == null) return;
     Scrollable.ensureVisible(
       target,
       duration: const Duration(milliseconds: 300),
       curve: Curves.easeOutCubic,
     );
+    if (Motion.reduced(context)) return;
+    _flashTimer?.cancel();
+    setState(() => _flash = key);
+    _flashTimer = Timer(Motion.flash, () {
+      if (mounted) setState(() => _flash = null);
+    });
+  }
+
+  @override
+  void dispose() {
+    _flashTimer?.cancel();
+    super.dispose();
   }
 
   /// A disagreement row in the "In brief" card: switch axis when the target
@@ -87,15 +119,16 @@ class _StoryDetailViewState extends ConsumerState<StoryDetailView> {
     final StoryViewController controller = ref.read(
       storyViewProvider(story.id).notifier,
     );
-    final PerspectiveAxis current =
-        ref.read(storyViewProvider(story.id)).axisOr(widget.initialAxis);
+    final PerspectiveAxis current = ref
+        .read(storyViewProvider(story.id))
+        .axisOr(widget.initialAxis);
     if (current == axis) {
-      _jumpTo(id);
+      _jumpTo(id, axis);
       return;
     }
     controller.setAxis(axis);
     SchedulerBinding.instance.addPostFrameCallback((_) {
-      if (mounted) _jumpTo(id);
+      if (mounted) _jumpTo(id, axis);
     });
   }
 
@@ -112,6 +145,12 @@ class _StoryDetailViewState extends ConsumerState<StoryDetailView> {
     final bool expanded = LayoutSize.of(context) == LayoutSize.expanded;
     final ThemeData theme = Theme.of(context);
     final int unrated = story.outletCount - story.coverage.leanTotal;
+    // Slide direction for the axis switch: West / East sits to the right.
+    final bool forward = _lastAxis == null || axis.index >= _lastAxis!.index;
+    _lastAxis = axis;
+    int step = 0;
+    Widget reveal(Widget child) =>
+        Reveal(delay: Motion.stagger * (step++), child: child);
 
     return LayoutBuilder(
       builder: (BuildContext context, BoxConstraints c) {
@@ -124,94 +163,135 @@ class _StoryDetailViewState extends ConsumerState<StoryDetailView> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
-              Semantics(
-                header: true,
-                child: Text(story.title, style: theme.textTheme.headlineSmall),
-              ),
-              const SizedBox(height: 6),
-              Text(
-                'Covered by ${Copy.outletCount(story.outletCount)}',
-                style: theme.textTheme.bodyMedium?.copyWith(
-                  color: theme.colorScheme.onSurfaceVariant,
+              reveal(
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: <Widget>[
+                    Semantics(
+                      header: true,
+                      child: Text(
+                        story.title,
+                        style: theme.textTheme.headlineSmall,
+                      ),
+                    ),
+                    const SizedBox(height: 6),
+                    Text(
+                      'Covered by ${Copy.outletCount(story.outletCount)}',
+                      style: theme.textTheme.bodyMedium?.copyWith(
+                        color: theme.colorScheme.onSurfaceVariant,
+                      ),
+                    ),
+                  ],
                 ),
               ),
               const SizedBox(height: 14),
-              CoverageIndicator(
-                story: story,
-                digest: digest,
-                compact: false,
-                onSideTap: (String side, List<Outlet> outlets) {
-                  final Set<String> ids = <String>{
-                    for (final Outlet o in outlets) o.id,
-                  };
-                  showSourcesSheet(
-                    context,
-                    story: story,
-                    digest: digest,
-                    ids: <String>[
-                      for (final Article a in story.articles)
-                        if (ids.contains(a.outletId)) a.id,
-                    ],
-                  );
-                },
+              reveal(
+                CoverageIndicator(
+                  story: story,
+                  digest: digest,
+                  compact: false,
+                  onSideTap: (String side, List<Outlet> outlets) {
+                    final Set<String> ids = <String>{
+                      for (final Outlet o in outlets) o.id,
+                    };
+                    showSourcesSheet(
+                      context,
+                      story: story,
+                      digest: digest,
+                      ids: <String>[
+                        for (final Article a in story.articles)
+                          if (ids.contains(a.outletId)) a.id,
+                      ],
+                    );
+                  },
+                ),
               ),
-              StorySignals(story: story, topPadding: 12),
-              if (unrated > 0) ...<Widget>[
-                const SizedBox(height: 8),
-                Text(
-                  Copy.unratedNote(unrated),
-                  style: theme.textTheme.bodySmall?.copyWith(
-                    color: theme.colorScheme.onSurfaceVariant,
+              reveal(
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: <Widget>[
+                    StorySignals(story: story, topPadding: 12),
+                    if (unrated > 0) ...<Widget>[
+                      const SizedBox(height: 8),
+                      Text(
+                        Copy.unratedNote(unrated),
+                        style: theme.textTheme.bodySmall?.copyWith(
+                          color: theme.colorScheme.onSurfaceVariant,
+                        ),
+                      ),
+                    ],
+                  ],
+                ),
+              ),
+              const SizedBox(height: 16),
+              reveal(
+                InBriefCard(story: story, digest: digest, onJump: _jumpOnAxis),
+              ),
+              const SizedBox(height: 20),
+              if (story.analysisUnavailable)
+                reveal(
+                  const Section(
+                    title: Copy.analysisUnavailableTitle,
+                    children: <Widget>[
+                      NoneFound(
+                        key: StoryDetailView.analysisUnavailableKey,
+                        text: Copy.analysisUnavailable,
+                      ),
+                    ],
+                  ),
+                )
+              else ...<Widget>[
+                reveal(
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.stretch,
+                    children: <Widget>[
+                      SegmentedButton<PerspectiveAxis>(
+                        showSelectedIcon: false,
+                        segments: const <ButtonSegment<PerspectiveAxis>>[
+                          ButtonSegment<PerspectiveAxis>(
+                            value: PerspectiveAxis.lean,
+                            label: Text(Copy.axisLean),
+                          ),
+                          ButtonSegment<PerspectiveAxis>(
+                            value: PerspectiveAxis.bloc,
+                            label: Text(Copy.axisBloc),
+                          ),
+                        ],
+                        selected: <PerspectiveAxis>{axis},
+                        onSelectionChanged: (Set<PerspectiveAxis> s) =>
+                            controller.setAxis(s.first),
+                      ),
+                      const SizedBox(height: 10),
+                      _JumpBar(
+                        items: axis == PerspectiveAxis.lean
+                            ? _leanJumps()
+                            : _blocJumps(),
+                        onJump: _jumpTo,
+                      ),
+                    ],
+                  ),
+                ),
+                reveal(
+                  AxisSwitcher(
+                    forward: forward,
+                    child: Column(
+                      key: ValueKey<PerspectiveAxis>(axis),
+                      crossAxisAlignment: CrossAxisAlignment.stretch,
+                      children: axis == PerspectiveAxis.lean
+                          ? _leanSections(context, columns)
+                          : _blocSections(context, columns),
+                    ),
                   ),
                 ),
               ],
-              const SizedBox(height: 16),
-              InBriefCard(story: story, digest: digest, onJump: _jumpOnAxis),
-              const SizedBox(height: 20),
-              if (story.analysisUnavailable)
-                const Section(
-                  title: Copy.analysisUnavailableTitle,
-                  children: <Widget>[
-                    NoneFound(
-                      key: StoryDetailView.analysisUnavailableKey,
-                      text: Copy.analysisUnavailable,
-                    ),
-                  ],
-                )
-              else ...<Widget>[
-                SegmentedButton<PerspectiveAxis>(
-                  showSelectedIcon: false,
-                  segments: const <ButtonSegment<PerspectiveAxis>>[
-                    ButtonSegment<PerspectiveAxis>(
-                      value: PerspectiveAxis.lean,
-                      label: Text(Copy.axisLean),
-                    ),
-                    ButtonSegment<PerspectiveAxis>(
-                      value: PerspectiveAxis.bloc,
-                      label: Text(Copy.axisBloc),
-                    ),
-                  ],
-                  selected: <PerspectiveAxis>{axis},
-                  onSelectionChanged: (Set<PerspectiveAxis> s) =>
-                      controller.setAxis(s.first),
+              reveal(
+                Section(
+                  key: _anchor(_Jump.sources, null),
+                  highlighted: _flash == _anchorId(_Jump.sources, null),
+                  title: '${Copy.sources} (${story.articles.length})',
+                  icon: SectionIcons.sources,
+                  children: <Widget>[SourcesList(story: story, digest: digest)],
                 ),
-                const SizedBox(height: 10),
-                _JumpBar(
-                  items: axis == PerspectiveAxis.lean
-                      ? _leanJumps()
-                      : _blocJumps(),
-                  onJump: _jumpTo,
-                ),
-                if (axis == PerspectiveAxis.lean)
-                  ..._leanSections(context, columns)
-                else
-                  ..._blocSections(context, columns),
-              ],
-              Section(
-                key: _anchor(_Jump.sources),
-                title: '${Copy.sources} (${story.articles.length})',
-                icon: SectionIcons.sources,
-                children: <Widget>[SourcesList(story: story, digest: digest)],
               ),
               const SizedBox(height: 8),
               ReportStoryTile(title: story.title, date: digest.date),
@@ -223,25 +303,25 @@ class _StoryDetailViewState extends ConsumerState<StoryDetailView> {
   }
 
   List<_Jump> _leanJumps() => <_Jump>[
-        const _Jump(_Jump.headlines, Copy.jumpHeadlines),
-        const _Jump(_Jump.emphasis, Copy.jumpEmphasis),
-        _Jump(_Jump.agreed, Copy.jumpAgreed, story.agreedFacts.length),
-        _Jump(_Jump.omissions, Copy.jumpOmissions, story.omissions.length),
-        _Jump(_Jump.contested, Copy.jumpContested, story.contestedClaims.length),
-        _Jump(_Jump.opinion, Copy.jumpOpinion, story.opinion.length),
-        _Jump(_Jump.sources, Copy.jumpSources, story.articles.length),
-      ];
+    const _Jump(_Jump.headlines, Copy.jumpHeadlines),
+    const _Jump(_Jump.emphasis, Copy.jumpEmphasis),
+    _Jump(_Jump.agreed, Copy.jumpAgreed, story.agreedFacts.length),
+    _Jump(_Jump.omissions, Copy.jumpOmissions, story.omissions.length),
+    _Jump(_Jump.contested, Copy.jumpContested, story.contestedClaims.length),
+    _Jump(_Jump.opinion, Copy.jumpOpinion, story.opinion.length),
+    _Jump(_Jump.sources, Copy.jumpSources, story.articles.length),
+  ];
 
   List<_Jump> _blocJumps() => <_Jump>[
-        const _Jump(_Jump.headlines, Copy.jumpHeadlines),
-        const _Jump(_Jump.emphasis, Copy.jumpEmphasis),
-        _Jump(
-          _Jump.contradictions,
-          Copy.jumpContradictions,
-          story.contradictions.length,
-        ),
-        _Jump(_Jump.sources, Copy.jumpSources, story.articles.length),
-      ];
+    const _Jump(_Jump.headlines, Copy.jumpHeadlines),
+    const _Jump(_Jump.emphasis, Copy.jumpEmphasis),
+    _Jump(
+      _Jump.contradictions,
+      Copy.jumpContradictions,
+      story.contradictions.length,
+    ),
+    _Jump(_Jump.sources, Copy.jumpSources, story.articles.length),
+  ];
 
   /// Every side of the axis, as columns when they fit, else stacked with a
   /// rail each. [cell] builds one side's content.
@@ -286,23 +366,20 @@ class _StoryDetailViewState extends ConsumerState<StoryDetailView> {
     );
   }
 
-  List<Widget> _leanSections(
-    BuildContext context,
-    bool Function(int) columns,
-  ) {
+  List<Widget> _leanSections(BuildContext context, bool Function(int) columns) {
     final List<Lean> leans = story.leansPresent;
     final PerspectiveColors colors = PerspectiveColors.of(context);
     final bool asColumns = columns(leans.length);
 
     Widget sides(Widget Function(Framing<Lean>) cell) => _sides<Lean>(
-          sides: leans,
-          columns: asColumns,
-          color: colors.forLean,
-          label: Copy.leanGroup,
-          count: story.coverage.forLean,
-          wire: (Lean l) => l.wire,
-          cell: (Lean l) => cell(story.framingFor(l)!),
-        );
+      sides: leans,
+      columns: asColumns,
+      color: colors.forLean,
+      label: Copy.leanGroup,
+      count: story.coverage.forLean,
+      wire: (Lean l) => l.wire,
+      cell: (Lean l) => cell(story.framingFor(l)!),
+    );
 
     final Map<Lean, List<Omission>> omissionsByLean = <Lean, List<Omission>>{
       for (final Lean l in Lean.values)
@@ -312,7 +389,8 @@ class _StoryDetailViewState extends ConsumerState<StoryDetailView> {
 
     return <Widget>[
       Section(
-        key: _anchor(_Jump.headlines),
+        key: _anchor(_Jump.headlines, PerspectiveAxis.lean),
+        highlighted: _flash == _anchorId(_Jump.headlines, PerspectiveAxis.lean),
         title: Copy.headlines,
         icon: SectionIcons.headlines,
         children: <Widget>[
@@ -326,7 +404,8 @@ class _StoryDetailViewState extends ConsumerState<StoryDetailView> {
         ],
       ),
       Section(
-        key: _anchor(_Jump.emphasis),
+        key: _anchor(_Jump.emphasis, PerspectiveAxis.lean),
+        highlighted: _flash == _anchorId(_Jump.emphasis, PerspectiveAxis.lean),
         title: Copy.emphasis,
         icon: SectionIcons.emphasis,
         children: <Widget>[
@@ -337,7 +416,8 @@ class _StoryDetailViewState extends ConsumerState<StoryDetailView> {
         ],
       ),
       Section(
-        key: _anchor(_Jump.agreed),
+        key: _anchor(_Jump.agreed, PerspectiveAxis.lean),
+        highlighted: _flash == _anchorId(_Jump.agreed, PerspectiveAxis.lean),
         title: Copy.agreed,
         icon: SectionIcons.agreed,
         children: <Widget>[
@@ -345,7 +425,8 @@ class _StoryDetailViewState extends ConsumerState<StoryDetailView> {
         ],
       ),
       Section(
-        key: _anchor(_Jump.omissions),
+        key: _anchor(_Jump.omissions, PerspectiveAxis.lean),
+        highlighted: _flash == _anchorId(_Jump.omissions, PerspectiveAxis.lean),
         title: Copy.omissions,
         icon: SectionIcons.omissions,
         children: <Widget>[
@@ -369,7 +450,8 @@ class _StoryDetailViewState extends ConsumerState<StoryDetailView> {
         ],
       ),
       Section(
-        key: _anchor(_Jump.contested),
+        key: _anchor(_Jump.contested, PerspectiveAxis.lean),
+        highlighted: _flash == _anchorId(_Jump.contested, PerspectiveAxis.lean),
         title: Copy.contested,
         icon: SectionIcons.contested,
         children: <Widget>[
@@ -379,7 +461,8 @@ class _StoryDetailViewState extends ConsumerState<StoryDetailView> {
         ],
       ),
       Section(
-        key: _anchor(_Jump.opinion),
+        key: _anchor(_Jump.opinion, PerspectiveAxis.lean),
+        highlighted: _flash == _anchorId(_Jump.opinion, PerspectiveAxis.lean),
         title: Copy.opinion,
         icon: SectionIcons.opinion,
         subtitle: Copy.opinionNote,
@@ -391,27 +474,25 @@ class _StoryDetailViewState extends ConsumerState<StoryDetailView> {
     ];
   }
 
-  List<Widget> _blocSections(
-    BuildContext context,
-    bool Function(int) columns,
-  ) {
+  List<Widget> _blocSections(BuildContext context, bool Function(int) columns) {
     final List<Bloc> blocs = story.blocsPresent;
     final PerspectiveColors colors = PerspectiveColors.of(context);
     final bool asColumns = columns(blocs.length);
 
     Widget sides(Widget Function(Framing<Bloc>) cell) => _sides<Bloc>(
-          sides: blocs,
-          columns: asColumns,
-          color: colors.forBloc,
-          label: Copy.blocGroup,
-          count: story.coverage.forBloc,
-          wire: (Bloc b) => b.wire,
-          cell: (Bloc b) => cell(story.framingForBloc(b)!),
-        );
+      sides: blocs,
+      columns: asColumns,
+      color: colors.forBloc,
+      label: Copy.blocGroup,
+      count: story.coverage.forBloc,
+      wire: (Bloc b) => b.wire,
+      cell: (Bloc b) => cell(story.framingForBloc(b)!),
+    );
 
     return <Widget>[
       Section(
-        key: _anchor(_Jump.headlines),
+        key: _anchor(_Jump.headlines, PerspectiveAxis.bloc),
+        highlighted: _flash == _anchorId(_Jump.headlines, PerspectiveAxis.bloc),
         title: Copy.headlines,
         icon: SectionIcons.headlines,
         children: <Widget>[
@@ -425,7 +506,8 @@ class _StoryDetailViewState extends ConsumerState<StoryDetailView> {
         ],
       ),
       Section(
-        key: _anchor(_Jump.emphasis),
+        key: _anchor(_Jump.emphasis, PerspectiveAxis.bloc),
+        highlighted: _flash == _anchorId(_Jump.emphasis, PerspectiveAxis.bloc),
         title: Copy.emphasis,
         icon: SectionIcons.emphasis,
         children: <Widget>[
@@ -436,7 +518,9 @@ class _StoryDetailViewState extends ConsumerState<StoryDetailView> {
         ],
       ),
       Section(
-        key: _anchor(_Jump.contradictions),
+        key: _anchor(_Jump.contradictions, PerspectiveAxis.bloc),
+        highlighted:
+            _flash == _anchorId(_Jump.contradictions, PerspectiveAxis.bloc),
         title: Copy.contradictions,
         icon: SectionIcons.contradictions,
         subtitle: Copy.contradictionsNote,
@@ -473,15 +557,15 @@ abstract final class SectionIcons {
   static const IconData sources = Icons.newspaper_outlined;
 
   static IconData forSection(String id) => switch (id) {
-        _Jump.headlines => headlines,
-        _Jump.emphasis => emphasis,
-        _Jump.agreed => agreed,
-        _Jump.omissions => omissions,
-        _Jump.contested => contested,
-        _Jump.opinion => opinion,
-        _Jump.contradictions => contradictions,
-        _ => sources,
-      };
+    _Jump.headlines => headlines,
+    _Jump.emphasis => emphasis,
+    _Jump.agreed => agreed,
+    _Jump.omissions => omissions,
+    _Jump.contested => contested,
+    _Jump.opinion => opinion,
+    _Jump.contradictions => contradictions,
+    _ => sources,
+  };
 }
 
 /// A jump-bar entry: section id, short label, optional count.
@@ -528,7 +612,7 @@ class _JumpBar extends StatelessWidget {
                 label: items[i].count == null
                     ? '${items[i].label}. Jumps to the section.'
                     : '${items[i].label}, ${items[i].count}. '
-                        'Jumps to the section.',
+                          'Jumps to the section.',
                 excludeSemantics: true,
                 onTap: () => onJump(items[i].id),
                 child: ActionChip(
@@ -606,10 +690,10 @@ class PerspectiveColumn extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => SideBlock(
-        color: color,
-        label: label,
-        count: count,
-        rail: RailSide.top,
-        child: child,
-      );
+    color: color,
+    label: label,
+    count: count,
+    rail: RailSide.top,
+    child: child,
+  );
 }

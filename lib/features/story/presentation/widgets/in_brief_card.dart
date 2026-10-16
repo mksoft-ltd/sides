@@ -3,6 +3,7 @@ import 'dart:math' as math;
 import 'package:flutter/material.dart';
 
 import '../../../../core/constants/copy.dart';
+import '../../../../shared/widgets/motion.dart';
 import '../../../digest/domain/digest.dart';
 import '../providers/story_view_controller.dart';
 import 'points.dart';
@@ -219,7 +220,7 @@ class _StatTile extends StatelessWidget {
           children: <Widget>[
             Icon(icon, size: 20, color: cs.primary),
             const SizedBox(height: 6),
-            Text('$value', style: theme.textTheme.titleLarge),
+            CountUp(value: value, style: theme.textTheme.titleLarge),
             Text(
               label,
               style: theme.textTheme.labelSmall?.copyWith(

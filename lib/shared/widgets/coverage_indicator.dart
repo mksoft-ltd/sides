@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../../core/constants/copy.dart';
 import '../../core/theme/app_theme.dart';
 import '../../features/digest/domain/digest.dart';
+import 'motion.dart';
 import 'outlet_avatar.dart';
 
 /// Who covered the story, on both axes.
@@ -211,8 +212,11 @@ class _ZoneBox extends StatelessWidget {
             spacing: 4,
             runSpacing: 4,
             children: <Widget>[
-              for (final Outlet o in zone.outlets)
-                OutletAvatar(outlet: o, size: 28),
+              for (int i = 0; i < zone.outlets.length; i++)
+                PopIn(
+                  index: i,
+                  child: OutletAvatar(outlet: zone.outlets[i], size: 28),
+                ),
               if (zone.outlets.isEmpty) const SizedBox(height: 28),
             ],
           ),

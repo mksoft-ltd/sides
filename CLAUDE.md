@@ -273,6 +273,15 @@ test/               fixtures (= assets/sample_digest.json), helpers/ (fakes, pum
   jump chips share `SectionIcons`; the In brief card opens with three stat tiles (agreed facts, contested claims,
   West–East contradictions); a contested claim shows a stated-vs-disputed bar in primary vs tertiary (brand colours,
   never a side's). Avatars are `ExcludeSemantics` (the name is always beside them) and do not scale with text.
+- **Motion (build 7)**: `shared/widgets/motion.dart`. `Reveal` (fade + 14 dp rise, 320 ms, staggered 45 ms per block)
+  wraps each top-level block of the story page; `AxisSwitcher` (AnimatedSwitcher, 260 ms fade + 8 % slide, direction
+  by axis order) wraps the axis's sections, so the two axes' `Section` anchors must have distinct `GlobalKey`s
+  (`_anchorId(id, axis)` = `lean-headlines` / `bloc-headlines`; sources is `shared-sources`); `PopIn` staggers the
+  spectrum avatars; `GrowIn` grows a contested claim's stance bar; `CountUp` counts the In brief tiles up. A jump
+  sets `_flash` to the target anchor for `Motion.flash` (1.1 s) and the `Section(highlighted:)` tints via
+  `AnimatedContainer`. Everything checks `Motion.reduced(context)` (`MediaQuery.disableAnimations`) and renders final
+  state at once. Tests: `test/widget/motion_test.dart`; `pumpSidesApp(settle: false)` stops at the first frame. The
+  flash timer schedules no frame, so a test must `pump(Motion.flash)` past it rather than `pumpAndSettle`.
 - **Ads**: banner only in `bottomNavigationBar` of list/detail, hidden until a digest exists and the instant ad-free
   is owned. No ATT prompt: every request is `nonPersonalizedAds: true`, Google UMP gathers consent. Test IDs until
   publish (`AdConfig`, Info.plist `GADApplicationIdentifier`, manifest `APPLICATION_ID`). "Ad privacy options" in

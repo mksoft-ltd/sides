@@ -1,0 +1,1 @@
+Redesigned story pages: an In brief card (what happened, where the views stand across the sides, where they disagree), outlet avatars and a coverage spectrum, every side on the page at once, a jump bar, previous / next story, and smoother motion as the analysis opens and switches axis.

@@ -1,6 +1,9 @@
 # Sides: publish status
 
-## Internal testing builds 4, 5 and 6 (16 Oct 2026): UI redesign, In brief, graphical layer
+## Internal testing builds 4 to 7 (16 Oct 2026): UI redesign, In brief, graphical layer, motion
+
+- **1.1.0 (versionCode 7)**: motion on the story page (staggered reveal, axis-switch slide, avatar pop-in, stat
+  count-up, stance-bar growth, jump highlight; all off under reduced motion). Replaces 6 on the internal track.
 
 - **1.1.0 (versionCode 6)** (~07:50 UTC): outlet avatars, the header coverage spectrum (tappable zones), section icons,
   In brief stat tiles, stated-vs-disputed bars. Replaces 5 on the internal track.
