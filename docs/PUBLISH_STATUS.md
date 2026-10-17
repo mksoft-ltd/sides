@@ -2,6 +2,7 @@
 
 ## Internal testing builds 4 to 10 (16 Oct 2026): UI redesign, In brief, graphical layer, motion, front page, search, readability
 
+- **1.3.4 (versionCode 13)**: past-tense wording for finished search steps. Replaces 12.
 - **1.3.3 (versionCode 12)**: layered, automatic search (phone → archive online + shared cache → comparison only when
   today has nothing) with a step-by-step progress panel for slow searches. Privacy policy updated (17 Oct): the words
   are now sent automatically to check the shared cache. Replaces 11.

@@ -116,12 +116,15 @@ abstract final class Copy {
               : '${phoneHits == 1 ? '1 story' : '$phoneHits stories'} '
                   'found without going online.')
           : 'Looking through today\'s stories and the days saved here.',
-      SearchStep.archive =>
-        'Downloading any digest from the past two weeks that is not saved on '
-            'this phone yet. Each day is saved, so this is quicker next time.',
-      SearchStep.shared =>
-        'Seeing whether another reader already asked about these words '
-            'today, so the comparison can open at once.',
+      SearchStep.archive => done
+          ? 'The past two weeks are now saved on this phone, so the next '
+              'search is quicker.'
+          : 'Downloading any digest from the past two weeks that is not '
+              'saved on this phone yet.',
+      SearchStep.shared => done
+          ? 'Looked for a comparison another reader asked for today.'
+          : 'Seeing whether another reader already asked about these words '
+              'today, so the comparison can open at once.',
       SearchStep.compare =>
         'None of today\'s stories match, so Sides is reading today\'s '
             'headlines${outlets > 0 ? ' from $outlets outlets' : ''} and '
