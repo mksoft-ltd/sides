@@ -45,6 +45,7 @@ const POOL_TTL = 600;
 // USD per million tokens, matching pipeline/config/pricing.yaml for the default model.
 const PRICE: Record<string, { in: number; out: number; cacheRead: number; cacheWrite: number }> = {
   "claude-opus-5-5": { in: 4, out: 20, cacheRead: 0.2, cacheWrite: 5 },
+  "claude-sonnet-5-5": { in: 2, out: 10, cacheRead: 0.2, cacheWrite: 2.5 },
   "claude-opus-5": { in: 5, out: 25, cacheRead: 0.5, cacheWrite: 6.25 },
   "claude-opus-4-8": { in: 5, out: 25, cacheRead: 0.5, cacheWrite: 6.25 },
 };
@@ -104,20 +105,30 @@ async function analyse(env: Env, pool: ArticlePool, articles: ArticlePool["artic
   const text = (message.content as Array<{ type: string; text?: string }>).find((b) => b.type === "text")?.text;
   if (!text) throw new Error("analysis response had no text block");
   const response = JSON.parse(text) as AnalysisResponse;
-  const usage = message.usage as {
+  // Every billed attempt counts: with the refusal fallback, usage.iterations lists the declined attempt on the
+  // requested model and the one that served it (top-level usage covers only the latter).
+  type U = {
     input_tokens: number;
     output_tokens: number;
     cache_read_input_tokens?: number | null;
     cache_creation_input_tokens?: number | null;
+    model?: string;
+    type?: string;
   };
+  const top = message.usage as unknown as U & { iterations?: U[] | null };
   const served = (message as { model?: string }).model ?? env.MODEL;
-  const price = PRICE[served] ?? PRICE[env.MODEL];
-  const cost =
-    (usage.input_tokens * price.in +
-      usage.output_tokens * price.out +
-      (usage.cache_read_input_tokens ?? 0) * price.cacheRead +
-      (usage.cache_creation_input_tokens ?? 0) * price.cacheWrite) /
-    1_000_000;
+  const attempts: U[] = top.iterations && top.iterations.length ? top.iterations : [{ ...top, model: served }];
+  let cost = 0;
+  for (const u of attempts) {
+    const model = u.model ?? (u.type === "fallback_message" ? served : env.MODEL);
+    const price = PRICE[model] ?? PRICE[env.MODEL] ?? PRICE["claude-opus-5-5"];
+    cost +=
+      (u.input_tokens * price.in +
+        u.output_tokens * price.out +
+        (u.cache_read_input_tokens ?? 0) * price.cacheRead +
+        (u.cache_creation_input_tokens ?? 0) * price.cacheWrite) /
+      1_000_000;
+  }
   return { response, model: served, cost };
 }
 

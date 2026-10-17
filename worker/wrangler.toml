@@ -7,7 +7,9 @@ compatibility_flags = ["nodejs_compat"]
 
 [vars]
 SITE_BASE = "https://mksoft-ltd.github.io/sides"
-MODEL = "claude-opus-5-5"
+# Sonnet 5.5 for on-demand comparisons (17 Oct 2026 check on 3 stories vs the Opus digest: 0 dropped,
+# same contested claims, ~10% fewer points, ~2.5x faster, ~60% cheaper). The daily digest stays on Opus.
+MODEL = "claude-sonnet-5-5"
 EFFORT = "high"
 MAX_TOKENS = "16000"
 DAILY_CAP = "40"

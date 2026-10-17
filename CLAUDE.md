@@ -363,6 +363,23 @@ test/               fixtures (= assets/sample_digest.json), helpers/ (fakes, pum
   (`MasterDetailScreen.listPaneWidthFor`) so the detail pane stays ≥ 380 dp at 744.
 - Tablet tests: `test/widget/tablet_layout_test.dart` (sizes in dp; pumpSidesApp renders at 3×).
 
+## Cost reductions (17 Oct 2026)
+
+- **Daily run through the Message Batches API** (`batch:` in pipeline.yaml, on by default; `batch.py`). Grouping and
+  every story's first analysis attempt are submitted as batches at half price (`cost.BATCH_DISCOUNT`, `CallCost.batch`).
+  Batch params drop `betas`/`fallbacks` (the Batches API rejects the refusal fallback). `llm.run_batch` polls until the
+  batch ends or `deadline_minutes` (15) passes, then cancels and keeps what finished. `BatchFirstAnalyser` hands back
+  the batch answer; a billed failure (declined / truncated / bad JSON) counts as attempt 1 and the retry runs streamed
+  with the fallback; an unbilled miss (errored / expired / cancelled / missing) goes straight to the streamed path
+  without using the retry. `BatchFirstGrouper` does the same for the one grouping call. Workflow build timeout 60 min.
+  First live batch (17 Oct, one story): 122 s, $0.063 (streamed would be $0.126), 40 kept / 0 dropped.
+  `tests/test_batch.py` drives a fake Batches client.
+- **Search comparisons on Sonnet 5.5** (worker `MODEL`). Check on 3 stories vs the published Opus digest: 0 dropped,
+  same contested claims, ~10% fewer points, ~$0.035 vs ~$0.08, ~15 s vs ~40 s. Sonnet 5.5's broader safeguards
+  sometimes decline violent news (the "India" topic: a festival crush) and the `fallbacks: "default"` re-runs it on Opus;
+  2 of 3 live topics were served by Sonnet. The worker now prices every attempt in `usage.iterations`. The daily
+  digest stays on Opus.
+
 ## Search and the topic worker (16 Oct 2026)
 
 - **Route 1, archive search (no server)**: the Search tab matches the words against today's digest plus the last 14 archive

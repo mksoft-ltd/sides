@@ -52,6 +52,75 @@ class StructuredResult:
     attempts: tuple[Attempt, ...] = ()
 
 
+def batch_params(kwargs: dict) -> dict:
+    """A streamed request's kwargs as Message Batches ``params``: the Batches API rejects the server-side refusal
+    fallback, so ``betas``/``fallbacks`` are dropped (a declined item is re-run synchronously, with the fallback)."""
+    return {k: v for k, v in kwargs.items() if k not in ("betas", "fallbacks")}
+
+
+def _result_from_message(message, requested: str, stage: str, seconds: float, *, batch: bool) -> StructuredResult:  # noqa: ANN001
+    usage = Usage.from_response_usage(message.usage)
+    served_by = getattr(message, "model", requested) or requested
+    attempts = tuple(Attempt(a.model, a.usage, batch=batch) for a in attempts_from_message(message, requested))
+    stop = message.stop_reason
+    if stop == "refusal":
+        raise LLMError("refusal", f"model refused the {stage} request", usage, served_by, attempts)
+    if stop == "max_tokens":
+        raise LLMError("max_tokens", f"{stage} response was truncated at max_tokens", usage, served_by, attempts)
+    if stop not in ("end_turn", "stop_sequence"):
+        raise LLMError("unexpected_stop", f"unexpected stop_reason {stop!r} from {stage} call", usage, served_by, attempts)
+    text = next((b.text for b in message.content if getattr(b, "type", None) == "text"), None)
+    if text is None:
+        raise LLMError("no_text", f"{stage} response contained no text block", usage, served_by, attempts)
+    return StructuredResult(text=text, usage=usage, model=served_by, stop_reason=stop, seconds=seconds, attempts=attempts)
+
+
+def run_batch(client, requests: dict[str, dict], *, stage: str, deadline_s: float, poll_s: float,  # noqa: ANN001
+              sleep=time.sleep, clock=time.monotonic) -> dict[str, StructuredResult | LLMError]:
+    """Run ``{custom_id: request kwargs}`` through the Message Batches API at half price.
+
+    Polls until the batch ends or ``deadline_s`` passes; past the deadline the batch is cancelled and whatever
+    finished is kept. Every id maps to a StructuredResult or an LLMError: a billed failure (refusal, truncation)
+    carries its batch-priced attempts; an item that errored, expired, was cancelled or never came back is an
+    unbilled ``kind="batch_<type>"`` error. Callers re-run every error synchronously."""
+    if not requests:
+        return {}
+    started = clock()
+    batch = client.messages.batches.create(
+        requests=[{"custom_id": cid, "params": batch_params(kw)} for cid, kw in requests.items()]
+    )
+    log.info("%s: batch %s submitted with %d request(s)", stage, batch.id, len(requests))
+    cancelled = False
+    while batch.processing_status != "ended":
+        if not cancelled and clock() - started > deadline_s:
+            log.warning("%s: batch %s not done after %.0f s; cancelling, finished items are kept", stage, batch.id, deadline_s)
+            client.messages.batches.cancel(batch.id)
+            cancelled = True
+        elif cancelled and clock() - started > deadline_s + 120:
+            log.warning("%s: batch %s still not ended after cancel; giving up on it", stage, batch.id)
+            break
+        sleep(poll_s)
+        batch = client.messages.batches.retrieve(batch.id)
+    seconds = clock() - started
+    out: dict[str, StructuredResult | LLMError] = {}
+    if batch.processing_status == "ended":
+        for item in client.messages.batches.results(batch.id):
+            kind = item.result.type
+            if kind == "succeeded":
+                requested = requests[item.custom_id]["model"]
+                try:
+                    out[item.custom_id] = _result_from_message(item.result.message, requested, stage, seconds, batch=True)
+                except LLMError as exc:
+                    out[item.custom_id] = exc
+            else:
+                out[item.custom_id] = LLMError(f"batch_{kind}", f"{stage}: batch item {kind}")
+    for cid in requests:
+        out.setdefault(cid, LLMError("batch_missing", f"{stage}: no batch result"))
+    done = sum(1 for v in out.values() if isinstance(v, StructuredResult))
+    log.info("%s: batch %s ended in %.0f s, %d/%d usable", stage, batch.id, seconds, done, len(requests))
+    return out
+
+
 def make_client():  # noqa: ANN201 - anthropic.Anthropic; imported lazily so tests never need the real SDK client
     import anthropic
 

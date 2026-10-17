@@ -13,6 +13,7 @@ import yaml
 log = logging.getLogger(__name__)
 DEFAULT_PRICING_PATH = Path(__file__).resolve().parent.parent / "config" / "pricing.yaml"
 _MTOK = 1_000_000
+BATCH_DISCOUNT = 0.5  # Message Batches API: half price on every token type
 
 
 @dataclass(frozen=True)
@@ -67,6 +68,7 @@ class Attempt:
 
     model: str
     usage: Usage
+    batch: bool = False  # served through the Batches API (billed at BATCH_DISCOUNT)
 
 
 def price_usage(usage: Usage, price: ModelPrice) -> float:
@@ -89,6 +91,7 @@ class CallCost:
     cache_write_tokens: int
     usd: float | None  # None = no price row for this model (recorded, never guessed; see RunCost.warnings)
     seconds: float | None = None
+    batch: bool = False
 
 
 @dataclass
@@ -100,7 +103,8 @@ class RunCost:
     calls: list[CallCost] = field(default_factory=list)
     warnings: list[str] = field(default_factory=list)
 
-    def record(self, stage: str, model: str, usage: Usage, *, seconds: float | None = None) -> CallCost:
+    def record(self, stage: str, model: str, usage: Usage, *, seconds: float | None = None,
+               batch: bool = False) -> CallCost:
         """Record one billed attempt. A model with no price row is recorded with ``usd=None`` and a warning —
         accounting must never throw away a paid result (a refusal fallback can be served by any model)."""
         price = self.pricing.get(model)
@@ -117,8 +121,10 @@ class RunCost:
             output_tokens=usage.output_tokens,
             cache_read_tokens=usage.cache_read_tokens,
             cache_write_tokens=usage.cache_write_tokens,
-            usd=price_usage(usage, price) if price is not None else None,
+            usd=(round(price_usage(usage, price) * (BATCH_DISCOUNT if batch else 1), 6)
+                 if price is not None else None),
             seconds=round(seconds, 1) if seconds is not None else None,
+            batch=batch,
         )
         self.calls.append(call)
         return call
@@ -127,7 +133,8 @@ class RunCost:
         """Record every attempt of one request (wall time goes on the last, the one that produced the message)."""
         attempts = list(attempts)
         return [
-            self.record(stage, a.model, a.usage, seconds=seconds if i == len(attempts) - 1 else None)
+            self.record(stage, a.model, a.usage, seconds=seconds if i == len(attempts) - 1 else None,
+                        batch=getattr(a, "batch", False))
             for i, a in enumerate(attempts)
         ]
 

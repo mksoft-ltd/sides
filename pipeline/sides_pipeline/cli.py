@@ -17,7 +17,8 @@ import sys
 from datetime import UTC, datetime
 from pathlib import Path
 
-from .analyse import ClaudeAnalyser, FakeAnalyser, StoryAnalysis, analyse_stories, load_analysis_config
+from .analyse import ClaudeAnalyser, FakeAnalyser, StoryAnalysis, analyse_stories, load_analysis_config, load_system_prompt
+from .batch import BatchFirstAnalyser, BatchFirstGrouper, load_batch_config
 from .collect import PER_OUTLET_CAP, WINDOW_HOURS, collect
 from .config import DEFAULT_OUTLETS_PATH, load_outlets
 from .cost import RunCost
@@ -103,7 +104,13 @@ def _do_collect(args: argparse.Namespace, out: Path) -> tuple[list[Outlet], Coll
 def _do_group(collected: CollectResult, args: argparse.Namespace, out: Path, runs_dir: Path) -> tuple[GroupOutcome, RunCost]:
     cfg = load_grouping_config(args.config)
     cost = RunCost()
-    grouper = FakeGrouper(args.replay) if getattr(args, "replay", None) else ClaudeGrouper(cfg)
+    batch = load_batch_config(args.config)
+    if getattr(args, "replay", None):
+        grouper = FakeGrouper(args.replay)
+    elif batch.enabled:
+        grouper = BatchFirstGrouper(cfg, batch)
+    else:
+        grouper = ClaudeGrouper(cfg)
     now = datetime.now(tz=UTC)
     try:
         outcome = group_articles(collected, grouper, cfg, cost, now=now)
@@ -189,9 +196,17 @@ def _do_analyse(stories_digest: Digest, args: argparse.Namespace, out: Path, run
         else:
             cost = RunCost()
             print(f"WARNING: no cost report at {run_path}; the total below excludes earlier stages", file=sys.stderr)
-    analyser = FakeAnalyser(args.replay_dir) if getattr(args, "replay_dir", None) else ClaudeAnalyser(cfg)
+    batch = load_batch_config(args.config)
+    if getattr(args, "replay_dir", None):
+        analyser = FakeAnalyser(args.replay_dir)
+    elif batch.enabled:
+        analyser = BatchFirstAnalyser(cfg, batch)
+    else:
+        analyser = ClaudeAnalyser(cfg)
     now = datetime.now(tz=UTC)
     started = now
+    if isinstance(analyser, BatchFirstAnalyser):
+        analyser.prefetch(stories_digest.stories, stories_digest.outlets, load_system_prompt(cfg.prompt_path))
     results = analyse_stories(stories_digest.stories, stories_digest.outlets, analyser, cfg, cost)
     wall = (datetime.now(tz=UTC) - started).total_seconds()
     outcome = assemble_digest(stories_digest, results, cost, model=cfg.model, now=now)
