@@ -1,6 +1,6 @@
 // Sides topic worker.
 //
-//   GET /v1/topic?q=<words>[&date=YYYY-MM-DD]
+//   GET /v1/topic?q=<words>[&date=YYYY-MM-DD][&peek=1]
 //
 // Response (JSON, always 200 unless the request itself is malformed):
 //   {status: "ready", cached: bool, digest: {...}}      a digest-shaped document with one story (the app's parser
@@ -10,6 +10,7 @@
 //   {status: "capped"}                                   today's analysis budget is spent (cached topics still serve)
 //   {status: "rate_limited", retry_after: 3600}          this network address asked for too many new topics
 //   {status: "error", message}                           the analysis call failed; try later
+//   {status: "miss"}                                     peek=1 only: nothing cached for these words today
 //
 // The reader's words are only ever a keyword filter over the day's published article pool; they never reach the
 // model. Results are cached in KV for 24 hours keyed by the normalised words and the date, so a topic is paid for
@@ -189,6 +190,8 @@ export default {
     if (cached?.status === "ready") return json({ status: "ready", cached: true, digest: cached.digest });
     if (cached?.status === "no_match") return json({ status: "no_match", matched_outlets: cached.matched_outlets ?? 0 });
     if (cached?.status === "pending") return json({ status: "pending", retry_after: 5 });
+    // peek=1: answer from the shared cache only. Never matches, never spends, never counts against limits.
+    if (url.searchParams.get("peek") === "1") return json({ status: "miss" });
 
     const pool = await loadPool(env, date);
     if (!pool) return json({ status: "error", message: `no article pool for ${date}` });

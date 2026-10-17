@@ -20,13 +20,13 @@ class ArchiveEntry {
 /// Past digests from the site's archive, cached on the device so a search
 /// repeats offline and never downloads a day twice.
 abstract class ArchiveRepository {
-  /// Newest first. Empty when the index cannot be fetched and nothing is
-  /// cached.
-  Future<List<ArchiveEntry>> index();
+  /// Newest first. With [online] false only what is saved on the phone is
+  /// read (instant, no network). Empty when nothing is available.
+  Future<List<ArchiveEntry>> index({bool online = true});
 
-  /// The digest for [date], or null when it is neither cached nor
-  /// fetchable.
-  Future<Digest?> digest(String date);
+  /// The digest for [date], or null when it is not available. With [online]
+  /// false only a copy saved on the phone is returned.
+  Future<Digest?> digest(String date, {bool online = true});
 }
 
 class NetworkArchiveRepository implements ArchiveRepository {
@@ -62,9 +62,9 @@ class NetworkArchiveRepository implements ArchiveRepository {
   }
 
   @override
-  Future<List<ArchiveEntry>> index() async {
-    String? body = await _get(Uri.parse(AppConfig.archiveIndexUrl));
+  Future<List<ArchiveEntry>> index({bool online = true}) async {
     final File? cached = _file('index.json');
+    String? body = online ? await _get(Uri.parse(AppConfig.archiveIndexUrl)) : null;
     if (body != null) {
       await _save(cached, body);
     } else if (cached != null && await cached.exists()) {
@@ -87,7 +87,7 @@ class NetworkArchiveRepository implements ArchiveRepository {
   }
 
   @override
-  Future<Digest?> digest(String date) async {
+  Future<Digest?> digest(String date, {bool online = true}) async {
     if (!RegExp(r'^\d{4}-\d{2}-\d{2}$').hasMatch(date)) return null;
     final Digest? inMemory = _memory[date];
     if (inMemory != null) return inMemory;
@@ -95,7 +95,7 @@ class NetworkArchiveRepository implements ArchiveRepository {
     String? body;
     if (cached != null && await cached.exists()) {
       body = await cached.readAsString();
-    } else {
+    } else if (online) {
       body = await _get(Uri.parse(AppConfig.archiveDigestUrl(date)));
       if (body != null) await _save(cached, body);
     }

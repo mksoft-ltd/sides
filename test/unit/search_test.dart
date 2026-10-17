@@ -58,6 +58,7 @@ void main() {
           parse: parseDigestInline,
           pollInterval: Duration.zero,
           maxPolls: 2,
+          clock: () => DateTime.utc(2026, 10, 17, 9),
         );
 
     test('ready: the digest is parsed and the cached flag kept', () async {
@@ -120,6 +121,46 @@ void main() {
       expect(
           await repo((_) => throw http.ClientException('offline')).analyse('x'),
           isA<TopicFailed>());
+    });
+  });
+
+  group('peek and the phone cache', () {
+    test('peek sends peek=1; a miss is null and remembers nothing', () async {
+      http.Request? seen;
+      final NetworkTopicRepository r = NetworkTopicRepository(
+        client: MockClient((http.Request req) async {
+          seen = req;
+          return http.Response('{"status":"miss"}', 200);
+        }),
+        url: Uri.parse('https://topic.example/v1/topic'),
+        parse: parseDigestInline,
+        clock: () => DateTime.utc(2026, 10, 17, 9),
+      );
+      expect(await r.peek('Starlink Ukraine'), isNull);
+      expect(seen!.url.queryParameters['peek'], '1');
+      expect(r.onPhone('Starlink Ukraine'), isNull);
+    });
+
+    test('a ready answer is kept on the phone for the same words today, in '
+        'any order, and not tomorrow', () async {
+      DateTime now = DateTime.utc(2026, 10, 17, 9);
+      final NetworkTopicRepository r = NetworkTopicRepository(
+        client: MockClient((http.Request req) async => http.Response.bytes(
+              utf8.encode(jsonEncode(<String, Object?>{
+                'status': 'ready',
+                'cached': true,
+                'digest': sampleDigestJson(),
+              })),
+              200,
+            )),
+        url: Uri.parse('https://topic.example/v1/topic'),
+        parse: parseDigestInline,
+        clock: () => now,
+      );
+      expect(await r.peek('Starlink Ukraine'), isA<TopicReady>());
+      expect(r.onPhone('ukraine  STARLINK'), isNotNull);
+      now = DateTime.utc(2026, 10, 18, 9);
+      expect(r.onPhone('Starlink Ukraine'), isNull);
     });
   });
 }

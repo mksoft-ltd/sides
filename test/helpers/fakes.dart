@@ -14,33 +14,64 @@ class FakeArchiveRepository implements ArchiveRepository {
   FakeArchiveRepository([Map<String, Digest>? days]) : days = days ?? <String, Digest>{};
   final Map<String, Digest> days;
 
-  /// True to behave as if the index could not be fetched.
+  /// Dates already saved on the phone (served with `online: false`).
+  final Set<String> onPhone = <String>{};
+
+  /// True to behave as if the network could not be reached.
   bool offline = false;
   int indexCalls = 0;
+  final List<String> downloaded = <String>[];
 
-  @override
-  Future<List<ArchiveEntry>> index() async {
-    indexCalls++;
-    if (offline) return const <ArchiveEntry>[];
-    final List<String> dates = days.keys.toList()..sort((String a, String b) => b.compareTo(a));
+  List<ArchiveEntry> _entries(Iterable<String> dates) {
+    final List<String> sorted = dates.toList()..sort((String a, String b) => b.compareTo(a));
     return <ArchiveEntry>[
-      for (final String d in dates)
+      for (final String d in sorted)
         ArchiveEntry(date: d, stories: days[d]!.stories.length),
     ];
   }
 
   @override
-  Future<Digest?> digest(String date) async => days[date];
+  Future<List<ArchiveEntry>> index({bool online = true}) async {
+    indexCalls++;
+    if (!online) return _entries(onPhone.where(days.containsKey));
+    if (offline) return const <ArchiveEntry>[];
+    return _entries(days.keys);
+  }
+
+  @override
+  Future<Digest?> digest(String date, {bool online = true}) async {
+    if (onPhone.contains(date)) return days[date];
+    if (!online || offline) return null;
+    downloaded.add(date);
+    return days[date];
+  }
 }
 
 /// Answers every topic request with [outcome]; records the queries.
 class FakeTopicRepository implements TopicRepository {
   FakeTopicRepository([this.outcome = const TopicNoMatch()]);
   TopicOutcome outcome;
+
+  /// What the shared cache holds (null = a miss).
+  TopicOutcome? peekOutcome;
+
+  /// A comparison already on the phone.
+  TopicReady? phone;
+
   final List<String> queries = <String>[];
+  final List<String> peeks = <String>[];
 
   /// When set, the answer waits for it (to observe the working state).
   Completer<void>? gate;
+
+  @override
+  TopicReady? onPhone(String query) => phone;
+
+  @override
+  Future<TopicOutcome?> peek(String query) async {
+    peeks.add(query);
+    return peekOutcome;
+  }
 
   @override
   Future<TopicOutcome> analyse(String query) async {

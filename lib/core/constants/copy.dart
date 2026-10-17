@@ -1,4 +1,6 @@
 import '../../features/digest/domain/digest.dart';
+import '../../features/search/presentation/search_controller.dart'
+    show SearchStep, StepStatus;
 import '../config/app_config.dart';
 
 /// Every fixed UI string about the news content, in one place so the
@@ -68,34 +70,79 @@ abstract final class Copy {
       'The archive could not be reached; only days saved on this device '
       'were searched.';
   static const String today = 'Today\'s digest';
-  static const String topicTitle = 'Compare today\'s coverage of this topic';
-  static const String topicPitch =
-      'Not the story you meant? Sides can compare how outlets covered these '
-      'words today, from the headlines it collected this morning.';
-  static const String topicPitchNoHits =
-      'No digest story matches. Sides can compare how outlets covered these '
-      'words today, from the headlines it collected this morning.';
-  static const String topicNote =
-      'The comparison needs three or more outlets on the topic, takes up to '
-      'a minute the first time, and is shared with other readers who search '
-      'for the same thing today. The words you typed are sent to our '
-      'server; see the privacy policy.';
-  static const String topicAction = 'Compare coverage of this topic';
+  static const String topicFailed = 'The comparison could not be made.';
   static const String topicRetry = 'Try again';
-  static const String topicWorking =
-      'Comparing today\'s coverage… this can take up to a minute.';
-  static const String topicReady = 'Ready: here is how the outlets covered it.';
-  static const String topicReadyCached =
-      'Another reader asked about this today, so it is ready now.';
+  static const String topicCardLabel = 'Today\'s coverage compared';
+  static const String topicCardCached = 'Ready: another reader asked about this today';
   static const String topicNoMatch =
-      'Fewer than three outlets wrote about those words today, so there is '
-      'nothing to compare yet. Try broader words.';
+      'No outlet in today\'s headlines matched these words closely enough '
+      'to compare.';
   static const String topicCapped =
-      'Today\'s comparison budget is used up. Topics already compared today '
+      'Today\'s new comparisons are used up. Stories already compared today '
       'still open; new ones return tomorrow.';
   static const String topicRateLimited =
       'That is a lot of new topics in one hour. Please try again later.';
-  static const String topicFailed = 'The comparison could not be made.';
+  static const String searchNothing =
+      'Nothing found for these words in the last two weeks, and no outlet '
+      'covered them today.';
+
+  /// The search progress panel: one line per step and what it is doing.
+  static String stepTitle(SearchStep step, StepStatus status) {
+    final bool done = status == StepStatus.done;
+    return switch (step) {
+      SearchStep.phone => done ? 'Searched this phone' : 'Searching this phone',
+      SearchStep.archive =>
+        done ? 'Checked the last two weeks' : 'Checking the last two weeks',
+      SearchStep.shared => done
+          ? 'Checked today\'s shared comparisons'
+          : 'Checking today\'s shared comparisons',
+      SearchStep.compare => done
+          ? 'Compared today\'s coverage'
+          : 'Comparing today\'s coverage',
+    };
+  }
+
+  static String stepDetail(
+    SearchStep step,
+    StepStatus status, {
+    required int phoneHits,
+    required int outlets,
+  }) {
+    final bool done = status == StepStatus.done;
+    return switch (step) {
+      SearchStep.phone => done
+          ? (phoneHits == 0
+              ? 'Nothing saved on this phone matches yet.'
+              : '${phoneHits == 1 ? '1 story' : '$phoneHits stories'} '
+                  'found without going online.')
+          : 'Looking through today\'s stories and the days saved here.',
+      SearchStep.archive =>
+        'Downloading any digest from the past two weeks that is not saved on '
+            'this phone yet. Each day is saved, so this is quicker next time.',
+      SearchStep.shared =>
+        'Seeing whether another reader already asked about these words '
+            'today, so the comparison can open at once.',
+      SearchStep.compare =>
+        'None of today\'s stories match, so Sides is reading today\'s '
+            'headlines${outlets > 0 ? ' from $outlets outlets' : ''} and '
+            'comparing how each side covered these words. This usually '
+            'takes 30 to 60 seconds.',
+    };
+  }
+
+  /// The rotating line under the comparison step.
+  static String compareStage(Duration elapsed) {
+    final int s = elapsed.inSeconds;
+    if (s < 6) return 'Finding the headlines that mention these words…';
+    if (s < 14) return 'Grouping them by side: left, centre, right, West and East…';
+    if (s < 30) return 'Comparing how each side framed the story…';
+    if (s < 45) return 'Checking every point against the headline it came from…';
+    if (s < 70) return 'Writing the summary and where the sides disagree…';
+    return 'Still working. Busy days take a little longer…';
+  }
+
+  static String searchProgressLabel(SearchStep current) =>
+      'Search in progress: ${stepTitle(current, StepStatus.running)}.';
 
   /// Home shell and front page.
   static const String tabToday = 'Today';

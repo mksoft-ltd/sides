@@ -9,10 +9,12 @@ import '../../digest/presentation/providers/digest_controller.dart';
 import '../../digest/presentation/widgets/story_card.dart';
 import '../domain/search.dart';
 import 'search_controller.dart';
+import 'search_progress.dart';
 
-/// The Search tab: a field, the matching stories from today and the
-/// archive, and the option to have today's coverage of the topic analysed
-/// when nothing in the archive fits.
+/// The Search tab: one field. Results come from the cheapest source first
+/// (this phone, then the archive online, then the shared cache, and only if
+/// today has nothing, a new comparison) and stream into one list. A search
+/// that takes more than half a second shows what it is doing.
 class SearchView extends ConsumerStatefulWidget {
   const SearchView({super.key, required this.onOpenStory});
 
@@ -20,7 +22,8 @@ class SearchView extends ConsumerStatefulWidget {
   final void Function(Story story, String? handle) onOpenStory;
 
   static const Key fieldKey = Key('search-field');
-  static const Key analyseKey = Key('analyse-topic');
+  static const Key topicCardKey = Key('topic-result');
+  static const Key retryKey = Key('search-retry');
 
   @override
   ConsumerState<SearchView> createState() => _SearchViewState();
@@ -37,13 +40,22 @@ class _SearchViewState extends ConsumerState<SearchView> {
     super.dispose();
   }
 
-  void _submit() => ref.read(searchControllerProvider.notifier).search(_text.text);
+  void _submit() {
+    FocusScope.of(context).unfocus();
+    ref.read(searchControllerProvider.notifier).search(_text.text);
+  }
 
   @override
   Widget build(BuildContext context) {
     final SearchState s = ref.watch(searchControllerProvider);
+    final String? todayDate = ref.watch(
+      digestControllerProvider.select((DigestState d) => d.digest?.date),
+    );
     final ThemeData theme = Theme.of(context);
     final Color muted = theme.colorScheme.onSurfaceVariant;
+    final bool nothing =
+        !s.searching && s.hits.isEmpty && s.topicPhase != TopicPhase.ready;
+
     return ListView(
       key: const PageStorageKey<String>('search'),
       padding: const EdgeInsets.fromLTRB(16, 8, 16, 24),
@@ -77,25 +89,26 @@ class _SearchViewState extends ConsumerState<SearchView> {
           ),
         ),
         if (s.hasQuery) ...<Widget>[
-          const SizedBox(height: 16),
-          Row(
-            children: <Widget>[
-              Expanded(
-                child: Text(
-                  s.searching
-                      ? Copy.searching
-                      : Copy.searchResults(s.hits.length, s.daysSearched),
-                  style: theme.textTheme.labelLarge?.copyWith(color: muted),
-                ),
-              ),
-              if (s.searching)
-                const SizedBox(
-                  width: 16,
-                  height: 16,
-                  child: CircularProgressIndicator(strokeWidth: 2),
-                ),
-            ],
-          ),
+          if (s.searching) ...<Widget>[
+            const SizedBox(height: 16),
+            // A fresh panel per query, so its half-second delay restarts.
+            SearchProgress(key: ValueKey<String>('p-${s.query}'), state: s),
+          ],
+          if (s.topicPhase == TopicPhase.ready) ...<Widget>[
+            const SizedBox(height: 16),
+            _TopicCard(
+              story: s.topicStory!,
+              cached: s.topicCached,
+              onTap: () => widget.onOpenStory(s.topicStory!, s.topicHandle),
+            ),
+          ],
+          if (s.hits.isNotEmpty || !s.searching) ...<Widget>[
+            const SizedBox(height: 16),
+            Text(
+              Copy.searchResults(s.hits.length, s.daysSearched),
+              style: theme.textTheme.labelLarge?.copyWith(color: muted),
+            ),
+          ],
           if (s.archiveUnavailable && !s.searching) ...<Widget>[
             const SizedBox(height: 4),
             Text(
@@ -107,22 +120,24 @@ class _SearchViewState extends ConsumerState<SearchView> {
             const SizedBox(height: 12),
             _HitCard(
               hit: hit,
-              today: hit.digest.date == ref.watch(_todayDateProvider),
+              today: hit.digest.date == todayDate,
               onTap: () => widget.onOpenStory(
                 hit.story,
-                hit.digest.date == ref.read(_todayDateProvider)
+                hit.digest.date == todayDate
                     ? null
                     : ExtraDigests.archiveHandle(hit.digest.date),
               ),
             ),
           ],
+          if (s.searching && s.hits.isEmpty) ...<Widget>[
+            const SizedBox(height: 12),
+            const ResultSkeleton(),
+            const SizedBox(height: 12),
+            const ResultSkeleton(),
+          ],
           if (!s.searching) ...<Widget>[
-            const SizedBox(height: 20),
-            _TopicPanel(
-              state: s,
-              onAnalyse: ref.read(searchControllerProvider.notifier).analyseTopic,
-              onOpen: () => widget.onOpenStory(s.topicStory!, s.topicHandle),
-            ),
+            const SizedBox(height: 16),
+            _Outcome(state: s, nothing: nothing),
           ],
         ],
       ],
@@ -130,12 +145,67 @@ class _SearchViewState extends ConsumerState<SearchView> {
   }
 }
 
-/// Today's digest date, to tell a hit from today apart from an archive day.
-final Provider<String?> _todayDateProvider = Provider<String?>(
-  (Ref ref) => ref.watch(
-    digestControllerProvider.select((DigestState s) => s.digest?.date),
-  ),
-);
+/// The comparison, at the top of the results.
+class _TopicCard extends StatelessWidget {
+  const _TopicCard({
+    required this.story,
+    required this.cached,
+    required this.onTap,
+  });
+  final Story story;
+  final bool cached;
+  final VoidCallback onTap;
+
+  @override
+  Widget build(BuildContext context) {
+    final ThemeData theme = Theme.of(context);
+    final ColorScheme cs = theme.colorScheme;
+    return Card(
+      key: SearchView.topicCardKey,
+      color: cs.secondaryContainer.withValues(alpha: 0.5),
+      clipBehavior: Clip.antiAlias,
+      child: InkWell(
+        onTap: onTap,
+        child: Padding(
+          padding: const EdgeInsets.fromLTRB(16, 14, 12, 14),
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    Text(
+                      cached ? Copy.topicCardCached : Copy.topicCardLabel,
+                      style: theme.textTheme.labelLarge?.copyWith(
+                        color: cs.primary,
+                      ),
+                    ),
+                    const SizedBox(height: 6),
+                    Text(story.title, style: theme.textTheme.titleMedium),
+                    if (story.summary case final SourcedPoint p) ...<Widget>[
+                      const SizedBox(height: 6),
+                      Text(
+                        p.text,
+                        maxLines: 3,
+                        overflow: TextOverflow.ellipsis,
+                        style: theme.textTheme.bodyMedium,
+                      ),
+                    ],
+                    const SizedBox(height: 8),
+                    StoryMeta(story: story, style: theme.textTheme.bodySmall),
+                  ],
+                ),
+              ),
+              const SizedBox(width: 8),
+              Icon(Icons.chevron_right, color: cs.primary),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
 
 class _HitCard extends StatelessWidget {
   const _HitCard({required this.hit, required this.today, required this.onTap});
@@ -180,119 +250,37 @@ class _HitCard extends StatelessWidget {
   }
 }
 
-/// "Analyse this topic": the on-demand path, with its states.
-class _TopicPanel extends StatelessWidget {
-  const _TopicPanel({
-    required this.state,
-    required this.onAnalyse,
-    required this.onOpen,
-  });
+/// What happened when the search finished, only when there is something to
+/// say: nothing found, the daily limit, or a failed comparison.
+class _Outcome extends ConsumerWidget {
+  const _Outcome({required this.state, required this.nothing});
   final SearchState state;
-  final VoidCallback onAnalyse;
-  final VoidCallback onOpen;
+  final bool nothing;
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     final ThemeData theme = Theme.of(context);
-    final ColorScheme cs = theme.colorScheme;
-    final Color muted = cs.onSurfaceVariant;
-    final Widget body = switch (state.topicPhase) {
-      TopicPhase.idle || TopicPhase.failed => Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: <Widget>[
-            Text(
-              state.hits.isEmpty ? Copy.topicPitchNoHits : Copy.topicPitch,
-              style: theme.textTheme.bodyMedium,
-            ),
-            const SizedBox(height: 6),
-            Text(
-              Copy.topicNote,
-              style: theme.textTheme.bodySmall?.copyWith(color: muted),
-            ),
-            if (state.topicPhase == TopicPhase.failed) ...<Widget>[
-              const SizedBox(height: 8),
-              Text(
-                state.topicMessage ?? Copy.topicFailed,
-                style: theme.textTheme.bodySmall?.copyWith(color: cs.error),
-              ),
-            ],
-            const SizedBox(height: 12),
-            FilledButton.icon(
-              key: SearchView.analyseKey,
-              onPressed: onAnalyse,
-              icon: const Icon(Icons.auto_awesome_outlined),
-              label: Text(
-                state.topicPhase == TopicPhase.failed
-                    ? Copy.topicRetry
-                    : Copy.topicAction,
-              ),
-            ),
-          ],
-        ),
-      TopicPhase.working => Row(
-          children: <Widget>[
-            const SizedBox(
-              width: 20,
-              height: 20,
-              child: CircularProgressIndicator(strokeWidth: 2),
-            ),
-            const SizedBox(width: 12),
-            Expanded(
-              child: Text(Copy.topicWorking, style: theme.textTheme.bodyMedium),
-            ),
-          ],
-        ),
-      TopicPhase.ready => Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: <Widget>[
-            Text(
-              state.topicCached ? Copy.topicReadyCached : Copy.topicReady,
-              style: theme.textTheme.bodyMedium,
-            ),
-            const SizedBox(height: 10),
-            Text(state.topicStory!.title, style: theme.textTheme.titleMedium),
-            const SizedBox(height: 4),
-            StoryMeta(story: state.topicStory!),
-            const SizedBox(height: 12),
-            FilledButton.icon(
-              onPressed: onOpen,
-              icon: const Icon(Icons.compare_arrows),
-              label: const Text(Copy.compare),
-            ),
-          ],
-        ),
-      TopicPhase.noMatch =>
-        Text(Copy.topicNoMatch, style: theme.textTheme.bodyMedium),
-      TopicPhase.capped => Text(Copy.topicCapped, style: theme.textTheme.bodyMedium),
-      TopicPhase.rateLimited =>
-        Text(Copy.topicRateLimited, style: theme.textTheme.bodyMedium),
+    final TextStyle? style = theme.textTheme.bodyMedium?.copyWith(
+      color: theme.colorScheme.onSurfaceVariant,
+    );
+    final String? text = switch (state.topicPhase) {
+      TopicPhase.capped => Copy.topicCapped,
+      TopicPhase.rateLimited => Copy.topicRateLimited,
+      TopicPhase.failed => state.topicMessage ?? Copy.topicFailed,
+      _ => nothing ? Copy.searchNothing : null,
     };
-    return Container(
-      padding: const EdgeInsets.all(16),
-      decoration: BoxDecoration(
-        color: cs.secondaryContainer.withValues(alpha: 0.45),
-        borderRadius: BorderRadius.circular(16),
-        border: Border.all(color: cs.outlineVariant),
-      ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: <Widget>[
-          Row(
-            children: <Widget>[
-              Icon(Icons.auto_awesome_outlined, size: 20, color: cs.primary),
-              const SizedBox(width: 8),
-              Expanded(
-                child: Semantics(
-                  header: true,
-                  child: Text(Copy.topicTitle, style: theme.textTheme.titleMedium),
-                ),
-              ),
-            ],
+    if (text == null) return const SizedBox.shrink();
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: <Widget>[
+        Text(text, style: style),
+        if (state.topicPhase == TopicPhase.failed)
+          TextButton(
+            key: SearchView.retryKey,
+            onPressed: ref.read(searchControllerProvider.notifier).retry,
+            child: const Text(Copy.topicRetry),
           ),
-          const SizedBox(height: 10),
-          body,
-        ],
-      ),
+      ],
     );
   }
 }

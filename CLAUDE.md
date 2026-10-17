@@ -372,6 +372,16 @@ test/               fixtures (= assets/sample_digest.json), helpers/ (fakes, pum
   `digestHandle` into `extraDigestsProvider` (also used for topic results, handle `topic:<story id>`), always the phone
   story page whatever the width. Fakes: `FakeArchiveRepository` / `FakeTopicRepository` in `test/helpers/fakes.dart`,
   wired by `TestHarness` so no test touches the network.
+- **Layered search (build 12)**: `SearchController.search` runs cheapest first and streams hits into one list:
+  (1) phone: today's digest + archive days saved on the phone (`ArchiveRepository.index/digest(online: false)`) +
+  `TopicRepository.onPhone` (comparisons this phone got today, key = date + sorted content words); (2) in parallel, the
+  rest of the 14 archive days online and `peek` (worker `?peek=1`: shared KV cache only, never matches, spends or counts
+  against limits; `miss` otherwise); (3) `analyse` automatically, but **only when today's digest has no hit and no
+  comparison was found** (the explicit button is gone; the worker's no-match pre-check, daily cap and hourly limit are
+  the guard). `SearchProgress` appears only after 500 ms: a checklist of `SearchStep`s with a plain sentence each
+  (`Copy.stepTitle/stepDetail`), an indeterminate bar, or for a comparison an estimated bar (0→90 % over ~60 s, never
+  claims done) and a line that changes with elapsed seconds (`Copy.compareStage`), counted by the panel's own 1 s timer
+  so fake-async tests drive it; `ResultSkeleton` placeholders while there are no hits. Reduced motion: no animation.
 - **Route 2, on-demand topic analysis (`worker/`)**: `https://sides-topic.froggyeye.workers.dev/v1/topic?q=<words>`
   (Cloudflare account "Froggyeye.ltd@gmail.com's Account", subdomain `froggyeye`, KV namespace `TOPICS`
   5838b6c0d3664574bf7a5e5b19a12ccd, secret `ANTHROPIC_API_KEY` set with `wrangler secret put` from the Keychain). The daily
