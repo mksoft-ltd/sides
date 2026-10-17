@@ -4,6 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../../../core/constants/copy.dart';
 import '../../../../core/text/quotes.dart';
 import '../../../../core/theme/app_theme.dart';
+import '../../../../shared/widgets/article_thumb.dart';
 import '../../../../shared/widgets/motion.dart';
 import '../../../digest/domain/digest.dart';
 import 'source_pills.dart';
@@ -182,6 +183,12 @@ class QuoteRow extends ConsumerWidget {
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
+              // Each outlet's own picture beside its own words: image choice
+              // is part of the framing being compared.
+              Padding(
+                padding: const EdgeInsets.only(top: 3, right: 12),
+                child: ArticleThumb(article: article, outlet: outlet),
+              ),
               Expanded(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,

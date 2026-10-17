@@ -141,6 +141,9 @@ abstract final class Copy {
   static String disputedByCount(int n) => 'Disputed by ${outletCount(n)}';
   static String sourcesLink(int n) => n == 1 ? '1 source' : '$n sources';
   static const String whoCovered = 'Who covered it';
+  static const String sidePicturesTitle = 'How each side pictured it';
+  static String sidePicturesLabel(List<String> sides) =>
+      'Pictures each side used: ${sides.join('; ')}.';
   static const String whoCoveredNote =
       'Tap a side to see its articles.';
   static const String tileAgreed = 'agreed facts';

@@ -29,7 +29,7 @@ import feedparser
 
 from .fetch import Fetcher, fetch_with_retry, http_fetch
 from .guard import instruction_like
-from .models import Article, CollectResult, FeedError, ItemDrop, Outlet
+from .models import IMAGE_URL_MAX_CHARS, Article, CollectResult, FeedError, ItemDrop, Outlet
 from .text import canonical_url, make_snippet, normalise_headline, normalise_ws
 
 log = logging.getLogger(__name__)
@@ -66,6 +66,56 @@ def _entry_summary(entry) -> str:  # noqa: ANN001
         if c.get("value"):
             return c["value"]
     return ""
+
+
+IMAGE_TARGET_WIDTH = 460  # wide enough for a 3-up strip at 3x, small enough to load fast
+
+
+def _image_candidates(entry) -> list[tuple[str, int]]:  # noqa: ANN001
+    """(url, width or 0) for every image the feed offers for the item."""
+    out: list[tuple[str, int]] = []
+
+    def width(d) -> int:  # noqa: ANN001
+        try:
+            return int(d.get("width") or 0)
+        except (TypeError, ValueError):
+            return 0
+
+    for t in entry.get("media_thumbnail") or []:
+        if t.get("url"):
+            out.append((t["url"], width(t)))
+    for c in entry.get("media_content") or []:
+        kind = (c.get("medium") or c.get("type") or "image").lower()
+        if c.get("url") and ("image" in kind):
+            out.append((c["url"], width(c)))
+    for e in entry.get("enclosures") or []:
+        if e.get("href") and (e.get("type") or "").lower().startswith("image/"):
+            out.append((e["href"], 0))
+    return out
+
+
+def entry_image(entry) -> str | None:  # noqa: ANN001
+    """One https image link for the item, or None. The smallest offered width at or above the target, else the
+    largest. Links with credentials, non-http schemes or absurd length are ignored (feed text is untrusted)."""
+    best: tuple[str, int] | None = None
+    for url, w in _image_candidates(entry):
+        url = url.strip()
+        if url.startswith("http://"):
+            url = "https://" + url[len("http://"):]
+        parts = urlsplit(url)
+        if parts.scheme != "https" or not parts.hostname or parts.username or parts.password:
+            continue
+        if len(url) > IMAGE_URL_MAX_CHARS:
+            continue
+        if best is None:
+            best = (url, w)
+            continue
+        bw = best[1]
+        if w >= IMAGE_TARGET_WIDTH and (bw < IMAGE_TARGET_WIDTH or w < bw):
+            best = (url, w)
+        elif bw < IMAGE_TARGET_WIDTH and w > bw:
+            best = (url, w)
+    return best[0] if best else None
 
 
 def link_on_outlet_host(outlet: Outlet, link: str) -> bool:
@@ -136,6 +186,7 @@ def parse_feed(
                 url=url,
                 published_at=published,
                 published_at_estimated=estimated,
+                image_url=entry_image(entry),
             )
         )
 

@@ -89,6 +89,9 @@ class OutletPublic(BaseModel):
     rating_basis: str
 
 
+IMAGE_URL_MAX_CHARS = 1000
+
+
 class Article(BaseModel):
     """Headline + short snippet only. Full article text is never stored (integrity rule)."""
 
@@ -101,6 +104,9 @@ class Article(BaseModel):
     url: HttpUrl
     published_at: datetime
     published_at_estimated: bool = False
+    # The feed's own thumbnail for the item, as a link to the outlet's image server: never downloaded, stored or
+    # re-hosted. https only; the app shows it credited to the outlet and falls back to the outlet's initials.
+    image_url: str | None = Field(default=None, max_length=IMAGE_URL_MAX_CHARS, pattern=r"^https://")
 
 
 class FeedError(BaseModel):

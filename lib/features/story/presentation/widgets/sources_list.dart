@@ -3,7 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../../../core/constants/copy.dart';
 import '../../../../core/theme/app_theme.dart';
-import '../../../../shared/widgets/outlet_avatar.dart';
+import '../../../../shared/widgets/article_thumb.dart';
 import '../../../../shared/widgets/tag.dart';
 import '../../../digest/domain/digest.dart';
 import 'source_pills.dart';
@@ -103,7 +103,10 @@ class SourceTile extends ConsumerWidget {
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-              OutletAvatar(outlet: o, fallbackName: article.outletId, size: 32),
+              Padding(
+                padding: const EdgeInsets.only(top: 2),
+                child: ArticleThumb(article: article, outlet: o),
+              ),
               const SizedBox(width: 12),
               Expanded(
                 child: Column(

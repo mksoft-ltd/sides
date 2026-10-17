@@ -2,6 +2,8 @@
 
 ## Internal testing builds 4 to 10 (16 Oct 2026): UI redesign, In brief, graphical layer, motion, front page, search, readability
 
+- **1.3.2 (versionCode 11)**: outlet thumbnails on quotes/sources/By side, per-side picture strip on the lead story and
+  story header. Replaces 10.
 - **1.3.1 (versionCode 10)**: readability pass (content first, sources behind one link per point, plain facts line,
   bigger reading text, clearer tap cues). Replaces 9 on the internal track.
 

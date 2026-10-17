@@ -188,6 +188,8 @@ stage offline from a recorded response (no key needed).
 ## Integrity rules (from the spec — do not weaken)
 
 1. Never store or publish article text beyond headline + ≤200-char snippet (`Article.snippet` max_length, schema `maxLength`).
+   Images: only the feed's own thumbnail *link* (`Article.image_url`, https, ≤1000 chars) is published; the app loads it
+   from the outlet's server. Sides never downloads, stores or re-hosts a photo.
 2. Every analytical claim must cite article ids; unsourced ⇒ dropped (`validate.py`, rules table above).
 3. Coverage/blindspot indicators are computed in code from outlet tags, never asked of the model.
 4. No secrets in the repo or the app; the Anthropic key is a GitHub Actions secret only.
@@ -304,6 +306,15 @@ test/               fixtures (= assets/sample_digest.json), helpers/ (fakes, pum
   `StorySignals`. Type: bodyLarge 17/1.5, bodyMedium 15, bodySmall 13. Cards: lead = eyebrow, headline, summary, facts
   line, slim bars, "Compare coverage ›"; rows = title, facts, slim bars, chevron. Every tappable has a chevron, an
   open-in-browser icon or is a button.
+- **Thumbnails (build 11)**: `collect.entry_image` takes one https link per item from `media:thumbnail`, image
+  `media:content` (smallest width ≥ 460, else the largest) or an `image/*` enclosure; credentials, other schemes and
+  >1000-char links are refused; http is upgraded (BBC, Guardian, Times of Israel carry images; Al Jazeera none). It rides
+  on `Article.image_url` into articles.json, the digest and the published article pool (so topic results get it too).
+  App: `ArticleThumb` (Image.network with `cacheWidth`, initials fallback while loading / on error / when absent,
+  decorative) on every headline quote and source row and on By side cards; `SidePictures` = one picture per lean
+  (preferring that side's quoted articles), shown on the lead card and the story header **only when ≥ 2 sides have one**:
+  Sides never puts a single outlet's photo on a story (neutrality: image choice is framing). Widget tests cannot load
+  network images, so every load falls back; `test/widget/thumbnails_test.dart` relies on that.
 - **Motion (build 7)**: `shared/widgets/motion.dart`. `Reveal` (fade + 14 dp rise, 320 ms, staggered 45 ms per block)
   wraps each top-level block of the story page; `AxisSwitcher` (AnimatedSwitcher, 260 ms fade + 8 % slide, direction
   by axis order) wraps the axis's sections, so the two axes' `Section` anchors must have distinct `GlobalKey`s

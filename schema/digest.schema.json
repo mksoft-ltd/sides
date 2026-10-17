@@ -166,6 +166,15 @@
         "published_at_estimated": {
           "type": "boolean",
           "default": false
+        },
+        "image_url": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "pattern": "^https://",
+          "maxLength": 1000,
+          "description": "The feed's own thumbnail for the item: a link to the outlet's image server, never stored or re-hosted. Optional."
         }
       },
       "required": [

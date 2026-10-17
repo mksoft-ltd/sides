@@ -11,6 +11,7 @@ import '../../../../shared/widgets/coverage_indicator.dart';
 import '../../../../shared/widgets/motion.dart';
 import '../../../../shared/widgets/report_story_tile.dart';
 import '../../../../shared/widgets/section.dart';
+import '../../../../shared/widgets/side_pictures.dart';
 import '../../../../shared/widgets/story_meta.dart';
 import '../../../digest/domain/digest.dart';
 import '../providers/story_view_controller.dart';
@@ -187,6 +188,17 @@ class _StoryDetailViewState extends ConsumerState<StoryDetailView> {
                         minimal: true,
                       ),
                     ),
+                    if (SidePictures.pick(story, digest).length >= 2) ...<Widget>[
+                      const SizedBox(height: 18),
+                      Text(
+                        Copy.sidePicturesTitle,
+                        style: theme.textTheme.labelLarge?.copyWith(
+                          color: theme.colorScheme.onSurfaceVariant,
+                        ),
+                      ),
+                      const SizedBox(height: 8),
+                      SidePictures(story: story, digest: digest),
+                    ],
                   ],
                 ),
               ),

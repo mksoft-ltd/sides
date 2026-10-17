@@ -5,6 +5,7 @@ import '../../../../core/constants/copy.dart';
 import '../../../../core/text/quotes.dart';
 import '../../../../core/theme/app_theme.dart';
 import '../../../../shared/widgets/message_state.dart';
+import '../../../../shared/widgets/article_thumb.dart';
 import '../../../../shared/widgets/outlet_avatar.dart';
 import '../../../story/presentation/providers/story_view_controller.dart';
 import '../../domain/digest.dart';
@@ -203,6 +204,16 @@ class _SideCard extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
+                if (article?.imageUrl != null) ...<Widget>[
+                  ArticleThumb(
+                    article: article!,
+                    outlet: outlet,
+                    width: 228,
+                    height: 128,
+                    radius: 10,
+                  ),
+                  const SizedBox(height: 10),
+                ],
                 Text(
                   entry.story.title,
                   maxLines: 2,

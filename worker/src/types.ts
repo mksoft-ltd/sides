@@ -22,6 +22,8 @@ export interface Article {
   snippet: string;
   url: string;
   published_at: string;
+  /** The feed's own thumbnail link (outlet's image server), when the feed offers one. */
+  image_url?: string;
 }
 
 /** articles/<date>.json as the pipeline publishes it. */

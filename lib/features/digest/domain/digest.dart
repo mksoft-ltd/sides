@@ -152,11 +152,16 @@ class Article {
     required this.url,
     required this.publishedAt,
     this.publishedAtEstimated = false,
+    this.imageUrl,
   });
 
   final String id;
   final String outletId;
   final String headline;
+
+  /// The feed's own thumbnail, loaded from the outlet's image server; never
+  /// stored. Null when the feed has none or the link is not https.
+  final String? imageUrl;
 
   /// At most 200 characters from the outlet's own feed summary.
   final String snippet;
@@ -172,7 +177,16 @@ class Article {
         url: _str(j, 'url'),
         publishedAt: _date(j, 'published_at'),
         publishedAtEstimated: j['published_at_estimated'] == true,
+        imageUrl: _httpsOrNull(j['image_url']),
       );
+}
+
+String? _httpsOrNull(Object? v) {
+  if (v is! String || v.length > 1000) return null;
+  final Uri? u = Uri.tryParse(v);
+  return u != null && u.scheme == 'https' && u.host.isNotEmpty && u.userInfo.isEmpty
+      ? v
+      : null;
 }
 
 /// One analytical point and the articles it rests on.

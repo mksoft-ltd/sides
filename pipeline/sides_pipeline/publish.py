@@ -94,6 +94,7 @@ def public_article_pool(raw: bytes) -> dict:
             {
                 "id": a.id, "outlet_id": a.outlet_id, "headline": a.headline, "snippet": a.snippet,
                 "url": str(a.url), "published_at": a.published_at.isoformat().replace("+00:00", "Z"),
+                **({"image_url": a.image_url} if a.image_url else {}),
             }
             for a in result.articles
         ],

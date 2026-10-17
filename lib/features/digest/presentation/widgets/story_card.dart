@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../../../../core/constants/copy.dart';
 import '../../../../core/theme/app_theme.dart';
 import '../../../../shared/widgets/coverage_indicator.dart';
+import '../../../../shared/widgets/side_pictures.dart';
 import '../../../../shared/widgets/story_meta.dart';
 import '../../domain/digest.dart';
 
@@ -243,12 +244,19 @@ class _Lead extends StatelessWidget {
                     ),
                   ),
                 ],
-                const SizedBox(height: 14),
+                const SizedBox(height: 16),
                 Theme(
                   data: onPlate,
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: <Widget>[
+                      SidePictures(
+                        story: story,
+                        digest: card.digest,
+                        labelColor: StoryCard.mutedOnPlate,
+                      ),
+                      if (SidePictures.pick(story, card.digest).length >= 2)
+                        const SizedBox(height: 14),
                       StoryMeta(story: story, style: theme.textTheme.bodySmall),
                       const SizedBox(height: 10),
                       CoverageIndicator(
