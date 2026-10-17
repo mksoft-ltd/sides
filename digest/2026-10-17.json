@@ -1,0 +1,4107 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-10-17T10:24:49.859144Z",
+  "date": "2026-10-17",
+  "meta": {
+    "model": "claude-opus-5-5",
+    "cost_usd": 1.351988,
+    "outlets_polled": 29,
+    "articles_collected": 630,
+    "warnings": [
+      "1 feed(s) failed during collect"
+    ],
+    "validation": {
+      "kept": 315,
+      "dropped_by_reason": {
+        "title_ungrounded": 1,
+        "untrusted_text": 1
+      }
+    }
+  },
+  "outlets": [
+    {
+      "id": "guardian",
+      "name": "The Guardian",
+      "lean": "left",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United Kingdom",
+      "home_url": "https://www.theguardian.com/",
+      "rating_basis": "AllSides media bias rating (Lean Left), checked Oct 2026"
+    },
+    {
+      "id": "independent",
+      "name": "The Independent",
+      "lean": "left",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United Kingdom",
+      "home_url": "https://www.independent.co.uk/",
+      "rating_basis": "AllSides media bias rating (Lean Left), checked Oct 2026"
+    },
+    {
+      "id": "mirror",
+      "name": "Daily Mirror",
+      "lean": "left",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United Kingdom",
+      "home_url": "https://www.mirror.co.uk/",
+      "rating_basis": "Ad Fontes Media bias rating (Skews Left), checked Oct 2026"
+    },
+    {
+      "id": "bbc",
+      "name": "BBC News",
+      "lean": "centre",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "public-service",
+      "country": "United Kingdom",
+      "home_url": "https://www.bbc.co.uk/news",
+      "rating_basis": "AllSides media bias rating (Center), checked Oct 2026"
+    },
+    {
+      "id": "sky",
+      "name": "Sky News",
+      "lean": "centre",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United Kingdom",
+      "home_url": "https://news.sky.com/",
+      "rating_basis": "Ad Fontes Media bias rating (Middle), checked Oct 2026"
+    },
+    {
+      "id": "telegraph",
+      "name": "The Telegraph",
+      "lean": "right",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United Kingdom",
+      "home_url": "https://www.telegraph.co.uk/",
+      "rating_basis": "AllSides media bias rating (Lean Right), checked Oct 2026"
+    },
+    {
+      "id": "dailymail",
+      "name": "Daily Mail",
+      "lean": "right",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United Kingdom",
+      "home_url": "https://www.dailymail.co.uk/",
+      "rating_basis": "AllSides media bias rating (Right), checked Oct 2026"
+    },
+    {
+      "id": "thesun",
+      "name": "The Sun",
+      "lean": "right",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United Kingdom",
+      "home_url": "https://www.thesun.co.uk/",
+      "rating_basis": "AllSides media bias rating (Right), checked Oct 2026"
+    },
+    {
+      "id": "nyt",
+      "name": "The New York Times",
+      "lean": "left",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United States",
+      "home_url": "https://www.nytimes.com/",
+      "rating_basis": "AllSides media bias rating (Lean Left), checked Oct 2026"
+    },
+    {
+      "id": "nbc",
+      "name": "NBC News",
+      "lean": "left",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United States",
+      "home_url": "https://www.nbcnews.com/",
+      "rating_basis": "AllSides media bias rating (Lean Left), checked Oct 2026"
+    },
+    {
+      "id": "huffpost",
+      "name": "HuffPost",
+      "lean": "left",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United States",
+      "home_url": "https://www.huffpost.com/",
+      "rating_basis": "AllSides media bias rating (Left), checked Oct 2026"
+    },
+    {
+      "id": "npr",
+      "name": "NPR",
+      "lean": "centre",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "public-service",
+      "country": "United States",
+      "home_url": "https://www.npr.org/",
+      "rating_basis": "Ad Fontes Media bias rating (Middle / Skews Left), checked Oct 2026"
+    },
+    {
+      "id": "axios",
+      "name": "Axios",
+      "lean": "centre",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United States",
+      "home_url": "https://www.axios.com/",
+      "rating_basis": "AllSides media bias rating (Center), checked Oct 2026"
+    },
+    {
+      "id": "fox",
+      "name": "Fox News",
+      "lean": "right",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United States",
+      "home_url": "https://www.foxnews.com/",
+      "rating_basis": "AllSides media bias rating (Right), checked Oct 2026"
+    },
+    {
+      "id": "nypost",
+      "name": "New York Post",
+      "lean": "right",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United States",
+      "home_url": "https://nypost.com/",
+      "rating_basis": "AllSides media bias rating (Lean Right), checked Oct 2026"
+    },
+    {
+      "id": "examiner",
+      "name": "Washington Examiner",
+      "lean": "right",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United States",
+      "home_url": "https://www.washingtonexaminer.com/",
+      "rating_basis": "AllSides media bias rating (Lean Right), checked Oct 2026"
+    },
+    {
+      "id": "france24",
+      "name": "France 24",
+      "lean": "centre",
+      "region": "europe",
+      "bloc": "west",
+      "ownership": "public-service",
+      "country": "France",
+      "home_url": "https://www.france24.com/en/",
+      "rating_basis": "Ad Fontes Media bias rating (Middle), checked Oct 2026"
+    },
+    {
+      "id": "dw",
+      "name": "DW (Deutsche Welle)",
+      "lean": "centre",
+      "region": "europe",
+      "bloc": "west",
+      "ownership": "public-service",
+      "country": "Germany",
+      "home_url": "https://www.dw.com/en/",
+      "rating_basis": "AllSides media bias rating (Center), checked Oct 2026"
+    },
+    {
+      "id": "aljazeera",
+      "name": "Al Jazeera English",
+      "lean": null,
+      "region": "middle_east",
+      "bloc": "east",
+      "ownership": "state-funded",
+      "country": "Qatar",
+      "home_url": "https://www.aljazeera.com/",
+      "rating_basis": "Funded by the State of Qatar; no left/right tag applied"
+    },
+    {
+      "id": "thenational",
+      "name": "The National (UAE)",
+      "lean": null,
+      "region": "middle_east",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "United Arab Emirates",
+      "home_url": "https://www.thenationalnews.com/",
+      "rating_basis": "Owned by International Media Investments (Abu Dhabi); no left/right tag applied"
+    },
+    {
+      "id": "timesofisrael",
+      "name": "The Times of Israel",
+      "lean": null,
+      "region": "middle_east",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "Israel",
+      "home_url": "https://www.timesofisrael.com/",
+      "rating_basis": "Privately owned; no left/right tag applied"
+    },
+    {
+      "id": "cgtn",
+      "name": "CGTN",
+      "lean": null,
+      "region": "asia",
+      "bloc": "east",
+      "ownership": "state-controlled",
+      "country": "China",
+      "home_url": "https://www.cgtn.com/",
+      "rating_basis": "China Global Television Network, part of state broadcaster China Media Group"
+    },
+    {
+      "id": "ecns",
+      "name": "ECNS (China News Service)",
+      "lean": null,
+      "region": "asia",
+      "bloc": "east",
+      "ownership": "state-controlled",
+      "country": "China",
+      "home_url": "https://www.ecns.cn/",
+      "rating_basis": "English service of China News Service, a state news agency"
+    },
+    {
+      "id": "scmp",
+      "name": "South China Morning Post",
+      "lean": null,
+      "region": "asia",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "Hong Kong",
+      "home_url": "https://www.scmp.com/",
+      "rating_basis": "Owned by Alibaba Group; no left/right tag applied"
+    },
+    {
+      "id": "toi",
+      "name": "The Times of India",
+      "lean": null,
+      "region": "asia",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "India",
+      "home_url": "https://timesofindia.indiatimes.com/",
+      "rating_basis": "Privately owned (Bennett, Coleman & Co.); no left/right tag applied"
+    },
+    {
+      "id": "thehindu",
+      "name": "The Hindu",
+      "lean": null,
+      "region": "asia",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "India",
+      "home_url": "https://www.thehindu.com/",
+      "rating_basis": "Privately owned (The Hindu Group); no left/right tag applied"
+    },
+    {
+      "id": "moscowtimes",
+      "name": "The Moscow Times",
+      "lean": null,
+      "region": "europe",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "Russia",
+      "home_url": "https://www.themoscowtimes.com/",
+      "rating_basis": "Independent, Amsterdam-based since 2022; designated \"undesirable\" by Russia; no left/right tag applied"
+    },
+    {
+      "id": "japantimes",
+      "name": "The Japan Times",
+      "lean": null,
+      "region": "asia",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "Japan",
+      "home_url": "https://www.japantimes.co.jp/",
+      "rating_basis": "Privately owned (News2u Holdings); no left/right tag applied"
+    },
+    {
+      "id": "koreaherald",
+      "name": "The Korea Herald",
+      "lean": null,
+      "region": "asia",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "South Korea",
+      "home_url": "https://www.koreaherald.com/",
+      "rating_basis": "Privately owned (Herald Corporation); no left/right tag applied"
+    }
+  ],
+  "stories": [
+    {
+      "id": "9c6944515c91",
+      "title": "Trump waives new Russia sanctions passed by Congress, citing national interest",
+      "rank": 1,
+      "outlet_count": 14,
+      "coverage": {
+        "lean": {
+          "left": 2,
+          "centre": 3,
+          "right": 4
+        },
+        "bloc": {
+          "west": 9,
+          "east": 5
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "b240d86119af",
+          "outlet_id": "nypost",
+          "headline": "Trump puts Russia sanctions package on hold, says pause is in national interest",
+          "snippet": "President Trump paused a congressional Russia sanctions package in the national interest, shortly after announcing a deal for Russian diesel.",
+          "url": "https://nypost.com/2026/10/16/us-news/trump-puts-russia-sanctions-package-passed-by-congress-on-hold-says-waiver-is-in-us-national-interest/",
+          "published_at": "2026-10-17T02:25:13Z",
+          "published_at_estimated": false
+        },
+        {
+          "id": "35e060dfaa9d",
+          "outlet_id": "scmp",
+          "headline": "Trump pauses Russian sanctions package after striking diesel deal with Putin",
+          "snippet": "US President Donald Trump on Friday signed an executive order that puts on hold a sweeping new sanctions package targeting the Russian economy, telling Congress the pause was in the national…",
+          "url": "https://www.scmp.com/news/world/united-states-canada/article/3371222/trump-pauses-russian-sanctions-package-after-striking-diesel-deal-putin",
+          "published_at": "2026-10-17T02:26:19Z",
+          "published_at_estimated": false
+        },
+        {
+          "id": "b22166be10e5",
+          "outlet_id": "nbc",
+          "headline": "Trump waives new Russia sanctions passed by Congress, citing ‘national interests’",
+          "snippet": "President Donald Trump waived sweeping new sanctions against Russia passed by Congress, arguing in an executive order Friday that the move “is in the national interests of the United States.”",
+          "url": "https://www.nbcnews.com/politics/trump-administration/trump-suspends-new-russia-sanctions-deal-purchase-diesel-citing-nation-rcna603991",
+          "published_at": "2026-10-17T02:45:08Z",
+          "published_at_estimated": false
+        },
+        {
+          "id": "8e85336ac248",
+          "outlet_id": "examiner",
+          "headline": "Trump waives Russia sanctions ordered by law named for Lindsey Graham",
+          "snippet": "President Donald Trump signed an executive order on Friday that waived the sweeping Russian sanctions and tariffs enacted by the bill championed by the late Sen. Lindsey Graham. Trump signed the…",
+          "url": "https://www.washingtonexaminer.com/news/white-house/4769595/trump-waives-russia-sanctions-ordered-law-named-lindsey-graham/",
+          "published_at": "2026-10-17T03:09:24Z",
+          "published_at_estimated": false
+        },
+        {
+          "id": "f730ff66bcc9",
+          "outlet_id": "mirror",
+          "headline": "Donald Trump halts massive sanctions on Russian goods just days before they take effect",
+          "snippet": "The waiver comes during the worst rift between the US leader and Ukrainian President Volodymyr Zelensky in recent months after Mr Trump agreed to a diesel deal with Russia",
+          "url": "https://www.mirror.co.uk/news/world-news/us-sanctions-russia-waived-trump-37782088",
+          "published_at": "2026-10-17T03:57:44Z",
+          "published_at_estimated": false
+        },
+        {
+          "id": "5813dc128b66",
+          "outlet_id": "japantimes",
+          "headline": "Trump waives new Russia sanctions as Ukraine ties slump",
+          "snippet": "The move came as Ukrainian President Volodymyr Zelenskyy urged EU leaders to keep financing Kyiv's fight with nearly $80 billion more next year.",
+          "url": "https://www.japantimes.co.jp/news/2026/10/17/world/politics/trump-waives-russia-sanctions/",
+          "published_at": "2026-10-17T04:40:00Z",
+          "published_at_estimated": false
+        },
+        {
+          "id": "c5bad820c26b",
+          "outlet_id": "aljazeera",
+          "headline": "Trump puts on hold new Russia sanctions he signed into law",
+          "snippet": "US president's executive order comes two days before sanctions deadline and a week after diesel deal with Putin.",
+          "url": "https://www.aljazeera.com/news/2026/10/17/trump-puts-on-hold-new-russia-sanctions-he-signed-into-law",
+          "published_at": "2026-10-17T04:45:03Z",
+          "published_at_estimated": false
+        },
+        {
+          "id": "2e12a13d08b6",
+          "outlet_id": "aljazeera",
+          "headline": "Trump waives Russia sanctions as rift with Zelenskyy widens",
+          "snippet": "US President Donald Trump has waived more sanctions on Russia in a bid to ease energy prices.",
+          "url": "https://www.aljazeera.com/video/newsfeed/2026/10/17/trump-waives-russia-sanctions-as-rift-with-zelenskyy-widens",
+          "published_at": "2026-10-17T04:58:32Z",
+          "published_at_estimated": false
+        },
+        {
+          "id": "6d7e8d85f8c0",
+          "outlet_id": "thesun",
+          "headline": "Trump halts sweeping Russia sanctions before they kick in just a week after agreeing huge diesel deal with Putin",
+          "snippet": "DONALD Trump has put fresh sanctions against Russia on hold just one week after agreeing a diesel deal with Vladimir Putin. The US president said the move was in the national interest, after signing…",
+          "url": "https://www.thesun.co.uk/news/40716311/trump-halts-russia-sanctions-putin-deal/",
+          "published_at": "2026-10-17T07:44:34Z",
+          "published_at_estimated": false
+        },
+        {
+          "id": "d8e68ee2ab36",
+          "outlet_id": "moscowtimes",
+          "headline": "Trump Signs Order Exempting Russia From New Sanctions Legislation",
+          "snippet": "In his executive order, Donald Trump said exempting Russia from the sanctions legislation was in the “national interest” of the United States.",
+          "url": "https://www.themoscowtimes.com/2026/10/17/trump-signs-order-exempting-russia-from-new-sanctions-legislation-a94012",
+          "published_at": "2026-10-17T07:54:01Z",
+          "published_at_estimated": false
+        },
+        {
+          "id": "64584e0b1168",
+          "outlet_id": "france24",
+          "headline": "Trump waives new Russia sanctions as Ukraine ties slump",
+          "snippet": "President Donald Trump signed an executive order on Friday that waived sweeping US sanctions and tariffs targeting Russia's energy revenues, marking a new low in Washington's ties with war-torn…",
+          "url": "https://www.france24.com/en/video/20261017-trump-waives-new-russia-sanctions-as-ukraine-ties-slump",
+          "published_at": "2026-10-17T09:23:52Z",
+          "published_at_estimated": false
+        },
+        {
+          "id": "b8ed8093b88b",
+          "outlet_id": "thehindu",
+          "headline": "Trump blocking Russia sanctions a 'historic moment': Putin’s envoy",
+          "snippet": "The Kremlin and Putin — who appeared in military uniform and said Moscow intends to seize the rest of eastern Ukraine — have not yet reacted to the move, which is a major diplomatic win for Russia",
+          "url": "https://www.thehindu.com/news/international/trump-blocking-russia-sanctions-a-historic-moment-putins-envoy/article71595853.ece",
+          "published_at": "2026-10-17T09:36:48Z",
+          "published_at_estimated": false
+        },
+        {
+          "id": "b92d1140ed0b",
+          "outlet_id": "bbc",
+          "headline": "Trump waives several Russia sanctions as row with Zelensky intensifies",
+          "snippet": "The US president temporarily ends many restrictions on Moscow recently passed by Congress over \"national security\" concerns.",
+          "url": "https://www.bbc.co.uk/news/articles/cxr5yvzv7rp0o",
+          "published_at": "2026-10-17T09:42:13Z",
+          "published_at_estimated": false
+        },
+        {
+          "id": "a534e98e748c",
+          "outlet_id": "dailymail",
+          "headline": "Trump suspends sanctions that Congress put on Russia just one week after his cushy dealings with Putin",
+          "snippet": "The President wrote to Congress that the move was in the national interest, undoing legislation he signed just last month and named in honor of the late Senator Lindsey Graham.",
+          "url": "https://www.dailymail.com/news/article-16216289/Trump-suspends-Russia-sanctions-Putin.html",
+          "published_at": "2026-10-17T09:43:18Z",
+          "published_at_estimated": false
+        },
+        {
+          "id": "d61e50d68f8e",
+          "outlet_id": "axios",
+          "headline": "Trump waives new Russia sanctions in the \"national interests\"",
+          "snippet": "President Trump waived new sanctions on Russia late Friday night, saying it was in the \"national interests\" to hold off on the sweeping levies under the Graham Act that he signed just last month…",
+          "url": "https://www.axios.com/2026/10/17/trump-russia-sanctions",
+          "published_at": "2026-10-17T09:55:47Z",
+          "published_at_estimated": false
+        },
+        {
+          "id": "93ab7dcc839d",
+          "outlet_id": "thehindu",
+          "headline": "Trump puts forth ‘waivers’ on Russian oil purchases weeks after relaxation on diesel imports",
+          "snippet": "Trump said he had submitted to Congress a certification that issuing such a waiver at this time is in the national interest of the United States",
+          "url": "https://www.thehindu.com/news/international/donald-trump-waives-sanctions-tariffs-on-purchase-of-russian-oil-and-gas/article71595243.ece",
+          "published_at": "2026-10-17T09:56:19Z",
+          "published_at_estimated": false
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "Trump waived, paused or suspended new sanctions on Russia that had been passed by Congress.",
+          "sources": [
+            "b240d86119af",
+            "35e060dfaa9d",
+            "b22166be10e5",
+            "8e85336ac248",
+            "f730ff66bcc9",
+            "5813dc128b66",
+            "c5bad820c26b",
+            "2e12a13d08b6",
+            "6d7e8d85f8c0",
+            "d8e68ee2ab36",
+            "64584e0b1168",
+            "b92d1140ed0b",
+            "a534e98e748c",
+            "d61e50d68f8e"
+          ]
+        },
+        {
+          "text": "The move was made through an executive order signed on Friday.",
+          "sources": [
+            "35e060dfaa9d",
+            "b22166be10e5",
+            "8e85336ac248",
+            "64584e0b1168",
+            "d8e68ee2ab36",
+            "c5bad820c26b"
+          ]
+        },
+        {
+          "text": "Trump said the waiver was in the national interest of the United States.",
+          "sources": [
+            "b240d86119af",
+            "35e060dfaa9d",
+            "b22166be10e5",
+            "6d7e8d85f8c0",
+            "d8e68ee2ab36",
+            "a534e98e748c",
+            "d61e50d68f8e",
+            "93ab7dcc839d"
+          ]
+        },
+        {
+          "text": "The waiver followed a diesel deal between Trump and Russia or Putin, which several outlets place about one week earlier.",
+          "sources": [
+            "b240d86119af",
+            "35e060dfaa9d",
+            "f730ff66bcc9",
+            "c5bad820c26b",
+            "6d7e8d85f8c0",
+            "93ab7dcc839d"
+          ]
+        },
+        {
+          "text": "The move comes amid a worsening rift between Trump and Ukraine's President Zelensky.",
+          "sources": [
+            "f730ff66bcc9",
+            "5813dc128b66",
+            "2e12a13d08b6",
+            "64584e0b1168",
+            "b92d1140ed0b"
+          ]
+        },
+        {
+          "text": "The sanctions were halted shortly before they were due to take effect, with one outlet saying two days before the deadline.",
+          "sources": [
+            "f730ff66bcc9",
+            "c5bad820c26b",
+            "6d7e8d85f8c0"
+          ]
+        },
+        {
+          "text": "The sanctions came from legislation Trump himself signed, named after the late Senator Lindsey Graham.",
+          "sources": [
+            "8e85336ac248",
+            "a534e98e748c",
+            "d61e50d68f8e",
+            "c5bad820c26b"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "b22166be10e5",
+              "quote": "citing ‘national interests’",
+              "field": "headline"
+            },
+            {
+              "article_id": "f730ff66bcc9",
+              "quote": "halts massive sanctions on Russian goods just days before they take effect",
+              "field": "headline"
+            },
+            {
+              "article_id": "f730ff66bcc9",
+              "quote": "worst rift between the US leader and Ukrainian President Volodymyr Zelensky in recent months",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the executive order's wording that the move is in the national interests of the United States.",
+              "sources": [
+                "b22166be10e5"
+              ]
+            },
+            {
+              "text": "Foregrounds the timing just before the sanctions took effect, the rift with Zelensky and the diesel deal with Russia.",
+              "sources": [
+                "f730ff66bcc9"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "64584e0b1168",
+              "quote": "as Ukraine ties slump",
+              "field": "headline"
+            },
+            {
+              "article_id": "b92d1140ed0b",
+              "quote": "as row with Zelensky intensifies",
+              "field": "headline"
+            },
+            {
+              "article_id": "d61e50d68f8e",
+              "quote": "under the Graham Act that he signed just last month",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Frames the waiver in terms of deteriorating US relations with Ukraine and Zelensky.",
+              "sources": [
+                "64584e0b1168",
+                "b92d1140ed0b"
+              ]
+            },
+            {
+              "text": "Notes the sanctions and tariffs targeted Russia's energy revenues.",
+              "sources": [
+                "64584e0b1168"
+              ]
+            },
+            {
+              "text": "Describes the waiver as temporary and ending many restrictions over national security concerns.",
+              "sources": [
+                "b92d1140ed0b"
+              ]
+            },
+            {
+              "text": "Points out Trump signed the Graham Act himself just last month.",
+              "sources": [
+                "d61e50d68f8e"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "right",
+          "headline_quotes": [
+            {
+              "article_id": "b240d86119af",
+              "quote": "puts Russia sanctions package on hold",
+              "field": "headline"
+            },
+            {
+              "article_id": "8e85336ac248",
+              "quote": "ordered by law named for Lindsey Graham",
+              "field": "headline"
+            },
+            {
+              "article_id": "6d7e8d85f8c0",
+              "quote": "just a week after agreeing huge diesel deal with Putin",
+              "field": "headline"
+            },
+            {
+              "article_id": "a534e98e748c",
+              "quote": "just one week after his cushy dealings with Putin",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the timing of the waiver shortly after Trump's diesel deal or dealings with Putin.",
+              "sources": [
+                "b240d86119af",
+                "6d7e8d85f8c0",
+                "a534e98e748c"
+              ]
+            },
+            {
+              "text": "Highlights that the sanctions came from a law named for the late Lindsey Graham, which Trump signed last month.",
+              "sources": [
+                "8e85336ac248",
+                "a534e98e748c"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "right",
+          "text": "Right-leaning coverage does not mention the rift with Zelensky or the state of US-Ukraine ties.",
+          "sources": [
+            "f730ff66bcc9",
+            "64584e0b1168",
+            "b92d1140ed0b"
+          ]
+        },
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not mention the diesel deal with Russia that preceded the waiver.",
+          "sources": [
+            "b240d86119af",
+            "f730ff66bcc9",
+            "6d7e8d85f8c0"
+          ]
+        },
+        {
+          "lean": "left",
+          "text": "Left-leaning coverage does not mention the Graham Act or that Trump signed the sanctions law himself last month.",
+          "sources": [
+            "8e85336ac248",
+            "a534e98e748c",
+            "d61e50d68f8e"
+          ]
+        }
+      ],
+      "contested_claims": [
+        {
+          "claim": "The waiver was grounded in the national interest of the United States.",
+          "asserted_by": [
+            "b22166be10e5",
+            "d8e68ee2ab36",
+            "a534e98e748c",
+            "d61e50d68f8e"
+          ],
+          "disputed_by": [
+            "b92d1140ed0b"
+          ]
+        }
+      ],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "b22166be10e5",
+              "quote": "citing ‘national interests’",
+              "field": "headline"
+            },
+            {
+              "article_id": "b92d1140ed0b",
+              "quote": "as row with Zelensky intensifies",
+              "field": "headline"
+            },
+            {
+              "article_id": "8e85336ac248",
+              "quote": "named for Lindsey Graham",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Foregrounds the national interest justification given in the executive order.",
+              "sources": [
+                "b22166be10e5",
+                "b240d86119af",
+                "d61e50d68f8e"
+              ]
+            },
+            {
+              "text": "Highlights the Graham Act and that Trump signed the law last month.",
+              "sources": [
+                "8e85336ac248",
+                "a534e98e748c",
+                "d61e50d68f8e"
+              ]
+            },
+            {
+              "text": "Links the timing to the diesel deal with Putin.",
+              "sources": [
+                "b240d86119af",
+                "6d7e8d85f8c0",
+                "f730ff66bcc9"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "b8ed8093b88b",
+              "quote": "a 'historic moment': Putin’s envoy",
+              "field": "headline"
+            },
+            {
+              "article_id": "2e12a13d08b6",
+              "quote": "in a bid to ease energy prices",
+              "field": "snippet"
+            },
+            {
+              "article_id": "35e060dfaa9d",
+              "quote": "after striking diesel deal with Putin",
+              "field": "headline"
+            },
+            {
+              "article_id": "d8e68ee2ab36",
+              "quote": "Exempting Russia From New Sanctions Legislation",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Reports the Russian reaction, with Putin's envoy calling it a historic moment and the move described as a major diplomatic win for Russia.",
+              "sources": [
+                "b8ed8093b88b"
+              ]
+            },
+            {
+              "text": "Emphasises the energy angle, including easing energy prices, the diesel deal and waivers on Russian oil purchases.",
+              "sources": [
+                "2e12a13d08b6",
+                "35e060dfaa9d",
+                "c5bad820c26b",
+                "93ab7dcc839d"
+              ]
+            },
+            {
+              "text": "Notes Zelenskyy urging EU leaders to provide nearly $80 billion more for Kyiv next year.",
+              "sources": [
+                "5813dc128b66"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "President Donald Trump signed an executive order waiving or pausing a sweeping new Russia sanctions package passed by Congress, saying the move was in the national interest. Outlets note it came about a week after a diesel deal with Russia and amid a widening rift with Ukraine's President Zelensky.",
+        "sources": [
+          "b240d86119af",
+          "35e060dfaa9d",
+          "b22166be10e5",
+          "d8e68ee2ab36",
+          "c5bad820c26b",
+          "6d7e8d85f8c0",
+          "f730ff66bcc9",
+          "2e12a13d08b6",
+          "b92d1140ed0b",
+          "64584e0b1168"
+        ]
+      },
+      "conclusion": {
+        "text": "All sides report Trump waived congressional Russia sanctions by executive order, citing the national interest. Right-leaning outlets stress the diesel deal and the Graham law, centre and left the rift with Zelensky, and Eastern outlets add Russia's welcome and energy motives. The BBC alone attributes the waiver to national security concerns.",
+        "sources": [
+          "b22166be10e5",
+          "d8e68ee2ab36",
+          "6d7e8d85f8c0",
+          "8e85336ac248",
+          "64584e0b1168",
+          "f730ff66bcc9",
+          "b8ed8093b88b",
+          "2e12a13d08b6",
+          "b92d1140ed0b"
+        ]
+      },
+      "validation": {
+        "kept": 44,
+        "dropped_by_reason": {}
+      }
+    },
+    {
+      "id": "8286a50d76b3",
+      "title": "Katie Zacharia leaves post as White House press secretary after five days",
+      "rank": 2,
+      "outlet_count": 13,
+      "coverage": {
+        "lean": {
+          "left": 1,
+          "centre": 5,
+          "right": 2
+        },
+        "bloc": {
+          "west": 8,
+          "east": 5
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "09ce8685fdaa",
+          "outlet_id": "france24",
+          "headline": "Embattled new White House Press Secretary Zacharia 'let go' from her role",
+          "snippet": "A White House Press official said Friday that Secretary ​Katie Zacharia was \"let go\" from her role after US President Donald Trump signaled she was on her way out, a week after he picked her for the…",
+          "url": "https://www.france24.com/en/americas/20261016-embattled-new-white-house-press-secretary-zacharia-let-go-from-her-role",
+          "published_at": "2026-10-16T15:57:24Z",
+          "published_at_estimated": false
+        },
+        {
+          "id": "c7fed8fe2cb2",
+          "outlet_id": "sky",
+          "headline": "Trump's press secretary responds after leaving role days after taking job",
+          "snippet": "Katie Zacharia has left her role as White House press secretary a week after being appointed, saying \"it was an honor to work for\" Donald Trump.",
+          "url": "https://news.sky.com/story/katie-zacharia-new-white-house-spokesperson-leaves-role-just-a-week-after-being-appointed-13600019",
+          "published_at": "2026-10-16T17:26:00Z",
+          "published_at_estimated": false
+        },
+        {
+          "id": "cc3a667922ba",
+          "outlet_id": "npr",
+          "headline": "Katie Zacharia is 'transitioning out' as press secretary, White House says",
+          "snippet": "Katie Zacharia's first official day was on Monday.",
+          "url": "https://www.npr.org/2026/10/16/nx-s1-6005317/trump-casts-doubt-on-press-secretarys-future",
+          "published_at": "2026-10-16T18:08:33Z",
+          "published_at_estimated": false
+        },
+        {
+          "id": "ee530505dae6",
+          "outlet_id": "thenational",
+          "headline": "'It was an honour to work for him': White House press secretary Katie Zacharia praises Trump as she leaves job",
+          "snippet": "Katie Zacharia has left her role as the White House press secretary after only five days in the job. In a post on X, she said it was an honour to work for US President Donald Trump and hailed him as…",
+          "url": "https://www.thenationalnews.com/news/us/2026/10/16/katie-zacharia-fired-white-house/",
+          "published_at": "2026-10-16T18:29:38Z",
+          "published_at_estimated": false
+        },
+        {
+          "id": "f5f020b244f0",
+          "outlet_id": "toi",
+          "headline": "Five women in Trump’s world who made headlines in last 15 days: Katie Zacharia overtakes Anthony Scaramucci in record of shortest tenure",
+          "snippet": "",
+          "url": "https://timesofindia.indiatimes.com/world/us/five-women-in-trumps-world-who-made-headlines-in-last-15-days-katie-zacharia-overtakes-anthony-scaramucci-in-record-of-shortest-tenure/articleshow/135003215.cms",
+          "published_at": "2026-10-16T20:12:33Z",
+          "published_at_estimated": false
+        },
+        {
+          "id": "be617301632c",
+          "outlet_id": "npr",
+          "headline": "Katie Zacharia is out as press secretary, White House says",
+          "snippet": "Katie Zacharia is \"transitioning out\" of her role as press secretary, according to a White House official not authorized to speak on the record, marking a stunning turn of events for the spokeswoman.",
+          "url": "https://www.npr.org/2026/10/16/nx-s1-6005302/katie-zacharia-is-out-as-press-secretary-white-house-says",
+          "published_at": "2026-10-16T20:29:40Z",
+          "published_at_estimated": false
+        },
+        {
+          "id": "0374a2538aef",
+          "outlet_id": "examiner",
+          "headline": "Who might be the next White House press secretary after Katie Zacharia’s exit",
+          "snippet": "A pile of candidates is already being tossed around as possible replacements for Katie Zacharia, hours after she was ousted as White House press secretary. The White House announced Zacharia would…",
+          "url": "https://www.washingtonexaminer.com/news/white-house/4769428/who-next-white-house-press-secretary-after-zacharia/",
+          "published_at": "2026-10-16T22:23:33Z",
+          "published_at_estimated": false
+        },
+        {
+          "id": "175169acd9f2",
+          "outlet_id": "nbc",
+          "headline": "White House Press Secretary out after 5 days on the job",
+          "snippet": "Katie Zacharia had a rocky five days as White House Press Secretary with a single briefing that was widely panned followed by questions over her legal credentials. Now she is out from one of the…",
+          "url": "https://www.nbcnews.com/nightly-news/video/white-house-press-secretary-out-after-5-days-on-the-job-271724613540",
+          "published_at": "2026-10-16T22:50:32Z",
+          "published_at_estimated": false
+        },
+        {
+          "id": "bc8796915dff",
+          "outlet_id": "cgtn",
+          "headline": "Katie Zacharia out as White House press secretary: US media",
+          "snippet": "White House Press Secretary Katie Zacharia was out of her post on Friday after just five days on the job, according to US media reports.",
+          "url": "https://news.cgtn.com/news/2026-10-17/Katie-Zacharia-out-as-White-House-press-secretary-US-media-1Rj270PrnY4/p.html",
+          "published_at": "2026-10-17T00:48:58Z",
+          "published_at_estimated": false
+        },
+        {
+          "id": "086f93ab3988",
+          "outlet_id": "axios",
+          "headline": "Katie Zacharia ousted as White House press secretary",
+          "snippet": "White House press secretary Katie Zacharia was ousted Friday after just five days on the job, according to two senior Trump administration officials. Why it matters: Zacharia will be the…",
+          "url": "https://www.axios.com/2026/10/16/trump-katie-zacharia-press-secretary",
+          "published_at": "2026-10-17T01:15:45Z",
+          "published_at_estimated": false
+        },
+        {
+          "id": "44cf1d5ce322",
+          "outlet_id": "japantimes",
+          "headline": "Trump’s new press secretary out after less than a week",
+          "snippet": "A series of blunders that added to distractions for her embattled boss led to her dismissal.",
+          "url": "https://www.japantimes.co.jp/news/2026/10/17/world/politics/white-house-press-secretary-ousted/",
+          "published_at": "2026-10-17T02:37:00Z",
+          "published_at_estimated": false
+        },
+        {
+          "id": "222938bd0e80",
+          "outlet_id": "dailymail",
+          "headline": "New White House press secretary frontrunner Scott Jennings breaks silence on Katie Zacharia's record-breaking firing",
+          "snippet": "Scott Jennings, considered a frontrunner to be the next White House press secretary, was on-air Friday and broke the news to his radio audience that Katie Zacharia's tenure appeared to be finished.",
+          "url": "https://www.dailymail.com/news/article-16215783/scott-jennings-press-secretary-katie-zacharia-firing.html",
+          "published_at": "2026-10-17T03:37:51Z",
+          "published_at_estimated": false
+        },
+        {
+          "id": "1cae0a6e3b9d",
+          "outlet_id": "dailymail",
+          "headline": "Trump's 11-day communicator Anthony Scaramucci reacts to Katie Zacharia's merciless five-day tenure: 'Records are made to be broken'",
+          "snippet": "She made it less than one half of a Scaramucci.",
+          "url": "https://www.dailymail.com/news/article-16215593/Anthony-Scaramucci-Katie-Zacharia-exit.html",
+          "published_at": "2026-10-17T03:39:34Z",
+          "published_at_estimated": false
+        },
+        {
+          "id": "f98576019e93",
+          "outlet_id": "thehindu",
+          "headline": "Who is Katie Zacharia, the White House Press Secretary ‘let go’ after five days in office?",
+          "snippet": "Confirming her departure in a post on X, Katie Zacharia said it had been “an honour” to serve as White House Press Secretary",
+          "url": "https://www.thehindu.com/news/international/who-is-katie-zacharia-white-house-press-secretary-who-exited-after-five-days-in-office/article71595641.ece",
+          "published_at": "2026-10-17T07:23:42Z",
+          "published_at_estimated": false
+        },
+        {
+          "id": "c024ca7e94b8",
+          "outlet_id": "dailymail",
+          "headline": "Katie Zacharia releases first statement since White House firing after disastrous first week",
+          "snippet": "Donald Trump's ousted press secretary Katie Zacharia has broken her silence after being unceremoniously removed from her role just five days into the job.",
+          "url": "https://www.dailymail.com/news/article-16216231/Katie-Zacharia-statement-White-House-firing.html",
+          "published_at": "2026-10-17T08:44:57Z",
+          "published_at_estimated": false
+        },
+        {
+          "id": "85f53f9f24b7",
+          "outlet_id": "bbc",
+          "headline": "Katie Zacharia leaving White House role less than five days into job",
+          "snippet": "Her public debut as press secretary ended with a flurry of media criticism about her credentials and preparedness.",
+          "url": "https://www.bbc.co.uk/news/articles/c32l4ekpvzl8o",
+          "published_at": "2026-10-17T09:14:10Z",
+          "published_at_estimated": false
+        },
+        {
+          "id": "61a14490c0f8",
+          "outlet_id": "dailymail",
+          "headline": "Katie Zacharia's final 72 hours: She arrived in Washington with a designer wardrobe and Trump's blessing. In the blink of an eye, she was out of a job... the full story of her downfall is extraordinary",
+          "snippet": "After less than half a Scaramucci - but what a whirlwind it was - Trump's new press secretary fell on her designer sword.",
+          "url": "https://www.dailymail.com/news/article-16216029/Katie-Zacharias-final-72-hours-arrived-Washington-designer-wardrobe-Trumps-blessing-blink-eye-job-story-downfall-extraordinary.html",
+          "published_at": "2026-10-17T09:43:18Z",
+          "published_at_estimated": false
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "Zacharia left her post as White House press secretary after about five days, or less than a week, in the role.",
+          "sources": [
+            "175169acd9f2",
+            "ee530505dae6",
+            "bc8796915dff",
+            "086f93ab3988",
+            "c024ca7e94b8",
+            "85f53f9f24b7",
+            "44cf1d5ce322",
+            "c7fed8fe2cb2",
+            "09ce8685fdaa",
+            "f98576019e93"
+          ]
+        },
+        {
+          "text": "Her departure is described as a removal: she was \"let go\", ousted, dismissed or fired.",
+          "sources": [
+            "09ce8685fdaa",
+            "086f93ab3988",
+            "0374a2538aef",
+            "44cf1d5ce322",
+            "c024ca7e94b8",
+            "222938bd0e80",
+            "f98576019e93"
+          ]
+        },
+        {
+          "text": "Zacharia said it had been an honour to work for Trump or to serve as press secretary.",
+          "sources": [
+            "c7fed8fe2cb2",
+            "ee530505dae6",
+            "f98576019e93"
+          ]
+        },
+        {
+          "text": "Her tenure is described as shorter than Anthony Scaramucci's, setting a record.",
+          "sources": [
+            "f5f020b244f0",
+            "1cae0a6e3b9d",
+            "61a14490c0f8",
+            "222938bd0e80"
+          ]
+        },
+        {
+          "text": "Her short time in the role drew criticism over her briefing, credentials or blunders.",
+          "sources": [
+            "175169acd9f2",
+            "85f53f9f24b7",
+            "44cf1d5ce322"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "175169acd9f2",
+              "quote": "rocky five days",
+              "field": "snippet"
+            },
+            {
+              "article_id": "175169acd9f2",
+              "quote": "a single briefing that was widely panned",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with a briefing that was widely panned and questions over her legal credentials.",
+              "sources": [
+                "175169acd9f2"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "cc3a667922ba",
+              "quote": "'transitioning out' as press secretary",
+              "field": "headline"
+            },
+            {
+              "article_id": "09ce8685fdaa",
+              "quote": "'let go' from her role",
+              "field": "headline"
+            },
+            {
+              "article_id": "086f93ab3988",
+              "quote": "ousted as White House press secretary",
+              "field": "headline"
+            },
+            {
+              "article_id": "85f53f9f24b7",
+              "quote": "a flurry of media criticism about her credentials and preparedness",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Attributes the news to White House or administration officials.",
+              "sources": [
+                "cc3a667922ba",
+                "be617301632c",
+                "09ce8685fdaa",
+                "086f93ab3988"
+              ]
+            },
+            {
+              "text": "Notes that Trump signalled she was on her way out.",
+              "sources": [
+                "09ce8685fdaa"
+              ]
+            },
+            {
+              "text": "Reports her response that it was an honour to work for Trump.",
+              "sources": [
+                "c7fed8fe2cb2"
+              ]
+            },
+            {
+              "text": "Mentions media criticism of her credentials and preparedness.",
+              "sources": [
+                "85f53f9f24b7"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "right",
+          "headline_quotes": [
+            {
+              "article_id": "222938bd0e80",
+              "quote": "record-breaking firing",
+              "field": "headline"
+            },
+            {
+              "article_id": "1cae0a6e3b9d",
+              "quote": "merciless five-day tenure",
+              "field": "headline"
+            },
+            {
+              "article_id": "c024ca7e94b8",
+              "quote": "disastrous first week",
+              "field": "headline"
+            },
+            {
+              "article_id": "61a14490c0f8",
+              "quote": "fell on her designer sword",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Focuses on possible replacements, naming Scott Jennings as a frontrunner.",
+              "sources": [
+                "0374a2538aef",
+                "222938bd0e80"
+              ]
+            },
+            {
+              "text": "Compares her tenure with Anthony Scaramucci's 11 days.",
+              "sources": [
+                "1cae0a6e3b9d",
+                "61a14490c0f8"
+              ]
+            },
+            {
+              "text": "Describes the exit as a firing and an unceremonious removal.",
+              "sources": [
+                "222938bd0e80",
+                "c024ca7e94b8"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "left",
+          "text": "Left coverage does not mention her statement that it was an honour to work for Trump.",
+          "sources": [
+            "c7fed8fe2cb2"
+          ]
+        },
+        {
+          "lean": "right",
+          "text": "Right coverage does not mention the criticism of her credentials.",
+          "sources": [
+            "175169acd9f2",
+            "85f53f9f24b7"
+          ]
+        },
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not mention possible successors such as Scott Jennings.",
+          "sources": [
+            "0374a2538aef",
+            "222938bd0e80"
+          ]
+        },
+        {
+          "lean": "left",
+          "text": "Left coverage does not mention possible successors such as Scott Jennings.",
+          "sources": [
+            "0374a2538aef",
+            "222938bd0e80"
+          ]
+        }
+      ],
+      "contested_claims": [],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "086f93ab3988",
+              "quote": "ousted as White House press secretary",
+              "field": "headline"
+            },
+            {
+              "article_id": "222938bd0e80",
+              "quote": "record-breaking firing",
+              "field": "headline"
+            },
+            {
+              "article_id": "175169acd9f2",
+              "quote": "questions over her legal credentials",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Attributes the departure to White House and administration officials.",
+              "sources": [
+                "cc3a667922ba",
+                "be617301632c",
+                "09ce8685fdaa",
+                "086f93ab3988"
+              ]
+            },
+            {
+              "text": "Covers criticism of her briefing and credentials.",
+              "sources": [
+                "175169acd9f2",
+                "85f53f9f24b7"
+              ]
+            },
+            {
+              "text": "Discusses possible successors and the Scaramucci comparison.",
+              "sources": [
+                "0374a2538aef",
+                "222938bd0e80",
+                "1cae0a6e3b9d",
+                "61a14490c0f8"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "ee530505dae6",
+              "quote": "'It was an honour to work for him'",
+              "field": "headline"
+            },
+            {
+              "article_id": "bc8796915dff",
+              "quote": "according to US media reports",
+              "field": "snippet"
+            },
+            {
+              "article_id": "44cf1d5ce322",
+              "quote": "A series of blunders",
+              "field": "snippet"
+            },
+            {
+              "article_id": "f5f020b244f0",
+              "quote": "overtakes Anthony Scaramucci in record of shortest tenure",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with her post on X praising Trump.",
+              "sources": [
+                "ee530505dae6",
+                "f98576019e93"
+              ]
+            },
+            {
+              "text": "Attributes the news to US media reports.",
+              "sources": [
+                "bc8796915dff"
+              ]
+            },
+            {
+              "text": "Says blunders that distracted her boss led to her dismissal.",
+              "sources": [
+                "44cf1d5ce322"
+              ]
+            },
+            {
+              "text": "Notes she set a record for shortest tenure.",
+              "sources": [
+                "f5f020b244f0"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "Katie Zacharia is out as White House press secretary after about five days in the job, with officials saying she was \"let go\" or is \"transitioning out\". In a post on X she said it was an honour to work for Donald Trump. Reports cite a widely criticised briefing and questions over her credentials.",
+        "sources": [
+          "09ce8685fdaa",
+          "cc3a667922ba",
+          "be617301632c",
+          "ee530505dae6",
+          "c7fed8fe2cb2",
+          "f98576019e93",
+          "175169acd9f2",
+          "85f53f9f24b7",
+          "086f93ab3988"
+        ]
+      },
+      "conclusion": {
+        "text": "All sides report Zacharia leaving as press secretary after about five days. Right outlets lead with firing language, the Scaramucci record and successors, while left and some centre coverage cite her briefing and credentials. East outlets relay her praise of Trump and US media reports; no side contradicts another.",
+        "sources": [
+          "175169acd9f2",
+          "086f93ab3988",
+          "85f53f9f24b7",
+          "222938bd0e80",
+          "1cae0a6e3b9d",
+          "0374a2538aef",
+          "ee530505dae6",
+          "bc8796915dff"
+        ]
+      },
+      "validation": {
+        "kept": 43,
+        "dropped_by_reason": {}
+      }
+    },
+    {
+      "id": "cec8fec93a9a",
+      "title": "Teenage gunman kills three children and a teacher at elementary school in Bend, Oregon",
+      "rank": 3,
+      "outlet_count": 10,
+      "coverage": {
+        "lean": {
+          "left": 3,
+          "centre": 3,
+          "right": 2
+        },
+        "bloc": {
+          "west": 8,
+          "east": 2
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "53bcebea9a54",
+          "outlet_id": "bbc",
+          "headline": "'It's really hard to believe' - How Oregon primary school shooting unfolded",
+          "snippet": "Three children aged 5, 8 and 11 and a teacher were killed after a 16-year-old suspect opened fire in the city of Bend, local police say.",
+          "url": "https://www.bbc.co.uk/news/videos/cwe8r29mjd05o",
+          "published_at": "2026-10-16T08:27:16Z",
+          "published_at_estimated": false
+        },
+        {
+          "id": "f7ccc58a40f9",
+          "outlet_id": "nbc",
+          "headline": "Oregon school shooting victims include 5-year-old whose family is ‘broken and lost’",
+          "snippet": "The victims killed in a special needs classroom at an Oregon elementary school Thursday included a 5-year-old boy whose family said they are “broken and lost” after the shooting and a young teacher…",
+          "url": "https://www.nbcnews.com/news/us-news/oregon-school-shooting-victims-include-5-year-old-rhoam-summer-whose-f-rcna603946",
+          "published_at": "2026-10-16T19:57:10Z",
+          "published_at_estimated": false
+        },
+        {
+          "id": "bfcd21c143a9",
+          "outlet_id": "sky",
+          "headline": "Teacher fought with Oregon gunman before parent shot suspect",
+          "snippet": "A teacher threw her phone at the teenage gunman who killed four people in a school shooting in Oregon before tackling and fighting with him, police have said.",
+          "url": "https://news.sky.com/story/heroic-teacher-fought-with-gunman-before-parent-shot-suspect-who-killed-four-at-oregon-school-13600075",
+          "published_at": "2026-10-16T20:58:00Z",
+          "published_at_estimated": false
+        },
+        {
+          "id": "9c692750c318",
+          "outlet_id": "nbc",
+          "headline": "Oregon police say teacher tackled suspected shooter, who previously attended Silver Rail Elementary",
+          "snippet": "A teacher \"fought\" and \"tackled\" the suspected shooter by throwing her cell phone at him, according to Bend Police Chief Mike Krantz. The victim, who has been identified as Griffin J. John II…",
+          "url": "https://www.nbcnews.com/video/oregon-police-say-teacher-tackled-suspected-shooter-who-previously-attended-silver-rail-elementary-271718469831",
+          "published_at": "2026-10-16T21:40:20Z",
+          "published_at_estimated": false
+        },
+        {
+          "id": "1c2cf486543b",
+          "outlet_id": "scmp",
+          "headline": "Oregon teen gunman was tackled by ‘heroic’ teacher then shot by students’ father",
+          "snippet": "A teacher threw her phone at the teenage gunman who killed four people at an Oregon junior school, then tackled and fought with him – probably saving lives before he was shot by a father who…",
+          "url": "https://www.scmp.com/news/world/united-states-canada/article/3371216/oregon-teen-gunman-was-tackled-heroic-teacher-then-shot-parent-students",
+          "published_at": "2026-10-16T22:22:36Z",
+          "published_at_estimated": false
+        },
+        {
+          "id": "984ccab66e22",
+          "outlet_id": "guardian",
+          "headline": "Shooter in fatal Bend, Oregon, school shooting was former student there",
+          "snippet": "One teacher and three children killed after Griffin J John II, 16, barged into elementary school and began shooting Oregon elementary school shooting: what we know so far The 16-year-old who barged…",
+          "url": "https://www.theguardian.com/us-news/2026/oct/16/oregon-school-shooting-latest",
+          "published_at": "2026-10-16T23:03:42Z",
+          "published_at_estimated": false
+        },
+        {
+          "id": "23da6243ef50",
+          "outlet_id": "nbc",
+          "headline": "Father of two and teacher credited for saving lives at deadly school shooting that killed four",
+          "snippet": "Authorities tonight are crediting a father of two who happened to be driving by the school on his lunch break when he heard gun shots, along with a teacher who threw a cell phone and tackled the…",
+          "url": "https://www.nbcnews.com/nightly-news/video/father-of-two-and-teacher-credited-for-saving-lives-at-deadly-school-shooting-that-killed-four-271725125719",
+          "published_at": "2026-10-16T23:19:31Z",
+          "published_at_estimated": false
+        },
+        {
+          "id": "df1db58a9e25",
+          "outlet_id": "dw",
+          "headline": "Oregon school shooting: Police praise 'heroism' of those who intervened to stop more killing",
+          "snippet": "US police have praised the actions of three people who cut short a deadly shooting at a school in the state of Oregon. Three children and a teacher were killed in the attack, carried out by a former…",
+          "url": "https://www.dw.com/en/oregon-school-shooting-police-praise-heroism-of-those-who-intervened-to-stop-more-killing/a-79685302?maca=en-rss-en-world-4025-xml-mrss",
+          "published_at": "2026-10-17T06:04:00Z",
+          "published_at_estimated": false
+        },
+        {
+          "id": "ad160b264ab8",
+          "outlet_id": "dailymail",
+          "headline": "Youngest victim of Oregon elementary school shooting that killed four named as Rhoam Summer, five, as dad says: 'Today has been the worst day of my life'",
+          "snippet": "Rhoam Summer, 5, was identified by locals and by his father as being one of the youngsters who was murdered inside Silver Rail Elementary School in Bend on Thursday.",
+          "url": "https://www.dailymail.com/news/article-16214953/rhoam-summer-silver-rail-elementary-oregon-bend-shooting.html",
+          "published_at": "2026-10-17T06:07:39Z",
+          "published_at_estimated": false
+        },
+        {
+          "id": "9ca5e8e0dde8",
+          "outlet_id": "dailymail",
+          "headline": "Oregon shooter attacked on school picture day as close-knit community mourn over children's final photos... after teacher hailed hero for brave bid to tackle killer",
+          "snippet": "Joe Camarlinghi, the father of a third-grader at Silver Rail Elementary in Bend, said the tragedy happened on school picture day, when families made sure their kids were looking camera-ready.",
+          "url": "https://www.dailymail.com/news/article-16216049/oregon-school-shooting-picture-day-teacher-hero.html",
+          "published_at": "2026-10-17T07:02:53Z",
+          "published_at_estimated": false
+        },
+        {
+          "id": "a4ae898cc32b",
+          "outlet_id": "dailymail",
+          "headline": "Teacher, 25, killed in Oregon shooting is identified as family reveal it was her first - and 'dream' - job",
+          "snippet": "Meghan Lambert of Bend, died in the classroom when Griffin John II, 16, opened fire at Silver Rail Elementary School in Bend, Oregon, on Thursday afternoon.",
+          "url": "https://www.dailymail.com/news/article-16216097/meghan-lambert-oregon-school-shooting-teacher.html",
+          "published_at": "2026-10-17T07:17:51Z",
+          "published_at_estimated": false
+        },
+        {
+          "id": "514d6d58674f",
+          "outlet_id": "aljazeera",
+          "headline": "Oregon school shooter was former special-needs student, police say",
+          "snippet": "",
+          "url": "https://www.aljazeera.com/video/newsfeed/2026/10/17/oregon-school-shooter-was-former-special-needs-student-police-say-2",
+          "published_at": "2026-10-17T08:04:35Z",
+          "published_at_estimated": false
+        },
+        {
+          "id": "e0aa487dc809",
+          "outlet_id": "thesun",
+          "headline": "Tragic teacher, 25, shot dead alongside 3 students by Oregon shooter is pictured as family reveal it was her ‘dream job’",
+          "snippet": "A DEVOTED teacher who died at the hands of a teenage gunman who opened fire on a special needs class at an elementary school has been identified. Meghan Lambert, 25, was one of four victims…",
+          "url": "https://www.thesun.co.uk/news/40716876/oregon-shooting-teacher-victim-pictured/",
+          "published_at": "2026-10-17T09:36:02Z",
+          "published_at_estimated": false
+        },
+        {
+          "id": "a20c1da4e5d6",
+          "outlet_id": "bbc",
+          "headline": "Oregon teacher fought school attacker before armed dad shot suspect 'multiple times'",
+          "snippet": "The 16-year-old suspect previously attended the primary school and had targeted a special educational needs classroom, police say.",
+          "url": "https://www.bbc.co.uk/news/articles/cv98zw1k8kp3o",
+          "published_at": "2026-10-17T09:58:17Z",
+          "published_at_estimated": false
+        },
+        {
+          "id": "47b4071cde04",
+          "outlet_id": "mirror",
+          "headline": "Oregon female teacher fought school shooter and tried to grab his gun after four killed",
+          "snippet": "A 16-year-old armed with a shotgun opened fire on a special education class at Silver Rail Elementary in Bend, Oregon, killing three pupils and a teacher before another teacher and a parent stopped…",
+          "url": "https://www.mirror.co.uk/news/world-news/oregon-school-shooting-teacher-bend-37782380",
+          "published_at": "2026-10-17T10:02:33Z",
+          "published_at_estimated": false
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "Four people were killed: three children and a teacher.",
+          "sources": [
+            "53bcebea9a54",
+            "984ccab66e22",
+            "df1db58a9e25",
+            "47b4071cde04",
+            "e0aa487dc809",
+            "bfcd21c143a9",
+            "1c2cf486543b",
+            "23da6243ef50",
+            "ad160b264ab8"
+          ]
+        },
+        {
+          "text": "The suspect is a 16-year-old.",
+          "sources": [
+            "53bcebea9a54",
+            "984ccab66e22",
+            "a4ae898cc32b",
+            "a20c1da4e5d6",
+            "47b4071cde04"
+          ]
+        },
+        {
+          "text": "The suspect has been identified as Griffin J John II.",
+          "sources": [
+            "9c692750c318",
+            "984ccab66e22",
+            "a4ae898cc32b"
+          ]
+        },
+        {
+          "text": "The shooting took place at Silver Rail Elementary School in Bend, Oregon.",
+          "sources": [
+            "9c692750c318",
+            "ad160b264ab8",
+            "9ca5e8e0dde8",
+            "a4ae898cc32b",
+            "47b4071cde04"
+          ]
+        },
+        {
+          "text": "The attack targeted a special needs classroom.",
+          "sources": [
+            "f7ccc58a40f9",
+            "e0aa487dc809",
+            "a20c1da4e5d6",
+            "47b4071cde04"
+          ]
+        },
+        {
+          "text": "The suspect was a former student at the school, according to police.",
+          "sources": [
+            "9c692750c318",
+            "984ccab66e22",
+            "514d6d58674f",
+            "a20c1da4e5d6"
+          ]
+        },
+        {
+          "text": "A teacher threw her phone at the gunman and tackled or fought with him.",
+          "sources": [
+            "bfcd21c143a9",
+            "9c692750c318",
+            "1c2cf486543b",
+            "23da6243ef50",
+            "a20c1da4e5d6",
+            "47b4071cde04",
+            "9ca5e8e0dde8"
+          ]
+        },
+        {
+          "text": "A parent or father shot the suspect.",
+          "sources": [
+            "bfcd21c143a9",
+            "1c2cf486543b",
+            "a20c1da4e5d6"
+          ]
+        },
+        {
+          "text": "The youngest victim was a five-year-old boy.",
+          "sources": [
+            "f7ccc58a40f9",
+            "ad160b264ab8",
+            "53bcebea9a54"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "f7ccc58a40f9",
+              "quote": "family is ‘broken and lost’",
+              "field": "headline"
+            },
+            {
+              "article_id": "984ccab66e22",
+              "quote": "Shooter in fatal Bend, Oregon, school shooting was former student there",
+              "field": "headline"
+            },
+            {
+              "article_id": "23da6243ef50",
+              "quote": "Father of two and teacher credited for saving lives",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Foregrounds the suspect's identity and his past attendance at the school.",
+              "sources": [
+                "9c692750c318",
+                "984ccab66e22"
+              ]
+            },
+            {
+              "text": "Credits a passing father and a teacher with saving lives.",
+              "sources": [
+                "23da6243ef50",
+                "47b4071cde04"
+              ]
+            },
+            {
+              "text": "Reports the grief of a five-year-old victim's family.",
+              "sources": [
+                "f7ccc58a40f9"
+              ]
+            },
+            {
+              "text": "States the suspect was armed with a shotgun.",
+              "sources": [
+                "47b4071cde04"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "53bcebea9a54",
+              "quote": "How Oregon primary school shooting unfolded",
+              "field": "headline"
+            },
+            {
+              "article_id": "df1db58a9e25",
+              "quote": "Police praise 'heroism' of those who intervened to stop more killing",
+              "field": "headline"
+            },
+            {
+              "article_id": "a20c1da4e5d6",
+              "quote": "armed dad shot suspect 'multiple times'",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the sequence of events and police accounts of the intervention.",
+              "sources": [
+                "53bcebea9a54",
+                "bfcd21c143a9",
+                "a20c1da4e5d6"
+              ]
+            },
+            {
+              "text": "Reports police praise for those who intervened.",
+              "sources": [
+                "df1db58a9e25"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "right",
+          "headline_quotes": [
+            {
+              "article_id": "ad160b264ab8",
+              "quote": "'Today has been the worst day of my life'",
+              "field": "headline"
+            },
+            {
+              "article_id": "a4ae898cc32b",
+              "quote": "family reveal it was her first - and 'dream' - job",
+              "field": "headline"
+            },
+            {
+              "article_id": "9ca5e8e0dde8",
+              "quote": "attacked on school picture day",
+              "field": "headline"
+            },
+            {
+              "article_id": "e0aa487dc809",
+              "quote": "Tragic teacher, 25, shot dead alongside 3 students",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Names the victims, including teacher Meghan Lambert, 25, and five-year-old Rhoam Summer.",
+              "sources": [
+                "ad160b264ab8",
+                "a4ae898cc32b",
+                "e0aa487dc809"
+              ]
+            },
+            {
+              "text": "Focuses on community mourning and notes the attack happened on school picture day.",
+              "sources": [
+                "9ca5e8e0dde8"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "right",
+          "text": "Right-leaning coverage does not mention that the suspect was a former student at the school.",
+          "sources": [
+            "9c692750c318",
+            "984ccab66e22",
+            "a20c1da4e5d6",
+            "514d6d58674f"
+          ]
+        },
+        {
+          "lean": "right",
+          "text": "Right-leaning coverage does not mention that a parent shot the suspect.",
+          "sources": [
+            "bfcd21c143a9",
+            "a20c1da4e5d6",
+            "23da6243ef50",
+            "47b4071cde04",
+            "1c2cf486543b"
+          ]
+        },
+        {
+          "lean": "left",
+          "text": "Left-leaning coverage does not name the teacher killed as Meghan Lambert, 25.",
+          "sources": [
+            "a4ae898cc32b",
+            "e0aa487dc809"
+          ]
+        },
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not name the teacher killed as Meghan Lambert, 25.",
+          "sources": [
+            "a4ae898cc32b",
+            "e0aa487dc809"
+          ]
+        }
+      ],
+      "contested_claims": [],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "bfcd21c143a9",
+              "quote": "Teacher fought with Oregon gunman before parent shot suspect",
+              "field": "headline"
+            },
+            {
+              "article_id": "f7ccc58a40f9",
+              "quote": "family is ‘broken and lost’",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Covers the intervention by a teacher and a parent alongside the victims' identities and family grief.",
+              "sources": [
+                "bfcd21c143a9",
+                "23da6243ef50",
+                "ad160b264ab8",
+                "a4ae898cc32b",
+                "f7ccc58a40f9"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "1c2cf486543b",
+              "quote": "tackled by ‘heroic’ teacher then shot by students’ father",
+              "field": "headline"
+            },
+            {
+              "article_id": "514d6d58674f",
+              "quote": "Oregon school shooter was former special-needs student, police say",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the teacher's intervention and the father shooting the gunman.",
+              "sources": [
+                "1c2cf486543b"
+              ]
+            },
+            {
+              "text": "Reports police saying the shooter was a former special-needs student.",
+              "sources": [
+                "514d6d58674f"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "A 16-year-old gunman killed three children and a teacher at Silver Rail Elementary School in Bend, Oregon, after opening fire on a special needs classroom. Police say a teacher threw her phone at him and tackled him before a parent shot the suspect, who was a former pupil at the school.",
+        "sources": [
+          "53bcebea9a54",
+          "984ccab66e22",
+          "47b4071cde04",
+          "a20c1da4e5d6",
+          "bfcd21c143a9",
+          "9c692750c318",
+          "1c2cf486543b",
+          "514d6d58674f",
+          "f7ccc58a40f9"
+        ]
+      },
+      "conclusion": {
+        "text": "Coverage agrees that a 16-year-old killed three children and a teacher in Bend and that a teacher and a parent stopped him. Left and centre outlets foreground the intervention and the suspect's past at the school, right outlets the named victims and mourning, and East outlets the intervention and his former-student status; no claims are disputed.",
+        "sources": [
+          "53bcebea9a54",
+          "47b4071cde04",
+          "bfcd21c143a9",
+          "984ccab66e22",
+          "a20c1da4e5d6",
+          "ad160b264ab8",
+          "a4ae898cc32b",
+          "1c2cf486543b",
+          "514d6d58674f"
+        ]
+      },
+      "validation": {
+        "kept": 40,
+        "dropped_by_reason": {}
+      }
+    },
+    {
+      "id": "a7bf06ffa414",
+      "title": "Israeli settlers attack Palestinian olive harvesters and Washington Post photographer",
+      "rank": 4,
+      "outlet_count": 9,
+      "coverage": {
+        "lean": {
+          "left": 4,
+          "centre": 3,
+          "right": 0
+        },
+        "bloc": {
+          "west": 7,
+          "east": 2
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "cd6eb7dd6b1d",
+          "outlet_id": "bbc",
+          "headline": "Israeli settlers attack Palestinians in West Bank during olive harvest",
+          "snippet": "Israeli settlers were seen attacking Palestinian farmers and setting fire to olive trees in the West Bank.",
+          "url": "https://www.bbc.co.uk/news/videos/cqn06zx2r15jo",
+          "published_at": "2026-10-16T11:40:41Z",
+          "published_at_estimated": false
+        },
+        {
+          "id": "e3a5754525fc",
+          "outlet_id": "thenational",
+          "headline": "Settlers beat Washington Post journalist during attack on Palestinian olive harvest",
+          "snippet": "A Washington Post photojournalist was among several people attacked by Israeli settlers while accompanying Palestinian villagers harvesting olives in the occupied West Bank on Friday. “Dozens of…",
+          "url": "https://www.thenationalnews.com/news/mena/2026/10/16/settlers-beat-washington-post-journalist-during-attack-on-palestinian-olive-harvest/",
+          "published_at": "2026-10-16T14:07:28Z",
+          "published_at_estimated": false
+        },
+        {
+          "id": "71a0dcf2ed7d",
+          "outlet_id": "mirror",
+          "headline": "Violence flares in West Bank as settler gangs torch cars and attack farmers during olive harvests",
+          "snippet": "Tensions mount in the troubled West Bank as masked and armed settlers attack Palestinian villagers and Israel prepares for the most important elections in many years",
+          "url": "https://www.mirror.co.uk/news/world-news/west-bank-palestine-israel-violence-37780684",
+          "published_at": "2026-10-16T14:19:06Z",
+          "published_at_estimated": false
+        },
+        {
+          "id": "57e724b5a5d3",
+          "outlet_id": "bbc",
+          "headline": "Palestinians and US journalist injured by Israeli settlers in West Bank harvest attack",
+          "snippet": "The BBC sees masked settlers attack Palestinians trying to harvest olives, amid a surge in similar incidents.",
+          "url": "https://www.bbc.co.uk/news/articles/c65ynk7212vqo",
+          "published_at": "2026-10-16T14:31:04Z",
+          "published_at_estimated": false
+        },
+        {
+          "id": "97482e46f335",
+          "outlet_id": "france24",
+          "headline": "US journalist injured during Israeli settler attack on West Bank olive harvest",
+          "snippet": "About 80 Israeli settlers set fire to olive trees and threw stones at Palestinians in a West Bank village Friday, injuring at least two people, including a US photojournalist with The Washington…",
+          "url": "https://www.france24.com/en/middle-east/20261016-us-journalist-injured-during-israeli-settler-attack-on-west-bank-olive-harvest",
+          "published_at": "2026-10-16T15:01:40Z",
+          "published_at_estimated": false
+        },
+        {
+          "id": "13b27a93ae1f",
+          "outlet_id": "npr",
+          "headline": "Israeli settlers beat Palestinians and a U.S. photojournalist in West Bank attacks",
+          "snippet": "Masked Israeli settlers attacked Palestinians as they were harvesting olives in the occupied West Bank on Friday, injuring several people including a photojournalist working for The Washington Post.",
+          "url": "https://www.npr.org/2026/10/16/nx-s1-6004904/israeli-settlers-beat-us-photojournalist-washington-post-west-bank",
+          "published_at": "2026-10-16T15:57:27Z",
+          "published_at_estimated": false
+        },
+        {
+          "id": "e7c85d402b73",
+          "outlet_id": "guardian",
+          "headline": "Israeli settlers attack olive farmers and Washington Post journalist in West Bank",
+          "snippet": "Settlers hurl rocks at Palestinians and beat photographer Heidi Levine as part of yearly attacks to disrupt harvest Israeli settlers have attacked Palestinians across the occupied West Bank in a…",
+          "url": "https://www.theguardian.com/world/2026/oct/16/israeli-settlers-attack-olive-farmers-west-bank-washington-post-journalist-heidi-levine",
+          "published_at": "2026-10-16T16:34:58Z",
+          "published_at_estimated": false
+        },
+        {
+          "id": "f905ff347b53",
+          "outlet_id": "huffpost",
+          "headline": "Israeli Mob Beats Washington Post Journalist, Burns Olive Trees In West Bank",
+          "snippet": "“They just kept kicking me and kicking me,” photojournalist Heidi Levine recalled from a hospital bed after the attack.",
+          "url": "https://www.huffpost.com/entry/israelis-attack-journalist-burn-olive-trees-west-bank_n_6ad24868e4b0dccf572afdfc",
+          "published_at": "2026-10-16T16:47:53Z",
+          "published_at_estimated": false
+        },
+        {
+          "id": "edd1cf565218",
+          "outlet_id": "nyt",
+          "headline": "Israeli Settlers Attack Palestinians and Washington Post Journalist in West Bank",
+          "snippet": "In the latest surge of violence, settlers targeted Palestinians during the olive harvest, a cultural touchstone and economic lifeline in the Israeli-occupied area.",
+          "url": "https://www.nytimes.com/2026/10/16/world/middleeast/israeli-settlers-washington-post-palestinians.html",
+          "published_at": "2026-10-16T19:31:34Z",
+          "published_at_estimated": false
+        },
+        {
+          "id": "375cc2c99dc5",
+          "outlet_id": "cgtn",
+          "headline": "Israeli settler attacks injure 19 Palestinians in West Bank",
+          "snippet": "At least 19 Palestinians, including two children aged eight and 12, were injured in attacks by Israeli settlers across the occupied West Bank on Friday, according to the Palestinian Wall and…",
+          "url": "https://news.cgtn.com/news/2026-10-17/Israeli-settler-attacks-injure-19-Palestinians-in-West-Bank-1Rja0LxP2dW/p.html",
+          "published_at": "2026-10-17T02:28:18Z",
+          "published_at_estimated": false
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "Israeli settlers attacked Palestinians during the olive harvest in the West Bank.",
+          "sources": [
+            "cd6eb7dd6b1d",
+            "e3a5754525fc",
+            "71a0dcf2ed7d",
+            "57e724b5a5d3",
+            "97482e46f335",
+            "13b27a93ae1f",
+            "e7c85d402b73",
+            "edd1cf565218"
+          ]
+        },
+        {
+          "text": "A Washington Post photojournalist was attacked or injured by the settlers.",
+          "sources": [
+            "e3a5754525fc",
+            "57e724b5a5d3",
+            "97482e46f335",
+            "13b27a93ae1f",
+            "e7c85d402b73",
+            "f905ff347b53",
+            "edd1cf565218"
+          ]
+        },
+        {
+          "text": "Olive trees were set on fire during the attack.",
+          "sources": [
+            "cd6eb7dd6b1d",
+            "97482e46f335",
+            "f905ff347b53"
+          ]
+        },
+        {
+          "text": "The settlers involved were masked.",
+          "sources": [
+            "71a0dcf2ed7d",
+            "57e724b5a5d3",
+            "13b27a93ae1f"
+          ]
+        },
+        {
+          "text": "The attacks took place on Friday.",
+          "sources": [
+            "e3a5754525fc",
+            "97482e46f335",
+            "13b27a93ae1f",
+            "375cc2c99dc5"
+          ]
+        },
+        {
+          "text": "Settlers threw stones or rocks at Palestinians.",
+          "sources": [
+            "97482e46f335",
+            "e7c85d402b73"
+          ]
+        },
+        {
+          "text": "The attack is described as part of a surge in similar incidents.",
+          "sources": [
+            "57e724b5a5d3",
+            "edd1cf565218"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "f905ff347b53",
+              "quote": "Israeli Mob Beats Washington Post Journalist",
+              "field": "headline"
+            },
+            {
+              "article_id": "f905ff347b53",
+              "quote": "They just kept kicking me and kicking me",
+              "field": "snippet"
+            },
+            {
+              "article_id": "71a0dcf2ed7d",
+              "quote": "settler gangs torch cars and attack farmers",
+              "field": "headline"
+            },
+            {
+              "article_id": "e7c85d402b73",
+              "quote": "as part of yearly attacks to disrupt harvest",
+              "field": "snippet"
+            },
+            {
+              "article_id": "edd1cf565218",
+              "quote": "a cultural touchstone and economic lifeline",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Names the photographer as Heidi Levine and carries her account from a hospital bed.",
+              "sources": [
+                "e7c85d402b73",
+                "f905ff347b53"
+              ]
+            },
+            {
+              "text": "Describes the attacks as recurring or yearly efforts to disrupt the harvest.",
+              "sources": [
+                "e7c85d402b73",
+                "edd1cf565218"
+              ]
+            },
+            {
+              "text": "Places the violence alongside cars being torched and upcoming Israeli elections.",
+              "sources": [
+                "71a0dcf2ed7d"
+              ]
+            },
+            {
+              "text": "Describes the olive harvest as culturally and economically important to the area.",
+              "sources": [
+                "edd1cf565218"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "cd6eb7dd6b1d",
+              "quote": "Israeli settlers were seen attacking Palestinian farmers",
+              "field": "snippet"
+            },
+            {
+              "article_id": "57e724b5a5d3",
+              "quote": "The BBC sees masked settlers attack Palestinians",
+              "field": "snippet"
+            },
+            {
+              "article_id": "97482e46f335",
+              "quote": "About 80 Israeli settlers set fire to olive trees",
+              "field": "snippet"
+            },
+            {
+              "article_id": "13b27a93ae1f",
+              "quote": "injuring several people including a photojournalist",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the BBC's own observation of the attack.",
+              "sources": [
+                "cd6eb7dd6b1d",
+                "57e724b5a5d3"
+              ]
+            },
+            {
+              "text": "Gives a settler count of about 80 and at least two injured in one village.",
+              "sources": [
+                "97482e46f335"
+              ]
+            },
+            {
+              "text": "Identifies the injured journalist as a US photojournalist.",
+              "sources": [
+                "57e724b5a5d3",
+                "97482e46f335",
+                "13b27a93ae1f"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not name the photographer as Heidi Levine or carry her account.",
+          "sources": [
+            "e7c85d402b73",
+            "f905ff347b53"
+          ]
+        },
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not mention upcoming Israeli elections.",
+          "sources": [
+            "71a0dcf2ed7d"
+          ]
+        },
+        {
+          "lean": "left",
+          "text": "Left coverage does not give the number of settlers involved, put at about 80.",
+          "sources": [
+            "97482e46f335"
+          ]
+        }
+      ],
+      "contested_claims": [],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "57e724b5a5d3",
+              "quote": "Palestinians and US journalist injured by Israeli settlers",
+              "field": "headline"
+            },
+            {
+              "article_id": "f905ff347b53",
+              "quote": "Israeli Mob Beats Washington Post Journalist, Burns Olive Trees In West Bank",
+              "field": "headline"
+            },
+            {
+              "article_id": "cd6eb7dd6b1d",
+              "quote": "Israeli settlers attack Palestinians in West Bank during olive harvest",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Foregrounds the injury of the Washington Post photojournalist.",
+              "sources": [
+                "57e724b5a5d3",
+                "97482e46f335",
+                "13b27a93ae1f",
+                "e7c85d402b73",
+                "f905ff347b53",
+                "edd1cf565218"
+              ]
+            },
+            {
+              "text": "Highlights the burning of olive trees.",
+              "sources": [
+                "cd6eb7dd6b1d",
+                "97482e46f335",
+                "f905ff347b53"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "375cc2c99dc5",
+              "quote": "Israeli settler attacks injure 19 Palestinians in West Bank",
+              "field": "headline"
+            },
+            {
+              "article_id": "375cc2c99dc5",
+              "quote": "including two children aged eight and 12",
+              "field": "snippet"
+            },
+            {
+              "article_id": "e3a5754525fc",
+              "quote": "Settlers beat Washington Post journalist",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Gives a count of at least 19 Palestinians injured, including two children, attributed to a Palestinian body.",
+              "sources": [
+                "375cc2c99dc5"
+              ]
+            },
+            {
+              "text": "Notes the photojournalist was accompanying Palestinian villagers harvesting olives.",
+              "sources": [
+                "e3a5754525fc"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "Israeli settlers attacked Palestinians harvesting olives in the occupied West Bank on Friday, setting fire to olive trees and throwing stones. A Washington Post photojournalist, named as Heidi Levine, was among those beaten and injured. CGTN, citing a Palestinian body, reported at least 19 Palestinians injured across the West Bank.",
+        "sources": [
+          "cd6eb7dd6b1d",
+          "e3a5754525fc",
+          "57e724b5a5d3",
+          "97482e46f335",
+          "13b27a93ae1f",
+          "e7c85d402b73",
+          "f905ff347b53",
+          "edd1cf565218",
+          "375cc2c99dc5"
+        ]
+      },
+      "conclusion": {
+        "text": "Outlets across leans and blocs agree settlers attacked Palestinians in the West Bank and most report a Washington Post photojournalist injured. Left outlets add her account and the harvest's significance, centre outlets lead with BBC observation and settler numbers, and CGTN leads with a Palestinian casualty count. No claims are contradicted.",
+        "sources": [
+          "cd6eb7dd6b1d",
+          "e3a5754525fc",
+          "57e724b5a5d3",
+          "97482e46f335",
+          "13b27a93ae1f",
+          "e7c85d402b73",
+          "f905ff347b53",
+          "edd1cf565218",
+          "375cc2c99dc5"
+        ]
+      },
+      "validation": {
+        "kept": 38,
+        "dropped_by_reason": {}
+      }
+    },
+    {
+      "id": "9a489c66fb99",
+      "title": "Zelensky thanks 'real leaders' for support at Brussels EU summit as he hits back at…",
+      "rank": 5,
+      "outlet_count": 8,
+      "coverage": {
+        "lean": {
+          "left": 2,
+          "centre": 3,
+          "right": 0
+        },
+        "bloc": {
+          "west": 5,
+          "east": 3
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "e4f548c4f8fa",
+          "outlet_id": "mirror",
+          "headline": "Zelensky thanks 'real leaders' for support at Brussels EU summit as he hits back at Trump comments",
+          "snippet": "European leaders rally round Ukraine after Trump's latest vile attack on Zelensky for defending his country against Russia - even as Moscow plans a bloody winter of attacks against civilians",
+          "url": "https://www.mirror.co.uk/news/world-news/trump-zelensky-brussels-putin-ukraine-37779976",
+          "published_at": "2026-10-16T12:33:02Z",
+          "published_at_estimated": false
+        },
+        {
+          "id": "bdf784fd4e2d",
+          "outlet_id": "france24",
+          "headline": "REPLAY: Ukraine's Zelensky holds presser in Brussels",
+          "snippet": "Ukrainian President Volodymyr Zelensky on Friday urged European leaders to maintain their support for Kyiv and warned against easing sanctions on Russia. Speaking to reporters at the European summit…",
+          "url": "https://www.france24.com/en/video/20261016-replay-ukraine-s-zelensky-holds-presser-in-brussels",
+          "published_at": "2026-10-16T15:36:16Z",
+          "published_at_estimated": false
+        },
+        {
+          "id": "91035ef83046",
+          "outlet_id": "france24",
+          "headline": "Zelensky hails \"real leaders\" in Europe, blasts Trump's diesel deal with Russia",
+          "snippet": "Ukrainian ​President Volodymyr Zelensky took aim on Friday at US President Donald Trump's diesel deal with Russia and welcomed the prospect of European allies stepping up their role in talks…",
+          "url": "https://www.france24.com/en/video/20261016-zelensky-hails-real-leaders-in-europe-blasts-trump-s-diesel-deal-with-russia",
+          "published_at": "2026-10-16T15:40:54Z",
+          "published_at_estimated": false
+        },
+        {
+          "id": "d5bcef147f24",
+          "outlet_id": "bbc",
+          "headline": "Watch: Will Ukraine get the support needed as tensions with US rise?",
+          "snippet": "Zelensky thanked the \"real leaders\" ahead of a meeting with the EU in Brussels.",
+          "url": "https://www.bbc.co.uk/news/videos/cm2ke1v8e4geo",
+          "published_at": "2026-10-16T15:45:10Z",
+          "published_at_estimated": false
+        },
+        {
+          "id": "faab7c751ed8",
+          "outlet_id": "guardian",
+          "headline": "EU’s support to Ukraine matters more than ever, von der Leyen says, as US relationship sours – as it happened",
+          "snippet": "This blog is now closed Several leaders offered Zelenskyy very friendly welcome or, in some cases, simply a big hug as he walked into the room before the formal part of the meeting got under way…",
+          "url": "https://www.theguardian.com/world/live/2026/oct/16/eu-von-der-leyen-russia-sanctions-diesel-fuel-zelenskyy-donald-trump-membership-migration-latest-news-updates",
+          "published_at": "2026-10-16T17:37:17Z",
+          "published_at_estimated": false
+        },
+        {
+          "id": "d3d69252dde7",
+          "outlet_id": "dw",
+          "headline": "Ukrainian President Zelenskyy speaks at EU summit amid spat with Donald Trump",
+          "snippet": "EU leaders reaffirmed support for Ukraine at the Brussels summit. But souring relations with the US over Russia and Starlink and a big hole in the budget will make for a difficult winter for Ukraine.",
+          "url": "https://www.dw.com/en/ukrainian-president-zelenskyy-speaks-at-eu-summit-amid-spat-with-donald-trump/a-79684340?maca=en-rss-en-world-4025-xml-mrss",
+          "published_at": "2026-10-16T19:42:00Z",
+          "published_at_estimated": false
+        },
+        {
+          "id": "a7ec4d4024c6",
+          "outlet_id": "france24",
+          "headline": "Zelensky turns to Europe for backing as ties with Trump deteriorate",
+          "snippet": "Ukrainian President Volodymyr Zelensky turned to his European allies on Friday, asking Brussels for an additional €70 billion to fund the war against Russia next year. Zelensky's relationship with…",
+          "url": "https://www.france24.com/en/europe/20261016-zelensky-turns-to-europe-for-backing-as-ties-with-trump-deteriorate",
+          "published_at": "2026-10-16T20:25:46Z",
+          "published_at_estimated": false
+        },
+        {
+          "id": "203c95790677",
+          "outlet_id": "toi",
+          "headline": "Zelenskyy terms Russian peace moves a ‘parody’, slams Trump deal",
+          "snippet": "",
+          "url": "https://timesofindia.indiatimes.com/world/europe/zelenskyy-terms-russian-peace-moves-a-parody-slams-trump-deal/articleshow/135006211.cms",
+          "published_at": "2026-10-17T02:31:06Z",
+          "published_at_estimated": false
+        },
+        {
+          "id": "2755d9bbfaf5",
+          "outlet_id": "cgtn",
+          "headline": "EU summit ends with mounting bills and unresolved divisions",
+          "snippet": "Behind the EU summit's limited progress lay three pressing challenges: a budget difficult to agree upon, a growing security bill complicated by tensions with Washington, and an energy crisis testing…",
+          "url": "https://news.cgtn.com/news/2026-10-17/EU-summit-ends-with-mounting-bills-and-unresolved-divisions-1Rj3f0YKAxy/p.html",
+          "published_at": "2026-10-17T02:47:50Z",
+          "published_at_estimated": false
+        },
+        {
+          "id": "c19671d39448",
+          "outlet_id": "thehindu",
+          "headline": "Ukraine’s Zelenskyy blasts U.S.-Russian diesel deal, welcomes bigger European role in peace process",
+          "snippet": "President Volodymyr Zelenskyy called Russia’s stance a “parody” of peace negotiations, as President Vladimir Putin said Moscow’s planned “security zone” inside Ukraine was non-negotiable",
+          "url": "https://www.thehindu.com/news/international/ukraines-zelenskiy-blasts-us-russian-diesel-deal-welcomes-bigger-european-role-in-peace-process/article71595555.ece",
+          "published_at": "2026-10-17T07:28:30Z",
+          "published_at_estimated": false
+        },
+        {
+          "id": "515f9dceacbe",
+          "outlet_id": "france24",
+          "headline": "Zelensky drums up European backing as Trump ties slump",
+          "snippet": "Ukrainian President Volodymyr Zelensky urged EU leaders Friday to keep financing Kyiv's fight with nearly $80 billion more next year, as he insisted he was standing up for his country amid a fresh…",
+          "url": "https://www.france24.com/en/video/20261017-zelensky-drums-up-european-backing-as-trump-ties-slump",
+          "published_at": "2026-10-17T09:25:20Z",
+          "published_at_estimated": false
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "Zelensky thanked or hailed the \"real leaders\" in Europe for their support.",
+          "sources": [
+            "e4f548c4f8fa",
+            "91035ef83046",
+            "d5bcef147f24"
+          ]
+        },
+        {
+          "text": "Zelensky criticised a diesel deal between the US under Trump and Russia.",
+          "sources": [
+            "91035ef83046",
+            "203c95790677",
+            "c19671d39448"
+          ]
+        },
+        {
+          "text": "European leaders reaffirmed or rallied behind their support for Ukraine at the Brussels summit.",
+          "sources": [
+            "e4f548c4f8fa",
+            "d3d69252dde7",
+            "faab7c751ed8",
+            "bdf784fd4e2d"
+          ]
+        },
+        {
+          "text": "Relations between Ukraine or the EU and the US are described as souring or deteriorating.",
+          "sources": [
+            "d3d69252dde7",
+            "a7ec4d4024c6",
+            "515f9dceacbe",
+            "faab7c751ed8",
+            "d5bcef147f24"
+          ]
+        },
+        {
+          "text": "Zelensky asked the EU for additional funding for next year, given as €70 billion or nearly $80 billion.",
+          "sources": [
+            "a7ec4d4024c6",
+            "515f9dceacbe"
+          ]
+        },
+        {
+          "text": "Zelensky called Russia's stance or peace moves a \"parody\" of peace negotiations.",
+          "sources": [
+            "203c95790677",
+            "c19671d39448"
+          ]
+        },
+        {
+          "text": "Zelensky welcomed a bigger role for European allies in peace talks.",
+          "sources": [
+            "91035ef83046",
+            "c19671d39448"
+          ]
+        },
+        {
+          "text": "Budget difficulties are reported as a challenge, alongside tensions with Washington.",
+          "sources": [
+            "d3d69252dde7",
+            "2755d9bbfaf5"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "e4f548c4f8fa",
+              "quote": "Trump's latest vile attack on Zelensky",
+              "field": "snippet"
+            },
+            {
+              "article_id": "e4f548c4f8fa",
+              "quote": "Moscow plans a bloody winter of attacks against civilians",
+              "field": "snippet"
+            },
+            {
+              "article_id": "faab7c751ed8",
+              "quote": "simply a big hug",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with Zelensky hitting back at Trump's comments, which the Mirror describes as a vile attack.",
+              "sources": [
+                "e4f548c4f8fa"
+              ]
+            },
+            {
+              "text": "Foregrounds the warm welcome leaders gave Zelensky and von der Leyen's statement that EU support matters more than ever.",
+              "sources": [
+                "faab7c751ed8"
+              ]
+            },
+            {
+              "text": "Mentions Moscow's plans for a winter of attacks against civilians.",
+              "sources": [
+                "e4f548c4f8fa"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "91035ef83046",
+              "quote": "blasts Trump's diesel deal with Russia",
+              "field": "headline"
+            },
+            {
+              "article_id": "bdf784fd4e2d",
+              "quote": "warned against easing sanctions on Russia",
+              "field": "snippet"
+            },
+            {
+              "article_id": "d3d69252dde7",
+              "quote": "a big hole in the budget will make for a difficult winter for Ukraine",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Foregrounds Zelensky's funding request to the EU for next year.",
+              "sources": [
+                "a7ec4d4024c6",
+                "515f9dceacbe"
+              ]
+            },
+            {
+              "text": "Emphasises the deterioration of Zelensky's ties with Trump, including over Russia and Starlink.",
+              "sources": [
+                "a7ec4d4024c6",
+                "515f9dceacbe",
+                "d3d69252dde7",
+                "d5bcef147f24"
+              ]
+            },
+            {
+              "text": "Reports Zelensky's warning against easing sanctions on Russia and his criticism of the diesel deal.",
+              "sources": [
+                "bdf784fd4e2d",
+                "91035ef83046"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "left",
+          "text": "Left coverage does not mention Zelensky's request for additional EU funding for next year.",
+          "sources": [
+            "a7ec4d4024c6",
+            "515f9dceacbe"
+          ]
+        },
+        {
+          "lean": "left",
+          "text": "Left coverage does not mention the US diesel deal with Russia.",
+          "sources": [
+            "91035ef83046"
+          ]
+        }
+      ],
+      "contested_claims": [],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "e4f548c4f8fa",
+              "quote": "Zelensky thanks 'real leaders' for support at Brussels EU summit",
+              "field": "headline"
+            },
+            {
+              "article_id": "515f9dceacbe",
+              "quote": "Zelensky drums up European backing as Trump ties slump",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Foregrounds Zelensky's thanks to European leaders and Europe's reaffirmed support amid worsening US ties.",
+              "sources": [
+                "e4f548c4f8fa",
+                "d5bcef147f24",
+                "faab7c751ed8",
+                "d3d69252dde7",
+                "a7ec4d4024c6"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "203c95790677",
+              "quote": "slams Trump deal",
+              "field": "headline"
+            },
+            {
+              "article_id": "2755d9bbfaf5",
+              "quote": "EU summit ends with mounting bills and unresolved divisions",
+              "field": "headline"
+            },
+            {
+              "article_id": "c19671d39448",
+              "quote": "welcomes bigger European role in peace process",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with Zelensky calling Russian peace moves a parody and criticising the diesel deal.",
+              "sources": [
+                "203c95790677",
+                "c19671d39448"
+              ]
+            },
+            {
+              "text": "Reports Putin saying Moscow's planned security zone inside Ukraine is non-negotiable.",
+              "sources": [
+                "c19671d39448"
+              ]
+            },
+            {
+              "text": "CGTN describes the summit as making limited progress amid budget, security and energy challenges.",
+              "sources": [
+                "2755d9bbfaf5"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "At an EU summit in Brussels, Ukrainian President Zelensky thanked European \"real leaders\" for their support and criticised Trump's diesel deal with Russia as relations with the US soured. He asked the EU for more funding next year, and EU leaders reaffirmed their support for Ukraine.",
+        "sources": [
+          "e4f548c4f8fa",
+          "91035ef83046",
+          "d5bcef147f24",
+          "d3d69252dde7",
+          "a7ec4d4024c6",
+          "515f9dceacbe",
+          "203c95790677",
+          "c19671d39448",
+          "faab7c751ed8"
+        ]
+      },
+      "conclusion": {
+        "text": "All sides report Zelensky criticising the US-Russia diesel deal and seeking European backing as US ties worsen. Left outlets lead with Trump's attack and the warm welcome, centre outlets with funding and budget strain. East outlets add Putin's security-zone stance, and CGTN describes limited progress; no direct contradictions appear.",
+        "sources": [
+          "91035ef83046",
+          "203c95790677",
+          "c19671d39448",
+          "e4f548c4f8fa",
+          "faab7c751ed8",
+          "a7ec4d4024c6",
+          "d3d69252dde7",
+          "2755d9bbfaf5"
+        ]
+      },
+      "validation": {
+        "kept": 33,
+        "dropped_by_reason": {
+          "title_ungrounded": 1
+        }
+      }
+    },
+    {
+      "id": "8897b5009827",
+      "title": "Trump denies White House restricted Ukraine's Starlink access amid conflicting reports",
+      "rank": 6,
+      "outlet_count": 7,
+      "coverage": {
+        "lean": {
+          "left": 2,
+          "centre": 2,
+          "right": 1
+        },
+        "bloc": {
+          "west": 5,
+          "east": 2
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "4a72d6cd67ef",
+          "outlet_id": "huffpost",
+          "headline": "Order To Limit Starshield For Ukraine Came From Inside White House, Sources Say",
+          "snippet": "The officials, who spoke on the condition of anonymity, did not specify who in the White House made the decision.",
+          "url": "https://www.huffpost.com/entry/starshield-order-ukraine-white-house_n_6ad1a16ce4b0f62da448978a",
+          "published_at": "2026-10-16T04:07:03Z",
+          "published_at_estimated": false
+        },
+        {
+          "id": "8ae15d1a1872",
+          "outlet_id": "guardian",
+          "headline": "Starlink access still not fully restored for Ukraine’s military, says Zelenskyy",
+          "snippet": "Ukrainian president says US limiting access was a ‘dangerous and unpleasant surprise’, amid reports the order came from inside White House Volodymyr Zelenskyy has said the Ukrainian military’s…",
+          "url": "https://www.theguardian.com/world/2026/oct/16/ukraine-military-starlink-access-starshield-volodymyr-zelenskyy",
+          "published_at": "2026-10-16T18:01:19Z",
+          "published_at_estimated": false
+        },
+        {
+          "id": "276557d922fb",
+          "outlet_id": "axios",
+          "headline": "Trump: White House didn't impede satellite system in Ukraine",
+          "snippet": "President Trump said Friday that his administration did not disrupt an Elon Musk-owned satellite system used by Ukraine to wage war against Russia. Why it matters: The restrictions imposed earlier…",
+          "url": "https://www.axios.com/2026/10/16/trump-starlink-musk-ukraine-zelensky",
+          "published_at": "2026-10-16T18:52:48Z",
+          "published_at_estimated": false
+        },
+        {
+          "id": "501d7780a506",
+          "outlet_id": "bbc",
+          "headline": "Trump denies limiting Ukraine access to Starlink network",
+          "snippet": "Speed curbs limited Ukraine's defences against deadly Russian attacks on Tuesday night.",
+          "url": "https://www.bbc.co.uk/news/articles/ckz65g34wyd8o",
+          "published_at": "2026-10-16T19:33:48Z",
+          "published_at_estimated": false
+        },
+        {
+          "id": "a32f4bb4bcf0",
+          "outlet_id": "toi",
+          "headline": "Order to limit satellite system used by Ukraine came from White House: Report",
+          "snippet": "",
+          "url": "https://timesofindia.indiatimes.com/world/europe/order-to-limit-satellite-system-used-by-ukraine-came-from-white-house-report/articleshow/135006178.cms",
+          "published_at": "2026-10-17T02:28:17Z",
+          "published_at_estimated": false
+        },
+        {
+          "id": "33e952b74c0a",
+          "outlet_id": "dailymail",
+          "headline": "Donald Trump refuses to blame Putin for starting Ukraine war as US President says America did not throttle Starlink satellite system Zelensky's forces rely on",
+          "snippet": "The US President also denied responsibility for the disruption to Kyiv's access to the vital Starlink satellite communications system, leaving the country exposed to attack.",
+          "url": "https://www.dailymail.com/news/article-16216039/Donald-Trump-refuses-blame-Putin-starting-Ukraine-war-US-President-says-America-did-not-throttle-Starlink-satellite-Zelenskys-forces-rely-on.html",
+          "published_at": "2026-10-17T06:11:34Z",
+          "published_at_estimated": false
+        },
+        {
+          "id": "f6b2ca54f60e",
+          "outlet_id": "thehindu",
+          "headline": "Presidential adviser says Ukraine is in talks to lift speed limit on military satellite network",
+          "snippet": "The cap, imposed without warning early October 15, cuts the internet data connection when a communication terminal moves faster than 160 kph, which is common for Ukrainian drones equipped with…",
+          "url": "https://www.thehindu.com/news/international/ukraine-seeks-to-lift-a-speed-cap-on-starshield-with-spacex-and-the-pentagon/article71595549.ece",
+          "published_at": "2026-10-17T06:18:48Z",
+          "published_at_estimated": false
+        },
+        {
+          "id": "40fe1c68a041",
+          "outlet_id": "dailymail",
+          "headline": "Elon Musk 'was responsible' for slowdown of Starlink satellite system that stopped Ukraine intercepting Russian drones, sources claim",
+          "snippet": "The tech billionaire and SpaceX founder publicly blamed the US president for the chaos over the decision to restrict Kyiv's access to the satellite system, which has since been restored.",
+          "url": "https://www.dailymail.com/news/article-16216429/Elon-Musk-responsible-slowdown-Starlink-satellite-stopped-Ukraine-intercepting-Russian-drones-hitting-enemy-lines.html",
+          "published_at": "2026-10-17T09:55:17Z",
+          "published_at_estimated": false
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "Trump denied that the US or his administration disrupted or limited Ukraine's Starlink access.",
+          "sources": [
+            "276557d922fb",
+            "501d7780a506",
+            "33e952b74c0a"
+          ]
+        },
+        {
+          "text": "Reports citing sources say the order to limit the satellite system for Ukraine came from the White House.",
+          "sources": [
+            "4a72d6cd67ef",
+            "8ae15d1a1872",
+            "a32f4bb4bcf0"
+          ]
+        },
+        {
+          "text": "The restriction took the form of a speed curb or slowdown on the satellite connection.",
+          "sources": [
+            "501d7780a506",
+            "33e952b74c0a",
+            "f6b2ca54f60e",
+            "40fe1c68a041"
+          ]
+        },
+        {
+          "text": "The curbs affected Ukraine's ability to defend against Russian attacks, including drones.",
+          "sources": [
+            "501d7780a506",
+            "33e952b74c0a",
+            "40fe1c68a041"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "4a72d6cd67ef",
+              "quote": "Order To Limit Starshield For Ukraine Came From Inside White House, Sources Say",
+              "field": "headline"
+            },
+            {
+              "article_id": "8ae15d1a1872",
+              "quote": "dangerous and unpleasant surprise",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with anonymous officials' accounts that the order came from inside the White House, without naming who decided.",
+              "sources": [
+                "4a72d6cd67ef",
+                "8ae15d1a1872"
+              ]
+            },
+            {
+              "text": "Foregrounds Zelenskyy saying Starlink access is still not fully restored for Ukraine's military.",
+              "sources": [
+                "8ae15d1a1872"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "501d7780a506",
+              "quote": "Trump denies limiting Ukraine access to Starlink network",
+              "field": "headline"
+            },
+            {
+              "article_id": "276557d922fb",
+              "quote": "his administration did not disrupt an Elon Musk-owned satellite system",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with Trump's denial that the White House impeded the satellite system.",
+              "sources": [
+                "276557d922fb",
+                "501d7780a506"
+              ]
+            },
+            {
+              "text": "Notes that speed curbs limited Ukraine's defences against deadly Russian attacks on Tuesday night.",
+              "sources": [
+                "501d7780a506"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "right",
+          "headline_quotes": [
+            {
+              "article_id": "33e952b74c0a",
+              "quote": "Donald Trump refuses to blame Putin for starting Ukraine war",
+              "field": "headline"
+            },
+            {
+              "article_id": "40fe1c68a041",
+              "quote": "Elon Musk 'was responsible' for slowdown of Starlink satellite system",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Pairs Trump's Starlink denial with his refusal to blame Putin for starting the war.",
+              "sources": [
+                "33e952b74c0a"
+              ]
+            },
+            {
+              "text": "Reports sources claiming Musk was responsible, and says Musk publicly blamed the US president.",
+              "sources": [
+                "40fe1c68a041"
+              ]
+            },
+            {
+              "text": "States that Kyiv's access has since been restored.",
+              "sources": [
+                "40fe1c68a041"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "left",
+          "text": "Left coverage does not mention Trump's denial that his administration restricted Ukraine's Starlink access.",
+          "sources": [
+            "276557d922fb",
+            "501d7780a506",
+            "33e952b74c0a"
+          ]
+        },
+        {
+          "lean": "right",
+          "text": "Right coverage does not mention reports that the order came from inside the White House.",
+          "sources": [
+            "4a72d6cd67ef",
+            "8ae15d1a1872"
+          ]
+        },
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not mention reports that the order came from inside the White House.",
+          "sources": [
+            "4a72d6cd67ef",
+            "8ae15d1a1872"
+          ]
+        },
+        {
+          "lean": "left",
+          "text": "Left coverage does not mention sources' claims that Musk was responsible for the slowdown.",
+          "sources": [
+            "40fe1c68a041"
+          ]
+        }
+      ],
+      "contested_claims": [
+        {
+          "claim": "The order to limit Ukraine's satellite access came from inside the White House.",
+          "asserted_by": [
+            "4a72d6cd67ef",
+            "8ae15d1a1872",
+            "a32f4bb4bcf0"
+          ],
+          "disputed_by": [
+            "276557d922fb",
+            "501d7780a506",
+            "33e952b74c0a",
+            "40fe1c68a041"
+          ]
+        },
+        {
+          "claim": "Ukraine's access to the satellite system has been restored.",
+          "asserted_by": [
+            "40fe1c68a041"
+          ],
+          "disputed_by": [
+            "8ae15d1a1872",
+            "f6b2ca54f60e"
+          ]
+        }
+      ],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "501d7780a506",
+              "quote": "Trump denies limiting Ukraine access to Starlink network",
+              "field": "headline"
+            },
+            {
+              "article_id": "4a72d6cd67ef",
+              "quote": "Order To Limit Starshield For Ukraine Came From Inside White House, Sources Say",
+              "field": "headline"
+            },
+            {
+              "article_id": "40fe1c68a041",
+              "quote": "Elon Musk 'was responsible' for slowdown",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Presents competing accounts: Trump's denial, sources pointing to the White House, and sources blaming Musk.",
+              "sources": [
+                "276557d922fb",
+                "501d7780a506",
+                "33e952b74c0a",
+                "4a72d6cd67ef",
+                "8ae15d1a1872",
+                "40fe1c68a041"
+              ]
+            },
+            {
+              "text": "Highlights the effect of the curbs on Ukraine's defences against Russian attacks.",
+              "sources": [
+                "501d7780a506",
+                "33e952b74c0a",
+                "40fe1c68a041"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "a32f4bb4bcf0",
+              "quote": "Order to limit satellite system used by Ukraine came from White House: Report",
+              "field": "headline"
+            },
+            {
+              "article_id": "f6b2ca54f60e",
+              "quote": "Ukraine is in talks to lift speed limit on military satellite network",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with a report that the order came from the White House.",
+              "sources": [
+                "a32f4bb4bcf0"
+              ]
+            },
+            {
+              "text": "Details the cap, imposed without warning on 15 October, cutting connections for terminals moving faster than 160 kph, and talks to lift it.",
+              "sources": [
+                "f6b2ca54f60e"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "Trump denied that his administration restricted Ukraine's access to the Starlink satellite network after a speed cap curbed Ukrainian military connections. Anonymous sources said the order came from inside the White House, while other sources claimed Elon Musk was responsible. Reports say the curbs hampered Ukraine's defences against Russian attacks.",
+        "sources": [
+          "4a72d6cd67ef",
+          "8ae15d1a1872",
+          "276557d922fb",
+          "501d7780a506",
+          "a32f4bb4bcf0",
+          "33e952b74c0a",
+          "f6b2ca54f60e",
+          "40fe1c68a041"
+        ]
+      },
+      "conclusion": {
+        "text": "Coverage agrees Ukraine's satellite access was curbed and that Trump denied responsibility. Left and East-bloc outlets lead with reports the order came from the White House, while a right-leaning report cites sources blaming Musk. Who ordered the curb and whether access is restored remain stated differently.",
+        "sources": [
+          "276557d922fb",
+          "501d7780a506",
+          "33e952b74c0a",
+          "4a72d6cd67ef",
+          "8ae15d1a1872",
+          "a32f4bb4bcf0",
+          "40fe1c68a041",
+          "f6b2ca54f60e"
+        ]
+      },
+      "validation": {
+        "kept": 34,
+        "dropped_by_reason": {}
+      }
+    },
+    {
+      "id": "6ad53814287c",
+      "title": "Mexican court sentences three men to 158 years each for killing surfers",
+      "rank": 7,
+      "outlet_count": 6,
+      "coverage": {
+        "lean": {
+          "left": 1,
+          "centre": 2,
+          "right": 1
+        },
+        "bloc": {
+          "west": 4,
+          "east": 2
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "63fc27ae856e",
+          "outlet_id": "guardian",
+          "headline": "Mexican judge sentences three men to 158 years in prison for murders of Australian and US surfers​",
+          "snippet": "Australian ​brothers Jake ​and Callum Robinson, and ​their ‌American friend Carter Rhoad, were killed while on a surf trip in Baja California in 2024 Get our breaking news email, free app or daily…",
+          "url": "https://www.theguardian.com/australia-news/2026/oct/17/mexican-judge-sentences-three-men-to-158-years-in-prison-for-murders-of-australian-and-us-surfers-ntwnfb",
+          "published_at": "2026-10-17T02:52:59Z",
+          "published_at_estimated": false
+        },
+        {
+          "id": "2bac3838afa0",
+          "outlet_id": "bbc",
+          "headline": "Three men jailed for 158 years each for murdering Australian and US surfers in Mexico",
+          "snippet": "Brothers Jake and Callum Robinson and their friend Carter Rhoad were killed on a surfing trip in an apparent botched robbery.",
+          "url": "https://www.bbc.co.uk/news/articles/c3kgqjkzw29wo",
+          "published_at": "2026-10-17T03:11:10Z",
+          "published_at_estimated": false
+        },
+        {
+          "id": "6532eeafd96a",
+          "outlet_id": "scmp",
+          "headline": "3 Mexican men jailed for over 158 years for Australian, US surfer murders",
+          "snippet": "A judge has sentenced three Mexican men to more than 158 years in prison each for the 2024 murders of two Australian brothers and their American friend, a case that tarnished Mexico’s image by…",
+          "url": "https://www.scmp.com/news/world/americas/article/3371227/3-mexican-men-jailed-over-158-years-australian-us-surfer-murders",
+          "published_at": "2026-10-17T03:39:33Z",
+          "published_at_estimated": false
+        },
+        {
+          "id": "18c84c9aa02e",
+          "outlet_id": "dailymail",
+          "headline": "Jake and Callum Robinson murders: Three men sentenced to 158 years in prison each for murdering Aussie brothers at Mexican surf hotspot",
+          "snippet": "Three men have been sentenced to 158 years and nine months in prison each for the killings ‌of ‌Australian brothers Jake and Callum Robinson in 2024.",
+          "url": "https://www.dailymail.com/news/article-16216275/mexico-surf-murders-australian-brothers-killers-sentenced-life.html",
+          "published_at": "2026-10-17T03:58:55Z",
+          "published_at_estimated": false
+        },
+        {
+          "id": "68c66e7e40fa",
+          "outlet_id": "aljazeera",
+          "headline": "Three Mexicans jailed for 158 years each for killing Australian, US surfers",
+          "snippet": "A Mexican judge sentenced the three men for the 2024 murders a week after they were found guilty.",
+          "url": "https://www.aljazeera.com/news/2026/10/17/three-mexicans-jailed-for-158-years-each-for-killing-australian-us-surfers",
+          "published_at": "2026-10-17T05:01:14Z",
+          "published_at_estimated": false
+        },
+        {
+          "id": "a39b39f3b7de",
+          "outlet_id": "sky",
+          "headline": "Three men sentenced to more than 158 years in jail for murders of surfers​",
+          "snippet": "Three men have been sentenced to 158 years and nine months each for the murders of two Australian brothers and their American friend.",
+          "url": "https://news.sky.com/story/three-men-sentenced-to-more-than-158-years-in-prison-for-murders-of-australian-and-us-surfers-13600108",
+          "published_at": "2026-10-17T07:23:00Z",
+          "published_at_estimated": false
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "Three men were each sentenced to 158 years in prison for the killings.",
+          "sources": [
+            "63fc27ae856e",
+            "2bac3838afa0",
+            "6532eeafd96a",
+            "18c84c9aa02e",
+            "68c66e7e40fa",
+            "a39b39f3b7de"
+          ]
+        },
+        {
+          "text": "The victims were two Australian brothers and their American friend.",
+          "sources": [
+            "63fc27ae856e",
+            "2bac3838afa0",
+            "6532eeafd96a",
+            "68c66e7e40fa",
+            "a39b39f3b7de"
+          ]
+        },
+        {
+          "text": "The murders took place in 2024.",
+          "sources": [
+            "63fc27ae856e",
+            "6532eeafd96a",
+            "18c84c9aa02e",
+            "68c66e7e40fa"
+          ]
+        },
+        {
+          "text": "The sentence was 158 years and nine months each, or more than 158 years.",
+          "sources": [
+            "18c84c9aa02e",
+            "a39b39f3b7de",
+            "6532eeafd96a"
+          ]
+        },
+        {
+          "text": "The brothers were Jake and Callum Robinson.",
+          "sources": [
+            "63fc27ae856e",
+            "2bac3838afa0",
+            "18c84c9aa02e"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "63fc27ae856e",
+              "quote": "Mexican judge sentences three men to 158 years in prison",
+              "field": "headline"
+            },
+            {
+              "article_id": "63fc27ae856e",
+              "quote": "were killed while on a surf trip in Baja California in 2024",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Names all three victims and places the killings on a surf trip in Baja California.",
+              "sources": [
+                "63fc27ae856e"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "2bac3838afa0",
+              "quote": "in an apparent botched robbery",
+              "field": "snippet"
+            },
+            {
+              "article_id": "a39b39f3b7de",
+              "quote": "158 years and nine months each",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Describes the killings as an apparent botched robbery.",
+              "sources": [
+                "2bac3838afa0"
+              ]
+            },
+            {
+              "text": "Gives the precise sentence length of 158 years and nine months.",
+              "sources": [
+                "a39b39f3b7de"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "right",
+          "headline_quotes": [
+            {
+              "article_id": "18c84c9aa02e",
+              "quote": "murdering Aussie brothers at Mexican surf hotspot",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the names of the Robinson brothers and the surf location.",
+              "sources": [
+                "18c84c9aa02e"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "right",
+          "text": "Right-leaning coverage does not mention the American friend, Carter Rhoad, who was also killed.",
+          "sources": [
+            "63fc27ae856e",
+            "2bac3838afa0",
+            "a39b39f3b7de"
+          ]
+        }
+      ],
+      "contested_claims": [],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "2bac3838afa0",
+              "quote": "in an apparent botched robbery",
+              "field": "snippet"
+            },
+            {
+              "article_id": "18c84c9aa02e",
+              "quote": "murdering Aussie brothers at Mexican surf hotspot",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Names the victims and gives details of the surf trip and a possible robbery motive.",
+              "sources": [
+                "63fc27ae856e",
+                "2bac3838afa0",
+                "18c84c9aa02e"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "6532eeafd96a",
+              "quote": "a case that tarnished Mexico’s image",
+              "field": "snippet"
+            },
+            {
+              "article_id": "68c66e7e40fa",
+              "quote": "a week after they were found guilty",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Notes the case's effect on Mexico's image.",
+              "sources": [
+                "6532eeafd96a"
+              ]
+            },
+            {
+              "text": "Notes that sentencing came a week after the guilty verdict.",
+              "sources": [
+                "68c66e7e40fa"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "A judge in Mexico sentenced three men to more than 158 years in prison each for the 2024 murders of Australian brothers Jake and Callum Robinson and their American friend Carter Rhoad. The victims were killed on a surfing trip in Baja California.",
+        "sources": [
+          "63fc27ae856e",
+          "2bac3838afa0",
+          "6532eeafd96a",
+          "18c84c9aa02e",
+          "68c66e7e40fa",
+          "a39b39f3b7de"
+        ]
+      },
+      "conclusion": null,
+      "validation": {
+        "kept": 23,
+        "dropped_by_reason": {
+          "untrusted_text": 1
+        }
+      }
+    },
+    {
+      "id": "52849ee299bd",
+      "title": "North Korea reports underwater test of new AI-assisted torpedo",
+      "rank": 8,
+      "outlet_count": 5,
+      "coverage": {
+        "lean": {
+          "left": 0,
+          "centre": 0,
+          "right": 0
+        },
+        "bloc": {
+          "west": 0,
+          "east": 5
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": "east"
+      },
+      "articles": [
+        {
+          "id": "77bfbf69e1a0",
+          "outlet_id": "scmp",
+          "headline": "North Korea says it tested new torpedo with AI tech",
+          "snippet": "⁠North Korea conducted an underwater ⁠test of a new torpedo weapon system on Thursday to verify technological upgrades, state news agency KCNA reported on Saturday, describing the test as a success…",
+          "url": "https://www.scmp.com/news/asia/east-asia/article/3371218/north-korea-says-it-tested-new-torpedo-ai-tech",
+          "published_at": "2026-10-16T23:37:18Z",
+          "published_at_estimated": false
+        },
+        {
+          "id": "27d1814b6f22",
+          "outlet_id": "koreaherald",
+          "headline": "N. Korea conducts underwater test of new precision-guided torpedo using AI: KCNA",
+          "snippet": "North Korea said Saturday it has conducted an underwater test of a new precision-guided torpedo weapon system, noting that the test heralds a \"significant\" change in the North's naval capabilities…",
+          "url": "https://www.koreaherald.com/article/10905699",
+          "published_at": "2026-10-17T01:28:31Z",
+          "published_at_estimated": false
+        },
+        {
+          "id": "f65b04a90200",
+          "outlet_id": "cgtn",
+          "headline": "DPRK conducts underwater test-firing of superspeed torpedo: KCNA",
+          "snippet": "The Democratic People's Republic of Korea (DPRK) on Thursday conducted an underwater test-firing of what it called \"a new-type superspeed precision-guided torpedo weapon system,\" the official Korean…",
+          "url": "https://news.cgtn.com/news/2026-10-17/DPRK-conducts-underwater-test-firing-of-superspeed-torpedo-KCNA-1RjetxlQvYI/p.html",
+          "published_at": "2026-10-17T02:37:16Z",
+          "published_at_estimated": false
+        },
+        {
+          "id": "d80189bc8162",
+          "outlet_id": "japantimes",
+          "headline": "North Korea says tested AI-assisted torpedo system",
+          "snippet": "The announcement came days after Pyongyang said it had test-fired two types of cruise missiles from a submarine.",
+          "url": "https://www.japantimes.co.jp/news/2026/10/17/asia-pacific/north-korea-ai-torpedo/",
+          "published_at": "2026-10-17T04:51:00Z",
+          "published_at_estimated": false
+        },
+        {
+          "id": "9a9024cb782c",
+          "outlet_id": "thehindu",
+          "headline": "North Korea says it tested new torpedo system with AI capabilities",
+          "snippet": "North Korea has been ramping up weapons demonstrations in recent weeks, including conducting its first underwater-launched missile tests in nearly three years",
+          "url": "https://www.thehindu.com/news/international/north-korea-claims-to-have-tested-a-new-ai-enabled-zam-20-torpedo-system/article71595423.ece",
+          "published_at": "2026-10-17T04:54:28Z",
+          "published_at_estimated": false
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "North Korea says it tested a new torpedo system with AI technology or capabilities.",
+          "sources": [
+            "77bfbf69e1a0",
+            "27d1814b6f22",
+            "d80189bc8162",
+            "9a9024cb782c"
+          ]
+        },
+        {
+          "text": "The test was conducted underwater and was reported by state news agency KCNA.",
+          "sources": [
+            "77bfbf69e1a0",
+            "27d1814b6f22",
+            "f65b04a90200"
+          ]
+        },
+        {
+          "text": "The test took place on Thursday.",
+          "sources": [
+            "77bfbf69e1a0",
+            "f65b04a90200"
+          ]
+        },
+        {
+          "text": "The torpedo is described as precision-guided.",
+          "sources": [
+            "27d1814b6f22",
+            "f65b04a90200"
+          ]
+        }
+      ],
+      "framing": [],
+      "omissions": [],
+      "contested_claims": [],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "77bfbf69e1a0",
+              "quote": "North Korea says it tested new torpedo with AI tech",
+              "field": "headline"
+            },
+            {
+              "article_id": "27d1814b6f22",
+              "quote": "heralds a \"significant\" change in the North's naval capabilities",
+              "field": "snippet"
+            },
+            {
+              "article_id": "f65b04a90200",
+              "quote": "a new-type superspeed precision-guided torpedo weapon system",
+              "field": "snippet"
+            },
+            {
+              "article_id": "9a9024cb782c",
+              "quote": "North Korea has been ramping up weapons demonstrations in recent weeks",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Places the test in a run of recent weapons tests, including submarine-launched cruise missiles and the first underwater-launched missile tests in nearly three years.",
+              "sources": [
+                "d80189bc8162",
+                "9a9024cb782c"
+              ]
+            },
+            {
+              "text": "Leads with North Korea's statement that the test signals a significant change in its naval capabilities.",
+              "sources": [
+                "27d1814b6f22"
+              ]
+            },
+            {
+              "text": "Describes the test as verifying technological upgrades and reports KCNA calling it a success.",
+              "sources": [
+                "77bfbf69e1a0"
+              ]
+            },
+            {
+              "text": "Uses the name DPRK and leads with the torpedo's description as superspeed and precision-guided, without mentioning AI.",
+              "sources": [
+                "f65b04a90200"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "North Korea says it conducted an underwater test of a new torpedo weapon system on Thursday, according to state news agency KCNA. Most reports describe the torpedo as using AI technology, and KCNA called the test a success.",
+        "sources": [
+          "77bfbf69e1a0",
+          "27d1814b6f22",
+          "f65b04a90200",
+          "d80189bc8162",
+          "9a9024cb782c"
+        ]
+      },
+      "conclusion": {
+        "text": "All five outlets, all East-bloc, report North Korea's KCNA-sourced claim of an underwater test of a new torpedo, most describing AI capabilities. Some add context of recent missile tests, while CGTN stresses superspeed and precision guidance. No West-bloc coverage is present and no claims are disputed.",
+        "sources": [
+          "77bfbf69e1a0",
+          "27d1814b6f22",
+          "f65b04a90200",
+          "d80189bc8162",
+          "9a9024cb782c"
+        ]
+      },
+      "validation": {
+        "kept": 14,
+        "dropped_by_reason": {}
+      }
+    },
+    {
+      "id": "c3ccfbd9e417",
+      "title": "Judge dismisses child sex abuse charges against actor Timothy Busfield",
+      "rank": 9,
+      "outlet_count": 4,
+      "coverage": {
+        "lean": {
+          "left": 2,
+          "centre": 1,
+          "right": 1
+        },
+        "bloc": {
+          "west": 4,
+          "east": 0
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": "west"
+      },
+      "articles": [
+        {
+          "id": "56f2ad8e90a8",
+          "outlet_id": "nbc",
+          "headline": "Judge dismisses child sexual abuse charges against actor Timothy Busfield",
+          "snippet": "A New Mexico judge dismissed child sexual abuse charges against \"West Wing\" and \"Field of Dreams\" actor Timothy Busfield over prosecutor misconduct. Busfield has repeatedly denied the allegations…",
+          "url": "https://www.nbcnews.com/video/judge-dismisses-child-sexual-abuse-charges-against-actor-timothy-busfield-271724613627",
+          "published_at": "2026-10-16T22:59:31Z",
+          "published_at_estimated": false
+        },
+        {
+          "id": "284262881f5a",
+          "outlet_id": "bbc",
+          "headline": "Judge throws out child sex abuse charges against actor Timothy Busfield",
+          "snippet": "The judge in the case said on Friday that the prosecutor \"failed to act in a fair and impartial manner\".",
+          "url": "https://www.bbc.co.uk/news/articles/c8vgxwq4q5r2o",
+          "published_at": "2026-10-17T00:38:34Z",
+          "published_at_estimated": false
+        },
+        {
+          "id": "7c422fbcb2e7",
+          "outlet_id": "guardian",
+          "headline": "Child sex abuse charges against actor Timothy Busfield dismissed by judge",
+          "snippet": "Prosecution did not act in fair and impartial way in grand jury proceedings, judge rules, after West Wing actor charged with groping young boy on TV set A state court ⁠judge in New Mexico has…",
+          "url": "https://www.theguardian.com/us-news/2026/oct/17/child-sex-abuse-charges-against-actor-timothy-busfield-dismissed-by-judge",
+          "published_at": "2026-10-17T03:06:54Z",
+          "published_at_estimated": false
+        },
+        {
+          "id": "2d15c65a453e",
+          "outlet_id": "dailymail",
+          "headline": "Melissa Gilbert quotes Willy Wonka in cryptic missive as child sex charges against West Wing star husband Timothy Busfield are dismissed",
+          "snippet": "Melissa Gilbert celebrated the dramatic dismissal of husband Timothy Busfield's child sex charges by quoting Willy Wonka's famous line.",
+          "url": "https://www.dailymail.com/news/article-16216107/Hollywood-legend-Melissa-Gilbert-quotes-Willy-Wonka-Timothy-Busfields-child-sex-charges.html",
+          "published_at": "2026-10-17T07:09:52Z",
+          "published_at_estimated": false
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "A judge dismissed child sex abuse charges against actor Timothy Busfield.",
+          "sources": [
+            "56f2ad8e90a8",
+            "284262881f5a",
+            "7c422fbcb2e7",
+            "2d15c65a453e"
+          ]
+        },
+        {
+          "text": "Busfield is identified as a West Wing actor.",
+          "sources": [
+            "56f2ad8e90a8",
+            "7c422fbcb2e7",
+            "2d15c65a453e"
+          ]
+        },
+        {
+          "text": "The dismissal was linked to the prosecutor's conduct, described as misconduct or a failure to act fairly and impartially.",
+          "sources": [
+            "56f2ad8e90a8",
+            "284262881f5a",
+            "7c422fbcb2e7"
+          ]
+        },
+        {
+          "text": "The case was heard in New Mexico.",
+          "sources": [
+            "56f2ad8e90a8",
+            "7c422fbcb2e7"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "56f2ad8e90a8",
+              "quote": "over prosecutor misconduct",
+              "field": "snippet"
+            },
+            {
+              "article_id": "56f2ad8e90a8",
+              "quote": "Busfield has repeatedly denied the allegations",
+              "field": "snippet"
+            },
+            {
+              "article_id": "7c422fbcb2e7",
+              "quote": "Prosecution did not act in fair and impartial way in grand jury proceedings",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with prosecutor misconduct as the reason for dismissal, with the Guardian specifying grand jury proceedings.",
+              "sources": [
+                "56f2ad8e90a8",
+                "7c422fbcb2e7"
+              ]
+            },
+            {
+              "text": "Notes Busfield's repeated denials and describes the original charge as groping a young boy on a TV set.",
+              "sources": [
+                "56f2ad8e90a8",
+                "7c422fbcb2e7"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "284262881f5a",
+              "quote": "Judge throws out child sex abuse charges",
+              "field": "headline"
+            },
+            {
+              "article_id": "284262881f5a",
+              "quote": "failed to act in a fair and impartial manner",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the judge's direct statement that the prosecutor failed to act fairly and impartially.",
+              "sources": [
+                "284262881f5a"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "right",
+          "headline_quotes": [
+            {
+              "article_id": "2d15c65a453e",
+              "quote": "Melissa Gilbert quotes Willy Wonka in cryptic missive",
+              "field": "headline"
+            },
+            {
+              "article_id": "2d15c65a453e",
+              "quote": "celebrated the dramatic dismissal",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the reaction of Busfield's wife, Melissa Gilbert, who quoted a Willy Wonka line after the dismissal.",
+              "sources": [
+                "2d15c65a453e"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "right",
+          "text": "Right-leaning coverage does not mention the reason for dismissal, the prosecutor's conduct.",
+          "sources": [
+            "56f2ad8e90a8",
+            "284262881f5a",
+            "7c422fbcb2e7"
+          ]
+        },
+        {
+          "lean": "left",
+          "text": "Left-leaning coverage does not mention Melissa Gilbert's reaction to the dismissal.",
+          "sources": [
+            "2d15c65a453e"
+          ]
+        },
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not mention Melissa Gilbert's reaction to the dismissal.",
+          "sources": [
+            "2d15c65a453e"
+          ]
+        }
+      ],
+      "contested_claims": [],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "56f2ad8e90a8",
+              "quote": "over prosecutor misconduct",
+              "field": "snippet"
+            },
+            {
+              "article_id": "284262881f5a",
+              "quote": "failed to act in a fair and impartial manner",
+              "field": "snippet"
+            },
+            {
+              "article_id": "2d15c65a453e",
+              "quote": "Melissa Gilbert quotes Willy Wonka in cryptic missive",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Emphasises the judge's finding on the prosecutor's conduct as grounds for dismissal.",
+              "sources": [
+                "56f2ad8e90a8",
+                "284262881f5a",
+                "7c422fbcb2e7"
+              ]
+            },
+            {
+              "text": "One outlet focuses on the reaction of Busfield's wife, Melissa Gilbert.",
+              "sources": [
+                "2d15c65a453e"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "A judge in New Mexico dismissed child sex abuse charges against West Wing actor Timothy Busfield, ruling that the prosecutor did not act in a fair and impartial manner. Busfield has repeatedly denied the allegations.",
+        "sources": [
+          "56f2ad8e90a8",
+          "284262881f5a",
+          "7c422fbcb2e7",
+          "2d15c65a453e"
+        ]
+      },
+      "conclusion": {
+        "text": "All outlets report that a judge dismissed the child sex abuse charges against Busfield. Left and centre outlets lead with the judge's finding on prosecutorial conduct, while the right-leaning outlet leads with Melissa Gilbert's reaction. No outlet disputes another's account.",
+        "sources": [
+          "56f2ad8e90a8",
+          "284262881f5a",
+          "7c422fbcb2e7",
+          "2d15c65a453e"
+        ]
+      },
+      "validation": {
+        "kept": 25,
+        "dropped_by_reason": {}
+      }
+    },
+    {
+      "id": "50d75b25eb22",
+      "title": "Tesla unveils Roadster demonstrated as a flying car",
+      "rank": 10,
+      "outlet_count": 4,
+      "coverage": {
+        "lean": {
+          "left": 1,
+          "centre": 1,
+          "right": 0
+        },
+        "bloc": {
+          "west": 2,
+          "east": 2
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "f9d3b15a0ea6",
+          "outlet_id": "mirror",
+          "headline": "Tesla launches 'flying' Roadster sports EV as Elon Musk hails 'the future'",
+          "snippet": "Musk has claimed 'flying cars are real' as he unveiled the long awaited Roadster sports EV with a demonstration that displayed the vehicle flying and flipping mid-air",
+          "url": "https://www.mirror.co.uk/news/world-news/tesla-roadster-ev-flying-car-37778234",
+          "published_at": "2026-10-16T03:25:02Z",
+          "published_at_estimated": false
+        },
+        {
+          "id": "bb39da95bb72",
+          "outlet_id": "bbc",
+          "headline": "Watch: Did Tesla really just unveil a flying car?",
+          "snippet": "Tesla CEO Elon Musk showcased the vehicle at a facility owned by his SpaceX company, which helped develop the model.",
+          "url": "https://www.bbc.co.uk/news/videos/ckly4mj1g3n9o",
+          "published_at": "2026-10-16T12:32:31Z",
+          "published_at_estimated": false
+        },
+        {
+          "id": "8a43767cc8b4",
+          "outlet_id": "thenational",
+          "headline": "Up in the air: Tesla's 'flying' Roadster raises more questions than answers",
+          "snippet": "Elon Musk's Tesla Motors has flaunted a new flying car – well, sort of. Mr Musk touted it as “something that you haven’t seen in any movie” but it's not exactly Back to the Future stuff. However…",
+          "url": "https://www.thenationalnews.com/future/technology/2026/10/17/up-in-the-air-teslas-flying-roadster-raises-more-questions-than-answers/",
+          "published_at": "2026-10-17T03:00:00Z",
+          "published_at_estimated": false
+        },
+        {
+          "id": "c4dc1f7a17f1",
+          "outlet_id": "aljazeera",
+          "headline": "11-year old flying car company mocks Tesla Roadster",
+          "snippet": "California-based Alef Aeronautics mocked Tesla, releasing a video of its flying car soaring over a Tesla Roadster.",
+          "url": "https://www.aljazeera.com/video/newsfeed/2026/10/17/11-year-old-flying-car-company-mocks-tesla-roadster",
+          "published_at": "2026-10-17T07:32:42Z",
+          "published_at_estimated": false
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "Tesla and Elon Musk unveiled the Roadster, presented as a 'flying' car.",
+          "sources": [
+            "f9d3b15a0ea6",
+            "bb39da95bb72",
+            "8a43767cc8b4"
+          ]
+        },
+        {
+          "text": "Musk promoted the vehicle with strong claims about its significance.",
+          "sources": [
+            "f9d3b15a0ea6",
+            "8a43767cc8b4"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "f9d3b15a0ea6",
+              "quote": "Tesla launches 'flying' Roadster sports EV",
+              "field": "headline"
+            },
+            {
+              "article_id": "f9d3b15a0ea6",
+              "quote": "Musk has claimed 'flying cars are real'",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with Musk hailing the Roadster as 'the future' and his claim that flying cars are real.",
+              "sources": [
+                "f9d3b15a0ea6"
+              ]
+            },
+            {
+              "text": "Describes a demonstration that displayed the vehicle flying and flipping mid-air.",
+              "sources": [
+                "f9d3b15a0ea6"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "bb39da95bb72",
+              "quote": "Did Tesla really just unveil a flying car?",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Frames the unveiling as a question of whether Tesla really unveiled a flying car.",
+              "sources": [
+                "bb39da95bb72"
+              ]
+            },
+            {
+              "text": "Notes the showcase took place at a SpaceX facility and that SpaceX helped develop the model.",
+              "sources": [
+                "bb39da95bb72"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "left",
+          "text": "Left coverage does not mention that the vehicle was shown at a SpaceX facility or that SpaceX helped develop it.",
+          "sources": [
+            "bb39da95bb72"
+          ]
+        },
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not mention the demonstration showing the vehicle flying and flipping mid-air.",
+          "sources": [
+            "f9d3b15a0ea6"
+          ]
+        }
+      ],
+      "contested_claims": [
+        {
+          "claim": "That the Roadster is a real flying car, as Musk claimed; one outlet describes it as a flying car only 'sort of'.",
+          "asserted_by": [
+            "f9d3b15a0ea6"
+          ],
+          "disputed_by": [
+            "8a43767cc8b4"
+          ]
+        }
+      ],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "f9d3b15a0ea6",
+              "quote": "Elon Musk hails 'the future'",
+              "field": "headline"
+            },
+            {
+              "article_id": "bb39da95bb72",
+              "quote": "Did Tesla really just unveil a flying car?",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Focuses on Musk's unveiling and demonstration, including SpaceX's role in the showcase and development.",
+              "sources": [
+                "f9d3b15a0ea6",
+                "bb39da95bb72"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "8a43767cc8b4",
+              "quote": "raises more questions than answers",
+              "field": "headline"
+            },
+            {
+              "article_id": "c4dc1f7a17f1",
+              "quote": "11-year old flying car company mocks Tesla Roadster",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Describes the Roadster as a flying car only 'sort of' and 'not exactly Back to the Future stuff'.",
+              "sources": [
+                "8a43767cc8b4"
+              ]
+            },
+            {
+              "text": "Reports Alef Aeronautics mocking Tesla with a video of its flying car soaring over a Tesla Roadster.",
+              "sources": [
+                "c4dc1f7a17f1"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "Elon Musk unveiled Tesla's Roadster sports EV with a demonstration presented as showing a flying car, at a facility owned by his SpaceX company. Musk claimed flying cars are real, while some coverage questioned whether it truly flies, and Alef Aeronautics mocked Tesla with a video.",
+        "sources": [
+          "f9d3b15a0ea6",
+          "bb39da95bb72",
+          "8a43767cc8b4",
+          "c4dc1f7a17f1"
+        ]
+      },
+      "conclusion": {
+        "text": "Coverage agrees Musk unveiled Tesla's Roadster presented as a flying car. The left leads with Musk's claims and the mid-air demonstration, the centre questions whether it is truly a flying car, and East-bloc outlets foreground scepticism and a rival's mockery. Whether it is a real flying car stays contested.",
+        "sources": [
+          "f9d3b15a0ea6",
+          "bb39da95bb72",
+          "8a43767cc8b4",
+          "c4dc1f7a17f1"
+        ]
+      },
+      "validation": {
+        "kept": 21,
+        "dropped_by_reason": {}
+      }
+    }
+  ]
+}
