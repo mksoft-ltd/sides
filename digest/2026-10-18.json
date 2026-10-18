@@ -1,0 +1,4536 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-10-18T10:46:22.798898Z",
+  "date": "2026-10-18",
+  "meta": {
+    "model": "claude-opus-5-5",
+    "cost_usd": 0.660566,
+    "outlets_polled": 29,
+    "articles_collected": 571,
+    "warnings": [
+      "1 feed(s) failed during collect",
+      "1 feed item(s) dropped at collect (link_off_domain=1)"
+    ],
+    "validation": {
+      "kept": 343,
+      "dropped_by_reason": {
+        "untrusted_text": 2
+      }
+    }
+  },
+  "outlets": [
+    {
+      "id": "guardian",
+      "name": "The Guardian",
+      "lean": "left",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United Kingdom",
+      "home_url": "https://www.theguardian.com/",
+      "rating_basis": "AllSides media bias rating (Lean Left), checked Oct 2026"
+    },
+    {
+      "id": "independent",
+      "name": "The Independent",
+      "lean": "left",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United Kingdom",
+      "home_url": "https://www.independent.co.uk/",
+      "rating_basis": "AllSides media bias rating (Lean Left), checked Oct 2026"
+    },
+    {
+      "id": "mirror",
+      "name": "Daily Mirror",
+      "lean": "left",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United Kingdom",
+      "home_url": "https://www.mirror.co.uk/",
+      "rating_basis": "Ad Fontes Media bias rating (Skews Left), checked Oct 2026"
+    },
+    {
+      "id": "bbc",
+      "name": "BBC News",
+      "lean": "centre",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "public-service",
+      "country": "United Kingdom",
+      "home_url": "https://www.bbc.co.uk/news",
+      "rating_basis": "AllSides media bias rating (Center), checked Oct 2026"
+    },
+    {
+      "id": "sky",
+      "name": "Sky News",
+      "lean": "centre",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United Kingdom",
+      "home_url": "https://news.sky.com/",
+      "rating_basis": "Ad Fontes Media bias rating (Middle), checked Oct 2026"
+    },
+    {
+      "id": "telegraph",
+      "name": "The Telegraph",
+      "lean": "right",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United Kingdom",
+      "home_url": "https://www.telegraph.co.uk/",
+      "rating_basis": "AllSides media bias rating (Lean Right), checked Oct 2026"
+    },
+    {
+      "id": "dailymail",
+      "name": "Daily Mail",
+      "lean": "right",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United Kingdom",
+      "home_url": "https://www.dailymail.co.uk/",
+      "rating_basis": "AllSides media bias rating (Right), checked Oct 2026"
+    },
+    {
+      "id": "thesun",
+      "name": "The Sun",
+      "lean": "right",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United Kingdom",
+      "home_url": "https://www.thesun.co.uk/",
+      "rating_basis": "AllSides media bias rating (Right), checked Oct 2026"
+    },
+    {
+      "id": "nyt",
+      "name": "The New York Times",
+      "lean": "left",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United States",
+      "home_url": "https://www.nytimes.com/",
+      "rating_basis": "AllSides media bias rating (Lean Left), checked Oct 2026"
+    },
+    {
+      "id": "nbc",
+      "name": "NBC News",
+      "lean": "left",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United States",
+      "home_url": "https://www.nbcnews.com/",
+      "rating_basis": "AllSides media bias rating (Lean Left), checked Oct 2026"
+    },
+    {
+      "id": "huffpost",
+      "name": "HuffPost",
+      "lean": "left",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United States",
+      "home_url": "https://www.huffpost.com/",
+      "rating_basis": "AllSides media bias rating (Left), checked Oct 2026"
+    },
+    {
+      "id": "npr",
+      "name": "NPR",
+      "lean": "centre",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "public-service",
+      "country": "United States",
+      "home_url": "https://www.npr.org/",
+      "rating_basis": "Ad Fontes Media bias rating (Middle / Skews Left), checked Oct 2026"
+    },
+    {
+      "id": "axios",
+      "name": "Axios",
+      "lean": "centre",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United States",
+      "home_url": "https://www.axios.com/",
+      "rating_basis": "AllSides media bias rating (Center), checked Oct 2026"
+    },
+    {
+      "id": "fox",
+      "name": "Fox News",
+      "lean": "right",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United States",
+      "home_url": "https://www.foxnews.com/",
+      "rating_basis": "AllSides media bias rating (Right), checked Oct 2026"
+    },
+    {
+      "id": "nypost",
+      "name": "New York Post",
+      "lean": "right",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United States",
+      "home_url": "https://nypost.com/",
+      "rating_basis": "AllSides media bias rating (Lean Right), checked Oct 2026"
+    },
+    {
+      "id": "examiner",
+      "name": "Washington Examiner",
+      "lean": "right",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United States",
+      "home_url": "https://www.washingtonexaminer.com/",
+      "rating_basis": "AllSides media bias rating (Lean Right), checked Oct 2026"
+    },
+    {
+      "id": "france24",
+      "name": "France 24",
+      "lean": "centre",
+      "region": "europe",
+      "bloc": "west",
+      "ownership": "public-service",
+      "country": "France",
+      "home_url": "https://www.france24.com/en/",
+      "rating_basis": "Ad Fontes Media bias rating (Middle), checked Oct 2026"
+    },
+    {
+      "id": "dw",
+      "name": "DW (Deutsche Welle)",
+      "lean": "centre",
+      "region": "europe",
+      "bloc": "west",
+      "ownership": "public-service",
+      "country": "Germany",
+      "home_url": "https://www.dw.com/en/",
+      "rating_basis": "AllSides media bias rating (Center), checked Oct 2026"
+    },
+    {
+      "id": "aljazeera",
+      "name": "Al Jazeera English",
+      "lean": null,
+      "region": "middle_east",
+      "bloc": "east",
+      "ownership": "state-funded",
+      "country": "Qatar",
+      "home_url": "https://www.aljazeera.com/",
+      "rating_basis": "Funded by the State of Qatar; no left/right tag applied"
+    },
+    {
+      "id": "thenational",
+      "name": "The National (UAE)",
+      "lean": null,
+      "region": "middle_east",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "United Arab Emirates",
+      "home_url": "https://www.thenationalnews.com/",
+      "rating_basis": "Owned by International Media Investments (Abu Dhabi); no left/right tag applied"
+    },
+    {
+      "id": "timesofisrael",
+      "name": "The Times of Israel",
+      "lean": null,
+      "region": "middle_east",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "Israel",
+      "home_url": "https://www.timesofisrael.com/",
+      "rating_basis": "Privately owned; no left/right tag applied"
+    },
+    {
+      "id": "cgtn",
+      "name": "CGTN",
+      "lean": null,
+      "region": "asia",
+      "bloc": "east",
+      "ownership": "state-controlled",
+      "country": "China",
+      "home_url": "https://www.cgtn.com/",
+      "rating_basis": "China Global Television Network, part of state broadcaster China Media Group"
+    },
+    {
+      "id": "ecns",
+      "name": "ECNS (China News Service)",
+      "lean": null,
+      "region": "asia",
+      "bloc": "east",
+      "ownership": "state-controlled",
+      "country": "China",
+      "home_url": "https://www.ecns.cn/",
+      "rating_basis": "English service of China News Service, a state news agency"
+    },
+    {
+      "id": "scmp",
+      "name": "South China Morning Post",
+      "lean": null,
+      "region": "asia",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "Hong Kong",
+      "home_url": "https://www.scmp.com/",
+      "rating_basis": "Owned by Alibaba Group; no left/right tag applied"
+    },
+    {
+      "id": "toi",
+      "name": "The Times of India",
+      "lean": null,
+      "region": "asia",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "India",
+      "home_url": "https://timesofindia.indiatimes.com/",
+      "rating_basis": "Privately owned (Bennett, Coleman & Co.); no left/right tag applied"
+    },
+    {
+      "id": "thehindu",
+      "name": "The Hindu",
+      "lean": null,
+      "region": "asia",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "India",
+      "home_url": "https://www.thehindu.com/",
+      "rating_basis": "Privately owned (The Hindu Group); no left/right tag applied"
+    },
+    {
+      "id": "moscowtimes",
+      "name": "The Moscow Times",
+      "lean": null,
+      "region": "europe",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "Russia",
+      "home_url": "https://www.themoscowtimes.com/",
+      "rating_basis": "Independent, Amsterdam-based since 2022; designated \"undesirable\" by Russia; no left/right tag applied"
+    },
+    {
+      "id": "japantimes",
+      "name": "The Japan Times",
+      "lean": null,
+      "region": "asia",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "Japan",
+      "home_url": "https://www.japantimes.co.jp/",
+      "rating_basis": "Privately owned (News2u Holdings); no left/right tag applied"
+    },
+    {
+      "id": "koreaherald",
+      "name": "The Korea Herald",
+      "lean": null,
+      "region": "asia",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "South Korea",
+      "home_url": "https://www.koreaherald.com/",
+      "rating_basis": "Privately owned (Herald Corporation); no left/right tag applied"
+    }
+  ],
+  "stories": [
+    {
+      "id": "b06abada42be",
+      "title": "Cost-of-living protests across France turn into riots, with mass arrests and buildings…",
+      "rank": 1,
+      "outlet_count": 19,
+      "coverage": {
+        "lean": {
+          "left": 4,
+          "centre": 4,
+          "right": 4
+        },
+        "bloc": {
+          "west": 12,
+          "east": 7
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "fe5cfa671f6c",
+          "outlet_id": "dw",
+          "headline": "France: Protesters clash with police in nationwide protests, amid rising social polarization",
+          "snippet": "Unrest broke out in parts of France as students, trade unionists and Yellow Vest activists took to the streets to protest high prices and inequality. Police arrested over 1,000 people amid chaotic…",
+          "url": "https://www.dw.com/en/france-protesters-clash-with-police-in-nationwide-protests-amid-rising-social-polarization/a-79685584?maca=en-rss-en-world-4025-xml-mrss",
+          "published_at": "2026-10-17T08:02:00Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "37033fa1191d",
+          "outlet_id": "france24",
+          "headline": "France: \"We've seen extremely high tensions between protesters and law enforcement\"",
+          "snippet": "Protesters across France called for street demonstrations on Saturday against rising living costs. France 24's Antonia Kerrigan reports from Paris. \"The march from here to Place de Clichy isn't set…",
+          "url": "https://www.france24.com/en/video/20261017-france-we-ve-seen-extremely-high-tensions-between-protesters-and-law-enforcement",
+          "published_at": "2026-10-17T14:46:52Z",
+          "published_at_estimated": false,
+          "image_url": "https://s.france24.com/media/display/81494806-ca38-11f1-95a3-4dd8ac2cf3bf/w:1024/p:16x9/EN-20261017-130538-131009-CS.jpg"
+        },
+        {
+          "id": "0597ffbeb98e",
+          "outlet_id": "france24",
+          "headline": "France: What's different about today's protests?",
+          "snippet": "In France, protests are under way across the country this Saturday. Demonstrators are protesting against the high cost of living, as well as poor working and studying conditions. We discuss this…",
+          "url": "https://www.france24.com/en/video/20261017-france-what-s-different-about-today-s-protests",
+          "published_at": "2026-10-17T15:07:08Z",
+          "published_at_estimated": false,
+          "image_url": "https://s.france24.com/media/display/33426cd0-ca3a-11f1-b890-638c1c1f5fd6/w:1024/p:16x9/EN-20261017-150100-150446-CS.jpg"
+        },
+        {
+          "id": "a4f5474913a3",
+          "outlet_id": "france24",
+          "headline": "Protests in France: \"Living conditions are too harsh\"",
+          "snippet": "Saturday’s mobilisation in France follows calls on social media to revive the Yellow Vests movement, which emerged in 2018 against social injustice. Student groups protesting since mid-September…",
+          "url": "https://www.france24.com/en/video/20261017-protests-in-france-living-conditions-are-too-harsh",
+          "published_at": "2026-10-17T15:10:44Z",
+          "published_at_estimated": false,
+          "image_url": "https://s.france24.com/media/display/38ab95fc-ca3a-11f1-aa7b-d1d2c32ebb87/w:1024/p:16x9/EN-20261017-140101-141839-CS.jpg"
+        },
+        {
+          "id": "84741a7594be",
+          "outlet_id": "france24",
+          "headline": "Protests in France: \"Two fires broke out in Place de la République\"",
+          "snippet": "Police and protesters clashed in Paris and other French cities on Saturday, with smoke from fires and tear gas filling the air at demonstrations nationwide against high prices, ahead of elections to…",
+          "url": "https://www.france24.com/en/video/20261017-protests-in-france-two-fires-broke-out-in-place-de-la-r%C3%A9publique",
+          "published_at": "2026-10-17T15:53:30Z",
+          "published_at_estimated": false,
+          "image_url": "https://s.france24.com/media/display/02bc98c2-ca41-11f1-95d8-4dd8ac2cf3bf/w:1024/p:16x9/EN-20261017-170100-170648-CS.jpg"
+        },
+        {
+          "id": "8daf2d9a0173",
+          "outlet_id": "npr",
+          "headline": "Scuffles and fires break out as protesters rally across France, joining students",
+          "snippet": "Demonstrators across France converged with students Saturday to protest rising living costs, as the country's fiscal crisis deepens.",
+          "url": "https://www.npr.org/2026/10/17/nx-s1-6006773/student-protests-france",
+          "published_at": "2026-10-17T15:57:40Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "f6762e65d40f",
+          "outlet_id": "fox",
+          "headline": "Violence erupts at France protests as Macron warns unrest is being exploited",
+          "snippet": "French President Emmanuel Macron called for calm as tear gas, water cannons and over 8,000 arrests mark weeks of violent clashes across the country.",
+          "url": "https://www.foxnews.com/world/violence-erupts-france-protests-macron-warns-unrest-being-exploited",
+          "published_at": "2026-10-17T16:03:16Z",
+          "published_at_estimated": false,
+          "image_url": "https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2026/10/931/523/french-riot-police-protestors-paris.jpg?ve=1&tl=1"
+        },
+        {
+          "id": "e50cdcf895c3",
+          "outlet_id": "mirror",
+          "headline": "France protests - everything you need to know as cost of living crisis and school blockades spark carnage",
+          "snippet": "Riot police have unleashed tear gas across cities throughout France and detained at least 400 people as thousands of demonstrators take to the streets to protest against the cost of living, soaring…",
+          "url": "https://www.mirror.co.uk/news/world-news/france-protests-paris-emmanuel-macron-37783610",
+          "published_at": "2026-10-17T19:24:13Z",
+          "published_at_estimated": false,
+          "image_url": "https://i2-prod.mirror.co.uk/incoming/article37783608.ece/ALTERNATES/s615/1_FRANCE-SOCIAL-DEMO.jpg"
+        },
+        {
+          "id": "4d2485b45ffb",
+          "outlet_id": "france24",
+          "headline": "Looters seize on massive French protests to raid and vandalise shops",
+          "snippet": "Looters on Saturday seized the opportunity to raid and vandalise a host of shops and businesses across France – from bakeries and supermarkets to tech stores – as hundreds of thousands of people…",
+          "url": "https://www.france24.com/en/france/20261017-looters-seize-massive-french-protests-raid-vandalise-shops-france",
+          "published_at": "2026-10-17T20:15:02Z",
+          "published_at_estimated": false,
+          "image_url": "https://s.france24.com/media/display/fab94d12-ca51-11f1-a0cb-638c1c1f5fd6/w:1024/p:16x9/cc2ac62c67a25e9ff25aff593865d3fa117e6424.jpg"
+        },
+        {
+          "id": "d0f9703e7e5d",
+          "outlet_id": "examiner",
+          "headline": "Macron says violent rioters will be ‘prosecuted and punished’ as buildings burn in France",
+          "snippet": "French President Emmanuel Macron released a statement on Saturday afternoon denouncing violent rioters who defaced national landmarks and attacked law enforcement officers in an escalation of…",
+          "url": "https://www.washingtonexaminer.com/news/world/4769935/macron-violent-rioters-prosecuted-punished/",
+          "published_at": "2026-10-17T21:18:52Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.washingtonexaminer.com/wp-content/uploads/2026/10/AP26290464234778-e1792266363845.jpg?w=1024"
+        },
+        {
+          "id": "80676898ed60",
+          "outlet_id": "bbc",
+          "headline": "How day of protests unfolded as disorder breaks out across France",
+          "snippet": "Demonstrations across the country turned violent, with cars and buildings set alight and shops ransacked.",
+          "url": "https://www.bbc.co.uk/news/videos/cwz0vy770gpzo",
+          "published_at": "2026-10-17T21:33:17Z",
+          "published_at_estimated": false,
+          "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/087d/live/01edc4a0-ca75-11f1-9a39-31b474234113.jpg"
+        },
+        {
+          "id": "94f2505af7bc",
+          "outlet_id": "fox",
+          "headline": "Limoges Town Hall 'largely lost' after far-left rioters set historic building on fire amid French unrest",
+          "snippet": "Rioters set fire to the historic Limoges Town Hall, collapsing its roof and destroying much of the landmark as France's protests rage on.",
+          "url": "https://www.foxnews.com/world/limoges-town-hall-largely-lost-after-far-left-rioters-set-historic-building-fire-amid-french-unrest",
+          "published_at": "2026-10-17T22:56:37Z",
+          "published_at_estimated": false,
+          "image_url": "https://static.foxnews.com/foxnews.com/content/uploads/2026/10/france-collapse.gif"
+        },
+        {
+          "id": "035492fb5980",
+          "outlet_id": "japantimes",
+          "headline": "Mass protests in France spiral into worst riots in years",
+          "snippet": "Demonstrations against rising living costs and declining public services spiraled out of control in some of the country's worst violence in decades.",
+          "url": "https://www.japantimes.co.jp/news/2026/10/18/world/mass-protests-france-riots/",
+          "published_at": "2026-10-17T23:20:00Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.japantimes.co.jp/japantimes/uploads/images/2026/10/18/thumbs/400x400/569143.jpg"
+        },
+        {
+          "id": "0af829a4653e",
+          "outlet_id": "huffpost",
+          "headline": "Clashes, Fires And Looting Break Out As Protesters Rally Across France, Joining Students",
+          "snippet": "Violent clashes, fires, and looting have marred demonstrations across France as hundreds of thousands protest rising living costs and poor school conditions.",
+          "url": "https://www.huffpost.com/entry/france-protests_n_6ad4050de4b00caf853ca38c",
+          "published_at": "2026-10-17T23:35:47Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "07f280586131",
+          "outlet_id": "guardian",
+          "headline": "Buildings set ablaze and more than 1,800 arrested as police clash with protesters across France",
+          "snippet": "Police fire teargas in Paris and Limoges town hall ‘largely lost’ to fire – with officials blaming violence on ‘ultra-left’ More than 1,800 people were arrested in France on Saturday after…",
+          "url": "https://www.theguardian.com/world/2026/oct/17/protests-france-high-prices-social-security-gilets-jaunes",
+          "published_at": "2026-10-18T00:01:12Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.guim.co.uk/img/media/7581252b072b651e754e46a8d2d3f76989d36833/500_0_5000_4000/master/5000.jpg?width=460&quality=85&auto=format&fit=max&s=788165f60d85b5885e360d96e535cce2"
+        },
+        {
+          "id": "ec28f5bba489",
+          "outlet_id": "thehindu",
+          "headline": "Clashes and fires break out as protesters rally across France, joining students",
+          "snippet": "Police fired tear gas and water cannons to push back people wearing hoods and masks and throwing fireworks, paving stones and other objects at officers in the Place de la République, northeast of…",
+          "url": "https://www.thehindu.com/news/international/clashes-and-fires-break-out-as-protesters-rally-across-france-joining-students/article71598941.ece",
+          "published_at": "2026-10-18T01:35:54Z",
+          "published_at_estimated": false,
+          "image_url": "https://th-i.thgim.com/public/incoming/b0pzy8/article71598965.ece/alternates/LANDSCAPE_1200/AFP_D3LR764.jpg"
+        },
+        {
+          "id": "f26fc8728f5f",
+          "outlet_id": "timesofisrael",
+          "headline": "Mass protests in France spiral into worst riots in years; 1,200 arrested, 150 cops injured",
+          "snippet": "As hundreds of thousands protest cost of living, city hall torched as police use tear gas; teen protester loses hand after picking up stun grenade; PM blames 'ultra-left,' months before presidential…",
+          "url": "https://www.timesofisrael.com/mass-protests-in-france-spiral-into-worst-riots-in-years-1200-arrested-150-cops-injured/",
+          "published_at": "2026-10-18T03:24:35Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "b2605267f786",
+          "outlet_id": "dailymail",
+          "headline": "'Marie Antoinette' jibes at the Macrons as they dance at Celine Dion concert while Paris burns in riots against failing government",
+          "snippet": "Emmanuel Macron and his wife Brigitte seemed oblivious to the mood of a France enraged by soaring living costs, collapsing public finances and an administration paralysed in stalemate.",
+          "url": "https://www.dailymail.com/news/article-16217569/Marie-Antoinette-jibes-Macrons-dance-Paris-burns-riots-failing-government.html",
+          "published_at": "2026-10-18T03:40:58Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.dailymail.com/1s/2026/10/17/22/111927719-0-image-m-12_1792274224309.jpg"
+        },
+        {
+          "id": "783f348f01c5",
+          "outlet_id": "toi",
+          "headline": "Watch: French protesters loot Hermès, Apple and other luxury stores across cities",
+          "snippet": "",
+          "url": "https://timesofindia.indiatimes.com/world/europe/watch-french-protesters-loot-herms-apple-and-other-luxury-stores-across-cities/articleshow/135023351.cms",
+          "published_at": "2026-10-18T03:49:28Z",
+          "published_at_estimated": false,
+          "image_url": "https://static.toiimg.com/photo/msid-135023527,imgsize-5813975.cms"
+        },
+        {
+          "id": "373f94899c10",
+          "outlet_id": "scmp",
+          "headline": "Looters smash Paris shops as ‘unacceptable’ violence rocks France",
+          "snippet": "Smashing shop windows and snatching boxes of goods, looters in Paris poured into stores across the capital on Saturday, facing no resistance from authorities as nationwide protests degenerated into…",
+          "url": "https://www.scmp.com/news/world/europe/article/3371283/looters-smash-paris-shops-unacceptable-violence-rocks-france",
+          "published_at": "2026-10-18T04:00:23Z",
+          "published_at_estimated": false,
+          "image_url": "https://cdn.i-scmp.com/sites/default/files/styles/1280x720/public/d8/images/canvas/2026/10/18/e5598a07-c820-472d-96ae-424a4be4b986_194e9050.jpg?itok=3gRaLiAt&v=1792294404"
+        },
+        {
+          "id": "5eb741eb0fa8",
+          "outlet_id": "koreaherald",
+          "headline": "Mass protests in France spiral into worst riots in years",
+          "snippet": "Rioting erupted in cities across France Saturday as demonstrations against rising living costs and declining public services spiraled ‌out of control in some of the worst violence the country has…",
+          "url": "https://www.koreaherald.com/article/10906119",
+          "published_at": "2026-10-18T04:16:50Z",
+          "published_at_estimated": false,
+          "image_url": "https://wimg.heraldcorp.com/news/cms/2026/10/18/rcv.YNA.20261018.PAF20261018100201009_T1.jpg"
+        },
+        {
+          "id": "24195dbfddeb",
+          "outlet_id": "dailymail",
+          "headline": "French town hall that survived both world wars is incinerated after standing for 143 years as bloody riots spread across Europe",
+          "snippet": "The cherished building, built in 1883, came tumbling down after it was torched by rioters. More than 1,200 people were arrested across France in the unrest.",
+          "url": "https://www.dailymail.com/news/article-16218151/French-town-hall-survived-world-wars-incinerated-standing-143-years-bloody-riots-spread-Europe.html",
+          "published_at": "2026-10-18T05:20:29Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.dailymail.com/1s/2026/10/17/23/111927879-0-image-m-40_1792276396569.jpg"
+        },
+        {
+          "id": "9a317e743150",
+          "outlet_id": "nyt",
+          "headline": "Unrest Mars Day of Protest in France, as Student Movement Turns National",
+          "snippet": "Riots broke out in several French cities alongside peaceful marches of tens of thousands of people demonstrating against rising living costs and poor school conditions.",
+          "url": "https://www.nytimes.com/2026/10/17/world/europe/france-protest-riots-marseille.html",
+          "published_at": "2026-10-18T06:59:38Z",
+          "published_at_estimated": false,
+          "image_url": "https://static01.nyt.com/images/2026/10/17/multimedia/17int-france-unrest-khmb/17int-france-unrest-khmb-mediumSquareAt3X.jpg"
+        },
+        {
+          "id": "859c7d614472",
+          "outlet_id": "mirror",
+          "headline": "France protests turn violent as 1,200 arrested, looting breaks out and buildings burn",
+          "snippet": "Protests against the cost of living in France have turned to riots with Limoges city hall and Lyons tourist office among buildings destroyed while a young man had his hand blown off by a grenade",
+          "url": "https://www.mirror.co.uk/news/world-news/france-protests-riots-today-paris-37782549",
+          "published_at": "2026-10-18T07:16:27Z",
+          "published_at_estimated": false,
+          "image_url": "https://i2-prod.mirror.co.uk/incoming/article37783917.ece/ALTERNATES/s615/0_TOPSHOT-FRANCE-SOCIAL-DEMO.jpg"
+        },
+        {
+          "id": "3398da38e9fd",
+          "outlet_id": "france24",
+          "headline": "🔴 A demonstrator died from 'cardiorespiratory arrest' during Paris protests, police say",
+          "snippet": "",
+          "url": "https://www.france24.com/en/europe/20261018-live-vance-blames-immigration-for-violence-during-protests-in-france",
+          "published_at": "2026-10-18T08:06:22Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "655e81ab78e9",
+          "outlet_id": "thesun",
+          "headline": "Protester dies during ‘apocalyptic’ French riots as shops looted & city hall reduced to ashes in night of violence",
+          "snippet": "A PROTESTER has died as the \"apocalyptic\" French riots continue to grip France, with shops looted and the city hall reduced to ashes. More than half a million people took to the streets across the…",
+          "url": "https://www.thesun.co.uk/news/40723673/protester-dies-french-riots-shops-looted-city-hall-torched/",
+          "published_at": "2026-10-18T08:15:25Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.thesun.co.uk/wp-content%2Fuploads%2F2026%2F10%2Fnewspress-collage-r92dzkr8e-1792311279760.jpg?quality%3D90%26"
+        },
+        {
+          "id": "4a4df46c44b5",
+          "outlet_id": "aljazeera",
+          "headline": "Photos: Protests across France spiral into looting, blazes and clashes",
+          "snippet": "Authorities report 1,200 arrests and 150 injured police officers as unrest erupts in multiple French cities.",
+          "url": "https://www.aljazeera.com/gallery/2026/10/18/photos-protests-across-france-spiral-into-looting-blazes-and-clashes",
+          "published_at": "2026-10-18T08:21:59Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "9e275f8b82a1",
+          "outlet_id": "nyt",
+          "headline": "France in Shock After Protests Devolve Into Riots",
+          "snippet": "Centrist and leftist leaders blamed each other after anti-government protests devolved into chaos.",
+          "url": "https://www.nytimes.com/2026/10/18/world/europe/france-protests-shock-arson.html",
+          "published_at": "2026-10-18T08:44:26Z",
+          "published_at_estimated": false,
+          "image_url": "https://static01.nyt.com/images/2026/10/18/multimedia/18int-france-shock-tkbl/18int-france-shock-tkbl-mediumSquareAt3X.jpg"
+        },
+        {
+          "id": "ea829adf59b5",
+          "outlet_id": "france24",
+          "headline": "France protests: Did the government make the wrong decisions?",
+          "snippet": "Police in Paris said Sunday they had arrested a \"record\" 855 people over protest-related violence in the capital the day before, with the prosecutor's office saying more than 500 were being held in…",
+          "url": "https://www.france24.com/en/video/20261018-france-protests-did-the-government-make-the-wrong-decisions",
+          "published_at": "2026-10-18T09:00:22Z",
+          "published_at_estimated": false,
+          "image_url": "https://s.france24.com/media/display/6223078a-cad0-11f1-8c01-2d1c143cdef3/w:1024/p:16x9/EN-20261018-100442-101117-CS.jpg"
+        },
+        {
+          "id": "b5dee969c9a6",
+          "outlet_id": "france24",
+          "headline": "France: Who was behind the violence at Saturday's protests?",
+          "snippet": "Violent clashes, fires, vandalism and looting marred demonstrations across France on Saturday as hundreds of thousands of people marched against the rising cost of living and poor conditions in…",
+          "url": "https://www.france24.com/en/video/20261018-france-who-was-behind-the-violence-at-saturday-s-protests",
+          "published_at": "2026-10-18T09:01:22Z",
+          "published_at_estimated": false,
+          "image_url": "https://s.france24.com/media/display/c1ff195a-cad0-11f1-b9ce-d1d2c32ebb87/w:1024/p:16x9/EN-20261018-101142-101423-CS.jpg"
+        },
+        {
+          "id": "e903d9d0ae5f",
+          "outlet_id": "france24",
+          "headline": "France: Who took part in Saturday's protests?",
+          "snippet": "Weeks of student protests over poor conditions in schools and rising anger over the cost of living fuelled calls for a nationwide demonstration on October 17, bringing together youth activists and…",
+          "url": "https://www.france24.com/en/video/20261018-france-who-took-part-in-saturday-s-protests",
+          "published_at": "2026-10-18T09:03:18Z",
+          "published_at_estimated": false,
+          "image_url": "https://s.france24.com/media/display/b40d3708-cad2-11f1-906d-638c1c1f5fd6/w:1024/p:16x9/capture-823ce114.jpg"
+        },
+        {
+          "id": "35251b5585f5",
+          "outlet_id": "france24",
+          "headline": "France: Protests \"brought the entire population together for a common purpose\"",
+          "snippet": "This weekend, in cities across France, some 800,000 protesters, including students, railway workers and members of the Yellow Vest movement, took to the streets in largely peaceful nationwide…",
+          "url": "https://www.france24.com/en/video/20261018-france-protests-brought-the-entire-population-together-for-a-common-purpose",
+          "published_at": "2026-10-18T09:05:03Z",
+          "published_at_estimated": false,
+          "image_url": "https://s.france24.com/media/display/5b3222c4-cad2-11f1-9b89-4dd8ac2cf3bf/w:1024/p:16x9/EN-20261018-101748-102037-CS.jpg"
+        },
+        {
+          "id": "b118ec45a666",
+          "outlet_id": "bbc",
+          "headline": "Burnt out cars and shattered glass on Paris streets after protests turn to riots and looting",
+          "snippet": "Around 1,800 people were arrested after nationwide protests saw outbreaks of violence and vandalism.",
+          "url": "https://www.bbc.co.uk/news/articles/c574pdzl0k4no",
+          "published_at": "2026-10-18T09:56:45Z",
+          "published_at_estimated": false,
+          "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/d285/live/4704a830-cacd-11f1-b5ff-6fb710f59c84.jpg"
+        },
+        {
+          "id": "083352740cbd",
+          "outlet_id": "dailymail",
+          "headline": "Moment French rioters attack shopkeeper and distraught woman begs them not to loot store as police admit they've 'lost control' of violent protests that saw 143-year-old town hall incinerated",
+          "snippet": "The streets of major French cities were turned into a battleground as city halls and prefectures were set on fire and hundreds of shops were looted in 'apocalyptic riots'.",
+          "url": "https://www.dailymail.com/news/article-16218361/Moment-French-rioters-attack-shopkeeper.html",
+          "published_at": "2026-10-18T10:27:39Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.dailymail.com/1s/2026/10/18/10/111933397-0-image-m-13_1792315604812.jpg"
+        },
+        {
+          "id": "8b6b68d2fb79",
+          "outlet_id": "guardian",
+          "headline": "Arrests over France protests rise to 1,800, with whole streets in Paris ‘devastated’ – Europe live",
+          "snippet": "Interior minister says ‘the Republic will not yield’ to France’s worst protests in years Protests in France caused damage worth hundreds of millions of euros, according to the head of a trade body…",
+          "url": "https://www.theguardian.com/world/live/2026/oct/18/paris-protests-france-demonstrations-europe-live-latest-news",
+          "published_at": "2026-10-18T10:29:46Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.guim.co.uk/img/media/72eddfdab73cd6b8d98c4fd7741a2043478b01c6/740_0_6184_4946/master/6184.jpg?width=460&quality=85&auto=format&fit=max&s=a485a746a4fb05db466668e0724f8d08"
+        },
+        {
+          "id": "34f8868a29ae",
+          "outlet_id": "dailymail",
+          "headline": "Moment distraught woman begs French rioters not to loot shop as thugs attack man defending his store - while 143-year-old town hall is incinerated and violent protests spread across Europe",
+          "snippet": "The heartbreaking moment was caught on video, as the woman pleaded with a crowd of young male rioters not to loot her shop - a plea they ignored.",
+          "url": "https://www.dailymail.com/news/article-16216559/Macron-Celine-Dion-concert-France-burns-rioters.html",
+          "published_at": "2026-10-18T10:36:52Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.dailymail.com/1s/2026/10/17/23/111927879-0-image-m-40_1792276396569.jpg"
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "Nationwide demonstrations against the rising cost of living turned violent on Saturday.",
+          "sources": [
+            "fe5cfa671f6c",
+            "8daf2d9a0173",
+            "80676898ed60",
+            "0af829a4653e",
+            "035492fb5980",
+            "5eb741eb0fa8",
+            "859c7d614472",
+            "9a317e743150",
+            "b118ec45a666",
+            "b5dee969c9a6"
+          ]
+        },
+        {
+          "text": "Students joined the cost-of-living protests, which also raised poor school or working conditions.",
+          "sources": [
+            "8daf2d9a0173",
+            "0af829a4653e",
+            "ec28f5bba489",
+            "9a317e743150",
+            "e903d9d0ae5f",
+            "0597ffbeb98e",
+            "fe5cfa671f6c"
+          ]
+        },
+        {
+          "text": "Police used tear gas against protesters, with water cannon also reported.",
+          "sources": [
+            "84741a7594be",
+            "f6762e65d40f",
+            "e50cdcf895c3",
+            "07f280586131",
+            "ec28f5bba489",
+            "f26fc8728f5f"
+          ]
+        },
+        {
+          "text": "Shops were looted in Paris and other cities.",
+          "sources": [
+            "4d2485b45ffb",
+            "0af829a4653e",
+            "783f348f01c5",
+            "373f94899c10",
+            "859c7d614472",
+            "655e81ab78e9",
+            "083352740cbd",
+            "80676898ed60"
+          ]
+        },
+        {
+          "text": "A town hall in Limoges was set on fire and largely destroyed.",
+          "sources": [
+            "94f2505af7bc",
+            "07f280586131",
+            "859c7d614472",
+            "24195dbfddeb",
+            "f26fc8728f5f",
+            "655e81ab78e9"
+          ]
+        },
+        {
+          "text": "Hundreds of thousands of people took part in the protests.",
+          "sources": [
+            "4d2485b45ffb",
+            "0af829a4653e",
+            "b5dee969c9a6",
+            "f26fc8728f5f",
+            "655e81ab78e9",
+            "35251b5585f5"
+          ]
+        },
+        {
+          "text": "Several outlets describe the unrest as France's worst in years.",
+          "sources": [
+            "035492fb5980",
+            "5eb741eb0fa8",
+            "f26fc8728f5f",
+            "8b6b68d2fb79"
+          ]
+        },
+        {
+          "text": "A young protester lost a hand to a grenade.",
+          "sources": [
+            "f26fc8728f5f",
+            "859c7d614472"
+          ]
+        },
+        {
+          "text": "A protester died during the unrest.",
+          "sources": [
+            "3398da38e9fd",
+            "655e81ab78e9"
+          ]
+        },
+        {
+          "text": "About 150 police officers were reported injured.",
+          "sources": [
+            "f26fc8728f5f",
+            "4a4df46c44b5"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "e50cdcf895c3",
+              "quote": "spark carnage",
+              "field": "headline"
+            },
+            {
+              "article_id": "07f280586131",
+              "quote": "Buildings set ablaze and more than 1,800 arrested",
+              "field": "headline"
+            },
+            {
+              "article_id": "9a317e743150",
+              "quote": "as Student Movement Turns National",
+              "field": "headline"
+            },
+            {
+              "article_id": "9e275f8b82a1",
+              "quote": "France in Shock After Protests Devolve Into Riots",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with arrest totals and burned buildings.",
+              "sources": [
+                "07f280586131",
+                "859c7d614472",
+                "8b6b68d2fb79"
+              ]
+            },
+            {
+              "text": "Notes riots occurring alongside peaceful marches and a student movement going national.",
+              "sources": [
+                "9a317e743150"
+              ]
+            },
+            {
+              "text": "Reports political blame: officials citing the 'ultra-left', and centrist and leftist leaders blaming each other.",
+              "sources": [
+                "07f280586131",
+                "9e275f8b82a1"
+              ]
+            },
+            {
+              "text": "Reports damage worth hundreds of millions of euros, citing a trade body head.",
+              "sources": [
+                "8b6b68d2fb79"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "4d2485b45ffb",
+              "quote": "Looters seize on massive French protests to raid and vandalise shops",
+              "field": "headline"
+            },
+            {
+              "article_id": "a4f5474913a3",
+              "quote": "Living conditions are too harsh",
+              "field": "headline"
+            },
+            {
+              "article_id": "80676898ed60",
+              "quote": "disorder breaks out across France",
+              "field": "headline"
+            },
+            {
+              "article_id": "35251b5585f5",
+              "quote": "largely peaceful nationwide",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Foregrounds who protested and why, including students, trade unionists, railway workers and Yellow Vest activists.",
+              "sources": [
+                "fe5cfa671f6c",
+                "a4f5474913a3",
+                "e903d9d0ae5f",
+                "35251b5585f5",
+                "0597ffbeb98e"
+              ]
+            },
+            {
+              "text": "Describes the looting as opportunists seizing on the protests.",
+              "sources": [
+                "4d2485b45ffb"
+              ]
+            },
+            {
+              "text": "Raises questions about government decisions and who was behind the violence.",
+              "sources": [
+                "ea829adf59b5",
+                "b5dee969c9a6"
+              ]
+            },
+            {
+              "text": "Reports a record 855 arrests in Paris alone and a demonstrator's death.",
+              "sources": [
+                "ea829adf59b5",
+                "3398da38e9fd"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "right",
+          "headline_quotes": [
+            {
+              "article_id": "f6762e65d40f",
+              "quote": "Macron warns unrest is being exploited",
+              "field": "headline"
+            },
+            {
+              "article_id": "94f2505af7bc",
+              "quote": "far-left rioters set historic building on fire",
+              "field": "headline"
+            },
+            {
+              "article_id": "b2605267f786",
+              "quote": "'Marie Antoinette' jibes at the Macrons",
+              "field": "headline"
+            },
+            {
+              "article_id": "083352740cbd",
+              "quote": "police admit they've 'lost control'",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with Macron's response, including calls for calm and a vow to prosecute rioters.",
+              "sources": [
+                "f6762e65d40f",
+                "d0f9703e7e5d"
+              ]
+            },
+            {
+              "text": "Attributes the Limoges fire to far-left rioters and stresses the building's history.",
+              "sources": [
+                "94f2505af7bc",
+                "24195dbfddeb"
+              ]
+            },
+            {
+              "text": "Reports criticism of the Macrons attending a concert during the riots.",
+              "sources": [
+                "b2605267f786"
+              ]
+            },
+            {
+              "text": "Highlights attacks on shopkeepers and says the riots spread across Europe.",
+              "sources": [
+                "083352740cbd",
+                "34f8868a29ae",
+                "24195dbfddeb"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "right",
+          "text": "Right-leaning coverage does not mention students joining the protests.",
+          "sources": [
+            "8daf2d9a0173",
+            "0af829a4653e",
+            "9a317e743150",
+            "e903d9d0ae5f"
+          ]
+        },
+        {
+          "lean": "right",
+          "text": "Right-leaning coverage does not mention that many marches were peaceful.",
+          "sources": [
+            "9a317e743150",
+            "35251b5585f5"
+          ]
+        },
+        {
+          "lean": "left",
+          "text": "Left-leaning coverage does not mention the death of a protester.",
+          "sources": [
+            "3398da38e9fd",
+            "655e81ab78e9"
+          ]
+        },
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not mention the burning of Limoges town hall.",
+          "sources": [
+            "94f2505af7bc",
+            "07f280586131",
+            "859c7d614472"
+          ]
+        },
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not mention attribution of the violence to the far left or ultra-left.",
+          "sources": [
+            "07f280586131",
+            "94f2505af7bc"
+          ]
+        }
+      ],
+      "contested_claims": [
+        {
+          "claim": "Around 1,800 people were arrested in France over Saturday's protests.",
+          "asserted_by": [
+            "07f280586131",
+            "b118ec45a666",
+            "8b6b68d2fb79"
+          ],
+          "disputed_by": [
+            "f26fc8728f5f",
+            "24195dbfddeb",
+            "859c7d614472",
+            "4a4df46c44b5"
+          ]
+        }
+      ],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "94f2505af7bc",
+              "quote": "Limoges Town Hall 'largely lost'",
+              "field": "headline"
+            },
+            {
+              "article_id": "8b6b68d2fb79",
+              "quote": "Arrests over France protests rise to 1,800",
+              "field": "headline"
+            },
+            {
+              "article_id": "9a317e743150",
+              "quote": "Unrest Mars Day of Protest in France",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Foregrounds Macron's and ministers' responses and political blame.",
+              "sources": [
+                "f6762e65d40f",
+                "d0f9703e7e5d",
+                "8b6b68d2fb79",
+                "9e275f8b82a1"
+              ]
+            },
+            {
+              "text": "Details protester composition and motives, including students and Yellow Vests.",
+              "sources": [
+                "fe5cfa671f6c",
+                "a4f5474913a3",
+                "e903d9d0ae5f"
+              ]
+            },
+            {
+              "text": "Covers the Limoges town hall fire and a protester's death.",
+              "sources": [
+                "94f2505af7bc",
+                "07f280586131",
+                "3398da38e9fd"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "035492fb5980",
+              "quote": "Mass protests in France spiral into worst riots in years",
+              "field": "headline"
+            },
+            {
+              "article_id": "783f348f01c5",
+              "quote": "French protesters loot Hermès, Apple and other luxury stores across cities",
+              "field": "headline"
+            },
+            {
+              "article_id": "373f94899c10",
+              "quote": "facing no resistance from authorities",
+              "field": "snippet"
+            },
+            {
+              "article_id": "f26fc8728f5f",
+              "quote": "1,200 arrested, 150 cops injured",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the scale of the riots, described as the worst in years.",
+              "sources": [
+                "035492fb5980",
+                "5eb741eb0fa8",
+                "f26fc8728f5f"
+              ]
+            },
+            {
+              "text": "Highlights looting of shops, including luxury stores, with looters facing no resistance.",
+              "sources": [
+                "783f348f01c5",
+                "373f94899c10"
+              ]
+            },
+            {
+              "text": "Reports arrests, injured police and clashes with masked protesters throwing objects.",
+              "sources": [
+                "4a4df46c44b5",
+                "f26fc8728f5f",
+                "ec28f5bba489"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "Protests against the rising cost of living, joined by students, spread across France on Saturday and turned into riots, with tear gas, looting and buildings set on fire, including Limoges town hall. Reported arrest totals range from about 1,200 to 1,800, and police said a demonstrator died.",
+        "sources": [
+          "8daf2d9a0173",
+          "0af829a4653e",
+          "80676898ed60",
+          "94f2505af7bc",
+          "07f280586131",
+          "859c7d614472",
+          "f26fc8728f5f",
+          "b118ec45a666",
+          "3398da38e9fd",
+          "655e81ab78e9",
+          "035492fb5980"
+        ]
+      },
+      "conclusion": {
+        "text": "All sides report cost-of-living protests turning into riots with looting, fires and mass arrests. Left and centre coverage stresses students and peaceful marches, right coverage Macron and far-left rioters, and East-bloc outlets the scale and looting. Arrest totals differ between about 1,200 and 1,800.",
+        "sources": [
+          "0af829a4653e",
+          "035492fb5980",
+          "9a317e743150",
+          "35251b5585f5",
+          "f6762e65d40f",
+          "94f2505af7bc",
+          "783f348f01c5",
+          "07f280586131",
+          "f26fc8728f5f"
+        ]
+      },
+      "validation": {
+        "kept": 55,
+        "dropped_by_reason": {}
+      }
+    },
+    {
+      "id": "2b5da3b6e3fb",
+      "title": "Trump waives new Russia sanctions, drawing bipartisan criticism and Ukrainian objections",
+      "rank": 2,
+      "outlet_count": 13,
+      "coverage": {
+        "lean": {
+          "left": 3,
+          "centre": 4,
+          "right": 1
+        },
+        "bloc": {
+          "west": 8,
+          "east": 5
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "31355b090948",
+          "outlet_id": "cgtn",
+          "headline": "Trump waives many Russia-related sanctions, tariffs",
+          "snippet": "",
+          "url": "https://news.cgtn.com/news/2026-10-17/news-1Rj642qS8hi/p.html",
+          "published_at": "2026-10-17T00:37:31Z",
+          "published_at_estimated": false,
+          "image_url": "https://news.cgtn.com/news/2026-10-17/news-1Rj642qS8hi/img/a4477d013c2f45ec9a263fca561734dd/a4477d013c2f45ec9a263fca561734dd-1280.png"
+        },
+        {
+          "id": "f730ff66bcc9",
+          "outlet_id": "mirror",
+          "headline": "Donald Trump halts massive sanctions on Russian goods just days before they take effect",
+          "snippet": "The waiver comes during the worst rift between the US leader and Ukrainian President Volodymyr Zelensky in recent months after Mr Trump agreed to a diesel deal with Russia",
+          "url": "https://www.mirror.co.uk/news/world-news/us-sanctions-russia-waived-trump-37782088",
+          "published_at": "2026-10-17T03:57:44Z",
+          "published_at_estimated": false,
+          "image_url": "https://i2-prod.mirror.co.uk/incoming/article37780030.ece/ALTERNATES/s615/0_DC-Trump-Hosts-a-Lunch-for-Law-Enforcement-Officers-in-the-Rose-Garden-Washington-District-of-Col.jpg"
+        },
+        {
+          "id": "d8e68ee2ab36",
+          "outlet_id": "moscowtimes",
+          "headline": "Trump Signs Order Exempting Russia From New Sanctions Legislation",
+          "snippet": "In his executive order, Donald Trump said exempting Russia from the sanctions legislation was in the “national interest” of the United States.",
+          "url": "https://www.themoscowtimes.com/2026/10/17/trump-signs-order-exempting-russia-from-new-sanctions-legislation-a94012",
+          "published_at": "2026-10-17T07:54:01Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "2234c4f0f370",
+          "outlet_id": "huffpost",
+          "headline": "Zelenskyy Urges Support For New U.S. Sanctions On Russia Put On Hold By Trump",
+          "snippet": "Russian attacks overnight killed at least four people, including an ambulance driver, and wounded dozens, officials said.",
+          "url": "https://www.huffpost.com/entry/zelenskyy-urges-support-new-us-sanctions-russia-after-trump-hold_n_6ad37480e4b0ce24aed9f0c2",
+          "published_at": "2026-10-17T13:19:58Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "1b245e565947",
+          "outlet_id": "npr",
+          "headline": "Zelenskyy urges support for new US sanctions on Russia after Trump puts them on hold",
+          "snippet": "Zelenskyy described the move as unfortunate, adding it would encourage Russia to continue its assault. Trump told Congress that the pause was in the national interest but gave no further details.",
+          "url": "https://www.npr.org/2026/10/17/nx-s1-6006745/us-sanctions-russia",
+          "published_at": "2026-10-17T14:25:10Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "d61e50d68f8e",
+          "outlet_id": "axios",
+          "headline": "Trump waives new Russia sanctions in the \"national interests\"",
+          "snippet": "President Trump waived new sanctions on Russia late Friday night, saying it was in the \"national interests\" to hold off on the sweeping levies under the Graham Act that he signed just last month…",
+          "url": "https://www.axios.com/2026/10/17/trump-russia-sanctions",
+          "published_at": "2026-10-17T17:20:45Z",
+          "published_at_estimated": false,
+          "image_url": "https://images.axios.com/AyQRHciTjgBxiAmzH5bFs0Djt8s=/0x67:3796x2202/1366x768/2026/10/17/1792229739170.jpeg"
+        },
+        {
+          "id": "5f53c5c50626",
+          "outlet_id": "axios",
+          "headline": "Trump's Russia waiver draws instant bipartisan backlash",
+          "snippet": "Top Republicans and Democrats alike lined up Saturday to condemn President Trump's decision to waive recent sanctions on Russia, calling it \"irresponsible\" and \"a deal with the devil.\" Why it…",
+          "url": "https://www.axios.com/2026/10/17/trump-russia-waiver-putin-republicans-democrats",
+          "published_at": "2026-10-17T19:18:15Z",
+          "published_at_estimated": false,
+          "image_url": "https://images.axios.com/qqyic8BNupsFQbTe8NT_fr-LyH4=/0x48:2685x1558/1366x768/2026/10/17/1792260640067.jpeg"
+        },
+        {
+          "id": "388119da3869",
+          "outlet_id": "thesun",
+          "headline": "Furious Zelensky accuses Trump of ‘rewarding’ Putin by lifting Russia sanctions as deadly strikes hit Ukraine",
+          "snippet": "LIVID Volodymyr Zelensky says Donald Trump has “rewarded” Vladimir Putin by axing sanctions. The moves targeting Russian goods and energy were halted 48 hours before they were to come into effect…",
+          "url": "https://www.thesun.co.uk/news/40722439/zelensky-blasts-trump-russia-sanctions/",
+          "published_at": "2026-10-17T22:49:10Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.thesun.co.uk/wp-content%2Fuploads%2F2026%2F10%2Fnewspress-collage-wzlwe1riy-1792277308351.jpg?quality%3D90%26"
+        },
+        {
+          "id": "f1cde6fc3f33",
+          "outlet_id": "nbc",
+          "headline": "President Trump faces backlash over Russia sanctions relief",
+          "snippet": "President Trump was in Kentucky on Saturday, rallying for midterm candidates just weeks before Election Day. The President is facing new criticism, including from some in his party, for ordering…",
+          "url": "https://www.nbcnews.com/nightly-news/video/president-trump-faces-backlash-over-russia-sanctions-relief-271759941812",
+          "published_at": "2026-10-17T23:05:22Z",
+          "published_at_estimated": false,
+          "image_url": "https://media-cldnry.s-nbcnews.com/image/upload/t_fit_1500w/mpx/2704722219/2026_10/1792278317340_wnn_yal_trump_faces_backlash_over_russia_sanctions_relief_261017_S3_1920x1080-ypc253.jpg"
+        },
+        {
+          "id": "db73696cc1c8",
+          "outlet_id": "japantimes",
+          "headline": "Trump’s Russia sanctions waiver called mistake by GOP allies",
+          "snippet": "At least eight Republican senators and several House lawmakers have spoken out against Trump's diesel deal with Russia or the sanctions waiver.",
+          "url": "https://www.japantimes.co.jp/news/2026/10/18/world/politics/trump-russia-sanctions-republicans-mistake/",
+          "published_at": "2026-10-17T23:23:00Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.japantimes.co.jp/japantimes/uploads/images/2026/10/18/thumbs/400x400/569064.jpg"
+        },
+        {
+          "id": "b92d1140ed0b",
+          "outlet_id": "bbc",
+          "headline": "Trump waives several Russia sanctions as row with Zelensky intensifies",
+          "snippet": "The US president temporarily ends many restrictions on Moscow recently passed by Congress over \"national security\" concerns.",
+          "url": "https://www.bbc.co.uk/news/articles/cxr5yvzv7rp0o",
+          "published_at": "2026-10-18T01:10:25Z",
+          "published_at_estimated": false,
+          "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/c147/live/f608c860-c9cf-11f1-84c1-fd3c3266bb86.jpg"
+        },
+        {
+          "id": "93ab7dcc839d",
+          "outlet_id": "thehindu",
+          "headline": "Trump waives sanction threat over Russian oil purchases",
+          "snippet": "Move offers relief to Indian refiners amid West Asia conflict; decision comes ahead of U.S. midterm elections",
+          "url": "https://www.thehindu.com/news/international/donald-trump-waives-sanctions-tariffs-on-purchase-of-russian-oil-and-gas/article71595243.ece",
+          "published_at": "2026-10-18T01:26:05Z",
+          "published_at_estimated": false,
+          "image_url": "https://th-i.thgim.com/public/incoming/a4lmaw/article71595246.ece/alternates/LANDSCAPE_1200/2026-10-17T015437Z_295967616_RC2P4OAKXNFX_RTRMADP_3_USA-TRUMP.JPG"
+        },
+        {
+          "id": "730248b36c86",
+          "outlet_id": "france24",
+          "headline": "Rubio says Trump to 'analyze' global impact of Russia sanctions during pause",
+          "snippet": "US Secretary of State Marco Rubio said Saturday that US President Donald Trump’s decision to waive sanctions and tariffs on Russia would last 60 days, as the move drew bipartisan criticism and…",
+          "url": "https://www.france24.com/en/americas/20261018-rubio-says-trump-russia-sanctions-waiver-designed-to-analyze-global-impact",
+          "published_at": "2026-10-18T02:39:29Z",
+          "published_at_estimated": false,
+          "image_url": "https://s.france24.com/media/display/1b46d8a0-c7e7-11f1-819e-4dd8ac2cf3bf/w:1024/p:16x9/dcd8c89867be21a42771dcc4bb966f7a0278e690.jpg"
+        },
+        {
+          "id": "aecb5b371e6a",
+          "outlet_id": "thehindu",
+          "headline": "U.S. President wants 60 days to analyse impact of Russia sanctions law, says Marco Rubio",
+          "snippet": "On October 16, Mr. Trump waived key provisions of the Graham Act that authorised punitive tariffs on countries purchasing Russian oil, offering relief to India",
+          "url": "https://www.thehindu.com/news/international/secretary-of-state-marco-rubio-comments-before-departing-to-uzbekistan-and-india/article71599016.ece",
+          "published_at": "2026-10-18T03:38:53Z",
+          "published_at_estimated": false,
+          "image_url": "https://th-i.thgim.com/public/incoming/25t617/article71599032.ece/alternates/LANDSCAPE_1200/2026-10-17T230906Z_1013480284_RC2B5OAX5XWA_RTRMADP_3_USA-RUBIO-UZBEKISTAN.JPG"
+        },
+        {
+          "id": "0766bac99914",
+          "outlet_id": "thehindu",
+          "headline": "Many don’t know what my decision is: Donald Trump on sanctions waiver to Russia",
+          "snippet": "“It's a very good decision, and it's going to be a decision that's good for the country, and I think good for the world because we're really at a world stage,” Mr. Trump said",
+          "url": "https://www.thehindu.com/news/international/many-dont-know-what-my-decision-is-donald-trump-on-sanctions-waiver-to-russia/article71599103.ece",
+          "published_at": "2026-10-18T04:06:58Z",
+          "published_at_estimated": false,
+          "image_url": "https://th-i.thgim.com/public/incoming/p7cs8c/article71599107.ece/alternates/LANDSCAPE_1200/AP10_18_2026_000007B.jpg"
+        },
+        {
+          "id": "0bc96161bcd0",
+          "outlet_id": "koreaherald",
+          "headline": "Trump&apos;s decision to waive Russian sanctions outrages Congress, but no quick counter seen",
+          "snippet": "US President Donald Trump's abrupt decision to waive sanctions on Russia days before they were to take effect drew outrage Saturday from members of Congress, which had overwhelmingly passed the…",
+          "url": "https://www.koreaherald.com/article/10906123",
+          "published_at": "2026-10-18T04:20:09Z",
+          "published_at_estimated": false,
+          "image_url": "https://wimg.heraldcorp.com/news/cms/2026/10/18/rcv.YNA.20260930.PAP20260930041501009_T1.jpg"
+        },
+        {
+          "id": "f05623a16739",
+          "outlet_id": "moscowtimes",
+          "headline": "Rubio Says Trump To Take up to 60 Days To Weigh Russia Sanctions",
+          "snippet": "\"A lot of you don't know what my decision is yet, but we'll figure it out, and you'll figure it out,\" Trump told reporters at his Mar-a-Lago club.",
+          "url": "https://www.themoscowtimes.com/2026/10/18/rubio-says-trump-to-take-up-to-60-days-to-weigh-russia-sanctions-a94014",
+          "published_at": "2026-10-18T08:19:00Z",
+          "published_at_estimated": false,
+          "image_url": null
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "Trump waived, paused or put on hold new US sanctions on Russia.",
+          "sources": [
+            "31355b090948",
+            "f730ff66bcc9",
+            "d8e68ee2ab36",
+            "2234c4f0f370",
+            "1b245e565947",
+            "d61e50d68f8e",
+            "5f53c5c50626",
+            "388119da3869",
+            "f1cde6fc3f33",
+            "db73696cc1c8",
+            "b92d1140ed0b",
+            "93ab7dcc839d",
+            "0bc96161bcd0"
+          ]
+        },
+        {
+          "text": "Trump said the waiver was in the national interest of the United States.",
+          "sources": [
+            "d8e68ee2ab36",
+            "1b245e565947",
+            "d61e50d68f8e"
+          ]
+        },
+        {
+          "text": "The waiver drew criticism from members of Congress of both parties, including Republicans.",
+          "sources": [
+            "5f53c5c50626",
+            "f1cde6fc3f33",
+            "db73696cc1c8",
+            "730248b36c86",
+            "0bc96161bcd0"
+          ]
+        },
+        {
+          "text": "Zelensky objected to the decision amid a deepening rift with Trump.",
+          "sources": [
+            "f730ff66bcc9",
+            "2234c4f0f370",
+            "1b245e565947",
+            "388119da3869",
+            "b92d1140ed0b"
+          ]
+        },
+        {
+          "text": "Rubio said the pause would last up to 60 days while Trump analyses the sanctions' impact.",
+          "sources": [
+            "730248b36c86",
+            "aecb5b371e6a",
+            "f05623a16739"
+          ]
+        },
+        {
+          "text": "The sanctions were halted shortly before they were due to take effect.",
+          "sources": [
+            "f730ff66bcc9",
+            "388119da3869",
+            "0bc96161bcd0"
+          ]
+        },
+        {
+          "text": "The waived measures stem from the Graham Act, which included tariffs.",
+          "sources": [
+            "d61e50d68f8e",
+            "aecb5b371e6a",
+            "31355b090948",
+            "730248b36c86"
+          ]
+        },
+        {
+          "text": "Trump had also agreed a diesel deal with Russia.",
+          "sources": [
+            "f730ff66bcc9",
+            "db73696cc1c8"
+          ]
+        },
+        {
+          "text": "Russian strikes on Ukraine caused deaths around the time of the decision.",
+          "sources": [
+            "2234c4f0f370",
+            "388119da3869"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "f730ff66bcc9",
+              "quote": "halts massive sanctions on Russian goods",
+              "field": "headline"
+            },
+            {
+              "article_id": "2234c4f0f370",
+              "quote": "Russian attacks overnight killed at least four people",
+              "field": "snippet"
+            },
+            {
+              "article_id": "f1cde6fc3f33",
+              "quote": "faces backlash over Russia sanctions relief",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the rift with Zelensky and his call to support the sanctions.",
+              "sources": [
+                "f730ff66bcc9",
+                "2234c4f0f370"
+              ]
+            },
+            {
+              "text": "Highlights casualties from overnight Russian attacks.",
+              "sources": [
+                "2234c4f0f370"
+              ]
+            },
+            {
+              "text": "Places the backlash alongside Trump's midterm campaigning in Kentucky.",
+              "sources": [
+                "f1cde6fc3f33"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "5f53c5c50626",
+              "quote": "draws instant bipartisan backlash",
+              "field": "headline"
+            },
+            {
+              "article_id": "1b245e565947",
+              "quote": "Zelenskyy described the move as unfortunate",
+              "field": "snippet"
+            },
+            {
+              "article_id": "730248b36c86",
+              "quote": "would last 60 days",
+              "field": "snippet"
+            },
+            {
+              "article_id": "b92d1140ed0b",
+              "quote": "as row with Zelensky intensifies",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Reports Trump's stated national interest or national security rationale.",
+              "sources": [
+                "d61e50d68f8e",
+                "1b245e565947",
+                "b92d1140ed0b"
+              ]
+            },
+            {
+              "text": "Emphasises bipartisan condemnation, quoting critics calling it \"irresponsible\".",
+              "sources": [
+                "5f53c5c50626",
+                "730248b36c86"
+              ]
+            },
+            {
+              "text": "Reports Rubio's statement that the pause lasts 60 days.",
+              "sources": [
+                "730248b36c86"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "right",
+          "headline_quotes": [
+            {
+              "article_id": "388119da3869",
+              "quote": "Furious Zelensky accuses Trump",
+              "field": "headline"
+            },
+            {
+              "article_id": "388119da3869",
+              "quote": "deadly strikes hit Ukraine",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with Zelensky's accusation that Trump rewarded Putin, alongside deadly strikes on Ukraine.",
+              "sources": [
+                "388119da3869"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "right",
+          "text": "Does not mention criticism of the waiver from members of Congress of either party.",
+          "sources": [
+            "5f53c5c50626",
+            "f1cde6fc3f33",
+            "730248b36c86"
+          ]
+        },
+        {
+          "lean": "right",
+          "text": "Does not mention Trump's national interest rationale.",
+          "sources": [
+            "1b245e565947",
+            "d61e50d68f8e"
+          ]
+        },
+        {
+          "lean": "left",
+          "text": "Does not mention Rubio's statement that the pause would last 60 days.",
+          "sources": [
+            "730248b36c86"
+          ]
+        },
+        {
+          "lean": "left",
+          "text": "Does not mention Trump's stated national interest justification.",
+          "sources": [
+            "1b245e565947",
+            "d61e50d68f8e"
+          ]
+        }
+      ],
+      "contested_claims": [],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "388119da3869",
+              "quote": "Furious Zelensky accuses Trump",
+              "field": "headline"
+            },
+            {
+              "article_id": "5f53c5c50626",
+              "quote": "draws instant bipartisan backlash",
+              "field": "headline"
+            },
+            {
+              "article_id": "b92d1140ed0b",
+              "quote": "as row with Zelensky intensifies",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Foregrounds Zelensky's objections and Russian strikes on Ukraine.",
+              "sources": [
+                "2234c4f0f370",
+                "1b245e565947",
+                "388119da3869",
+                "b92d1140ed0b",
+                "f730ff66bcc9"
+              ]
+            },
+            {
+              "text": "Emphasises bipartisan backlash in Washington.",
+              "sources": [
+                "5f53c5c50626",
+                "f1cde6fc3f33",
+                "730248b36c86"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "93ab7dcc839d",
+              "quote": "Move offers relief to Indian refiners amid West Asia conflict",
+              "field": "snippet"
+            },
+            {
+              "article_id": "0bc96161bcd0",
+              "quote": "but no quick counter seen",
+              "field": "headline"
+            },
+            {
+              "article_id": "0766bac99914",
+              "quote": "It's a very good decision",
+              "field": "snippet"
+            },
+            {
+              "article_id": "d8e68ee2ab36",
+              "quote": "Trump Signs Order Exempting Russia From New Sanctions Legislation",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Highlights relief for India and Indian refiners from waived tariffs on Russian oil purchases.",
+              "sources": [
+                "93ab7dcc839d",
+                "aecb5b371e6a"
+              ]
+            },
+            {
+              "text": "Quotes Trump's own remarks defending the decision and saying it is not yet final.",
+              "sources": [
+                "0766bac99914",
+                "f05623a16739"
+              ]
+            },
+            {
+              "text": "Reports congressional and Republican criticism, noting no quick counter is expected.",
+              "sources": [
+                "db73696cc1c8",
+                "0bc96161bcd0"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "President Trump waived new sanctions and tariffs on Russia under the Graham Act days before they were due to take effect, telling Congress it was in the national interest. Republicans and Democrats criticised the move and Zelensky objected. Secretary of State Rubio said the pause would last 60 days.",
+        "sources": [
+          "d61e50d68f8e",
+          "1b245e565947",
+          "d8e68ee2ab36",
+          "f730ff66bcc9",
+          "0bc96161bcd0",
+          "5f53c5c50626",
+          "388119da3869",
+          "730248b36c86",
+          "aecb5b371e6a",
+          "31355b090948"
+        ]
+      },
+      "conclusion": {
+        "text": "Coverage agrees that Trump waived new Russia sanctions, citing the national interest, that lawmakers of both parties objected and that Rubio set a 60-day pause. West-bloc outlets foreground Zelensky's objections and Russian strikes; East-bloc outlets add relief for Indian refiners and Trump's own remarks. No direct contradictions appear.",
+        "sources": [
+          "d61e50d68f8e",
+          "d8e68ee2ab36",
+          "5f53c5c50626",
+          "730248b36c86",
+          "aecb5b371e6a",
+          "388119da3869",
+          "2234c4f0f370",
+          "93ab7dcc839d",
+          "0766bac99914"
+        ]
+      },
+      "validation": {
+        "kept": 43,
+        "dropped_by_reason": {}
+      }
+    },
+    {
+      "id": "67086c1ec6aa",
+      "title": "Deadly explosion and fire at Canadian Forces Base Wainwright in Alberta",
+      "rank": 3,
+      "outlet_count": 12,
+      "coverage": {
+        "lean": {
+          "left": 4,
+          "centre": 2,
+          "right": 3
+        },
+        "bloc": {
+          "west": 9,
+          "east": 3
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "e42f856a33b0",
+          "outlet_id": "huffpost",
+          "headline": "Major Fire Breaks Out In Alberta After Deadly Incident At Military Base",
+          "snippet": "Canada's defense minister says there are fatalities and injuries following an incident at a military base in Alberta.",
+          "url": "https://www.huffpost.com/entry/canada-military-base-alberta_n_6ad42993e4b0ce24aed9fee9",
+          "published_at": "2026-10-18T02:09:35Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "5765b4948f19",
+          "outlet_id": "scmp",
+          "headline": "Canada says people killed after incident and fire at Alberta military base",
+          "snippet": "Canada’s defence minister said on Saturday that people were killed and injured in an incident at a military base in Alberta that caused a major fire, while reports said that large numbers of injured…",
+          "url": "https://www.scmp.com/news/world/united-states-canada/article/3371281/fatalities-feared-fire-erupts-canadian-military-base-alberta",
+          "published_at": "2026-10-18T02:19:35Z",
+          "published_at_estimated": false,
+          "image_url": "https://cdn.i-scmp.com/sites/default/files/styles/1280x720/public/d8/images/canvas/2026/10/18/a03571ba-503c-4344-8b66-592ccb3587b2_fc93e58d.jpg?itok=QrkNeZa1&v=1792307683"
+        },
+        {
+          "id": "c4d109c9f386",
+          "outlet_id": "thehindu",
+          "headline": "Major fire breaks out in Alberta after deadly incident at military base",
+          "snippet": "Canada’s Defence Minister says that people have been killed and injured in an incident at a military base in Alberta that caused a major fire",
+          "url": "https://www.thehindu.com/news/international/major-fire-breaks-out-in-alberta-casualties-reported/article71599017.ece",
+          "published_at": "2026-10-18T02:41:05Z",
+          "published_at_estimated": false,
+          "image_url": "https://th-i.thgim.com/public/news/international/rm3cnm/article71599023.ece/alternates/LANDSCAPE_1200/CanadaDefenceMinister.jpg"
+        },
+        {
+          "id": "9360cb011b9d",
+          "outlet_id": "guardian",
+          "headline": "‘Serious incident’ at Alberta military base causes deaths and injuries, Canada officials say",
+          "snippet": "Patients being taken to hospitals in Edmonton as Wainwright ‘completely overwhelmed’ by number of injuries, local doctor says People have been killed and injured after an incident at one of Canada’s…",
+          "url": "https://www.theguardian.com/world/2026/oct/18/serious-incident-alberta-military-base-deaths-injuries-canada-carney-cfb-wainwright",
+          "published_at": "2026-10-18T02:50:29Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.guim.co.uk/img/media/fd2fce9d5801c1379f2c9034bd7fd12e94a8a1be/1408_22_5652_4521/master/5652.jpg?width=460&quality=85&auto=format&fit=max&s=0a3834f7a8112cc4e91882ce162ce813"
+        },
+        {
+          "id": "602416081916",
+          "outlet_id": "aljazeera",
+          "headline": "‘Serious incident’ at Canada military base causes deaths, injuries",
+          "snippet": "Defence Minister David McGuinty says people were killed and injured after an incident caused a major fire in Alberta.",
+          "url": "https://www.aljazeera.com/news/2026/10/18/deaths-injuries-after-fire-at-alberta-military-base-canada-minister",
+          "published_at": "2026-10-18T04:59:29Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "b12ee366c12a",
+          "outlet_id": "fox",
+          "headline": "Fatalities, injuries reported at Canadian Forces Base Wainwright in Alberta after 'incident' that sparked fire",
+          "snippet": "Defense Minister David McGuinty confirmed fatalities and injuries after a major fire broke out at CFB Wainwright in Alberta, one of the country's busiest military bases.",
+          "url": "https://www.foxnews.com/world/fatalities-injuries-reported-canadian-forces-base-wainwright-alberta-after-incident-sparked-fire",
+          "published_at": "2026-10-18T05:41:10Z",
+          "published_at_estimated": false,
+          "image_url": "https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2026/10/931/523/wainwright-health-centre-paramedics.jpg?ve=1&tl=1"
+        },
+        {
+          "id": "c8918b7025be",
+          "outlet_id": "thesun",
+          "headline": "‘At least seven dead’ and dozens injured after ‘serious incident’ at Canada military base as hospitals ‘overwhelmed’",
+          "snippet": "AT least seven people have reportedly been killed after a \"serious incident\" sparked a huge fire at a military base in Canada. Canada's defence minister said large numbers of injured people have…",
+          "url": "https://www.thesun.co.uk/news/40723310/fatal-canada-military-base-fire/",
+          "published_at": "2026-10-18T06:14:03Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.thesun.co.uk/wp-content%2Fuploads%2F2026%2F10%2F2016-cfb-wainwright-alberta-canada-1116595171.jpg?quality%3D90%26"
+        },
+        {
+          "id": "e7a377df9188",
+          "outlet_id": "npr",
+          "headline": "Major fire breaks out in Alberta after deadly incident at military base",
+          "snippet": "Canada's defense minister said Saturday that people were killed and injured in an incident at a military base in Alberta that caused a major fire.",
+          "url": "https://www.npr.org/2026/10/18/nx-s1-6007276/fire-alberta-deadly-canada-military-base",
+          "published_at": "2026-10-18T07:56:08Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "f6b0410ebac3",
+          "outlet_id": "bbc",
+          "headline": "Several dead or injured in major fire at Canada military base",
+          "snippet": "Officials have not given a cause or death toll, citing the \"very active and delicate\" situation at Canadian Forces Base Wainwright.",
+          "url": "https://www.bbc.co.uk/news/articles/cr86z0w4lxdxo",
+          "published_at": "2026-10-18T08:52:41Z",
+          "published_at_estimated": false,
+          "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/951a/live/d1508b70-cac9-11f1-9a39-31b474234113.jpg"
+        },
+        {
+          "id": "1a9a1f2dad74",
+          "outlet_id": "nyt",
+          "headline": "Deadly ‘Incident’ at Canadian Forces Base Wainwright Sparks Fire",
+          "snippet": "The defense minister said people were killed and injured at a base in Alberta, but officials did not offer details on the cause.",
+          "url": "https://www.nytimes.com/2026/10/17/world/canada/fire-canadian-army-base-wainwright.html",
+          "published_at": "2026-10-18T10:07:33Z",
+          "published_at_estimated": false,
+          "image_url": "https://static01.nyt.com/images/2026/10/18/multimedia/18int-canada-alberta-fire-chfb/18int-canada-alberta-fire-chfb-mediumSquareAt3X.jpg"
+        },
+        {
+          "id": "ef13d07d75cc",
+          "outlet_id": "dailymail",
+          "headline": "At least seven dead and dozens injured after explosion at Canadian military base as minister warns situation is 'very, very active and delicate'",
+          "snippet": "Multiple people have died and others left injured after an explosion at a Canadian military base. The incident happened on Saturday inside the Canadian Forces Base Wainwright in Alberta.",
+          "url": "https://www.dailymail.com/news/article-16218011/Multiple-dead-explosion-Canadian-military-base.html",
+          "published_at": "2026-10-18T10:12:41Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.dailymail.com/1s/2026/10/18/09/111934377-0-image-a-29_1792311908173.jpg"
+        },
+        {
+          "id": "062bf3974588",
+          "outlet_id": "mirror",
+          "headline": "CFB Wainwright fire - latest: 'At least 7 dead' in disaster at Alberta military base",
+          "snippet": "At least seven people are dead and dozens more have been left injured after an explosion and fire at CFB Wainwright, multiple military sources have said",
+          "url": "https://www.mirror.co.uk/news/world-news/cfb-wainwright-fire-canada-alberta-37783854",
+          "published_at": "2026-10-18T10:35:22Z",
+          "published_at_estimated": false,
+          "image_url": "https://i2-prod.mirror.co.uk/incoming/article37784048.ece/ALTERNATES/s615/0_Canada-Military-Base-Fire-26291249446417.jpg"
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "Canada's defence minister said people were killed and injured in an incident at a military base in Alberta that caused a major fire.",
+          "sources": [
+            "e42f856a33b0",
+            "5765b4948f19",
+            "c4d109c9f386",
+            "9360cb011b9d",
+            "602416081916",
+            "b12ee366c12a",
+            "c8918b7025be",
+            "e7a377df9188",
+            "f6b0410ebac3",
+            "1a9a1f2dad74",
+            "ef13d07d75cc",
+            "062bf3974588"
+          ]
+        },
+        {
+          "text": "The base involved is Canadian Forces Base (CFB) Wainwright.",
+          "sources": [
+            "b12ee366c12a",
+            "f6b0410ebac3",
+            "1a9a1f2dad74",
+            "ef13d07d75cc",
+            "062bf3974588"
+          ]
+        },
+        {
+          "text": "The defence minister is named as David McGuinty.",
+          "sources": [
+            "602416081916",
+            "b12ee366c12a"
+          ]
+        },
+        {
+          "text": "Officials did not give a cause for the incident.",
+          "sources": [
+            "f6b0410ebac3",
+            "1a9a1f2dad74"
+          ]
+        },
+        {
+          "text": "At least seven people were reported dead and dozens injured.",
+          "sources": [
+            "c8918b7025be",
+            "ef13d07d75cc",
+            "062bf3974588"
+          ]
+        },
+        {
+          "text": "Large numbers of people were injured and hospitals were described as overwhelmed.",
+          "sources": [
+            "5765b4948f19",
+            "9360cb011b9d",
+            "c8918b7025be"
+          ]
+        },
+        {
+          "text": "The situation was described as very active and delicate.",
+          "sources": [
+            "f6b0410ebac3",
+            "ef13d07d75cc"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "e42f856a33b0",
+              "quote": "Major Fire Breaks Out In Alberta After Deadly Incident At Military Base",
+              "field": "headline"
+            },
+            {
+              "article_id": "9360cb011b9d",
+              "quote": "Wainwright ‘completely overwhelmed’ by number of injuries",
+              "field": "snippet"
+            },
+            {
+              "article_id": "1a9a1f2dad74",
+              "quote": "officials did not offer details on the cause",
+              "field": "snippet"
+            },
+            {
+              "article_id": "062bf3974588",
+              "quote": "'At least 7 dead' in disaster at Alberta military base",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with patients being taken to hospitals in Edmonton and a local doctor saying Wainwright was overwhelmed.",
+              "sources": [
+                "9360cb011b9d"
+              ]
+            },
+            {
+              "text": "Notes that officials did not give details on the cause.",
+              "sources": [
+                "1a9a1f2dad74"
+              ]
+            },
+            {
+              "text": "Reports at least seven dead after an explosion and fire, attributed to military sources.",
+              "sources": [
+                "062bf3974588"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "f6b0410ebac3",
+              "quote": "Several dead or injured in major fire at Canada military base",
+              "field": "headline"
+            },
+            {
+              "article_id": "f6b0410ebac3",
+              "quote": "Officials have not given a cause or death toll",
+              "field": "snippet"
+            },
+            {
+              "article_id": "e7a377df9188",
+              "quote": "people were killed and injured in an incident at a military base in Alberta",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Foregrounds that officials have not given a cause or death toll, citing a very active and delicate situation.",
+              "sources": [
+                "f6b0410ebac3"
+              ]
+            },
+            {
+              "text": "Leads with the defence minister's statement on deaths and injuries.",
+              "sources": [
+                "e7a377df9188"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "right",
+          "headline_quotes": [
+            {
+              "article_id": "c8918b7025be",
+              "quote": "‘At least seven dead’ and dozens injured",
+              "field": "headline"
+            },
+            {
+              "article_id": "ef13d07d75cc",
+              "quote": "after explosion at Canadian military base",
+              "field": "headline"
+            },
+            {
+              "article_id": "b12ee366c12a",
+              "quote": "one of the country's busiest military bases",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with a figure of at least seven dead and dozens injured.",
+              "sources": [
+                "c8918b7025be",
+                "ef13d07d75cc"
+              ]
+            },
+            {
+              "text": "Describes the event as an explosion.",
+              "sources": [
+                "ef13d07d75cc"
+              ]
+            },
+            {
+              "text": "Reports hospitals as overwhelmed.",
+              "sources": [
+                "c8918b7025be"
+              ]
+            },
+            {
+              "text": "Describes CFB Wainwright as one of Canada's busiest military bases.",
+              "sources": [
+                "b12ee366c12a"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not mention the reported figure of at least seven dead.",
+          "sources": [
+            "c8918b7025be",
+            "ef13d07d75cc",
+            "062bf3974588"
+          ]
+        },
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not mention an explosion.",
+          "sources": [
+            "ef13d07d75cc",
+            "062bf3974588"
+          ]
+        },
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not mention hospitals being overwhelmed.",
+          "sources": [
+            "9360cb011b9d",
+            "c8918b7025be"
+          ]
+        },
+        {
+          "lean": "right",
+          "text": "Right-leaning coverage does not mention that officials gave no cause for the incident.",
+          "sources": [
+            "f6b0410ebac3",
+            "1a9a1f2dad74"
+          ]
+        },
+        {
+          "lean": "left",
+          "text": "Left-leaning coverage does not mention the minister describing the situation as very active and delicate.",
+          "sources": [
+            "f6b0410ebac3",
+            "ef13d07d75cc"
+          ]
+        }
+      ],
+      "contested_claims": [],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "1a9a1f2dad74",
+              "quote": "Deadly ‘Incident’ at Canadian Forces Base Wainwright Sparks Fire",
+              "field": "headline"
+            },
+            {
+              "article_id": "ef13d07d75cc",
+              "quote": "At least seven dead and dozens injured after explosion",
+              "field": "headline"
+            },
+            {
+              "article_id": "f6b0410ebac3",
+              "quote": "Officials have not given a cause or death toll",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Reports a figure of at least seven dead and describes an explosion.",
+              "sources": [
+                "c8918b7025be",
+                "ef13d07d75cc",
+                "062bf3974588"
+              ]
+            },
+            {
+              "text": "Notes that officials gave no cause.",
+              "sources": [
+                "f6b0410ebac3",
+                "1a9a1f2dad74"
+              ]
+            },
+            {
+              "text": "Reports hospitals being overwhelmed.",
+              "sources": [
+                "9360cb011b9d",
+                "c8918b7025be"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "5765b4948f19",
+              "quote": "Canada says people killed after incident and fire at Alberta military base",
+              "field": "headline"
+            },
+            {
+              "article_id": "602416081916",
+              "quote": "‘Serious incident’ at Canada military base causes deaths, injuries",
+              "field": "headline"
+            },
+            {
+              "article_id": "c4d109c9f386",
+              "quote": "Major fire breaks out in Alberta after deadly incident at military base",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the defence minister's statement that people were killed and injured in an incident that caused a major fire.",
+              "sources": [
+                "5765b4948f19",
+                "c4d109c9f386",
+                "602416081916"
+              ]
+            },
+            {
+              "text": "Mentions reports of large numbers of injured.",
+              "sources": [
+                "5765b4948f19"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "An incident at Canadian Forces Base Wainwright in Alberta caused a major fire, and Canada's defence minister, David McGuinty, said people were killed and injured. Officials gave no cause or death toll, while some outlets reported at least seven dead and dozens injured after an explosion.",
+        "sources": [
+          "e42f856a33b0",
+          "5765b4948f19",
+          "c4d109c9f386",
+          "9360cb011b9d",
+          "602416081916",
+          "b12ee366c12a",
+          "c8918b7025be",
+          "e7a377df9188",
+          "f6b0410ebac3",
+          "1a9a1f2dad74",
+          "ef13d07d75cc",
+          "062bf3974588"
+        ]
+      },
+      "conclusion": null,
+      "validation": {
+        "kept": 43,
+        "dropped_by_reason": {
+          "untrusted_text": 1
+        }
+      }
+    },
+    {
+      "id": "ab45edda99cf",
+      "title": "Pope Leo XIV discharged from hospital after lung cancer surgery",
+      "rank": 4,
+      "outlet_count": 9,
+      "coverage": {
+        "lean": {
+          "left": 4,
+          "centre": 3,
+          "right": 1
+        },
+        "bloc": {
+          "west": 8,
+          "east": 1
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "28b055828224",
+          "outlet_id": "mirror",
+          "headline": "Major Pope Leo hospital update as Vatican gives statement after cancer surgery",
+          "snippet": "The Pope underwent blood tests and a chest X-ray in the morning, which confirm that his clinical condition allows for him to leave hospital, his doctors have said",
+          "url": "https://www.mirror.co.uk/news/world-news/pope-leo-health-update-vatican-37782506",
+          "published_at": "2026-10-17T10:09:29Z",
+          "published_at_estimated": false,
+          "image_url": "https://i2-prod.mirror.co.uk/incoming/article37769963.ece/ALTERNATES/s615/0_VATICAN-POPE-RELIGION-HEALTH.jpg"
+        },
+        {
+          "id": "74f7768a5017",
+          "outlet_id": "nbc",
+          "headline": "Pope Leo discharged from hospital after lung cancer surgery",
+          "snippet": "Pope Leo XIV was discharged from the hospital on Saturday after undergoing surgery for lung cancer, with his surgeon saying he could be fully recovered in about 10 days.",
+          "url": "https://www.nbcnews.com/world/pope-leo-xiv/pope-leo-discharged-hospital-lung-cancer-surgery-rcna604005",
+          "published_at": "2026-10-17T10:30:44Z",
+          "published_at_estimated": false,
+          "image_url": "https://media-cldnry.s-nbcnews.com/image/upload/t_fit_1500w/rockcms/2026-10/261017-pope-leo-ch-0945-fd2fb0.jpg"
+        },
+        {
+          "id": "41bcca2fd06d",
+          "outlet_id": "fox",
+          "headline": "Pope Leo XIV discharged from hospital, will return to Vatican after surgery to remove lung cancer",
+          "snippet": "Pope Leo XIV received blood tests and a chest X-ray at Gemelli Hospital, confirming he is well enough to return to the Vatican after surgery.",
+          "url": "https://www.foxnews.com/world/pope-leo-xiv-discharged-hospital-return-vatican-surgery-remove-lung-cancer",
+          "published_at": "2026-10-17T11:19:52Z",
+          "published_at_estimated": false,
+          "image_url": "https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2026/10/931/523/pope_leo_leaving.jpg?ve=1&tl=1"
+        },
+        {
+          "id": "80443247d48f",
+          "outlet_id": "huffpost",
+          "headline": "Pope Returns To Vatican Days After Surgery; Surgeon Says He Should Be Fit For Latin America Tour",
+          "snippet": "Leo announced last Sunday to the faithful gathered in St. Peter’s Square that doctors had identified a nodule on his lung, and that it would be removed.",
+          "url": "https://www.huffpost.com/entry/pope-leo-to-be-released-hospital-saturday-4-days-lung-cancer-surger_n_6ad35f25e4b0ce24aed9f08f",
+          "published_at": "2026-10-17T11:51:49Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "7ffd1d1b4687",
+          "outlet_id": "axios",
+          "headline": "A welcome recovery milestone for Pope Leo after cancer surgery",
+          "snippet": "Pope Leo XIV was discharged from the hospital on Saturday after having surgery to remove a cancerous nodule in his lungs. Why it matters: His discharge clears the way for his rigorous upcoming…",
+          "url": "https://www.axios.com/2026/10/17/pope-leo-xiv-lung-cancer-treatment-hospital-discharge",
+          "published_at": "2026-10-17T13:36:50Z",
+          "published_at_estimated": false,
+          "image_url": "https://images.axios.com/LBY1NdP8kL-pHIbYtbPEjuaoYaw=/0x285:5000x3097/1366x768/2026/10/15/1792075240506.jpg"
+        },
+        {
+          "id": "639d4a8ed38a",
+          "outlet_id": "bbc",
+          "headline": "Pope discharged from hospital days after lung cancer surgery",
+          "snippet": "The pontiff will give the traditional Angelus prayer and blessing in St Peter's Square on Sunday.",
+          "url": "https://www.bbc.co.uk/news/articles/c5x2vkddrkrko",
+          "published_at": "2026-10-17T13:51:36Z",
+          "published_at_estimated": false,
+          "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/8c6c/live/9aad8f70-ca31-11f1-9ab2-b325ce61f9d2.jpg"
+        },
+        {
+          "id": "58de9be785aa",
+          "outlet_id": "npr",
+          "headline": "Pope Leo XIV leaves hospital days after lung cancer surgery",
+          "snippet": "The Pope left Rome's Gemelli Hospital Saturday, days after surgery for lung cancer removed the lower lobe of his right lung. He is currently scheduled to travel to Latin America in November.",
+          "url": "https://www.npr.org/2026/10/17/nx-s1-6006762/pope-leo-xiv-leaves-hospital-days-after-lung-cancer-surgery",
+          "published_at": "2026-10-17T15:10:14Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "92910648e4bc",
+          "outlet_id": "nyt",
+          "headline": "Pope Leo Leaves Hospital, Days After Lung Cancer Surgery",
+          "snippet": "Leo XIV had been treated for lung cancer at Gemelli Hospital in Rome.",
+          "url": "https://www.nytimes.com/2026/10/17/world/europe/pope-leo-discharged-hospital.html",
+          "published_at": "2026-10-17T16:17:00Z",
+          "published_at_estimated": false,
+          "image_url": "https://static01.nyt.com/images/2026/10/17/multimedia/17int-pope-discharged-cfgk/17int-pope-discharged-cfgk-mediumSquareAt3X.jpg"
+        },
+        {
+          "id": "18137ddae3dc",
+          "outlet_id": "mirror",
+          "headline": "Pope Leo XIV returns to Vatican and he issues major health update to well-wishers",
+          "snippet": "Dr. Stefano Margaritora, the pope's surgeon, has said he has put his 'heart and soul' into recovery ahead of an ambitious planned trip to South America next month",
+          "url": "https://www.mirror.co.uk/news/world-news/pope-leo-xiv-cancer-update-37783824",
+          "published_at": "2026-10-17T22:42:53Z",
+          "published_at_estimated": false,
+          "image_url": "https://i2-prod.mirror.co.uk/incoming/article37783825.ece/ALTERNATES/s615/1_gettyimages-2300656979-612x612.jpg"
+        },
+        {
+          "id": "cd7aab50bd16",
+          "outlet_id": "koreaherald",
+          "headline": "Pope returns to Vatican days after surgery; surgeon says he should be fit for Latin America tour",
+          "snippet": "VATICAN CITY (AP) -- Pope Leo XIV returned to the Vatican on Saturday days after lung cancer surgery, as his surgeon said there are \"no clinical reasons\" to prevent his planned trip to Latin America…",
+          "url": "https://www.koreaherald.com/article/10906082",
+          "published_at": "2026-10-18T02:39:14Z",
+          "published_at_estimated": false,
+          "image_url": "https://wimg.heraldcorp.com/news/cms/2026/10/18/rcv.YNA.20261018.PEP20261017167001009_T1.jpg"
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "Pope Leo XIV was discharged from or left hospital after lung cancer surgery.",
+          "sources": [
+            "74f7768a5017",
+            "41bcca2fd06d",
+            "7ffd1d1b4687",
+            "639d4a8ed38a",
+            "58de9be785aa",
+            "92910648e4bc",
+            "28b055828224",
+            "80443247d48f",
+            "cd7aab50bd16"
+          ]
+        },
+        {
+          "text": "The discharge took place on Saturday.",
+          "sources": [
+            "74f7768a5017",
+            "7ffd1d1b4687",
+            "58de9be785aa",
+            "cd7aab50bd16"
+          ]
+        },
+        {
+          "text": "He was treated at Gemelli Hospital in Rome.",
+          "sources": [
+            "41bcca2fd06d",
+            "58de9be785aa",
+            "92910648e4bc"
+          ]
+        },
+        {
+          "text": "Blood tests and a chest X-ray confirmed he was well enough to leave hospital.",
+          "sources": [
+            "28b055828224",
+            "41bcca2fd06d"
+          ]
+        },
+        {
+          "text": "He returned to the Vatican.",
+          "sources": [
+            "41bcca2fd06d",
+            "80443247d48f",
+            "18137ddae3dc",
+            "cd7aab50bd16"
+          ]
+        },
+        {
+          "text": "He has a trip to Latin America or South America planned for next month or November.",
+          "sources": [
+            "80443247d48f",
+            "58de9be785aa",
+            "18137ddae3dc",
+            "cd7aab50bd16"
+          ]
+        },
+        {
+          "text": "The surgery removed a cancerous nodule from his lung.",
+          "sources": [
+            "80443247d48f",
+            "7ffd1d1b4687"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "28b055828224",
+              "quote": "Major Pope Leo hospital update",
+              "field": "headline"
+            },
+            {
+              "article_id": "74f7768a5017",
+              "quote": "he could be fully recovered in about 10 days",
+              "field": "snippet"
+            },
+            {
+              "article_id": "80443247d48f",
+              "quote": "Surgeon Says He Should Be Fit For Latin America Tour",
+              "field": "headline"
+            },
+            {
+              "article_id": "18137ddae3dc",
+              "quote": "he has put his 'heart and soul' into recovery",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the surgeon's statements on recovery time and fitness for the planned trip.",
+              "sources": [
+                "74f7768a5017",
+                "80443247d48f",
+                "18137ddae3dc"
+              ]
+            },
+            {
+              "text": "Notes the Pope had announced in St Peter's Square that a nodule had been found on his lung.",
+              "sources": [
+                "80443247d48f"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "7ffd1d1b4687",
+              "quote": "A welcome recovery milestone for Pope Leo",
+              "field": "headline"
+            },
+            {
+              "article_id": "639d4a8ed38a",
+              "quote": "traditional Angelus prayer and blessing in St Peter's Square on Sunday",
+              "field": "snippet"
+            },
+            {
+              "article_id": "58de9be785aa",
+              "quote": "removed the lower lobe of his right lung",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Describes the discharge as a recovery milestone clearing the way for his upcoming schedule.",
+              "sources": [
+                "7ffd1d1b4687"
+              ]
+            },
+            {
+              "text": "Highlights his next public duties and travel plans, including Sunday's Angelus and the November trip.",
+              "sources": [
+                "639d4a8ed38a",
+                "58de9be785aa"
+              ]
+            },
+            {
+              "text": "Details the surgery as removing the lower lobe of his right lung.",
+              "sources": [
+                "58de9be785aa"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "right",
+          "headline_quotes": [
+            {
+              "article_id": "41bcca2fd06d",
+              "quote": "will return to Vatican after surgery to remove lung cancer",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the medical tests at Gemelli Hospital confirming he is well enough to return to the Vatican.",
+              "sources": [
+                "41bcca2fd06d"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "right",
+          "text": "Right-leaning coverage does not mention the planned trip to Latin America.",
+          "sources": [
+            "80443247d48f",
+            "58de9be785aa",
+            "18137ddae3dc"
+          ]
+        },
+        {
+          "lean": "right",
+          "text": "Right-leaning coverage does not mention the surgeon's comments on his recovery.",
+          "sources": [
+            "74f7768a5017",
+            "80443247d48f",
+            "18137ddae3dc"
+          ]
+        }
+      ],
+      "contested_claims": [],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "74f7768a5017",
+              "quote": "Pope Leo discharged from hospital after lung cancer surgery",
+              "field": "headline"
+            },
+            {
+              "article_id": "7ffd1d1b4687",
+              "quote": "A welcome recovery milestone for Pope Leo",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Covers the discharge, medical tests, details of the surgery and his upcoming duties and travel.",
+              "sources": [
+                "74f7768a5017",
+                "41bcca2fd06d",
+                "28b055828224",
+                "58de9be785aa",
+                "639d4a8ed38a",
+                "7ffd1d1b4687"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "cd7aab50bd16",
+              "quote": "there are \"no clinical reasons\" to prevent his planned trip to Latin America",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Carries an AP report leading with the surgeon's view that nothing prevents the Latin America trip.",
+              "sources": [
+                "cd7aab50bd16"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "Pope Leo XIV left Rome's Gemelli Hospital on Saturday and returned to the Vatican, days after surgery for lung cancer. Blood tests and a chest X-ray confirmed he was well enough to leave, and his surgeon said he should be fit for a planned trip to Latin America.",
+        "sources": [
+          "74f7768a5017",
+          "41bcca2fd06d",
+          "28b055828224",
+          "58de9be785aa",
+          "92910648e4bc",
+          "80443247d48f",
+          "cd7aab50bd16",
+          "639d4a8ed38a",
+          "7ffd1d1b4687",
+          "18137ddae3dc"
+        ]
+      },
+      "conclusion": {
+        "text": "All sides report that Pope Leo XIV left hospital and returned to the Vatican days after lung cancer surgery. Left-leaning and East-bloc coverage leads with the surgeon's outlook for the Latin America trip, centre coverage with upcoming duties and surgical detail, and right-leaning coverage with the medical tests. No claims are contested.",
+        "sources": [
+          "74f7768a5017",
+          "80443247d48f",
+          "cd7aab50bd16",
+          "639d4a8ed38a",
+          "58de9be785aa",
+          "41bcca2fd06d"
+        ]
+      },
+      "validation": {
+        "kept": 30,
+        "dropped_by_reason": {}
+      }
+    },
+    {
+      "id": "59989e3ef533",
+      "title": "Stampede at Hindu festival in Kolkata kills at least 19",
+      "rank": 5,
+      "outlet_count": 7,
+      "coverage": {
+        "lean": {
+          "left": 2,
+          "centre": 2,
+          "right": 0
+        },
+        "bloc": {
+          "west": 4,
+          "east": 3
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "3ca1734af052",
+          "outlet_id": "bbc",
+          "headline": "At least 17 dead in crush at Hindu festival event in India",
+          "snippet": "Many more have been injured at an event in the Indian city of Kolkata to mark a Hindu festival.",
+          "url": "https://www.bbc.co.uk/news/articles/c820vwq7qg2ko",
+          "published_at": "2026-10-17T19:19:16Z",
+          "published_at_estimated": false,
+          "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/60d0/live/caaed220-ca5d-11f1-852c-2b93a8fc4799.jpg"
+        },
+        {
+          "id": "1a70447c09ee",
+          "outlet_id": "sky",
+          "headline": "Crush at religious festival kills at least 17 and injures dozens in India",
+          "snippet": "At least 17 people have died and dozens more are injured after a crush at a religious festival in India, local media reports.",
+          "url": "https://news.sky.com/story/crush-at-religious-festival-kills-at-least-17-and-injures-dozens-in-india-13600451",
+          "published_at": "2026-10-17T19:37:00Z",
+          "published_at_estimated": false,
+          "image_url": "https://e3.365dm.com/26/10/1920x1080/skynews-kolkata-india_7379416.jpg?20261017204837"
+        },
+        {
+          "id": "cf1728dd7dd7",
+          "outlet_id": "scmp",
+          "headline": "19 dead, 25 hurt in stampede at India religious festival",
+          "snippet": "At least 19 people were killed and two dozen more injured on Saturday in eastern India after a stampede that occurred during sudden rainfall at a Hindu religious gathering, officials and Indian…",
+          "url": "https://www.scmp.com/news/asia/south-asia/article/3371278/19-dead-25-hurt-stampede-india-religious-festival",
+          "published_at": "2026-10-17T23:31:57Z",
+          "published_at_estimated": false,
+          "image_url": "https://cdn.i-scmp.com/sites/default/files/styles/1280x720/public/d8/images/canvas/2026/10/18/64fba989-a5c5-4fce-81d2-02a048cfa72b_3fa00724.jpg?itok=QzHzJAPu&v=1792279908"
+        },
+        {
+          "id": "2b5697d6adf4",
+          "outlet_id": "japantimes",
+          "headline": "At least 19 dead and 25 hurt in stampede at India religious gathering",
+          "snippet": "Deadly crowd incidents are a frequent occurrence at Indian mass events, such as religious festivals, due to poor management and safety lapses.",
+          "url": "https://www.japantimes.co.jp/news/2026/10/18/asia-pacific/stampede-india-religious-gathering/",
+          "published_at": "2026-10-18T00:05:00Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.japantimes.co.jp/japantimes/uploads/images/2026/10/18/thumbs/400x400/569069.jpg"
+        },
+        {
+          "id": "d95d55ed19b2",
+          "outlet_id": "aljazeera",
+          "headline": "At least 19 dead in stampede at Kolkata Hindu festival",
+          "snippet": "A seven-year-old girl was among at least 19 people killed in a stampede during a Hindu festival in Kolkata, India.",
+          "url": "https://www.aljazeera.com/video/newsfeed/2026/10/18/at-least-19-dead-in-stampede-at-kolkata-hindu-festival",
+          "published_at": "2026-10-18T04:21:46Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "f1efdf65449a",
+          "outlet_id": "nyt",
+          "headline": "At Least 19 Dead After Stampede at Indian Religious Event",
+          "snippet": "Such deadly crowd events are relatively common in India, and it was unclear what caused this one. The authorities detained the event’s organizer and others involved.",
+          "url": "https://www.nytimes.com/2026/10/17/world/asia/india-deadly-stampede-kolkata.html",
+          "published_at": "2026-10-18T08:47:37Z",
+          "published_at_estimated": false,
+          "image_url": "https://static01.nyt.com/images/2026/10/17/multimedia/17int-india-stampede-qcjh/17int-india-stampede-qcjh-mediumSquareAt3X.jpg"
+        },
+        {
+          "id": "93eb8c4e4b0e",
+          "outlet_id": "mirror",
+          "headline": "Kolkata stampede leaves at least 19 dead including children - mum loses both daughters",
+          "snippet": "At least 19 were killed, mostly women and children, in the stampede during the annual Hindu festival of Durga Puja in Kolkata in eastern India's West Bengal state",
+          "url": "https://www.mirror.co.uk/news/world-news/kolkata-stampede-durga-puja-deaths-37784232",
+          "published_at": "2026-10-18T09:53:40Z",
+          "published_at_estimated": false,
+          "image_url": "https://i2-prod.mirror.co.uk/incoming/article37784246.ece/ALTERNATES/s615/0_INDIA-RELIGION-HINDUISM-ACCIDENT-STAMPEDE.jpg"
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "At least 19 people were killed in a stampede at a Hindu or religious festival in India.",
+          "sources": [
+            "cf1728dd7dd7",
+            "2b5697d6adf4",
+            "d95d55ed19b2",
+            "f1efdf65449a",
+            "93eb8c4e4b0e"
+          ]
+        },
+        {
+          "text": "Earlier reports gave a toll of at least 17 dead in a crush at the festival.",
+          "sources": [
+            "3ca1734af052",
+            "1a70447c09ee"
+          ]
+        },
+        {
+          "text": "Many people, described as dozens or 25, were injured.",
+          "sources": [
+            "3ca1734af052",
+            "1a70447c09ee",
+            "cf1728dd7dd7",
+            "2b5697d6adf4"
+          ]
+        },
+        {
+          "text": "The incident took place in Kolkata, in eastern India.",
+          "sources": [
+            "3ca1734af052",
+            "d95d55ed19b2",
+            "93eb8c4e4b0e",
+            "cf1728dd7dd7"
+          ]
+        },
+        {
+          "text": "Children were among those killed.",
+          "sources": [
+            "d95d55ed19b2",
+            "93eb8c4e4b0e"
+          ]
+        },
+        {
+          "text": "Deadly crowd incidents are described as common or frequent at events in India.",
+          "sources": [
+            "2b5697d6adf4",
+            "f1efdf65449a"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "93eb8c4e4b0e",
+              "quote": "mum loses both daughters",
+              "field": "headline"
+            },
+            {
+              "article_id": "93eb8c4e4b0e",
+              "quote": "mostly women and children",
+              "field": "snippet"
+            },
+            {
+              "article_id": "f1efdf65449a",
+              "quote": "it was unclear what caused this one",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Foregrounds the victims, mostly women and children, including a mother who lost both daughters, at the Durga Puja festival.",
+              "sources": [
+                "93eb8c4e4b0e"
+              ]
+            },
+            {
+              "text": "Notes the cause was unclear and that authorities detained the organiser and others involved.",
+              "sources": [
+                "f1efdf65449a"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "3ca1734af052",
+              "quote": "At least 17 dead in crush at Hindu festival event in India",
+              "field": "headline"
+            },
+            {
+              "article_id": "1a70447c09ee",
+              "quote": "Crush at religious festival kills at least 17 and injures dozens",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Describes the event as a crush and leads with a toll of at least 17 dead and many or dozens injured.",
+              "sources": [
+                "3ca1734af052",
+                "1a70447c09ee"
+              ]
+            },
+            {
+              "text": "Attributes the figures to local media reports.",
+              "sources": [
+                "1a70447c09ee"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not mention the detention of the event's organiser and others involved.",
+          "sources": [
+            "f1efdf65449a"
+          ]
+        },
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not mention that children were among the dead.",
+          "sources": [
+            "93eb8c4e4b0e"
+          ]
+        },
+        {
+          "lean": "left",
+          "text": "Left coverage does not mention the number of people injured.",
+          "sources": [
+            "3ca1734af052",
+            "1a70447c09ee"
+          ]
+        }
+      ],
+      "contested_claims": [],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "3ca1734af052",
+              "quote": "crush at Hindu festival event",
+              "field": "headline"
+            },
+            {
+              "article_id": "f1efdf65449a",
+              "quote": "The authorities detained the event’s organizer and others involved.",
+              "field": "snippet"
+            },
+            {
+              "article_id": "93eb8c4e4b0e",
+              "quote": "mum loses both daughters",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Reports the toll rising from 17 to 19, the detention of the organiser, and women and children among the victims.",
+              "sources": [
+                "3ca1734af052",
+                "1a70447c09ee",
+                "f1efdf65449a",
+                "93eb8c4e4b0e"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "cf1728dd7dd7",
+              "quote": "a stampede that occurred during sudden rainfall",
+              "field": "snippet"
+            },
+            {
+              "article_id": "2b5697d6adf4",
+              "quote": "due to poor management and safety lapses",
+              "field": "snippet"
+            },
+            {
+              "article_id": "d95d55ed19b2",
+              "quote": "A seven-year-old girl was among at least 19 people killed",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Notes the stampede occurred during sudden rainfall, citing officials.",
+              "sources": [
+                "cf1728dd7dd7"
+              ]
+            },
+            {
+              "text": "Attributes frequent crowd incidents at Indian mass events to poor management and safety lapses.",
+              "sources": [
+                "2b5697d6adf4"
+              ]
+            },
+            {
+              "text": "Highlights a seven-year-old girl among the dead.",
+              "sources": [
+                "d95d55ed19b2"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "At least 19 people were killed in a stampede at a Hindu festival in Kolkata, eastern India, with dozens more injured; children were among the dead. Earlier reports put the toll at 17. The authorities detained the event's organiser and others involved.",
+        "sources": [
+          "cf1728dd7dd7",
+          "2b5697d6adf4",
+          "d95d55ed19b2",
+          "f1efdf65449a",
+          "93eb8c4e4b0e",
+          "3ca1734af052",
+          "1a70447c09ee"
+        ]
+      },
+      "conclusion": {
+        "text": "All sides report at least 19 dead in a stampede at a Hindu festival in India, with early Western reports giving 17. Left coverage foregrounds victims and the organiser's detention, centre the crush and injuries. East-bloc coverage notes sudden rainfall and safety lapses, while one West-bloc report says the cause was unclear.",
+        "sources": [
+          "cf1728dd7dd7",
+          "2b5697d6adf4",
+          "d95d55ed19b2",
+          "f1efdf65449a",
+          "93eb8c4e4b0e",
+          "3ca1734af052",
+          "1a70447c09ee"
+        ]
+      },
+      "validation": {
+        "kept": 30,
+        "dropped_by_reason": {}
+      }
+    },
+    {
+      "id": "2449aafadcf4",
+      "title": "Israeli settlers attack European diplomats and French mayor in West Bank",
+      "rank": 6,
+      "outlet_count": 6,
+      "coverage": {
+        "lean": {
+          "left": 2,
+          "centre": 3,
+          "right": 0
+        },
+        "bloc": {
+          "west": 5,
+          "east": 1
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "46f8d8a36df4",
+          "outlet_id": "france24",
+          "headline": "🔴 Israeli settlers beat French mayor, attack European diplomatic cars in West Bank",
+          "snippet": "",
+          "url": "https://www.france24.com/en/middle-east/20261017-israeli-settlers-attack-european-delegation-convoy-in-west-bank-beat-french-mayor",
+          "published_at": "2026-10-17T14:58:54Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "98553d828dea",
+          "outlet_id": "sky",
+          "headline": "Israeli settlers attack European diplomats and French mayor in West Bank, Belgium says",
+          "snippet": "Israeli settlers have allegedly attacked Palestinian civilians, European diplomats and a French mayor in the West Bank, sparking international condemnation.",
+          "url": "https://news.sky.com/story/israeli-settlers-attack-european-diplomats-and-french-mayor-in-west-bank-belgium-says-13600419",
+          "published_at": "2026-10-17T17:38:00Z",
+          "published_at_estimated": false,
+          "image_url": "https://e3.365dm.com/26/10/1920x1080/skynews-westbank-taybeh_7379338.jpg?20261017185135"
+        },
+        {
+          "id": "1bfb3287f8a7",
+          "outlet_id": "scmp",
+          "headline": "Israeli settlers attack European diplomats, beat up French mayor in West Bank",
+          "snippet": "Israeli settlers attacked a convoy of European diplomats in the West Bank and beat up a visiting French mayor on Saturday, witnesses said, while US Secretary of State Marco Rubio warned against a…",
+          "url": "https://www.scmp.com/news/world/middle-east/article/3371275/israeli-settlers-attack-european-diplomats-beat-french-mayor-west-bank",
+          "published_at": "2026-10-17T18:33:59Z",
+          "published_at_estimated": false,
+          "image_url": "https://cdn.i-scmp.com/sites/default/files/styles/1280x720/public/d8/images/canvas/2026/10/18/8af7bbca-e7fd-4b10-84e3-2103d6c5033e_d8818083.jpg?itok=m8zFu60E&v=1792262026"
+        },
+        {
+          "id": "5783f8ed5c3f",
+          "outlet_id": "guardian",
+          "headline": "Israeli settlers attack European diplomats in West Bank",
+          "snippet": "French mayor and archbishop also attacked during violent attempt to stop Palestinians harvesting olives Israeli settler militants have attacked European diplomats, a French mayor and the archbishop…",
+          "url": "https://www.theguardian.com/world/2026/oct/17/israeli-settlers-attack-european-diplomats-in-west-bank",
+          "published_at": "2026-10-17T18:57:56Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.guim.co.uk/img/media/b9a3e348f316f5f39a4ebd9844c51cbc810845c9/0_1020_1192_953/master/1192.jpg?width=460&quality=85&auto=format&fit=max&s=7a646b0141f609fe3bbbb77bf2015f80"
+        },
+        {
+          "id": "e06030fa0cde",
+          "outlet_id": "bbc",
+          "headline": "European diplomats attacked by Israeli settlers in West Bank",
+          "snippet": "The Israeli military condemns the violence but the prime minister's office says it is part of a \"smear\" campaign.",
+          "url": "https://www.bbc.co.uk/news/articles/c962ydpmjm3zo",
+          "published_at": "2026-10-17T23:52:38Z",
+          "published_at_estimated": false,
+          "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/15c7/live/4f318350-ca52-11f1-852c-2b93a8fc4799.jpg"
+        },
+        {
+          "id": "255820c9e43b",
+          "outlet_id": "nyt",
+          "headline": "Israeli Settlers Attack Palestinians and European Officials in West Bank",
+          "snippet": "Extremists assaulted residents and broke a European diplomatic vehicle’s window, witnesses said, as settler violence surges in the territory during the olive harvest.",
+          "url": "https://www.nytimes.com/2026/10/17/world/middleeast/israeli-settlers-attack-palestinians-diplomats-west-bank.html",
+          "published_at": "2026-10-18T07:36:55Z",
+          "published_at_estimated": false,
+          "image_url": "https://static01.nyt.com/images/2026/10/17/multimedia/17int-westbank-attacks-gzwq/17int-westbank-attacks-gzwq-mediumSquareAt3X.jpg"
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "Israeli settlers attacked European diplomats or their vehicles in the West Bank.",
+          "sources": [
+            "46f8d8a36df4",
+            "98553d828dea",
+            "1bfb3287f8a7",
+            "5783f8ed5c3f",
+            "e06030fa0cde",
+            "255820c9e43b"
+          ]
+        },
+        {
+          "text": "A French mayor was attacked or beaten by settlers.",
+          "sources": [
+            "46f8d8a36df4",
+            "98553d828dea",
+            "1bfb3287f8a7",
+            "5783f8ed5c3f"
+          ]
+        },
+        {
+          "text": "European diplomatic vehicles were attacked, with one vehicle's window broken.",
+          "sources": [
+            "46f8d8a36df4",
+            "255820c9e43b"
+          ]
+        },
+        {
+          "text": "Palestinians were also targeted by the settlers.",
+          "sources": [
+            "98553d828dea",
+            "255820c9e43b"
+          ]
+        },
+        {
+          "text": "The violence took place in the context of the Palestinian olive harvest.",
+          "sources": [
+            "5783f8ed5c3f",
+            "255820c9e43b"
+          ]
+        },
+        {
+          "text": "Accounts of the attack are attributed to witnesses.",
+          "sources": [
+            "1bfb3287f8a7",
+            "255820c9e43b"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "5783f8ed5c3f",
+              "quote": "Israeli settler militants have attacked European diplomats",
+              "field": "snippet"
+            },
+            {
+              "article_id": "5783f8ed5c3f",
+              "quote": "violent attempt to stop Palestinians harvesting olives",
+              "field": "snippet"
+            },
+            {
+              "article_id": "255820c9e43b",
+              "quote": "Extremists assaulted residents",
+              "field": "snippet"
+            },
+            {
+              "article_id": "255820c9e43b",
+              "quote": "as settler violence surges in the territory during the olive harvest",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the olive harvest as the setting and describes the attackers as militants or extremists.",
+              "sources": [
+                "5783f8ed5c3f",
+                "255820c9e43b"
+              ]
+            },
+            {
+              "text": "Places the attack within a wider surge of settler violence in the territory.",
+              "sources": [
+                "255820c9e43b"
+              ]
+            },
+            {
+              "text": "Mentions that an archbishop was also attacked.",
+              "sources": [
+                "5783f8ed5c3f"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "46f8d8a36df4",
+              "quote": "beat French mayor",
+              "field": "headline"
+            },
+            {
+              "article_id": "98553d828dea",
+              "quote": "Belgium says",
+              "field": "headline"
+            },
+            {
+              "article_id": "98553d828dea",
+              "quote": "sparking international condemnation",
+              "field": "snippet"
+            },
+            {
+              "article_id": "e06030fa0cde",
+              "quote": "The Israeli military condemns the violence",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Attributes the account to Belgium and describes the attacks as alleged.",
+              "sources": [
+                "98553d828dea"
+              ]
+            },
+            {
+              "text": "Reports international condemnation and Israeli official responses, including the prime minister's office calling it a \"smear\" campaign.",
+              "sources": [
+                "98553d828dea",
+                "e06030fa0cde"
+              ]
+            },
+            {
+              "text": "Leads with the beating of the French mayor.",
+              "sources": [
+                "46f8d8a36df4"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not mention the olive harvest as the context of the attacks.",
+          "sources": [
+            "5783f8ed5c3f",
+            "255820c9e43b"
+          ]
+        },
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not mention an archbishop being attacked.",
+          "sources": [
+            "5783f8ed5c3f"
+          ]
+        },
+        {
+          "lean": "left",
+          "text": "Left coverage does not mention the Israeli military's condemnation or the prime minister's office calling it a \"smear\" campaign.",
+          "sources": [
+            "e06030fa0cde"
+          ]
+        },
+        {
+          "lean": "left",
+          "text": "Left coverage does not mention Belgium as the source of the account or international condemnation.",
+          "sources": [
+            "98553d828dea"
+          ]
+        }
+      ],
+      "contested_claims": [],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "46f8d8a36df4",
+              "quote": "attack European diplomatic cars in West Bank",
+              "field": "headline"
+            },
+            {
+              "article_id": "e06030fa0cde",
+              "quote": "European diplomats attacked by Israeli settlers in West Bank",
+              "field": "headline"
+            },
+            {
+              "article_id": "5783f8ed5c3f",
+              "quote": "violent attempt to stop Palestinians harvesting olives",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Reports Israeli official responses and international condemnation.",
+              "sources": [
+                "98553d828dea",
+                "e06030fa0cde"
+              ]
+            },
+            {
+              "text": "Links the violence to the olive harvest and attacks on Palestinians.",
+              "sources": [
+                "5783f8ed5c3f",
+                "255820c9e43b",
+                "98553d828dea"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "1bfb3287f8a7",
+              "quote": "beat up French mayor",
+              "field": "headline"
+            },
+            {
+              "article_id": "1bfb3287f8a7",
+              "quote": "US Secretary of State Marco Rubio warned against a",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Reports the attack on a convoy of European diplomats, citing witnesses, alongside a warning from US Secretary of State Marco Rubio.",
+              "sources": [
+                "1bfb3287f8a7"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "Israeli settlers attacked European diplomats and diplomatic vehicles in the West Bank and beat a visiting French mayor. Some reports say Palestinians were also attacked during the olive harvest. The Israeli military condemned the violence, while the prime minister's office called it part of a \"smear\" campaign.",
+        "sources": [
+          "46f8d8a36df4",
+          "98553d828dea",
+          "1bfb3287f8a7",
+          "5783f8ed5c3f",
+          "e06030fa0cde",
+          "255820c9e43b"
+        ]
+      },
+      "conclusion": {
+        "text": "All outlets report Israeli settlers attacking European diplomats in the West Bank, most adding a French mayor. Left outlets foreground the olive harvest and call the attackers militants or extremists; centre outlets cite Belgium and Israeli official responses; the East outlet adds a Rubio warning. No outlet contradicts another.",
+        "sources": [
+          "46f8d8a36df4",
+          "98553d828dea",
+          "1bfb3287f8a7",
+          "5783f8ed5c3f",
+          "e06030fa0cde",
+          "255820c9e43b"
+        ]
+      },
+      "validation": {
+        "kept": 34,
+        "dropped_by_reason": {}
+      }
+    },
+    {
+      "id": "658f7c5da4f9",
+      "title": "Four killed in school shooting in Bend, Oregon",
+      "rank": 7,
+      "outlet_count": 6,
+      "coverage": {
+        "lean": {
+          "left": 2,
+          "centre": 4,
+          "right": 0
+        },
+        "bloc": {
+          "west": 6,
+          "east": 0
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": "west"
+      },
+      "articles": [
+        {
+          "id": "df1db58a9e25",
+          "outlet_id": "dw",
+          "headline": "Oregon school shooting: Police praise 'heroism' of those who intervened to stop more killing",
+          "snippet": "US police have praised the actions of three people who cut short a deadly shooting at a school in the state of Oregon. Three children and a teacher were killed in the attack, carried out by a former…",
+          "url": "https://www.dw.com/en/oregon-school-shooting-police-praise-heroism-of-those-who-intervened-to-stop-more-killing/a-79685302?maca=en-rss-en-world-4025-xml-mrss",
+          "published_at": "2026-10-17T06:04:00Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "a20c1da4e5d6",
+          "outlet_id": "bbc",
+          "headline": "Teacher fought US school attacker before armed dad shot suspect 'multiple times'",
+          "snippet": "The 16-year-old suspect previously attended the primary school and had targeted a special educational needs classroom, police say.",
+          "url": "https://www.bbc.co.uk/news/articles/cv98zw1k8kp3o",
+          "published_at": "2026-10-17T09:58:17Z",
+          "published_at_estimated": false,
+          "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/7c80/live/72894110-c9b4-11f1-9409-01a8c77950d7.jpg"
+        },
+        {
+          "id": "47b4071cde04",
+          "outlet_id": "mirror",
+          "headline": "Oregon female teacher fought school shooter and tried to grab his gun after four killed",
+          "snippet": "A 16-year-old armed with a shotgun opened fire on a special education class at Silver Rail Elementary in Bend, Oregon, killing three pupils and a teacher before another teacher and a parent stopped…",
+          "url": "https://www.mirror.co.uk/news/world-news/oregon-school-shooting-teacher-bend-37782380",
+          "published_at": "2026-10-17T10:02:33Z",
+          "published_at_estimated": false,
+          "image_url": "https://i2-prod.mirror.co.uk/incoming/article37782395.ece/ALTERNATES/s615/0_Elementary-School-Shooting-Leaves-At-Least-4-Killed-In-Bend-Oregon.jpg"
+        },
+        {
+          "id": "fcba08abf4c2",
+          "outlet_id": "france24",
+          "headline": "US: Four killed in Oregon school shooting",
+          "snippet": "The teenage gunman who shot dead three children and a teacher in an Oregon school was a former special needs student there, officials said Friday, as they praised the heroism of people who helped to…",
+          "url": "https://www.france24.com/en/video/20261017-us-four-killed-in-oregon-school-shooting",
+          "published_at": "2026-10-17T15:16:26Z",
+          "published_at_estimated": false,
+          "image_url": "https://s.france24.com/media/display/ca2a73b0-ca38-11f1-a47e-638c1c1f5fd6/w:1024/p:16x9/EN-20261017-131913-132114-CS.jpg"
+        },
+        {
+          "id": "af98d6557d92",
+          "outlet_id": "npr",
+          "headline": "Oregon governor Tina Kotek reacts to Silver Rail Elementary school shooting",
+          "snippet": "NPR's Joel Rose talks with Oregon Governor Tina Kotek about the shooting at Silver Rail Elementary in Bend, Oregon.",
+          "url": "https://www.npr.org/2026/10/17/nx-s1-6005814/oregon-governor-tina-kotek-reacts-to-silver-rail-elementary-school-shooting",
+          "published_at": "2026-10-17T22:45:25Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "eadf267c5fd2",
+          "outlet_id": "nbc",
+          "headline": "Neighbor of Oregon shooter describes “normal” teen, loud arguments",
+          "snippet": "The neighbor of the 16-year-old who officials say carried out a deadly attack at an Oregon elementary school said he seemed like a “normal dude,” and also told our team he heard loud arguments from…",
+          "url": "https://www.nbcnews.com/nightly-news/video/neighbor-of-oregon-shooter-describes-normal-teen-loud-arguments-271760453791",
+          "published_at": "2026-10-17T22:48:43Z",
+          "published_at_estimated": false,
+          "image_url": "https://media-cldnry.s-nbcnews.com/image/upload/t_fit_1500w/mpx/2704722219/2026_10/1792277317918_wnn_lkr_bend_shooting_261017_S3_1920x1080-8hyfmb.jpg"
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "Three children and a teacher were killed in the shooting.",
+          "sources": [
+            "df1db58a9e25",
+            "47b4071cde04",
+            "fcba08abf4c2"
+          ]
+        },
+        {
+          "text": "The suspect is a 16-year-old.",
+          "sources": [
+            "a20c1da4e5d6",
+            "47b4071cde04",
+            "eadf267c5fd2"
+          ]
+        },
+        {
+          "text": "The attack targeted a special educational needs class.",
+          "sources": [
+            "a20c1da4e5d6",
+            "47b4071cde04"
+          ]
+        },
+        {
+          "text": "People at the school intervened to stop the attack, including a teacher who fought the attacker.",
+          "sources": [
+            "df1db58a9e25",
+            "a20c1da4e5d6",
+            "47b4071cde04",
+            "fcba08abf4c2"
+          ]
+        },
+        {
+          "text": "The shooting took place at Silver Rail Elementary in Bend, Oregon.",
+          "sources": [
+            "47b4071cde04",
+            "af98d6557d92"
+          ]
+        },
+        {
+          "text": "Officials said the suspect had previously attended the school.",
+          "sources": [
+            "a20c1da4e5d6",
+            "fcba08abf4c2"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "47b4071cde04",
+              "quote": "Oregon female teacher fought school shooter and tried to grab his gun",
+              "field": "headline"
+            },
+            {
+              "article_id": "eadf267c5fd2",
+              "quote": "Neighbor of Oregon shooter describes “normal” teen, loud arguments",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the teacher who fought the shooter and tried to take his gun, and notes the attacker used a shotgun.",
+              "sources": [
+                "47b4071cde04"
+              ]
+            },
+            {
+              "text": "Features a neighbour's account describing the suspect as a normal teen and reporting loud arguments.",
+              "sources": [
+                "eadf267c5fd2"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "df1db58a9e25",
+              "quote": "Police praise 'heroism' of those who intervened to stop more killing",
+              "field": "headline"
+            },
+            {
+              "article_id": "a20c1da4e5d6",
+              "quote": "armed dad shot suspect 'multiple times'",
+              "field": "headline"
+            },
+            {
+              "article_id": "af98d6557d92",
+              "quote": "Oregon governor Tina Kotek reacts",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Emphasises police and officials praising the heroism of those who intervened.",
+              "sources": [
+                "df1db58a9e25",
+                "fcba08abf4c2"
+              ]
+            },
+            {
+              "text": "Highlights that the suspect was a former pupil and that an armed father shot him.",
+              "sources": [
+                "a20c1da4e5d6",
+                "fcba08abf4c2"
+              ]
+            },
+            {
+              "text": "Carries the reaction of Oregon Governor Tina Kotek.",
+              "sources": [
+                "af98d6557d92"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "left",
+          "text": "Left coverage does not mention officials praising the heroism of those who intervened.",
+          "sources": [
+            "df1db58a9e25",
+            "fcba08abf4c2"
+          ]
+        },
+        {
+          "lean": "left",
+          "text": "Left coverage does not mention that the suspect was a former pupil at the school.",
+          "sources": [
+            "a20c1da4e5d6",
+            "fcba08abf4c2"
+          ]
+        },
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not mention a neighbour's account of the suspect or reports of loud arguments.",
+          "sources": [
+            "eadf267c5fd2"
+          ]
+        }
+      ],
+      "contested_claims": [],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "fcba08abf4c2",
+              "quote": "US: Four killed in Oregon school shooting",
+              "field": "headline"
+            },
+            {
+              "article_id": "a20c1da4e5d6",
+              "quote": "Teacher fought US school attacker",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Focuses on the death toll, the intervention by a teacher and a parent, and the suspect's background.",
+              "sources": [
+                "df1db58a9e25",
+                "a20c1da4e5d6",
+                "47b4071cde04",
+                "fcba08abf4c2",
+                "eadf267c5fd2"
+              ]
+            },
+            {
+              "text": "Includes the Oregon governor's reaction.",
+              "sources": [
+                "af98d6557d92"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "A 16-year-old opened fire at Silver Rail Elementary in Bend, Oregon, killing three children and a teacher in a special educational needs classroom. A teacher fought the attacker and a parent shot him, and police praised those who intervened. Officials said the suspect was a former pupil at the school.",
+        "sources": [
+          "df1db58a9e25",
+          "a20c1da4e5d6",
+          "47b4071cde04",
+          "fcba08abf4c2",
+          "af98d6557d92",
+          "eadf267c5fd2"
+        ]
+      },
+      "conclusion": {
+        "text": "Coverage agrees that a 16-year-old killed three children and a teacher before being stopped by people at the school. Centre outlets emphasise officials' praise for those who intervened and the governor's reaction, while left outlets lead with the teacher's struggle and a neighbour's account. No outlet contradicts another.",
+        "sources": [
+          "df1db58a9e25",
+          "a20c1da4e5d6",
+          "47b4071cde04",
+          "fcba08abf4c2",
+          "af98d6557d92",
+          "eadf267c5fd2"
+        ]
+      },
+      "validation": {
+        "kept": 25,
+        "dropped_by_reason": {}
+      }
+    },
+    {
+      "id": "6cf58908fc43",
+      "title": "Truck driven through youth soccer game in Wichita, Kansas kills two",
+      "rank": 8,
+      "outlet_count": 5,
+      "coverage": {
+        "lean": {
+          "left": 2,
+          "centre": 1,
+          "right": 2
+        },
+        "bloc": {
+          "west": 5,
+          "east": 0
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": "west"
+      },
+      "articles": [
+        {
+          "id": "cb95fc2ff95b",
+          "outlet_id": "thesun",
+          "headline": "Child & adult dead after pickup truck ploughs into players and fans on soccer field in horror ‘mass casualty’ event",
+          "snippet": "A CHILD and an adult have both been killed after a truck ploughed into players and fans at a youth soccer match in Kansas. Emergency services raced to Stryker Sports Complex for what police…",
+          "url": "https://www.thesun.co.uk/news/40722649/truck-crashes-football-field-mass-casualty/",
+          "published_at": "2026-10-17T22:23:47Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.thesun.co.uk/wp-content%2Fuploads%2F2026%2F10%2Fnewspress-collage-s5to3hoo7-1792275780151.jpg?quality%3D90%26"
+        },
+        {
+          "id": "7ecd42a578dc",
+          "outlet_id": "guardian",
+          "headline": "Two people, including child, killed after person drives through soccer game in Kansas",
+          "snippet": "The driver of the vehicle is in custody, and two juveniles were in the vehicle, according to Wichita police department Two people, including a child, were killed during a soccer game in Wichita…",
+          "url": "https://www.theguardian.com/us-news/2026/oct/17/kansas-soccer-game-killings",
+          "published_at": "2026-10-17T23:22:06Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.guim.co.uk/img/media/1fdb117e6f40eedb3f4040a34c7d5be50ffb4bbe/76_0_1281_1025/master/1281.jpg?width=460&quality=85&auto=format&fit=max&s=f2dcf8a79bcf54805e55a0e66f8f06c0"
+        },
+        {
+          "id": "557d109793c8",
+          "outlet_id": "nbc",
+          "headline": "Two people, including a child, killed after woman drives through youth soccer game in Kansas",
+          "snippet": "A 6-year-old boy and 35-year-old man were killed, and 10 others were injured, when a woman drove a truck through a youth soccer game at a city sports complex in Wichita, Kansas, Saturday afternoon…",
+          "url": "https://www.nbcnews.com/news/us-news/wichita-kansas-vehicle-drives-soccer-game-rcna604083",
+          "published_at": "2026-10-18T00:09:56Z",
+          "published_at_estimated": false,
+          "image_url": "https://media-cldnry.s-nbcnews.com/image/upload/t_fit_1500w/rockcms/2026-10/261018-wichita-kansas-soccer-game-crash-rc-1216a-159395.jpg"
+        },
+        {
+          "id": "8ad4752017c2",
+          "outlet_id": "nbc",
+          "headline": "Two dead, others injured after truck drives through Kansas soccer game",
+          "snippet": "An adult and a child have died and nearly a dozen others are injured after a pick-up truck drove through a youth soccer game in Wichita, Kansas, according to police.",
+          "url": "https://www.nbcnews.com/now/video/two-dead-others-injured-after-truck-drives-through-kansas-soccer-game-271763525998",
+          "published_at": "2026-10-18T01:23:11Z",
+          "published_at_estimated": false,
+          "image_url": "https://media-cldnry.s-nbcnews.com/image/upload/t_fit_1500w/mpx/2704722219/2026_10/1792286581327_now_spec_brk_deadly_kansas_crash_261017_S3_1920x1080-c3hl3e.jpg"
+        },
+        {
+          "id": "e3f558378004",
+          "outlet_id": "dailymail",
+          "headline": "Children among two dead and ten critically injured after mom 'crashed pickup into soccer field while her kids were in the back'",
+          "snippet": "A black pickup truck reportedly plowed through youth soccer fields at Wichita's Stryker Sports Complex, striking multiple people. Witnesses have described horrifying scenes.",
+          "url": "https://www.dailymail.com/news/article-16217689/people-injured-pickup-truck-drives-youth-soccer-field-Kansas.html",
+          "published_at": "2026-10-18T03:08:07Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.dailymail.com/1s/2026/10/17/23/111928333-0-image-a-65_1792276354727.jpg"
+        },
+        {
+          "id": "0eb1e1558a5d",
+          "outlet_id": "sky",
+          "headline": "Woman drives truck through soccer pitch, killing child and man",
+          "snippet": "Two people, including a child, were killed and 10 others injured when a woman drove a truck through a soccer field in Kansas, US police said.",
+          "url": "https://news.sky.com/story/boy-6-and-man-killed-after-truck-drives-through-soccer-field-in-wichita-kansas-13600520",
+          "published_at": "2026-10-18T06:21:00Z",
+          "published_at_estimated": false,
+          "image_url": "https://e3.365dm.com/26/10/1920x1080/skynews-wichita-kansas_7379581.jpg?20261018103907"
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "Two people were killed when a vehicle was driven through a soccer game or field in Kansas.",
+          "sources": [
+            "cb95fc2ff95b",
+            "7ecd42a578dc",
+            "557d109793c8",
+            "8ad4752017c2",
+            "e3f558378004",
+            "0eb1e1558a5d"
+          ]
+        },
+        {
+          "text": "A child was among those killed.",
+          "sources": [
+            "cb95fc2ff95b",
+            "7ecd42a578dc",
+            "557d109793c8",
+            "8ad4752017c2",
+            "e3f558378004",
+            "0eb1e1558a5d"
+          ]
+        },
+        {
+          "text": "The incident took place in Wichita.",
+          "sources": [
+            "7ecd42a578dc",
+            "557d109793c8",
+            "8ad4752017c2",
+            "e3f558378004"
+          ]
+        },
+        {
+          "text": "The game was a youth soccer match.",
+          "sources": [
+            "cb95fc2ff95b",
+            "557d109793c8",
+            "8ad4752017c2",
+            "e3f558378004"
+          ]
+        },
+        {
+          "text": "The vehicle was a truck, described in several reports as a pickup.",
+          "sources": [
+            "cb95fc2ff95b",
+            "557d109793c8",
+            "8ad4752017c2",
+            "e3f558378004",
+            "0eb1e1558a5d"
+          ]
+        },
+        {
+          "text": "A woman was driving the truck.",
+          "sources": [
+            "557d109793c8",
+            "e3f558378004",
+            "0eb1e1558a5d"
+          ]
+        },
+        {
+          "text": "About ten others were injured.",
+          "sources": [
+            "557d109793c8",
+            "8ad4752017c2",
+            "e3f558378004",
+            "0eb1e1558a5d"
+          ]
+        },
+        {
+          "text": "The incident happened at a sports complex, named as Stryker Sports Complex in two reports.",
+          "sources": [
+            "cb95fc2ff95b",
+            "557d109793c8",
+            "e3f558378004"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "7ecd42a578dc",
+              "quote": "The driver of the vehicle is in custody",
+              "field": "snippet"
+            },
+            {
+              "article_id": "557d109793c8",
+              "quote": "A 6-year-old boy and 35-year-old man were killed",
+              "field": "snippet"
+            },
+            {
+              "article_id": "8ad4752017c2",
+              "quote": "according to police",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with police-attributed details, including that the driver is in custody and two juveniles were in the vehicle.",
+              "sources": [
+                "7ecd42a578dc",
+                "8ad4752017c2"
+              ]
+            },
+            {
+              "text": "Gives the ages of the victims, a 6-year-old boy and a 35-year-old man.",
+              "sources": [
+                "557d109793c8"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "0eb1e1558a5d",
+              "quote": "Woman drives truck through soccer pitch, killing child and man",
+              "field": "headline"
+            },
+            {
+              "article_id": "0eb1e1558a5d",
+              "quote": "US police said",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the driver being a woman and attributes the casualty figures to police.",
+              "sources": [
+                "0eb1e1558a5d"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "right",
+          "headline_quotes": [
+            {
+              "article_id": "cb95fc2ff95b",
+              "quote": "horror ‘mass casualty’ event",
+              "field": "headline"
+            },
+            {
+              "article_id": "e3f558378004",
+              "quote": "mom 'crashed pickup into soccer field while her kids were in the back'",
+              "field": "headline"
+            },
+            {
+              "article_id": "e3f558378004",
+              "quote": "Witnesses have described horrifying scenes.",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Describes the event as a 'mass casualty' event with the truck ploughing into players and fans.",
+              "sources": [
+                "cb95fc2ff95b"
+              ]
+            },
+            {
+              "text": "Foregrounds that the driver was a mother whose children were reportedly in the back, and witness accounts.",
+              "sources": [
+                "e3f558378004"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "right",
+          "text": "Right-leaning coverage does not mention that the driver is in custody.",
+          "sources": [
+            "7ecd42a578dc"
+          ]
+        },
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not mention that the driver is in custody or that juveniles were in the vehicle.",
+          "sources": [
+            "7ecd42a578dc",
+            "e3f558378004"
+          ]
+        },
+        {
+          "lean": "right",
+          "text": "Right-leaning coverage does not give the ages of the victims.",
+          "sources": [
+            "557d109793c8"
+          ]
+        }
+      ],
+      "contested_claims": [
+        {
+          "claim": "The Daily Mail headline says children were among the two dead, while other reports describe the dead as one child and one adult.",
+          "asserted_by": [
+            "e3f558378004"
+          ],
+          "disputed_by": [
+            "cb95fc2ff95b",
+            "557d109793c8",
+            "8ad4752017c2",
+            "0eb1e1558a5d"
+          ]
+        }
+      ],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "7ecd42a578dc",
+              "quote": "Two people, including child, killed after person drives through soccer game in Kansas",
+              "field": "headline"
+            },
+            {
+              "article_id": "cb95fc2ff95b",
+              "quote": "horror ‘mass casualty’ event",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Coverage centres on the death toll, the child victim and the driver, mostly attributed to police.",
+              "sources": [
+                "cb95fc2ff95b",
+                "7ecd42a578dc",
+                "557d109793c8",
+                "8ad4752017c2",
+                "e3f558378004",
+                "0eb1e1558a5d"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "Two people, including a child, were killed and around ten others injured when a truck was driven through a youth soccer game in Wichita, Kansas. Several reports say a woman was driving. One report says the driver is in custody and two juveniles were in the vehicle.",
+        "sources": [
+          "cb95fc2ff95b",
+          "7ecd42a578dc",
+          "557d109793c8",
+          "8ad4752017c2",
+          "e3f558378004",
+          "0eb1e1558a5d"
+        ]
+      },
+      "conclusion": {
+        "text": "All outlets report two dead, including a child, after a truck was driven through a youth soccer game in Kansas. Left and centre outlets lead with police details such as custody and ages, while right outlets emphasise horror, witnesses and the driver's children. Whether one or more children died differs between the Daily Mail headline and other reports.",
+        "sources": [
+          "cb95fc2ff95b",
+          "7ecd42a578dc",
+          "557d109793c8",
+          "8ad4752017c2",
+          "e3f558378004",
+          "0eb1e1558a5d"
+        ]
+      },
+      "validation": {
+        "kept": 30,
+        "dropped_by_reason": {}
+      }
+    },
+    {
+      "id": "d14af6ce8500",
+      "title": "Ukrainian drone attack hits oil terminal in St Petersburg",
+      "rank": 9,
+      "outlet_count": 5,
+      "coverage": {
+        "lean": {
+          "left": 1,
+          "centre": 0,
+          "right": 2
+        },
+        "bloc": {
+          "west": 3,
+          "east": 2
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "01b558fa48ea",
+          "outlet_id": "aljazeera",
+          "headline": "St Petersburg under attack from Ukrainian drone swarm",
+          "snippet": "Video posted on social media shows multiple explosions in St Petersburg, Russia after a suspected Ukrainian drone swarm.",
+          "url": "https://www.aljazeera.com/video/newsfeed/2026/10/18/st-petersburg-under-attack-from-ukrainian-drone-swarm",
+          "published_at": "2026-10-18T04:51:01Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "5b1da9b5cdd9",
+          "outlet_id": "thesun",
+          "headline": "Ukraine blitzes Vlad’s hometown St Petersburg 600 MILES from border as explosions rip through oil depot in snub to Trump",
+          "snippet": "UKRAINE has launched a devastating strike on Vladimir Putin's home city St Petersburg. Drones pierced Russian air defences and blitzed the oil terminal - sparking a huge blaze. The night sky…",
+          "url": "https://www.thesun.co.uk/news/40723372/ukraine-blitzes-putin-hometown-oil-depot/",
+          "published_at": "2026-10-18T06:44:17Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.thesun.co.uk/wp-content%2Fuploads%2F2026%2F10%2Fnewspress-collage-ofebjq5fx-1792305285526.jpg?quality%3D90%26"
+        },
+        {
+          "id": "42c6d1ee6bab",
+          "outlet_id": "mirror",
+          "headline": "St Petersburg on fire as Zelensky defies Trump again with massive strike hitting oil depot",
+          "snippet": "Russian air defences were overwhelmed as drones carried out a strike on the oil terminal, which has a capacity of 12.5 million tons, in Vladimir Putin’s home city St Petersburg",
+          "url": "https://www.mirror.co.uk/news/world-news/st-petersburg-fire-zelensky-defies-37783952",
+          "published_at": "2026-10-18T06:58:17Z",
+          "published_at_estimated": false,
+          "image_url": "https://i2-prod.mirror.co.uk/incoming/article37783959.ece/ALTERNATES/s615/0_PAY-St-Petersburg-attack-9-east2west-news.jpg"
+        },
+        {
+          "id": "6f922c6446e3",
+          "outlet_id": "moscowtimes",
+          "headline": "1 Killed, 5 Injured in Ukrainian Drone Attack on St. Petersburg, Governor Says",
+          "snippet": "Russian air defense units downed 1,015 Ukrainian drones overnight, the Russian Defense Ministry said.",
+          "url": "https://www.themoscowtimes.com/2026/10/18/one-killed-five-injured-in-ukrainian-drone-attack-on-st-petersburg-governor-says-a94015",
+          "published_at": "2026-10-18T09:53:00Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "c5f4dbdae3cb",
+          "outlet_id": "dailymail",
+          "headline": "Russian oil terminal and data centre in St Petersburg ablaze as Kyiv launches massive drone attack after Trump's decision to waive sanctions and 'slow down' satellites",
+          "snippet": "One person was killed and five injured in the strike with fires spreading to industrial warehouses in the city, governor Alexander Beglov said on Sunday.",
+          "url": "https://www.dailymail.com/news/article-16218265/Russian-oil-St-Petersburg-Kyiv-drone-Trump-sanctions.html",
+          "published_at": "2026-10-18T10:34:25Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.dailymail.com/1s/2026/10/18/09/111934365-0-image-m-41_1792311526027.jpg"
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "St Petersburg was attacked by Ukrainian drones.",
+          "sources": [
+            "01b558fa48ea",
+            "5b1da9b5cdd9",
+            "42c6d1ee6bab",
+            "6f922c6446e3",
+            "c5f4dbdae3cb"
+          ]
+        },
+        {
+          "text": "An oil terminal in the city was hit and caught fire.",
+          "sources": [
+            "5b1da9b5cdd9",
+            "42c6d1ee6bab",
+            "c5f4dbdae3cb"
+          ]
+        },
+        {
+          "text": "Governor Alexander Beglov said one person was killed and five injured.",
+          "sources": [
+            "6f922c6446e3",
+            "c5f4dbdae3cb"
+          ]
+        },
+        {
+          "text": "Multiple explosions were reported in the city.",
+          "sources": [
+            "01b558fa48ea",
+            "5b1da9b5cdd9"
+          ]
+        },
+        {
+          "text": "St Petersburg is described as Vladimir Putin's home city.",
+          "sources": [
+            "5b1da9b5cdd9",
+            "42c6d1ee6bab"
+          ]
+        },
+        {
+          "text": "The strike is linked to Donald Trump's positions or decisions.",
+          "sources": [
+            "5b1da9b5cdd9",
+            "42c6d1ee6bab",
+            "c5f4dbdae3cb"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "42c6d1ee6bab",
+              "quote": "St Petersburg on fire as Zelensky defies Trump again",
+              "field": "headline"
+            },
+            {
+              "article_id": "42c6d1ee6bab",
+              "quote": "Russian air defences were overwhelmed",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with Zelensky defying Trump and describes Russian air defences as overwhelmed.",
+              "sources": [
+                "42c6d1ee6bab"
+              ]
+            },
+            {
+              "text": "Notes the oil terminal's capacity of 12.5 million tons.",
+              "sources": [
+                "42c6d1ee6bab"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "right",
+          "headline_quotes": [
+            {
+              "article_id": "5b1da9b5cdd9",
+              "quote": "600 MILES from border",
+              "field": "headline"
+            },
+            {
+              "article_id": "5b1da9b5cdd9",
+              "quote": "in snub to Trump",
+              "field": "headline"
+            },
+            {
+              "article_id": "c5f4dbdae3cb",
+              "quote": "after Trump's decision to waive sanctions and 'slow down' satellites",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Frames the strike as a snub to Trump or as following his decision to waive sanctions and slow down satellites.",
+              "sources": [
+                "5b1da9b5cdd9",
+                "c5f4dbdae3cb"
+              ]
+            },
+            {
+              "text": "Emphasises the distance from the border and drones piercing Russian air defences.",
+              "sources": [
+                "5b1da9b5cdd9"
+              ]
+            },
+            {
+              "text": "Reports a data centre ablaze and fires spreading to industrial warehouses.",
+              "sources": [
+                "c5f4dbdae3cb"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "left",
+          "text": "Left coverage does not mention the reported death and injuries.",
+          "sources": [
+            "c5f4dbdae3cb"
+          ]
+        },
+        {
+          "lean": "left",
+          "text": "Left coverage does not mention a data centre being hit or fires spreading to warehouses.",
+          "sources": [
+            "c5f4dbdae3cb"
+          ]
+        }
+      ],
+      "contested_claims": [],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "5b1da9b5cdd9",
+              "quote": "Ukraine blitzes Vlad’s hometown St Petersburg",
+              "field": "headline"
+            },
+            {
+              "article_id": "42c6d1ee6bab",
+              "quote": "Zelensky defies Trump again with massive strike hitting oil depot",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Foregrounds the oil terminal fire, Putin's home city and a link to Trump.",
+              "sources": [
+                "5b1da9b5cdd9",
+                "42c6d1ee6bab",
+                "c5f4dbdae3cb"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "01b558fa48ea",
+              "quote": "a suspected Ukrainian drone swarm",
+              "field": "snippet"
+            },
+            {
+              "article_id": "6f922c6446e3",
+              "quote": "Russian air defense units downed 1,015 Ukrainian drones overnight",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Cites social media video of explosions and describes the swarm as suspected Ukrainian.",
+              "sources": [
+                "01b558fa48ea"
+              ]
+            },
+            {
+              "text": "Leads with the governor's casualty figures and the Defence Ministry's count of downed drones.",
+              "sources": [
+                "6f922c6446e3"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "Ukrainian drones attacked St Petersburg, causing explosions and setting an oil terminal ablaze. Governor Alexander Beglov said one person was killed and five injured. Russia's Defence Ministry said air defences downed 1,015 Ukrainian drones overnight.",
+        "sources": [
+          "01b558fa48ea",
+          "5b1da9b5cdd9",
+          "42c6d1ee6bab",
+          "6f922c6446e3",
+          "c5f4dbdae3cb"
+        ]
+      },
+      "conclusion": {
+        "text": "All coverage reports a Ukrainian drone attack on St Petersburg, with one killed and five injured per the governor. West-bloc outlets of both leans link the strike to Trump and focus on the oil terminal fire, while East-bloc outlets lead with explosions, casualties and the Defence Ministry's drone count. No claims are disputed.",
+        "sources": [
+          "01b558fa48ea",
+          "5b1da9b5cdd9",
+          "42c6d1ee6bab",
+          "6f922c6446e3",
+          "c5f4dbdae3cb"
+        ]
+      },
+      "validation": {
+        "kept": 27,
+        "dropped_by_reason": {}
+      }
+    },
+    {
+      "id": "618ebfae72cd",
+      "title": "Mexican court sentences three men for murders of Australian and US surfers",
+      "rank": 10,
+      "outlet_count": 4,
+      "coverage": {
+        "lean": {
+          "left": 2,
+          "centre": 1,
+          "right": 1
+        },
+        "bloc": {
+          "west": 4,
+          "east": 0
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": "west"
+      },
+      "articles": [
+        {
+          "id": "63fc27ae856e",
+          "outlet_id": "guardian",
+          "headline": "Mexican judge sentences three men to 158 years in prison for murders of Australian and US surfers​",
+          "snippet": "Australian ​brothers Jake ​and Callum Robinson, and ​their ‌American friend Carter Rhoad, were killed while on a surf trip in Baja California in 2024 Get our breaking news email, free app or daily…",
+          "url": "https://www.theguardian.com/australia-news/2026/oct/17/mexican-judge-sentences-three-men-to-158-years-in-prison-for-murders-of-australian-and-us-surfers-ntwnfb",
+          "published_at": "2026-10-17T02:52:59Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.guim.co.uk/img/media/803a6b4b97e168ef99e8d8f6d05ed5c149c09e7f/201_0_2463_1970/master/2463.jpg?width=460&quality=85&auto=format&fit=max&s=399cda7769bf629493dd86db7e9fcb2e"
+        },
+        {
+          "id": "2bac3838afa0",
+          "outlet_id": "bbc",
+          "headline": "Three men jailed for 158 years each for murdering Australian and US surfers in Mexico",
+          "snippet": "Brothers Jake and Callum Robinson and their friend Carter Rhoad were killed on a surfing trip in an apparent botched robbery.",
+          "url": "https://www.bbc.co.uk/news/articles/c3kgqjkzw29wo",
+          "published_at": "2026-10-17T03:11:10Z",
+          "published_at_estimated": false,
+          "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/9ab9/live/138578c0-c453-11f1-bc2e-018d645d8d21.jpg"
+        },
+        {
+          "id": "7eae347ed9d4",
+          "outlet_id": "fox",
+          "headline": "Three men get 158 years each for murdering American and Australian surfers, dumping bodies in Mexican well",
+          "snippet": "Three men were sentenced to 158 years each in Ensenada, Baja California, for the murders of surfers Callum and Jake Robinson and Carter Redd Rhoad.",
+          "url": "https://www.foxnews.com/world/three-men-158-years-murdering-american-australian-surfers-dumping-bodies-mexican-well",
+          "published_at": "2026-10-17T17:38:52Z",
+          "published_at_estimated": false,
+          "image_url": "https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2026/10/931/523/Baja_murders.jpg?ve=1&tl=1"
+        },
+        {
+          "id": "c539b57e1679",
+          "outlet_id": "nyt",
+          "headline": "Mexican Judge Sentences 3 Men to 159 Years Each in Surfer Killings",
+          "snippet": "The men were charged in the murders of two Australians and an American who were on a camping and surf vacation in Mexico.",
+          "url": "https://www.nytimes.com/2026/10/17/world/americas/mexican-judge-sentences-3-men-to-159-years-each-in-surfer-killings.html",
+          "published_at": "2026-10-17T19:58:23Z",
+          "published_at_estimated": false,
+          "image_url": "https://static01.nyt.com/images/2026/10/17/multimedia/17int-mexico-sentence-zqch/17int-mexico-sentence-zqch-mediumSquareAt3X.jpg"
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "Three men were sentenced in Mexico for the murders of the surfers.",
+          "sources": [
+            "63fc27ae856e",
+            "2bac3838afa0",
+            "7eae347ed9d4",
+            "c539b57e1679"
+          ]
+        },
+        {
+          "text": "The victims were two Australians, brothers Jake and Callum Robinson, and an American, Carter Rhoad.",
+          "sources": [
+            "63fc27ae856e",
+            "2bac3838afa0",
+            "7eae347ed9d4",
+            "c539b57e1679"
+          ]
+        },
+        {
+          "text": "The victims were on a surfing trip when they were killed.",
+          "sources": [
+            "63fc27ae856e",
+            "2bac3838afa0",
+            "7eae347ed9d4",
+            "c539b57e1679"
+          ]
+        },
+        {
+          "text": "The case took place in Baja California.",
+          "sources": [
+            "63fc27ae856e",
+            "7eae347ed9d4"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "63fc27ae856e",
+              "quote": "Mexican judge sentences three men to 158 years in prison",
+              "field": "headline"
+            },
+            {
+              "article_id": "c539b57e1679",
+              "quote": "Mexican Judge Sentences 3 Men to 159 Years Each in Surfer Killings",
+              "field": "headline"
+            },
+            {
+              "article_id": "c539b57e1679",
+              "quote": "on a camping and surf vacation in Mexico",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the judge's sentencing decision.",
+              "sources": [
+                "63fc27ae856e",
+                "c539b57e1679"
+              ]
+            },
+            {
+              "text": "Describes the victims' trip, giving the year as 2024 or describing it as a camping and surf vacation.",
+              "sources": [
+                "63fc27ae856e",
+                "c539b57e1679"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "2bac3838afa0",
+              "quote": "Three men jailed for 158 years each",
+              "field": "headline"
+            },
+            {
+              "article_id": "2bac3838afa0",
+              "quote": "in an apparent botched robbery",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Describes the killings as occurring in an apparent botched robbery.",
+              "sources": [
+                "2bac3838afa0"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "right",
+          "headline_quotes": [
+            {
+              "article_id": "7eae347ed9d4",
+              "quote": "dumping bodies in Mexican well",
+              "field": "headline"
+            },
+            {
+              "article_id": "7eae347ed9d4",
+              "quote": "sentenced to 158 years each in Ensenada, Baja California",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the bodies being dumped in a well and names Ensenada as the place of sentencing.",
+              "sources": [
+                "7eae347ed9d4"
+              ]
+            },
+            {
+              "text": "Names the American victim first in the headline.",
+              "sources": [
+                "7eae347ed9d4"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "left",
+          "text": "Left-leaning coverage does not mention the killings being described as an apparent botched robbery.",
+          "sources": [
+            "2bac3838afa0"
+          ]
+        },
+        {
+          "lean": "right",
+          "text": "Right-leaning coverage does not mention the killings being described as an apparent botched robbery.",
+          "sources": [
+            "2bac3838afa0"
+          ]
+        },
+        {
+          "lean": "left",
+          "text": "Left-leaning coverage does not mention the bodies being dumped in a well.",
+          "sources": [
+            "7eae347ed9d4"
+          ]
+        },
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not mention the bodies being dumped in a well.",
+          "sources": [
+            "7eae347ed9d4"
+          ]
+        }
+      ],
+      "contested_claims": [
+        {
+          "claim": "The length of the sentences: 158 years versus 159 years each.",
+          "asserted_by": [
+            "63fc27ae856e",
+            "2bac3838afa0",
+            "7eae347ed9d4"
+          ],
+          "disputed_by": [
+            "c539b57e1679"
+          ]
+        }
+      ],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "2bac3838afa0",
+              "quote": "Three men jailed for 158 years each",
+              "field": "headline"
+            },
+            {
+              "article_id": "c539b57e1679",
+              "quote": "Mexican Judge Sentences 3 Men to 159 Years Each in Surfer Killings",
+              "field": "headline"
+            },
+            {
+              "article_id": "7eae347ed9d4",
+              "quote": "dumping bodies in Mexican well",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the length of the prison sentences handed to the three men.",
+              "sources": [
+                "63fc27ae856e",
+                "2bac3838afa0",
+                "7eae347ed9d4",
+                "c539b57e1679"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "A Mexican judge sentenced three men for the murders of Australian brothers Jake and Callum Robinson and their American friend Carter Rhoad. The three were killed on a surf trip in Baja California in 2024. Three outlets report sentences of 158 years, while one reports 159 years each.",
+        "sources": [
+          "63fc27ae856e",
+          "2bac3838afa0",
+          "7eae347ed9d4",
+          "c539b57e1679"
+        ]
+      },
+      "conclusion": null,
+      "validation": {
+        "kept": 26,
+        "dropped_by_reason": {
+          "untrusted_text": 1
+        }
+      }
+    }
+  ]
+}
