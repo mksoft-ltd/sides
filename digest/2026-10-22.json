@@ -1,0 +1,3737 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-10-22T11:31:31.402266Z",
+  "date": "2026-10-22",
+  "meta": {
+    "model": "claude-opus-5-5",
+    "cost_usd": 0.62711,
+    "outlets_polled": 29,
+    "articles_collected": 667,
+    "warnings": [
+      "1 feed(s) failed during collect",
+      "1 feed item(s) dropped at collect (link_off_domain=1)"
+    ],
+    "validation": {
+      "kept": 292,
+      "dropped_by_reason": {
+        "untrusted_text": 1
+      }
+    }
+  },
+  "outlets": [
+    {
+      "id": "guardian",
+      "name": "The Guardian",
+      "lean": "left",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United Kingdom",
+      "home_url": "https://www.theguardian.com/",
+      "rating_basis": "AllSides media bias rating (Lean Left), checked Oct 2026"
+    },
+    {
+      "id": "independent",
+      "name": "The Independent",
+      "lean": "left",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United Kingdom",
+      "home_url": "https://www.independent.co.uk/",
+      "rating_basis": "AllSides media bias rating (Lean Left), checked Oct 2026"
+    },
+    {
+      "id": "mirror",
+      "name": "Daily Mirror",
+      "lean": "left",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United Kingdom",
+      "home_url": "https://www.mirror.co.uk/",
+      "rating_basis": "Ad Fontes Media bias rating (Skews Left), checked Oct 2026"
+    },
+    {
+      "id": "bbc",
+      "name": "BBC News",
+      "lean": "centre",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "public-service",
+      "country": "United Kingdom",
+      "home_url": "https://www.bbc.co.uk/news",
+      "rating_basis": "AllSides media bias rating (Center), checked Oct 2026"
+    },
+    {
+      "id": "sky",
+      "name": "Sky News",
+      "lean": "centre",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United Kingdom",
+      "home_url": "https://news.sky.com/",
+      "rating_basis": "Ad Fontes Media bias rating (Middle), checked Oct 2026"
+    },
+    {
+      "id": "telegraph",
+      "name": "The Telegraph",
+      "lean": "right",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United Kingdom",
+      "home_url": "https://www.telegraph.co.uk/",
+      "rating_basis": "AllSides media bias rating (Lean Right), checked Oct 2026"
+    },
+    {
+      "id": "dailymail",
+      "name": "Daily Mail",
+      "lean": "right",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United Kingdom",
+      "home_url": "https://www.dailymail.co.uk/",
+      "rating_basis": "AllSides media bias rating (Right), checked Oct 2026"
+    },
+    {
+      "id": "thesun",
+      "name": "The Sun",
+      "lean": "right",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United Kingdom",
+      "home_url": "https://www.thesun.co.uk/",
+      "rating_basis": "AllSides media bias rating (Right), checked Oct 2026"
+    },
+    {
+      "id": "nyt",
+      "name": "The New York Times",
+      "lean": "left",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United States",
+      "home_url": "https://www.nytimes.com/",
+      "rating_basis": "AllSides media bias rating (Lean Left), checked Oct 2026"
+    },
+    {
+      "id": "nbc",
+      "name": "NBC News",
+      "lean": "left",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United States",
+      "home_url": "https://www.nbcnews.com/",
+      "rating_basis": "AllSides media bias rating (Lean Left), checked Oct 2026"
+    },
+    {
+      "id": "huffpost",
+      "name": "HuffPost",
+      "lean": "left",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United States",
+      "home_url": "https://www.huffpost.com/",
+      "rating_basis": "AllSides media bias rating (Left), checked Oct 2026"
+    },
+    {
+      "id": "npr",
+      "name": "NPR",
+      "lean": "centre",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "public-service",
+      "country": "United States",
+      "home_url": "https://www.npr.org/",
+      "rating_basis": "Ad Fontes Media bias rating (Middle / Skews Left), checked Oct 2026"
+    },
+    {
+      "id": "axios",
+      "name": "Axios",
+      "lean": "centre",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United States",
+      "home_url": "https://www.axios.com/",
+      "rating_basis": "AllSides media bias rating (Center), checked Oct 2026"
+    },
+    {
+      "id": "fox",
+      "name": "Fox News",
+      "lean": "right",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United States",
+      "home_url": "https://www.foxnews.com/",
+      "rating_basis": "AllSides media bias rating (Right), checked Oct 2026"
+    },
+    {
+      "id": "nypost",
+      "name": "New York Post",
+      "lean": "right",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United States",
+      "home_url": "https://nypost.com/",
+      "rating_basis": "AllSides media bias rating (Lean Right), checked Oct 2026"
+    },
+    {
+      "id": "examiner",
+      "name": "Washington Examiner",
+      "lean": "right",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United States",
+      "home_url": "https://www.washingtonexaminer.com/",
+      "rating_basis": "AllSides media bias rating (Lean Right), checked Oct 2026"
+    },
+    {
+      "id": "france24",
+      "name": "France 24",
+      "lean": "centre",
+      "region": "europe",
+      "bloc": "west",
+      "ownership": "public-service",
+      "country": "France",
+      "home_url": "https://www.france24.com/en/",
+      "rating_basis": "Ad Fontes Media bias rating (Middle), checked Oct 2026"
+    },
+    {
+      "id": "dw",
+      "name": "DW (Deutsche Welle)",
+      "lean": "centre",
+      "region": "europe",
+      "bloc": "west",
+      "ownership": "public-service",
+      "country": "Germany",
+      "home_url": "https://www.dw.com/en/",
+      "rating_basis": "AllSides media bias rating (Center), checked Oct 2026"
+    },
+    {
+      "id": "aljazeera",
+      "name": "Al Jazeera English",
+      "lean": null,
+      "region": "middle_east",
+      "bloc": "east",
+      "ownership": "state-funded",
+      "country": "Qatar",
+      "home_url": "https://www.aljazeera.com/",
+      "rating_basis": "Funded by the State of Qatar; no left/right tag applied"
+    },
+    {
+      "id": "thenational",
+      "name": "The National (UAE)",
+      "lean": null,
+      "region": "middle_east",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "United Arab Emirates",
+      "home_url": "https://www.thenationalnews.com/",
+      "rating_basis": "Owned by International Media Investments (Abu Dhabi); no left/right tag applied"
+    },
+    {
+      "id": "timesofisrael",
+      "name": "The Times of Israel",
+      "lean": null,
+      "region": "middle_east",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "Israel",
+      "home_url": "https://www.timesofisrael.com/",
+      "rating_basis": "Privately owned; no left/right tag applied"
+    },
+    {
+      "id": "cgtn",
+      "name": "CGTN",
+      "lean": null,
+      "region": "asia",
+      "bloc": "east",
+      "ownership": "state-controlled",
+      "country": "China",
+      "home_url": "https://www.cgtn.com/",
+      "rating_basis": "China Global Television Network, part of state broadcaster China Media Group"
+    },
+    {
+      "id": "ecns",
+      "name": "ECNS (China News Service)",
+      "lean": null,
+      "region": "asia",
+      "bloc": "east",
+      "ownership": "state-controlled",
+      "country": "China",
+      "home_url": "https://www.ecns.cn/",
+      "rating_basis": "English service of China News Service, a state news agency"
+    },
+    {
+      "id": "scmp",
+      "name": "South China Morning Post",
+      "lean": null,
+      "region": "asia",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "Hong Kong",
+      "home_url": "https://www.scmp.com/",
+      "rating_basis": "Owned by Alibaba Group; no left/right tag applied"
+    },
+    {
+      "id": "toi",
+      "name": "The Times of India",
+      "lean": null,
+      "region": "asia",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "India",
+      "home_url": "https://timesofindia.indiatimes.com/",
+      "rating_basis": "Privately owned (Bennett, Coleman & Co.); no left/right tag applied"
+    },
+    {
+      "id": "thehindu",
+      "name": "The Hindu",
+      "lean": null,
+      "region": "asia",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "India",
+      "home_url": "https://www.thehindu.com/",
+      "rating_basis": "Privately owned (The Hindu Group); no left/right tag applied"
+    },
+    {
+      "id": "moscowtimes",
+      "name": "The Moscow Times",
+      "lean": null,
+      "region": "europe",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "Russia",
+      "home_url": "https://www.themoscowtimes.com/",
+      "rating_basis": "Independent, Amsterdam-based since 2022; designated \"undesirable\" by Russia; no left/right tag applied"
+    },
+    {
+      "id": "japantimes",
+      "name": "The Japan Times",
+      "lean": null,
+      "region": "asia",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "Japan",
+      "home_url": "https://www.japantimes.co.jp/",
+      "rating_basis": "Privately owned (News2u Holdings); no left/right tag applied"
+    },
+    {
+      "id": "koreaherald",
+      "name": "The Korea Herald",
+      "lean": null,
+      "region": "asia",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "South Korea",
+      "home_url": "https://www.koreaherald.com/",
+      "rating_basis": "Privately owned (Herald Corporation); no left/right tag applied"
+    }
+  ],
+  "stories": [
+    {
+      "id": "702fbe26e044",
+      "title": "AI-discovered PHP vulnerabilities trigger global cybersecurity response",
+      "rank": 1,
+      "outlet_count": 8,
+      "coverage": {
+        "lean": {
+          "left": 1,
+          "centre": 3,
+          "right": 1
+        },
+        "bloc": {
+          "west": 5,
+          "east": 3
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "341786df57c3",
+          "outlet_id": "mirror",
+          "headline": "Government websites across Europe taken down over hacking fears from cyber security flaws",
+          "snippet": "Cyber-security flaws have been found in programming language which powers much of the internet forcing governments and businesses to take down websites",
+          "url": "https://www.mirror.co.uk/news/world-news/europe-websites-php-security-flaw-37797420",
+          "published_at": "2026-10-21T19:50:44Z",
+          "published_at_estimated": false,
+          "image_url": "https://i2-prod.mirror.co.uk/incoming/article37797457.ece/ALTERNATES/s615/0_A-computer-programmer-or-hacker-prints-a-code-on-a-laptop-keyboard-to-break-into-a-secret-organizati.jpg"
+        },
+        {
+          "id": "119a71764f67",
+          "outlet_id": "axios",
+          "headline": "AI uncovers massive flaw in web's foundational code",
+          "snippet": "Security officials are sounding the alarm over two critical vulnerabilities in a programming language used to run millions of websites, marking one of the most consequential cybersecurity…",
+          "url": "https://www.axios.com/2026/10/21/php-openai-ai-bug-hunting-cyberattacks",
+          "published_at": "2026-10-21T21:26:24Z",
+          "published_at_estimated": false,
+          "image_url": "https://images.axios.com/OHS0qSMTUq4GfjVKa5NFWkeEW_w=/0x0:1920x1080/1366x768/2026/10/07/1791402047784.jpeg"
+        },
+        {
+          "id": "6c55c660c73b",
+          "outlet_id": "france24",
+          "headline": "'Backbone of the web': What is PHP and how has it raised AI hacking fears?",
+          "snippet": "As governments and corporations alike scramble to install a patch to fix fundamental security flaws in a programming language that helps run roughly 70 percent of the world's websites, here's what…",
+          "url": "https://www.france24.com/en/technology/20261022-backbone-of-the-web-what-is-php-and-how-has-it-raised-ai-hacking-fears",
+          "published_at": "2026-10-22T04:17:49Z",
+          "published_at_estimated": false,
+          "image_url": "https://s.france24.com/media/display/8a62bfea-cdcf-11f1-835f-8bea73bbe173/w:1024/p:16x9/17d20d48dd7c35c2a22cd35c79d7522fecda4d4e.jpg"
+        },
+        {
+          "id": "487d8934efba",
+          "outlet_id": "japantimes",
+          "headline": "Bank, business and ministry websites halted after PHP vulnerabilities announced",
+          "snippet": "International authorities have urged site administrators to immediately update software to prevent unauthorized access and potential data exposure.",
+          "url": "https://www.japantimes.co.jp/business/2026/10/22/tech/japan-php-vulnerabilities/",
+          "published_at": "2026-10-22T06:26:00Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.japantimes.co.jp/japantimes/uploads/images/2026/10/22/thumbs/400x400/569831.jpg"
+        },
+        {
+          "id": "632979d65af9",
+          "outlet_id": "thesun",
+          "headline": "Fears of ‘wider wave of cyber attacks’ after ‘critical’ PHP software flaw found by AI sparks global shutdown of websites",
+          "snippet": "MILLIONS of websites across the world are feared to be at risk as a \"critical security issue\" continues to spark chaos online. The UK has launched an urgent probe to identify any exposure in its…",
+          "url": "https://www.thesun.co.uk/news/40769433/uk-website-security-flaw-warning/",
+          "published_at": "2026-10-22T06:29:11Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.thesun.co.uk/wp-content%2Fuploads%2F2026%2F10%2Fnewspress-collage-1rh4yjln8-1792650103208.jpg?quality%3D90%26"
+        },
+        {
+          "id": "c06e43ac4e3d",
+          "outlet_id": "scmp",
+          "headline": "Hong Kong watchdog joins global agencies to warn of web scripting hack risks",
+          "snippet": "A Hong Kong information security watchdog issued an “extremely high risk” warning on Thursday morning over two critical flaws in a widely used web programming language that could allow hackers to…",
+          "url": "https://www.scmp.com/news/hong-kong/article/3371756/hong-kong-watchdog-warns-hacking-risks-flaws-web-programming-language",
+          "published_at": "2026-10-22T06:37:01Z",
+          "published_at_estimated": false,
+          "image_url": "https://cdn.i-scmp.com/sites/default/files/styles/1280x720/public/d8/images/canvas/2026/10/22/00320106-6785-4a23-8a4d-e15c167ab16a_aebd3126.jpg?itok=5Q4PMLtp&v=1792651009"
+        },
+        {
+          "id": "9abf81c3064d",
+          "outlet_id": "koreaherald",
+          "headline": "Cheong Wa Dae holds emergency meeting over PHP security flaws",
+          "snippet": "South Korea’s presidential National Security Office convened an emergency cybersecurity meeting on Thursday to coordinate a response to a critical vulnerability in PHP, a programming language widely…",
+          "url": "https://www.koreaherald.com/article/10911810",
+          "published_at": "2026-10-22T07:58:02Z",
+          "published_at_estimated": false,
+          "image_url": "https://wimg.heraldcorp.com/news/cms/2026/10/22/news-p.v1.20261022.74fe7f87f34240f38f7fbe8bdadd85d6_T1.jpg"
+        },
+        {
+          "id": "4c7685ba3cb0",
+          "outlet_id": "mirror",
+          "headline": "Cybersecurity expert warns situation is 'serious' as 'millions of sites impacted by PHP vulnerabilities'",
+          "snippet": "Severe vulnerabilities in the PHP: Hypertext Preprocessor identified with the help of AI this week have led cybersecurity experts to issue warnings about potentially millions of affected sites",
+          "url": "https://www.mirror.co.uk/news/world-news/cyber-security-php-ai-vulnerable-37798908",
+          "published_at": "2026-10-22T10:28:51Z",
+          "published_at_estimated": false,
+          "image_url": "https://i2-prod.mirror.co.uk/incoming/article37798990.ece/ALTERNATES/s615/0_Cyber-Security-Flaws-Identified-In-PHP-Programming-Language.jpg"
+        },
+        {
+          "id": "7c11a6412a5e",
+          "outlet_id": "bbc",
+          "headline": "What is PHP and why did it spark a global cyber-security scramble?",
+          "snippet": "AI uncovered long-hidden programming flaws, triggering a rare global cyber-security response.",
+          "url": "https://www.bbc.co.uk/news/articles/c3qjnwye0ep5o",
+          "published_at": "2026-10-22T11:15:58Z",
+          "published_at_estimated": false,
+          "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/15df/live/bbb61e90-cddc-11f1-bc2e-018d645d8d21.jpg"
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "Critical security flaws have been found in PHP, a programming language widely used to run websites.",
+          "sources": [
+            "341786df57c3",
+            "119a71764f67",
+            "6c55c660c73b",
+            "487d8934efba",
+            "632979d65af9",
+            "c06e43ac4e3d",
+            "9abf81c3064d",
+            "4c7685ba3cb0",
+            "7c11a6412a5e"
+          ]
+        },
+        {
+          "text": "The flaws were uncovered by, or with the help of, AI.",
+          "sources": [
+            "119a71764f67",
+            "632979d65af9",
+            "4c7685ba3cb0",
+            "7c11a6412a5e"
+          ]
+        },
+        {
+          "text": "There are two critical vulnerabilities.",
+          "sources": [
+            "119a71764f67",
+            "c06e43ac4e3d"
+          ]
+        },
+        {
+          "text": "Websites, including government, bank and business sites, have been taken down or halted.",
+          "sources": [
+            "341786df57c3",
+            "487d8934efba",
+            "632979d65af9"
+          ]
+        },
+        {
+          "text": "Millions of websites are described as potentially affected.",
+          "sources": [
+            "119a71764f67",
+            "632979d65af9",
+            "4c7685ba3cb0"
+          ]
+        },
+        {
+          "text": "Authorities in several countries have responded, issuing warnings, urging updates or patches, and launching probes or emergency meetings.",
+          "sources": [
+            "6c55c660c73b",
+            "487d8934efba",
+            "632979d65af9",
+            "c06e43ac4e3d",
+            "9abf81c3064d",
+            "7c11a6412a5e"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "341786df57c3",
+              "quote": "Government websites across Europe taken down over hacking fears",
+              "field": "headline"
+            },
+            {
+              "article_id": "4c7685ba3cb0",
+              "quote": "Cybersecurity expert warns situation is 'serious'",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with government websites across Europe being taken down.",
+              "sources": [
+                "341786df57c3"
+              ]
+            },
+            {
+              "text": "Foregrounds expert warnings about potentially millions of affected sites.",
+              "sources": [
+                "4c7685ba3cb0"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "119a71764f67",
+              "quote": "AI uncovers massive flaw in web's foundational code",
+              "field": "headline"
+            },
+            {
+              "article_id": "6c55c660c73b",
+              "quote": "'Backbone of the web': What is PHP and how has it raised AI hacking fears?",
+              "field": "headline"
+            },
+            {
+              "article_id": "7c11a6412a5e",
+              "quote": "triggering a rare global cyber-security response",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with AI's role in uncovering the flaws.",
+              "sources": [
+                "119a71764f67",
+                "7c11a6412a5e"
+              ]
+            },
+            {
+              "text": "Offers explainers on what PHP is and its reach, citing roughly 70 percent of websites.",
+              "sources": [
+                "6c55c660c73b",
+                "7c11a6412a5e"
+              ]
+            },
+            {
+              "text": "Describes the event as one of the most consequential cybersecurity episodes and a rare global response.",
+              "sources": [
+                "119a71764f67",
+                "7c11a6412a5e"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "right",
+          "headline_quotes": [
+            {
+              "article_id": "632979d65af9",
+              "quote": "Fears of ‘wider wave of cyber attacks’",
+              "field": "headline"
+            },
+            {
+              "article_id": "632979d65af9",
+              "quote": "sparks global shutdown of websites",
+              "field": "headline"
+            },
+            {
+              "article_id": "632979d65af9",
+              "quote": "The UK has launched an urgent probe",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Foregrounds fears of a wider wave of cyber attacks and chaos online.",
+              "sources": [
+                "632979d65af9"
+              ]
+            },
+            {
+              "text": "Highlights the UK's urgent probe into its exposure.",
+              "sources": [
+                "632979d65af9"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "left",
+          "text": "Left coverage does not mention efforts to install a patch for the flaws.",
+          "sources": [
+            "6c55c660c73b"
+          ]
+        },
+        {
+          "lean": "right",
+          "text": "Right coverage does not mention efforts to install a patch for the flaws.",
+          "sources": [
+            "6c55c660c73b"
+          ]
+        },
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not mention websites being taken down or shut down.",
+          "sources": [
+            "341786df57c3",
+            "632979d65af9"
+          ]
+        }
+      ],
+      "contested_claims": [],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "119a71764f67",
+              "quote": "AI uncovers massive flaw in web's foundational code",
+              "field": "headline"
+            },
+            {
+              "article_id": "632979d65af9",
+              "quote": "sparks global shutdown of websites",
+              "field": "headline"
+            },
+            {
+              "article_id": "341786df57c3",
+              "quote": "Government websites across Europe taken down over hacking fears",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Foregrounds AI's role in discovering the flaws.",
+              "sources": [
+                "119a71764f67",
+                "632979d65af9",
+                "4c7685ba3cb0",
+                "7c11a6412a5e"
+              ]
+            },
+            {
+              "text": "Offers explainers on PHP and its role in the web.",
+              "sources": [
+                "6c55c660c73b",
+                "7c11a6412a5e"
+              ]
+            },
+            {
+              "text": "Highlights website shutdowns and fears of further attacks.",
+              "sources": [
+                "341786df57c3",
+                "632979d65af9"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "487d8934efba",
+              "quote": "Bank, business and ministry websites halted",
+              "field": "headline"
+            },
+            {
+              "article_id": "c06e43ac4e3d",
+              "quote": "Hong Kong watchdog joins global agencies to warn of web scripting hack risks",
+              "field": "headline"
+            },
+            {
+              "article_id": "9abf81c3064d",
+              "quote": "convened an emergency cybersecurity meeting",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Foregrounds responses by national and regional authorities, including a Hong Kong watchdog warning and a South Korean emergency meeting.",
+              "sources": [
+                "c06e43ac4e3d",
+                "9abf81c3064d"
+              ]
+            },
+            {
+              "text": "Reports bank, business and ministry websites halted and calls for administrators to update software.",
+              "sources": [
+                "487d8934efba"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "Critical vulnerabilities were found in PHP, a programming language used to run millions of websites, with several outlets saying AI uncovered them. Governments and businesses took websites offline, and authorities in several countries issued warnings, held emergency meetings and urged updates.",
+        "sources": [
+          "341786df57c3",
+          "119a71764f67",
+          "6c55c660c73b",
+          "487d8934efba",
+          "632979d65af9",
+          "c06e43ac4e3d",
+          "9abf81c3064d",
+          "4c7685ba3cb0",
+          "7c11a6412a5e"
+        ]
+      },
+      "conclusion": {
+        "text": "All sides report critical PHP flaws prompting website takedowns and official responses. West outlets foreground AI's role and explain PHP, while East outlets lead with national agencies' warnings and meetings. No outlet disputes another's account.",
+        "sources": [
+          "119a71764f67",
+          "6c55c660c73b",
+          "7c11a6412a5e",
+          "341786df57c3",
+          "632979d65af9",
+          "487d8934efba",
+          "c06e43ac4e3d",
+          "9abf81c3064d"
+        ]
+      },
+      "validation": {
+        "kept": 37,
+        "dropped_by_reason": {}
+      }
+    },
+    {
+      "id": "a65cd8516144",
+      "title": "Russia strikes Kyiv as Russia and Ukraine trade attacks after talks pledge",
+      "rank": 2,
+      "outlet_count": 8,
+      "coverage": {
+        "lean": {
+          "left": 2,
+          "centre": 2,
+          "right": 0
+        },
+        "bloc": {
+          "west": 4,
+          "east": 4
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "dc54055b3b64",
+          "outlet_id": "bbc",
+          "headline": "Missiles hit Kyiv after Russia agrees to US call to resume Ukraine peace talks",
+          "snippet": "Moscow says it is \"ready in principle\" to resume peace talks and US President Donald Trump says the world is \"the closest we've been\" to ending the war.",
+          "url": "https://www.bbc.co.uk/news/articles/cq3djn5nxx12o",
+          "published_at": "2026-10-21T21:27:41Z",
+          "published_at_estimated": false,
+          "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/abac/live/5ed152f0-cd8f-11f1-b1e7-39558e114359.jpg"
+        },
+        {
+          "id": "e1462502399c",
+          "outlet_id": "france24",
+          "headline": "Russia and Ukraine trade strikes overnight as Moscow signals readiness for peace talks",
+          "snippet": "Russia and Ukraine traded major drone and missile strikes on each other's capitals overnight, hours after Moscow signalled readiness to resume US-mediated peace talks. President Donald Trump said…",
+          "url": "https://www.france24.com/en/europe/20261022-russia-missiles-kyiv-ukraine-peace-talks",
+          "published_at": "2026-10-22T01:51:03Z",
+          "published_at_estimated": false,
+          "image_url": "https://s.france24.com/media/display/bf71a96e-cb7f-11f1-8810-6313a763b466/w:1024/p:16x9/2026-10-18T235422Z-1304641961-RC2X5OA93ZJS-RTRMADP-3-UKRAINE-CRISIS-ATTACK-KYIV.jpg"
+        },
+        {
+          "id": "730e22f75d6e",
+          "outlet_id": "thehindu",
+          "headline": "Missiles strike Ukraine's capital after U.S. envoy visits Russia",
+          "snippet": "Mr. Witkoff praised Mr. Putin as a \"humanitarian\" for freeing U.S. citizen Stephen Hubbard, but the Kremlin warned after the meeting in Saint Petersburg that while Moscow was \"in principle\" willing…",
+          "url": "https://www.thehindu.com/news/international/missiles-strike-ukraines-capital-after-us-envoy-visits-russia/article71609868.ece",
+          "published_at": "2026-10-22T02:06:37Z",
+          "published_at_estimated": false,
+          "image_url": "https://th-i.thgim.com/public/incoming/ot8l50/article71609903.ece/alternates/LANDSCAPE_1200/AFP__20261022__D4292ZR__v1__HighRes__UkraineRussiaConflictWar.jpg"
+        },
+        {
+          "id": "b1b50964c049",
+          "outlet_id": "scmp",
+          "headline": "Russia and Ukraine trade major attacks as Trump touts progress",
+          "snippet": "Moscow firing ballistic missiles at Ukraine shortly after talks between US envoy Steve Witkoff and Russia’s Vladimir Putin showed the Kremlin’s position on the war had not changed, President…",
+          "url": "https://www.scmp.com/news/world/europe/article/3371739/russia-and-ukraine-trade-major-attacks-trump-touts-progress",
+          "published_at": "2026-10-22T05:04:43Z",
+          "published_at_estimated": false,
+          "image_url": "https://cdn.i-scmp.com/sites/default/files/styles/1280x720/public/d8/images/canvas/2026/10/22/1c12db51-356d-4fe6-95e3-1b6df47157dc_1a522c60.jpg?itok=sZzb2YYS&v=1792655230"
+        },
+        {
+          "id": "d32ceb78c6ec",
+          "outlet_id": "aljazeera",
+          "headline": "Russian strikes hit Kyiv after Witkoff meets Putin",
+          "snippet": "Ukraine says 'appeasement' will not end war as Russian attacks kill 1, injure 22 in its capital.",
+          "url": "https://www.aljazeera.com/news/2026/10/22/russian-strikes-hit-kyiv-after-witkoff-meets-putin",
+          "published_at": "2026-10-22T08:18:39Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "8333fb0e192c",
+          "outlet_id": "mirror",
+          "headline": "Russia bombards Kyiv with ballistic missiles - hours after Donald Trump claims peace is closer than ever",
+          "snippet": "US President Donald Trump, who previously claimed he could bring an end to the war in Ukraine in just one day, claimed peace was \"now the closest we've been\"",
+          "url": "https://www.mirror.co.uk/news/world-news/russia-ukraine-attack-trump-putin-37797955",
+          "published_at": "2026-10-22T08:19:50Z",
+          "published_at_estimated": false,
+          "image_url": "https://i2-prod.mirror.co.uk/incoming/article37798099.ece/ALTERNATES/s615/0_FILES-US-POLITICS-TRUMP.jpg"
+        },
+        {
+          "id": "cec9de2eb282",
+          "outlet_id": "moscowtimes",
+          "headline": "Ukraine and Russia Trade Deadly Strikes After U.S. Tries to Reboot Peace Talks",
+          "snippet": "The Defense Ministry said it intercepted 808 Ukrainian drones across Russia and annexed Crimea between Wednesday night and Thursday morning.",
+          "url": "https://www.themoscowtimes.com/2026/10/22/ukraine-and-russia-trade-deadly-strikes-after-us-tries-to-reboot-peace-talks-a94044",
+          "published_at": "2026-10-22T08:26:00Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "c2cd69536cc9",
+          "outlet_id": "aljazeera",
+          "headline": "Russia and Ukraine trade attacks despite pledging to resume peace talks",
+          "snippet": "Overnight attacks on Kyiv injured 15 people, while two were injured in Moscow as Russia said it intercepted 163 drones.",
+          "url": "https://www.aljazeera.com/video/newsfeed/2026/10/22/russia-and-ukraine-trade-attacks-despite-pledging-to-resume-peace-talks",
+          "published_at": "2026-10-22T09:57:47Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "a3b8bd78d4d5",
+          "outlet_id": "mirror",
+          "headline": "Russia pounds Ukraine in deadly blitz after Donald Trump envoy called Putin a 'humanitarian'",
+          "snippet": "Trump envoy Steve Witkoff hailed Russian President Vladimir Putin a 'humanitarian' - just hours later Russia launched a missile attack on Ukraine, leaving at least one person dead in the capital Kyiv",
+          "url": "https://www.mirror.co.uk/news/world-news/ukraine-russia-war-putin-trump-37798642",
+          "published_at": "2026-10-22T10:13:42Z",
+          "published_at_estimated": false,
+          "image_url": "https://i2-prod.mirror.co.uk/incoming/article37798666.ece/ALTERNATES/s615/1_TOPSHOT-UKRAINE-RUSSIA-CONFLICT-WAR.jpg"
+        },
+        {
+          "id": "f46a1765779a",
+          "outlet_id": "guardian",
+          "headline": "Russia bombards Kyiv with missiles hours after agreeing to resume talks with Ukraine",
+          "snippet": "Experts say Russia is trying to destroy energy infrastructure before winter and US ‘appeasement and flattery’ will not achieve peace Europe live – latest updates Russia has carried out a massive…",
+          "url": "https://www.theguardian.com/world/2026/oct/22/russia-missile-attack-kyiv-hours-after-agreeing-to-talks-ukraine",
+          "published_at": "2026-10-22T10:14:23Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.guim.co.uk/img/media/369ecb74e3157beaae2c4399ccb4727967eafd28/413_0_6786_5429/master/6786.jpg?width=460&quality=85&auto=format&fit=max&s=55436b6740c1f7e51296ce40c6d8603a"
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "Missiles hit Kyiv shortly after Moscow signalled it was willing in principle to resume peace talks.",
+          "sources": [
+            "dc54055b3b64",
+            "e1462502399c",
+            "730e22f75d6e",
+            "f46a1765779a",
+            "c2cd69536cc9",
+            "cec9de2eb282"
+          ]
+        },
+        {
+          "text": "Russia and Ukraine traded drone and missile strikes overnight.",
+          "sources": [
+            "e1462502399c",
+            "b1b50964c049",
+            "cec9de2eb282",
+            "c2cd69536cc9"
+          ]
+        },
+        {
+          "text": "The strikes followed talks between US envoy Steve Witkoff and Vladimir Putin.",
+          "sources": [
+            "730e22f75d6e",
+            "b1b50964c049",
+            "d32ceb78c6ec",
+            "a3b8bd78d4d5"
+          ]
+        },
+        {
+          "text": "Donald Trump said the world was the closest it had been to ending the war.",
+          "sources": [
+            "dc54055b3b64",
+            "8333fb0e192c",
+            "b1b50964c049"
+          ]
+        },
+        {
+          "text": "At least one person was killed in the attack on Kyiv.",
+          "sources": [
+            "d32ceb78c6ec",
+            "a3b8bd78d4d5"
+          ]
+        },
+        {
+          "text": "Witkoff described Putin as a 'humanitarian'.",
+          "sources": [
+            "730e22f75d6e",
+            "a3b8bd78d4d5"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "8333fb0e192c",
+              "quote": "Russia bombards Kyiv with ballistic missiles",
+              "field": "headline"
+            },
+            {
+              "article_id": "8333fb0e192c",
+              "quote": "previously claimed he could bring an end to the war in Ukraine in just one day",
+              "field": "snippet"
+            },
+            {
+              "article_id": "a3b8bd78d4d5",
+              "quote": "after Donald Trump envoy called Putin a 'humanitarian'",
+              "field": "headline"
+            },
+            {
+              "article_id": "f46a1765779a",
+              "quote": "US ‘appeasement and flattery’ will not achieve peace",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the timing of the strikes relative to Trump's claim that peace was closer than ever.",
+              "sources": [
+                "8333fb0e192c"
+              ]
+            },
+            {
+              "text": "Foregrounds Witkoff's description of Putin as a 'humanitarian' hours before the attack.",
+              "sources": [
+                "a3b8bd78d4d5"
+              ]
+            },
+            {
+              "text": "Cites experts saying Russia is targeting energy infrastructure before winter and that US appeasement will not bring peace.",
+              "sources": [
+                "f46a1765779a"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "dc54055b3b64",
+              "quote": "Missiles hit Kyiv after Russia agrees to US call to resume Ukraine peace talks",
+              "field": "headline"
+            },
+            {
+              "article_id": "dc54055b3b64",
+              "quote": "\"ready in principle\"",
+              "field": "snippet"
+            },
+            {
+              "article_id": "e1462502399c",
+              "quote": "traded major drone and missile strikes on each other's capitals overnight",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Emphasises Moscow's stated readiness to resume US-mediated peace talks alongside the strikes.",
+              "sources": [
+                "dc54055b3b64",
+                "e1462502399c"
+              ]
+            },
+            {
+              "text": "Describes the strikes as reciprocal attacks on both capitals.",
+              "sources": [
+                "e1462502399c"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "left",
+          "text": "Left coverage does not mention Ukrainian strikes on Russia or that the two sides traded attacks.",
+          "sources": [
+            "e1462502399c"
+          ]
+        },
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not mention Witkoff calling Putin a 'humanitarian'.",
+          "sources": [
+            "a3b8bd78d4d5"
+          ]
+        },
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not mention deaths from the attack on Kyiv.",
+          "sources": [
+            "a3b8bd78d4d5"
+          ]
+        }
+      ],
+      "contested_claims": [
+        {
+          "claim": "Russia's Defence Ministry intercepted 808 Ukrainian drones overnight; another report gives the figure as 163.",
+          "asserted_by": [
+            "cec9de2eb282"
+          ],
+          "disputed_by": [
+            "c2cd69536cc9"
+          ]
+        }
+      ],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "dc54055b3b64",
+              "quote": "the world is \"the closest we've been\" to ending the war",
+              "field": "snippet"
+            },
+            {
+              "article_id": "8333fb0e192c",
+              "quote": "hours after Donald Trump claims peace is closer than ever",
+              "field": "headline"
+            },
+            {
+              "article_id": "f46a1765779a",
+              "quote": "Russia bombards Kyiv with missiles hours after agreeing to resume talks with Ukraine",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the contrast between the strikes and Russia's agreement to resume talks and Trump's statements on peace.",
+              "sources": [
+                "dc54055b3b64",
+                "8333fb0e192c",
+                "f46a1765779a",
+                "e1462502399c"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "730e22f75d6e",
+              "quote": "Missiles strike Ukraine's capital after U.S. envoy visits Russia",
+              "field": "headline"
+            },
+            {
+              "article_id": "d32ceb78c6ec",
+              "quote": "Ukraine says 'appeasement' will not end war",
+              "field": "snippet"
+            },
+            {
+              "article_id": "cec9de2eb282",
+              "quote": "intercepted 808 Ukrainian drones across Russia and annexed Crimea",
+              "field": "snippet"
+            },
+            {
+              "article_id": "b1b50964c049",
+              "quote": "Trump touts progress",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Foregrounds the Witkoff–Putin meeting, including the release of US citizen Stephen Hubbard.",
+              "sources": [
+                "730e22f75d6e",
+                "d32ceb78c6ec",
+                "b1b50964c049"
+              ]
+            },
+            {
+              "text": "Reports Russian Defence Ministry drone-interception figures and injuries in Moscow.",
+              "sources": [
+                "cec9de2eb282",
+                "c2cd69536cc9"
+              ]
+            },
+            {
+              "text": "Carries Ukraine's statement that 'appeasement' will not end the war and casualty figures for Kyiv.",
+              "sources": [
+                "d32ceb78c6ec",
+                "c2cd69536cc9"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "Russian missiles struck Kyiv after Moscow said it was ready in principle to resume US-mediated peace talks and US envoy Steve Witkoff met Vladimir Putin. Russia and Ukraine traded drone and missile strikes overnight, while Donald Trump said the world was \"the closest we've been\" to ending the war.",
+        "sources": [
+          "dc54055b3b64",
+          "e1462502399c",
+          "730e22f75d6e",
+          "b1b50964c049",
+          "d32ceb78c6ec",
+          "cec9de2eb282",
+          "c2cd69536cc9",
+          "8333fb0e192c",
+          "a3b8bd78d4d5",
+          "f46a1765779a"
+        ]
+      },
+      "conclusion": {
+        "text": "All outlets report Russian strikes on Kyiv following Moscow's stated readiness to resume talks. Left outlets stress Trump's and Witkoff's remarks and criticism of appeasement, centre outlets Moscow's readiness, and East-bloc outlets the Witkoff–Putin meeting and Russian drone figures, which differ between reports.",
+        "sources": [
+          "dc54055b3b64",
+          "e1462502399c",
+          "8333fb0e192c",
+          "a3b8bd78d4d5",
+          "f46a1765779a",
+          "730e22f75d6e",
+          "cec9de2eb282",
+          "c2cd69536cc9"
+        ]
+      },
+      "validation": {
+        "kept": 35,
+        "dropped_by_reason": {}
+      }
+    },
+    {
+      "id": "45891505f7a3",
+      "title": "Kim Yo Jong says North Korea will restart border propaganda loudspeakers",
+      "rank": 3,
+      "outlet_count": 7,
+      "coverage": {
+        "lean": {
+          "left": 2,
+          "centre": 1,
+          "right": 0
+        },
+        "bloc": {
+          "west": 3,
+          "east": 4
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "73e52e7b07e2",
+          "outlet_id": "thehindu",
+          "headline": "North Korea's Kim Yo Jong warns South Korea, says border loudspeakers to be ready within days",
+          "snippet": "In a statement carried by state media KCNA, Ms. Kim ​said she was responding to ‌a special adviser to President Lee on defence policy, who accused North Korea of planting mines that wounded South…",
+          "url": "https://www.thehindu.com/news/international/north-koreas-kim-yo-jong-warns-south-korea-says-border-loudspeakers-to-be-ready-within-days/article71609150.ece",
+          "published_at": "2026-10-21T22:00:58Z",
+          "published_at_estimated": false,
+          "image_url": "https://th-i.thgim.com/public/incoming/1yfq6b/article71609152.ece/alternates/LANDSCAPE_1200/North_Korea_Koreas_Tensions_6_542.jpg"
+        },
+        {
+          "id": "0ce27c73ec03",
+          "outlet_id": "guardian",
+          "headline": "North Korea prepares to restart propaganda loudspeakers as ties sour with South",
+          "snippet": "Kim Yo-jong, sister of Kim Jong-un, issues warning after inspecting border fortifications against backdrop of rising tensions Propaganda loudspeakers aimed at South Korea will be ready to restart…",
+          "url": "https://www.theguardian.com/world/2026/oct/22/north-korea-to-restart-propaganda-loudspeakers-south-korea",
+          "published_at": "2026-10-22T03:56:46Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.guim.co.uk/img/media/713bcd9ff1654fe9c89a51939a324229100d3767/0_125_3728_2984/master/3728.jpg?width=460&quality=85&auto=format&fit=max&s=7b878d32ddc2221fd1054bf807d7cce7"
+        },
+        {
+          "id": "8fba1814a121",
+          "outlet_id": "mirror",
+          "headline": "Kim Jong Un's sister issues new South Korea threat after leader's 'death' rumours",
+          "snippet": "Kim Yo Jong has lashed out at South Korea earlier this week and threatened to deploy additional weapons along its border - she now said loudspeakers, used for propaganda, will be in place by the end…",
+          "url": "https://www.mirror.co.uk/news/world-news/north-south-korea-loudspeakers-border-37797795",
+          "published_at": "2026-10-22T03:58:49Z",
+          "published_at_estimated": false,
+          "image_url": "https://i2-prod.mirror.co.uk/incoming/article37259552.ece/ALTERNATES/s615/1_FILES-NKOREA-SKOREA-DIPLOMACY.jpg"
+        },
+        {
+          "id": "b15b06da7b4d",
+          "outlet_id": "scmp",
+          "headline": "What border warnings by Kim Jong-un’s sister reveal about inter-Korean tensions",
+          "snippet": "The two Koreas appear to be coming closer to an armed clash along their poorly marked military dividing line after a series of increasingly hostile warnings from the North, observers say…",
+          "url": "https://www.scmp.com/week-asia/politics/article/3371730/what-kim-yo-jongs-border-warnings-reveal-about-inter-korean-escalation-risk",
+          "published_at": "2026-10-22T04:35:54Z",
+          "published_at_estimated": false,
+          "image_url": "https://cdn.i-scmp.com/sites/default/files/styles/1280x720/public/d8/images/canvas/2026/10/22/ea67325f-e1b9-4226-aea0-f8e711af787c_ecf5ff5c.jpg?itok=X_xyfnXy&v=1792643752"
+        },
+        {
+          "id": "49683c8cbaac",
+          "outlet_id": "sky",
+          "headline": "North Korea plans to resume propaganda broadcasts along border with South Korea",
+          "snippet": "North Korea says it plans to resume propaganda broadcasts targeting South Korea within days along the heavily-armed border between the two countries.",
+          "url": "https://news.sky.com/story/north-korea-plans-to-resume-propaganda-broadcasts-along-border-with-south-korea-13602125",
+          "published_at": "2026-10-22T05:44:00Z",
+          "published_at_estimated": false,
+          "image_url": "https://e3.365dm.com/26/10/1920x1080/skynews-korea-kim-yo-jong_7383358.jpg?20261022100744"
+        },
+        {
+          "id": "deb5a3a1ed5a",
+          "outlet_id": "koreaherald",
+          "headline": "N. Korea&apos;s Kim Yo-jong escalates border threats in apparent pressure tactic",
+          "snippet": "North Korean leader Kim Jong-un's sister stepped up her verbal offensive against Seoul on Thursday, threatening to resume propaganda loudspeaker broadcasts and telling a senior South Korean…",
+          "url": "https://www.koreaherald.com/article/10911593",
+          "published_at": "2026-10-22T06:15:23Z",
+          "published_at_estimated": false,
+          "image_url": "https://wimg.heraldcorp.com/news/cms/2026/10/22/news-p.v1.20261022.fbe2df0c4ed746aba704833787061226_T1.jpg"
+        },
+        {
+          "id": "9ae9c25b0ae0",
+          "outlet_id": "japantimes",
+          "headline": "North Korea’s Kim Yo Jong warns South, saying border loudspeakers to be ready within days",
+          "snippet": "The threats deal a blow to South Korean President Lee Jae Myung's efforts to ease inter-Korean hostility.",
+          "url": "https://www.japantimes.co.jp/news/2026/10/22/asia-pacific/north-korea-kim-yo-jong/",
+          "published_at": "2026-10-22T06:49:00Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.japantimes.co.jp/japantimes/uploads/images/2026/10/22/thumbs/400x400/569824.jpg"
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "North Korea says propaganda loudspeakers or broadcasts targeting South Korea will resume or be ready within days.",
+          "sources": [
+            "73e52e7b07e2",
+            "0ce27c73ec03",
+            "8fba1814a121",
+            "49683c8cbaac",
+            "deb5a3a1ed5a",
+            "9ae9c25b0ae0"
+          ]
+        },
+        {
+          "text": "The warning came from Kim Yo Jong, sister of Kim Jong Un.",
+          "sources": [
+            "73e52e7b07e2",
+            "0ce27c73ec03",
+            "8fba1814a121",
+            "b15b06da7b4d",
+            "deb5a3a1ed5a",
+            "9ae9c25b0ae0"
+          ]
+        },
+        {
+          "text": "The statement comes amid rising tensions or hostility between the two Koreas.",
+          "sources": [
+            "0ce27c73ec03",
+            "b15b06da7b4d",
+            "deb5a3a1ed5a",
+            "9ae9c25b0ae0"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "0ce27c73ec03",
+              "quote": "as ties sour with South",
+              "field": "headline"
+            },
+            {
+              "article_id": "8fba1814a121",
+              "quote": "after leader's 'death' rumours",
+              "field": "headline"
+            },
+            {
+              "article_id": "8fba1814a121",
+              "quote": "threatened to deploy additional weapons along its border",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with souring ties and notes Kim Yo Jong inspected border fortifications before the warning.",
+              "sources": [
+                "0ce27c73ec03"
+              ]
+            },
+            {
+              "text": "Links the threat to rumours about the leader's death and to earlier threats of additional weapons at the border.",
+              "sources": [
+                "8fba1814a121"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "49683c8cbaac",
+              "quote": "North Korea plans to resume propaganda broadcasts along border with South Korea",
+              "field": "headline"
+            },
+            {
+              "article_id": "49683c8cbaac",
+              "quote": "heavily-armed border",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Attributes the plan to North Korea as a state and describes the border as heavily armed.",
+              "sources": [
+                "49683c8cbaac"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not name Kim Yo Jong as the source of the warning or mention her inspection of border fortifications.",
+          "sources": [
+            "0ce27c73ec03",
+            "8fba1814a121"
+          ]
+        }
+      ],
+      "contested_claims": [],
+      "opinion": [
+        {
+          "text": "Analysis piece citing observers who say the two Koreas appear to be coming closer to an armed clash along their dividing line.",
+          "sources": [
+            "b15b06da7b4d"
+          ]
+        },
+        {
+          "text": "Describes the escalating threats as an apparent pressure tactic.",
+          "sources": [
+            "deb5a3a1ed5a"
+          ]
+        }
+      ],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "0ce27c73ec03",
+              "quote": "North Korea prepares to restart propaganda loudspeakers",
+              "field": "headline"
+            },
+            {
+              "article_id": "8fba1814a121",
+              "quote": "issues new South Korea threat",
+              "field": "headline"
+            },
+            {
+              "article_id": "49683c8cbaac",
+              "quote": "resume propaganda broadcasts targeting South Korea within days",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Foregrounds the restart of loudspeakers as a new threat amid souring ties, with mention of border fortifications and leadership rumours.",
+              "sources": [
+                "0ce27c73ec03",
+                "8fba1814a121",
+                "49683c8cbaac"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "73e52e7b07e2",
+              "quote": "accused North Korea of planting mines that wounded South",
+              "field": "snippet"
+            },
+            {
+              "article_id": "9ae9c25b0ae0",
+              "quote": "deal a blow to South Korean President Lee Jae Myung's efforts to ease inter-Korean hostility",
+              "field": "snippet"
+            },
+            {
+              "article_id": "deb5a3a1ed5a",
+              "quote": "apparent pressure tactic",
+              "field": "headline"
+            },
+            {
+              "article_id": "b15b06da7b4d",
+              "quote": "coming closer to an armed clash",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Reports the statement was carried by KCNA and framed as a response to a South Korean adviser's accusation about mines.",
+              "sources": [
+                "73e52e7b07e2"
+              ]
+            },
+            {
+              "text": "Highlights the effect on President Lee Jae Myung's efforts to ease hostility and the risk of an armed clash.",
+              "sources": [
+                "9ae9c25b0ae0",
+                "b15b06da7b4d"
+              ]
+            },
+            {
+              "text": "Notes Kim Yo Jong addressed a senior South Korean official directly.",
+              "sources": [
+                "deb5a3a1ed5a",
+                "73e52e7b07e2"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "Kim Yo Jong, sister of North Korean leader Kim Jong Un, said propaganda loudspeakers aimed at South Korea will be ready to restart along the border within days. One report says she was responding to a South Korean presidential adviser who accused the North of planting mines.",
+        "sources": [
+          "73e52e7b07e2",
+          "0ce27c73ec03",
+          "8fba1814a121",
+          "49683c8cbaac",
+          "deb5a3a1ed5a",
+          "9ae9c25b0ae0"
+        ]
+      },
+      "conclusion": {
+        "text": "All coverage agrees Kim Yo Jong warned that border propaganda loudspeakers will restart within days. Western outlets lead with souring ties, fortifications and leadership rumours, while Eastern outlets add the mines accusation, the blow to President Lee's outreach and analysis of clash risk. No factual claims are disputed.",
+        "sources": [
+          "0ce27c73ec03",
+          "8fba1814a121",
+          "49683c8cbaac",
+          "73e52e7b07e2",
+          "9ae9c25b0ae0",
+          "b15b06da7b4d",
+          "deb5a3a1ed5a"
+        ]
+      },
+      "validation": {
+        "kept": 27,
+        "dropped_by_reason": {}
+      }
+    },
+    {
+      "id": "f89ecc19c529",
+      "title": "Nigeria confirms first Ebola case as outbreak spreads across Africa",
+      "rank": 4,
+      "outlet_count": 6,
+      "coverage": {
+        "lean": {
+          "left": 2,
+          "centre": 1,
+          "right": 1
+        },
+        "bloc": {
+          "west": 4,
+          "east": 2
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "fba04a0c8d2f",
+          "outlet_id": "guardian",
+          "headline": "Nigeria confirms Ebola case as outbreak spreads into western Africa",
+          "snippet": "Case in Africa’s most populous country was detected in a woman who had travelled from Uganda Nigeria has confirmed an Ebola case in its capital, Abuja, after a woman who arrived from Uganda tested…",
+          "url": "https://www.theguardian.com/world/2026/oct/21/nigeria-first-ebola-case-africa-outbreak-latest",
+          "published_at": "2026-10-21T00:14:55Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.guim.co.uk/img/media/cc9a6ec270dac6b02b8ff0b829657c9fed193c1b/671_0_4033_3227/master/4033.jpg?width=460&quality=85&auto=format&fit=max&s=02ab8d5538a018b8324d609cebea9f7e"
+        },
+        {
+          "id": "06eefe588372",
+          "outlet_id": "nyt",
+          "headline": "Nigeria Announces First Case of Ebola in Current Outbreak",
+          "snippet": "Health officials praised the Nigerian authorities for their transparency in reporting the spread of the virus.",
+          "url": "https://www.nytimes.com/2026/10/20/world/africa/nigeria-ebola-outbreak.html",
+          "published_at": "2026-10-21T01:01:48Z",
+          "published_at_estimated": false,
+          "image_url": "https://static01.nyt.com/images/2026/10/20/multimedia/00int-nigeria-ebola-1-bklc/00int-nigeria-ebola-1-bklc-mediumSquareAt3X.jpg"
+        },
+        {
+          "id": "538d271efb82",
+          "outlet_id": "thehindu",
+          "headline": "Nigeria confirms its first Ebola case is Bundibugyo strain",
+          "snippet": "We did three levels of tests, but all molecular. The strain was Bundibugyo, confirms Olajumoke Babatunde, Director, Public Health Lab Service at the Nigeria Centre for Disease Control and Prevention.",
+          "url": "https://www.thehindu.com/news/international/nigeria-confirms-its-first-ebola-case-is-bundibugyo-strain/article71607018.ece",
+          "published_at": "2026-10-21T09:59:43Z",
+          "published_at_estimated": false,
+          "image_url": "https://th-i.thgim.com/public/incoming/sd4yxw/article71607032.ece/alternates/LANDSCAPE_1200/Congo_Ebola_95932.jpg"
+        },
+        {
+          "id": "9fa9aa5c5aa5",
+          "outlet_id": "cgtn",
+          "headline": "Uganda reports no active Ebola cases after Nigerian patient's transit",
+          "snippet": "Uganda has confirmed no active Ebola cases after a Nigerian woman who tested positive for the virus transited through the country following a business trip to eastern DRC. The Ministry of Health…",
+          "url": "https://newsaf.cgtn.com/news/2026-10-21/Uganda-reports-no-active-Ebola-cases-after-Nigerian-patient-s-transit-1Rqm3WLx888/p.html",
+          "published_at": "2026-10-21T12:28:37Z",
+          "published_at_estimated": false,
+          "image_url": "https://newsaf.cgtn.com/news/2026-10-21/Uganda-reports-no-active-Ebola-cases-after-Nigerian-patient-s-transit-1Rqm3WLx888/img/54c1d61322794f8dbf0dc4db84455eb7/54c1d61322794f8dbf0dc4db84455eb7-1920.png"
+        },
+        {
+          "id": "76088734c16b",
+          "outlet_id": "telegraph",
+          "headline": "Ebola case confirmed in Nigeria as outbreak spreads through Africa",
+          "snippet": "Epidemic becomes the most geographically widespread in history",
+          "url": "https://www.telegraph.co.uk/global-health/science-and-disease/ebola-confirmed-in-nigeria-as-outbreak-spreads-in-africa/",
+          "published_at": "2026-10-21T15:22:13Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.telegraph.co.uk/content/dam/global-health/2026/10/21/TELEMMGLPICT000508329883_17925913654500_trans_NvBQzQNjv4BqPfbMxvQ1K8iI7tknZFBIMNe_LCPJUI5tr5CiCpjD0W8.jpeg"
+        },
+        {
+          "id": "c58cfd4299df",
+          "outlet_id": "cgtn",
+          "headline": "Cross-border spread heightens concerns of expanding Ebola outbreak",
+          "snippet": "Ebola infections in the Democratic Republic of the Congo have rebounded after a brief decline, while the virus' spread to other African countries is complicating efforts to contain an outbreak that…",
+          "url": "https://news.cgtn.com/news/2026-10-22/Cross-border-spread-heightens-concerns-of-expanding-Ebola-outbreak-1RrtBWW1gAM/p.html",
+          "published_at": "2026-10-22T02:39:53Z",
+          "published_at_estimated": false,
+          "image_url": "https://news.cgtn.com/news/2026-10-22/Cross-border-spread-heightens-concerns-of-expanding-Ebola-outbreak-1RrtBWW1gAM/img/55693ae4d359434a86bf61c7b848ba6c/55693ae4d359434a86bf61c7b848ba6c-1280.png"
+        },
+        {
+          "id": "8305962a3190",
+          "outlet_id": "bbc",
+          "headline": "Nigeria's first Ebola patient holidayed in Uganda, officials say",
+          "snippet": "The wife of a diplomat based in Abuja travelled to Kampala for a vacation.",
+          "url": "https://www.bbc.co.uk/news/articles/c62kepvg2x9lo",
+          "published_at": "2026-10-22T10:10:13Z",
+          "published_at_estimated": false,
+          "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/9bc3/live/125ed250-cd83-11f1-9a39-31b474234113.jpg"
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "Nigeria has confirmed an Ebola case.",
+          "sources": [
+            "fba04a0c8d2f",
+            "06eefe588372",
+            "538d271efb82",
+            "9fa9aa5c5aa5",
+            "76088734c16b",
+            "8305962a3190"
+          ]
+        },
+        {
+          "text": "It is described as Nigeria's first Ebola case.",
+          "sources": [
+            "06eefe588372",
+            "538d271efb82",
+            "8305962a3190"
+          ]
+        },
+        {
+          "text": "The patient is a woman whose travel involved Uganda before the case was detected.",
+          "sources": [
+            "fba04a0c8d2f",
+            "9fa9aa5c5aa5",
+            "8305962a3190"
+          ]
+        },
+        {
+          "text": "The outbreak is spreading across African countries.",
+          "sources": [
+            "fba04a0c8d2f",
+            "76088734c16b",
+            "c58cfd4299df"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "fba04a0c8d2f",
+              "quote": "outbreak spreads into western Africa",
+              "field": "headline"
+            },
+            {
+              "article_id": "06eefe588372",
+              "quote": "Health officials praised the Nigerian authorities for their transparency",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the spread into western Africa and notes the case was detected in Abuja in Africa's most populous country.",
+              "sources": [
+                "fba04a0c8d2f"
+              ]
+            },
+            {
+              "text": "Reports health officials praising Nigerian authorities' transparency in reporting the case.",
+              "sources": [
+                "06eefe588372"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "8305962a3190",
+              "quote": "Nigeria's first Ebola patient holidayed in Uganda",
+              "field": "headline"
+            },
+            {
+              "article_id": "8305962a3190",
+              "quote": "The wife of a diplomat based in Abuja",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Focuses on the patient, describing her as a diplomat's wife who travelled to Kampala for a vacation.",
+              "sources": [
+                "8305962a3190"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "right",
+          "headline_quotes": [
+            {
+              "article_id": "76088734c16b",
+              "quote": "Epidemic becomes the most geographically widespread in history",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Emphasises the geographical scale of the epidemic, describing it as the most widespread in history.",
+              "sources": [
+                "76088734c16b"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "right",
+          "text": "Right-leaning coverage does not mention the patient's travel to Uganda.",
+          "sources": [
+            "fba04a0c8d2f",
+            "8305962a3190"
+          ]
+        },
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not mention the outbreak spreading across Africa.",
+          "sources": [
+            "fba04a0c8d2f",
+            "76088734c16b"
+          ]
+        }
+      ],
+      "contested_claims": [
+        {
+          "claim": "The patient's link to Uganda: a holiday in Kampala versus a transit through Uganda after a business trip to eastern DRC.",
+          "asserted_by": [
+            "8305962a3190"
+          ],
+          "disputed_by": [
+            "9fa9aa5c5aa5"
+          ]
+        }
+      ],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "76088734c16b",
+              "quote": "outbreak spreads through Africa",
+              "field": "headline"
+            },
+            {
+              "article_id": "8305962a3190",
+              "quote": "holidayed in Uganda, officials say",
+              "field": "headline"
+            },
+            {
+              "article_id": "06eefe588372",
+              "quote": "praised the Nigerian authorities for their transparency",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Emphasises the outbreak's spread and geographic scale.",
+              "sources": [
+                "fba04a0c8d2f",
+                "76088734c16b"
+              ]
+            },
+            {
+              "text": "Describes the patient as having travelled from or holidayed in Uganda.",
+              "sources": [
+                "fba04a0c8d2f",
+                "8305962a3190"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "538d271efb82",
+              "quote": "Nigeria confirms its first Ebola case is Bundibugyo strain",
+              "field": "headline"
+            },
+            {
+              "article_id": "9fa9aa5c5aa5",
+              "quote": "Uganda reports no active Ebola cases after Nigerian patient's transit",
+              "field": "headline"
+            },
+            {
+              "article_id": "c58cfd4299df",
+              "quote": "have rebounded after a brief decline",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Reports the strain was identified as Bundibugyo, citing a Nigeria CDC laboratory director.",
+              "sources": [
+                "538d271efb82"
+              ]
+            },
+            {
+              "text": "Reports Uganda confirming no active cases and describes the patient's stay as a transit after a business trip to eastern DRC.",
+              "sources": [
+                "9fa9aa5c5aa5"
+              ]
+            },
+            {
+              "text": "Highlights rebounding infections in the DRC and cross-border spread complicating containment.",
+              "sources": [
+                "c58cfd4299df"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [
+        {
+          "topic": "Nature of the patient's time in Uganda.",
+          "west": {
+            "text": "The patient holidayed in Uganda, travelling to Kampala for a vacation.",
+            "sources": [
+              "8305962a3190"
+            ]
+          },
+          "east": {
+            "text": "The patient transited through Uganda following a business trip to eastern DRC.",
+            "sources": [
+              "9fa9aa5c5aa5"
+            ]
+          }
+        }
+      ],
+      "summary": {
+        "text": "Nigeria has confirmed its first Ebola case in the current outbreak, in a woman in Abuja who had travelled from or through Uganda. Coverage places the case within an outbreak spreading across Africa, with infections in the Democratic Republic of the Congo rebounding.",
+        "sources": [
+          "fba04a0c8d2f",
+          "06eefe588372",
+          "538d271efb82",
+          "9fa9aa5c5aa5",
+          "76088734c16b",
+          "c58cfd4299df",
+          "8305962a3190"
+        ]
+      },
+      "conclusion": {
+        "text": "All sides report Nigeria's first confirmed Ebola case amid an outbreak spreading across Africa. Western outlets stress the scale of spread and the patient's Uganda travel, while Eastern outlets add the Bundibugyo strain, DRC rebound and Uganda's lack of active cases. Accounts differ on whether she holidayed in Uganda or transited after a DRC business trip.",
+        "sources": [
+          "fba04a0c8d2f",
+          "06eefe588372",
+          "76088734c16b",
+          "8305962a3190",
+          "538d271efb82",
+          "9fa9aa5c5aa5",
+          "c58cfd4299df"
+        ]
+      },
+      "validation": {
+        "kept": 30,
+        "dropped_by_reason": {}
+      }
+    },
+    {
+      "id": "9ee6102b6a4d",
+      "title": "Russia releases jailed American Stephen Hubbard",
+      "rank": 5,
+      "outlet_count": 6,
+      "coverage": {
+        "lean": {
+          "left": 2,
+          "centre": 1,
+          "right": 1
+        },
+        "bloc": {
+          "west": 4,
+          "east": 2
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "e85c7c89666b",
+          "outlet_id": "cgtn",
+          "headline": "Putin says Russia has freed US citizen Stephen Hubbard",
+          "snippet": "",
+          "url": "https://news.cgtn.com/news/2026-10-21/news-1RqjWkUJjgY/p.html",
+          "published_at": "2026-10-21T09:04:56Z",
+          "published_at_estimated": false,
+          "image_url": "https://news.cgtn.com/resource/default/img/breaking.png"
+        },
+        {
+          "id": "965a1da6ccd7",
+          "outlet_id": "fox",
+          "headline": "Russia releases American teacher imprisoned on Ukraine mercenary charges after Trump pressed Putin",
+          "snippet": "American Stephen Hubbard has been released from Russian custody after Trump urged Putin to free the retired teacher imprisoned on Ukraine mercenary charges.",
+          "url": "https://www.foxnews.com/world/stephen-hubbard-russia-american-prisoner-release",
+          "published_at": "2026-10-21T09:43:13Z",
+          "published_at_estimated": false,
+          "image_url": "https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2026/10/931/523/stephen-hubbard-plane-copy.jpg?ve=1&tl=1"
+        },
+        {
+          "id": "49f74f5f2ef1",
+          "outlet_id": "nyt",
+          "headline": "Who Is Stephen James Hubbard, the American Released From Russian Jail?",
+          "snippet": "Mr. Hubbard, a 74-year-old teacher, was held for more than four years on what the State Department called fabricated charges.",
+          "url": "https://www.nytimes.com/2026/10/21/world/europe/who-stephen-hubbard-american-russia-prisoner-release.html",
+          "published_at": "2026-10-21T13:10:45Z",
+          "published_at_estimated": false,
+          "image_url": "https://static01.nyt.com/images/2026/10/21/multimedia/21int-hubbard-who-is-vpjg/21int-hubbard-who-is-vpjg-mediumSquareAt3X.jpg"
+        },
+        {
+          "id": "cd87d11800b8",
+          "outlet_id": "dw",
+          "headline": "Russia frees jailed American Stephen Hubbard during Witkoff talks",
+          "snippet": "During talks between Vladimir Putin and Steve Witkoff, Putin announced that jailed American Stephen Hubbard had been released. The Kremlin also said Russia was \"in principle\" ready to resume…",
+          "url": "https://www.dw.com/en/russia-frees-jailed-american-stephen-hubbard-during-witkoff-talks/a-79719452?maca=en-rss-en-world-4025-xml-mrss",
+          "published_at": "2026-10-21T13:56:00Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "dda58af5cc4a",
+          "outlet_id": "mirror",
+          "headline": "Sister of Stephen Hubbard held in Russian prison for years breaks silence after he's freed",
+          "snippet": "Stephen Hubbard, a US citizen, was arrested by Russian officials while he lived in Ukraine as the Kremlin accused the 74-year-old of being a mercenary for Kyiv",
+          "url": "https://www.mirror.co.uk/news/world-news/stephen-hubbard-released-prison-sister-37797796",
+          "published_at": "2026-10-22T04:17:15Z",
+          "published_at_estimated": false,
+          "image_url": "https://i2-prod.mirror.co.uk/incoming/article37795666.ece/ALTERNATES/s615/2_Russia-US-26294352972869.jpg"
+        },
+        {
+          "id": "73b2a584f146",
+          "outlet_id": "moscowtimes",
+          "headline": "Who Is Stephen Hubbard, the U.S. Citizen Released by Russia?",
+          "snippet": "Hubbard has arrived back in the U.S. following his release from detention by President Vladimir Putin.",
+          "url": "https://www.themoscowtimes.com/2026/10/22/who-is-stephen-hubbard-the-us-citizen-released-by-russia-a94051",
+          "published_at": "2026-10-22T10:55:00Z",
+          "published_at_estimated": false,
+          "image_url": null
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "Russia released or freed Stephen Hubbard, a US citizen.",
+          "sources": [
+            "e85c7c89666b",
+            "965a1da6ccd7",
+            "49f74f5f2ef1",
+            "cd87d11800b8",
+            "dda58af5cc4a",
+            "73b2a584f146"
+          ]
+        },
+        {
+          "text": "Putin announced or carried out the release.",
+          "sources": [
+            "e85c7c89666b",
+            "cd87d11800b8",
+            "73b2a584f146"
+          ]
+        },
+        {
+          "text": "Hubbard is a teacher.",
+          "sources": [
+            "965a1da6ccd7",
+            "49f74f5f2ef1"
+          ]
+        },
+        {
+          "text": "Hubbard is 74 years old.",
+          "sources": [
+            "49f74f5f2ef1",
+            "dda58af5cc4a"
+          ]
+        },
+        {
+          "text": "He was imprisoned on charges of being a mercenary for Ukraine.",
+          "sources": [
+            "965a1da6ccd7",
+            "dda58af5cc4a"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "49f74f5f2ef1",
+              "quote": "what the State Department called fabricated charges",
+              "field": "snippet"
+            },
+            {
+              "article_id": "dda58af5cc4a",
+              "quote": "Sister of Stephen Hubbard held in Russian prison for years breaks silence",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with who Hubbard is and cites the State Department describing the charges as fabricated.",
+              "sources": [
+                "49f74f5f2ef1"
+              ]
+            },
+            {
+              "text": "Notes he was held for more than four years and was arrested while living in Ukraine.",
+              "sources": [
+                "49f74f5f2ef1",
+                "dda58af5cc4a"
+              ]
+            },
+            {
+              "text": "Foregrounds his sister's reaction to his release.",
+              "sources": [
+                "dda58af5cc4a"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "cd87d11800b8",
+              "quote": "during Witkoff talks",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Places the release in the context of talks between Putin and Steve Witkoff, and reports the Kremlin saying Russia was \"in principle\" ready to resume something.",
+              "sources": [
+                "cd87d11800b8"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "right",
+          "headline_quotes": [
+            {
+              "article_id": "965a1da6ccd7",
+              "quote": "after Trump pressed Putin",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Attributes the release to Trump urging Putin to free Hubbard.",
+              "sources": [
+                "965a1da6ccd7"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "right",
+          "text": "Does not mention that the release came during talks between Putin and Steve Witkoff.",
+          "sources": [
+            "cd87d11800b8"
+          ]
+        },
+        {
+          "lean": "centre",
+          "text": "Does not mention the Ukraine mercenary charges against Hubbard.",
+          "sources": [
+            "965a1da6ccd7",
+            "dda58af5cc4a"
+          ]
+        }
+      ],
+      "contested_claims": [],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "965a1da6ccd7",
+              "quote": "after Trump pressed Putin",
+              "field": "headline"
+            },
+            {
+              "article_id": "49f74f5f2ef1",
+              "quote": "fabricated charges",
+              "field": "snippet"
+            },
+            {
+              "article_id": "cd87d11800b8",
+              "quote": "during Witkoff talks",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Foregrounds the charges, his time in detention and the diplomatic context including Trump and Witkoff.",
+              "sources": [
+                "965a1da6ccd7",
+                "49f74f5f2ef1",
+                "cd87d11800b8",
+                "dda58af5cc4a"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "e85c7c89666b",
+              "quote": "Putin says Russia has freed US citizen Stephen Hubbard",
+              "field": "headline"
+            },
+            {
+              "article_id": "73b2a584f146",
+              "quote": "Hubbard has arrived back in the U.S.",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with Putin as the source of the release and reports Hubbard's return to the US.",
+              "sources": [
+                "e85c7c89666b",
+                "73b2a584f146"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "Russia has released Stephen Hubbard, a 74-year-old American teacher held on Ukraine mercenary charges, and Vladimir Putin announced the release. Hubbard has arrived back in the U.S.",
+        "sources": [
+          "e85c7c89666b",
+          "965a1da6ccd7",
+          "49f74f5f2ef1",
+          "cd87d11800b8",
+          "dda58af5cc4a",
+          "73b2a584f146"
+        ]
+      },
+      "conclusion": null,
+      "validation": {
+        "kept": 24,
+        "dropped_by_reason": {
+          "untrusted_text": 1
+        }
+      }
+    },
+    {
+      "id": "755757c72eae",
+      "title": "Putin agrees with US envoy Witkoff to resume trilateral Ukraine peace talks",
+      "rank": 6,
+      "outlet_count": 6,
+      "coverage": {
+        "lean": {
+          "left": 0,
+          "centre": 3,
+          "right": 0
+        },
+        "bloc": {
+          "west": 3,
+          "east": 3
+        }
+      },
+      "blindspot": {
+        "lean": "centre",
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "b373ff450eef",
+          "outlet_id": "cgtn",
+          "headline": "US special envoy Witkoff to arrive in Russia: reports",
+          "snippet": "",
+          "url": "https://news.cgtn.com/news/2026-10-21/news-1Rq4xa2jb6o/p.html",
+          "published_at": "2026-10-21T05:29:21Z",
+          "published_at_estimated": false,
+          "image_url": "https://news.cgtn.com/resource/default/img/breaking.png"
+        },
+        {
+          "id": "340a5b49f70e",
+          "outlet_id": "cgtn",
+          "headline": "US envoy arrives in St. Petersburg to meet with Putin on Ukraine",
+          "snippet": "",
+          "url": "https://news.cgtn.com/news/2026-10-21/news-1Rq6krSzoYM/p.html",
+          "published_at": "2026-10-21T05:54:28Z",
+          "published_at_estimated": false,
+          "image_url": "https://news.cgtn.com/news/2026-10-21/news-1Rq6krSzoYM/img/8cc2209874514cadb97edf5a6fbc5027/8cc2209874514cadb97edf5a6fbc5027-1280.jpeg"
+        },
+        {
+          "id": "11020393faf2",
+          "outlet_id": "cgtn",
+          "headline": "Putin meets with US envoy Witkoff for talks on Ukraine settlement",
+          "snippet": "Russian President Vladimir Putin met with US special envoy Steve ‌Witkoff on Wednesday, China Media Group (CMG) reported.",
+          "url": "https://news.cgtn.com/news/2026-10-21/news-1Rqjkq8gqn6/p.html",
+          "published_at": "2026-10-21T08:56:22Z",
+          "published_at_estimated": false,
+          "image_url": "https://news.cgtn.com/news/2026-10-21/news-1Rqjkq8gqn6/img/d10a643cfbd04f8c899e26bafb573268/d10a643cfbd04f8c899e26bafb573268-750.png"
+        },
+        {
+          "id": "4bbfe5fde1fb",
+          "outlet_id": "cgtn",
+          "headline": "Zelenskyy says he supports ceasefire, trilateral talks with US, Russia",
+          "snippet": "",
+          "url": "https://news.cgtn.com/news/2026-10-21/news-1RqrioAvATm/p.html",
+          "published_at": "2026-10-21T10:47:52Z",
+          "published_at_estimated": false,
+          "image_url": "https://news.cgtn.com/resource/default/img/breaking.png"
+        },
+        {
+          "id": "904a88be7748",
+          "outlet_id": "thehindu",
+          "headline": "Trump envoy Witkoff meets Putin in St. Petersburg for Ukraine war talks",
+          "snippet": "The trip by President Donald Trump's special envoy is part of efforts to draw a line under a bitter feud between him and Zelenskyy over the war with Russia",
+          "url": "https://www.thehindu.com/news/international/us-envoy-witkoff-meets-putin-in-saint-petersburg/article71606691.ece",
+          "published_at": "2026-10-21T11:14:19Z",
+          "published_at_estimated": false,
+          "image_url": "https://th-i.thgim.com/public/incoming/3kkrol/article71606732.ece/alternates/LANDSCAPE_1200/2026-10-21T062059Z_192518563_RC2I7OABV5D1_RTRMADP_3_UKRAINE-CRISIS-RUSSIA-USA.JPG"
+        },
+        {
+          "id": "b1c56e56c91b",
+          "outlet_id": "moscowtimes",
+          "headline": "Putin Releases American Jailed in Russia, Agrees to Trilateral Peace Talks as Witkoff Visits",
+          "snippet": "The Kremlin said that renewed peace negotiations with the United States and Ukraine could take place in Abu Dhabi as early as next month.",
+          "url": "https://www.themoscowtimes.com/2026/10/21/putin-releases-american-jailed-in-russia-after-us-envoy-arrives-for-ukraine-talks-a94037",
+          "published_at": "2026-10-21T13:00:00Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "f7ff490c06d5",
+          "outlet_id": "cgtn",
+          "headline": "Kremlin says progress on Ukraine possible but depends on Kyiv",
+          "snippet": "",
+          "url": "https://news.cgtn.com/news/2026-10-21/news-1RqCE1bbtm0/p.html",
+          "published_at": "2026-10-21T13:26:40Z",
+          "published_at_estimated": false,
+          "image_url": "https://news.cgtn.com/resource/default/img/breaking.png"
+        },
+        {
+          "id": "8786c360645a",
+          "outlet_id": "axios",
+          "headline": "Putin tells Witkoff he is ready to resume direct peace talks, Russia releases U.S. detainee",
+          "snippet": "Russian President Vladimir Putin told White House envoy Steve Witkoff on Wednesday that he \"agrees in principle\" resuming trilateral peace talks between Russia, Ukraine and the U.S. to end the war…",
+          "url": "https://www.axios.com/2026/10/21/russia-ukraine-putin-witkoff-peace",
+          "published_at": "2026-10-21T15:22:02Z",
+          "published_at_estimated": false,
+          "image_url": "https://images.axios.com/SQGKoIMZ9biGAmHikY1Ethi3ATM=/0x108:4763x2787/1366x768/2026/10/21/1792580350704.jpeg"
+        },
+        {
+          "id": "88863e6b118e",
+          "outlet_id": "thehindu",
+          "headline": "Putin agrees to resume three-way peace talks with Ukraine and U.S.",
+          "snippet": "The latest talks also came more than two years since Mr. Trump promised in his successful election campaign to end the Ukraine war within 24 hours",
+          "url": "https://www.thehindu.com/news/international/putin-xi-trump-summit-being-prepared-kremlin/article71608186.ece",
+          "published_at": "2026-10-21T17:58:10Z",
+          "published_at_estimated": false,
+          "image_url": "https://th-i.thgim.com/public/incoming/w8a3dy/article71608190.ece/alternates/LANDSCAPE_1200/2026-10-17T012836Z_455791147_RC2R7GACNKD8_RTRMADP_3_USA-TRUMP-SANCTIONS.JPG"
+        },
+        {
+          "id": "b8356cf6a193",
+          "outlet_id": "france24",
+          "headline": "Putin agrees to resume three-way talks with Kyiv and Washington",
+          "snippet": "President ⁠Volodymyr Zelenskiy ​said on Wednesday ​that Ukraine supported a US proposal for ​three-way talks ‌with Russia ⁠and the United ‌States at the level ⁠of negotiators to be held as soon ​as…",
+          "url": "https://www.france24.com/en/putin-agrees-to-resume-three-way-talks-with-kyiv-and-washington",
+          "published_at": "2026-10-21T19:32:52Z",
+          "published_at_estimated": false,
+          "image_url": "https://s.france24.com/media/display/a08fd0b8-cd85-11f1-b980-4da0d2c6855d/w:1024/p:16x9/EN-20261021-210107-211150-CS.jpg"
+        },
+        {
+          "id": "b5edaf4ba3dc",
+          "outlet_id": "bbc",
+          "headline": "Rosenberg: Russia agrees to Ukraine talks but sees little to talk about in new peace push",
+          "snippet": "President Vladimir Putin does not feel under pressure right now to end the war, the BBC's Russia Editor writes.",
+          "url": "https://www.bbc.co.uk/news/articles/cm98zn5j89kdo",
+          "published_at": "2026-10-21T19:58:06Z",
+          "published_at_estimated": false,
+          "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/d18d/live/67ecd1c0-cdee-11f1-bc2e-018d645d8d21.jpg"
+        },
+        {
+          "id": "3148a7f210f0",
+          "outlet_id": "cgtn",
+          "headline": "Russia and Ukraine agree to resume peace talks next month",
+          "snippet": "Russian President Vladimir Putin has agreed to resume US-mediated peace talks with Ukraine as soon as next month, ​after Putin met US envoy Steve Witkoff on Wednesday.",
+          "url": "https://news.cgtn.com/news/2026-10-22/Russia-and-Ukraine-agree-to-resume-peace-talks-next-month-1Rrna2dt32g/p.html",
+          "published_at": "2026-10-22T02:43:18Z",
+          "published_at_estimated": false,
+          "image_url": "https://news.cgtn.com/news/2026-10-22/Russia-and-Ukraine-agree-to-resume-peace-talks-next-month-1Rrna2dt32g/img/666abf6202ad4aba9a9c579184b60ce2/666abf6202ad4aba9a9c579184b60ce2-750.png"
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "Putin met US envoy Steve Witkoff on Wednesday, in St Petersburg, for talks on Ukraine.",
+          "sources": [
+            "340a5b49f70e",
+            "11020393faf2",
+            "904a88be7748",
+            "8786c360645a",
+            "3148a7f210f0"
+          ]
+        },
+        {
+          "text": "Putin agreed to resume trilateral peace talks involving Russia, Ukraine and the US.",
+          "sources": [
+            "b1c56e56c91b",
+            "8786c360645a",
+            "88863e6b118e",
+            "b8356cf6a193",
+            "b5edaf4ba3dc",
+            "3148a7f210f0"
+          ]
+        },
+        {
+          "text": "Russia released an American detainee during Witkoff's visit.",
+          "sources": [
+            "b1c56e56c91b",
+            "8786c360645a"
+          ]
+        },
+        {
+          "text": "Zelenskyy said Ukraine supports three-way talks with the US and Russia.",
+          "sources": [
+            "4bbfe5fde1fb",
+            "b8356cf6a193"
+          ]
+        },
+        {
+          "text": "The renewed talks could take place as soon as next month.",
+          "sources": [
+            "b1c56e56c91b",
+            "3148a7f210f0"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "8786c360645a",
+              "quote": "\"agrees in principle\"",
+              "field": "snippet"
+            },
+            {
+              "article_id": "8786c360645a",
+              "quote": "Russia releases U.S. detainee",
+              "field": "headline"
+            },
+            {
+              "article_id": "b5edaf4ba3dc",
+              "quote": "sees little to talk about in new peace push",
+              "field": "headline"
+            },
+            {
+              "article_id": "b8356cf6a193",
+              "quote": "Putin agrees to resume three-way talks with Kyiv and Washington",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Describes Putin's agreement as being \"in principle\" and pairs it with the release of a US detainee.",
+              "sources": [
+                "8786c360645a"
+              ]
+            },
+            {
+              "text": "Carries analysis that Putin does not feel under pressure to end the war.",
+              "sources": [
+                "b5edaf4ba3dc"
+              ]
+            },
+            {
+              "text": "Reports Zelenskiy's support for a US proposal for talks at the level of negotiators.",
+              "sources": [
+                "b8356cf6a193"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [],
+      "contested_claims": [],
+      "opinion": [
+        {
+          "text": "The BBC's Russia Editor writes that Russia agrees to talks but sees little to talk about, and that Putin does not feel under pressure to end the war.",
+          "sources": [
+            "b5edaf4ba3dc"
+          ]
+        }
+      ],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "8786c360645a",
+              "quote": "Putin tells Witkoff he is ready to resume direct peace talks",
+              "field": "headline"
+            },
+            {
+              "article_id": "b5edaf4ba3dc",
+              "quote": "Russia agrees to Ukraine talks but sees little to talk about",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with Putin's readiness to resume talks alongside the detainee release.",
+              "sources": [
+                "8786c360645a"
+              ]
+            },
+            {
+              "text": "Foregrounds Ukraine's support for the US proposal and analysis questioning Russian pressure to end the war.",
+              "sources": [
+                "b8356cf6a193",
+                "b5edaf4ba3dc"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "f7ff490c06d5",
+              "quote": "Kremlin says progress on Ukraine possible but depends on Kyiv",
+              "field": "headline"
+            },
+            {
+              "article_id": "b1c56e56c91b",
+              "quote": "could take place in Abu Dhabi as early as next month",
+              "field": "snippet"
+            },
+            {
+              "article_id": "904a88be7748",
+              "quote": "draw a line under a bitter feud between him and Zelenskyy",
+              "field": "snippet"
+            },
+            {
+              "article_id": "88863e6b118e",
+              "quote": "promised in his successful election campaign to end the Ukraine war within 24 hours",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Reports the Kremlin's view that progress is possible but depends on Kyiv.",
+              "sources": [
+                "f7ff490c06d5"
+              ]
+            },
+            {
+              "text": "Tracks Witkoff's arrival and meeting step by step.",
+              "sources": [
+                "b373ff450eef",
+                "340a5b49f70e",
+                "11020393faf2"
+              ]
+            },
+            {
+              "text": "Names Abu Dhabi as a possible venue for the talks.",
+              "sources": [
+                "b1c56e56c91b"
+              ]
+            },
+            {
+              "text": "Places the visit in the context of a Trump–Zelenskyy feud and Trump's campaign pledge to end the war within 24 hours.",
+              "sources": [
+                "904a88be7748",
+                "88863e6b118e"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "US special envoy Steve Witkoff met Russian President Vladimir Putin in St Petersburg on Wednesday to discuss Ukraine. Putin agreed to resume three-way peace talks with Ukraine and the US, possibly as soon as next month, and Russia released a jailed American. Zelenskyy said Ukraine supports the trilateral talks.",
+        "sources": [
+          "340a5b49f70e",
+          "11020393faf2",
+          "904a88be7748",
+          "b1c56e56c91b",
+          "8786c360645a",
+          "88863e6b118e",
+          "b8356cf6a193",
+          "3148a7f210f0",
+          "4bbfe5fde1fb"
+        ]
+      },
+      "conclusion": {
+        "text": "All coverage agrees Putin met Witkoff and agreed to resume trilateral talks, with Ukraine supportive. Western centre outlets add the 'in principle' wording and analysis that Putin feels little pressure, while Eastern outlets add the Kremlin's view that progress depends on Kyiv and context on Trump's pledges. No factual contradictions appear.",
+        "sources": [
+          "11020393faf2",
+          "8786c360645a",
+          "b8356cf6a193",
+          "b5edaf4ba3dc",
+          "f7ff490c06d5",
+          "88863e6b118e",
+          "3148a7f210f0",
+          "4bbfe5fde1fb"
+        ]
+      },
+      "validation": {
+        "kept": 27,
+        "dropped_by_reason": {}
+      }
+    },
+    {
+      "id": "832758ebf423",
+      "title": "Attack on Saudi Arabia's King Fahd airport in Dammam kills two",
+      "rank": 7,
+      "outlet_count": 5,
+      "coverage": {
+        "lean": {
+          "left": 1,
+          "centre": 1,
+          "right": 1
+        },
+        "bloc": {
+          "west": 3,
+          "east": 2
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "cd0f06593a84",
+          "outlet_id": "thehindu",
+          "headline": "Saudi civil aviation says one killed, eight injured in attack on King Fahd airport",
+          "snippet": "The statement ‌said material damage ‌was being ​assessed",
+          "url": "https://www.thehindu.com/news/international/attack-on-king-fahd-international-airport-in-dammam-saudi-arabia/article71609156.ece",
+          "published_at": "2026-10-21T23:39:35Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "f1d2dd5a7977",
+          "outlet_id": "thenational",
+          "headline": "Middle East latest: Two dead in attack on Dammam airport in Saudi Arabia",
+          "snippet": "Saudi women are seen arriving at King Fahd International Airport in Dammam, Saudi Arabia, August 21, 2019. REUTERS/Hamad I Mohammed",
+          "url": "https://www.thenationalnews.com/news/mena/2026/10/22/live-saudi-airport-attack/",
+          "published_at": "2026-10-22T04:20:14Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.thenationalnews.com/resizer/v2/PWWF2MVKVNHQLAT24DZTIK26GE.JPG?auth=31258e928df7a983213821bb00dc9313172c70a2948fba95969392d69117b242&smart=true&width=4008&height=2672"
+        },
+        {
+          "id": "dbab25a74002",
+          "outlet_id": "thesun",
+          "headline": "At least 2 dead & 8 hurt in attack on Saudi Arabia airport after US orders diplomats to leave as Houthi strikes escalate",
+          "snippet": "AT least two people have been killed and eight people injured as huge blasts rocked the world's largest airport. It comes as the US ordered diplomats and their families to evacuate Saudi Arabia as…",
+          "url": "https://www.thesun.co.uk/news/40769674/houthi-attacks-airport-saudi-arabia/",
+          "published_at": "2026-10-22T08:26:30Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.thesun.co.uk/wp-content%2Fuploads%2F2026%2F10%2Fnewspress-collage-hrl9yfr2n-1792657750364.jpg?quality%3D90%26"
+        },
+        {
+          "id": "e8ca1a2e781c",
+          "outlet_id": "bbc",
+          "headline": "Two killed in attack on airport in eastern Saudi Arabia, authorities say",
+          "snippet": "It is the latest in a series of attacks by the Houthi movement which have targeted airports and other sites in the kingdom.",
+          "url": "https://www.bbc.co.uk/news/articles/cqwy71ww156ro",
+          "published_at": "2026-10-22T09:14:48Z",
+          "published_at_estimated": false,
+          "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/5e3c/live/e7d9d390-cdf5-11f1-a64c-550be9e3c66b.jpg"
+        },
+        {
+          "id": "b977e0314a9d",
+          "outlet_id": "nyt",
+          "headline": "Strike on Saudi Airport Kills 2 as U.S. Tells Some Diplomats to Leave",
+          "snippet": "For weeks, the Iran-backed Houthis have been attacking the kingdom’s aviation and energy sectors.",
+          "url": "https://www.nytimes.com/2026/10/22/world/middleeast/saudi-houthis-yemen-dammam-airport.html",
+          "published_at": "2026-10-22T11:10:02Z",
+          "published_at_estimated": false,
+          "image_url": "https://static01.nyt.com/images/2026/10/22/world/22int-Saudi-Diplos-aifb/22int-Saudi-Diplos-aifb-mediumSquareAt3X.jpg"
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "An attack struck King Fahd airport in Dammam, Saudi Arabia.",
+          "sources": [
+            "cd0f06593a84",
+            "f1d2dd5a7977",
+            "dbab25a74002",
+            "e8ca1a2e781c",
+            "b977e0314a9d"
+          ]
+        },
+        {
+          "text": "Two people were killed in the attack.",
+          "sources": [
+            "f1d2dd5a7977",
+            "dbab25a74002",
+            "e8ca1a2e781c",
+            "b977e0314a9d"
+          ]
+        },
+        {
+          "text": "Eight people were injured.",
+          "sources": [
+            "cd0f06593a84",
+            "dbab25a74002"
+          ]
+        },
+        {
+          "text": "The attack follows a series of Houthi attacks on Saudi Arabia, including on airports or the aviation sector.",
+          "sources": [
+            "dbab25a74002",
+            "e8ca1a2e781c",
+            "b977e0314a9d"
+          ]
+        },
+        {
+          "text": "The US has ordered or told diplomats to leave Saudi Arabia.",
+          "sources": [
+            "dbab25a74002",
+            "b977e0314a9d"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "b977e0314a9d",
+              "quote": "Strike on Saudi Airport Kills 2 as U.S. Tells Some Diplomats to Leave",
+              "field": "headline"
+            },
+            {
+              "article_id": "b977e0314a9d",
+              "quote": "the Iran-backed Houthis have been attacking the kingdom’s aviation and energy sectors",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the US telling some diplomats to leave alongside the death toll.",
+              "sources": [
+                "b977e0314a9d"
+              ]
+            },
+            {
+              "text": "Describes the Houthis as Iran-backed and notes weeks of attacks on aviation and energy sectors.",
+              "sources": [
+                "b977e0314a9d"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "e8ca1a2e781c",
+              "quote": "Two killed in attack on airport in eastern Saudi Arabia, authorities say",
+              "field": "headline"
+            },
+            {
+              "article_id": "e8ca1a2e781c",
+              "quote": "the latest in a series of attacks by the Houthi movement",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Attributes the death toll to authorities.",
+              "sources": [
+                "e8ca1a2e781c"
+              ]
+            },
+            {
+              "text": "Places the attack in a series of Houthi attacks on airports and other sites in the kingdom.",
+              "sources": [
+                "e8ca1a2e781c"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "right",
+          "headline_quotes": [
+            {
+              "article_id": "dbab25a74002",
+              "quote": "huge blasts rocked the world's largest airport",
+              "field": "snippet"
+            },
+            {
+              "article_id": "dbab25a74002",
+              "quote": "US orders diplomats to leave as Houthi strikes escalate",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the casualty figures and describes the blasts as huge.",
+              "sources": [
+                "dbab25a74002"
+              ]
+            },
+            {
+              "text": "Links the attack to escalating Houthi strikes and the US ordering diplomats and their families to evacuate.",
+              "sources": [
+                "dbab25a74002"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "centre",
+          "text": "Does not mention the US ordering diplomats to leave Saudi Arabia.",
+          "sources": [
+            "dbab25a74002",
+            "b977e0314a9d"
+          ]
+        },
+        {
+          "lean": "centre",
+          "text": "Does not mention the number of people injured.",
+          "sources": [
+            "dbab25a74002"
+          ]
+        },
+        {
+          "lean": "left",
+          "text": "Does not mention the number of people injured.",
+          "sources": [
+            "dbab25a74002"
+          ]
+        }
+      ],
+      "contested_claims": [
+        {
+          "claim": "The attack killed two people.",
+          "asserted_by": [
+            "f1d2dd5a7977",
+            "dbab25a74002",
+            "e8ca1a2e781c",
+            "b977e0314a9d"
+          ],
+          "disputed_by": [
+            "cd0f06593a84"
+          ]
+        }
+      ],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "dbab25a74002",
+              "quote": "as Houthi strikes escalate",
+              "field": "headline"
+            },
+            {
+              "article_id": "b977e0314a9d",
+              "quote": "U.S. Tells Some Diplomats to Leave",
+              "field": "headline"
+            },
+            {
+              "article_id": "e8ca1a2e781c",
+              "quote": "a series of attacks by the Houthi movement",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Connects the attack to a campaign of Houthi attacks on Saudi Arabia.",
+              "sources": [
+                "dbab25a74002",
+                "e8ca1a2e781c",
+                "b977e0314a9d"
+              ]
+            },
+            {
+              "text": "Reports US instructions for diplomats to leave Saudi Arabia.",
+              "sources": [
+                "dbab25a74002",
+                "b977e0314a9d"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "cd0f06593a84",
+              "quote": "Saudi civil aviation says one killed, eight injured in attack on King Fahd airport",
+              "field": "headline"
+            },
+            {
+              "article_id": "f1d2dd5a7977",
+              "quote": "Two dead in attack on Dammam airport in Saudi Arabia",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the Saudi civil aviation statement on casualties and notes material damage was being assessed.",
+              "sources": [
+                "cd0f06593a84"
+              ]
+            },
+            {
+              "text": "Reports the death toll without naming who carried out the attack.",
+              "sources": [
+                "cd0f06593a84",
+                "f1d2dd5a7977"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "An attack on King Fahd airport in Dammam, eastern Saudi Arabia, killed two people according to most reports, with eight injured; a Saudi civil aviation statement reported one killed. Western outlets place it within a series of Houthi attacks on the kingdom and report that the US told diplomats to leave.",
+        "sources": [
+          "cd0f06593a84",
+          "f1d2dd5a7977",
+          "dbab25a74002",
+          "e8ca1a2e781c",
+          "b977e0314a9d"
+        ]
+      },
+      "conclusion": {
+        "text": "All outlets report an attack on King Fahd airport in Dammam with casualties; most give two dead, while one cites a Saudi civil aviation figure of one killed. Western outlets link it to Houthi attacks and US diplomatic departures, while Eastern outlets focus on the casualty reports.",
+        "sources": [
+          "cd0f06593a84",
+          "f1d2dd5a7977",
+          "dbab25a74002",
+          "e8ca1a2e781c",
+          "b977e0314a9d"
+        ]
+      },
+      "validation": {
+        "kept": 32,
+        "dropped_by_reason": {}
+      }
+    },
+    {
+      "id": "b6a04cee1a52",
+      "title": "Australian MP Helen Haines loses both legs after car attack; suspect in court",
+      "rank": 8,
+      "outlet_count": 5,
+      "coverage": {
+        "lean": {
+          "left": 2,
+          "centre": 2,
+          "right": 0
+        },
+        "bloc": {
+          "west": 4,
+          "east": 1
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "66486e92e30c",
+          "outlet_id": "bbc",
+          "headline": "BBC inside Australian court as man charged with attacking MP stays silent in first hearing",
+          "snippet": "BBC's Katy Watson describes what unfolded in Wangaratta as 43-year-old Brendan Nugent appeared before court over the alleged attack of Helen Haines.",
+          "url": "https://www.bbc.co.uk/news/videos/cq398rg0lnd1o",
+          "published_at": "2026-10-21T03:58:16Z",
+          "published_at_estimated": false,
+          "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/1514/live/d90a36f0-cd02-11f1-9a39-31b474234113.jpg"
+        },
+        {
+          "id": "75e958928b25",
+          "outlet_id": "dw",
+          "headline": "Australian MP Helen Haines loses both legs after car attack as suspect appears in court",
+          "snippet": "Doctors have amputated both of Helen Haines legs after the Australian lawmaker was hit in an apparent deliberate attack. The suspected driver involved in the attack has appeared in court.",
+          "url": "https://www.dw.com/en/australian-mp-helen-haines-loses-both-legs-after-car-attack-as-suspect-appears-in-court/a-79697660?maca=en-rss-en-world-4025-xml-mrss",
+          "published_at": "2026-10-21T08:16:00Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "6987de7ceb6c",
+          "outlet_id": "huffpost",
+          "headline": "Australian Politician Who Was Hit By Car Has Lost Both Legs",
+          "snippet": "The lawyer representing the man accused of the attack said his client was suffering from potential mental health issues and a concussion.",
+          "url": "https://www.huffpost.com/entry/australia-lawmaker-injured_n_6ad8767ee4b04f71533db123",
+          "published_at": "2026-10-21T08:31:35Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "08c5a7d209e2",
+          "outlet_id": "nyt",
+          "headline": "Australian Politicians Were Already on Edge Before One of Their Own Was Attacked",
+          "snippet": "Much remains unclear about why a driver ran a car into Helen Haines, a lawmaker. Even so, fellow representatives, especially women, spoke of feeling threatened in a polarized atmosphere.",
+          "url": "https://www.nytimes.com/2026/10/21/world/asia/helen-haines-attack-australian-politicians.html",
+          "published_at": "2026-10-21T10:57:42Z",
+          "published_at_estimated": false,
+          "image_url": "https://static01.nyt.com/images/2026/10/21/multimedia/21int-oz-political-climate-01-ctzq/21int-oz-political-climate-01-ctzq-mediumSquareAt3X.jpg"
+        },
+        {
+          "id": "b5d762be83cb",
+          "outlet_id": "thehindu",
+          "headline": "Australian politician who was hit by car has lost both legs",
+          "snippet": "The 65-year-old independent politician is receiving treatment in a Melbourne hospital where she was flown by helicopter",
+          "url": "https://www.thehindu.com/news/international/australian-politician-who-was-hit-by-car-has-lost-both-legs/article71608726.ece",
+          "published_at": "2026-10-21T17:52:15Z",
+          "published_at_estimated": false,
+          "image_url": "https://th-i.thgim.com/public/incoming/s0memk/article71608828.ece/alternates/LANDSCAPE_1200/2026-10-21T074052Z_94391984_RC2ZRX9NI1DS_RTRMADP_3_AUSTRALIA-HAINES.JPG"
+        },
+        {
+          "id": "8116df9577eb",
+          "outlet_id": "bbc",
+          "headline": "'Targeted' attack on much-loved MP leaves Australian town heartbroken",
+          "snippet": "Locals describe the MP, who had to have both legs amputated, as a genuinely kind person who fought for the community.",
+          "url": "https://www.bbc.co.uk/news/articles/cmgr8q88r5eqo",
+          "published_at": "2026-10-21T18:10:42Z",
+          "published_at_estimated": false,
+          "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/ce68/live/40f9c020-cd60-11f1-bc2e-018d645d8d21.jpg"
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "Helen Haines lost both legs after the attack, with doctors amputating them.",
+          "sources": [
+            "75e958928b25",
+            "6987de7ceb6c",
+            "b5d762be83cb",
+            "8116df9577eb"
+          ]
+        },
+        {
+          "text": "Haines was hit by a car driven into her.",
+          "sources": [
+            "75e958928b25",
+            "6987de7ceb6c",
+            "08c5a7d209e2",
+            "b5d762be83cb"
+          ]
+        },
+        {
+          "text": "A man accused of the attack has appeared in court.",
+          "sources": [
+            "66486e92e30c",
+            "75e958928b25"
+          ]
+        },
+        {
+          "text": "The attack is described as apparently deliberate or targeted.",
+          "sources": [
+            "75e958928b25",
+            "8116df9577eb"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "6987de7ceb6c",
+              "quote": "potential mental health issues and a concussion",
+              "field": "snippet"
+            },
+            {
+              "article_id": "08c5a7d209e2",
+              "quote": "Australian Politicians Were Already on Edge Before One of Their Own Was Attacked",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Reports the accused's lawyer saying his client may have mental health issues and a concussion.",
+              "sources": [
+                "6987de7ceb6c"
+              ]
+            },
+            {
+              "text": "Leads with fellow representatives, especially women, describing feeling threatened in a polarised atmosphere, and notes the motive remains unclear.",
+              "sources": [
+                "08c5a7d209e2"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "66486e92e30c",
+              "quote": "man charged with attacking MP stays silent in first hearing",
+              "field": "headline"
+            },
+            {
+              "article_id": "75e958928b25",
+              "quote": "loses both legs after car attack as suspect appears in court",
+              "field": "headline"
+            },
+            {
+              "article_id": "8116df9577eb",
+              "quote": "'Targeted' attack on much-loved MP leaves Australian town heartbroken",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Focuses on the court hearing, naming the accused as 43-year-old Brendan Nugent, who stayed silent.",
+              "sources": [
+                "66486e92e30c"
+              ]
+            },
+            {
+              "text": "Foregrounds local reaction, with residents describing Haines as a kind person who fought for the community.",
+              "sources": [
+                "8116df9577eb"
+              ]
+            },
+            {
+              "text": "Describes the attack as apparently deliberate.",
+              "sources": [
+                "75e958928b25"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not mention the defence lawyer's statement about the accused's potential mental health issues and concussion.",
+          "sources": [
+            "6987de7ceb6c"
+          ]
+        },
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not mention other politicians, especially women, saying they felt threatened before the attack.",
+          "sources": [
+            "08c5a7d209e2"
+          ]
+        },
+        {
+          "lean": "left",
+          "text": "Left coverage does not name the accused or his age.",
+          "sources": [
+            "66486e92e30c"
+          ]
+        }
+      ],
+      "contested_claims": [],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "66486e92e30c",
+              "quote": "stays silent in first hearing",
+              "field": "headline"
+            },
+            {
+              "article_id": "08c5a7d209e2",
+              "quote": "spoke of feeling threatened in a polarized atmosphere",
+              "field": "snippet"
+            },
+            {
+              "article_id": "6987de7ceb6c",
+              "quote": "Has Lost Both Legs",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Covers the court appearance, the defence's mental health claim, political climate and local reaction.",
+              "sources": [
+                "66486e92e30c",
+                "6987de7ceb6c",
+                "08c5a7d209e2",
+                "8116df9577eb"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "b5d762be83cb",
+              "quote": "receiving treatment in a Melbourne hospital where she was flown by helicopter",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Reports Haines as a 65-year-old independent politician being treated in a Melbourne hospital after a helicopter transfer.",
+              "sources": [
+                "b5d762be83cb"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "Australian MP Helen Haines has had both legs amputated after being hit by a car in what outlets describe as an apparent deliberate or targeted attack. A 43-year-old man, Brendan Nugent, appeared in court in Wangaratta over the alleged attack.",
+        "sources": [
+          "75e958928b25",
+          "6987de7ceb6c",
+          "b5d762be83cb",
+          "8116df9577eb",
+          "66486e92e30c"
+        ]
+      },
+      "conclusion": {
+        "text": "All coverage agrees Haines lost both legs after being hit by a car. Centre outlets focus on the court hearing and local grief, left outlets on the defence's mental health claim and politicians' sense of threat, and the East-bloc outlet on her hospital treatment. No outlet disputes another's account.",
+        "sources": [
+          "75e958928b25",
+          "6987de7ceb6c",
+          "b5d762be83cb",
+          "8116df9577eb",
+          "66486e92e30c",
+          "08c5a7d209e2"
+        ]
+      },
+      "validation": {
+        "kept": 25,
+        "dropped_by_reason": {}
+      }
+    },
+    {
+      "id": "1380b37602b4",
+      "title": "Macron rejects Trump's claims blaming French unrest on migration",
+      "rank": 9,
+      "outlet_count": 5,
+      "coverage": {
+        "lean": {
+          "left": 1,
+          "centre": 2,
+          "right": 0
+        },
+        "bloc": {
+          "west": 3,
+          "east": 2
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "df8c7f644e2b",
+          "outlet_id": "thehindu",
+          "headline": "France protests: Macron blasts ‘stupid’ claims by Trump, others blaming Muslims migrants for French riots",
+          "snippet": "Macron responded by saying there ‘has been foreign manipulation of information in the aftermath’ of the looting in Paris and other French cities last weekend",
+          "url": "https://www.thehindu.com/news/international/france-protests-macron-blasts-stupid-claims-by-trump-others-blaming-muslims-migrants-for-french-riots/article71607424.ece",
+          "published_at": "2026-10-21T12:36:19Z",
+          "published_at_estimated": false,
+          "image_url": "https://th-i.thgim.com/public/incoming/6cj37f/article71607500.ece/alternates/LANDSCAPE_1200/2026-10-21T100728Z_1180730329_RC2L7OAJMS37_RTRMADP_3_GULF-FRANCE-QATAR.JPG"
+        },
+        {
+          "id": "6d09209b5807",
+          "outlet_id": "bbc",
+          "headline": "Macron accuses foreign leaders of exploiting French riots",
+          "snippet": "The comment is an apparent swipe at Benjamin Netanyahu and Donald Trump, who both face elections in coming weeks.",
+          "url": "https://www.bbc.co.uk/news/articles/ckjrw044ggxgo",
+          "published_at": "2026-10-21T14:04:28Z",
+          "published_at_estimated": false,
+          "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/b6f4/live/ad9474c0-cd63-11f1-9a39-31b474234113.jpg"
+        },
+        {
+          "id": "5778de861f3a",
+          "outlet_id": "nyt",
+          "headline": "Macron Says Trump Does Not Like France and Distorts Its Troubles",
+          "snippet": "Speaking in Qatar, President Emmanuel Macron railed against foreign leaders who he said had made false claims about unrest in France for their own political ends.",
+          "url": "https://www.nytimes.com/2026/10/21/world/europe/macron-trump-france-protests.html",
+          "published_at": "2026-10-21T19:16:14Z",
+          "published_at_estimated": false,
+          "image_url": "https://static01.nyt.com/images/2026/10/21/multimedia/21int-france-trump-bcfq/21int-france-trump-bcfq-mediumSquareAt3X-v2.jpg"
+        },
+        {
+          "id": "50af2674b062",
+          "outlet_id": "france24",
+          "headline": "Trump exploits France riots to push false immigration claims ahead of midterms",
+          "snippet": "Donald Trump and his inner circle are using unrest in France to push unsubstantiated claims blaming the riots on immigration, even showing French protest footage at midterm rallies. But there is no…",
+          "url": "https://www.france24.com/en/tv-shows/truth-or-fake/20261021-trump-uses-france-riots-to-push-false-immigration-claims-ahead-of-midterms",
+          "published_at": "2026-10-21T19:28:54Z",
+          "published_at_estimated": false,
+          "image_url": "https://s.france24.com/media/display/8d5be998-cd83-11f1-80ea-eb48fa034ddc/w:1024/p:16x9/Screenshot-2026-10-21-211315.png"
+        },
+        {
+          "id": "8205931e5073",
+          "outlet_id": "aljazeera",
+          "headline": "‘Stupid talk’: France rejects Trump’s attempt to blame unrest on migration",
+          "snippet": "The US president has turned his attention to France, but his comments were dismissed by French leader Macron.",
+          "url": "https://www.aljazeera.com/news/2026/10/22/stupid-talk-france-rejects-trumps-attempt-to-blame-unrest-on-migration",
+          "published_at": "2026-10-22T05:58:52Z",
+          "published_at_estimated": false,
+          "image_url": null
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "Macron rejected or criticised Trump's claims about the unrest in France.",
+          "sources": [
+            "df8c7f644e2b",
+            "5778de861f3a",
+            "50af2674b062",
+            "8205931e5073"
+          ]
+        },
+        {
+          "text": "The claims Macron rejected blamed the French riots or unrest on migration or immigration.",
+          "sources": [
+            "df8c7f644e2b",
+            "50af2674b062",
+            "8205931e5073"
+          ]
+        },
+        {
+          "text": "Macron accused foreign leaders of exploiting or making false claims about the French riots.",
+          "sources": [
+            "6d09209b5807",
+            "5778de861f3a",
+            "df8c7f644e2b"
+          ]
+        },
+        {
+          "text": "Macron described the claims as 'stupid'.",
+          "sources": [
+            "df8c7f644e2b",
+            "8205931e5073"
+          ]
+        },
+        {
+          "text": "Trump faces elections in the coming weeks, described as the midterms.",
+          "sources": [
+            "6d09209b5807",
+            "50af2674b062"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "5778de861f3a",
+              "quote": "Macron Says Trump Does Not Like France and Distorts Its Troubles",
+              "field": "headline"
+            },
+            {
+              "article_id": "5778de861f3a",
+              "quote": "for their own political ends",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with Macron's statement that Trump does not like France and distorts its troubles, and notes he was speaking in Qatar.",
+              "sources": [
+                "5778de861f3a"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "6d09209b5807",
+              "quote": "an apparent swipe at Benjamin Netanyahu and Donald Trump",
+              "field": "snippet"
+            },
+            {
+              "article_id": "50af2674b062",
+              "quote": "Trump exploits France riots to push false immigration claims ahead of midterms",
+              "field": "headline"
+            },
+            {
+              "article_id": "50af2674b062",
+              "quote": "even showing French protest footage at midterm rallies",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Emphasises the electoral context, noting Trump and Netanyahu face elections and that French protest footage was shown at midterm rallies.",
+              "sources": [
+                "6d09209b5807",
+                "50af2674b062"
+              ]
+            },
+            {
+              "text": "Describes the immigration claims as unsubstantiated and false.",
+              "sources": [
+                "50af2674b062"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "left",
+          "text": "Left coverage does not mention upcoming elections or the midterms as context for the claims.",
+          "sources": [
+            "6d09209b5807",
+            "50af2674b062"
+          ]
+        },
+        {
+          "lean": "left",
+          "text": "Left coverage does not mention that the claims concerned immigration or migration.",
+          "sources": [
+            "50af2674b062"
+          ]
+        },
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not mention that Macron was speaking in Qatar.",
+          "sources": [
+            "5778de861f3a"
+          ]
+        }
+      ],
+      "contested_claims": [],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "6d09209b5807",
+              "quote": "Macron accuses foreign leaders of exploiting French riots",
+              "field": "headline"
+            },
+            {
+              "article_id": "5778de861f3a",
+              "quote": "Distorts Its Troubles",
+              "field": "headline"
+            },
+            {
+              "article_id": "50af2674b062",
+              "quote": "ahead of midterms",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Foregrounds the accusation that foreign leaders are exploiting the riots, and the electoral context in the US and for Netanyahu.",
+              "sources": [
+                "6d09209b5807",
+                "5778de861f3a",
+                "50af2674b062"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "8205931e5073",
+              "quote": "‘Stupid talk’: France rejects Trump’s attempt to blame unrest on migration",
+              "field": "headline"
+            },
+            {
+              "article_id": "df8c7f644e2b",
+              "quote": "blaming Muslims migrants for French riots",
+              "field": "headline"
+            },
+            {
+              "article_id": "df8c7f644e2b",
+              "quote": "foreign manipulation of information",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with Macron's 'stupid' description of the claims and their focus on migrants, with one outlet specifying Muslim migrants.",
+              "sources": [
+                "df8c7f644e2b",
+                "8205931e5073"
+              ]
+            },
+            {
+              "text": "Mentions looting in Paris and other French cities last weekend.",
+              "sources": [
+                "df8c7f644e2b"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "French President Emmanuel Macron rejected claims by Donald Trump and others blaming unrest in France on migration, calling them 'stupid'. He accused foreign leaders of exploiting or distorting the riots for political ends, with some outlets linking this to upcoming elections.",
+        "sources": [
+          "df8c7f644e2b",
+          "6d09209b5807",
+          "5778de861f3a",
+          "50af2674b062",
+          "8205931e5073"
+        ]
+      },
+      "conclusion": {
+        "text": "All outlets report that Macron rejected Trump's claims about French unrest, with several noting they blamed migration. Centre and West outlets emphasise the electoral context, the left outlet Macron's view that Trump dislikes France, and East outlets his 'stupid' remark. No outlet disputes another's account.",
+        "sources": [
+          "df8c7f644e2b",
+          "6d09209b5807",
+          "5778de861f3a",
+          "50af2674b062",
+          "8205931e5073"
+        ]
+      },
+      "validation": {
+        "kept": 27,
+        "dropped_by_reason": {}
+      }
+    },
+    {
+      "id": "57cfab8e1ff6",
+      "title": "US orders some diplomats and families to leave Saudi Arabia amid Houthi attacks",
+      "rank": 10,
+      "outlet_count": 5,
+      "coverage": {
+        "lean": {
+          "left": 1,
+          "centre": 0,
+          "right": 1
+        },
+        "bloc": {
+          "west": 2,
+          "east": 3
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "502cb522d971",
+          "outlet_id": "guardian",
+          "headline": "Some US diplomats told to leave Saudi Arabia amid Houthi attacks",
+          "snippet": "Reports emerge of similar withdrawals in UAE, Jordan, Qatar and Bahrain amid concerns about a return to conflict with Iran after US midterm elections The US state department has ordered some…",
+          "url": "https://www.theguardian.com/world/2026/oct/22/us-diplomats-told-to-leave-saudi-arabia-amid-houthi-attacks",
+          "published_at": "2026-10-22T00:26:50Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.guim.co.uk/img/media/ad0d9a1d652695e1b6e3636cdcd6f787bc705218/926_113_3873_3100/master/3873.jpg?width=460&quality=85&auto=format&fit=max&s=e89412e4a217f693218d54eb95ee8083"
+        },
+        {
+          "id": "457e3b229523",
+          "outlet_id": "thehindu",
+          "headline": "Oil rises as U.S. orders diplomats to leave Saudi Arabia amid escalating tensions",
+          "snippet": "Brent crude futures rose $1.29, or 1.2%, to $110.11 a barrel at 00:34 GMT, while U.S. West Texas Intermediate crude gained ‌97 cents, or 1%, to $98.12",
+          "url": "https://www.thehindu.com/news/international/oil-climbs-as-us-orders-diplomats-to-leave-saudi-missions/article71609875.ece",
+          "published_at": "2026-10-22T02:09:05Z",
+          "published_at_estimated": false,
+          "image_url": "https://th-i.thgim.com/public/news/national/offrxt/article71609899.ece/alternates/LANDSCAPE_1200/iStock-1296713112.jpg"
+        },
+        {
+          "id": "8808467eb7d0",
+          "outlet_id": "timesofisrael",
+          "headline": "US orders embassy staff, families to leave Saudi Arabia amid escalating Houthi attacks",
+          "snippet": "Saudis report at least 3 killed in Iran-backed group's strikes on oil facility and airport; Sissi says Egyptian military support for kingdom won't include strikes in Yemen",
+          "url": "https://www.timesofisrael.com/us-orders-embassy-staff-families-to-leave-saudi-arabia-amid-escalating-houthi-attacks/",
+          "published_at": "2026-10-22T02:51:37Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "aad2c1c04162",
+          "outlet_id": "thenational",
+          "headline": "US pulls diplomats from Saudi Arabia but denies wider Gulf withdrawal",
+          "snippet": "The US has ordered non-essential government employees and their families out of Saudi Arabia after a surge in Houthi attacks, including two on Wednesday in which four people were killed. State…",
+          "url": "https://www.thenationalnews.com/news/gulf/2026/10/22/us-pulls-diplomats-from-saudi-arabia-but-denies-wider-gulf-withdrawal/",
+          "published_at": "2026-10-22T03:58:14Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.thenationalnews.com/resizer/v2/OA2BXKRINMUN5UU4EAPV4NXVXU.jpg?auth=632589e8d398209a439068d9166fb0b1d02657345e341a577d219e1e78e43800&smart=true&width=5900&height=4425"
+        },
+        {
+          "id": "a43883b8ac89",
+          "outlet_id": "thenational",
+          "headline": "US pulls staff from Saudi Arabia, UAE's Nusseibeh in UN race, and Middle East oil exports recover",
+          "snippet": "In today's episode of Trending Middle East, the US has ordered non-essential diplomatic staff and their families to leave Saudi Arabia amid escalating Houthi attacks on the kingdom. The move follows…",
+          "url": "https://www.thenationalnews.com/podcasts/trending-middle-east/2026/10/22/us-pulls-staff-from-saudi-arabia-uaes-nusseibeh-in-un-race-and-middle-east-oil-exports-recover/",
+          "published_at": "2026-10-22T05:33:11Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.thenationalnews.com/resizer/v2/XDPEXEG372DUDTEHJERDARAYRA.jpg?auth=a66e13d938299fffaa543269d33a26c2c194c4bb78d671c2d85e211c8c6229af&smart=true&width=2412&height=1356"
+        },
+        {
+          "id": "99893fd708cb",
+          "outlet_id": "nypost",
+          "headline": "US pulls government employees from Saudi Arabia as kingdom comes under Houthi fire",
+          "snippet": "President Trump is weighing direct military action against the Iran-backed group.",
+          "url": "https://nypost.com/2026/10/22/us-news/us-pulls-government-employees-from-saudi-arabia-as-kingdom-comes-under-houthi-fire/",
+          "published_at": "2026-10-22T08:05:21Z",
+          "published_at_estimated": false,
+          "image_url": "https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F10%2Fus-president-bushs-motorcade-united-146051737.jpg?w%3D1024"
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "The US has ordered diplomats or government staff to leave Saudi Arabia.",
+          "sources": [
+            "502cb522d971",
+            "457e3b229523",
+            "8808467eb7d0",
+            "aad2c1c04162",
+            "a43883b8ac89",
+            "99893fd708cb"
+          ]
+        },
+        {
+          "text": "The order is linked to Houthi attacks on Saudi Arabia.",
+          "sources": [
+            "502cb522d971",
+            "8808467eb7d0",
+            "aad2c1c04162",
+            "a43883b8ac89",
+            "99893fd708cb"
+          ]
+        },
+        {
+          "text": "The order covers staff families as well as employees.",
+          "sources": [
+            "8808467eb7d0",
+            "aad2c1c04162",
+            "a43883b8ac89"
+          ]
+        },
+        {
+          "text": "The order applies to non-essential government or diplomatic staff.",
+          "sources": [
+            "aad2c1c04162",
+            "a43883b8ac89"
+          ]
+        },
+        {
+          "text": "The Houthis are described as an Iran-backed group.",
+          "sources": [
+            "8808467eb7d0",
+            "99893fd708cb"
+          ]
+        },
+        {
+          "text": "Recent Houthi attacks have killed people in Saudi Arabia.",
+          "sources": [
+            "8808467eb7d0",
+            "aad2c1c04162"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "502cb522d971",
+              "quote": "Some US diplomats told to leave Saudi Arabia amid Houthi attacks",
+              "field": "headline"
+            },
+            {
+              "article_id": "502cb522d971",
+              "quote": "concerns about a return to conflict with Iran after US midterm elections",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with reports of similar withdrawals in the UAE, Jordan, Qatar and Bahrain.",
+              "sources": [
+                "502cb522d971"
+              ]
+            },
+            {
+              "text": "Links the move to concerns about a return to conflict with Iran after the US midterm elections.",
+              "sources": [
+                "502cb522d971"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "right",
+          "headline_quotes": [
+            {
+              "article_id": "99893fd708cb",
+              "quote": "kingdom comes under Houthi fire",
+              "field": "headline"
+            },
+            {
+              "article_id": "99893fd708cb",
+              "quote": "President Trump is weighing direct military action against the Iran-backed group.",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Foregrounds President Trump weighing direct military action against the Houthis.",
+              "sources": [
+                "99893fd708cb"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "left",
+          "text": "Does not mention President Trump weighing direct military action against the Houthis.",
+          "sources": [
+            "99893fd708cb"
+          ]
+        },
+        {
+          "lean": "right",
+          "text": "Does not mention reports of similar withdrawals in the UAE, Jordan, Qatar and Bahrain.",
+          "sources": [
+            "502cb522d971"
+          ]
+        }
+      ],
+      "contested_claims": [
+        {
+          "claim": "US withdrawals extend beyond Saudi Arabia to other Gulf and regional states such as the UAE, Qatar and Bahrain.",
+          "asserted_by": [
+            "502cb522d971"
+          ],
+          "disputed_by": [
+            "aad2c1c04162"
+          ]
+        }
+      ],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "502cb522d971",
+              "quote": "concerns about a return to conflict with Iran",
+              "field": "snippet"
+            },
+            {
+              "article_id": "99893fd708cb",
+              "quote": "President Trump is weighing direct military action",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Emphasises the prospect of wider conflict, including with Iran, and possible US military action.",
+              "sources": [
+                "502cb522d971",
+                "99893fd708cb"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "457e3b229523",
+              "quote": "Oil rises as U.S. orders diplomats to leave Saudi Arabia",
+              "field": "headline"
+            },
+            {
+              "article_id": "8808467eb7d0",
+              "quote": "Saudis report at least 3 killed in Iran-backed group's strikes on oil facility and airport",
+              "field": "snippet"
+            },
+            {
+              "article_id": "aad2c1c04162",
+              "quote": "denies wider Gulf withdrawal",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Reports oil price rises, with Brent crude at $110.11 a barrel.",
+              "sources": [
+                "457e3b229523"
+              ]
+            },
+            {
+              "text": "Reports casualties from Houthi strikes, including on an oil facility and an airport.",
+              "sources": [
+                "8808467eb7d0",
+                "aad2c1c04162"
+              ]
+            },
+            {
+              "text": "Notes Egypt's Sissi saying military support for the kingdom will not include strikes in Yemen.",
+              "sources": [
+                "8808467eb7d0"
+              ]
+            },
+            {
+              "text": "Reports a US denial of a wider Gulf withdrawal.",
+              "sources": [
+                "aad2c1c04162"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "The US has ordered some diplomats and non-essential government employees, along with their families, to leave Saudi Arabia amid escalating Houthi attacks on the kingdom. Reports cite deaths in strikes on Saudi sites, and oil prices rose after the order.",
+        "sources": [
+          "502cb522d971",
+          "457e3b229523",
+          "8808467eb7d0",
+          "aad2c1c04162",
+          "a43883b8ac89",
+          "99893fd708cb"
+        ]
+      },
+      "conclusion": {
+        "text": "All coverage agrees the US ordered staff to leave Saudi Arabia amid Houthi attacks. Western outlets emphasise wider conflict and possible US military action, while Eastern outlets focus on oil prices, casualties and regional responses. Whether withdrawals extend to other Gulf states differs between reports of such moves and a reported US denial.",
+        "sources": [
+          "502cb522d971",
+          "99893fd708cb",
+          "457e3b229523",
+          "8808467eb7d0",
+          "aad2c1c04162",
+          "a43883b8ac89"
+        ]
+      },
+      "validation": {
+        "kept": 28,
+        "dropped_by_reason": {}
+      }
+    }
+  ]
+}
