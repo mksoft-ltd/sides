@@ -1,0 +1,4273 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-10-23T11:19:32.833221Z",
+  "date": "2026-10-23",
+  "meta": {
+    "model": "claude-opus-5-5",
+    "cost_usd": 0.666856,
+    "outlets_polled": 29,
+    "articles_collected": 677,
+    "warnings": [],
+    "validation": {
+      "kept": 309,
+      "dropped_by_reason": {
+        "contested_same_outlet": 1
+      }
+    }
+  },
+  "outlets": [
+    {
+      "id": "guardian",
+      "name": "The Guardian",
+      "lean": "left",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United Kingdom",
+      "home_url": "https://www.theguardian.com/",
+      "rating_basis": "AllSides media bias rating (Lean Left), checked Oct 2026"
+    },
+    {
+      "id": "independent",
+      "name": "The Independent",
+      "lean": "left",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United Kingdom",
+      "home_url": "https://www.independent.co.uk/",
+      "rating_basis": "AllSides media bias rating (Lean Left), checked Oct 2026"
+    },
+    {
+      "id": "mirror",
+      "name": "Daily Mirror",
+      "lean": "left",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United Kingdom",
+      "home_url": "https://www.mirror.co.uk/",
+      "rating_basis": "Ad Fontes Media bias rating (Skews Left), checked Oct 2026"
+    },
+    {
+      "id": "bbc",
+      "name": "BBC News",
+      "lean": "centre",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "public-service",
+      "country": "United Kingdom",
+      "home_url": "https://www.bbc.co.uk/news",
+      "rating_basis": "AllSides media bias rating (Center), checked Oct 2026"
+    },
+    {
+      "id": "sky",
+      "name": "Sky News",
+      "lean": "centre",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United Kingdom",
+      "home_url": "https://news.sky.com/",
+      "rating_basis": "Ad Fontes Media bias rating (Middle), checked Oct 2026"
+    },
+    {
+      "id": "telegraph",
+      "name": "The Telegraph",
+      "lean": "right",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United Kingdom",
+      "home_url": "https://www.telegraph.co.uk/",
+      "rating_basis": "AllSides media bias rating (Lean Right), checked Oct 2026"
+    },
+    {
+      "id": "dailymail",
+      "name": "Daily Mail",
+      "lean": "right",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United Kingdom",
+      "home_url": "https://www.dailymail.co.uk/",
+      "rating_basis": "AllSides media bias rating (Right), checked Oct 2026"
+    },
+    {
+      "id": "thesun",
+      "name": "The Sun",
+      "lean": "right",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United Kingdom",
+      "home_url": "https://www.thesun.co.uk/",
+      "rating_basis": "AllSides media bias rating (Right), checked Oct 2026"
+    },
+    {
+      "id": "nyt",
+      "name": "The New York Times",
+      "lean": "left",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United States",
+      "home_url": "https://www.nytimes.com/",
+      "rating_basis": "AllSides media bias rating (Lean Left), checked Oct 2026"
+    },
+    {
+      "id": "nbc",
+      "name": "NBC News",
+      "lean": "left",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United States",
+      "home_url": "https://www.nbcnews.com/",
+      "rating_basis": "AllSides media bias rating (Lean Left), checked Oct 2026"
+    },
+    {
+      "id": "huffpost",
+      "name": "HuffPost",
+      "lean": "left",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United States",
+      "home_url": "https://www.huffpost.com/",
+      "rating_basis": "AllSides media bias rating (Left), checked Oct 2026"
+    },
+    {
+      "id": "npr",
+      "name": "NPR",
+      "lean": "centre",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "public-service",
+      "country": "United States",
+      "home_url": "https://www.npr.org/",
+      "rating_basis": "Ad Fontes Media bias rating (Middle / Skews Left), checked Oct 2026"
+    },
+    {
+      "id": "axios",
+      "name": "Axios",
+      "lean": "centre",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United States",
+      "home_url": "https://www.axios.com/",
+      "rating_basis": "AllSides media bias rating (Center), checked Oct 2026"
+    },
+    {
+      "id": "fox",
+      "name": "Fox News",
+      "lean": "right",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United States",
+      "home_url": "https://www.foxnews.com/",
+      "rating_basis": "AllSides media bias rating (Right), checked Oct 2026"
+    },
+    {
+      "id": "nypost",
+      "name": "New York Post",
+      "lean": "right",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United States",
+      "home_url": "https://nypost.com/",
+      "rating_basis": "AllSides media bias rating (Lean Right), checked Oct 2026"
+    },
+    {
+      "id": "examiner",
+      "name": "Washington Examiner",
+      "lean": "right",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United States",
+      "home_url": "https://www.washingtonexaminer.com/",
+      "rating_basis": "AllSides media bias rating (Lean Right), checked Oct 2026"
+    },
+    {
+      "id": "france24",
+      "name": "France 24",
+      "lean": "centre",
+      "region": "europe",
+      "bloc": "west",
+      "ownership": "public-service",
+      "country": "France",
+      "home_url": "https://www.france24.com/en/",
+      "rating_basis": "Ad Fontes Media bias rating (Middle), checked Oct 2026"
+    },
+    {
+      "id": "dw",
+      "name": "DW (Deutsche Welle)",
+      "lean": "centre",
+      "region": "europe",
+      "bloc": "west",
+      "ownership": "public-service",
+      "country": "Germany",
+      "home_url": "https://www.dw.com/en/",
+      "rating_basis": "AllSides media bias rating (Center), checked Oct 2026"
+    },
+    {
+      "id": "aljazeera",
+      "name": "Al Jazeera English",
+      "lean": null,
+      "region": "middle_east",
+      "bloc": "east",
+      "ownership": "state-funded",
+      "country": "Qatar",
+      "home_url": "https://www.aljazeera.com/",
+      "rating_basis": "Funded by the State of Qatar; no left/right tag applied"
+    },
+    {
+      "id": "thenational",
+      "name": "The National (UAE)",
+      "lean": null,
+      "region": "middle_east",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "United Arab Emirates",
+      "home_url": "https://www.thenationalnews.com/",
+      "rating_basis": "Owned by International Media Investments (Abu Dhabi); no left/right tag applied"
+    },
+    {
+      "id": "timesofisrael",
+      "name": "The Times of Israel",
+      "lean": null,
+      "region": "middle_east",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "Israel",
+      "home_url": "https://www.timesofisrael.com/",
+      "rating_basis": "Privately owned; no left/right tag applied"
+    },
+    {
+      "id": "cgtn",
+      "name": "CGTN",
+      "lean": null,
+      "region": "asia",
+      "bloc": "east",
+      "ownership": "state-controlled",
+      "country": "China",
+      "home_url": "https://www.cgtn.com/",
+      "rating_basis": "China Global Television Network, part of state broadcaster China Media Group"
+    },
+    {
+      "id": "ecns",
+      "name": "ECNS (China News Service)",
+      "lean": null,
+      "region": "asia",
+      "bloc": "east",
+      "ownership": "state-controlled",
+      "country": "China",
+      "home_url": "https://www.ecns.cn/",
+      "rating_basis": "English service of China News Service, a state news agency"
+    },
+    {
+      "id": "scmp",
+      "name": "South China Morning Post",
+      "lean": null,
+      "region": "asia",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "Hong Kong",
+      "home_url": "https://www.scmp.com/",
+      "rating_basis": "Owned by Alibaba Group; no left/right tag applied"
+    },
+    {
+      "id": "toi",
+      "name": "The Times of India",
+      "lean": null,
+      "region": "asia",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "India",
+      "home_url": "https://timesofindia.indiatimes.com/",
+      "rating_basis": "Privately owned (Bennett, Coleman & Co.); no left/right tag applied"
+    },
+    {
+      "id": "thehindu",
+      "name": "The Hindu",
+      "lean": null,
+      "region": "asia",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "India",
+      "home_url": "https://www.thehindu.com/",
+      "rating_basis": "Privately owned (The Hindu Group); no left/right tag applied"
+    },
+    {
+      "id": "moscowtimes",
+      "name": "The Moscow Times",
+      "lean": null,
+      "region": "europe",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "Russia",
+      "home_url": "https://www.themoscowtimes.com/",
+      "rating_basis": "Independent, Amsterdam-based since 2022; designated \"undesirable\" by Russia; no left/right tag applied"
+    },
+    {
+      "id": "japantimes",
+      "name": "The Japan Times",
+      "lean": null,
+      "region": "asia",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "Japan",
+      "home_url": "https://www.japantimes.co.jp/",
+      "rating_basis": "Privately owned (News2u Holdings); no left/right tag applied"
+    },
+    {
+      "id": "koreaherald",
+      "name": "The Korea Herald",
+      "lean": null,
+      "region": "asia",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "South Korea",
+      "home_url": "https://www.koreaherald.com/",
+      "rating_basis": "Privately owned (Herald Corporation); no left/right tag applied"
+    }
+  ],
+  "stories": [
+    {
+      "id": "6a4dbdc47e30",
+      "title": "Israel orders West Bank closure after Hebron-area shooting wounds five Israelis",
+      "rank": 1,
+      "outlet_count": 15,
+      "coverage": {
+        "lean": {
+          "left": 3,
+          "centre": 4,
+          "right": 3
+        },
+        "bloc": {
+          "west": 10,
+          "east": 5
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "ba1cdb9f3671",
+          "outlet_id": "timesofisrael",
+          "headline": "5 injured, 2 critically, in West Bank shooting; IDF believes gunmen planned larger attack on civilians",
+          "snippet": "Shooters killed on the scene by troops * Footage shows prolonged gun battle as troops extract wounded: ‘Take cover by the ambulance’ * Netanyahu, security chiefs order preparations for full West…",
+          "url": "https://www.timesofisrael.com/liveblog-october-23-2026/",
+          "published_at": "2026-10-23T00:53:30Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "e0e9ec330e5f",
+          "outlet_id": "aljazeera",
+          "headline": "Israel preparing full lockdown of occupied West Bank after Hebron gunfight",
+          "snippet": "Clampdown comes as Israeli pogroms heighten tensions and spread violence across Palestinian territory.",
+          "url": "https://www.aljazeera.com/news/2026/10/23/israel-arrests-36-palestinians-in-the-west-bank-attacks-on-farmers-ramp-up",
+          "published_at": "2026-10-23T04:09:28Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "73b659db3fed",
+          "outlet_id": "sky",
+          "headline": "Israel orders army to prepare to fully close West Bank after 'thwarting terror attack'",
+          "snippet": "The Israeli government has ordered its army to prepare for a full closure of the occupied West Bank following a shooting near Hebron.",
+          "url": "https://news.sky.com/story/israel-orders-army-to-prepare-to-fully-close-west-bank-after-attack-13602577",
+          "published_at": "2026-10-23T08:03:00Z",
+          "published_at_estimated": false,
+          "image_url": "https://e3.365dm.com/26/10/1920x1080/skynews-israeli-soldiers-hebron_7384380.jpg?20261023092252"
+        },
+        {
+          "id": "432e2bd8f1bb",
+          "outlet_id": "fox",
+          "headline": "Two suspected gunmen killed after shooting wounds 5 Israelis in West Bank",
+          "snippet": "Two suspected gunmen were killed by the IDF after a shooting near Judea Junction in the southern West Bank left five Israelis wounded on Friday.",
+          "url": "https://www.foxnews.com/world/two-suspected-gunmen-killed-shooting-wounds-5-israelis-west-bank",
+          "published_at": "2026-10-23T08:05:06Z",
+          "published_at_estimated": false,
+          "image_url": "https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2026/10/931/523/west-bank-shooting-judea-junction-israelis-wounded.jpg?ve=1&tl=1"
+        },
+        {
+          "id": "8dbe90a832f4",
+          "outlet_id": "scmp",
+          "headline": "Netanyahu orders West Bank closure after attack on Israelis ends in gun battle",
+          "snippet": "Palestinian militants wounded five Israelis in an attack on Friday before being killed in a prolonged shoot-out with soldiers, leading Prime Minister Benjamin Netanyahu to order a lockdown in the…",
+          "url": "https://www.scmp.com/news/world/middle-east/article/3371912/netanyahu-orders-west-bank-closure-after-deadly-checkpoint-shoot-out",
+          "published_at": "2026-10-23T08:29:22Z",
+          "published_at_estimated": false,
+          "image_url": "https://cdn.i-scmp.com/sites/default/files/styles/1280x720/public/d8/images/canvas/2026/10/23/313d88e3-61c1-4bb2-86dc-5ddeb874e6f4_b7cf9d82.jpg?itok=Dk5M_6mW&v=1792744478"
+        },
+        {
+          "id": "5e580b872091",
+          "outlet_id": "thesun",
+          "headline": "Netanyahu orders army to prepare to SHUT West Bank after two gunmen killed as Israeli forces foil ‘terror attack’",
+          "snippet": "ISRAEL has ordered its army to prepare for a complete closure of the West Bank after claiming to have foiled a suspected terror attack. Prime Minister Benjamin Netanyahu commanded his security…",
+          "url": "https://www.thesun.co.uk/news/40782116/israel-west-bank-closed-terror-attack/",
+          "published_at": "2026-10-23T08:32:10Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.thesun.co.uk/wp-content%2Fuploads%2F2026%2F10%2Fcrop-40782309.jpg?quality%3D90%26"
+        },
+        {
+          "id": "aa519255ef7d",
+          "outlet_id": "france24",
+          "headline": "Netanyahu orders army to prepare for full West Bank closure after attack",
+          "snippet": "The office of Israeli Prime Minister Benjamin Netanyahu ordered the army to prepare for a full closure of the occupied West Bank Friday after Israeli soldiers shot and killed two men who the…",
+          "url": "https://www.france24.com/en/middle-east/20261023-netanyahu-orders-army-to-prepare-for-full-west-bank-closure-after-attack",
+          "published_at": "2026-10-23T08:35:17Z",
+          "published_at_estimated": false,
+          "image_url": "https://s.france24.com/media/display/c0f92bb8-ceb8-11f1-a0a6-bdb9616e85cf/w:1024/p:16x9/AP26296286800872.jpg"
+        },
+        {
+          "id": "3e711277851c",
+          "outlet_id": "mirror",
+          "headline": "Israel orders army to prepare for full closure of West Bank",
+          "snippet": "Benjamin Netanyahu's office has said the army has been ordered to fully close the West Bank, from Friday, following a deadly shooting - this comes just days before the Israeli elections",
+          "url": "https://www.mirror.co.uk/news/israel-west-bank-netanyahu-gaza-37802584",
+          "published_at": "2026-10-23T08:39:36Z",
+          "published_at_estimated": false,
+          "image_url": "https://i2-prod.mirror.co.uk/incoming/article37802624.ece/ALTERNATES/s615/0_FILES-ISRAEL-IRAN-LEBANON-PALESTINIAN-CONFLCIT.jpg"
+        },
+        {
+          "id": "ff1f5a866f03",
+          "outlet_id": "nbc",
+          "headline": "Israel orders ‘full lockdown’ of West Bank after military kills 2 accused of attack",
+          "snippet": "Israeli Prime Minister Benjamin Netanyahu ordered a “full lockdown” of the occupied West Bank on Friday after Israel’s military said it killed two Palestinians accused of launching a shooting attack…",
+          "url": "https://www.nbcnews.com/world/middle-east/israel-orders-west-bank-lockdown-hebron-shooting-attack-rcna605176",
+          "published_at": "2026-10-23T08:47:16Z",
+          "published_at_estimated": false,
+          "image_url": "https://media-cldnry.s-nbcnews.com/image/upload/t_fit_1500w/rockcms/2026-10/261023-isr-soldiers-rs-0a6576.jpg"
+        },
+        {
+          "id": "2382d14716d3",
+          "outlet_id": "aljazeera",
+          "headline": "Israeli military kills two in gun battle in occupied West Bank",
+          "snippet": "Israel’s PM is preparing to order a shutdown in the occupied West Bank lockdown after a shooting near Hebron.",
+          "url": "https://www.aljazeera.com/video/newsfeed/2026/10/23/israeli-military-kills-two-in-gun-battle-in-occupied-west-bank",
+          "published_at": "2026-10-23T09:12:38Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "b3d2bcd5392b",
+          "outlet_id": "toi",
+          "headline": "Hebron Lockdown Ordered: Netanyahu plans full West Bank closure; attack heightens election fears",
+          "snippet": "In response to a recent shooting near Hebron, Israel has enacted a total closure of the occupied West Bank, citing rising security concerns as the Israeli elections approach. The alleged gunmen were…",
+          "url": "https://timesofindia.indiatimes.com/world/middle-east/israel-orders-hebron-lockdown-prepares-to-shut-entire-west-bank-after-shooting-from-friday/articleshow/135141135.cms",
+          "published_at": "2026-10-23T09:15:38Z",
+          "published_at_estimated": false,
+          "image_url": "https://static.toiimg.com/photo/msid-135141436,imgsize-233038.cms"
+        },
+        {
+          "id": "a1d48245a312",
+          "outlet_id": "thenational",
+          "headline": "Netanyahu orders West Bank lockdown after Hebron checkpoint shooting",
+          "snippet": "Israeli Prime Minister Benjamin Netanyahu ordered the \"full closure” of the occupied West Bank after five people were injured in a shooting at a military checkpoint near the city of Hebron. “I have…",
+          "url": "https://www.thenationalnews.com/news/mena/2026/10/23/netanyahu-orders-west-bank-lockdown-after-hebron-checkpoint-shooting/",
+          "published_at": "2026-10-23T09:18:58Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.thenationalnews.com/resizer/v2/FP3BZLWHJ4OVPJVTSR5C72YN24.jpg?auth=fb6b662125bf0228c428194a876aeb5bb87fa39b8fbd7a9b4bcfc0025177a882&smart=true&width=5500&height=3667"
+        },
+        {
+          "id": "3ad93ec3ed0a",
+          "outlet_id": "npr",
+          "headline": "Israel orders closure of West Bank after soldiers kill 2 men behind an alleged attack",
+          "snippet": "Israeli soldiers shot and killed two men who the military said had launched an attack near the city of Hebron in the occupied West Bank on Friday morning. At least five people were injured…",
+          "url": "https://www.npr.org/2026/10/23/nx-s1-6013333/netanyahu-closure-west-bank",
+          "published_at": "2026-10-23T09:40:32Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "38c403da0125",
+          "outlet_id": "dailymail",
+          "headline": "Five Israelis are wounded by terrorists before IDF kill gunmen and thwart 'major attack on civilians' - after it was revealed Hamas warned of a 'second October 7'",
+          "snippet": "Palestinian militants wounded five Israelis in an attack on Friday before being killed in a prolonged shootout with IDF soldiers.",
+          "url": "https://www.dailymail.com/news/article-16232605/Five-Israelis-wounded-terrorists-IDF-kill-gunmen.html",
+          "published_at": "2026-10-23T09:54:00Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.dailymail.com/1s/2026/10/23/10/112044057-0-image-a-16_1792748277743.jpg"
+        },
+        {
+          "id": "b2d2df49a48c",
+          "outlet_id": "bbc",
+          "headline": "Five Israelis wounded and two suspected Palestinian attackers killed in West Bank shooting",
+          "snippet": "The attack comes at a time of heightened tensions in the West Bank and four days before Israel's general election.",
+          "url": "https://www.bbc.co.uk/news/articles/cq4g1p974wxko",
+          "published_at": "2026-10-23T10:26:06Z",
+          "published_at_estimated": false,
+          "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/a095/live/c39c9a30-cec7-11f1-b9e0-e5f0da03dc7f.jpg"
+        },
+        {
+          "id": "b1033aaf5285",
+          "outlet_id": "nyt",
+          "headline": "Palestinian Gunmen Open Fire on Israelis in the West Bank, Officials Say",
+          "snippet": "Five people were wounded in the attack, days before national elections, health workers said. The Israeli military said its soldiers had killed two assailants.",
+          "url": "https://www.nytimes.com/2026/10/23/world/middleeast/west-bank-shooting-israel.html",
+          "published_at": "2026-10-23T10:28:15Z",
+          "published_at_estimated": false,
+          "image_url": "https://static01.nyt.com/images/2026/10/23/multimedia/23Int-Israel-Shooting-02-lvmh/23Int-Israel-Shooting-02-lvmh-mediumSquareAt3X.jpg"
+        },
+        {
+          "id": "3db28eb00850",
+          "outlet_id": "france24",
+          "headline": "Netanyahu orders West Bank closure as attack wounds Israelis before election",
+          "snippet": "Details by FRANCE 24's correspondent in Jerusalem Noga Tarnopolsky.",
+          "url": "https://www.france24.com/en/video/20261023-netanyahu-orders-west-bank-closure-as-attack-wounds-israelis-before-election",
+          "published_at": "2026-10-23T10:41:52Z",
+          "published_at_estimated": false,
+          "image_url": "https://s.france24.com/media/display/9ad7c33e-cec9-11f1-b15c-4d317af013fd/w:1024/p:16x9/2026-09-24T184642Z-605967326-RC2UPNAG1F4P-RTRMADP-3-UN-ASSEMBLY.jpg"
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "Five people, described as Israelis, were wounded in the shooting.",
+          "sources": [
+            "ba1cdb9f3671",
+            "432e2bd8f1bb",
+            "8dbe90a832f4",
+            "a1d48245a312",
+            "3ad93ec3ed0a",
+            "38c403da0125",
+            "b2d2df49a48c",
+            "b1033aaf5285"
+          ]
+        },
+        {
+          "text": "Israeli soldiers killed two men accused of carrying out the attack.",
+          "sources": [
+            "432e2bd8f1bb",
+            "5e580b872091",
+            "aa519255ef7d",
+            "ff1f5a866f03",
+            "2382d14716d3",
+            "3ad93ec3ed0a",
+            "b2d2df49a48c",
+            "b1033aaf5285"
+          ]
+        },
+        {
+          "text": "Netanyahu or the Israeli government ordered a full closure or lockdown of the West Bank, or preparations for one, after the shooting.",
+          "sources": [
+            "ba1cdb9f3671",
+            "e0e9ec330e5f",
+            "73b659db3fed",
+            "8dbe90a832f4",
+            "5e580b872091",
+            "aa519255ef7d",
+            "3e711277851c",
+            "ff1f5a866f03",
+            "2382d14716d3",
+            "b3d2bcd5392b",
+            "a1d48245a312",
+            "3db28eb00850"
+          ]
+        },
+        {
+          "text": "The shooting took place near Hebron in the southern West Bank.",
+          "sources": [
+            "e0e9ec330e5f",
+            "73b659db3fed",
+            "2382d14716d3",
+            "b3d2bcd5392b",
+            "a1d48245a312",
+            "3ad93ec3ed0a",
+            "432e2bd8f1bb"
+          ]
+        },
+        {
+          "text": "The attackers were killed after a prolonged gun battle with Israeli troops.",
+          "sources": [
+            "ba1cdb9f3671",
+            "8dbe90a832f4",
+            "38c403da0125",
+            "2382d14716d3"
+          ]
+        },
+        {
+          "text": "The attack came days before Israel's national elections.",
+          "sources": [
+            "3e711277851c",
+            "b3d2bcd5392b",
+            "b2d2df49a48c",
+            "b1033aaf5285",
+            "3db28eb00850"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "b1033aaf5285",
+              "quote": "Palestinian Gunmen Open Fire on Israelis in the West Bank, Officials Say",
+              "field": "headline"
+            },
+            {
+              "article_id": "ff1f5a866f03",
+              "quote": "after military kills 2 accused of attack",
+              "field": "headline"
+            },
+            {
+              "article_id": "3e711277851c",
+              "quote": "this comes just days before the Israeli elections",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Attributes details of the attack and the killings to officials, the military and health workers.",
+              "sources": [
+                "b1033aaf5285",
+                "ff1f5a866f03"
+              ]
+            },
+            {
+              "text": "Links the shooting to the timing of the Israeli elections.",
+              "sources": [
+                "3e711277851c",
+                "b1033aaf5285"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "73b659db3fed",
+              "quote": "after 'thwarting terror attack'",
+              "field": "headline"
+            },
+            {
+              "article_id": "3ad93ec3ed0a",
+              "quote": "two men who the military said had launched an attack",
+              "field": "snippet"
+            },
+            {
+              "article_id": "b2d2df49a48c",
+              "quote": "four days before Israel's general election",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the order for the army to prepare a full closure of the occupied West Bank.",
+              "sources": [
+                "73b659db3fed",
+                "aa519255ef7d",
+                "3ad93ec3ed0a"
+              ]
+            },
+            {
+              "text": "Places the attack against heightened tensions and the upcoming election.",
+              "sources": [
+                "b2d2df49a48c",
+                "3db28eb00850"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "right",
+          "headline_quotes": [
+            {
+              "article_id": "5e580b872091",
+              "quote": "Netanyahu orders army to prepare to SHUT West Bank",
+              "field": "headline"
+            },
+            {
+              "article_id": "38c403da0125",
+              "quote": "Five Israelis are wounded by terrorists",
+              "field": "headline"
+            },
+            {
+              "article_id": "38c403da0125",
+              "quote": "Hamas warned of a 'second October 7'",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Describes the incident as a terror attack that Israeli forces foiled or thwarted.",
+              "sources": [
+                "5e580b872091",
+                "38c403da0125"
+              ]
+            },
+            {
+              "text": "Leads with the killing of the gunmen by the IDF.",
+              "sources": [
+                "432e2bd8f1bb",
+                "5e580b872091",
+                "38c403da0125"
+              ]
+            },
+            {
+              "text": "Mentions a reported Hamas warning of a 'second October 7'.",
+              "sources": [
+                "38c403da0125"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "right",
+          "text": "Right-leaning coverage does not mention that the attack came days before Israel's elections.",
+          "sources": [
+            "3e711277851c",
+            "b1033aaf5285",
+            "b2d2df49a48c",
+            "3db28eb00850"
+          ]
+        },
+        {
+          "lean": "left",
+          "text": "Left-leaning coverage does not mention the description of the attack as thwarted or foiled.",
+          "sources": [
+            "73b659db3fed",
+            "5e580b872091",
+            "38c403da0125"
+          ]
+        },
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not mention the reported Hamas warning of a 'second October 7'.",
+          "sources": [
+            "38c403da0125"
+          ]
+        }
+      ],
+      "contested_claims": [
+        {
+          "claim": "The full West Bank closure has been ordered or enacted, rather than only prepared.",
+          "asserted_by": [
+            "b3d2bcd5392b",
+            "3e711277851c",
+            "ff1f5a866f03",
+            "a1d48245a312"
+          ],
+          "disputed_by": [
+            "73b659db3fed",
+            "aa519255ef7d",
+            "5e580b872091",
+            "ba1cdb9f3671",
+            "2382d14716d3",
+            "e0e9ec330e5f"
+          ]
+        }
+      ],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "b2d2df49a48c",
+              "quote": "two suspected Palestinian attackers killed in West Bank shooting",
+              "field": "headline"
+            },
+            {
+              "article_id": "73b659db3fed",
+              "quote": "Israel orders army to prepare to fully close West Bank",
+              "field": "headline"
+            },
+            {
+              "article_id": "3db28eb00850",
+              "quote": "attack wounds Israelis before election",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the closure order and the killing of two alleged attackers.",
+              "sources": [
+                "73b659db3fed",
+                "aa519255ef7d",
+                "ff1f5a866f03",
+                "3ad93ec3ed0a",
+                "b2d2df49a48c"
+              ]
+            },
+            {
+              "text": "Notes the timing before Israel's general election.",
+              "sources": [
+                "3e711277851c",
+                "b2d2df49a48c",
+                "b1033aaf5285",
+                "3db28eb00850"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "ba1cdb9f3671",
+              "quote": "IDF believes gunmen planned larger attack on civilians",
+              "field": "headline"
+            },
+            {
+              "article_id": "e0e9ec330e5f",
+              "quote": "Clampdown comes as Israeli pogroms heighten tensions",
+              "field": "snippet"
+            },
+            {
+              "article_id": "b3d2bcd5392b",
+              "quote": "attack heightens election fears",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Reports two of the wounded in critical condition and an IDF belief that a larger attack was planned.",
+              "sources": [
+                "ba1cdb9f3671"
+              ]
+            },
+            {
+              "text": "Places the lockdown alongside Israeli pogroms spreading violence in Palestinian territory.",
+              "sources": [
+                "e0e9ec330e5f"
+              ]
+            },
+            {
+              "text": "Describes the shooting location as a military checkpoint near Hebron.",
+              "sources": [
+                "a1d48245a312"
+              ]
+            },
+            {
+              "text": "Links the closure to security concerns ahead of the elections.",
+              "sources": [
+                "b3d2bcd5392b"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "Gunmen opened fire on Israelis near Hebron in the occupied West Bank on Friday, wounding five, before Israeli soldiers killed two alleged attackers. Netanyahu ordered the army to prepare for, or impose, a full closure of the West Bank, days before Israel's general election.",
+        "sources": [
+          "432e2bd8f1bb",
+          "3ad93ec3ed0a",
+          "b2d2df49a48c",
+          "b1033aaf5285",
+          "73b659db3fed",
+          "aa519255ef7d",
+          "ff1f5a866f03",
+          "a1d48245a312",
+          "3e711277851c",
+          "3db28eb00850"
+        ]
+      },
+      "conclusion": {
+        "text": "All sides report five wounded, two attackers killed and a West Bank closure order. Right-leaning outlets describe a thwarted terror attack, left and centre stress election timing, and Al Jazeera cites Israeli pogroms; reports differ on whether the closure was enacted or only prepared.",
+        "sources": [
+          "432e2bd8f1bb",
+          "b2d2df49a48c",
+          "3ad93ec3ed0a",
+          "5e580b872091",
+          "38c403da0125",
+          "3e711277851c",
+          "b1033aaf5285",
+          "e0e9ec330e5f",
+          "b3d2bcd5392b",
+          "73b659db3fed"
+        ]
+      },
+      "validation": {
+        "kept": 40,
+        "dropped_by_reason": {}
+      }
+    },
+    {
+      "id": "b959d9776224",
+      "title": "France bans protests and tightens security ahead of weekend demonstrations",
+      "rank": 2,
+      "outlet_count": 9,
+      "coverage": {
+        "lean": {
+          "left": 2,
+          "centre": 1,
+          "right": 2
+        },
+        "bloc": {
+          "west": 5,
+          "east": 4
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "12a5ed238f93",
+          "outlet_id": "fox",
+          "headline": "Macron has one more chance to save the country or ‘it’s lost for France,’ business owner warns",
+          "snippet": "A French business owner who had five family stores destroyed by looters warns of growing insecurity and urges authorities to protect businesses ahead of another weekend of protests.",
+          "url": "https://www.foxnews.com/world/macron-has-one-more-chance-save-country-its-lost-france-business-owner-warns",
+          "published_at": "2026-10-22T10:19:17Z",
+          "published_at_estimated": false,
+          "image_url": "https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2026/10/931/523/burned-cars-paris.png?ve=1&tl=1"
+        },
+        {
+          "id": "8904726644b6",
+          "outlet_id": "cgtn",
+          "headline": "Macron calls for halt to demonstrations in coming days",
+          "snippet": "French President Emmanuel Macron said on Thursday that the government recommends that no demonstrations be held across the country in the coming days, particularly on Saturday.",
+          "url": "https://news.cgtn.com/news/2026-10-22/Macron-calls-for-halt-to-demonstrations-in-coming-days-1RskaBLFSeY/p.html",
+          "published_at": "2026-10-22T14:21:53Z",
+          "published_at_estimated": false,
+          "image_url": "https://news.cgtn.com/news/2026-10-22/Macron-calls-for-halt-to-demonstrations-in-coming-days-1RskaBLFSeY/img/2a0b8b18755c455a83c5c2105a443e2b/2a0b8b18755c455a83c5c2105a443e2b-750.png"
+        },
+        {
+          "id": "6c2d06e65d20",
+          "outlet_id": "thehindu",
+          "headline": "French authorities seek to ban or curb fresh protests",
+          "snippet": "“All protests” in the southeastern city of Lyon banned on October 24; France’s interior ministry said “20 percent more” police would be deployed this coming Saturday",
+          "url": "https://www.thehindu.com/news/international/french-city-of-lyon-bans-all-protests-on-october-24/article71611024.ece",
+          "published_at": "2026-10-22T16:35:31Z",
+          "published_at_estimated": false,
+          "image_url": "https://th-i.thgim.com/public/incoming/ji85d1/article71611026.ece/alternates/LANDSCAPE_1200/2026-10-22T094136Z_1923117478_RC265OAMT8GJ_RTRMADP_3_FRANCE-PROTEST-MELENCHON.JPG"
+        },
+        {
+          "id": "6c68d463fe36",
+          "outlet_id": "fox",
+          "headline": "France's Macron blames protests on 'ultra-left groups whose aim is to bring down the Republic'",
+          "snippet": "French President Emmanuel Macron blamed \"ultra-left groups\" for riots and looting as Paris businesses board up windows ahead of Saturday protests.",
+          "url": "https://www.foxnews.com/world/frances-macron-blames-protests-ultra-left-groups-aim-bring-down-republic",
+          "published_at": "2026-10-22T16:38:45Z",
+          "published_at_estimated": false,
+          "image_url": "https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2026/10/931/523/paris-france-protests-fire-riot-gear.jpg?ve=1&tl=1"
+        },
+        {
+          "id": "379b739bbeef",
+          "outlet_id": "nyt",
+          "headline": "In the Wake of Riots, the French Authorities Ban Some Protests",
+          "snippet": "President Emmanuel Macron said the move was necessary “so that calm prevails.”",
+          "url": "https://www.nytimes.com/2026/10/22/world/europe/france-protests-macron.html",
+          "published_at": "2026-10-22T19:02:05Z",
+          "published_at_estimated": false,
+          "image_url": "https://static01.nyt.com/images/2026/10/22/multimedia/22int-france-protests-qzmc/22int-france-protests-qzmc-mediumSquareAt3X-v3.jpg"
+        },
+        {
+          "id": "cb3a47b56b5f",
+          "outlet_id": "thehindu",
+          "headline": "Thousands gather in Paris after court lifts protest ban despite fears of new violence",
+          "snippet": "The Paris prefecture previously said the ban was necessary, given the risk of street violence after groups of masked youth clashed with officers, looted shops and torched cars over the weekend",
+          "url": "https://www.thehindu.com/news/international/thousands-gather-in-paris-after-court-lifts-protest-ban-despite-fears-of-new-violence/article71613320.ece",
+          "published_at": "2026-10-22T20:15:36Z",
+          "published_at_estimated": false,
+          "image_url": "https://th-i.thgim.com/public/incoming/sio6tp/article71613325.ece/alternates/LANDSCAPE_1200/AP10_21_2026_000256B.jpg"
+        },
+        {
+          "id": "e1faf8fce63c",
+          "outlet_id": "scmp",
+          "headline": "France braces for more unrest as police face scrutiny over weapons and tactics",
+          "snippet": "Police across France are under pressure to maintain security during further protests expected in some cities, while facing scrutiny over their riot-control tactics used during previous unrest that…",
+          "url": "https://www.scmp.com/news/world/europe/article/3371879/france-braces-more-unrest-police-tactics-and-weapons-face-scrutiny",
+          "published_at": "2026-10-23T05:50:08Z",
+          "published_at_estimated": false,
+          "image_url": "https://cdn.i-scmp.com/sites/default/files/styles/1280x720/public/d8/images/canvas/2026/10/23/19d148dc-95e1-471f-969e-00bc34987330_972e7f33.jpg?itok=X8ypONQv&v=1792734602"
+        },
+        {
+          "id": "fddcf47c54fb",
+          "outlet_id": "france24",
+          "headline": "French authorities seek to ban protests: Macron to meet students on Friday",
+          "snippet": "Isabelle Vuillet, co-secretary general of the CGT Educ'Action union, is our guest.",
+          "url": "https://www.france24.com/en/video/20261023-french-authorities-seek-to-ban-protests-macron-to-meet-students-on-friday",
+          "published_at": "2026-10-23T07:53:57Z",
+          "published_at_estimated": false,
+          "image_url": "https://s.france24.com/media/display/b3c7764a-ceb6-11f1-a376-4d317af013fd/w:1024/p:16x9/capture-3189e106.jpg"
+        },
+        {
+          "id": "1b84c6a8f0dd",
+          "outlet_id": "france24",
+          "headline": "Major protests in France: French shop owners brace for more unrest",
+          "snippet": "French President Emmanuel Macron said on Thursday that \"illegitimate\" protests would be banned in the coming days and blamed \"seditious\" ultra-left groups and vandals for last weekend's riots and…",
+          "url": "https://www.france24.com/en/major-protests-in-france-french-shop-owners-brace-for-more-unrest",
+          "published_at": "2026-10-23T08:46:04Z",
+          "published_at_estimated": false,
+          "image_url": "https://s.france24.com/media/display/071f40c0-cebc-11f1-b17e-4b25c96ec90e/w:1024/p:16x9/EN-20261023-090255-090455-CS-01.jpg"
+        },
+        {
+          "id": "0265a65870f6",
+          "outlet_id": "aljazeera",
+          "headline": "Macron to meet student groups: Where are France’s protests heading?",
+          "snippet": "President to meet for first time with student representatives on Friday before further protests.",
+          "url": "https://www.aljazeera.com/news/2026/10/23/we-want-promises-backed-by-results",
+          "published_at": "2026-10-23T08:50:23Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "50225aac14f8",
+          "outlet_id": "france24",
+          "headline": "French mayors analyze the political crisis as new protests are expected",
+          "snippet": "French mayors Emmanuel Gregoire of Paris and Benoit Payan of Marseille have analysed the current political crisis in France and the government's choice to impose curfews in several cities to prevent…",
+          "url": "https://www.france24.com/en/video/20261023-french-mayors-analyze-the-political-crisis-as-new-protests-are-expected",
+          "published_at": "2026-10-23T10:39:42Z",
+          "published_at_estimated": false,
+          "image_url": "https://s.france24.com/media/display/2b8a342e-cecb-11f1-b316-bdb9616e85cf/w:1024/p:16x9/capture-31d0b20d.jpg"
+        },
+        {
+          "id": "de0cae133a28",
+          "outlet_id": "france24",
+          "headline": "French authorities call for videos of looting to identify rioters",
+          "snippet": "To identify rioters across France last weekend, French authorities are calling on people who filmed scenes of looting to assist the investigation by handing the videos in. That is an unprecedented…",
+          "url": "https://www.france24.com/en/french-authorities-call-for-videos-of-looting-to-identify-rioters",
+          "published_at": "2026-10-23T10:47:56Z",
+          "published_at_estimated": false,
+          "image_url": "https://s.france24.com/media/display/795dd2b0-ceca-11f1-9642-5b4a75578ebb/w:1024/p:16x9/EN-20261023-110828-111033-CS-01.jpg"
+        },
+        {
+          "id": "b88aed9d067e",
+          "outlet_id": "dailymail",
+          "headline": "Foreign Office warns UK tourists over 'Act II' protests in France this weekend - after British woman had 'calf torn off' in Toulouse",
+          "snippet": "Paris will once again see protesters take to the streets tomorrow, with a planned march set to take place at 2pm from Place de la Bastille in the French capital.",
+          "url": "https://www.dailymail.com/travel/article-16232427/Foreign-Office-warns-tourists-protests-France.html",
+          "published_at": "2026-10-23T10:51:54Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.dailymail.com/1s/2026/10/23/10/112044215-0-image-m-6_1792748361601.jpg"
+        },
+        {
+          "id": "dec1ac481df5",
+          "outlet_id": "aljazeera",
+          "headline": "France tightens security in anticipation of weekend protests",
+          "snippet": "Gatherings banned and curfews extended as cities lock down in an effort to avert further unrest.",
+          "url": "https://www.aljazeera.com/news/2026/10/23/france-tightens-security-in-anticipation-of-weekend-protests",
+          "published_at": "2026-10-23T11:05:13Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "be53129578a1",
+          "outlet_id": "guardian",
+          "headline": "French interior minister says authorities will be ‘uncompromising’ with ‘vandals’ ahead of weekend protests – Europe live",
+          "snippet": "Laurent Nuñez also defended blanket bans on demonstrations in some parts of France The French prime minister Sébastien Lecornu has just issued a statement on a shooting in a town west of Paris this…",
+          "url": "https://www.theguardian.com/world/live/2026/oct/23/starlink-ukraine-musk-trump-russia-black-sea-strikes-france-milan-europe-protests-latest-news-updates",
+          "published_at": "2026-10-23T11:08:10Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.guim.co.uk/img/media/af1fc011ae129656877c50d5d8e2f8855b675410/1321_8_4427_3542/master/4427.jpg?width=460&quality=85&auto=format&fit=max&s=97749c31bab1cc8a87eea8103bac853a"
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "French authorities are banning or seeking to ban some protests in the coming days.",
+          "sources": [
+            "379b739bbeef",
+            "be53129578a1",
+            "fddcf47c54fb",
+            "1b84c6a8f0dd",
+            "6c2d06e65d20",
+            "dec1ac481df5"
+          ]
+        },
+        {
+          "text": "Further protests are expected this weekend, particularly on Saturday.",
+          "sources": [
+            "12a5ed238f93",
+            "6c68d463fe36",
+            "b88aed9d067e",
+            "be53129578a1",
+            "1b84c6a8f0dd",
+            "50225aac14f8",
+            "8904726644b6",
+            "6c2d06e65d20",
+            "e1faf8fce63c",
+            "dec1ac481df5"
+          ]
+        },
+        {
+          "text": "Riots and looting took place during the previous weekend of protests.",
+          "sources": [
+            "12a5ed238f93",
+            "6c68d463fe36",
+            "379b739bbeef",
+            "1b84c6a8f0dd",
+            "de0cae133a28",
+            "cb3a47b56b5f"
+          ]
+        },
+        {
+          "text": "Macron blamed ultra-left groups for the riots and looting.",
+          "sources": [
+            "6c68d463fe36",
+            "1b84c6a8f0dd"
+          ]
+        },
+        {
+          "text": "Businesses and shop owners are preparing for more unrest.",
+          "sources": [
+            "12a5ed238f93",
+            "6c68d463fe36",
+            "1b84c6a8f0dd"
+          ]
+        },
+        {
+          "text": "Macron is to meet students or student representatives on Friday.",
+          "sources": [
+            "fddcf47c54fb",
+            "0265a65870f6"
+          ]
+        },
+        {
+          "text": "Curfews have been imposed or extended in several cities.",
+          "sources": [
+            "50225aac14f8",
+            "dec1ac481df5"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "379b739bbeef",
+              "quote": "the French Authorities Ban Some Protests",
+              "field": "headline"
+            },
+            {
+              "article_id": "379b739bbeef",
+              "quote": "so that calm prevails.",
+              "field": "snippet"
+            },
+            {
+              "article_id": "be53129578a1",
+              "quote": "authorities will be ‘uncompromising’ with ‘vandals’",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with official justifications for the bans, from Macron and from interior minister Laurent Nuñez, who defended blanket bans.",
+              "sources": [
+                "379b739bbeef",
+                "be53129578a1"
+              ]
+            },
+            {
+              "text": "Mentions a statement by prime minister Sébastien Lecornu on a shooting in a town west of Paris.",
+              "sources": [
+                "be53129578a1"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "1b84c6a8f0dd",
+              "quote": "French shop owners brace for more unrest",
+              "field": "headline"
+            },
+            {
+              "article_id": "1b84c6a8f0dd",
+              "quote": "blamed \"seditious\" ultra-left groups",
+              "field": "snippet"
+            },
+            {
+              "article_id": "de0cae133a28",
+              "quote": "call for videos of looting to identify rioters",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Reports Macron describing protests as \"illegitimate\" and blaming ultra-left groups and vandals.",
+              "sources": [
+                "1b84c6a8f0dd"
+              ]
+            },
+            {
+              "text": "Describes the authorities' appeal for footage of looting as unprecedented.",
+              "sources": [
+                "de0cae133a28"
+              ]
+            },
+            {
+              "text": "Features mayors of Paris and Marseille analysing the political crisis and curfews, and a teachers' union guest.",
+              "sources": [
+                "50225aac14f8",
+                "fddcf47c54fb"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "right",
+          "headline_quotes": [
+            {
+              "article_id": "12a5ed238f93",
+              "quote": "‘it’s lost for France,’ business owner warns",
+              "field": "headline"
+            },
+            {
+              "article_id": "6c68d463fe36",
+              "quote": "'ultra-left groups whose aim is to bring down the Republic'",
+              "field": "headline"
+            },
+            {
+              "article_id": "b88aed9d067e",
+              "quote": "Foreign Office warns UK tourists",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Foregrounds business owners' losses from looting and concerns over insecurity.",
+              "sources": [
+                "12a5ed238f93",
+                "6c68d463fe36"
+              ]
+            },
+            {
+              "text": "Leads with Macron's blame on ultra-left groups.",
+              "sources": [
+                "6c68d463fe36"
+              ]
+            },
+            {
+              "text": "Reports a UK travel warning, a British woman injured in Toulouse and a planned Paris march from Place de la Bastille.",
+              "sources": [
+                "b88aed9d067e"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "right",
+          "text": "Right-leaning coverage does not mention the protest bans themselves.",
+          "sources": [
+            "379b739bbeef",
+            "be53129578a1",
+            "fddcf47c54fb",
+            "1b84c6a8f0dd"
+          ]
+        },
+        {
+          "lean": "right",
+          "text": "Right-leaning coverage does not mention Macron's planned meeting with students.",
+          "sources": [
+            "fddcf47c54fb"
+          ]
+        },
+        {
+          "lean": "left",
+          "text": "Left-leaning coverage does not mention Macron blaming ultra-left groups for the unrest.",
+          "sources": [
+            "6c68d463fe36",
+            "1b84c6a8f0dd"
+          ]
+        },
+        {
+          "lean": "left",
+          "text": "Left-leaning coverage does not mention the impact on businesses and shop owners.",
+          "sources": [
+            "12a5ed238f93",
+            "6c68d463fe36",
+            "1b84c6a8f0dd"
+          ]
+        }
+      ],
+      "contested_claims": [],
+      "opinion": [
+        {
+          "text": "The mayors of Paris and Marseille give their analysis of the political crisis and the government's use of curfews.",
+          "sources": [
+            "50225aac14f8"
+          ]
+        }
+      ],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "6c68d463fe36",
+              "quote": "Macron blames protests on 'ultra-left groups",
+              "field": "headline"
+            },
+            {
+              "article_id": "379b739bbeef",
+              "quote": "In the Wake of Riots",
+              "field": "headline"
+            },
+            {
+              "article_id": "1b84c6a8f0dd",
+              "quote": "French shop owners brace for more unrest",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Foregrounds Macron's blame on ultra-left groups and official justifications for the bans.",
+              "sources": [
+                "6c68d463fe36",
+                "1b84c6a8f0dd",
+                "379b739bbeef",
+                "be53129578a1"
+              ]
+            },
+            {
+              "text": "Highlights the effect of looting on businesses.",
+              "sources": [
+                "12a5ed238f93",
+                "6c68d463fe36",
+                "1b84c6a8f0dd"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "8904726644b6",
+              "quote": "Macron calls for halt to demonstrations in coming days",
+              "field": "headline"
+            },
+            {
+              "article_id": "cb3a47b56b5f",
+              "quote": "court lifts protest ban despite fears of new violence",
+              "field": "headline"
+            },
+            {
+              "article_id": "e1faf8fce63c",
+              "quote": "police face scrutiny over weapons and tactics",
+              "field": "headline"
+            },
+            {
+              "article_id": "dec1ac481df5",
+              "quote": "France tightens security in anticipation of weekend protests",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Details security measures, including a ban on all protests in Lyon, 20 percent more police, gathering bans and extended curfews.",
+              "sources": [
+                "6c2d06e65d20",
+                "dec1ac481df5"
+              ]
+            },
+            {
+              "text": "Reports a court lifting a Paris protest ban and thousands gathering.",
+              "sources": [
+                "cb3a47b56b5f"
+              ]
+            },
+            {
+              "text": "Notes scrutiny of police riot-control tactics.",
+              "sources": [
+                "e1faf8fce63c"
+              ]
+            },
+            {
+              "text": "Reports the government recommending no demonstrations, and Macron meeting student representatives.",
+              "sources": [
+                "8904726644b6",
+                "0265a65870f6"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "French authorities have banned or sought to curb protests ahead of further weekend demonstrations, after riots and looting the previous weekend. President Macron blamed ultra-left groups for the unrest, while curfews were imposed in several cities and more police were to be deployed.",
+        "sources": [
+          "379b739bbeef",
+          "6c2d06e65d20",
+          "dec1ac481df5",
+          "6c68d463fe36",
+          "1b84c6a8f0dd",
+          "50225aac14f8",
+          "be53129578a1"
+        ]
+      },
+      "conclusion": {
+        "text": "All sides report French bans or curbs on protests ahead of further weekend demonstrations after riots and looting. Right-leaning outlets lead with business losses and Macron's blame on the ultra-left, left-leaning ones with official justifications, and East-bloc outlets with security measures, a court lifting a Paris ban and police scrutiny. No direct contradictions appear.",
+        "sources": [
+          "379b739bbeef",
+          "be53129578a1",
+          "12a5ed238f93",
+          "6c68d463fe36",
+          "1b84c6a8f0dd",
+          "6c2d06e65d20",
+          "dec1ac481df5",
+          "cb3a47b56b5f",
+          "e1faf8fce63c"
+        ]
+      },
+      "validation": {
+        "kept": 44,
+        "dropped_by_reason": {}
+      }
+    },
+    {
+      "id": "1388005b16ff",
+      "title": "Critical PHP vulnerabilities found by AI force websites offline worldwide",
+      "rank": 3,
+      "outlet_count": 8,
+      "coverage": {
+        "lean": {
+          "left": 3,
+          "centre": 3,
+          "right": 1
+        },
+        "bloc": {
+          "west": 7,
+          "east": 1
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "d4cc20faa8cc",
+          "outlet_id": "cgtn",
+          "headline": "PHP flaws prompt shutdowns of government websites across Europe",
+          "snippet": "Government websites throughout Europe became unavailable on Wednesday as operators raced to patch two critical vulnerabilities in PHP, a scripting language widely used in website development.",
+          "url": "https://news.cgtn.com/news/2026-10-22/PHP-flaws-prompt-shutdowns-of-government-websites-across-Europe-1RrOh0exeMg/p.html",
+          "published_at": "2026-10-22T07:58:39Z",
+          "published_at_estimated": false,
+          "image_url": "https://news.cgtn.com/news/2026-10-22/PHP-flaws-prompt-shutdowns-of-government-websites-across-Europe-1RrOh0exeMg/img/efa38e5ad2e64ae9ae1ea549c3f90af8/efa38e5ad2e64ae9ae1ea549c3f90af8-750.jpeg"
+        },
+        {
+          "id": "4c7685ba3cb0",
+          "outlet_id": "mirror",
+          "headline": "Government takes 32 services offline as 'millions of sites impacted by PHP vulnerabilities'",
+          "snippet": "Severe vulnerabilities in the PHP: Hypertext Preprocessor identified with the help of AI this week have led cybersecurity experts to issue warnings about potentially millions of affected sites",
+          "url": "https://www.mirror.co.uk/news/world-news/cyber-security-php-ai-vulnerable-37798908",
+          "published_at": "2026-10-22T10:28:51Z",
+          "published_at_estimated": false,
+          "image_url": "https://i2-prod.mirror.co.uk/incoming/article37798990.ece/ALTERNATES/s615/0_Cyber-Security-Flaws-Identified-In-PHP-Programming-Language.jpg"
+        },
+        {
+          "id": "0544ef894b18",
+          "outlet_id": "bbc",
+          "headline": "AI discovered a massive cyber-security flaw - here's what happened",
+          "snippet": "The BBC's technology correspondent Joe Tidy explains how it happened, and what it means for you.",
+          "url": "https://www.bbc.co.uk/news/videos/cq0ld7e0jg2eo",
+          "published_at": "2026-10-22T12:17:44Z",
+          "published_at_estimated": false,
+          "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/1179/live/36410730-ce21-11f1-bc2e-018d645d8d21.png"
+        },
+        {
+          "id": "479d0d29bbaf",
+          "outlet_id": "nyt",
+          "headline": "PHP Security Flaw Sets Off Global Rush to Patch, Leaving Websites Offline",
+          "snippet": "Governments and businesses around the world scrambled to prevent hackers from exploiting a vulnerability in PHP, a popular programming language.",
+          "url": "https://www.nytimes.com/2026/10/22/world/php-vulnerability-websites-cybersecurity-ai.html",
+          "published_at": "2026-10-22T16:01:36Z",
+          "published_at_estimated": false,
+          "image_url": "https://static01.nyt.com/images/2026/10/22/multimedia/22int-website-flaws-qvzg/22int-website-flaws-qvzg-mediumSquareAt3X.jpg"
+        },
+        {
+          "id": "13248093995b",
+          "outlet_id": "bbc",
+          "headline": "Race to update services' computer systems after cyber-security flaw found",
+          "snippet": "Websites were taken offline after the developers of programming language PHP said \"critical vulnerabilities\" had been discovered.",
+          "url": "https://www.bbc.co.uk/news/articles/c9j34zgmkxx1o",
+          "published_at": "2026-10-22T17:12:51Z",
+          "published_at_estimated": false,
+          "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/20cc/live/75f1ced0-ce46-11f1-9b4c-4dd353c15d43.jpg"
+        },
+        {
+          "id": "eb0e74017d20",
+          "outlet_id": "axios",
+          "headline": "Black October: why bugs discovered by OpenAI tech are creating a cyber emergency",
+          "snippet": "The websites you use every day may have been vulnerable to hackers for years because of hidden flaws in their code that AI only recently discovered. Why it matters: The code, called PHP, powers…",
+          "url": "https://www.axios.com/2026/10/22/php-vulnerability-security-update-websites",
+          "published_at": "2026-10-22T18:01:31Z",
+          "published_at_estimated": false,
+          "image_url": "https://images.axios.com/L9qNFadhoEUyAt8R7r_nbmzDe_U=/0x118:6000x3493/1366x768/2026/10/22/1792686280545.jpeg"
+        },
+        {
+          "id": "249fd29dab8a",
+          "outlet_id": "nyt",
+          "headline": "What Is PHP? Why Are Government and Business Websites Going Offline?",
+          "snippet": "A critical security flaw in the programming language underpinning much of the web has prompted a global rush to patch vulnerable systems.",
+          "url": "https://www.nytimes.com/2026/10/22/technology/what-is-php-vulnerability-risks.html",
+          "published_at": "2026-10-22T21:31:29Z",
+          "published_at_estimated": false,
+          "image_url": "https://static01.nyt.com/images/2026/10/22/multimedia/22xp-PHP-fjtz/22xp-PHP-fjtz-mediumSquareAt3X.jpg"
+        },
+        {
+          "id": "d454d6043242",
+          "outlet_id": "npr",
+          "headline": "Hacking attempts rise after flaws found in program affecting 70 percent of websites",
+          "snippet": "Governments around the world are rushing to implement safety measures after AI technology found 'severe' vulnerabilities in a key programming language called PHP.",
+          "url": "https://www.npr.org/2026/10/23/g-s1-149503/hacking-php-flaws",
+          "published_at": "2026-10-23T09:37:38Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "ce1b743acc8e",
+          "outlet_id": "dailymail",
+          "headline": "More than 30 government services are offline as PHP weakness sparks global cybersecurity alert",
+          "snippet": "Organisations around the world have been scrambling to fix a critical security flaw in the programming language PHP which is used by the majority of websites.",
+          "url": "https://www.dailymail.com/news/article-16229859/More-30-government-services-offline-PHP-weakness-sparks-global-cybersecurity-alert.html",
+          "published_at": "2026-10-23T10:25:21Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.dailymail.com/1s/2026/10/22/12/112022779-0-image-a-91_1792669029894.jpg"
+        },
+        {
+          "id": "978cee3dc32d",
+          "outlet_id": "independent",
+          "headline": "Things will get ‘a lot worse before they get better’, experts warn amid AI security panic",
+          "snippet": "Crisis over PHP programming language may not be over for some time – and is just a hint of what’s to come, say cyber security professionals",
+          "url": "https://www.independent.co.uk/tech/security/ai-cyber-security-artificial-intelligence-php-b3072157.html",
+          "published_at": "2026-10-23T11:13:44Z",
+          "published_at_estimated": false,
+          "image_url": "https://static.independent.co.uk/2026/10/23/11/2026-10-22T114847Z_1103088706_RC2B8OA53J6G_RTRMADP_3_CYBERSECURITY-PHP.JPG?width=1200&auto=webp&trim=0%2C0%2C0%2C0"
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "Critical or severe security vulnerabilities were found in the PHP programming language.",
+          "sources": [
+            "d4cc20faa8cc",
+            "4c7685ba3cb0",
+            "479d0d29bbaf",
+            "13248093995b",
+            "eb0e74017d20",
+            "249fd29dab8a",
+            "d454d6043242",
+            "ce1b743acc8e",
+            "978cee3dc32d"
+          ]
+        },
+        {
+          "text": "Websites were taken offline or became unavailable as a result.",
+          "sources": [
+            "d4cc20faa8cc",
+            "4c7685ba3cb0",
+            "479d0d29bbaf",
+            "13248093995b",
+            "249fd29dab8a",
+            "ce1b743acc8e"
+          ]
+        },
+        {
+          "text": "The flaws were discovered with the help of AI technology.",
+          "sources": [
+            "4c7685ba3cb0",
+            "0544ef894b18",
+            "eb0e74017d20",
+            "d454d6043242"
+          ]
+        },
+        {
+          "text": "Governments and organisations scrambled to patch or update their systems.",
+          "sources": [
+            "d4cc20faa8cc",
+            "479d0d29bbaf",
+            "13248093995b",
+            "249fd29dab8a",
+            "d454d6043242",
+            "ce1b743acc8e"
+          ]
+        },
+        {
+          "text": "PHP is widely used across the web, described variously as popular, used by most websites or affecting 70 percent of them.",
+          "sources": [
+            "d4cc20faa8cc",
+            "479d0d29bbaf",
+            "249fd29dab8a",
+            "d454d6043242",
+            "ce1b743acc8e",
+            "eb0e74017d20"
+          ]
+        },
+        {
+          "text": "Around 30 or more government services were taken offline.",
+          "sources": [
+            "4c7685ba3cb0",
+            "ce1b743acc8e"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "4c7685ba3cb0",
+              "quote": "millions of sites impacted by PHP vulnerabilities",
+              "field": "headline"
+            },
+            {
+              "article_id": "479d0d29bbaf",
+              "quote": "Sets Off Global Rush to Patch, Leaving Websites Offline",
+              "field": "headline"
+            },
+            {
+              "article_id": "978cee3dc32d",
+              "quote": "a lot worse before they get better",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the scale of the impact, citing potentially millions of affected sites and a global rush to patch.",
+              "sources": [
+                "4c7685ba3cb0",
+                "479d0d29bbaf",
+                "249fd29dab8a"
+              ]
+            },
+            {
+              "text": "Foregrounds expert warnings that the crisis may continue and is a hint of what is to come.",
+              "sources": [
+                "978cee3dc32d",
+                "4c7685ba3cb0"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "0544ef894b18",
+              "quote": "AI discovered a massive cyber-security flaw",
+              "field": "headline"
+            },
+            {
+              "article_id": "eb0e74017d20",
+              "quote": "Black October",
+              "field": "headline"
+            },
+            {
+              "article_id": "d454d6043242",
+              "quote": "Hacking attempts rise after flaws found in program affecting 70 percent of websites",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Emphasises AI's role in discovering the flaws, with Axios naming OpenAI technology.",
+              "sources": [
+                "0544ef894b18",
+                "eb0e74017d20",
+                "d454d6043242"
+              ]
+            },
+            {
+              "text": "Reports a rise in hacking attempts and that sites may have been vulnerable for years.",
+              "sources": [
+                "d454d6043242",
+                "eb0e74017d20"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "right",
+          "headline_quotes": [
+            {
+              "article_id": "ce1b743acc8e",
+              "quote": "More than 30 government services are offline",
+              "field": "headline"
+            },
+            {
+              "article_id": "ce1b743acc8e",
+              "quote": "sparks global cybersecurity alert",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the number of government services offline and a global cybersecurity alert.",
+              "sources": [
+                "ce1b743acc8e"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "right",
+          "text": "The right-leaning coverage does not mention that the flaws were discovered with the help of AI.",
+          "sources": [
+            "4c7685ba3cb0",
+            "0544ef894b18",
+            "eb0e74017d20",
+            "d454d6043242"
+          ]
+        },
+        {
+          "lean": "left",
+          "text": "The left-leaning coverage does not mention a rise in hacking attempts following the discovery.",
+          "sources": [
+            "d454d6043242"
+          ]
+        },
+        {
+          "lean": "centre",
+          "text": "The centre coverage does not mention the number of government services taken offline.",
+          "sources": [
+            "4c7685ba3cb0",
+            "ce1b743acc8e"
+          ]
+        }
+      ],
+      "contested_claims": [],
+      "opinion": [
+        {
+          "text": "The BBC's technology correspondent Joe Tidy offers an explainer on how the flaw was found and what it means for users.",
+          "sources": [
+            "0544ef894b18"
+          ]
+        }
+      ],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "479d0d29bbaf",
+              "quote": "Global Rush to Patch",
+              "field": "headline"
+            },
+            {
+              "article_id": "eb0e74017d20",
+              "quote": "creating a cyber emergency",
+              "field": "headline"
+            },
+            {
+              "article_id": "978cee3dc32d",
+              "quote": "AI security panic",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Describes a worldwide effort by governments and businesses and highlights AI's role in finding the flaws.",
+              "sources": [
+                "479d0d29bbaf",
+                "d454d6043242",
+                "ce1b743acc8e",
+                "eb0e74017d20",
+                "4c7685ba3cb0"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "d4cc20faa8cc",
+              "quote": "PHP flaws prompt shutdowns of government websites across Europe",
+              "field": "headline"
+            },
+            {
+              "article_id": "d4cc20faa8cc",
+              "quote": "two critical vulnerabilities",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Focuses on government websites in Europe becoming unavailable while operators patched two vulnerabilities, without mentioning AI.",
+              "sources": [
+                "d4cc20faa8cc"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "Critical vulnerabilities in PHP, a programming language widely used to build websites, were identified with the help of AI. Governments and businesses around the world rushed to patch systems, and websites were taken offline, including more than 30 government services.",
+        "sources": [
+          "4c7685ba3cb0",
+          "0544ef894b18",
+          "eb0e74017d20",
+          "d454d6043242",
+          "479d0d29bbaf",
+          "249fd29dab8a",
+          "13248093995b",
+          "ce1b743acc8e",
+          "d4cc20faa8cc"
+        ]
+      },
+      "conclusion": {
+        "text": "All sides agree critical PHP vulnerabilities forced websites offline and prompted a rush to patch. Left-leaning outlets stress scale and expert warnings, centre outlets AI's role and rising hacking attempts, the right-leaning outlet the government services offline, and CGTN Europe's government sites.",
+        "sources": [
+          "d4cc20faa8cc",
+          "4c7685ba3cb0",
+          "479d0d29bbaf",
+          "978cee3dc32d",
+          "0544ef894b18",
+          "eb0e74017d20",
+          "d454d6043242",
+          "ce1b743acc8e",
+          "13248093995b",
+          "249fd29dab8a"
+        ]
+      },
+      "validation": {
+        "kept": 32,
+        "dropped_by_reason": {}
+      }
+    },
+    {
+      "id": "c48d13e4b031",
+      "title": "Shooting in Paris suburb Trappes kills one, investigated as terrorism",
+      "rank": 4,
+      "outlet_count": 8,
+      "coverage": {
+        "lean": {
+          "left": 2,
+          "centre": 3,
+          "right": 2
+        },
+        "bloc": {
+          "west": 7,
+          "east": 1
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "dca0a2f81c49",
+          "outlet_id": "sky",
+          "headline": "Terror probe after one killed and several wounded in shooting in Paris suburb",
+          "snippet": "A terror investigation is under way after one person was killed and four others injured in a drive-by shooting in a Paris suburb.",
+          "url": "https://news.sky.com/story/one-dead-and-several-wounded-after-shooting-in-paris-suburb-13602320",
+          "published_at": "2026-10-22T23:01:00Z",
+          "published_at_estimated": false,
+          "image_url": "https://e3.365dm.com/26/10/1920x1080/skynews-trappes-la-verriere_7384533.jpg?20261023121403"
+        },
+        {
+          "id": "25f2b7675516",
+          "outlet_id": "thesun",
+          "headline": "Terror probe after gunman ‘intent on carrying out massacre’ kills one as girl, 12, among 4 injured in France",
+          "snippet": "A TERROR probe has been launched after a gunman \"intent on carrying out a massacre\" killed one and seriously injured four others, including a 12-year-old girl. A suspect has been arrested after…",
+          "url": "https://www.thesun.co.uk/news/40781580/gunman-opens-fire-french-town-arrested/",
+          "published_at": "2026-10-23T09:55:05Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.thesun.co.uk/wp-content%2Fuploads%2F2026%2F10%2Fnewspress-collage-vvyw6cohi-1792753571669.jpg?quality%3D90%26"
+        },
+        {
+          "id": "e4cb51ca5274",
+          "outlet_id": "mirror",
+          "headline": "Paris shooting: 1 dead and more injured including girl, 12, as shots fired from car",
+          "snippet": "A suspect has been arrested near the town of Trappes after gunshots were fired from a vehicle in a Paris suburb, killing one person and leaving several others injured",
+          "url": "https://www.mirror.co.uk/news/world-news/paris-shooting-trappes-police-dead-37803230",
+          "published_at": "2026-10-23T10:24:53Z",
+          "published_at_estimated": false,
+          "image_url": "https://i2-prod.dailystar.co.uk/incoming/article36720563.ece/ALTERNATES/s615/3_FRANCE-SCHOOL-ATTACK-EDUCATION.jpg"
+        },
+        {
+          "id": "989f16078a6b",
+          "outlet_id": "independent",
+          "headline": "One dead and four injured in Paris drive-by shooting",
+          "snippet": "Gunshots were fired from a vehicle in a Parisian suburb",
+          "url": "https://www.independent.co.uk/news/world/europe/shooting-paris-coignieres-yvelines-latest-b3072083.html",
+          "published_at": "2026-10-23T10:59:24Z",
+          "published_at_estimated": false,
+          "image_url": "https://static.independent.co.uk/2026/10/23/11/2301063053..?width=1200&auto=webp&trim=0%2C0%2C0%2C0"
+        },
+        {
+          "id": "bfd0436d0139",
+          "outlet_id": "thenational",
+          "headline": "Terror investigation launched after drive-by shooting near Paris",
+          "snippet": "One person was killed and ⁠at least four others were injured in a shooting west of Paris, ​French Prime ⁠Minister Sebastien ‌Lecornu said on Friday. A suspect has been arrested. Firefighters were…",
+          "url": "https://www.thenationalnews.com/news/europe/2026/10/23/terror-investigation-launched-after-drive-by-shooting-near-paris/",
+          "published_at": "2026-10-23T10:59:46Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.thenationalnews.com/resizer/v2/4SUNRPD5VKEM434653IYBQVO4A.jpg?auth=6a94130eaf91baf68a69b77470a8264a5f6b4fe78d2d2228203a3d7b402e2ccf&smart=true&width=8640&height=5760"
+        },
+        {
+          "id": "d7f2a3fb04ee",
+          "outlet_id": "independent",
+          "headline": "Paris shooting leaves one dead and four injured after ‘gunman opens fire at random’",
+          "snippet": "",
+          "url": "https://www.independent.co.uk/bulletin/news/paris-shooting-yvelines-drive-by-b3072148.html",
+          "published_at": "2026-10-23T11:03:29Z",
+          "published_at_estimated": false,
+          "image_url": "https://static.independent.co.uk/2026/10/23/12/2301063044..?width=1200&auto=webp&trim=1104%2C828%2C0%2C828"
+        },
+        {
+          "id": "aa22e89a18a7",
+          "outlet_id": "france24",
+          "headline": "French prosecutors investigate Paris shooting as suspected terror attack",
+          "snippet": "French prosecutors on Friday said that they were investigating a shooting in Trappes, west of Paris, as a suspected terrorist attack. At least one person was killed, and four more were wounded…",
+          "url": "https://www.france24.com/en/france/20261023-french-prosecutors-investigate-paris-shooting-as-suspected-terror-attack",
+          "published_at": "2026-10-23T11:08:26Z",
+          "published_at_estimated": false,
+          "image_url": "https://s.france24.com/media/display/734d60f4-a19b-11f1-ba2b-005056bfb2b6/w:1024/p:16x9/000-34RN2HF.jpg"
+        },
+        {
+          "id": "8056fa31feb5",
+          "outlet_id": "bbc",
+          "headline": "At least one dead and four injured in Paris suburb shooting",
+          "snippet": "The French prime minister says an individual is in police custody after a \"serious event\" in Trappes.",
+          "url": "https://www.bbc.co.uk/news/articles/c6ev38dj1g8zo",
+          "published_at": "2026-10-23T11:09:36Z",
+          "published_at_estimated": false,
+          "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/1a2d/live/537ff930-6139-11ee-b101-6f93d6dfbcc2.png"
+        },
+        {
+          "id": "f41b69d5c6ab",
+          "outlet_id": "dailymail",
+          "headline": "Gunman 'intent on causing as many casualties as possible' shoots five people in France, killing one - with girl, 12, among wounded",
+          "snippet": "A gunman has shot five people with a machinegun, killing one and wounding a 12-year-old girl in a Paris suburb. (Preview image shows police in Trappes, France, in 2018)",
+          "url": "https://www.dailymail.com/news/article-16232763/Gunman-shooting-France.html",
+          "published_at": "2026-10-23T11:13:50Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.dailymail.com/1s/2026/10/23/11/112045563-0-image-a-159_1792753062277.jpg"
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "One person was killed in the shooting.",
+          "sources": [
+            "dca0a2f81c49",
+            "25f2b7675516",
+            "e4cb51ca5274",
+            "989f16078a6b",
+            "bfd0436d0139",
+            "d7f2a3fb04ee",
+            "aa22e89a18a7",
+            "8056fa31feb5",
+            "f41b69d5c6ab"
+          ]
+        },
+        {
+          "text": "Four other people were injured.",
+          "sources": [
+            "dca0a2f81c49",
+            "25f2b7675516",
+            "989f16078a6b",
+            "bfd0436d0139",
+            "d7f2a3fb04ee",
+            "aa22e89a18a7",
+            "8056fa31feb5"
+          ]
+        },
+        {
+          "text": "A terror investigation has been opened into the shooting.",
+          "sources": [
+            "dca0a2f81c49",
+            "25f2b7675516",
+            "bfd0436d0139",
+            "aa22e89a18a7"
+          ]
+        },
+        {
+          "text": "The shots were fired from a vehicle, described as a drive-by shooting.",
+          "sources": [
+            "dca0a2f81c49",
+            "e4cb51ca5274",
+            "989f16078a6b",
+            "bfd0436d0139"
+          ]
+        },
+        {
+          "text": "A suspect has been arrested or is in police custody.",
+          "sources": [
+            "25f2b7675516",
+            "e4cb51ca5274",
+            "bfd0436d0139",
+            "8056fa31feb5"
+          ]
+        },
+        {
+          "text": "A 12-year-old girl is among the injured.",
+          "sources": [
+            "25f2b7675516",
+            "e4cb51ca5274",
+            "f41b69d5c6ab"
+          ]
+        },
+        {
+          "text": "The shooting took place in or near Trappes, west of Paris.",
+          "sources": [
+            "e4cb51ca5274",
+            "aa22e89a18a7",
+            "8056fa31feb5",
+            "f41b69d5c6ab",
+            "bfd0436d0139"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "e4cb51ca5274",
+              "quote": "shots fired from car",
+              "field": "headline"
+            },
+            {
+              "article_id": "d7f2a3fb04ee",
+              "quote": "gunman opens fire at random",
+              "field": "headline"
+            },
+            {
+              "article_id": "989f16078a6b",
+              "quote": "One dead and four injured in Paris drive-by shooting",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the casualty count and the shots being fired from a vehicle.",
+              "sources": [
+                "e4cb51ca5274",
+                "989f16078a6b"
+              ]
+            },
+            {
+              "text": "Describes the gunman as opening fire at random, in quotation marks.",
+              "sources": [
+                "d7f2a3fb04ee"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "dca0a2f81c49",
+              "quote": "Terror probe after one killed",
+              "field": "headline"
+            },
+            {
+              "article_id": "aa22e89a18a7",
+              "quote": "suspected terror attack",
+              "field": "headline"
+            },
+            {
+              "article_id": "8056fa31feb5",
+              "quote": "\"serious event\" in Trappes",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the terror investigation, attributed to French prosecutors.",
+              "sources": [
+                "dca0a2f81c49",
+                "aa22e89a18a7"
+              ]
+            },
+            {
+              "text": "Cites the French prime minister saying an individual is in police custody.",
+              "sources": [
+                "8056fa31feb5"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "right",
+          "headline_quotes": [
+            {
+              "article_id": "25f2b7675516",
+              "quote": "intent on carrying out a massacre",
+              "field": "snippet"
+            },
+            {
+              "article_id": "f41b69d5c6ab",
+              "quote": "intent on causing as many casualties as possible",
+              "field": "headline"
+            },
+            {
+              "article_id": "f41b69d5c6ab",
+              "quote": "with a machinegun",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Foregrounds the gunman's reported intent to cause mass casualties.",
+              "sources": [
+                "25f2b7675516",
+                "f41b69d5c6ab"
+              ]
+            },
+            {
+              "text": "Highlights the 12-year-old girl among the wounded.",
+              "sources": [
+                "25f2b7675516",
+                "f41b69d5c6ab"
+              ]
+            },
+            {
+              "text": "States the gunman used a machinegun.",
+              "sources": [
+                "f41b69d5c6ab"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "left",
+          "text": "Left-leaning coverage does not mention the terror investigation.",
+          "sources": [
+            "dca0a2f81c49",
+            "25f2b7675516",
+            "aa22e89a18a7"
+          ]
+        },
+        {
+          "lean": "right",
+          "text": "Right-leaning coverage does not mention that the shots were fired from a vehicle.",
+          "sources": [
+            "dca0a2f81c49",
+            "e4cb51ca5274",
+            "989f16078a6b"
+          ]
+        },
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not mention that a 12-year-old girl was among the injured.",
+          "sources": [
+            "25f2b7675516",
+            "e4cb51ca5274",
+            "f41b69d5c6ab"
+          ]
+        }
+      ],
+      "contested_claims": [],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "dca0a2f81c49",
+              "quote": "Terror probe after one killed",
+              "field": "headline"
+            },
+            {
+              "article_id": "25f2b7675516",
+              "quote": "girl, 12, among 4 injured",
+              "field": "headline"
+            },
+            {
+              "article_id": "e4cb51ca5274",
+              "quote": "shots fired from car",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Covers the terror probe, the injured 12-year-old girl and the gunman's reported intent.",
+              "sources": [
+                "dca0a2f81c49",
+                "aa22e89a18a7",
+                "25f2b7675516",
+                "e4cb51ca5274",
+                "f41b69d5c6ab"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "bfd0436d0139",
+              "quote": "Terror investigation launched after drive-by shooting near Paris",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Attributes the casualty figures to the French prime minister and reports a suspect has been arrested.",
+              "sources": [
+                "bfd0436d0139"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "Shots fired from a vehicle in Trappes, a suburb west of Paris, killed one person and injured four others, including a 12-year-old girl. A suspect has been arrested, and French prosecutors are investigating the shooting as a suspected terrorist attack.",
+        "sources": [
+          "dca0a2f81c49",
+          "e4cb51ca5274",
+          "989f16078a6b",
+          "bfd0436d0139",
+          "aa22e89a18a7",
+          "25f2b7675516",
+          "f41b69d5c6ab",
+          "8056fa31feb5"
+        ]
+      },
+      "conclusion": {
+        "text": "All outlets report one dead and others injured in a shooting near Paris, with no outlet contradicting another. Centre, right and East-bloc coverage lead with the terror investigation, right-leaning outlets with the gunman's reported intent, and left-leaning outlets with shots fired from a vehicle.",
+        "sources": [
+          "dca0a2f81c49",
+          "aa22e89a18a7",
+          "bfd0436d0139",
+          "25f2b7675516",
+          "f41b69d5c6ab",
+          "e4cb51ca5274",
+          "989f16078a6b",
+          "8056fa31feb5",
+          "d7f2a3fb04ee"
+        ]
+      },
+      "validation": {
+        "kept": 34,
+        "dropped_by_reason": {}
+      }
+    },
+    {
+      "id": "d0bce8d2b0a5",
+      "title": "Magnitude 7.0 earthquake in Tibet kills 16",
+      "rank": 5,
+      "outlet_count": 8,
+      "coverage": {
+        "lean": {
+          "left": 3,
+          "centre": 1,
+          "right": 0
+        },
+        "bloc": {
+          "west": 4,
+          "east": 4
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "09a75a0f22ff",
+          "outlet_id": "mirror",
+          "headline": "Powerful magnitude 7 earthquake hits Tibet as people flee swaying buildings",
+          "snippet": "A magnitude 7 earthquake has struck Tibet in China near Nagqu, with strong tremors felt around 400km from Lhasa.",
+          "url": "https://www.mirror.co.uk/news/world-news/china-tibet-earthquake-nagqu-lhasa-37801044",
+          "published_at": "2026-10-22T19:05:28Z",
+          "published_at_estimated": false,
+          "image_url": "https://i2-prod.mirror.co.uk/incoming/article37801547.ece/ALTERNATES/s615/2_Baqing-is-hit-by-an-earthquake.jpg"
+        },
+        {
+          "id": "1a79197ce9db",
+          "outlet_id": "ecns",
+          "headline": "Magnitude-7.0 earthquake jolts China's Xizang: CENC",
+          "snippet": "A magnitude 7.0 earthquake struck Baqen County, Nagqu City, Xizang Autonomous Region, at 22:33 on Thursday, according to China Earthquake Networks Center (CENC). The quake's epicenter was measured…",
+          "url": "https://www.ecns.cn/cns-wire/2026-10-22/detail-ihfmiwhm0740810.shtml",
+          "published_at": "2026-10-22T23:01:12Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "7ce687046764",
+          "outlet_id": "scmp",
+          "headline": "China’s Xi Jinping orders urgent relief after Tibet earthquake leaves 16 dead",
+          "snippet": "All efforts need to be focused on search and rescue for survivors and treating the injured, President Xi Jinping instructed on Friday morning, after a 7.0-magnitude earthquake killed 16 and injured…",
+          "url": "https://www.scmp.com/news/china/politics/article/3371850/chinas-xi-jinping-orders-urgent-relief-after-tibet-earthquake-leaves-16-dead",
+          "published_at": "2026-10-23T02:31:49Z",
+          "published_at_estimated": false,
+          "image_url": "https://cdn.i-scmp.com/sites/default/files/styles/1280x720/public/d8/images/canvas/2026/10/23/47e29c78-9456-4299-aacd-bbde002065c5_932569a1.jpg?itok=E18BBuZs&v=1792722676"
+        },
+        {
+          "id": "9abf668728ec",
+          "outlet_id": "bbc",
+          "headline": "Powerful earthquake hits Tibet killing 16 people, reports say",
+          "snippet": "The quake hit a mountainous, sparsely-populated area in what China calls the Tibet Autonomous Region.",
+          "url": "https://www.bbc.co.uk/news/articles/ck5ynd1z6e83o",
+          "published_at": "2026-10-23T05:16:37Z",
+          "published_at_estimated": false,
+          "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/d9bb/live/35523df0-ce6f-11f1-a64c-550be9e3c66b.jpg"
+        },
+        {
+          "id": "bcf9d509b33c",
+          "outlet_id": "japantimes",
+          "headline": "China orders ‘all-out’ rescue after Tibet quake kills 16",
+          "snippet": "More than 300 houses collapsed in the 7.0 magnitude quake, which struck on Thursday at 10:33 p.m.",
+          "url": "https://www.japantimes.co.jp/news/2026/10/23/asia-pacific/tibet-magnitude-7-quake/",
+          "published_at": "2026-10-23T06:12:00Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.japantimes.co.jp/japantimes/uploads/images/2026/10/23/thumbs/400x400/570117.jpg"
+        },
+        {
+          "id": "2eaf814dd79b",
+          "outlet_id": "mirror",
+          "headline": "Tibet earthquake leaves at last 16 dead as 7.0-mag tremor forces thousands to flee",
+          "snippet": "Chinese president Xi Jinping has called for 'all out' search and rescue efforts after hundreds of buildings in Tibet collapsed",
+          "url": "https://www.mirror.co.uk/news/world-news/tibet-earthquake-nagqu-xi-jinping-37793589",
+          "published_at": "2026-10-23T06:41:14Z",
+          "published_at_estimated": false,
+          "image_url": "https://i2-prod.mirror.co.uk/incoming/article37802192.ece/ALTERNATES/s615/0_Rescue-Efforts-Get-Underway-At-Quake-Hit-Xizang.jpg"
+        },
+        {
+          "id": "5700a9110fbe",
+          "outlet_id": "thehindu",
+          "headline": "Tibet earthquake updates | Injuries in Tibet rise to 65 after 7.0 earthquake, death toll at 16",
+          "snippet": "Search and rescue efforts continued following the collapse of at least 339 homes, the Nagqu media office said, citing city government officials. Among the injured, 11 people were in serious…",
+          "url": "https://www.thehindu.com/news/international/70-magnitude-earthquake-hit-chinas-tibet-region-killing-many/article71613335.ece",
+          "published_at": "2026-10-23T07:02:34Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "20f08b331c90",
+          "outlet_id": "nyt",
+          "headline": "Powerful Earthquake in Tibet Kills at Least 16",
+          "snippet": "Dozens were injured and more than 300 homes were toppled by the 7.0-magnitude quake, which sent residents fleeing into the cold night air, state media said.",
+          "url": "https://www.nytimes.com/2026/10/22/world/asia/earthquake-tibet-china.html",
+          "published_at": "2026-10-23T07:40:46Z",
+          "published_at_estimated": false,
+          "image_url": "https://static01.nyt.com/images/2026/10/23/multimedia/23int-china-tibet-quake-pvlf/23int-china-tibet-quake-pvlf-mediumSquareAt3X.jpg"
+        },
+        {
+          "id": "a3b710f94551",
+          "outlet_id": "thehindu",
+          "headline": "16 killed, 65 injured as magnitude 7 quake hits Tibet; over 12,000 evacuated",
+          "snippet": "More than 330 houses collapsed or were damaged in the quake, and the extent of the damage is being assessed, according to earlier reports",
+          "url": "https://www.thehindu.com/news/international/tibet-earthquake-nagqu-updates-october-22-2026/article71612585.ece",
+          "published_at": "2026-10-23T07:52:38Z",
+          "published_at_estimated": false,
+          "image_url": "https://th-i.thgim.com/public/incoming/v995uq/article71614967.ece/alternates/LANDSCAPE_1200/2026-10-23T041223Z_1189651606_RC2R8OA7WZF7_RTRMADP_3_CHINA-QUAKE.JPG"
+        },
+        {
+          "id": "34303071cc5a",
+          "outlet_id": "guardian",
+          "headline": "Magnitude-7 earthquake hits Tibet, killing at least 16 and destroying hundreds of homes",
+          "snippet": "Search and rescue efforts under way after quake strikes region’s north, with at least seven aftershocks recorded A magnitude-7 earthquake has hit Tibet, killing at least 16 people, injuring 54 and…",
+          "url": "https://www.theguardian.com/world/2026/oct/23/magnitude-7-earthquake-hits-china-tibet",
+          "published_at": "2026-10-23T07:53:58Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.guim.co.uk/img/media/2b752e0d59c4399c02caaf09d97ac8759514aa0f/147_95_1010_808/master/1010.jpg?width=460&quality=85&auto=format&fit=max&s=a2e3038ca17454ee54d7cb3f8b973701"
+        },
+        {
+          "id": "f81259d88da1",
+          "outlet_id": "ecns",
+          "headline": "Earthquake in China's Xizang kills 16, injures 54",
+          "snippet": "A magnitude-7.0 earthquake struck Baqen County in Nagqu City, China's Xizang Autonomous Region, late Thursday, killing 16 people and injuring 54 by Friday morning, local authorities said.",
+          "url": "https://www.ecns.cn/news/society/2026-10-23/detail-ihfmiwhm0741008.shtml",
+          "published_at": "2026-10-23T09:01:16Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "f7ec3a8bf5f8",
+          "outlet_id": "ecns",
+          "headline": "Relief supplies reach quake-hit Baqen County in Xizang",
+          "snippet": "Relief supplies organized by authorities had arrived in quake-hit Baqen County in Nagqu, southwest China's Xizang Autonomous Region, by 4:30 a.m. Friday, following a magnitude-7.0 earthquake late…",
+          "url": "https://www.ecns.cn/cns-wire/2026-10-23/detail-ihfmiwhm0741018.shtml",
+          "published_at": "2026-10-23T09:10:10Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "f58c905980bd",
+          "outlet_id": "ecns",
+          "headline": "China's Red Cross allocates emergency relief supplies to earthquake-hit Xizang",
+          "snippet": "The Red Cross Society of China has urgently allocated 3,800 emergency relief items to earthquake-hit areas in the Xizang Autonomous Region, including family relief kits, hygiene kits, heating…",
+          "url": "https://www.ecns.cn/cns-wire/2026-10-23/detail-ihfmiwhm0741170.shtml",
+          "published_at": "2026-10-23T10:20:16Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "db08184ece49",
+          "outlet_id": "ecns",
+          "headline": "Xi orders all-out rescue efforts after 7.0-magnitude earthquake in Xizang",
+          "snippet": "Chinese President Xi Jinping has ordered all-out search and rescue efforts for the missing and prompt medical treatment for the injured after a 7.0-magnitude earthquake struck a county in southwest…",
+          "url": "https://www.ecns.cn/china/2026-10-23/detail-ihfmiwhm0741246.shtml",
+          "published_at": "2026-10-23T10:56:26Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "fb4997915902",
+          "outlet_id": "ecns",
+          "headline": "Western Theater Command Air Force deploys drone to survey earthquake-hit area in Xizang",
+          "snippet": "A drone operated by the Western Theater Command Air Force of the Chinese People's Liberation Army (PLA) was dispatched to the earthquake-hit area in Nagqu City in southwest China's Xizang Autonomous…",
+          "url": "https://www.ecns.cn/cns-wire/2026-10-23/detail-ihfmiwhm0741631.shtml",
+          "published_at": "2026-10-23T13:34:10Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "a9cc83aa0c09",
+          "outlet_id": "ecns",
+          "headline": "Magnitude 7.0 earthquake in Xizang kills 16; first relief supplies arrive",
+          "snippet": "Relief supplies from central, regional, city and county authorities have begun arriving in the affected area after a magnitude 7.0 earthquake struck Baqen County in Nagqu, southwestern China's…",
+          "url": "https://www.ecns.cn/cns-wire/2026-10-23/detail-ihfmiwhm0741789.shtml",
+          "published_at": "2026-10-23T15:11:42Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "6b756cd3044a",
+          "outlet_id": "ecns",
+          "headline": "501 aftershocks recorded after 7.0-magnitude quake in Xizang",
+          "snippet": "A total of 501 aftershocks had been recorded following a magnitude-7.0 earthquake in Baqen County, Nagqu, southwest China's Xizang Autonomous Region, as of noon Friday.",
+          "url": "https://www.ecns.cn/cns-wire/2026-10-23/detail-ihfmiwhm0741813.shtml",
+          "published_at": "2026-10-23T15:18:02Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "68c536fe206a",
+          "outlet_id": "ecns",
+          "headline": "Baqen earthquake in Xizang leaves 16 dead, 76 injured",
+          "snippet": "A magnitude 7.0 earthquake in Baqen County in Nagqu City, southwestern China's Xizang Autonomous Region, has killed 16 people and injured 76 as of 1 p.m. Friday, the Nagqu city government said at a…",
+          "url": "https://www.ecns.cn/cns-wire/2026-10-23/detail-ihfmiwhm0741823.shtml",
+          "published_at": "2026-10-23T15:29:15Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "da8cf86096da",
+          "outlet_id": "ecns",
+          "headline": "Communications restored to pre-earthquake levels in quake-hit Xizang",
+          "snippet": "All 628 mobile base stations disrupted by a magnitude 7.0 earthquake in southwest China's Xizang Autonomous Region have been restored, returning communications in the affected areas to…",
+          "url": "https://www.ecns.cn/cns-wire/2026-10-23/detail-ihfmiwhm0742017.shtml",
+          "published_at": "2026-10-23T16:48:30Z",
+          "published_at_estimated": false,
+          "image_url": null
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "The earthquake measured magnitude 7.0.",
+          "sources": [
+            "09a75a0f22ff",
+            "1a79197ce9db",
+            "7ce687046764",
+            "bcf9d509b33c",
+            "2eaf814dd79b",
+            "5700a9110fbe",
+            "20f08b331c90",
+            "a3b710f94551",
+            "34303071cc5a",
+            "f81259d88da1",
+            "db08184ece49",
+            "a9cc83aa0c09",
+            "6b756cd3044a",
+            "68c536fe206a",
+            "da8cf86096da"
+          ]
+        },
+        {
+          "text": "At least 16 people were killed.",
+          "sources": [
+            "7ce687046764",
+            "9abf668728ec",
+            "bcf9d509b33c",
+            "2eaf814dd79b",
+            "5700a9110fbe",
+            "20f08b331c90",
+            "a3b710f94551",
+            "34303071cc5a",
+            "f81259d88da1",
+            "a9cc83aa0c09",
+            "68c536fe206a"
+          ]
+        },
+        {
+          "text": "The quake struck in Nagqu, with Chinese outlets naming Baqen County.",
+          "sources": [
+            "09a75a0f22ff",
+            "1a79197ce9db",
+            "f81259d88da1",
+            "f7ec3a8bf5f8",
+            "fb4997915902",
+            "a9cc83aa0c09",
+            "6b756cd3044a",
+            "68c536fe206a"
+          ]
+        },
+        {
+          "text": "It struck late on Thursday, at 22:33 or 10:33 p.m. local time.",
+          "sources": [
+            "1a79197ce9db",
+            "bcf9d509b33c",
+            "f81259d88da1"
+          ]
+        },
+        {
+          "text": "More than 300 homes collapsed, with figures of 330 and 339 given.",
+          "sources": [
+            "bcf9d509b33c",
+            "2eaf814dd79b",
+            "5700a9110fbe",
+            "20f08b331c90",
+            "a3b710f94551",
+            "34303071cc5a"
+          ]
+        },
+        {
+          "text": "President Xi Jinping ordered all-out search and rescue efforts and treatment of the injured.",
+          "sources": [
+            "7ce687046764",
+            "bcf9d509b33c",
+            "2eaf814dd79b",
+            "db08184ece49"
+          ]
+        },
+        {
+          "text": "Residents fled their homes, with over 12,000 evacuated according to one report.",
+          "sources": [
+            "09a75a0f22ff",
+            "2eaf814dd79b",
+            "20f08b331c90",
+            "a3b710f94551"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "09a75a0f22ff",
+              "quote": "people flee swaying buildings",
+              "field": "headline"
+            },
+            {
+              "article_id": "2eaf814dd79b",
+              "quote": "forces thousands to flee",
+              "field": "headline"
+            },
+            {
+              "article_id": "20f08b331c90",
+              "quote": "sent residents fleeing into the cold night air",
+              "field": "snippet"
+            },
+            {
+              "article_id": "34303071cc5a",
+              "quote": "destroying hundreds of homes",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with residents fleeing buildings during and after the quake.",
+              "sources": [
+                "09a75a0f22ff",
+                "2eaf814dd79b",
+                "20f08b331c90"
+              ]
+            },
+            {
+              "text": "Foregrounds the destruction of hundreds of homes and attributes details to state media.",
+              "sources": [
+                "20f08b331c90",
+                "34303071cc5a",
+                "2eaf814dd79b"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "9abf668728ec",
+              "quote": "killing 16 people, reports say",
+              "field": "headline"
+            },
+            {
+              "article_id": "9abf668728ec",
+              "quote": "in what China calls the Tibet Autonomous Region",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Describes the affected area as mountainous and sparsely populated and attributes the region's name to China.",
+              "sources": [
+                "9abf668728ec"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not mention Xi Jinping's call for all-out rescue efforts.",
+          "sources": [
+            "2eaf814dd79b"
+          ]
+        },
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not mention the collapse of hundreds of homes.",
+          "sources": [
+            "20f08b331c90",
+            "34303071cc5a",
+            "2eaf814dd79b"
+          ]
+        }
+      ],
+      "contested_claims": [],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "09a75a0f22ff",
+              "quote": "Powerful magnitude 7 earthquake hits Tibet",
+              "field": "headline"
+            },
+            {
+              "article_id": "9abf668728ec",
+              "quote": "in what China calls the Tibet Autonomous Region",
+              "field": "snippet"
+            },
+            {
+              "article_id": "20f08b331c90",
+              "quote": "sent residents fleeing into the cold night air",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Uses the name Tibet and leads with residents fleeing and homes destroyed.",
+              "sources": [
+                "09a75a0f22ff",
+                "2eaf814dd79b",
+                "20f08b331c90",
+                "34303071cc5a",
+                "9abf668728ec"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "f7ec3a8bf5f8",
+              "quote": "Relief supplies reach quake-hit Baqen County in Xizang",
+              "field": "headline"
+            },
+            {
+              "article_id": "db08184ece49",
+              "quote": "Xi orders all-out rescue efforts",
+              "field": "headline"
+            },
+            {
+              "article_id": "da8cf86096da",
+              "quote": "Communications restored to pre-earthquake levels in quake-hit Xizang",
+              "field": "headline"
+            },
+            {
+              "article_id": "a3b710f94551",
+              "quote": "over 12,000 evacuated",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "ECNS uses the name Xizang and foregrounds the official response: relief supplies, Red Cross aid and a PLA survey drone.",
+              "sources": [
+                "f7ec3a8bf5f8",
+                "f58c905980bd",
+                "fb4997915902",
+                "a9cc83aa0c09"
+              ]
+            },
+            {
+              "text": "Reports restoration of all 628 disrupted mobile base stations and 501 aftershocks as of noon Friday.",
+              "sources": [
+                "da8cf86096da",
+                "6b756cd3044a"
+              ]
+            },
+            {
+              "text": "Leads with Xi Jinping's order for all-out rescue efforts.",
+              "sources": [
+                "7ce687046764",
+                "bcf9d509b33c",
+                "db08184ece49"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "A magnitude 7.0 earthquake struck Nagqu in Tibet, which Chinese state media call Xizang, late on Thursday, killing 16 people and injuring dozens. Hundreds of homes collapsed, and President Xi Jinping ordered all-out search and rescue efforts.",
+        "sources": [
+          "09a75a0f22ff",
+          "1a79197ce9db",
+          "7ce687046764",
+          "9abf668728ec",
+          "bcf9d509b33c",
+          "2eaf814dd79b",
+          "5700a9110fbe",
+          "20f08b331c90",
+          "a3b710f94551",
+          "34303071cc5a",
+          "f81259d88da1",
+          "db08184ece49",
+          "68c536fe206a"
+        ]
+      },
+      "conclusion": {
+        "text": "All sides report a magnitude 7.0 quake killing 16 and collapsing hundreds of homes. Western outlets lead with residents fleeing, while ECNS uses the name Xizang and foregrounds relief, a PLA drone and restored communications. Injury figures differ between 54, 65 and 76 across reporting times.",
+        "sources": [
+          "20f08b331c90",
+          "34303071cc5a",
+          "09a75a0f22ff",
+          "f7ec3a8bf5f8",
+          "fb4997915902",
+          "da8cf86096da",
+          "f81259d88da1",
+          "5700a9110fbe",
+          "68c536fe206a"
+        ]
+      },
+      "validation": {
+        "kept": 31,
+        "dropped_by_reason": {
+          "contested_same_outlet": 1
+        }
+      }
+    },
+    {
+      "id": "ed2ab341008f",
+      "title": "Meghan responds to child abuse image allegations against her father",
+      "rank": 6,
+      "outlet_count": 6,
+      "coverage": {
+        "lean": {
+          "left": 3,
+          "centre": 1,
+          "right": 2
+        },
+        "bloc": {
+          "west": 6,
+          "east": 0
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": "west"
+      },
+      "articles": [
+        {
+          "id": "c78674dcc627",
+          "outlet_id": "sky",
+          "headline": "Meghan 'deeply distressed' by reports of allegations against her father",
+          "snippet": "The Duchess of Sussex has said she is \"deeply distressed\" by reports of allegations against her father Thomas Markle.",
+          "url": "https://news.sky.com/story/meghan-deeply-distressed-by-allegations-against-her-father-thomas-markle-13602319",
+          "published_at": "2026-10-22T23:01:00Z",
+          "published_at_estimated": false,
+          "image_url": "https://e3.365dm.com/26/10/1920x1080/skynews-duchess-of-sussex-meghan_7384470.jpg?20261023110214"
+        },
+        {
+          "id": "9b3a7ef7ca41",
+          "outlet_id": "thesun",
+          "headline": "Meghan ‘deeply distressed’ by child sex allegations against her father and reveals claims were passed to Met in 2018",
+          "snippet": "MEGHAN Markle says she is \"deeply distressed\" over \"sickening\" child sex image allegations about her father revealed by The Sun. The Duchess of Sussex, 45, also revealed claims against Thomas Markle…",
+          "url": "https://www.thesun.co.uk/news/40783001/meghan-distressed-by-father-sex-allegations/",
+          "published_at": "2026-10-23T09:17:58Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.thesun.co.uk/wp-content%2Fuploads%2F2026%2F10%2Fnewspress-collage-tqbk5r4iz-1792746985444.jpg?quality%3D90%26"
+        },
+        {
+          "id": "5ed4bb2ce4a8",
+          "outlet_id": "dailymail",
+          "headline": "Meghan Markle's father Thomas 'is being probed over huge stash of child abuse photos found at Philippines home': Thomas Sr is reported to police by his own son - but daughter Samantha says it's 'all lies'",
+          "snippet": "Thomas Markle Sr is being investigated over a hoard of child abuse images that are said to have been found at his Philippines home.",
+          "url": "https://www.dailymail.com/news/article-16231535/Meghan-Markles-father-Thomas-probed-child-abuse-photos-daughter-Samantha-lies.html",
+          "published_at": "2026-10-23T09:32:37Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.dailymail.com/1s/2026/10/22/23/112036291-0-image-a-2_1792708918518.jpg"
+        },
+        {
+          "id": "7554e5d87059",
+          "outlet_id": "mirror",
+          "headline": "Meghan Markle 'deeply distressed' as dad 'investigated over alleged child abuse images'",
+          "snippet": "Meghan Markle’s estranged dad Thomas Markle Sr, 82, is alleged to be under police investigation in the Philippines after son Thomas Jr, 60, claimed to have discovered child abuse images",
+          "url": "https://www.mirror.co.uk/news/royals/meghan-markle-deeply-distressed-dad-37803010",
+          "published_at": "2026-10-23T10:09:39Z",
+          "published_at_estimated": false,
+          "image_url": "https://i2-prod.dailystar.co.uk/news/latest-news/article37771107.ece/ALTERNATES/s615/0_Meghan-Markle.jpg"
+        },
+        {
+          "id": "eefd27f46d64",
+          "outlet_id": "guardian",
+          "headline": "Duchess of Sussex ‘deeply distressed’ over child sexual abuse image claims against father",
+          "snippet": "Meghan also reveals she was made aware of ‘disturbing allegations’ against him in 2018 by Met police The Duchess of Sussex has said she is “deeply distressed” over accusations involving child sexual…",
+          "url": "https://www.theguardian.com/uk-news/2026/oct/23/meghan-duchess-of-sussex-distressed-child-sexual-abuse-image-claims-against-father",
+          "published_at": "2026-10-23T10:50:57Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.guim.co.uk/img/media/cb82f430a06dc8d31acbdb8d325a697d131baec9/41_0_2500_2000/master/2500.jpg?width=460&quality=85&auto=format&fit=max&s=8c530e6d339617f64d191e219e9dac09"
+        },
+        {
+          "id": "782c63ae073a",
+          "outlet_id": "independent",
+          "headline": "Meghan Markle's statement in full as father faces indecent images allegations",
+          "snippet": "The Duchess of Sussex has been estranged from her father since her marriage to Prince Harry",
+          "url": "https://www.independent.co.uk/news/uk/home-news/meghan-markle-statement-dad-thomas-allegations-b3072081.html",
+          "published_at": "2026-10-23T10:51:58Z",
+          "published_at_estimated": false,
+          "image_url": "https://static.independent.co.uk/2026/04/16/11/download.jpg?width=1200&auto=webp&crop=3%3A2"
+        },
+        {
+          "id": "bb73101b0e50",
+          "outlet_id": "dailymail",
+          "headline": "Meghan Markle says she is 'deeply distressed' by allegations her father Thomas possessed child sex abuse images and reveals letter with 'disturbing' claims were passed to Met Police in 2018",
+          "snippet": "The Duchess of Sussex revealed claims against Thomas Markle Sr were passed to her in 2018 after a letter was sent to the Metropolitan Police's royal protection team.",
+          "url": "https://www.dailymail.com/news/article-16232163/Meghan-Markles-father-child-sex-images-son-lies.html",
+          "published_at": "2026-10-23T11:05:31Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.dailymail.com/1s/2026/10/23/06/112035777-0-image-m-16_1792734386453.jpg"
+        },
+        {
+          "id": "49549ac7c3e9",
+          "outlet_id": "thesun",
+          "headline": "Have we misunderstood Meghan? Horrifying allegations against her father Thomas will feel like a thumping vindication",
+          "snippet": "THIS changes everything. And maybe, just maybe, we all owe Meghan Markle a collective apology. That her father, a man everyone understood, on some level, was something of a wrong’un is not just…",
+          "url": "https://www.thesun.co.uk/news/40784654/thomas-markle-allegations-meghan-misunderstood-vindication/",
+          "published_at": "2026-10-23T11:08:03Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.thesun.co.uk/wp-content%2Fuploads%2F2026%2F10%2Fnewspress-collage-y2dob65fb-1792753543213.jpg?quality%3D90%26"
+        },
+        {
+          "id": "8c98c7abdb46",
+          "outlet_id": "independent",
+          "headline": "Meghan Markle says child abuse image claims against her father were passed to Met Police in 2018",
+          "snippet": "The Duchess of Sussex said she was first made aware of ‘disturbing allegations’ against him in 2018 by the Met Police",
+          "url": "https://www.independent.co.uk/news/uk/home-news/meghan-markle-father-thomas-allegations-statement-b3072076.html",
+          "published_at": "2026-10-23T11:08:08Z",
+          "published_at_estimated": false,
+          "image_url": "https://static.independent.co.uk/2026/10/23/10/39/b615b205-ea81-4952-9536-8f9aab36cbdb-copy.jpeg?width=1200&auto=webp&trim=0%2C0%2C0%2C0"
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "Meghan said she is \"deeply distressed\" by the allegations against her father.",
+          "sources": [
+            "c78674dcc627",
+            "9b3a7ef7ca41",
+            "7554e5d87059",
+            "eefd27f46d64",
+            "bb73101b0e50"
+          ]
+        },
+        {
+          "text": "The allegations against Thomas Markle Sr concern child abuse or indecent images.",
+          "sources": [
+            "9b3a7ef7ca41",
+            "5ed4bb2ce4a8",
+            "7554e5d87059",
+            "eefd27f46d64",
+            "782c63ae073a",
+            "bb73101b0e50",
+            "8c98c7abdb46"
+          ]
+        },
+        {
+          "text": "Meghan said claims against her father were passed to, or raised by, the Met Police in 2018.",
+          "sources": [
+            "9b3a7ef7ca41",
+            "eefd27f46d64",
+            "bb73101b0e50",
+            "8c98c7abdb46"
+          ]
+        },
+        {
+          "text": "Thomas Markle Sr is reported to be under investigation in the Philippines after his son Thomas Jr raised the images.",
+          "sources": [
+            "5ed4bb2ce4a8",
+            "7554e5d87059"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "7554e5d87059",
+              "quote": "estranged dad Thomas Markle Sr, 82",
+              "field": "snippet"
+            },
+            {
+              "article_id": "782c63ae073a",
+              "quote": "Meghan Markle's statement in full",
+              "field": "headline"
+            },
+            {
+              "article_id": "eefd27f46d64",
+              "quote": "made aware of ‘disturbing allegations’ against him in 2018 by Met police",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Foregrounds Meghan's statement and her account of being made aware of allegations by the Met Police in 2018.",
+              "sources": [
+                "eefd27f46d64",
+                "782c63ae073a",
+                "8c98c7abdb46"
+              ]
+            },
+            {
+              "text": "Notes that Meghan has been estranged from her father.",
+              "sources": [
+                "7554e5d87059",
+                "782c63ae073a"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "c78674dcc627",
+              "quote": "'deeply distressed' by reports of allegations against her father",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with Meghan's reaction, describing the matter as reports of allegations.",
+              "sources": [
+                "c78674dcc627"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "right",
+          "headline_quotes": [
+            {
+              "article_id": "5ed4bb2ce4a8",
+              "quote": "huge stash of child abuse photos found at Philippines home",
+              "field": "headline"
+            },
+            {
+              "article_id": "9b3a7ef7ca41",
+              "quote": "revealed by The Sun",
+              "field": "snippet"
+            },
+            {
+              "article_id": "5ed4bb2ce4a8",
+              "quote": "daughter Samantha says it's 'all lies'",
+              "field": "headline"
+            },
+            {
+              "article_id": "49549ac7c3e9",
+              "quote": "will feel like a thumping vindication",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Foregrounds details of the alleged images found at the Philippines home and the report to police by his son.",
+              "sources": [
+                "5ed4bb2ce4a8"
+              ]
+            },
+            {
+              "text": "Includes a denial by Meghan's half-sister Samantha, who calls the claims 'all lies'.",
+              "sources": [
+                "5ed4bb2ce4a8"
+              ]
+            },
+            {
+              "text": "Describes the allegations as revealed by The Sun and carries a letter to the Met's royal protection team in 2018.",
+              "sources": [
+                "9b3a7ef7ca41",
+                "bb73101b0e50"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not mention that claims were passed to the Met Police in 2018.",
+          "sources": [
+            "9b3a7ef7ca41",
+            "eefd27f46d64",
+            "bb73101b0e50",
+            "8c98c7abdb46"
+          ]
+        },
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not mention the reported investigation in the Philippines or the son's role.",
+          "sources": [
+            "5ed4bb2ce4a8",
+            "7554e5d87059"
+          ]
+        },
+        {
+          "lean": "left",
+          "text": "Left coverage does not mention Samantha Markle's statement that the claims are 'all lies'.",
+          "sources": [
+            "5ed4bb2ce4a8"
+          ]
+        },
+        {
+          "lean": "right",
+          "text": "Right coverage does not mention that Meghan is estranged from her father.",
+          "sources": [
+            "7554e5d87059",
+            "782c63ae073a"
+          ]
+        }
+      ],
+      "contested_claims": [],
+      "opinion": [
+        {
+          "text": "A Sun commentary asks whether Meghan has been misunderstood and suggests the allegations are a vindication for which she may be owed an apology.",
+          "sources": [
+            "49549ac7c3e9"
+          ]
+        }
+      ],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "c78674dcc627",
+              "quote": "Meghan 'deeply distressed' by reports of allegations against her father",
+              "field": "headline"
+            },
+            {
+              "article_id": "8c98c7abdb46",
+              "quote": "claims against her father were passed to Met Police in 2018",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with Meghan's distress and her statement that the Met Police was made aware of claims in 2018.",
+              "sources": [
+                "c78674dcc627",
+                "9b3a7ef7ca41",
+                "eefd27f46d64",
+                "bb73101b0e50",
+                "8c98c7abdb46"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "The Duchess of Sussex said she is \"deeply distressed\" by allegations that her father, Thomas Markle Sr, possessed child abuse images. She said claims against him were passed to the Met Police in 2018. Reports say he is under investigation in the Philippines after his son Thomas Jr said he found the images.",
+        "sources": [
+          "c78674dcc627",
+          "9b3a7ef7ca41",
+          "5ed4bb2ce4a8",
+          "7554e5d87059",
+          "eefd27f46d64",
+          "782c63ae073a",
+          "bb73101b0e50",
+          "8c98c7abdb46"
+        ]
+      },
+      "conclusion": {
+        "text": "All outlets report Meghan's distress at child abuse image allegations against her father, with most citing the 2018 Met Police link. Right-leaning outlets add the Philippines details, Samantha's denial and a commentary calling it a vindication. Left outlets note the estrangement, and no article states the allegations differently.",
+        "sources": [
+          "c78674dcc627",
+          "9b3a7ef7ca41",
+          "5ed4bb2ce4a8",
+          "7554e5d87059",
+          "eefd27f46d64",
+          "782c63ae073a",
+          "bb73101b0e50",
+          "49549ac7c3e9",
+          "8c98c7abdb46"
+        ]
+      },
+      "validation": {
+        "kept": 28,
+        "dropped_by_reason": {}
+      }
+    },
+    {
+      "id": "c5ed473419dd",
+      "title": "Russia strikes Ukraine as it signals readiness for new peace talks",
+      "rank": 7,
+      "outlet_count": 5,
+      "coverage": {
+        "lean": {
+          "left": 2,
+          "centre": 1,
+          "right": 0
+        },
+        "bloc": {
+          "west": 3,
+          "east": 2
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "8333fb0e192c",
+          "outlet_id": "mirror",
+          "headline": "Russia bombards Kyiv with ballistic missiles - hours after Donald Trump claims peace is closer than ever",
+          "snippet": "US President Donald Trump, who previously claimed he could bring an end to the war in Ukraine in just one day, claimed peace was \"now the closest we've been\"",
+          "url": "https://www.mirror.co.uk/news/world-news/russia-ukraine-attack-trump-putin-37797955",
+          "published_at": "2026-10-22T08:19:50Z",
+          "published_at_estimated": false,
+          "image_url": "https://i2-prod.mirror.co.uk/incoming/article37798099.ece/ALTERNATES/s615/0_FILES-US-POLITICS-TRUMP.jpg"
+        },
+        {
+          "id": "cec9de2eb282",
+          "outlet_id": "moscowtimes",
+          "headline": "Ukraine and Russia Trade Deadly Strikes After U.S. Tries to Reboot Peace Talks",
+          "snippet": "The Defense Ministry said it intercepted 808 Ukrainian drones across Russia and annexed Crimea between Wednesday night and Thursday morning.",
+          "url": "https://www.themoscowtimes.com/2026/10/22/ukraine-and-russia-trade-deadly-strikes-after-us-tries-to-reboot-peace-talks-a94044",
+          "published_at": "2026-10-22T08:26:00Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "a3b8bd78d4d5",
+          "outlet_id": "mirror",
+          "headline": "Russia pounds Ukraine in deadly blitz after Donald Trump envoy called Putin a 'humanitarian'",
+          "snippet": "Trump envoy Steve Witkoff hailed Russian President Vladimir Putin a 'humanitarian' - just hours later Russia launched a missile attack on Ukraine, leaving at least one person dead in the capital Kyiv",
+          "url": "https://www.mirror.co.uk/news/world-news/ukraine-russia-war-putin-trump-37798642",
+          "published_at": "2026-10-22T10:13:42Z",
+          "published_at_estimated": false,
+          "image_url": "https://i2-prod.mirror.co.uk/incoming/article37798666.ece/ALTERNATES/s615/1_TOPSHOT-UKRAINE-RUSSIA-CONFLICT-WAR.jpg"
+        },
+        {
+          "id": "680c2b25ccfe",
+          "outlet_id": "huffpost",
+          "headline": "Russia Pounds Kyiv With Missiles As Moscow Says 808 Drones Downed In Russian Cities",
+          "snippet": "The Russian bombardment showed “there has been no real change in (Moscow’s) attitude toward everything that is happening,” Zelenskyy said.",
+          "url": "https://www.huffpost.com/entry/russia-ukraine-attacks_n_6ad9ee1be4b0ba084e14eccd",
+          "published_at": "2026-10-22T11:17:20Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "358faa3fdc06",
+          "outlet_id": "thehindu",
+          "headline": "Russia pounds Kyiv with missiles as Moscow says 808 drones downed in Russian cities",
+          "snippet": "The Russian bombardment showed “there has been no real change in (Moscow's) attitude toward everything that is happening,” Ukraine President Zelenskyy said",
+          "url": "https://www.thehindu.com/news/international/russia-pounds-kyiv-with-missiles-as-moscow-says-808-drones-downed-in-russian-cities/article71612964.ece",
+          "published_at": "2026-10-22T17:12:09Z",
+          "published_at_estimated": false,
+          "image_url": "https://th-i.thgim.com/public/incoming/tbvujo/article71613087.ece/alternates/LANDSCAPE_1200/Russia_Daily_Life_13_12.jpg"
+        },
+        {
+          "id": "3cc951a52a17",
+          "outlet_id": "bbc",
+          "headline": "Ukraine hit by strikes after Russia agrees to new peace talks",
+          "snippet": "The three waves of Russian missiles were launched at hours after Russia said it was \"ready in principle\" to resume peace talks with the US and Ukraine.",
+          "url": "https://www.bbc.co.uk/news/videos/c9146p1vx888o",
+          "published_at": "2026-10-22T17:49:13Z",
+          "published_at_estimated": false,
+          "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/af60/live/691b9580-ce35-11f1-a86f-f78305ec9987.jpg"
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "Russia carried out missile strikes on Kyiv and Ukraine.",
+          "sources": [
+            "8333fb0e192c",
+            "a3b8bd78d4d5",
+            "680c2b25ccfe",
+            "358faa3fdc06",
+            "3cc951a52a17"
+          ]
+        },
+        {
+          "text": "The strikes came shortly after moves or statements about peace talks involving the US and Russia.",
+          "sources": [
+            "8333fb0e192c",
+            "a3b8bd78d4d5",
+            "3cc951a52a17",
+            "cec9de2eb282"
+          ]
+        },
+        {
+          "text": "Russia's Defence Ministry said 808 Ukrainian drones were downed or intercepted over Russia.",
+          "sources": [
+            "cec9de2eb282",
+            "680c2b25ccfe",
+            "358faa3fdc06"
+          ]
+        },
+        {
+          "text": "Zelenskyy said the bombardment showed no real change in Moscow's attitude.",
+          "sources": [
+            "680c2b25ccfe",
+            "358faa3fdc06"
+          ]
+        },
+        {
+          "text": "The strikes were deadly, with at least one person killed in Kyiv.",
+          "sources": [
+            "a3b8bd78d4d5",
+            "cec9de2eb282"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "8333fb0e192c",
+              "quote": "hours after Donald Trump claims peace is closer than ever",
+              "field": "headline"
+            },
+            {
+              "article_id": "a3b8bd78d4d5",
+              "quote": "after Donald Trump envoy called Putin a 'humanitarian'",
+              "field": "headline"
+            },
+            {
+              "article_id": "680c2b25ccfe",
+              "quote": "Russia Pounds Kyiv With Missiles",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the timing of the strikes relative to Donald Trump's claim that peace was closer than ever.",
+              "sources": [
+                "8333fb0e192c"
+              ]
+            },
+            {
+              "text": "Foregrounds Trump envoy Steve Witkoff describing Putin as a 'humanitarian' hours before the attack.",
+              "sources": [
+                "a3b8bd78d4d5"
+              ]
+            },
+            {
+              "text": "Carries Zelenskyy's view that Moscow's attitude has not changed.",
+              "sources": [
+                "680c2b25ccfe"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "3cc951a52a17",
+              "quote": "Ukraine hit by strikes after Russia agrees to new peace talks",
+              "field": "headline"
+            },
+            {
+              "article_id": "3cc951a52a17",
+              "quote": "The three waves of Russian missiles",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with Russia's statement that it was ready in principle to resume peace talks with the US and Ukraine.",
+              "sources": [
+                "3cc951a52a17"
+              ]
+            },
+            {
+              "text": "Describes the attack as three waves of Russian missiles.",
+              "sources": [
+                "3cc951a52a17"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "left",
+          "text": "Left coverage does not mention Russia saying it was ready in principle to resume peace talks with the US and Ukraine.",
+          "sources": [
+            "3cc951a52a17"
+          ]
+        },
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not mention Moscow's claim that 808 Ukrainian drones were downed.",
+          "sources": [
+            "680c2b25ccfe"
+          ]
+        },
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not mention Trump's or envoy Steve Witkoff's statements before the strikes.",
+          "sources": [
+            "8333fb0e192c",
+            "a3b8bd78d4d5"
+          ]
+        }
+      ],
+      "contested_claims": [],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "8333fb0e192c",
+              "quote": "Russia bombards Kyiv with ballistic missiles",
+              "field": "headline"
+            },
+            {
+              "article_id": "3cc951a52a17",
+              "quote": "Ukraine hit by strikes after Russia agrees to new peace talks",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Foregrounds Russian strikes on Ukraine coming hours after peace-related statements by the US or Russia.",
+              "sources": [
+                "8333fb0e192c",
+                "a3b8bd78d4d5",
+                "3cc951a52a17"
+              ]
+            },
+            {
+              "text": "Carries Zelenskyy's view that Moscow's attitude has not changed.",
+              "sources": [
+                "680c2b25ccfe"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "cec9de2eb282",
+              "quote": "Ukraine and Russia Trade Deadly Strikes",
+              "field": "headline"
+            },
+            {
+              "article_id": "358faa3fdc06",
+              "quote": "Moscow says 808 drones downed in Russian cities",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Describes the events as an exchange of deadly strikes by both Ukraine and Russia after a US attempt to reboot talks.",
+              "sources": [
+                "cec9de2eb282"
+              ]
+            },
+            {
+              "text": "Foregrounds the Russian Defence Ministry's figure of 808 intercepted Ukrainian drones, including over annexed Crimea.",
+              "sources": [
+                "cec9de2eb282",
+                "358faa3fdc06"
+              ]
+            },
+            {
+              "text": "Carries Zelenskyy's view that Moscow's attitude has not changed.",
+              "sources": [
+                "358faa3fdc06"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "Russia launched missile strikes on Kyiv and elsewhere in Ukraine, killing at least one person in Kyiv, hours after Russia said it was ready in principle to resume peace talks and US figures spoke of peace. Moscow said it downed 808 Ukrainian drones, and Zelenskyy said the bombardment showed no real change in Moscow's attitude.",
+        "sources": [
+          "8333fb0e192c",
+          "a3b8bd78d4d5",
+          "680c2b25ccfe",
+          "358faa3fdc06",
+          "3cc951a52a17",
+          "cec9de2eb282"
+        ]
+      },
+      "conclusion": {
+        "text": "All coverage reports Russian missile strikes on Ukraine following peace-talk signals. Left outlets lead with Trump and Witkoff's remarks, the centre with Russia's readiness for talks, and one East outlet frames it as an exchange of strikes. No outlet disputes another's facts.",
+        "sources": [
+          "8333fb0e192c",
+          "a3b8bd78d4d5",
+          "680c2b25ccfe",
+          "3cc951a52a17",
+          "cec9de2eb282",
+          "358faa3fdc06"
+        ]
+      },
+      "validation": {
+        "kept": 29,
+        "dropped_by_reason": {}
+      }
+    },
+    {
+      "id": "21211e25c804",
+      "title": "Judge orders Trump to sit for deposition in BBC defamation lawsuit",
+      "rank": 8,
+      "outlet_count": 5,
+      "coverage": {
+        "lean": {
+          "left": 1,
+          "centre": 3,
+          "right": 0
+        },
+        "bloc": {
+          "west": 4,
+          "east": 1
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "635d63255566",
+          "outlet_id": "nbc",
+          "headline": "Judge orders Trump to sit for deposition in his $10 billion lawsuit against the BBC",
+          "snippet": "The president had agreed to sit for a deposition on Oct. 16, but it was canceled for what was described as a “matter of national importance.”",
+          "url": "https://www.nbcnews.com/politics/donald-trump/trump-sit-deposition-10-billion-defamation-lawsuit-bbc-jan-6-rcna605034",
+          "published_at": "2026-10-22T15:53:28Z",
+          "published_at_estimated": false,
+          "image_url": "https://media-cldnry.s-nbcnews.com/image/upload/t_fit_1500w/rockcms/2026-07/260714-donald-trump-ew-122p-337e01.jpg"
+        },
+        {
+          "id": "3c1ec45f18c9",
+          "outlet_id": "axios",
+          "headline": "Trump ordered to sit for deposition in $10 billion BBC lawsuit",
+          "snippet": "A federal judge on Thursday ordered President Trump to sit for a deposition by Dec. 11 in his $10 billion defamation lawsuit against the BBC over an edit of one of his speeches that the president's…",
+          "url": "https://www.axios.com/2026/10/22/trump-bbc-lawsuit-december-deposition-deadline",
+          "published_at": "2026-10-22T19:22:43Z",
+          "published_at_estimated": false,
+          "image_url": "https://images.axios.com/Qv16Iq6zWvrQpVkoZvdw5BbkPe4=/0x364:8192x4972/1366x768/2026/10/22/1792682353283.jpg"
+        },
+        {
+          "id": "f0a7bbbe0c46",
+          "outlet_id": "bbc",
+          "headline": "Trump ordered to answer questions under oath in BBC lawsuit",
+          "snippet": "Trump is suing the BBC over an episode of Panorama that edited together two different sections of a speech he gave in 2021.",
+          "url": "https://www.bbc.co.uk/news/articles/cmy0ryjx7741o",
+          "published_at": "2026-10-23T01:38:44Z",
+          "published_at_estimated": false,
+          "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/6bf5/live/f171dec0-ce3b-11f1-a86f-f78305ec9987.jpg"
+        },
+        {
+          "id": "5eaa64c60c87",
+          "outlet_id": "thehindu",
+          "headline": "Judge orders Trump to give deposition in BBC lawsuit by December 11",
+          "snippet": "Judge Enjolique Lett in Miami gave the order in response to complaints by the British broadcaster that Mr. Trump has refused to sit for a deposition, including canceling a previously agreed date of…",
+          "url": "https://www.thehindu.com/news/international/judge-orders-trump-to-give-deposition-in-bbc-lawsuit-by-december-11/article71613501.ece",
+          "published_at": "2026-10-23T01:52:38Z",
+          "published_at_estimated": false,
+          "image_url": "https://th-i.thgim.com/public/incoming/lwr4l0/article71613502.ece/alternates/LANDSCAPE_1200/Trump_48934.jpg"
+        },
+        {
+          "id": "0c4c6afccc3d",
+          "outlet_id": "npr",
+          "headline": "Morning news brief",
+          "snippet": "U.S. and Israel are planning for a possible attack on Iran, millions of Americans have voted early, judge orders President Trump to sit for deposition in BBC lawsuit.",
+          "url": "https://www.npr.org/2026/10/23/nx-s1-6003504/morning-news-brief",
+          "published_at": "2026-10-23T08:44:19Z",
+          "published_at_estimated": false,
+          "image_url": null
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "A judge ordered Trump to sit for a deposition in his lawsuit against the BBC.",
+          "sources": [
+            "635d63255566",
+            "3c1ec45f18c9",
+            "f0a7bbbe0c46",
+            "5eaa64c60c87",
+            "0c4c6afccc3d"
+          ]
+        },
+        {
+          "text": "The lawsuit seeks $10 billion.",
+          "sources": [
+            "635d63255566",
+            "3c1ec45f18c9"
+          ]
+        },
+        {
+          "text": "The deposition must take place by 11 December.",
+          "sources": [
+            "3c1ec45f18c9",
+            "5eaa64c60c87"
+          ]
+        },
+        {
+          "text": "A previously agreed deposition date was cancelled.",
+          "sources": [
+            "635d63255566",
+            "5eaa64c60c87"
+          ]
+        },
+        {
+          "text": "The lawsuit concerns an edit of one of Trump's speeches.",
+          "sources": [
+            "3c1ec45f18c9",
+            "f0a7bbbe0c46"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "635d63255566",
+              "quote": "his $10 billion lawsuit against the BBC",
+              "field": "headline"
+            },
+            {
+              "article_id": "635d63255566",
+              "quote": "it was canceled for what was described as a “matter of national importance.”",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the cancellation of the agreed 16 October deposition, described as due to a matter of national importance.",
+              "sources": [
+                "635d63255566"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "3c1ec45f18c9",
+              "quote": "ordered President Trump to sit for a deposition by Dec. 11",
+              "field": "snippet"
+            },
+            {
+              "article_id": "f0a7bbbe0c46",
+              "quote": "Trump ordered to answer questions under oath in BBC lawsuit",
+              "field": "headline"
+            },
+            {
+              "article_id": "f0a7bbbe0c46",
+              "quote": "an episode of Panorama that edited together two different sections of a speech he gave in 2021",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Foregrounds the 11 December deadline and the defamation claim over a speech edit.",
+              "sources": [
+                "3c1ec45f18c9"
+              ]
+            },
+            {
+              "text": "Describes the disputed Panorama episode as editing together two sections of a 2021 speech.",
+              "sources": [
+                "f0a7bbbe0c46"
+              ]
+            },
+            {
+              "text": "Places the order alongside other news, including possible US-Israeli plans regarding Iran and early voting.",
+              "sources": [
+                "0c4c6afccc3d"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not mention that a previously agreed 16 October deposition was cancelled.",
+          "sources": [
+            "635d63255566"
+          ]
+        },
+        {
+          "lean": "left",
+          "text": "Left coverage does not mention the 11 December deadline.",
+          "sources": [
+            "3c1ec45f18c9"
+          ]
+        },
+        {
+          "lean": "left",
+          "text": "Left coverage does not mention that the lawsuit concerns an edit of a Trump speech.",
+          "sources": [
+            "3c1ec45f18c9",
+            "f0a7bbbe0c46"
+          ]
+        }
+      ],
+      "contested_claims": [],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "635d63255566",
+              "quote": "Judge orders Trump to sit for deposition in his $10 billion lawsuit against the BBC",
+              "field": "headline"
+            },
+            {
+              "article_id": "f0a7bbbe0c46",
+              "quote": "Trump ordered to answer questions under oath in BBC lawsuit",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Emphasises the $10 billion value of the lawsuit and the speech edit at its centre.",
+              "sources": [
+                "635d63255566",
+                "3c1ec45f18c9",
+                "f0a7bbbe0c46"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "5eaa64c60c87",
+              "quote": "Judge orders Trump to give deposition in BBC lawsuit by December 11",
+              "field": "headline"
+            },
+            {
+              "article_id": "5eaa64c60c87",
+              "quote": "in response to complaints by the British broadcaster that Mr. Trump has refused to sit for a deposition",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Names Judge Enjolique Lett in Miami and presents the order as a response to BBC complaints that Trump refused to sit for a deposition.",
+              "sources": [
+                "5eaa64c60c87"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "A federal judge ordered President Trump to sit for a deposition by 11 December in his $10 billion defamation lawsuit against the BBC. The suit concerns an edit of one of his speeches, and a previously agreed deposition date had been cancelled.",
+        "sources": [
+          "635d63255566",
+          "3c1ec45f18c9",
+          "f0a7bbbe0c46",
+          "5eaa64c60c87",
+          "0c4c6afccc3d"
+        ]
+      },
+      "conclusion": {
+        "text": "All coverage agrees a judge ordered Trump to sit for a deposition in his BBC lawsuit. Left coverage leads with the cancelled earlier date, centre with the deadline and speech edit, and the East-bloc article with the BBC's complaints. No claims are contested between them.",
+        "sources": [
+          "635d63255566",
+          "3c1ec45f18c9",
+          "f0a7bbbe0c46",
+          "5eaa64c60c87",
+          "0c4c6afccc3d"
+        ]
+      },
+      "validation": {
+        "kept": 25,
+        "dropped_by_reason": {}
+      }
+    },
+    {
+      "id": "07e7c49a2754",
+      "title": "WHO warns of complex Ebola outbreak after case confirmed in Nigeria",
+      "rank": 9,
+      "outlet_count": 5,
+      "coverage": {
+        "lean": {
+          "left": 1,
+          "centre": 2,
+          "right": 0
+        },
+        "bloc": {
+          "west": 3,
+          "east": 2
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "845db579c6eb",
+          "outlet_id": "nyt",
+          "headline": "Ebola Outbreak in Africa Reaches Widest Expansion Ever",
+          "snippet": "Health officials are urgently seeking answers about the origins of a case newly identified in Nigeria, the first in that West African nation.",
+          "url": "https://www.nytimes.com/2026/10/22/health/ebola-nigeria-congo-kenya.html",
+          "published_at": "2026-10-22T16:41:13Z",
+          "published_at_estimated": false,
+          "image_url": "https://static01.nyt.com/images/2026/10/22/multimedia/22dc-ebola-mcvt/22dc-ebola-mcvt-mediumSquareAt3X.jpg"
+        },
+        {
+          "id": "7765f6dc9d31",
+          "outlet_id": "japantimes",
+          "headline": "Africa faces ‘complex’ Ebola outbreak after spread to Nigeria, WHO warns",
+          "snippet": "Nigeria, the continent's most populous nation, is the fourth African country affected by the outbreak.",
+          "url": "https://www.japantimes.co.jp/news/2026/10/23/world/science-health/africa-complex-ebola-outbreak/",
+          "published_at": "2026-10-23T04:37:00Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.japantimes.co.jp/japantimes/uploads/images/2026/10/23/thumbs/400x400/570123.jpg"
+        },
+        {
+          "id": "ff2592afeecd",
+          "outlet_id": "scmp",
+          "headline": "WHO warns Africa faces ‘complex’ Ebola outbreak as virus reaches Nigeria",
+          "snippet": "The World Health Organization has warned that Africa faced a “complex” Ebola outbreak after the virus crossed from east Africa to Nigeria, marking the first case in the west of the continent…",
+          "url": "https://www.scmp.com/news/world/africa/article/3371887/who-warns-africa-faces-complex-ebola-outbreak-virus-reaches-nigeria",
+          "published_at": "2026-10-23T06:49:24Z",
+          "published_at_estimated": false,
+          "image_url": "https://cdn.i-scmp.com/sites/default/files/styles/1280x720/public/d8/images/canvas/2026/10/23/bee9e113-5dca-448f-b559-95c6c84d04ca_231a5c2b.jpg?itok=aYZVsiZb&v=1792738158"
+        },
+        {
+          "id": "22bc33179a35",
+          "outlet_id": "france24",
+          "headline": "Africa faces 'complex' Ebola outbreak after spread to Nigeria: WHO",
+          "snippet": "The World Health Organization warned Thursday that Africa faced a \"complex\" Ebola outbreak after the virus crossed from east Africa to Nigeria, marking the first case in the west of the continent.",
+          "url": "https://www.france24.com/en/africa-faces-complex-ebola-outbreak-after-spread-to-nigeria-who",
+          "published_at": "2026-10-23T08:28:09Z",
+          "published_at_estimated": false,
+          "image_url": "https://s.france24.com/media/display/b7e9f0b4-ceba-11f1-9d55-5b4a75578ebb/w:1024/p:16x9/EN-20261023-082125-082315-CS.jpg"
+        },
+        {
+          "id": "eb7f8c5f8574",
+          "outlet_id": "bbc",
+          "headline": "Woman with Ebola in Nigeria confirmed as wife of Swiss diplomat",
+          "snippet": "Her husband is currently in isolation but has not developed any symptoms, Swiss officials say.",
+          "url": "https://www.bbc.co.uk/news/articles/cmwy4wlzqz3zo",
+          "published_at": "2026-10-23T10:14:33Z",
+          "published_at_estimated": false,
+          "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/bc0c/live/cdfdf700-ce98-11f1-a6ca-3fa3d92134e2.jpg"
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "An Ebola case has been identified in Nigeria.",
+          "sources": [
+            "845db579c6eb",
+            "7765f6dc9d31",
+            "ff2592afeecd",
+            "22bc33179a35",
+            "eb7f8c5f8574"
+          ]
+        },
+        {
+          "text": "The WHO warned that Africa faces a 'complex' Ebola outbreak.",
+          "sources": [
+            "7765f6dc9d31",
+            "ff2592afeecd",
+            "22bc33179a35"
+          ]
+        },
+        {
+          "text": "The Nigerian case is the first in that country and in the west of the continent.",
+          "sources": [
+            "845db579c6eb",
+            "ff2592afeecd",
+            "22bc33179a35"
+          ]
+        },
+        {
+          "text": "The virus crossed from east Africa to Nigeria.",
+          "sources": [
+            "ff2592afeecd",
+            "22bc33179a35"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "845db579c6eb",
+              "quote": "Ebola Outbreak in Africa Reaches Widest Expansion Ever",
+              "field": "headline"
+            },
+            {
+              "article_id": "845db579c6eb",
+              "quote": "urgently seeking answers about the origins of a case",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the outbreak's geographic expansion, describing it as the widest ever.",
+              "sources": [
+                "845db579c6eb"
+              ]
+            },
+            {
+              "text": "Foregrounds health officials seeking the origins of the Nigerian case.",
+              "sources": [
+                "845db579c6eb"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "22bc33179a35",
+              "quote": "Africa faces 'complex' Ebola outbreak after spread to Nigeria",
+              "field": "headline"
+            },
+            {
+              "article_id": "eb7f8c5f8574",
+              "quote": "Woman with Ebola in Nigeria confirmed as wife of Swiss diplomat",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the WHO's warning of a 'complex' outbreak.",
+              "sources": [
+                "22bc33179a35"
+              ]
+            },
+            {
+              "text": "Foregrounds the patient's identity as the wife of a Swiss diplomat and her husband's isolation without symptoms.",
+              "sources": [
+                "eb7f8c5f8574"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "left",
+          "text": "Left coverage does not mention the WHO's warning of a 'complex' outbreak.",
+          "sources": [
+            "22bc33179a35"
+          ]
+        },
+        {
+          "lean": "left",
+          "text": "Left coverage does not mention that the patient is the wife of a Swiss diplomat.",
+          "sources": [
+            "eb7f8c5f8574"
+          ]
+        },
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not mention officials seeking the origins of the case or describe the spread as the widest ever.",
+          "sources": [
+            "845db579c6eb"
+          ]
+        }
+      ],
+      "contested_claims": [],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "845db579c6eb",
+              "quote": "Reaches Widest Expansion Ever",
+              "field": "headline"
+            },
+            {
+              "article_id": "eb7f8c5f8574",
+              "quote": "confirmed as wife of Swiss diplomat",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Includes the scale of the outbreak's expansion and questions over the case's origins.",
+              "sources": [
+                "845db579c6eb"
+              ]
+            },
+            {
+              "text": "Includes details of the patient and her husband's isolation, citing Swiss officials.",
+              "sources": [
+                "eb7f8c5f8574"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "7765f6dc9d31",
+              "quote": "Africa faces ‘complex’ Ebola outbreak after spread to Nigeria, WHO warns",
+              "field": "headline"
+            },
+            {
+              "article_id": "ff2592afeecd",
+              "quote": "WHO warns Africa faces ‘complex’ Ebola outbreak as virus reaches Nigeria",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the WHO's warning of a 'complex' outbreak.",
+              "sources": [
+                "7765f6dc9d31",
+                "ff2592afeecd"
+              ]
+            },
+            {
+              "text": "Notes Nigeria is the continent's most populous nation and the fourth African country affected.",
+              "sources": [
+                "7765f6dc9d31"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "A case of Ebola has been confirmed in Nigeria, the first in that country and in the west of the continent, after the virus crossed from east Africa. The World Health Organization warned that Africa faces a 'complex' outbreak. The patient is a woman confirmed as the wife of a Swiss diplomat.",
+        "sources": [
+          "845db579c6eb",
+          "7765f6dc9d31",
+          "ff2592afeecd",
+          "22bc33179a35",
+          "eb7f8c5f8574"
+        ]
+      },
+      "conclusion": {
+        "text": "All coverage agrees an Ebola case has been confirmed in Nigeria, with several outlets reporting the WHO's 'complex' outbreak warning. The left outlet leads with the outbreak's widest expansion and unknown origins, while centre coverage adds the patient's link to a Swiss diplomat. No claims are contested between leans or blocs.",
+        "sources": [
+          "845db579c6eb",
+          "7765f6dc9d31",
+          "ff2592afeecd",
+          "22bc33179a35",
+          "eb7f8c5f8574"
+        ]
+      },
+      "validation": {
+        "kept": 25,
+        "dropped_by_reason": {}
+      }
+    },
+    {
+      "id": "935a796d4897",
+      "title": "Typhoon Champi shuts Taiwan and disrupts regional flights",
+      "rank": 10,
+      "outlet_count": 5,
+      "coverage": {
+        "lean": {
+          "left": 1,
+          "centre": 1,
+          "right": 0
+        },
+        "bloc": {
+          "west": 2,
+          "east": 3
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "39f8d6a0b086",
+          "outlet_id": "nyt",
+          "headline": "As Typhoon Champi Nears, Taiwan’s Mayors Bet on a Popular Day Off",
+          "snippet": "One expert said the likelihood that a mayor announces closure of work and school because of a typhoon increases 31 percent during an election year.",
+          "url": "https://www.nytimes.com/2026/10/22/world/asia/taiwan-typhoon-champi-mayors.html",
+          "published_at": "2026-10-22T17:39:10Z",
+          "published_at_estimated": false,
+          "image_url": "https://static01.nyt.com/images/2026/10/22/multimedia/22int-taiwan-typhoon-fgbh/22int-taiwan-typhoon-fgbh-mediumSquareAt3X.jpg"
+        },
+        {
+          "id": "bae51b1a0ee9",
+          "outlet_id": "thehindu",
+          "headline": "Taiwan shuts down ahead of weakening Typhoon Champi, hundreds of flights cancelled",
+          "snippet": "The administration ​said the typhoon’s radius was around 320 km (200 miles), large enough to ⁠cover most of Taiwan, and weather experts said its impact could last nearly two ‌days.",
+          "url": "https://www.thehindu.com/news/international/taiwan-shuts-down-ahead-of-weakening-typhoon-champi-hundreds-of-flights-cancelled/article71614370.ece",
+          "published_at": "2026-10-23T02:06:33Z",
+          "published_at_estimated": false,
+          "image_url": "https://th-i.thgim.com/public/incoming/r4zut3/article71614390.ece/alternates/LANDSCAPE_1200/Extreme_Weather_Taiwan_Storm_34163.jpg"
+        },
+        {
+          "id": "fa1c2ea2da45",
+          "outlet_id": "scmp",
+          "headline": "Typhoon Champi disrupts more than 70 flights between Hong Kong and Taiwan",
+          "snippet": "More than 70 flights between Hong Kong and Taiwan have been cancelled as Typhoon Champi approaches the island ahead of a possible landfall later on Friday. As of noon on Friday, more than 30 flights…",
+          "url": "https://www.scmp.com/news/hong-kong/transport/article/3371885/super-typhoon-champi-disrupts-more-70-flights-between-hong-kong-and-taiwan",
+          "published_at": "2026-10-23T06:39:58Z",
+          "published_at_estimated": false,
+          "image_url": "https://cdn.i-scmp.com/sites/default/files/styles/1280x720/public/d8/images/canvas/2026/10/23/f8f152ea-a884-42cf-809b-5f6a40a791eb_baeb34f2.jpg?itok=Xrk_TMvu&v=1792737591"
+        },
+        {
+          "id": "3d23af12bda9",
+          "outlet_id": "scmp",
+          "headline": "Typhoon Champi grounds hundreds of Taiwan flights, threatens Shanghai and Japan",
+          "snippet": "Flight disruptions and cancellations surged across East Asia as Typhoon Champi approaches Taiwan, prompting emergency precautions in eastern mainland China, including Shanghai, and in Japan during a…",
+          "url": "https://www.scmp.com/news/china/politics/article/3371901/typhoon-champi-grounds-hundreds-flights-taiwan-threatens-eastern-mainland-china",
+          "published_at": "2026-10-23T08:00:39Z",
+          "published_at_estimated": false,
+          "image_url": "https://cdn.i-scmp.com/sites/default/files/styles/1280x720/public/d8/images/canvas/2026/10/23/df758cd5-f6ae-4ce4-af62-50ff4c23fc27_6ada537b.jpg?itok=HK0O-Y-Q&v=1792752320"
+        },
+        {
+          "id": "b9346221c02e",
+          "outlet_id": "bbc",
+          "headline": "Hundreds of flights cancelled as Typhoon Champi shuts Taiwan",
+          "snippet": "One person has died after being swept away by waves in Taiwan's Liuqiu island, authorities say.",
+          "url": "https://www.bbc.co.uk/news/articles/cw98zn304zg7o",
+          "published_at": "2026-10-23T08:45:58Z",
+          "published_at_estimated": false,
+          "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/8cb6/live/26f20040-cec1-11f1-ae9c-0303957c36f8.jpg"
+        },
+        {
+          "id": "a383f63f7570",
+          "outlet_id": "ecns",
+          "headline": "Typhoon Champi halts 56 ferry routes off Fujian, prompts relocation of 134,100 people",
+          "snippet": "Champi has brought winds of Force 8 or stronger (at least 62 kph, or 39 mph) to coastal areas of southeastern China's Fujian province, prompting the suspension of 56 passenger ferry routes and the…",
+          "url": "https://www.ecns.cn/cns-wire/2026-10-23/detail-ihfmiwhm0741831.shtml",
+          "published_at": "2026-10-23T15:31:22Z",
+          "published_at_estimated": false,
+          "image_url": null
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "Taiwan shut down, including work and school closures, ahead of Typhoon Champi.",
+          "sources": [
+            "39f8d6a0b086",
+            "bae51b1a0ee9",
+            "b9346221c02e"
+          ]
+        },
+        {
+          "text": "Hundreds of flights were cancelled or disrupted because of the typhoon.",
+          "sources": [
+            "bae51b1a0ee9",
+            "3d23af12bda9",
+            "b9346221c02e",
+            "fa1c2ea2da45"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "39f8d6a0b086",
+              "quote": "Taiwan’s Mayors Bet on a Popular Day Off",
+              "field": "headline"
+            },
+            {
+              "article_id": "39f8d6a0b086",
+              "quote": "increases 31 percent during an election year",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with mayors' decisions to close work and school, citing an expert on how election years affect typhoon closures.",
+              "sources": [
+                "39f8d6a0b086"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "b9346221c02e",
+              "quote": "Hundreds of flights cancelled as Typhoon Champi shuts Taiwan",
+              "field": "headline"
+            },
+            {
+              "article_id": "b9346221c02e",
+              "quote": "One person has died after being swept away by waves",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Foregrounds flight cancellations and a death on Liuqiu island, attributed to authorities.",
+              "sources": [
+                "b9346221c02e"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "left",
+          "text": "Does not mention flight cancellations.",
+          "sources": [
+            "b9346221c02e"
+          ]
+        },
+        {
+          "lean": "left",
+          "text": "Does not mention the death of a person swept away by waves on Liuqiu island.",
+          "sources": [
+            "b9346221c02e"
+          ]
+        },
+        {
+          "lean": "centre",
+          "text": "Does not mention the role of mayors or election-year politics in the closure decisions.",
+          "sources": [
+            "39f8d6a0b086"
+          ]
+        }
+      ],
+      "contested_claims": [],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "39f8d6a0b086",
+              "quote": "Taiwan’s Mayors Bet on a Popular Day Off",
+              "field": "headline"
+            },
+            {
+              "article_id": "b9346221c02e",
+              "quote": "Typhoon Champi shuts Taiwan",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Focuses on Taiwan itself: local closure decisions and a death on Liuqiu island.",
+              "sources": [
+                "39f8d6a0b086",
+                "b9346221c02e"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "bae51b1a0ee9",
+              "quote": "ahead of weakening Typhoon Champi",
+              "field": "headline"
+            },
+            {
+              "article_id": "3d23af12bda9",
+              "quote": "threatens Shanghai and Japan",
+              "field": "headline"
+            },
+            {
+              "article_id": "a383f63f7570",
+              "quote": "prompts relocation of 134,100 people",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Details the storm's size, describing a radius of around 320 km and an impact lasting nearly two days.",
+              "sources": [
+                "bae51b1a0ee9"
+              ]
+            },
+            {
+              "text": "Emphasises regional effects: Hong Kong–Taiwan flights, precautions in Shanghai and Japan, and Fujian ferry suspensions.",
+              "sources": [
+                "fa1c2ea2da45",
+                "3d23af12bda9",
+                "a383f63f7570"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "Taiwan shut down as Typhoon Champi approached, and hundreds of flights were cancelled across the region. One person died after being swept away by waves on Liuqiu island. The storm prompted precautions in mainland China and Japan, including the relocation of 134,100 people in Fujian.",
+        "sources": [
+          "bae51b1a0ee9",
+          "3d23af12bda9",
+          "b9346221c02e",
+          "fa1c2ea2da45",
+          "a383f63f7570"
+        ]
+      },
+      "conclusion": {
+        "text": "All sides report Taiwan shutting down and widespread flight cancellations. West-bloc coverage leads with mayors' election-year closure decisions and a death on Liuqiu island, while East-bloc coverage stresses regional effects in Hong Kong, Shanghai, Japan and Fujian. No article contradicts another.",
+        "sources": [
+          "39f8d6a0b086",
+          "b9346221c02e",
+          "bae51b1a0ee9",
+          "fa1c2ea2da45",
+          "3d23af12bda9",
+          "a383f63f7570"
+        ]
+      },
+      "validation": {
+        "kept": 21,
+        "dropped_by_reason": {}
+      }
+    }
+  ]
+}
