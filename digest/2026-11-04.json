@@ -1,0 +1,4152 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-11-04T14:04:12.132878Z",
+  "date": "2026-11-04",
+  "meta": {
+    "model": "claude-opus-5-5",
+    "cost_usd": 0.701322,
+    "outlets_polled": 29,
+    "articles_collected": 700,
+    "warnings": [],
+    "validation": {
+      "kept": 294,
+      "dropped_by_reason": {
+        "untrusted_text": 1
+      }
+    }
+  },
+  "outlets": [
+    {
+      "id": "guardian",
+      "name": "The Guardian",
+      "lean": "left",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United Kingdom",
+      "home_url": "https://www.theguardian.com/",
+      "rating_basis": "AllSides media bias rating (Lean Left), checked Oct 2026"
+    },
+    {
+      "id": "independent",
+      "name": "The Independent",
+      "lean": "left",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United Kingdom",
+      "home_url": "https://www.independent.co.uk/",
+      "rating_basis": "AllSides media bias rating (Lean Left), checked Oct 2026"
+    },
+    {
+      "id": "mirror",
+      "name": "Daily Mirror",
+      "lean": "left",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United Kingdom",
+      "home_url": "https://www.mirror.co.uk/",
+      "rating_basis": "Ad Fontes Media bias rating (Skews Left), checked Oct 2026"
+    },
+    {
+      "id": "bbc",
+      "name": "BBC News",
+      "lean": "centre",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "public-service",
+      "country": "United Kingdom",
+      "home_url": "https://www.bbc.co.uk/news",
+      "rating_basis": "AllSides media bias rating (Center), checked Oct 2026"
+    },
+    {
+      "id": "sky",
+      "name": "Sky News",
+      "lean": "centre",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United Kingdom",
+      "home_url": "https://news.sky.com/",
+      "rating_basis": "Ad Fontes Media bias rating (Middle), checked Oct 2026"
+    },
+    {
+      "id": "telegraph",
+      "name": "The Telegraph",
+      "lean": "right",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United Kingdom",
+      "home_url": "https://www.telegraph.co.uk/",
+      "rating_basis": "AllSides media bias rating (Lean Right), checked Oct 2026"
+    },
+    {
+      "id": "dailymail",
+      "name": "Daily Mail",
+      "lean": "right",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United Kingdom",
+      "home_url": "https://www.dailymail.co.uk/",
+      "rating_basis": "AllSides media bias rating (Right), checked Oct 2026"
+    },
+    {
+      "id": "thesun",
+      "name": "The Sun",
+      "lean": "right",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United Kingdom",
+      "home_url": "https://www.thesun.co.uk/",
+      "rating_basis": "AllSides media bias rating (Right), checked Oct 2026"
+    },
+    {
+      "id": "nyt",
+      "name": "The New York Times",
+      "lean": "left",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United States",
+      "home_url": "https://www.nytimes.com/",
+      "rating_basis": "AllSides media bias rating (Lean Left), checked Oct 2026"
+    },
+    {
+      "id": "nbc",
+      "name": "NBC News",
+      "lean": "left",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United States",
+      "home_url": "https://www.nbcnews.com/",
+      "rating_basis": "AllSides media bias rating (Lean Left), checked Oct 2026"
+    },
+    {
+      "id": "huffpost",
+      "name": "HuffPost",
+      "lean": "left",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United States",
+      "home_url": "https://www.huffpost.com/",
+      "rating_basis": "AllSides media bias rating (Left), checked Oct 2026"
+    },
+    {
+      "id": "npr",
+      "name": "NPR",
+      "lean": "centre",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "public-service",
+      "country": "United States",
+      "home_url": "https://www.npr.org/",
+      "rating_basis": "Ad Fontes Media bias rating (Middle / Skews Left), checked Oct 2026"
+    },
+    {
+      "id": "axios",
+      "name": "Axios",
+      "lean": "centre",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United States",
+      "home_url": "https://www.axios.com/",
+      "rating_basis": "AllSides media bias rating (Center), checked Oct 2026"
+    },
+    {
+      "id": "fox",
+      "name": "Fox News",
+      "lean": "right",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United States",
+      "home_url": "https://www.foxnews.com/",
+      "rating_basis": "AllSides media bias rating (Right), checked Oct 2026"
+    },
+    {
+      "id": "nypost",
+      "name": "New York Post",
+      "lean": "right",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United States",
+      "home_url": "https://nypost.com/",
+      "rating_basis": "AllSides media bias rating (Lean Right), checked Oct 2026"
+    },
+    {
+      "id": "examiner",
+      "name": "Washington Examiner",
+      "lean": "right",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United States",
+      "home_url": "https://www.washingtonexaminer.com/",
+      "rating_basis": "AllSides media bias rating (Lean Right), checked Oct 2026"
+    },
+    {
+      "id": "france24",
+      "name": "France 24",
+      "lean": "centre",
+      "region": "europe",
+      "bloc": "west",
+      "ownership": "public-service",
+      "country": "France",
+      "home_url": "https://www.france24.com/en/",
+      "rating_basis": "Ad Fontes Media bias rating (Middle), checked Oct 2026"
+    },
+    {
+      "id": "dw",
+      "name": "DW (Deutsche Welle)",
+      "lean": "centre",
+      "region": "europe",
+      "bloc": "west",
+      "ownership": "public-service",
+      "country": "Germany",
+      "home_url": "https://www.dw.com/en/",
+      "rating_basis": "AllSides media bias rating (Center), checked Oct 2026"
+    },
+    {
+      "id": "aljazeera",
+      "name": "Al Jazeera English",
+      "lean": null,
+      "region": "middle_east",
+      "bloc": "east",
+      "ownership": "state-funded",
+      "country": "Qatar",
+      "home_url": "https://www.aljazeera.com/",
+      "rating_basis": "Funded by the State of Qatar; no left/right tag applied"
+    },
+    {
+      "id": "thenational",
+      "name": "The National (UAE)",
+      "lean": null,
+      "region": "middle_east",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "United Arab Emirates",
+      "home_url": "https://www.thenationalnews.com/",
+      "rating_basis": "Owned by International Media Investments (Abu Dhabi); no left/right tag applied"
+    },
+    {
+      "id": "timesofisrael",
+      "name": "The Times of Israel",
+      "lean": null,
+      "region": "middle_east",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "Israel",
+      "home_url": "https://www.timesofisrael.com/",
+      "rating_basis": "Privately owned; no left/right tag applied"
+    },
+    {
+      "id": "cgtn",
+      "name": "CGTN",
+      "lean": null,
+      "region": "asia",
+      "bloc": "east",
+      "ownership": "state-controlled",
+      "country": "China",
+      "home_url": "https://www.cgtn.com/",
+      "rating_basis": "China Global Television Network, part of state broadcaster China Media Group"
+    },
+    {
+      "id": "ecns",
+      "name": "ECNS (China News Service)",
+      "lean": null,
+      "region": "asia",
+      "bloc": "east",
+      "ownership": "state-controlled",
+      "country": "China",
+      "home_url": "https://www.ecns.cn/",
+      "rating_basis": "English service of China News Service, a state news agency"
+    },
+    {
+      "id": "scmp",
+      "name": "South China Morning Post",
+      "lean": null,
+      "region": "asia",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "Hong Kong",
+      "home_url": "https://www.scmp.com/",
+      "rating_basis": "Owned by Alibaba Group; no left/right tag applied"
+    },
+    {
+      "id": "toi",
+      "name": "The Times of India",
+      "lean": null,
+      "region": "asia",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "India",
+      "home_url": "https://timesofindia.indiatimes.com/",
+      "rating_basis": "Privately owned (Bennett, Coleman & Co.); no left/right tag applied"
+    },
+    {
+      "id": "thehindu",
+      "name": "The Hindu",
+      "lean": null,
+      "region": "asia",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "India",
+      "home_url": "https://www.thehindu.com/",
+      "rating_basis": "Privately owned (The Hindu Group); no left/right tag applied"
+    },
+    {
+      "id": "moscowtimes",
+      "name": "The Moscow Times",
+      "lean": null,
+      "region": "europe",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "Russia",
+      "home_url": "https://www.themoscowtimes.com/",
+      "rating_basis": "Independent, Amsterdam-based since 2022; designated \"undesirable\" by Russia; no left/right tag applied"
+    },
+    {
+      "id": "japantimes",
+      "name": "The Japan Times",
+      "lean": null,
+      "region": "asia",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "Japan",
+      "home_url": "https://www.japantimes.co.jp/",
+      "rating_basis": "Privately owned (News2u Holdings); no left/right tag applied"
+    },
+    {
+      "id": "koreaherald",
+      "name": "The Korea Herald",
+      "lean": null,
+      "region": "asia",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "South Korea",
+      "home_url": "https://www.koreaherald.com/",
+      "rating_basis": "Privately owned (Herald Corporation); no left/right tag applied"
+    }
+  ],
+  "stories": [
+    {
+      "id": "5e968108ceaa",
+      "title": "Democrats win control of both the House and Senate in US midterm elections",
+      "rank": 1,
+      "outlet_count": 17,
+      "coverage": {
+        "lean": {
+          "left": 4,
+          "centre": 4,
+          "right": 3
+        },
+        "bloc": {
+          "west": 11,
+          "east": 6
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "e281c73f1797",
+          "outlet_id": "japantimes",
+          "headline": "Democrats clinch huge wins on inflation anger and Trump fatigue",
+          "snippet": "The party flipped Senate seats in Republican bastions and racked up wins in competitive House races.",
+          "url": "https://www.japantimes.co.jp/news/2026/11/04/world/politics/america-us-midterms-vote-congress/",
+          "published_at": "2026-11-04T04:45:00Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.japantimes.co.jp/japantimes/uploads/images/2026/11/04/thumbs/400x400/572298.jpg"
+        },
+        {
+          "id": "32f6437fabc9",
+          "outlet_id": "scmp",
+          "headline": "US voters unleash blue wave, handing Congress to Democrats in rebuke to Trump",
+          "snippet": "Follow the SCMP’s live coverage here After weeks of insults, fearmongering and eye-popping spending on advertising, Americans settled down to vote on Tuesday, unleashing a blue wave that saw…",
+          "url": "https://www.scmp.com/news/us/politics/article/3373224/us-voters-unleash-blue-wave-handing-congress-democrats-and-rebuking-trump",
+          "published_at": "2026-11-04T05:33:25Z",
+          "published_at_estimated": false,
+          "image_url": "https://cdn.i-scmp.com/sites/default/files/styles/1280x720/public/d8/images/canvas/2026/11/04/3a7f5446-5469-435e-9cfc-94bdaf57c1c7_d08808c8.jpg?itok=JgfsYWKD&v=1793770394"
+        },
+        {
+          "id": "e5db7c0ddc6e",
+          "outlet_id": "axios",
+          "headline": "GOP's red wall comes crashing down",
+          "snippet": "Senate Republicans' worst nightmare came true Tuesday night, as they watched red state after red state fall to a historic Democratic wave. Why it matters: It's hard to remember now, but Republicans…",
+          "url": "https://www.axios.com/2026/11/04/senate-republicans-trump-midterm-elections",
+          "published_at": "2026-11-04T05:43:15Z",
+          "published_at_estimated": false,
+          "image_url": "https://images.axios.com/4rAjil3PM2ASJhoKCkA7mQ_sn54=/0x704:7872x5132/1366x768/2026/11/04/1793770598232.jpeg"
+        },
+        {
+          "id": "4da7850c1eb2",
+          "outlet_id": "nyt",
+          "headline": "Democrats Win Big",
+          "snippet": "The party has flipped key seats in Republican strongholds, as voters rebuked Trump.",
+          "url": "https://www.nytimes.com/2026/11/03/world/us-midterms-trump-iran-ukraine.html",
+          "published_at": "2026-11-04T05:45:07Z",
+          "published_at_estimated": false,
+          "image_url": "https://static01.nyt.com/images/2026/11/04/multimedia/04int-theworld-midterms-virginia-qvcf/04int-theworld-midterms-virginia-qvcf-mediumSquareAt3X-v2.jpg"
+        },
+        {
+          "id": "951a847079e4",
+          "outlet_id": "bbc",
+          "headline": "Anthony Zurcher: Democrats push deep into Trump heartland on historic night",
+          "snippet": "Two Senate races that a year ago were thought to be battlegrounds turned out to be slam-dunks for the Democrats.",
+          "url": "https://www.bbc.co.uk/news/articles/cwz0v5lv30lyo",
+          "published_at": "2026-11-04T06:53:56Z",
+          "published_at_estimated": false,
+          "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/4923/live/c29a9fb0-d82c-11f1-a701-fddedf244c16.jpg"
+        },
+        {
+          "id": "e8c528feba1f",
+          "outlet_id": "axios",
+          "headline": "The 5 biggest shockers of Democrats' stunning night",
+          "snippet": "In red states and blue, Republicans suffered losses on a scale even Democrats would never have dared to dream about 24 hours ago. Why it matters: Democrats worried that polls showing a blue wave…",
+          "url": "https://www.axios.com/2026/11/04/five-biggest-shocks-democrats-midterm-results",
+          "published_at": "2026-11-04T07:31:20Z",
+          "published_at_estimated": false,
+          "image_url": "https://images.axios.com/bwSNIVX0F_Lqi_-klilgE9_j1XU=/0x0:7854x4418/1366x768/2026/11/04/1793777182398.jpeg"
+        },
+        {
+          "id": "5ab594828b4b",
+          "outlet_id": "axios",
+          "headline": "WIPEOUT: GOP LOSES HOUSE AND SENATE",
+          "snippet": "Republicans lost deep-red Senate seats in South Carolina, Kansas and Texas as well as House seats nationwide, AP projects, giving Democrats control of both chambers of Congress. Why it matters…",
+          "url": "https://www.axios.com/2026/11/03/election-day-midterm-trump-democrats-republicans",
+          "published_at": "2026-11-04T07:34:15Z",
+          "published_at_estimated": false,
+          "image_url": "https://images.axios.com/MzXrXye5zyXPSxpJfgMrmNZeG6E=/0x0:1920x1080/1366x768/2026/11/04/1793774976912.jpeg"
+        },
+        {
+          "id": "2369a14deb27",
+          "outlet_id": "thenational",
+          "headline": "Democrats ride inflation wave back into power in Congress",
+          "snippet": "James Carville's mantra rings in my ears every election cycle: \"It's the economy, stupid.\" The famed political strategist coined the phrase in 1992 but it's still relevant now, with the Democrats on…",
+          "url": "https://www.thenationalnews.com/opinion/comment/2026/11/04/democrats-ride-inflation-wave-back-into-power-in-congress/",
+          "published_at": "2026-11-04T07:54:26Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.thenationalnews.com/resizer/v2/XJYEFLHGHLDFXXP6WDYVE2E4PI.jpg?auth=6ab5ba01e5e6ff78e9663f07466ba66b2c850489617761aaa869be9014bf6a00&smart=true&width=3285&height=2190"
+        },
+        {
+          "id": "6cd6c74c3a15",
+          "outlet_id": "bbc",
+          "headline": "Tears, celebrations and selfies: US midterms in pictures",
+          "snippet": "Democrats cheered as they picked up victories in Republican states. Tears were shed as Republican losses mounted.",
+          "url": "https://www.bbc.co.uk/news/articles/cq74pexm44elo",
+          "published_at": "2026-11-04T08:05:53Z",
+          "published_at_estimated": false,
+          "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/542e/live/f2cd3c50-d83c-11f1-a701-fddedf244c16.jpg"
+        },
+        {
+          "id": "9ad81ce9e8bc",
+          "outlet_id": "scmp",
+          "headline": "Trump suffers midterms trouncing weeks before Xi meeting",
+          "snippet": "Democrats won control of both houses of Congress in midterm elections as US voters punished President Donald Trump over inflation, corruption and rising healthcare costs. The party was on track for…",
+          "url": "https://www.scmp.com/plus/news/us/us-elections/article/3373259/trump-suffers-midterms-trouncing-weeks-xi-meeting",
+          "published_at": "2026-11-04T09:24:47Z",
+          "published_at_estimated": false,
+          "image_url": "https://cdn.i-scmp.com/sites/default/files/styles/1280x720/public/d8/images/canvas/2026/11/04/d6816518-c9c8-460b-983b-365bc4c5bac5_b2183c69.jpg?itok=7PqZfSNF&v=1793784277"
+        },
+        {
+          "id": "b59e5350d82a",
+          "outlet_id": "france24",
+          "headline": "Iran war, Epstein, impeachment? What will Democrats do with control of Congress?",
+          "snippet": "Democrats have dominated the US midterm elections and are set to take both the House of Representatives and the Senate giving them a swathe of new powers. After the new Congress is sworn in on…",
+          "url": "https://www.france24.com/en/video/20261104-iran-war-epstein-impeachment-what-will-democrats-do-with-control-of-congress",
+          "published_at": "2026-11-04T09:26:55Z",
+          "published_at_estimated": false,
+          "image_url": "https://s.france24.com/media/display/c1966af6-d82f-11f1-9e3b-a575454bc579/w:1024/p:16x9/EN-20261104-093324-093516-CS.jpg"
+        },
+        {
+          "id": "9f5286d89ab6",
+          "outlet_id": "timesofisrael",
+          "headline": "Democrats take control of US House and Senate in sharp rebuke of Trump, Republicans",
+          "snippet": "Democrats flip states that GOP held for decades and that Trump won by double digits, as voters air frustrations over high prices and Iran war; Israel critics among victors",
+          "url": "https://www.timesofisrael.com/democrats-take-control-of-us-house-and-senate-in-sharp-rebuke-of-trump-republicans/",
+          "published_at": "2026-11-04T09:32:16Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "f1adf9b727fb",
+          "outlet_id": "france24",
+          "headline": "Why the Democrats routed the Republicans in the US midterm elections",
+          "snippet": "US voters on Tuesday handed the Democratic Party control over Congress in a biting rebuke to President Donald Trump and his MAGA movement. Polls suggest that rising anger about the cost-of-living…",
+          "url": "https://www.france24.com/en/americas/20261104-why-the-democrats-routed-republicans-us-midterm-elections",
+          "published_at": "2026-11-04T09:41:10Z",
+          "published_at_estimated": false,
+          "image_url": "https://s.france24.com/media/display/73f0a7a4-d81f-11f1-a4bb-d18c5759e759/w:1024/p:16x9/democrat-victory.jpg"
+        },
+        {
+          "id": "f84d6ea1d22f",
+          "outlet_id": "bbc",
+          "headline": "How America voted in maps and charts",
+          "snippet": "See the maps and charts that show how America voted in the US midterm elections.",
+          "url": "https://www.bbc.co.uk/news/articles/cm4g1j0n92qdo",
+          "published_at": "2026-11-04T09:53:18Z",
+          "published_at_estimated": false,
+          "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/125b/live/b5cca010-d6e4-11f1-93e1-3b657b665bcf.png"
+        },
+        {
+          "id": "8013e6bb9b3c",
+          "outlet_id": "france24",
+          "headline": "'Blue tsunami' in US midterms 'pummels GOP out of power'",
+          "snippet": "PRESS REVIEW – Wednesday, November 4: US papers react to the results of the midterm elections, with Democrats retaking control of Congress and the headlines running from a \"repudiation\" of US…",
+          "url": "https://www.france24.com/en/tv-shows/press-review/20261104-blue-tsunami-in-us-midterms-pummels-gop-out-of-power",
+          "published_at": "2026-11-04T09:53:27Z",
+          "published_at_estimated": false,
+          "image_url": "https://s.france24.com/media/display/221f8fe4-d833-11f1-9122-d18c5759e759/w:1024/p:16x9/capture-a355551b.jpg"
+        },
+        {
+          "id": "2d951ecfd3c0",
+          "outlet_id": "axios",
+          "headline": "Everything you need to know about last night in under 1,000 words",
+          "snippet": "It was a drubbing on a scale that neither side saw coming: Democrats pummeled Republicans across the battleground map and into some of the most MAGA-friendly terrain in the country. Why it matters…",
+          "url": "https://www.axios.com/2026/11/04/midterm-election-winners-losers-results",
+          "published_at": "2026-11-04T09:55:06Z",
+          "published_at_estimated": false,
+          "image_url": "https://images.axios.com/YzvkZ-WKbgaEJl6fsx2m_spvvmA=/0x0:1920x1080/1366x768/2026/05/19/1779208674631.jpeg"
+        },
+        {
+          "id": "9916fe51c6e3",
+          "outlet_id": "axios",
+          "headline": "Blue tsunami breaks MAGA: 5 takeaways from a blowout midterm election",
+          "snippet": "President Trump's Republican Party suffered an electoral humiliation Tuesday night that stretched across the battleground map and into some of the deepest-red territory in America. Why it matters…",
+          "url": "https://www.axios.com/2026/11/04/midterm-takeaways-blue-wave-trump-democrats",
+          "published_at": "2026-11-04T10:00:07Z",
+          "published_at_estimated": false,
+          "image_url": "https://images.axios.com/JwKF1kOfCYulzA11HYKFYunN83k=/0x0:1920x1080/1366x768/2026/11/04/1793768631800.jpeg"
+        },
+        {
+          "id": "8ada9a91de4e",
+          "outlet_id": "scmp",
+          "headline": "US midterm takeaways: Trump’s blame game, Elon’s space lasers and the rest of the world",
+          "snippet": "Follow the SCMP’s live coverage here Democrats won control of both chambers of the US Congress in Tuesday’s midterm elections, dealing a heavy blow to President Donald Trump as voters vented…",
+          "url": "https://www.scmp.com/news/china/diplomacy/article/3373270/us-midterm-takeaways-trumps-blame-game-elons-space-lasers-and-rest-world",
+          "published_at": "2026-11-04T10:00:22Z",
+          "published_at_estimated": false,
+          "image_url": "https://cdn.i-scmp.com/sites/default/files/styles/1280x720/public/d8/images/canvas/2026/11/04/a67f9780-7ea7-48e0-a734-b2c626c3a9de_4ec7c7a1.jpg?itok=oVFAOHG_&v=1793786417"
+        },
+        {
+          "id": "04e6ba672ed7",
+          "outlet_id": "france24",
+          "headline": "'A generational win' for Dems as blue wave sweeps midterms",
+          "snippet": "Democrats seized control of the US Congress on Tuesday, capturing the Senate and House of Representatives in a stunning, nationwide rejection of Donald Trump. France 24's Wassim Cornet says it is…",
+          "url": "https://www.france24.com/en/video/20261104-a-generational-win-for-dems-as-blue-wave-sweeps-midterms",
+          "published_at": "2026-11-04T10:11:03Z",
+          "published_at_estimated": false,
+          "image_url": "https://s.france24.com/media/display/4083aa5a-d834-11f1-a909-695cb59fade5/w:1024/p:16x9/EN-20261104-100541-100943-CS.jpg"
+        },
+        {
+          "id": "a50d4234bb39",
+          "outlet_id": "aljazeera",
+          "headline": "Photos: US Democrats celebrate winning control of Congress",
+          "snippet": "Democrats flipped seats that had long been held by Republicans in a wave of historic leadership firsts.",
+          "url": "https://www.aljazeera.com/gallery/2026/11/4/photos-us-democrats-celebrate-winning-control-of-congress",
+          "published_at": "2026-11-04T10:18:10Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "e8b5c38ee2d1",
+          "outlet_id": "aljazeera",
+          "headline": "Democrats win control of House and Senate: Key US midterms takeaways",
+          "snippet": "This is the first time in 20 years that a Republican president has lost both houses of US Congress.",
+          "url": "https://www.aljazeera.com/news/2026/11/4/democrats-win-control-of-house-and-senate-key-us-midterms-takeaways",
+          "published_at": "2026-11-04T10:39:52Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "87caf476555e",
+          "outlet_id": "thehindu",
+          "headline": "Democrats win U.S. House in growing midterms wave against Trump",
+          "snippet": "A Democratic House majority would give the Opposition the power to block Mr. Trump’s legislative agenda and launch sweeping investigations of his administration during the final two years of his…",
+          "url": "https://www.thehindu.com/news/international/democrats-win-us-house-in-growing-midterms-wave-against-trump/article71663879.ece",
+          "published_at": "2026-11-04T10:53:56Z",
+          "published_at_estimated": false,
+          "image_url": "https://th-i.thgim.com/public/news/international/dyyjq0/article71663886.ece/alternates/LANDSCAPE_1200/Democrats.jpg"
+        },
+        {
+          "id": "9c16b60b26dd",
+          "outlet_id": "thehindu",
+          "headline": "Democrats win U.S. Congress in midterm rout of U.S. President Donald Trump",
+          "snippet": "The Opposition party also retained key Senate seats, while victory in Georgia’s Governor race added to mounting signs that Republicans face a difficult night",
+          "url": "https://www.thehindu.com/news/international/us-midterm-elections-2026-senate-governor-races-winners-losers-trump-republicans-democrats-news/article71663818.ece",
+          "published_at": "2026-11-04T10:59:04Z",
+          "published_at_estimated": false,
+          "image_url": "https://th-i.thgim.com/public/incoming/j2s5sp/article71663845.ece/alternates/LANDSCAPE_1200/2026-11-04T030116Z_716209600_RC2QGOA7QDFN_RTRMADP_3_USA-ELECTION-GEORGIA.JPG"
+        },
+        {
+          "id": "081f885fe226",
+          "outlet_id": "axios",
+          "headline": "Behind the Curtain: The Trump obliteration",
+          "snippet": "Make no mistake: Democrats won by epic, sometimes historic margins across red and blue states, up and down ballots, obliterating almost everything President Trump, and a Republican Party remade…",
+          "url": "https://www.axios.com/2026/11/04/behind-the-curtain-the-trump-obliteration",
+          "published_at": "2026-11-04T11:02:17Z",
+          "published_at_estimated": false,
+          "image_url": "https://images.axios.com/6zYhrPJ0YhcohFrrNgkqaZtVMLQ=/0x0:1920x1080/1366x768/2026/11/04/1793789094986.jpg"
+        },
+        {
+          "id": "e07c64dfa9d4",
+          "outlet_id": "france24",
+          "headline": "From Kansas to Texas, Democrats win big in Republican heartlands",
+          "snippet": "The Democrats are set to take control of both the House and the Senate following victories in states like South Carolina, Kansas, and Texas, whose switching blue constitutes an historic upset…",
+          "url": "https://www.france24.com/en/video/20261104-from-kansas-to-texas-democrats-win-big-in-republican-heartlands",
+          "published_at": "2026-11-04T11:15:51Z",
+          "published_at_estimated": false,
+          "image_url": "https://s.france24.com/media/display/c87b306e-d83d-11f1-b1fb-695cb59fade5/w:1024/p:16x9/EN-20261104-110922-111147-CS.jpg"
+        },
+        {
+          "id": "924a67b091e1",
+          "outlet_id": "aljazeera",
+          "headline": "Why Democrats may struggle to rein in Trump’s foreign policy",
+          "snippet": "US President Donald Trump's foreign policy agenda faces new constraints after midterm losses.",
+          "url": "https://www.aljazeera.com/video/newsfeed/2026/11/4/why-democrats-may-struggle-to-rein-in-trumps-foreign-policy",
+          "published_at": "2026-11-04T11:16:40Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "88f8e2c71fa1",
+          "outlet_id": "thenational",
+          "headline": "US midterms latest: Democrats take House and Senate in stinging rebuke to Trump",
+          "snippet": "epaselect epa13351706 US Democratic House Minority Leader Hakeem Jeffries (C) celebrates with Minority Whip Katherine Clark (L) and Chair of the Democratic Congressional Campaign Committee (DCCC)…",
+          "url": "https://www.thenationalnews.com/news/us/2026/11/04/live-us-midterms-election-results/",
+          "published_at": "2026-11-04T11:41:16Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.thenationalnews.com/resizer/v2/SKA3FXULHVB3HPMZQG6YIZZOBA.jpg?auth=657a7152868d2b794965ae72fb4510e1a8299b66b20c01f4d53f7ef0c5ecfc7f&smart=true&width=7860&height=5243"
+        },
+        {
+          "id": "ebd662a60457",
+          "outlet_id": "nypost",
+          "headline": "Five takeaways from Democrats’ historic midterm blue tsunami",
+          "snippet": "Trump urged voters to act as if he were on the ballot during his campaign-rally blitz in the weeks leading up to midterms. The strategy backfired.",
+          "url": "https://nypost.com/2026/11/04/us-news/5-takeaways-from-democrats-historic-midterm-blue-tsunami/",
+          "published_at": "2026-11-04T11:51:37Z",
+          "published_at_estimated": false,
+          "image_url": "https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2FMT1USATODAY30263419-1823707178-3.jpg?w%3D1024"
+        },
+        {
+          "id": "1551e4b65046",
+          "outlet_id": "nbc",
+          "headline": "5 key insights from the NBC News Exit Poll about the blue tsunami",
+          "snippet": "Voters expressed feeling fed up with the economy; Democratic candidates emerged more well-liked and Trump was resoundingly rejected.",
+          "url": "https://www.nbcnews.com/politics/2026-election/nbc-news-exit-poll-democrats-victory-trump-economy-rcna607391",
+          "published_at": "2026-11-04T11:52:29Z",
+          "published_at_estimated": false,
+          "image_url": "https://media-cldnry.s-nbcnews.com/image/upload/t_fit_1500w/rockcms/2026-11/261103-midterms-mb-0945-0a7aeb.jpg"
+        },
+        {
+          "id": "825462d103e5",
+          "outlet_id": "bbc",
+          "headline": "Everything you need to know from the US midterm elections",
+          "snippet": "Democrats secured some big wins - and a few historic firsts - earning congratulations from President Trump.",
+          "url": "https://www.bbc.co.uk/news/articles/cmr4y92rgd9po",
+          "published_at": "2026-11-04T12:01:07Z",
+          "published_at_estimated": false,
+          "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/2bcf/live/c31f31d0-d854-11f1-93e1-3b657b665bcf.jpg"
+        },
+        {
+          "id": "74dac07ffb5e",
+          "outlet_id": "npr",
+          "headline": "6 takeaways from Democrats' big wave on election night",
+          "snippet": "The magnitude of the Democrats' outcome was always a possibility, but the depth and breadth of their victories were jaw-dropping.",
+          "url": "https://www.npr.org/2026/11/04/nx-s1-6022216/midterms-democrats-trump-republicans-analysis",
+          "published_at": "2026-11-04T12:02:38Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "25b1414bb79e",
+          "outlet_id": "npr",
+          "headline": "Democrats seize full control of Congress. And, which candidates made history last night",
+          "snippet": "Democrats have won the House and the Senate, taking full control of Congress for the first time since 2023. And history was made in several states. Here's what happened last night.",
+          "url": "https://www.npr.org/2026/11/04/g-s1-151745/up-first-newsletter-midterms-democrats-congress-control",
+          "published_at": "2026-11-04T12:18:39Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "c75b77c7df8a",
+          "outlet_id": "aljazeera",
+          "headline": "America is heading for two years of constitutional brinkmanship",
+          "snippet": "An unlikely mix of political bargains and constitutional confrontation will define the next two years.",
+          "url": "https://www.aljazeera.com/opinions/2026/11/4/america-is-heading-for-two-years-of-constitutional-brinkmanship",
+          "published_at": "2026-11-04T12:22:55Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "ad8554b419ab",
+          "outlet_id": "examiner",
+          "headline": "Takeaways from the 2026 midterm elections",
+          "snippet": "The midterm elections turned out to be a brutal loss for Republicans as they lost control of both chambers of Congress on Tuesday. The results can be viewed as a rejection of President Donald…",
+          "url": "https://www.washingtonexaminer.com/news/campaigns/4791815/takeaways-2026-midterm-elections/",
+          "published_at": "2026-11-04T12:29:17Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.washingtonexaminer.com/wp-content/uploads/2026/10/Blue-Wave-5.png?w=1024"
+        },
+        {
+          "id": "4c8fb1109dea",
+          "outlet_id": "aljazeera",
+          "headline": "Can Democrats stop Iran war, reverse Trump’s tariffs after midterms win?",
+          "snippet": "Democrats can block Trump's legislative agenda, launch investigations but don't have the numbers to override his veto.",
+          "url": "https://www.aljazeera.com/news/2026/11/4/tariffs-to-iran-war-can-democrats-reverse-trump-policy-with-midterms-win",
+          "published_at": "2026-11-04T12:48:11Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "3e6a12092252",
+          "outlet_id": "thenational",
+          "headline": "US midterms 2026: As Democrats take the House and the Senate, what comes next?",
+          "snippet": "New York Governor Kathy Hochul, candidate for reelection, Democratic candidate for Lieutenant Governor of New York Adrienne Adams, Democratic candidate for New York State Comptroller Tom DiNapoli…",
+          "url": "https://www.thenationalnews.com/news/us/2026/11/04/watch-live-us-elections-2026-democrats-win-middle-east-iran-war/",
+          "published_at": "2026-11-04T12:57:12Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.thenationalnews.com/resizer/v2/X7GFU636GYHWQFCP7KTGBFPFAI.jpg?auth=789c7e8cc66057373cf0fc7b4243b7598b22da7ab2a5e454bd25a795f787bd95&smart=true&width=3607&height=2405"
+        },
+        {
+          "id": "988366f219c0",
+          "outlet_id": "dailymail",
+          "headline": "The biggest race upsets that handed Democrats sweeping control of Congress… resulting in these new lawmakers who will be a thorn in Trump's side",
+          "snippet": "Democrats have flipped control of the House of Representatives after a handful of swing races went blue, handing President Donald Trump a major check on his power.",
+          "url": "https://www.dailymail.com/news/article-16240391/biggest-race-upsets-house-senate.html",
+          "published_at": "2026-11-04T13:02:40Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.dailymail.com/1s/2026/10/28/18/112153487-0-image-m-30_1793213601462.jpg"
+        },
+        {
+          "id": "0dfb09d376de",
+          "outlet_id": "dailymail",
+          "headline": "Trump's family nightmare: Democrat plot to drag his children and Melania through two years of hell after midterms mauling... but his secret plan is already underway",
+          "snippet": "He will spend the final two years of his presidency fending off corruption investigations into himself and his family, battling legislative gridlock, and embroiled in spending battles.",
+          "url": "https://www.dailymail.com/news/article-16257617/trump-democrats-house-investigations-family.html",
+          "published_at": "2026-11-04T13:09:03Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.dailymail.com/1s/2026/11/03/02/112251619-0-image-a-5_1793674647758.jpg"
+        },
+        {
+          "id": "a7e645db50c2",
+          "outlet_id": "nbc",
+          "headline": "Photos: Celebration and gloom as blue wave sweeps midterms",
+          "snippet": "Joy and despair punctuated election watch parties overnight after a blue tsunami swept the country’s midterm elections.",
+          "url": "https://www.nbcnews.com/politics/elections/photos-celebration-mourning-blue-wave-sweeps-midterms-rcna607385",
+          "published_at": "2026-11-04T13:09:12Z",
+          "published_at_estimated": false,
+          "image_url": "https://media-cldnry.s-nbcnews.com/image/upload/t_fit_1500w/rockcms/2026-11/261103-midterms-mb-0938-442f8d.jpg"
+        },
+        {
+          "id": "df55caa17307",
+          "outlet_id": "dailymail",
+          "headline": "MAGA goes into meltdown over humiliating midterms defeat as Ben Shapiro declares 'we're just getting wiped out' while Trump launches bitter blame game",
+          "snippet": "The Democrats seized control of both chambers of Congress, securing potentially sizable majorities in the House and Senate within hours of polls closing.",
+          "url": "https://www.dailymail.com/news/article-16264093/MAGA-goes-meltdown-humiliating-midterms-defeat-Ben-Shapiro-declares-just-getting-wiped-Trump-launches-bitter-blame-game.html",
+          "published_at": "2026-11-04T13:11:02Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.dailymail.com/1s/2026/11/04/05/112288617-0-image-a-7_1793771422080.jpg"
+        },
+        {
+          "id": "9b66a65d258f",
+          "outlet_id": "examiner",
+          "headline": "Exit polls of 2026 voters find Democrats had edge on all issues aside from immigration",
+          "snippet": "NBC exit polls showed 2026 voters preferred Democrats on every issue aside from immigration, with affordability and economics playing a pivotal role. As Republicans scramble to comprehend the…",
+          "url": "https://www.washingtonexaminer.com/news/campaigns/congressional/4791823/exit-poll-2026-voter-democrats-edge-all-issue/",
+          "published_at": "2026-11-04T13:30:06Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.washingtonexaminer.com/wp-content/uploads/2023/12/2773a1dc8d01340c5ca5993323cfeb27-e1793798814119.jpg?w=1024"
+        },
+        {
+          "id": "56f65dfd1fa7",
+          "outlet_id": "guardian",
+          "headline": "US midterm elections 2026 live updates: Democrats take control of Congress in major setback for Trump",
+          "snippet": "Democrats flip seven Senate seats in Kansas, Iowa, Texas, Maine, Ohio, North Carolina and South Carolina; ‘blue wave’ rejects Trump’s agenda Track live results from all 50 states Full report…",
+          "url": "https://www.theguardian.com/us-news/live/2026/nov/04/midterm-elections-results-senate-house-michigan-maine-mississippi-latest-updates",
+          "published_at": "2026-11-04T13:52:24Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.guim.co.uk/img/media/2289c25cb92bd6c75d4bf752e0d4b85e41ef3df2/459_0_4162_3329/master/4162.jpg?width=460&quality=85&auto=format&fit=max&s=4f48ab830555ba58b6c25d18c72431a5"
+        },
+        {
+          "id": "1d8bbf1db313",
+          "outlet_id": "independent",
+          "headline": "Will the Democrats try to impeach Trump for a third time? Here's what may happen",
+          "snippet": "",
+          "url": "https://www.independent.co.uk/bulletin/news/trump-impeachment-midterm-elections-democrat-b3079115.html",
+          "published_at": "2026-11-04T13:54:54Z",
+          "published_at_estimated": false,
+          "image_url": "https://static.independent.co.uk/2026/11/04/10/27/GettyImages-2196996771-cf834ecb.jpeg?width=1200&auto=webp&trim=0%2C0%2C0%2C0"
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "Democrats won control of both chambers of Congress, the House and the Senate.",
+          "sources": [
+            "5ab594828b4b",
+            "b59e5350d82a",
+            "f1adf9b727fb",
+            "04e6ba672ed7",
+            "e07c64dfa9d4",
+            "25b1414bb79e",
+            "ad8554b419ab",
+            "df55caa17307",
+            "56f65dfd1fa7",
+            "9ad81ce9e8bc",
+            "9f5286d89ab6",
+            "8ada9a91de4e",
+            "e8b5c38ee2d1",
+            "9c16b60b26dd",
+            "88f8e2c71fa1",
+            "3e6a12092252",
+            "32f6437fabc9",
+            "a50d4234bb39",
+            "2369a14deb27"
+          ]
+        },
+        {
+          "text": "Democrats flipped seats in long-held Republican territory and states Trump had won.",
+          "sources": [
+            "e281c73f1797",
+            "4da7850c1eb2",
+            "951a847079e4",
+            "6cd6c74c3a15",
+            "9f5286d89ab6",
+            "a50d4234bb39",
+            "e07c64dfa9d4",
+            "5ab594828b4b",
+            "e5db7c0ddc6e",
+            "9916fe51c6e3",
+            "2d951ecfd3c0"
+          ]
+        },
+        {
+          "text": "Senate seats in South Carolina, Kansas and Texas were among those Democrats won.",
+          "sources": [
+            "5ab594828b4b",
+            "e07c64dfa9d4",
+            "56f65dfd1fa7"
+          ]
+        },
+        {
+          "text": "The result is described as a rebuke or rejection of President Trump.",
+          "sources": [
+            "4da7850c1eb2",
+            "f1adf9b727fb",
+            "04e6ba672ed7",
+            "ad8554b419ab",
+            "56f65dfd1fa7",
+            "1551e4b65046",
+            "32f6437fabc9",
+            "9f5286d89ab6",
+            "88f8e2c71fa1"
+          ]
+        },
+        {
+          "text": "Inflation, prices, the cost of living and the economy are cited as factors in voters' choices.",
+          "sources": [
+            "e281c73f1797",
+            "2369a14deb27",
+            "9ad81ce9e8bc",
+            "9f5286d89ab6",
+            "f1adf9b727fb",
+            "1551e4b65046",
+            "9b66a65d258f"
+          ]
+        },
+        {
+          "text": "Democratic control gives the party power to check Trump, block his agenda and open investigations.",
+          "sources": [
+            "87caf476555e",
+            "4c8fb1109dea",
+            "0dfb09d376de",
+            "988366f219c0"
+          ]
+        },
+        {
+          "text": "Several historic firsts were recorded among the winning candidates.",
+          "sources": [
+            "825462d103e5",
+            "25b1414bb79e",
+            "a50d4234bb39"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "4da7850c1eb2",
+              "quote": "Democrats Win Big",
+              "field": "headline"
+            },
+            {
+              "article_id": "56f65dfd1fa7",
+              "quote": "major setback for Trump",
+              "field": "headline"
+            },
+            {
+              "article_id": "1551e4b65046",
+              "quote": "Trump was resoundingly rejected",
+              "field": "snippet"
+            },
+            {
+              "article_id": "1d8bbf1db313",
+              "quote": "Will the Democrats try to impeach Trump for a third time?",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the result as a rejection of Trump and his agenda.",
+              "sources": [
+                "4da7850c1eb2",
+                "56f65dfd1fa7",
+                "1551e4b65046"
+              ]
+            },
+            {
+              "text": "Lists seven flipped Senate seats, including Iowa, Maine, Ohio and North Carolina.",
+              "sources": [
+                "56f65dfd1fa7"
+              ]
+            },
+            {
+              "text": "Highlights exit poll findings on voters' frustration with the economy.",
+              "sources": [
+                "1551e4b65046"
+              ]
+            },
+            {
+              "text": "Raises the prospect of another impeachment of Trump.",
+              "sources": [
+                "1d8bbf1db313"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "e5db7c0ddc6e",
+              "quote": "GOP's red wall comes crashing down",
+              "field": "headline"
+            },
+            {
+              "article_id": "5ab594828b4b",
+              "quote": "WIPEOUT: GOP LOSES HOUSE AND SENATE",
+              "field": "headline"
+            },
+            {
+              "article_id": "9916fe51c6e3",
+              "quote": "Blue tsunami breaks MAGA",
+              "field": "headline"
+            },
+            {
+              "article_id": "951a847079e4",
+              "quote": "Democrats push deep into Trump heartland on historic night",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Foregrounds the scale of the result and Republican losses in deep-red states.",
+              "sources": [
+                "e5db7c0ddc6e",
+                "e8c528feba1f",
+                "5ab594828b4b",
+                "2d951ecfd3c0",
+                "9916fe51c6e3",
+                "081f885fe226",
+                "e07c64dfa9d4",
+                "74dac07ffb5e"
+              ]
+            },
+            {
+              "text": "Asks what Democrats will do with Congress, naming the Iran war, Epstein and impeachment.",
+              "sources": [
+                "b59e5350d82a"
+              ]
+            },
+            {
+              "text": "Attributes the result partly to anger over the cost of living.",
+              "sources": [
+                "f1adf9b727fb"
+              ]
+            },
+            {
+              "text": "Reports that Democrats received congratulations from President Trump.",
+              "sources": [
+                "825462d103e5"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "right",
+          "headline_quotes": [
+            {
+              "article_id": "ebd662a60457",
+              "quote": "The strategy backfired.",
+              "field": "snippet"
+            },
+            {
+              "article_id": "ad8554b419ab",
+              "quote": "a brutal loss for Republicans",
+              "field": "snippet"
+            },
+            {
+              "article_id": "df55caa17307",
+              "quote": "MAGA goes into meltdown over humiliating midterms defeat",
+              "field": "headline"
+            },
+            {
+              "article_id": "0dfb09d376de",
+              "quote": "Democrat plot to drag his children and Melania through two years of hell",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Says Trump's strategy of urging voters to act as if he were on the ballot backfired.",
+              "sources": [
+                "ebd662a60457"
+              ]
+            },
+            {
+              "text": "Leads with reaction in the MAGA movement, quoting Ben Shapiro, and a Trump blame game.",
+              "sources": [
+                "df55caa17307"
+              ]
+            },
+            {
+              "text": "Foregrounds expected corruption investigations into Trump and his family.",
+              "sources": [
+                "0dfb09d376de"
+              ]
+            },
+            {
+              "text": "Reports exit polls showing Democrats ahead on every issue except immigration.",
+              "sources": [
+                "9b66a65d258f"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "right",
+          "text": "Right-leaning coverage does not name the specific Senate seats Democrats flipped, such as South Carolina, Kansas and Texas.",
+          "sources": [
+            "5ab594828b4b",
+            "e07c64dfa9d4",
+            "56f65dfd1fa7"
+          ]
+        },
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not mention exit polls showing immigration as the one issue where Republicans held an edge.",
+          "sources": [
+            "9b66a65d258f"
+          ]
+        },
+        {
+          "lean": "left",
+          "text": "Left-leaning coverage does not mention exit polls showing immigration as the one issue where Republicans held an edge.",
+          "sources": [
+            "9b66a65d258f"
+          ]
+        }
+      ],
+      "contested_claims": [],
+      "opinion": [
+        {
+          "text": "A first-person column invokes James Carville's \"It's the economy, stupid\" to explain the Democratic win.",
+          "sources": [
+            "2369a14deb27"
+          ]
+        },
+        {
+          "text": "A press review reports US papers' reactions, with headlines ranging from a \"repudiation\" of Trump.",
+          "sources": [
+            "8013e6bb9b3c"
+          ]
+        }
+      ],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "e5db7c0ddc6e",
+              "quote": "GOP's red wall comes crashing down",
+              "field": "headline"
+            },
+            {
+              "article_id": "56f65dfd1fa7",
+              "quote": "major setback for Trump",
+              "field": "headline"
+            },
+            {
+              "article_id": "ebd662a60457",
+              "quote": "Five takeaways from Democrats’ historic midterm blue tsunami",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Foregrounds the scale of Republican losses in red states and the historic size of the win.",
+              "sources": [
+                "e5db7c0ddc6e",
+                "5ab594828b4b",
+                "9916fe51c6e3",
+                "951a847079e4",
+                "ebd662a60457"
+              ]
+            },
+            {
+              "text": "Looks ahead to investigations and possible impeachment.",
+              "sources": [
+                "b59e5350d82a",
+                "1d8bbf1db313",
+                "0dfb09d376de"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "9ad81ce9e8bc",
+              "quote": "Trump suffers midterms trouncing weeks before Xi meeting",
+              "field": "headline"
+            },
+            {
+              "article_id": "e281c73f1797",
+              "quote": "Democrats clinch huge wins on inflation anger and Trump fatigue",
+              "field": "headline"
+            },
+            {
+              "article_id": "9f5286d89ab6",
+              "quote": "Israel critics among victors",
+              "field": "snippet"
+            },
+            {
+              "article_id": "924a67b091e1",
+              "quote": "Why Democrats may struggle to rein in Trump’s foreign policy",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Links the result to foreign affairs, including a Trump–Xi meeting, the Iran war and Israel critics among winners.",
+              "sources": [
+                "9ad81ce9e8bc",
+                "9f5286d89ab6",
+                "924a67b091e1",
+                "4c8fb1109dea"
+              ]
+            },
+            {
+              "text": "Notes limits on Democratic power, including lacking the numbers to override a veto.",
+              "sources": [
+                "4c8fb1109dea",
+                "924a67b091e1"
+              ]
+            },
+            {
+              "text": "Notes it is the first time in 20 years a Republican president has lost both houses.",
+              "sources": [
+                "e8b5c38ee2d1"
+              ]
+            },
+            {
+              "text": "Emphasises inflation and prices as drivers of the vote.",
+              "sources": [
+                "e281c73f1797",
+                "2369a14deb27",
+                "9ad81ce9e8bc",
+                "9f5286d89ab6"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "Democrats won control of both the House and the Senate in Tuesday's US midterm elections, flipping Senate seats in Republican-held states such as South Carolina, Kansas and Texas. Outlets describe the result as a rebuke to President Trump, with voter anger over prices and the economy cited as a driver.",
+        "sources": [
+          "5ab594828b4b",
+          "e07c64dfa9d4",
+          "56f65dfd1fa7",
+          "9f5286d89ab6",
+          "f1adf9b727fb",
+          "9ad81ce9e8bc",
+          "e281c73f1797",
+          "ad8554b419ab",
+          "04e6ba672ed7",
+          "88f8e2c71fa1"
+        ]
+      },
+      "conclusion": {
+        "text": "All sides report Democrats winning both chambers and flipping Republican-held seats in a rebuke to Trump. Centre and left lead with the scale of the win, the right with MAGA reaction and investigations of Trump's family, and the East bloc with foreign policy and limits on Democratic power. No factual disputes appear between them.",
+        "sources": [
+          "5ab594828b4b",
+          "56f65dfd1fa7",
+          "9f5286d89ab6",
+          "e5db7c0ddc6e",
+          "df55caa17307",
+          "0dfb09d376de",
+          "9ad81ce9e8bc",
+          "4c8fb1109dea"
+        ]
+      },
+      "validation": {
+        "kept": 51,
+        "dropped_by_reason": {}
+      }
+    },
+    {
+      "id": "7f0d12e876f6",
+      "title": "Trump reacts to midterm losses, acknowledges Iran war role and vows vetoes",
+      "rank": 2,
+      "outlet_count": 11,
+      "coverage": {
+        "lean": {
+          "left": 2,
+          "centre": 3,
+          "right": 1
+        },
+        "bloc": {
+          "west": 6,
+          "east": 5
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "5ab63f2a153e",
+          "outlet_id": "axios",
+          "headline": "Trump says GOP lost because he wasn't on ballot, is \"willing to accept\" results",
+          "snippet": "President Trump said Republicans would have won Tuesday's midterm elections had he been on the ballot. Why it matters: After raging on social media before major races were called, Trump reacted to…",
+          "url": "https://www.axios.com/2026/11/04/trump-republicans-midterms-2026-landslide-blue-wave",
+          "published_at": "2026-11-04T05:00:30Z",
+          "published_at_estimated": false,
+          "image_url": "https://images.axios.com/oCI4PY7xLf1RGUEzbluv25mHr0c=/0x142:5413x3187/1366x768/2026/11/04/1793764070557.jpg"
+        },
+        {
+          "id": "52dbd25e3931",
+          "outlet_id": "axios",
+          "headline": "Trump turns his ire toward Fox News on election night",
+          "snippet": "President Trump lashed out at Fox News on election night, attacking the network's personalities, polling and coverage as voters awaited midterm election results. Why it matters: Trump, who has…",
+          "url": "https://www.axios.com/2026/11/04/trump-fox-news-posts-election-night",
+          "published_at": "2026-11-04T05:10:09Z",
+          "published_at_estimated": false,
+          "image_url": "https://images.axios.com/rMnSBmFw9MXNazCxH95btPgKCTc=/0x0:1920x1080/1366x768/2026/10/07/1791384871867.jpeg"
+        },
+        {
+          "id": "859aaf64be9d",
+          "outlet_id": "scmp",
+          "headline": "‘I wasn’t on the ballot’: Trump deflects blame as Democrats on track to control Congress",
+          "snippet": "Follow the SCMP’s live coverage here In what appears to be an early attempt to distance himself from the Democrats’ historic gains, US President Donald Trump has sought to shift attention away from…",
+          "url": "https://www.scmp.com/news/china/diplomacy/article/3373226/i-wasnt-ballot-trump-deflects-blame-democrats-track-control-congress",
+          "published_at": "2026-11-04T05:48:42Z",
+          "published_at_estimated": false,
+          "image_url": "https://cdn.i-scmp.com/sites/default/files/styles/1280x720/public/d8/images/canvas/2026/11/04/f9a95298-d2e6-4d72-aef5-fd90a15345bc_5e171322.jpg?itok=vGuHc7rO&v=1793771122"
+        },
+        {
+          "id": "6282355b6d92",
+          "outlet_id": "nbc",
+          "headline": "President Trump speaks to various media outlets reacting to midterm results",
+          "snippet": "President Trump speaks to several media outlets reacting to substantial Democratic wins across the country, including in key battleground states and districts. Trump has said that he hopes to both…",
+          "url": "https://www.nbcnews.com/video/president-trump-speaks-to-various-media-outlets-reacting-to-midterm-results-272822853798",
+          "published_at": "2026-11-04T05:54:05Z",
+          "published_at_estimated": false,
+          "image_url": "https://media-cldnry.s-nbcnews.com/image/upload/t_fit_1500w/mpx/2704722219/2026_11/1793771639576_nbc_midterms_trump_reactions_261103_S3_1920x1080-njnxz9.jpg"
+        },
+        {
+          "id": "fe912001746a",
+          "outlet_id": "timesofisrael",
+          "headline": "Trump, conceding stunning midterm loss, admits Iran war and gas prices hurt Republicans",
+          "snippet": "US president says victorious Democrats 'did a good job' after surprise wins in Texas, Kansas and South Carolina; but White House strikes defiant tone: 'Buckle up'",
+          "url": "https://www.timesofisrael.com/trump-conceding-stunning-midterm-loss-admits-iran-war-and-gas-prices-hurt-republicans/",
+          "published_at": "2026-11-04T09:10:31Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "fb1e20acb1b9",
+          "outlet_id": "france24",
+          "headline": "US midterms: Will Trump stick to his word and accept results?",
+          "snippet": "Donald Trump struck a conciliatory note following sweeping victory for the in the midterm elections, telling The New York Times he was \"absolutely willing\" to accept the defeat. But the “crucial…",
+          "url": "https://www.france24.com/en/video/20261104-us-midterms-will-trump-stick-to-his-word-and-accept-results",
+          "published_at": "2026-11-04T09:24:02Z",
+          "published_at_estimated": false,
+          "image_url": "https://s.france24.com/media/display/dff3ec70-d830-11f1-b051-d18c5759e759/w:1024/p:16x9/EN-20261104-091122-091328-CS.jpg"
+        },
+        {
+          "id": "7c89323fa7c6",
+          "outlet_id": "bbc",
+          "headline": "Trump takes aim at Republicans but says Democrats did a 'good job'",
+          "snippet": "He wrote on Truth Social that Republicans would have won \"in a landslide\" if his name had been on the ballot.",
+          "url": "https://www.bbc.co.uk/news/articles/c6073l9y15xxo",
+          "published_at": "2026-11-04T10:15:42Z",
+          "published_at_estimated": false,
+          "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/e6e2/live/3deac2d0-d81e-11f1-a9b6-0f4245e849b7.jpg"
+        },
+        {
+          "id": "ac41fe217ed8",
+          "outlet_id": "thehindu",
+          "headline": "U.S. midterm elections 2026 LIVE: Donald Trump congratulates Democrats on victory, says Iran war played role",
+          "snippet": "The Democrats' midterm election win puts Hakeem Jeffries in line to become the first Black speaker of the U.S. House of Representatives",
+          "url": "https://www.thehindu.com/news/international/us-midterm-elections-2026-senate-governor-races-winners-lossers-live-updates-trump-republicans-democrats-news/article71660811.ece",
+          "published_at": "2026-11-04T10:52:38Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "0fb36920e29e",
+          "outlet_id": "thenational",
+          "headline": "From Mr Veto to a political pundit: Five striking things Trump said about the elections",
+          "snippet": "US President Donald Trump has been vocal about the midterm elections, where Democrats swept the House of Representatives and the Senate on Tuesday, with a series of historic wins in several…",
+          "url": "https://www.thenationalnews.com/news/mena/2026/11/04/from-mr-veto-to-a-political-pundit-five-striking-things-trump-said-about-the-elections/",
+          "published_at": "2026-11-04T11:00:32Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.thenationalnews.com/resizer/v2/ZNXKSPEXYFCT3OOULG3TY4TRK4.jpg?auth=cec7b7492a6c9650a1027aa216dfdbaa28e49d65de2c2a701ed911e18d28cb4c&smart=true&width=1037&height=991"
+        },
+        {
+          "id": "27a0b8923cbd",
+          "outlet_id": "france24",
+          "headline": "Midterms: Trump acknowledges role of Iran war, congratulates Dems",
+          "snippet": "President Donald Trump acknowledged on Wednesday that the US-Israeli war on ​Iran ‌played a role in his party's sweeping ⁠defeat in the midterm elections, as Democrats won control of the House of…",
+          "url": "https://www.france24.com/en/video/20261104-midterms-trump-acknowledges-role-of-iran-war-congratulates-dems",
+          "published_at": "2026-11-04T11:13:53Z",
+          "published_at_estimated": false,
+          "image_url": "https://s.france24.com/media/display/f15ba2ee-d83c-11f1-8d25-d18c5759e759/w:1024/p:16x9/EN-20261104-110201-110833-CS.jpg"
+        },
+        {
+          "id": "3eb58e5ee1db",
+          "outlet_id": "france24",
+          "headline": "US midterms: Trump reacts to the Democrats’ sweeping victory",
+          "snippet": "US President Donald Trump had rare praise for rival Democrats Tuesday after their stunning US midterm elections victory and admitted the Iran war may have played a part in the defeat of his…",
+          "url": "https://www.france24.com/en/video/20261104-us-midterms-trump-reacts-to-the-democrats-sweeping-victory",
+          "published_at": "2026-11-04T11:24:24Z",
+          "published_at_estimated": false,
+          "image_url": "https://s.france24.com/media/display/6fd0ce66-d841-11f1-9a33-a575454bc579/w:1024/p:16x9/mini1-3.jpg"
+        },
+        {
+          "id": "0375d7b0a6a9",
+          "outlet_id": "aljazeera",
+          "headline": "Trump admits Iran war hurt Republican vote, vows to veto ‘insane’ bills",
+          "snippet": "US President Donald Trump has admitted that the war on Iran contributed to Republican losses in the midterm elections.",
+          "url": "https://www.aljazeera.com/video/newsfeed/2026/11/4/trump-admits-iran-war-hurt-republican-vote-vows-to-veto-insane-bills",
+          "published_at": "2026-11-04T12:44:30Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "b47080c0c8d3",
+          "outlet_id": "dailymail",
+          "headline": "Fox News host Bret Baier scolds Trump live on air after president claimed network's polls were 'terrible', as humbled commander-in-chief says he's opened to working with Dems",
+          "snippet": "The journalist and president clashed shortly after midnight as the extent of the Republican party's losses became apparent.",
+          "url": "https://www.dailymail.com/media/article-16264631/trump-fox-bret-baier.html",
+          "published_at": "2026-11-04T13:33:33Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.dailymail.com/1s/2026/11/04/11/112292165-0-image-m-18_1793790414388.jpg"
+        },
+        {
+          "id": "bd4f48af0470",
+          "outlet_id": "independent",
+          "headline": "Slurring Trump makes stunning admission on Fox after devastating night of midterms losses: ‘They finally got it’",
+          "snippet": "President Donald Trump called into Fox News as Democrats seized back control of House and Senate on historic night and struck an unusually reflective tone, even complimenting his opponents",
+          "url": "https://www.independent.co.uk/news/world/americas/us-politics/trump-midterm-elections-fox-news-interview-b3078776.html",
+          "published_at": "2026-11-04T13:57:49Z",
+          "published_at_estimated": false,
+          "image_url": "https://static.independent.co.uk/2026/11/04/4/07/GettyImages-2303038743.jpg?width=1200&auto=webp&trim=0%2C0%2C0%2C0"
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "Democrats made major gains in the midterm elections, winning or being on track to win control of Congress.",
+          "sources": [
+            "859aaf64be9d",
+            "6282355b6d92",
+            "fe912001746a",
+            "fb1e20acb1b9",
+            "ac41fe217ed8",
+            "0fb36920e29e",
+            "27a0b8923cbd",
+            "3eb58e5ee1db",
+            "0375d7b0a6a9",
+            "b47080c0c8d3",
+            "bd4f48af0470"
+          ]
+        },
+        {
+          "text": "Trump said Republicans would have won had he been on the ballot.",
+          "sources": [
+            "5ab63f2a153e",
+            "859aaf64be9d",
+            "7c89323fa7c6"
+          ]
+        },
+        {
+          "text": "Trump acknowledged that the Iran war played a role in the Republican losses.",
+          "sources": [
+            "fe912001746a",
+            "ac41fe217ed8",
+            "27a0b8923cbd",
+            "3eb58e5ee1db",
+            "0375d7b0a6a9"
+          ]
+        },
+        {
+          "text": "Trump praised or congratulated the Democrats, saying they did a good job.",
+          "sources": [
+            "fe912001746a",
+            "7c89323fa7c6",
+            "ac41fe217ed8",
+            "27a0b8923cbd",
+            "3eb58e5ee1db",
+            "bd4f48af0470"
+          ]
+        },
+        {
+          "text": "Trump said he was willing to accept the election results.",
+          "sources": [
+            "5ab63f2a153e",
+            "fb1e20acb1b9"
+          ]
+        },
+        {
+          "text": "Trump attacked Fox News and its polling on election night.",
+          "sources": [
+            "52dbd25e3931",
+            "b47080c0c8d3"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "bd4f48af0470",
+              "quote": "Slurring Trump makes stunning admission on Fox",
+              "field": "headline"
+            },
+            {
+              "article_id": "bd4f48af0470",
+              "quote": "struck an unusually reflective tone, even complimenting his opponents",
+              "field": "snippet"
+            },
+            {
+              "article_id": "6282355b6d92",
+              "quote": "substantial Democratic wins across the country",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with Trump's call into Fox News and his reflective tone towards opponents.",
+              "sources": [
+                "bd4f48af0470"
+              ]
+            },
+            {
+              "text": "Foregrounds Democratic wins in key battleground states and districts and Trump's media appearances.",
+              "sources": [
+                "6282355b6d92"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "5ab63f2a153e",
+              "quote": "Trump says GOP lost because he wasn't on ballot",
+              "field": "headline"
+            },
+            {
+              "article_id": "52dbd25e3931",
+              "quote": "Trump turns his ire toward Fox News on election night",
+              "field": "headline"
+            },
+            {
+              "article_id": "fb1e20acb1b9",
+              "quote": "Will Trump stick to his word and accept results?",
+              "field": "headline"
+            },
+            {
+              "article_id": "27a0b8923cbd",
+              "quote": "Trump acknowledges role of Iran war, congratulates Dems",
+              "field": "headline"
+            },
+            {
+              "article_id": "7c89323fa7c6",
+              "quote": "Trump takes aim at Republicans",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Emphasises Trump's claim that Republicans would have won with him on the ballot.",
+              "sources": [
+                "5ab63f2a153e",
+                "7c89323fa7c6"
+              ]
+            },
+            {
+              "text": "Questions whether Trump will follow through on accepting the results.",
+              "sources": [
+                "fb1e20acb1b9"
+              ]
+            },
+            {
+              "text": "Foregrounds Trump's acknowledgement of the Iran war's role in the defeat.",
+              "sources": [
+                "27a0b8923cbd",
+                "3eb58e5ee1db"
+              ]
+            },
+            {
+              "text": "Highlights Trump's attacks on Fox News personalities, polling and coverage.",
+              "sources": [
+                "52dbd25e3931"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "right",
+          "headline_quotes": [
+            {
+              "article_id": "b47080c0c8d3",
+              "quote": "Fox News host Bret Baier scolds Trump live on air",
+              "field": "headline"
+            },
+            {
+              "article_id": "b47080c0c8d3",
+              "quote": "humbled commander-in-chief says he's opened to working with Dems",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with Bret Baier's on-air clash with Trump over the network's polls.",
+              "sources": [
+                "b47080c0c8d3"
+              ]
+            },
+            {
+              "text": "Highlights Trump saying he is open to working with Democrats.",
+              "sources": [
+                "b47080c0c8d3"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "left",
+          "text": "Left coverage does not mention Trump acknowledging the Iran war's role in the losses.",
+          "sources": [
+            "27a0b8923cbd",
+            "3eb58e5ee1db"
+          ]
+        },
+        {
+          "lean": "left",
+          "text": "Left coverage does not mention Trump's claim that Republicans would have won had he been on the ballot.",
+          "sources": [
+            "5ab63f2a153e",
+            "7c89323fa7c6"
+          ]
+        },
+        {
+          "lean": "right",
+          "text": "Right coverage does not mention Trump acknowledging the Iran war's role in the losses.",
+          "sources": [
+            "27a0b8923cbd",
+            "3eb58e5ee1db"
+          ]
+        },
+        {
+          "lean": "right",
+          "text": "Right coverage does not mention Trump's claim that Republicans would have won had he been on the ballot.",
+          "sources": [
+            "5ab63f2a153e",
+            "7c89323fa7c6"
+          ]
+        }
+      ],
+      "contested_claims": [],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "5ab63f2a153e",
+              "quote": "Trump says GOP lost because he wasn't on ballot",
+              "field": "headline"
+            },
+            {
+              "article_id": "b47080c0c8d3",
+              "quote": "Fox News host Bret Baier scolds Trump live on air",
+              "field": "headline"
+            },
+            {
+              "article_id": "bd4f48af0470",
+              "quote": "Slurring Trump makes stunning admission on Fox",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Foregrounds Trump's clashes with and appearances on Fox News.",
+              "sources": [
+                "52dbd25e3931",
+                "b47080c0c8d3",
+                "bd4f48af0470"
+              ]
+            },
+            {
+              "text": "Emphasises Trump's ballot remarks and his stated willingness to accept the results.",
+              "sources": [
+                "5ab63f2a153e",
+                "fb1e20acb1b9",
+                "7c89323fa7c6"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "859aaf64be9d",
+              "quote": "Trump deflects blame as Democrats on track to control Congress",
+              "field": "headline"
+            },
+            {
+              "article_id": "fe912001746a",
+              "quote": "admits Iran war and gas prices hurt Republicans",
+              "field": "headline"
+            },
+            {
+              "article_id": "0375d7b0a6a9",
+              "quote": "Trump admits Iran war hurt Republican vote",
+              "field": "headline"
+            },
+            {
+              "article_id": "0fb36920e29e",
+              "quote": "From Mr Veto to a political pundit",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with Trump's admission that the Iran war, and in one case gas prices, hurt Republicans.",
+              "sources": [
+                "fe912001746a",
+                "ac41fe217ed8",
+                "0375d7b0a6a9"
+              ]
+            },
+            {
+              "text": "Highlights Trump's vows to veto bills.",
+              "sources": [
+                "0375d7b0a6a9",
+                "0fb36920e29e"
+              ]
+            },
+            {
+              "text": "Notes Hakeem Jeffries is in line to become the first Black speaker of the House.",
+              "sources": [
+                "ac41fe217ed8"
+              ]
+            },
+            {
+              "text": "Reports a defiant White House tone and describes Trump as deflecting blame.",
+              "sources": [
+                "fe912001746a",
+                "859aaf64be9d"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "Democrats won sweeping victories in Tuesday's US midterm elections, taking control of the House and Senate. Trump said Republicans would have won had he been on the ballot, acknowledged the Iran war played a role, praised Democrats and said he would accept the results. He also clashed with Fox News and vowed to veto bills.",
+        "sources": [
+          "5ab63f2a153e",
+          "52dbd25e3931",
+          "0fb36920e29e",
+          "bd4f48af0470",
+          "7c89323fa7c6",
+          "27a0b8923cbd",
+          "fb1e20acb1b9",
+          "0375d7b0a6a9",
+          "b47080c0c8d3",
+          "ac41fe217ed8"
+        ]
+      },
+      "conclusion": {
+        "text": "All outlets report the Democratic midterm victory and Trump's reaction, including praise for Democrats. Western outlets foreground his ballot remarks, acceptance of results and Fox News clash, while Eastern outlets lead with his Iran war admission and veto vows. No outlet contradicts another's account.",
+        "sources": [
+          "5ab63f2a153e",
+          "52dbd25e3931",
+          "b47080c0c8d3",
+          "bd4f48af0470",
+          "fb1e20acb1b9",
+          "7c89323fa7c6",
+          "fe912001746a",
+          "0375d7b0a6a9",
+          "0fb36920e29e",
+          "ac41fe217ed8"
+        ]
+      },
+      "validation": {
+        "kept": 43,
+        "dropped_by_reason": {}
+      }
+    },
+    {
+      "id": "4a5537fbd03d",
+      "title": "Abdul El-Sayed wins Michigan Senate race, becoming first Muslim US senator",
+      "rank": 3,
+      "outlet_count": 11,
+      "coverage": {
+        "lean": {
+          "left": 1,
+          "centre": 4,
+          "right": 1
+        },
+        "bloc": {
+          "west": 6,
+          "east": 5
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "aa663b63ce00",
+          "outlet_id": "nbc",
+          "headline": "Democrat Abdul El-Sayed wins Michigan’s Senate race",
+          "snippet": "NBC News projects that El-Sayed, a progressive former public health official, has defeated Republican Mike Rogers, a key victory for Democrats.",
+          "url": "https://www.nbcnews.com/politics/2026-election/democrat-abdul-el-sayed-wins-michigans-high-stakes-senate-race-rcna603315",
+          "published_at": "2026-11-04T07:26:43Z",
+          "published_at_estimated": false,
+          "image_url": "https://media-cldnry.s-nbcnews.com/image/upload/t_fit_1500w/rockcms/2026-11/261101-Stevens-Rogers-aa-1230-b6c57f.jpg"
+        },
+        {
+          "id": "0cdfaa0b430d",
+          "outlet_id": "npr",
+          "headline": "Democrat Abdul El-Sayed defeats Republican Mike Rogers in key Michigan Senate race",
+          "snippet": "El-Sayed's campaign tested how an antiestablishment candidate on the left would fare in a perennial Midwest battleground. With the win, he'll become the first Muslim American to serve in the Senate.",
+          "url": "https://www.npr.org/2026/11/04/g-s1-150029/michigan-senate-race-abdul-el-sayed-mike-rogers",
+          "published_at": "2026-11-04T07:28:02Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "6494eff85d27",
+          "outlet_id": "thenational",
+          "headline": "Abdul El-Sayed becomes first Muslim to be elected to US Senate",
+          "snippet": "Abdul El-Sayed has become the first Muslim to be elected to the US Senate, triumphing in one of the most closely watched contests in the midterm elections. The historic victory caps an extraordinary…",
+          "url": "https://www.thenationalnews.com/news/us/2026/11/04/abdul-el-sayed-becomes-first-muslim-to-be-elected-to-us-senate/",
+          "published_at": "2026-11-04T07:28:30Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.thenationalnews.com/resizer/v2/GV272TETJ5HGFJSNXIM63TNVRI.jpg?auth=6407972413696d034f3405db6a99e7344335bcfdf91b8aca7eb14bdfc9a2667e&smart=true&width=4800&height=2700"
+        },
+        {
+          "id": "280eeb7bf943",
+          "outlet_id": "nypost",
+          "headline": "Far-left Dem Abdul El-Sayed defies bitter party mutiny to rout Mike Rogers in Michigan Senate race",
+          "snippet": "Abdul El-Sayed had emerged politically bruised from a grueling primary in August against Rep. Haley Stevens.",
+          "url": "https://nypost.com/2026/11/04/us-news/far-left-dem-abdul-el-sayed-defies-bitter-party-mutiny-to-rout-mike-rogers-in-michigan-senate-race/",
+          "published_at": "2026-11-04T07:28:41Z",
+          "published_at_estimated": false,
+          "image_url": "https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2Fdemocratic-us-senate-candidate-abdul-147499307.jpg?w%3D1024"
+        },
+        {
+          "id": "b4467ab57592",
+          "outlet_id": "axios",
+          "headline": "El-Sayed becomes first Muslim U.S. senator",
+          "snippet": "Democrat Abdul El-Sayed defeated Republican Mike Rogers in Michigan's closely watched U.S. Senate race, the Associated Press projected. He will become the nation's first Muslim senator. Why it…",
+          "url": "https://www.axios.com/2026/11/04/michigan-senate-results-el-sayed-rogers",
+          "published_at": "2026-11-04T07:34:08Z",
+          "published_at_estimated": false,
+          "image_url": "https://images.axios.com/Nu0y2pDMCMoabBTE_lfu3JbMch0=/0x0:6562x3691/1366x768/2026/11/04/1793777454542.jpeg"
+        },
+        {
+          "id": "127ae81beb19",
+          "outlet_id": "timesofisrael",
+          "headline": "Anti-Israel El-Sayed wins Michigan Senate race, pledges no money for ‘apartheid, genocide’",
+          "snippet": "In apparent swipe at Israel, Democrat says tax funds should go to kids, 'rather than dropping bombs' on other people and their kids; chants of 'Free Palestine heard during speech",
+          "url": "https://www.timesofisrael.com/anti-israel-el-sayed-wins-michigan-senate-race-pledges-no-money-for-apartheid-genocide/",
+          "published_at": "2026-11-04T09:00:53Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "cb64cccaf35a",
+          "outlet_id": "toi",
+          "headline": "‘Habibi, call me Senator’: Abdul El-Sayed mocks Trump, Vance in victory speech",
+          "snippet": "Abdul El-Sayed won the Michigan Senate race against Republican Mike Rogers, marking a significant milestone in history. His victory speech included pointed remarks aimed at both Vice President JD…",
+          "url": "https://timesofindia.indiatimes.com/world/us/us-mid-term-elections/news/habibi-call-me-senator-first-muslim-us-senator-abdul-el-sayed-mocks-donald-trump-jd-vance-in-victory-speech/articleshow/135533707.cms",
+          "published_at": "2026-11-04T09:44:39Z",
+          "published_at_estimated": false,
+          "image_url": "https://static.toiimg.com/photo/msid-135534400,imgsize-122006.cms"
+        },
+        {
+          "id": "9e9d6b39f1c1",
+          "outlet_id": "bbc",
+          "headline": "Left-wing Democrat Abdul El-Sayed wins in Michigan to become first Muslim senator",
+          "snippet": "El-Sayed bested Republican Mike Rogers to become the first Muslim senator in US history.",
+          "url": "https://www.bbc.co.uk/news/articles/c893z55pxrewo",
+          "published_at": "2026-11-04T10:03:19Z",
+          "published_at_estimated": false,
+          "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/7b2d/live/afbf5fd0-d83f-11f1-93e1-3b657b665bcf.jpg"
+        },
+        {
+          "id": "94115d39e8e2",
+          "outlet_id": "france24",
+          "headline": "Abdul El-Sayed set to become first Muslim senator after win in Michigan",
+          "snippet": "Progressive favorite Abdul El-Sayed has defeated Republican Mike Rogers in a bitter campaign for Michigan’s open Senate seat, giving the Democratic Party’s left wing a breakthrough victory in one of…",
+          "url": "https://www.france24.com/en/video/20261104-abdul-el-sayed-set-to-become-first-muslim-senator-after-win-in-michigan",
+          "published_at": "2026-11-04T10:09:52Z",
+          "published_at_estimated": false,
+          "image_url": "https://s.france24.com/media/display/069fe462-d833-11f1-890d-1beafce15fea/w:1024/p:16x9/EN-20261104-100431-100538-CS.jpg"
+        },
+        {
+          "id": "0cc224412019",
+          "outlet_id": "timesofisrael",
+          "headline": "El-Sayed’s candidacy split Michigan Jews, and the community is reeling",
+          "snippet": "Despite sharing some of his Israel-policy critiques, Jews have a hard time rallying around Senate candidate, with some convinced he wants to sever their ties to the Jewish state",
+          "url": "https://www.timesofisrael.com/el-sayeds-candidacy-split-michigan-jews-and-the-community-is-reeling/",
+          "published_at": "2026-11-04T10:40:31Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "b29be2259a7d",
+          "outlet_id": "thehindu",
+          "headline": "Democrat Abdul El-Sayed claims victory in Michigan Senate battle",
+          "snippet": "El-Sayed won despite a last-minute hiccup in his campaign when congresswoman Haley Stevens, who lost the Democratic primary, came out in support of Rogers at the 11th hour",
+          "url": "https://www.thehindu.com/news/international/democrat-abdul-el-sayed-michigan-us-midterm-elections-senate/article71664484.ece",
+          "published_at": "2026-11-04T10:55:54Z",
+          "published_at_estimated": false,
+          "image_url": "https://th-i.thgim.com/public/incoming/o5pi33/article71664489.ece/alternates/LANDSCAPE_1200/2026-11-04T065306Z_1294689563_RC2UGOAZOBPW_RTRMADP_3_USA-ELECTION-MICHIGAN.JPG"
+        },
+        {
+          "id": "a84ce0f11a66",
+          "outlet_id": "aljazeera",
+          "headline": "‘Call me senator’: How Abdul El-Sayed beat Trump’s hate to create history",
+          "snippet": "The 42-year-old Democrat has defeated Republican Mike Rogers to become the first Muslim senator in the US.",
+          "url": "https://www.aljazeera.com/news/2026/11/4/call-me-senator-how-abdul-el-sayed-beat-trumps-hate-to-create-history",
+          "published_at": "2026-11-04T11:46:46Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "538b199ec3c2",
+          "outlet_id": "thehindu",
+          "headline": "Who is Abdul El-Sayed, first Muslim U.S. Senator-elect?",
+          "snippet": "Abdul El-Sayed is set to become the first Muslim to enter the U.S. Senate with his victory over former Republican lawmaker Mike Rogers in midterm elections",
+          "url": "https://www.thehindu.com/news/international/who-is-abdul-el-sayed-first-muslim-us-senator-elect-united-states-us-midterm-elections-2026/article71664610.ece",
+          "published_at": "2026-11-04T12:18:28Z",
+          "published_at_estimated": false,
+          "image_url": "https://th-i.thgim.com/public/incoming/o5pi33/article71664489.ece/alternates/LANDSCAPE_1200/2026-11-04T065306Z_1294689563_RC2UGOAZOBPW_RTRMADP_3_USA-ELECTION-MICHIGAN.JPG"
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "El-Sayed won Michigan's Senate race, defeating Republican Mike Rogers.",
+          "sources": [
+            "aa663b63ce00",
+            "0cdfaa0b430d",
+            "280eeb7bf943",
+            "b4467ab57592",
+            "cb64cccaf35a",
+            "9e9d6b39f1c1",
+            "94115d39e8e2",
+            "a84ce0f11a66",
+            "538b199ec3c2",
+            "b29be2259a7d",
+            "127ae81beb19"
+          ]
+        },
+        {
+          "text": "El-Sayed is a Democrat.",
+          "sources": [
+            "aa663b63ce00",
+            "0cdfaa0b430d",
+            "280eeb7bf943",
+            "b4467ab57592",
+            "9e9d6b39f1c1",
+            "127ae81beb19",
+            "b29be2259a7d",
+            "a84ce0f11a66"
+          ]
+        },
+        {
+          "text": "He will become the first Muslim US senator.",
+          "sources": [
+            "0cdfaa0b430d",
+            "6494eff85d27",
+            "b4467ab57592",
+            "9e9d6b39f1c1",
+            "94115d39e8e2",
+            "a84ce0f11a66",
+            "538b199ec3c2"
+          ]
+        },
+        {
+          "text": "The race is described as key or closely watched.",
+          "sources": [
+            "aa663b63ce00",
+            "0cdfaa0b430d",
+            "6494eff85d27",
+            "b4467ab57592"
+          ]
+        },
+        {
+          "text": "El-Sayed faced Haley Stevens in the Democratic primary, and Stevens later backed Rogers.",
+          "sources": [
+            "280eeb7bf943",
+            "b29be2259a7d"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "aa663b63ce00",
+              "quote": "a key victory for Democrats",
+              "field": "snippet"
+            },
+            {
+              "article_id": "aa663b63ce00",
+              "quote": "a progressive former public health official",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the result as a key victory for Democrats and describes El-Sayed as a progressive former public health official.",
+              "sources": [
+                "aa663b63ce00"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "b4467ab57592",
+              "quote": "El-Sayed becomes first Muslim U.S. senator",
+              "field": "headline"
+            },
+            {
+              "article_id": "0cdfaa0b430d",
+              "quote": "antiestablishment candidate on the left",
+              "field": "snippet"
+            },
+            {
+              "article_id": "94115d39e8e2",
+              "quote": "giving the Democratic Party’s left wing a breakthrough victory",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Foregrounds El-Sayed becoming the first Muslim senator.",
+              "sources": [
+                "0cdfaa0b430d",
+                "b4467ab57592",
+                "9e9d6b39f1c1",
+                "94115d39e8e2"
+              ]
+            },
+            {
+              "text": "Describes the win as a test or breakthrough for the Democratic left in a battleground state.",
+              "sources": [
+                "0cdfaa0b430d",
+                "9e9d6b39f1c1",
+                "94115d39e8e2"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "right",
+          "headline_quotes": [
+            {
+              "article_id": "280eeb7bf943",
+              "quote": "Far-left Dem Abdul El-Sayed defies bitter party mutiny to rout Mike Rogers",
+              "field": "headline"
+            },
+            {
+              "article_id": "280eeb7bf943",
+              "quote": "emerged politically bruised from a grueling primary",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Describes El-Sayed as far-left and leads with intra-party opposition and his August primary against Haley Stevens.",
+              "sources": [
+                "280eeb7bf943"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "left",
+          "text": "The left-leaning coverage does not mention that El-Sayed will be the first Muslim senator.",
+          "sources": [
+            "0cdfaa0b430d",
+            "b4467ab57592",
+            "9e9d6b39f1c1",
+            "94115d39e8e2"
+          ]
+        },
+        {
+          "lean": "right",
+          "text": "The right-leaning coverage does not mention that El-Sayed will be the first Muslim senator.",
+          "sources": [
+            "0cdfaa0b430d",
+            "b4467ab57592",
+            "9e9d6b39f1c1",
+            "94115d39e8e2"
+          ]
+        },
+        {
+          "lean": "centre",
+          "text": "The centre coverage does not mention the primary against Haley Stevens or intra-party opposition.",
+          "sources": [
+            "280eeb7bf943"
+          ]
+        }
+      ],
+      "contested_claims": [],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "9e9d6b39f1c1",
+              "quote": "Left-wing Democrat Abdul El-Sayed wins in Michigan to become first Muslim senator",
+              "field": "headline"
+            },
+            {
+              "article_id": "280eeb7bf943",
+              "quote": "defies bitter party mutiny",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Focuses on the defeat of Rogers, El-Sayed's position on the Democratic left and the first-Muslim milestone.",
+              "sources": [
+                "aa663b63ce00",
+                "0cdfaa0b430d",
+                "280eeb7bf943",
+                "b4467ab57592",
+                "9e9d6b39f1c1",
+                "94115d39e8e2"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "6494eff85d27",
+              "quote": "Abdul El-Sayed becomes first Muslim to be elected to US Senate",
+              "field": "headline"
+            },
+            {
+              "article_id": "127ae81beb19",
+              "quote": "Anti-Israel El-Sayed wins Michigan Senate race",
+              "field": "headline"
+            },
+            {
+              "article_id": "cb64cccaf35a",
+              "quote": "Abdul El-Sayed mocks Trump, Vance in victory speech",
+              "field": "headline"
+            },
+            {
+              "article_id": "a84ce0f11a66",
+              "quote": "How Abdul El-Sayed beat Trump’s hate to create history",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Foregrounds the historic first-Muslim victory.",
+              "sources": [
+                "6494eff85d27",
+                "a84ce0f11a66",
+                "538b199ec3c2",
+                "cb64cccaf35a"
+              ]
+            },
+            {
+              "text": "Highlights his victory speech, including remarks aimed at Trump and Vance and on funding for Israel.",
+              "sources": [
+                "cb64cccaf35a",
+                "127ae81beb19"
+              ]
+            },
+            {
+              "text": "Reports division among Michigan Jews over his candidacy and Israel policy.",
+              "sources": [
+                "0cc224412019",
+                "127ae81beb19"
+              ]
+            },
+            {
+              "text": "Notes Haley Stevens backed Rogers late in the campaign.",
+              "sources": [
+                "b29be2259a7d"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "Democrat Abdul El-Sayed defeated Republican Mike Rogers in Michigan's closely watched Senate race in the midterm elections. He is set to become the first Muslim to serve in the US Senate.",
+        "sources": [
+          "aa663b63ce00",
+          "0cdfaa0b430d",
+          "6494eff85d27",
+          "280eeb7bf943",
+          "b4467ab57592",
+          "cb64cccaf35a",
+          "9e9d6b39f1c1",
+          "94115d39e8e2",
+          "a84ce0f11a66",
+          "538b199ec3c2",
+          "b29be2259a7d",
+          "127ae81beb19"
+        ]
+      },
+      "conclusion": {
+        "text": "All coverage agrees El-Sayed, a Democrat, defeated Republican Mike Rogers in Michigan, with most noting he will be the first Muslim senator. The New York Post leads with a far-left label and party mutiny, while Times of Israel articles foreground his Israel stance. No contested facts or East-West contradictions appear.",
+        "sources": [
+          "aa663b63ce00",
+          "0cdfaa0b430d",
+          "b4467ab57592",
+          "9e9d6b39f1c1",
+          "94115d39e8e2",
+          "6494eff85d27",
+          "a84ce0f11a66",
+          "538b199ec3c2",
+          "280eeb7bf943",
+          "127ae81beb19",
+          "0cc224412019"
+        ]
+      },
+      "validation": {
+        "kept": 32,
+        "dropped_by_reason": {}
+      }
+    },
+    {
+      "id": "779bb5f2044f",
+      "title": "South Africans vote in local elections as ANC faces pressure",
+      "rank": 4,
+      "outlet_count": 6,
+      "coverage": {
+        "lean": {
+          "left": 2,
+          "centre": 3,
+          "right": 0
+        },
+        "bloc": {
+          "west": 5,
+          "east": 1
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "c60ed64cd867",
+          "outlet_id": "cgtn",
+          "headline": "Campaigns end ahead of South Africa’s local elections",
+          "snippet": "Campaigning for South Africa’s local government elections officially ends at midnight on November 3, with voters set to go to the polls on Wednesday, November 4.",
+          "url": "https://newsaf.cgtn.com/news/2026-11-03/Campaigns-end-ahead-of-South-Africa-s-local-elections-1RLQFGe33Ww/p.html",
+          "published_at": "2026-11-03T11:39:54Z",
+          "published_at_estimated": false,
+          "image_url": "https://newsaf.cgtn.com/news/2026-11-03/Campaigns-end-ahead-of-South-Africa-s-local-elections-1RLQFGe33Ww/img/59b99aed86c14677b4e021c2ebbaa9aa/59b99aed86c14677b4e021c2ebbaa9aa-250.png"
+        },
+        {
+          "id": "dc47da599c15",
+          "outlet_id": "dw",
+          "headline": "Why South Africa's local elections matter",
+          "snippet": "South Africans head to the polls on Wednesday amid water shortages, frustration with local services and questions over whether the ANC's support will keep falling.",
+          "url": "https://www.dw.com/en/why-south-africa-s-local-elections-matter/a-79842695?maca=en-rss-en-world-4025-xml-mrss",
+          "published_at": "2026-11-03T15:06:00Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "213d716e7857",
+          "outlet_id": "guardian",
+          "headline": "ANC faces anger over poor services as South Africans vote in local elections",
+          "snippet": "Party expected to get less than a third of the vote amid frustration over water outages and power cuts The African National Congress is on course for a bruising result in South Africa’s local…",
+          "url": "https://www.theguardian.com/world/2026/nov/04/anc-south-africa-local-elections-water-outages-power-cuts",
+          "published_at": "2026-11-04T04:00:23Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.guim.co.uk/img/media/ab849d0dfce7fca0440c040983efe4e27460cf1e/1440_0_7200_5760/master/7200.jpg?width=460&quality=85&auto=format&fit=max&s=c47e585e5eedfe8ec374a660d4d83b79"
+        },
+        {
+          "id": "a8738af37103",
+          "outlet_id": "france24",
+          "headline": "30 million South Africans registered to vote across nine provinces",
+          "snippet": "In South Africa, around 30 million people have registered to cast their votes across the country's nine provinces. The economy is at the forefront of the November 4 local elections. The spotlight is…",
+          "url": "https://www.france24.com/en/video/20261104-30-million-south-africans-registered-to-vote-across-nine-provinces",
+          "published_at": "2026-11-04T10:20:37Z",
+          "published_at_estimated": false,
+          "image_url": "https://s.france24.com/media/display/d62a5192-d836-11f1-a337-a575454bc579/w:1024/p:16x9/capture-d1cbe76a.jpg"
+        },
+        {
+          "id": "a07c4b6051cc",
+          "outlet_id": "nyt",
+          "headline": "Helen Zille Is Running for Mayor of Johannesburg and Needling the ANC",
+          "snippet": "As South Africans head to the polls on Wednesday, Helen Zille, 75, is betting voters care less about race and more about public services in her bid to become mayor of Johannesburg.",
+          "url": "https://www.nytimes.com/2026/11/04/world/africa/johannesburg-mayor-elections.html",
+          "published_at": "2026-11-04T10:23:53Z",
+          "published_at_estimated": false,
+          "image_url": "https://static01.nyt.com/images/2026/11/04/multimedia/04int-safrica-elections-pwfq/04int-safrica-elections-pwfq-mediumSquareAt3X.jpg"
+        },
+        {
+          "id": "93ff23e0dac8",
+          "outlet_id": "bbc",
+          "headline": "ANC under pressure to reverse South Africa decline",
+          "snippet": "As South Africans vote in local elections, residents tell the BBC they are tired of the poor quality of services they get.",
+          "url": "https://www.bbc.co.uk/news/articles/cr4g1x6l77xyo",
+          "published_at": "2026-11-04T11:47:44Z",
+          "published_at_estimated": false,
+          "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/eb2c/live/fc87dad0-d7aa-11f1-93e1-3b657b665bcf.jpg"
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "South Africa's local elections take place on Wednesday 4 November.",
+          "sources": [
+            "c60ed64cd867",
+            "dc47da599c15",
+            "213d716e7857",
+            "a8738af37103",
+            "a07c4b6051cc",
+            "93ff23e0dac8"
+          ]
+        },
+        {
+          "text": "Voters are frustrated with the quality of local public services.",
+          "sources": [
+            "dc47da599c15",
+            "213d716e7857",
+            "a07c4b6051cc",
+            "93ff23e0dac8"
+          ]
+        },
+        {
+          "text": "The ANC faces pressure, with questions over whether its support is falling.",
+          "sources": [
+            "dc47da599c15",
+            "213d716e7857",
+            "93ff23e0dac8"
+          ]
+        },
+        {
+          "text": "Water shortages or outages feature among voters' concerns.",
+          "sources": [
+            "dc47da599c15",
+            "213d716e7857"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "213d716e7857",
+              "quote": "ANC faces anger over poor services",
+              "field": "headline"
+            },
+            {
+              "article_id": "213d716e7857",
+              "quote": "Party expected to get less than a third of the vote",
+              "field": "snippet"
+            },
+            {
+              "article_id": "a07c4b6051cc",
+              "quote": "Helen Zille Is Running for Mayor of Johannesburg and Needling the ANC",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with anger at the ANC and a projection that it will get less than a third of the vote.",
+              "sources": [
+                "213d716e7857"
+              ]
+            },
+            {
+              "text": "Focuses on Helen Zille's bid for Johannesburg mayor, framed as a bet that voters care more about services than race.",
+              "sources": [
+                "a07c4b6051cc"
+              ]
+            },
+            {
+              "text": "Mentions water outages and power cuts as sources of frustration.",
+              "sources": [
+                "213d716e7857"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "dc47da599c15",
+              "quote": "Why South Africa's local elections matter",
+              "field": "headline"
+            },
+            {
+              "article_id": "a8738af37103",
+              "quote": "30 million South Africans registered to vote across nine provinces",
+              "field": "headline"
+            },
+            {
+              "article_id": "93ff23e0dac8",
+              "quote": "ANC under pressure to reverse South Africa decline",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Explains why the elections matter, citing water shortages, service frustration and the ANC's support.",
+              "sources": [
+                "dc47da599c15"
+              ]
+            },
+            {
+              "text": "Leads with voter registration figures and describes the economy as at the forefront of the elections.",
+              "sources": [
+                "a8738af37103"
+              ]
+            },
+            {
+              "text": "Presents residents' accounts of being tired of poor services and the ANC under pressure to reverse decline.",
+              "sources": [
+                "93ff23e0dac8"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "left",
+          "text": "Left coverage does not mention the figure of around 30 million registered voters across nine provinces.",
+          "sources": [
+            "a8738af37103"
+          ]
+        },
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not mention Helen Zille's bid to become mayor of Johannesburg.",
+          "sources": [
+            "a07c4b6051cc"
+          ]
+        },
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not mention a projection that the ANC will get less than a third of the vote.",
+          "sources": [
+            "213d716e7857"
+          ]
+        }
+      ],
+      "contested_claims": [],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "213d716e7857",
+              "quote": "ANC faces anger over poor services as South Africans vote in local elections",
+              "field": "headline"
+            },
+            {
+              "article_id": "93ff23e0dac8",
+              "quote": "ANC under pressure to reverse South Africa decline",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Foregrounds pressure on the ANC and voter frustration over services.",
+              "sources": [
+                "213d716e7857",
+                "93ff23e0dac8",
+                "dc47da599c15",
+                "a07c4b6051cc"
+              ]
+            },
+            {
+              "text": "Reports registration of around 30 million voters and the economy as a key issue.",
+              "sources": [
+                "a8738af37103"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "c60ed64cd867",
+              "quote": "Campaigns end ahead of South Africa’s local elections",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Reports the procedural timetable: campaigning ending at midnight on 3 November and voting on 4 November.",
+              "sources": [
+                "c60ed64cd867"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "South Africans voted in local government elections on Wednesday 4 November, after campaigning ended at midnight on 3 November. Around 30 million people are registered across nine provinces. Coverage reports frustration over services such as water and power, with the ANC under pressure.",
+        "sources": [
+          "c60ed64cd867",
+          "a8738af37103",
+          "dc47da599c15",
+          "213d716e7857",
+          "93ff23e0dac8",
+          "a07c4b6051cc"
+        ]
+      },
+      "conclusion": {
+        "text": "All coverage agrees the local elections are held on 4 November. West-bloc outlets of both leans foreground service frustration and pressure on the ANC, with left outlets adding a vote projection and Zille's mayoral bid. The East-bloc report covers the campaign timetable; no claims are disputed.",
+        "sources": [
+          "c60ed64cd867",
+          "dc47da599c15",
+          "213d716e7857",
+          "a8738af37103",
+          "a07c4b6051cc",
+          "93ff23e0dac8"
+        ]
+      },
+      "validation": {
+        "kept": 27,
+        "dropped_by_reason": {}
+      }
+    },
+    {
+      "id": "e7e4f5eecdd0",
+      "title": "Israel election commission confirms results and rejects Netanyahu fraud claims",
+      "rank": 5,
+      "outlet_count": 6,
+      "coverage": {
+        "lean": {
+          "left": 1,
+          "centre": 0,
+          "right": 0
+        },
+        "bloc": {
+          "west": 1,
+          "east": 5
+        }
+      },
+      "blindspot": {
+        "lean": "left",
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "99227a5ed4ea",
+          "outlet_id": "thehindu",
+          "headline": "Israel attorney general asks intel services to provide proof of poll fraud",
+          "snippet": "Head of Shin Bet, David Zini, a close associate of Israel’s Prime Minister Benjamin Netanyahu, had requested to question the leaders of the Arab parties as part of an investigation",
+          "url": "https://www.thehindu.com/news/international/israel-attorney-general-asks-intel-services-to-provide-proof-of-poll-fraud/article71662967.ece",
+          "published_at": "2026-11-03T23:10:44Z",
+          "published_at_estimated": false,
+          "image_url": "https://th-i.thgim.com/public/incoming/ww8ls/article71662968.ece/alternates/LANDSCAPE_1200/Israel_Elections_37784.jpg"
+        },
+        {
+          "id": "f5036ba6ce0f",
+          "outlet_id": "scmp",
+          "headline": "Blow for Netanyahu as Israeli election body rejects claims of Arab party fraud",
+          "snippet": "Israeli electoral authorities on Wednesday rejected allegations promoted by Prime Minister Benjamin Netanyahu of fraud by Arab parties, who could hold the key to removing him from power after a…",
+          "url": "https://www.scmp.com/news/world/middle-east/article/3373260/blow-netanyahu-israeli-election-body-rejects-claims-arab-party-fraud",
+          "published_at": "2026-11-04T09:24:54Z",
+          "published_at_estimated": false,
+          "image_url": "https://cdn.i-scmp.com/sites/default/files/styles/1280x720/public/d8/images/canvas/2026/11/04/6039cb9d-2d3f-4d88-9b0a-1a665e702e31_771e3bf0.jpg?itok=nUCyOQYo&v=1793784293"
+        },
+        {
+          "id": "b076b42e4f75",
+          "outlet_id": "aljazeera",
+          "headline": "Israel vote results confirmed as election commission rejects fraud claims",
+          "snippet": "Netanyahu’s allies refuse to back the result, as President Herzog begins talks on who should form the next government.",
+          "url": "https://www.aljazeera.com/news/2026/11/4/israel-vote-results-confirmed-as-election-commission-rejects-fraud-claims",
+          "published_at": "2026-11-04T10:37:21Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "912b7d9818bf",
+          "outlet_id": "timesofisrael",
+          "headline": "Full text of President Herzog’s remarks on receiving official 2026 election results",
+          "snippet": "Herzog accepts official results and urges political leaders to compromise to avoid repeat election; downplays tensions between Shin Bet chief and AG over election probe",
+          "url": "https://www.timesofisrael.com/full-text-of-president-herzogs-remarks-on-receiving-official-2026-election-results/",
+          "published_at": "2026-11-04T11:29:50Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "47d6359e9bd6",
+          "outlet_id": "thenational",
+          "headline": "Israel faces constitutional crisis as Netanyahu challenges election result",
+          "snippet": "A constitutional crisis is brewing in Israel as caretaker Prime Minister Benjamin Netanyahu escalates his campaign to cast doubt on the outcome of last week’s election, prompting opposition…",
+          "url": "https://www.thenationalnews.com/news/mena/2026/11/04/israel-faces-constitutional-crisis-as-netanyahu-challenges-election-result/",
+          "published_at": "2026-11-04T12:01:59Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.thenationalnews.com/resizer/v2/EQMUPBBXQCX3IRZGKXFH76H6IQ.jpg?auth=5578dc7482e39ad2c97bb2ef1ab58a231661cf511a0abf73e113a0b9d94dd9cb&smart=true&width=4000&height=2667"
+        },
+        {
+          "id": "478b50b55c80",
+          "outlet_id": "guardian",
+          "headline": "Israel’s election commission rejects Netanyahu claims of voting fraud",
+          "snippet": "Move comes after attorney general blocks Shin Bet call to interrogate politicians from Palestinian-led parties Israel’s election commission on Wednesday confirmed the final results of last week’s…",
+          "url": "https://www.theguardian.com/world/2026/nov/04/israel-election-commission-rejects-netanyahu-claims-voting-fraud",
+          "published_at": "2026-11-04T12:19:18Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.guim.co.uk/img/media/288a15e92c7bafcb3600eb1b2d8e20cc71573794/291_0_3027_2421/master/3027.jpg?width=460&quality=85&auto=format&fit=max&s=15a597ab0487f3ee638ac8cddcc53605"
+        },
+        {
+          "id": "0dc637d6ba02",
+          "outlet_id": "thehindu",
+          "headline": "Israel election commission rejects Benjamin Netanyahu charges of fraud",
+          "snippet": "The Central Elections Committee said it had conducted an audit of 9,069 polling stations following complaints and was confident that the announced results accurately reflect the will of the voters",
+          "url": "https://www.thehindu.com/news/international/israel-election-commission-rejects-benjamin-netanyahu-charges-of-fraud/article71665384.ece",
+          "published_at": "2026-11-04T12:44:43Z",
+          "published_at_estimated": false,
+          "image_url": "https://th-i.thgim.com/public/incoming/la6sic/article71665456.ece/alternates/LANDSCAPE_1200/2026-10-29T125022Z_90415747_RC21COANZRXI_RTRMADP_3_ISRAEL-ELECTION.JPG"
+        },
+        {
+          "id": "968599971bd7",
+          "outlet_id": "timesofisrael",
+          "headline": "Full text: Elections chief presents results to president, says casting doubt on them a ‘real danger’ to democracy",
+          "snippet": "Supreme Court Justice Sohlberg praises those who worked to conduct election, says suspicions of interference will be investigated but potential impact would be limited",
+          "url": "https://www.timesofisrael.com/full-text-elections-chief-presents-results-to-president-says-casting-doubt-on-them-a-real-danger-to-democracy/",
+          "published_at": "2026-11-04T13:05:54Z",
+          "published_at_estimated": false,
+          "image_url": null
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "Israel's election commission rejected fraud claims made or promoted by Netanyahu.",
+          "sources": [
+            "f5036ba6ce0f",
+            "b076b42e4f75",
+            "478b50b55c80",
+            "0dc637d6ba02"
+          ]
+        },
+        {
+          "text": "The official election results were confirmed and presented to President Herzog.",
+          "sources": [
+            "b076b42e4f75",
+            "478b50b55c80",
+            "912b7d9818bf",
+            "968599971bd7"
+          ]
+        },
+        {
+          "text": "The fraud allegations concerned Arab or Palestinian-led parties.",
+          "sources": [
+            "f5036ba6ce0f",
+            "99227a5ed4ea",
+            "478b50b55c80"
+          ]
+        },
+        {
+          "text": "The attorney general and the Shin Bet chief were at odds over the Shin Bet's request to question leaders of Arab parties as part of an election probe.",
+          "sources": [
+            "99227a5ed4ea",
+            "478b50b55c80",
+            "912b7d9818bf"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "478b50b55c80",
+              "quote": "Israel’s election commission rejects Netanyahu claims of voting fraud",
+              "field": "headline"
+            },
+            {
+              "article_id": "478b50b55c80",
+              "quote": "attorney general blocks Shin Bet call to interrogate politicians from Palestinian-led parties",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the commission's rejection of the fraud claims and links it to the attorney general blocking the Shin Bet's call to interrogate politicians.",
+              "sources": [
+                "478b50b55c80"
+              ]
+            },
+            {
+              "text": "Describes the parties concerned as Palestinian-led.",
+              "sources": [
+                "478b50b55c80"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [],
+      "contested_claims": [],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "478b50b55c80",
+              "quote": "Israel’s election commission rejects Netanyahu claims of voting fraud",
+              "field": "headline"
+            },
+            {
+              "article_id": "478b50b55c80",
+              "quote": "attorney general blocks Shin Bet call to interrogate politicians from Palestinian-led parties",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Foregrounds the attorney general blocking the Shin Bet's call to interrogate politicians from Palestinian-led parties.",
+              "sources": [
+                "478b50b55c80"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "f5036ba6ce0f",
+              "quote": "Blow for Netanyahu",
+              "field": "headline"
+            },
+            {
+              "article_id": "47d6359e9bd6",
+              "quote": "Israel faces constitutional crisis as Netanyahu challenges election result",
+              "field": "headline"
+            },
+            {
+              "article_id": "968599971bd7",
+              "quote": "casting doubt on them a ‘real danger’ to democracy",
+              "field": "headline"
+            },
+            {
+              "article_id": "b076b42e4f75",
+              "quote": "Netanyahu’s allies refuse to back the result",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Cites the commission's audit of 9,069 polling stations and its confidence that results reflect the will of voters.",
+              "sources": [
+                "0dc637d6ba02"
+              ]
+            },
+            {
+              "text": "Describes a brewing constitutional crisis as Netanyahu escalates efforts to cast doubt on the outcome, with his allies refusing to back the result.",
+              "sources": [
+                "47d6359e9bd6",
+                "b076b42e4f75"
+              ]
+            },
+            {
+              "text": "Reports Herzog accepting the results, beginning talks on the next government and urging compromise to avoid a repeat election.",
+              "sources": [
+                "b076b42e4f75",
+                "912b7d9818bf"
+              ]
+            },
+            {
+              "text": "Notes that Arab parties could hold the key to removing Netanyahu from power.",
+              "sources": [
+                "f5036ba6ce0f"
+              ]
+            },
+            {
+              "text": "Reports the elections chief saying suspicions of interference will be investigated but any impact would be limited.",
+              "sources": [
+                "968599971bd7"
+              ]
+            },
+            {
+              "text": "Identifies Shin Bet head David Zini as a close associate of Netanyahu and reports the attorney general asking intelligence services for proof of fraud.",
+              "sources": [
+                "99227a5ed4ea"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "Israel's election commission confirmed the final results of last week's election and rejected fraud claims promoted by Benjamin Netanyahu against Arab parties, citing an audit of 9,069 polling stations. The attorney general blocked a Shin Bet call to question Arab party leaders, and President Herzog received the results and began talks on the next government.",
+        "sources": [
+          "f5036ba6ce0f",
+          "b076b42e4f75",
+          "478b50b55c80",
+          "0dc637d6ba02",
+          "99227a5ed4ea",
+          "912b7d9818bf",
+          "968599971bd7"
+        ]
+      },
+      "conclusion": {
+        "text": "All coverage agrees the commission confirmed the results and rejected Netanyahu's fraud claims, amid a dispute between the attorney general and Shin Bet. The West-bloc article leads with the attorney general blocking the Shin Bet, while East-bloc articles add the audit, Herzog's coalition talks and warnings of a constitutional crisis. No claims are contested between outlets.",
+        "sources": [
+          "f5036ba6ce0f",
+          "b076b42e4f75",
+          "478b50b55c80",
+          "0dc637d6ba02",
+          "99227a5ed4ea",
+          "912b7d9818bf",
+          "47d6359e9bd6",
+          "968599971bd7"
+        ]
+      },
+      "validation": {
+        "kept": 23,
+        "dropped_by_reason": {}
+      }
+    },
+    {
+      "id": "4a2b2992a38f",
+      "title": "Cyberattack hits French national blood service cold storage",
+      "rank": 6,
+      "outlet_count": 5,
+      "coverage": {
+        "lean": {
+          "left": 1,
+          "centre": 1,
+          "right": 1
+        },
+        "bloc": {
+          "west": 3,
+          "east": 2
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "18e67055983b",
+          "outlet_id": "sky",
+          "headline": "Cyber attack threatens French blood banks",
+          "snippet": "Blood bank sites in France are the latest to be hit by cyber attackers.",
+          "url": "https://news.sky.com/story/cyber-attack-threatens-french-blood-banks-13606660",
+          "published_at": "2026-11-04T06:13:00Z",
+          "published_at_estimated": false,
+          "image_url": "https://e3.365dm.com/26/11/1920x1080/skynews-blood-donation_7396752.jpg?20261104113724"
+        },
+        {
+          "id": "fce956d6c4ae",
+          "outlet_id": "thenational",
+          "headline": "Blood banks among victims of European cyber attacks",
+          "snippet": "A cyber attack that has affected supermarkets across Europe also hit cold storage sites used by France’s national blood service, it has emerged. Several ​regional ⁠blood ⁠banks were ​hit by ⁠the…",
+          "url": "https://www.thenationalnews.com/news/europe/2026/11/04/blood-banks-among-victims-of-european-cyber-attacks/",
+          "published_at": "2026-11-04T09:25:17Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.thenationalnews.com/resizer/v2/IZOTSBJ2N75NL6VDM2URGN6YJY.jpg?auth=7efaccb70540126cac44238fe08c8a70c20c5362565362cd54a0dcd6704e2d94&smart=true&width=6000&height=4000"
+        },
+        {
+          "id": "37bcd01e6df4",
+          "outlet_id": "thesun",
+          "headline": "Blood banks hit by cyber attacks in France in bid to destroy supplies days after supermarket fridge hack across Europe",
+          "snippet": "BLOOD banks in France have been hit by cyber attackers just days after supermarket freezers across Europe were hacked. The attack struck several blood collection centres refrigeration systems…",
+          "url": "https://www.thesun.co.uk/news/40911881/blood-banks-hit-cyber-attacks-france/",
+          "published_at": "2026-11-04T12:49:47Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.thesun.co.uk/wp-content%2Fuploads%2F2026%2F11%2Fnull-903150584.jpg?quality%3D90%26"
+        },
+        {
+          "id": "3018174d610b",
+          "outlet_id": "toi",
+          "headline": "French blood plasma storage hit by hackers in widening cyberattack campaign",
+          "snippet": "",
+          "url": "https://timesofindia.indiatimes.com/world/europe/french-blood-plasma-storage-hit-by-hackers-in-widening-cyberattack-campaign/articleshow/135540237.cms",
+          "published_at": "2026-11-04T13:17:19Z",
+          "published_at_estimated": false,
+          "image_url": "https://static.toiimg.com/photo/msid-135540480,imgsize-126954.cms"
+        },
+        {
+          "id": "a32f0773423c",
+          "outlet_id": "guardian",
+          "headline": "French blood banks hacked in latest cyber-attack on Europe",
+          "snippet": "Temperature and defrosting thresholds raised to ‘very high levels’ at three cold stores stocking vital blood products Europe live – latest updates France’s national blood service has said hackers…",
+          "url": "https://www.theguardian.com/technology/2026/nov/04/france-national-blood-service-hack-cyber-attack-europe",
+          "published_at": "2026-11-04T13:22:28Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.guim.co.uk/img/media/71023ce1bb06b16b33943aaac6da2f2e793af003/414_0_4799_3840/master/4799.jpg?width=460&quality=85&auto=format&fit=max&s=a42dcf00083f010c023f8ef97c6b65a0"
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "Blood bank or blood storage sites in France have been hit by a cyber attack.",
+          "sources": [
+            "18e67055983b",
+            "fce956d6c4ae",
+            "37bcd01e6df4",
+            "3018174d610b",
+            "a32f0773423c"
+          ]
+        },
+        {
+          "text": "The attack is described as the latest in a wider series of cyber attacks.",
+          "sources": [
+            "18e67055983b",
+            "3018174d610b",
+            "a32f0773423c",
+            "fce956d6c4ae"
+          ]
+        },
+        {
+          "text": "The attack is linked to an earlier attack on supermarket refrigeration across Europe.",
+          "sources": [
+            "fce956d6c4ae",
+            "37bcd01e6df4"
+          ]
+        },
+        {
+          "text": "The targets were cold storage or refrigeration systems at several blood service sites.",
+          "sources": [
+            "fce956d6c4ae",
+            "37bcd01e6df4",
+            "a32f0773423c"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "a32f0773423c",
+              "quote": "French blood banks hacked in latest cyber-attack on Europe",
+              "field": "headline"
+            },
+            {
+              "article_id": "a32f0773423c",
+              "quote": "Temperature and defrosting thresholds raised to ‘very high levels’",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the technical detail that temperature and defrosting thresholds were raised at three cold stores holding vital blood products.",
+              "sources": [
+                "a32f0773423c"
+              ]
+            },
+            {
+              "text": "Cites France's national blood service as the source of the information.",
+              "sources": [
+                "a32f0773423c"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "18e67055983b",
+              "quote": "Cyber attack threatens French blood banks",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Frames the attack as a threat to French blood banks and the latest in a series of attacks.",
+              "sources": [
+                "18e67055983b"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "right",
+          "headline_quotes": [
+            {
+              "article_id": "37bcd01e6df4",
+              "quote": "in bid to destroy supplies",
+              "field": "headline"
+            },
+            {
+              "article_id": "37bcd01e6df4",
+              "quote": "just days after supermarket freezers across Europe were hacked",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Describes the attack as an attempt to destroy blood supplies.",
+              "sources": [
+                "37bcd01e6df4"
+              ]
+            },
+            {
+              "text": "Links the attack to the supermarket freezer hacks across Europe days earlier.",
+              "sources": [
+                "37bcd01e6df4"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "centre",
+          "text": "Does not mention the link to the earlier supermarket refrigeration attacks across Europe.",
+          "sources": [
+            "37bcd01e6df4"
+          ]
+        },
+        {
+          "lean": "left",
+          "text": "Does not mention the link to the earlier supermarket freezer attacks across Europe.",
+          "sources": [
+            "37bcd01e6df4"
+          ]
+        },
+        {
+          "lean": "centre",
+          "text": "Does not mention that temperature and defrosting thresholds were raised at the cold stores.",
+          "sources": [
+            "a32f0773423c"
+          ]
+        },
+        {
+          "lean": "right",
+          "text": "Does not mention that temperature and defrosting thresholds were raised to very high levels at three cold stores.",
+          "sources": [
+            "a32f0773423c"
+          ]
+        }
+      ],
+      "contested_claims": [],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "18e67055983b",
+              "quote": "Cyber attack threatens French blood banks",
+              "field": "headline"
+            },
+            {
+              "article_id": "37bcd01e6df4",
+              "quote": "in bid to destroy supplies",
+              "field": "headline"
+            },
+            {
+              "article_id": "a32f0773423c",
+              "quote": "Temperature and defrosting thresholds raised to ‘very high levels’",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Foregrounds the threat to blood supplies, including tampering with storage temperatures and an alleged aim to destroy supplies.",
+              "sources": [
+                "18e67055983b",
+                "37bcd01e6df4",
+                "a32f0773423c"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "fce956d6c4ae",
+              "quote": "Blood banks among victims of European cyber attacks",
+              "field": "headline"
+            },
+            {
+              "article_id": "3018174d610b",
+              "quote": "widening cyberattack campaign",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Places the blood service attack within a broader European cyber attack campaign that also hit supermarkets.",
+              "sources": [
+                "fce956d6c4ae",
+                "3018174d610b"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "Cold storage and refrigeration sites used by France's national blood service have been hit by a cyber attack. Several outlets link it to a wider campaign that recently hit supermarket fridges and freezers across Europe. The Guardian reports temperature and defrosting thresholds were raised to 'very high levels' at three cold stores.",
+        "sources": [
+          "18e67055983b",
+          "fce956d6c4ae",
+          "37bcd01e6df4",
+          "3018174d610b",
+          "a32f0773423c"
+        ]
+      },
+      "conclusion": null,
+      "validation": {
+        "kept": 26,
+        "dropped_by_reason": {
+          "untrusted_text": 1
+        }
+      }
+    },
+    {
+      "id": "3d0750029bc6",
+      "title": "Financial markets react to Democratic midterm wins",
+      "rank": 7,
+      "outlet_count": 5,
+      "coverage": {
+        "lean": {
+          "left": 1,
+          "centre": 2,
+          "right": 0
+        },
+        "bloc": {
+          "west": 3,
+          "east": 2
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "4f34ea246781",
+          "outlet_id": "sky",
+          "headline": "Wall Street edges higher after Democrats sweep midterms",
+          "snippet": "Wall Street markets rose on Wednesday, reversing sharp early losses as Democrats continue to gain ground in the US midterm elections.",
+          "url": "https://news.sky.com/story/wall-street-edges-higher-after-democrats-sweep-midterms-13607737",
+          "published_at": "2026-11-04T01:52:00Z",
+          "published_at_estimated": false,
+          "image_url": "https://e3.365dm.com/25/04/1920x1080/skynews-new-york-stock-exchange_6879863.jpg?20250408142014"
+        },
+        {
+          "id": "1b61a25b4d2e",
+          "outlet_id": "japantimes",
+          "headline": "Japanese stocks sink as U.S. midterm results hit tech shares",
+          "snippet": "The tech-heavy Nikkei 225 declined as much as 4.8%, with chip and AI-related shares slumping more than 13% and among the worst performers.",
+          "url": "https://www.japantimes.co.jp/business/2026/11/04/markets/japan-stocks-sink/",
+          "published_at": "2026-11-04T05:23:00Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.japantimes.co.jp/japantimes/uploads/images/2026/11/04/thumbs/400x400/572229.jpg"
+        },
+        {
+          "id": "b2163760cee9",
+          "outlet_id": "nbc",
+          "headline": "Stock futures rebound as Wall Street confronts the ‘blue tsunami’ threat to the AI boom",
+          "snippet": "Stock futures rebounded after Democrats won key Senate races across the country. The size of the blue wave surprised Wall Street, which was expecting a ripple.",
+          "url": "https://www.nbcnews.com/business/markets/stock-futures-blue-tsunami-ai-boom-rcna607351",
+          "published_at": "2026-11-04T06:11:31Z",
+          "published_at_estimated": false,
+          "image_url": "https://media-cldnry.s-nbcnews.com/image/upload/t_fit_1500w/rockcms/2026-11/261103-NYSE-ww-1804-b6a0c6.jpg"
+        },
+        {
+          "id": "9591175aed3b",
+          "outlet_id": "koreaherald",
+          "headline": "Seoul shares close higher on early US midterm election outcome",
+          "snippet": "South Korean stocks closed slightly higher Wednesday as early results from the US midterm elections pointed to Democratic victories in both chambers of Congress. The local currency was trading lower…",
+          "url": "https://www.koreaherald.com/article/10925908",
+          "published_at": "2026-11-04T07:10:02Z",
+          "published_at_estimated": false,
+          "image_url": "https://wimg.heraldcorp.com/news/cms/2026/11/04/news-p.v1.20261104.85ad9243b5cb4839a260e8bc8bbebff4_T1.jpg"
+        },
+        {
+          "id": "e2cf69842873",
+          "outlet_id": "france24",
+          "headline": "Markets react with caution to Democrats' victory in US midterms",
+          "snippet": "Investors shunned AI stocks and turned to government bonds on Wednesday in the wake of the Democratic Party's takeover of Congress in the US midterm elections. Oil prices meanwhile ticked slightly…",
+          "url": "https://www.france24.com/en/tv-shows/business/20261104-markets-react-with-caution-to-democrats-victory-in-us-midterms",
+          "published_at": "2026-11-04T10:40:31Z",
+          "published_at_estimated": false,
+          "image_url": "https://s.france24.com/media/display/3819880c-d835-11f1-8633-a575454bc579/w:1024/p:16x9/capture-a1ee729c.jpg"
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "Democrats won the US midterm elections, described as a sweep, victories in both chambers or a takeover of Congress.",
+          "sources": [
+            "4f34ea246781",
+            "b2163760cee9",
+            "9591175aed3b",
+            "e2cf69842873"
+          ]
+        },
+        {
+          "text": "US stock markets moved higher, with Wall Street rising after early losses and stock futures rebounding.",
+          "sources": [
+            "4f34ea246781",
+            "b2163760cee9"
+          ]
+        },
+        {
+          "text": "AI-related shares came under pressure after the results.",
+          "sources": [
+            "b2163760cee9",
+            "e2cf69842873",
+            "1b61a25b4d2e"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "b2163760cee9",
+              "quote": "‘blue tsunami’ threat to the AI boom",
+              "field": "headline"
+            },
+            {
+              "article_id": "b2163760cee9",
+              "quote": "The size of the blue wave surprised Wall Street, which was expecting a ripple.",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the scale of the Democratic win as a threat to the AI boom and as a surprise to Wall Street.",
+              "sources": [
+                "b2163760cee9"
+              ]
+            },
+            {
+              "text": "Reports that stock futures rebounded after Democrats won key Senate races.",
+              "sources": [
+                "b2163760cee9"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "4f34ea246781",
+              "quote": "Wall Street edges higher after Democrats sweep midterms",
+              "field": "headline"
+            },
+            {
+              "article_id": "e2cf69842873",
+              "quote": "Markets react with caution",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Emphasises Wall Street reversing sharp early losses to rise.",
+              "sources": [
+                "4f34ea246781"
+              ]
+            },
+            {
+              "text": "Emphasises a cautious market reaction, with investors shunning AI stocks, turning to government bonds and oil prices ticking slightly.",
+              "sources": [
+                "e2cf69842873"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "left",
+          "text": "Left coverage does not mention investors turning to government bonds or movements in oil prices.",
+          "sources": [
+            "e2cf69842873"
+          ]
+        },
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not mention that the size of the Democratic win surprised Wall Street.",
+          "sources": [
+            "b2163760cee9"
+          ]
+        }
+      ],
+      "contested_claims": [],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "4f34ea246781",
+              "quote": "Wall Street edges higher after Democrats sweep midterms",
+              "field": "headline"
+            },
+            {
+              "article_id": "b2163760cee9",
+              "quote": "Stock futures rebound as Wall Street confronts the ‘blue tsunami’ threat to the AI boom",
+              "field": "headline"
+            },
+            {
+              "article_id": "e2cf69842873",
+              "quote": "Investors shunned AI stocks and turned to government bonds",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Focuses on US markets: Wall Street and stock futures moving higher, with pressure on AI stocks.",
+              "sources": [
+                "4f34ea246781",
+                "b2163760cee9",
+                "e2cf69842873"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "1b61a25b4d2e",
+              "quote": "Japanese stocks sink as U.S. midterm results hit tech shares",
+              "field": "headline"
+            },
+            {
+              "article_id": "9591175aed3b",
+              "quote": "Seoul shares close higher on early US midterm election outcome",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Focuses on Asian markets: the Nikkei 225 fell as much as 4.8% with chip and AI-related shares slumping more than 13%.",
+              "sources": [
+                "1b61a25b4d2e"
+              ]
+            },
+            {
+              "text": "Reports South Korean stocks closing slightly higher while the local currency traded lower.",
+              "sources": [
+                "9591175aed3b"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "Democrats won the US midterm elections, with reports of victories in both chambers of Congress. Wall Street rose after early losses and stock futures rebounded, while investors moved away from AI stocks. In Asia, Japan's Nikkei 225 fell as much as 4.8%, while Seoul shares closed slightly higher.",
+        "sources": [
+          "4f34ea246781",
+          "b2163760cee9",
+          "e2cf69842873",
+          "1b61a25b4d2e",
+          "9591175aed3b"
+        ]
+      },
+      "conclusion": {
+        "text": "All sides report Democratic midterm wins followed by market moves, with pressure on AI-related shares. The left outlet frames the win as a surprising threat to the AI boom, centre outlets stress a rebound and caution, and East outlets focus on Japanese and South Korean markets. No direct contradictions appear between the accounts.",
+        "sources": [
+          "4f34ea246781",
+          "b2163760cee9",
+          "e2cf69842873",
+          "1b61a25b4d2e",
+          "9591175aed3b"
+        ]
+      },
+      "validation": {
+        "kept": 23,
+        "dropped_by_reason": {}
+      }
+    },
+    {
+      "id": "006cb824d7e4",
+      "title": "Iranian officials say US voters rejected war; Khamenei expects no policy change",
+      "rank": 8,
+      "outlet_count": 5,
+      "coverage": {
+        "lean": {
+          "left": 2,
+          "centre": 1,
+          "right": 0
+        },
+        "bloc": {
+          "west": 3,
+          "east": 2
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "faf080e22f28",
+          "outlet_id": "thenational",
+          "headline": "Iran war latest: Khamenei warns against expecting change in US policy after elections",
+          "snippet": "Iranians walk along a building installed with a giant poster depicting Iran's supreme leader Ayatollah Mojtaba Khamenei during a rally in front of the former US embassy to mark the anniversary of…",
+          "url": "https://www.thenationalnews.com/news/mena/2026/11/04/live-trump-iran-war-midterms/",
+          "published_at": "2026-11-04T08:02:35Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.thenationalnews.com/resizer/v2/LNC6YZUQGGA55AW4C2MDUDRZEQ.jpg?auth=7aa9849652fb5e404f7068311896564dfcca1cee621f2dde8870feec58b1fb56&smart=true&width=5950&height=3966"
+        },
+        {
+          "id": "b1bfa527f2c7",
+          "outlet_id": "bbc",
+          "headline": "Iran's chief negotiator says Americans voted 'no to war'",
+          "snippet": "\"We endorse this message,\" Mohammed Bagher Ghalibaf says, as Donald Trump acknowledges the conflict's role in the Republican Party's defeat.",
+          "url": "https://www.bbc.co.uk/news/articles/c6d934npl9y8o",
+          "published_at": "2026-11-04T12:21:21Z",
+          "published_at_estimated": false,
+          "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/fd62/live/d825bb50-d82f-11f1-a701-fddedf244c16.jpg"
+        },
+        {
+          "id": "bf02538719ab",
+          "outlet_id": "independent",
+          "headline": "Iran gloats over Donald Trump's midterm rout, claiming Americans said no to war",
+          "snippet": "",
+          "url": "https://www.independent.co.uk/bulletin/news/democrats-congress-trump-iran-midterms-b3079077.html",
+          "published_at": "2026-11-04T13:14:44Z",
+          "published_at_estimated": false,
+          "image_url": "https://static.independent.co.uk/2026/10/25/22/15/GettyImages-2301976725.jpg?width=1200&auto=webp&trim=39%2C0%2C39%2C0"
+        },
+        {
+          "id": "45c588ebcddb",
+          "outlet_id": "aljazeera",
+          "headline": "Iran hails US voters rejecting war while Khamenei warns hostility won’t end",
+          "snippet": "Iranian officials see Republican midterm losses in a positive light, but supreme leader says US policy will not shift.",
+          "url": "https://www.aljazeera.com/news/2026/11/4/iran-hails-us-voters-rejecting-war-while-khamenei-warns-hostility-wont-end",
+          "published_at": "2026-11-04T13:26:44Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "517084f9ba8f",
+          "outlet_id": "guardian",
+          "headline": "Joy in Iran over ‘Trump’s defeat’ in US midterm elections – but war is not over",
+          "snippet": "Iran celebrates its claimed role in ‘regime change’ amid pressure on US president to ‘finish the job’ with attack US midterms live – latest updates Iran this week unveiled a massive new billboard…",
+          "url": "https://www.theguardian.com/us-news/2026/nov/04/joy-iran-trump-defeat-us-midterm-elections-war",
+          "published_at": "2026-11-04T13:44:19Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.guim.co.uk/img/media/71c4907afb10c6c249ab382b71f51864e9a67d80/875_0_6000_4800/master/6000.jpg?width=460&quality=85&auto=format&fit=max&s=a9ab33934603de0e798e8a75e1f8d9d5"
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "Iranian officials say American voters rejected war in the US midterm elections.",
+          "sources": [
+            "b1bfa527f2c7",
+            "bf02538719ab",
+            "45c588ebcddb"
+          ]
+        },
+        {
+          "text": "Trump's Republican Party suffered losses in the US midterm elections.",
+          "sources": [
+            "b1bfa527f2c7",
+            "bf02538719ab",
+            "45c588ebcddb",
+            "517084f9ba8f"
+          ]
+        },
+        {
+          "text": "Iran welcomed or celebrated the midterm result.",
+          "sources": [
+            "bf02538719ab",
+            "45c588ebcddb",
+            "517084f9ba8f"
+          ]
+        },
+        {
+          "text": "Supreme leader Khamenei said US policy would not change after the elections.",
+          "sources": [
+            "faf080e22f28",
+            "45c588ebcddb"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "bf02538719ab",
+              "quote": "Iran gloats over Donald Trump's midterm rout",
+              "field": "headline"
+            },
+            {
+              "article_id": "517084f9ba8f",
+              "quote": "Joy in Iran over ‘Trump’s defeat’ in US midterm elections",
+              "field": "headline"
+            },
+            {
+              "article_id": "517084f9ba8f",
+              "quote": "but war is not over",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with Iranian celebration of Trump's midterm defeat.",
+              "sources": [
+                "bf02538719ab",
+                "517084f9ba8f"
+              ]
+            },
+            {
+              "text": "Reports Iran's claimed role in 'regime change' and pressure on Trump to 'finish the job' with an attack.",
+              "sources": [
+                "517084f9ba8f"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "b1bfa527f2c7",
+              "quote": "Iran's chief negotiator says Americans voted 'no to war'",
+              "field": "headline"
+            },
+            {
+              "article_id": "b1bfa527f2c7",
+              "quote": "\"We endorse this message,\"",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Attributes the 'no to war' claim to chief negotiator Mohammed Bagher Ghalibaf.",
+              "sources": [
+                "b1bfa527f2c7"
+              ]
+            },
+            {
+              "text": "Reports Trump acknowledging the conflict's role in the Republican defeat.",
+              "sources": [
+                "b1bfa527f2c7"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "left",
+          "text": "Left coverage does not mention Trump acknowledging the conflict's role in the Republican defeat.",
+          "sources": [
+            "b1bfa527f2c7"
+          ]
+        },
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not mention pressure on Trump to 'finish the job' with an attack or that the war is not over.",
+          "sources": [
+            "517084f9ba8f"
+          ]
+        }
+      ],
+      "contested_claims": [],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "b1bfa527f2c7",
+              "quote": "Americans voted 'no to war'",
+              "field": "headline"
+            },
+            {
+              "article_id": "bf02538719ab",
+              "quote": "Iran gloats over Donald Trump's midterm rout",
+              "field": "headline"
+            },
+            {
+              "article_id": "517084f9ba8f",
+              "quote": "Joy in Iran over ‘Trump’s defeat’",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with Iranian reaction to Trump's midterm defeat and the claim that Americans rejected war.",
+              "sources": [
+                "b1bfa527f2c7",
+                "bf02538719ab",
+                "517084f9ba8f"
+              ]
+            },
+            {
+              "text": "Reports Trump acknowledging the conflict's role in the defeat.",
+              "sources": [
+                "b1bfa527f2c7"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "faf080e22f28",
+              "quote": "Khamenei warns against expecting change in US policy after elections",
+              "field": "headline"
+            },
+            {
+              "article_id": "45c588ebcddb",
+              "quote": "Khamenei warns hostility won’t end",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with Khamenei's warning that US policy will not shift after the elections.",
+              "sources": [
+                "faf080e22f28",
+                "45c588ebcddb"
+              ]
+            },
+            {
+              "text": "Describes a rally in front of the former US embassy with a giant poster of Khamenei.",
+              "sources": [
+                "faf080e22f28"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "Iranian officials, including chief negotiator Mohammed Bagher Ghalibaf, welcomed Republican losses in the US midterm elections, saying Americans voted 'no to war'. Supreme leader Ayatollah Mojtaba Khamenei warned that US policy would not change. Donald Trump acknowledged the conflict's role in the Republican defeat.",
+        "sources": [
+          "b1bfa527f2c7",
+          "bf02538719ab",
+          "45c588ebcddb",
+          "517084f9ba8f",
+          "faf080e22f28"
+        ]
+      },
+      "conclusion": {
+        "text": "All coverage reports Iran welcoming Republican midterm losses as a rejection of war. Western outlets lead with Iranian celebration and Trump's defeat, while Eastern outlets lead with Khamenei's warning that US policy and hostility will not change. No article disputes another's facts.",
+        "sources": [
+          "b1bfa527f2c7",
+          "bf02538719ab",
+          "517084f9ba8f",
+          "45c588ebcddb",
+          "faf080e22f28"
+        ]
+      },
+      "validation": {
+        "kept": 26,
+        "dropped_by_reason": {}
+      }
+    },
+    {
+      "id": "708b5fd180e4",
+      "title": "Foreign governments react to Democratic midterm victory",
+      "rank": 9,
+      "outlet_count": 5,
+      "coverage": {
+        "lean": {
+          "left": 1,
+          "centre": 1,
+          "right": 0
+        },
+        "bloc": {
+          "west": 2,
+          "east": 3
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "513069e163d9",
+          "outlet_id": "aljazeera",
+          "headline": "‘Seismic shift’: World reacts to US midterm election results",
+          "snippet": "Iran's top negotiator says US voters sent a “NO TO WAR” message, as Trump's Democratic opponents take Congress.",
+          "url": "https://www.aljazeera.com/news/2026/11/4/seismic-shift-world-reacts-to-us-midterm-election-results",
+          "published_at": "2026-11-04T11:24:50Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "5eda57b9cd17",
+          "outlet_id": "scmp",
+          "headline": "In Asia, midterms spark worries about diplomatic uncertainty, economic pressure",
+          "snippet": "Follow the SCMP’s live coverage here In the wake of Democrats’ sweeping victory in congressional elections, Asian countries are weighing how their ties with the US will shift under a lame-duck Trump…",
+          "url": "https://www.scmp.com/news/china/diplomacy/article/3373286/asia-midterms-spark-worries-about-diplomatic-uncertainty-economic-pressure",
+          "published_at": "2026-11-04T11:33:40Z",
+          "published_at_estimated": false,
+          "image_url": "https://cdn.i-scmp.com/sites/default/files/styles/1280x720/public/d8/images/canvas/2026/11/04/e440c741-4eab-4444-a59c-1531b6c9efe5_b896a6e3.jpg?itok=j7BJxt_o&v=1793792740"
+        },
+        {
+          "id": "dcf02aa77977",
+          "outlet_id": "npr",
+          "headline": "World reacts to Democrats' midterm elections victory",
+          "snippet": "From Kyiv to Moscow, and Tehran to Tel Aviv, all eyes were on the Democrats big win on Wednesday, as foreign powers weigh up how a flipped Congress will impact international relations.",
+          "url": "https://www.npr.org/2026/11/04/nx-s1-6028664/world-reacts-midterm-elections",
+          "published_at": "2026-11-04T12:34:35Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "0fce97f48323",
+          "outlet_id": "scmp",
+          "headline": "Bad to worse? Europe’s relief over US midterms tempered by prospect of Trump backlash",
+          "snippet": "Follow the SCMP’s live coverage here After almost two years in which the transatlantic alliance verged on collapse, a Democratic landslide in the US midterm elections was welcomed in Europe on…",
+          "url": "https://www.scmp.com/news/china/diplomacy/article/3373298/bad-worse-europes-relief-over-us-midterms-tempered-prospect-trump-backlash",
+          "published_at": "2026-11-04T13:14:06Z",
+          "published_at_estimated": false,
+          "image_url": "https://cdn.i-scmp.com/sites/default/files/styles/1280x720/public/d8/images/canvas/2026/11/04/fbb90a25-ae95-417b-a6ba-880508afbff2_7fed685c.jpg?itok=kwHZnNkF&v=1793798035"
+        },
+        {
+          "id": "fa8ddf9916f1",
+          "outlet_id": "nyt",
+          "headline": "Countries Weigh, and Worry About, What Trump Will Do After Midterm Defeat",
+          "snippet": "Commentators abroad wondered what the president’s electoral losses might mean for oil prices, the war on Iran and the end of the Trump era.",
+          "url": "https://www.nytimes.com/2026/11/04/world/asia/midterms-trump-foreign-policy-world.html",
+          "published_at": "2026-11-04T13:19:17Z",
+          "published_at_estimated": false,
+          "image_url": "https://static01.nyt.com/images/2026/11/04/multimedia/04int-global-midterm-reax-zbjv/04int-global-midterm-reax-zbjv-mediumSquareAt3X.jpg"
+        },
+        {
+          "id": "b155ed130f8d",
+          "outlet_id": "moscowtimes",
+          "headline": "Kremlin Hopes Trump Will Continue ‘Peacemaking’ Efforts in Ukraine as Democrats Win Control of Congress",
+          "snippet": "“President Trump will continue his term, and we sincerely count on him continuing his peacemaking efforts,” spokesman Dmitry Peskov said.",
+          "url": "https://www.themoscowtimes.com/2026/11/04/kremlin-hopes-trump-will-continue-peacemaking-efforts-in-ukraine-as-democrats-win-control-of-congress-a94177",
+          "published_at": "2026-11-04T13:33:51Z",
+          "published_at_estimated": false,
+          "image_url": null
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "Democrats won the US midterm elections and took control of Congress, a defeat for President Trump.",
+          "sources": [
+            "513069e163d9",
+            "5eda57b9cd17",
+            "dcf02aa77977",
+            "0fce97f48323",
+            "fa8ddf9916f1",
+            "b155ed130f8d"
+          ]
+        },
+        {
+          "text": "Foreign countries are weighing how the result will affect their relations with the US.",
+          "sources": [
+            "5eda57b9cd17",
+            "dcf02aa77977",
+            "fa8ddf9916f1"
+          ]
+        },
+        {
+          "text": "Trump remains in office for the rest of his term after the result.",
+          "sources": [
+            "5eda57b9cd17",
+            "b155ed130f8d"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "fa8ddf9916f1",
+              "quote": "Countries Weigh, and Worry About, What Trump Will Do After Midterm Defeat",
+              "field": "headline"
+            },
+            {
+              "article_id": "fa8ddf9916f1",
+              "quote": "the end of the Trump era",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with foreign concern about Trump's next moves, citing oil prices, the war on Iran and the possible end of the Trump era.",
+              "sources": [
+                "fa8ddf9916f1"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "dcf02aa77977",
+              "quote": "World reacts to Democrats' midterm elections victory",
+              "field": "headline"
+            },
+            {
+              "article_id": "dcf02aa77977",
+              "quote": "From Kyiv to Moscow, and Tehran to Tel Aviv",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Emphasises the global breadth of attention and how a flipped Congress will affect international relations.",
+              "sources": [
+                "dcf02aa77977"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not mention oil prices or the war on Iran as concerns raised abroad.",
+          "sources": [
+            "fa8ddf9916f1"
+          ]
+        }
+      ],
+      "contested_claims": [],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "fa8ddf9916f1",
+              "quote": "Worry About, What Trump Will Do",
+              "field": "headline"
+            },
+            {
+              "article_id": "dcf02aa77977",
+              "quote": "all eyes were on the Democrats big win",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Frames the story as countries collectively weighing the impact of the result and Trump's response.",
+              "sources": [
+                "dcf02aa77977",
+                "fa8ddf9916f1"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "513069e163d9",
+              "quote": "‘Seismic shift’",
+              "field": "headline"
+            },
+            {
+              "article_id": "513069e163d9",
+              "quote": "“NO TO WAR” message",
+              "field": "snippet"
+            },
+            {
+              "article_id": "b155ed130f8d",
+              "quote": "Kremlin Hopes Trump Will Continue ‘Peacemaking’ Efforts in Ukraine",
+              "field": "headline"
+            },
+            {
+              "article_id": "5eda57b9cd17",
+              "quote": "midterms spark worries about diplomatic uncertainty, economic pressure",
+              "field": "headline"
+            },
+            {
+              "article_id": "0fce97f48323",
+              "quote": "Europe’s relief over US midterms tempered by prospect of Trump backlash",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Foregrounds specific official reactions, from Iran's top negotiator and Kremlin spokesman Dmitry Peskov.",
+              "sources": [
+                "513069e163d9",
+                "b155ed130f8d"
+              ]
+            },
+            {
+              "text": "Breaks down regional reactions: Asian worries over diplomatic uncertainty and economic pressure, and European relief tempered by fear of backlash.",
+              "sources": [
+                "5eda57b9cd17",
+                "0fce97f48323"
+              ]
+            },
+            {
+              "text": "Describes the result as a sweeping victory or landslide for Democrats.",
+              "sources": [
+                "5eda57b9cd17",
+                "0fce97f48323"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "Democrats won control of Congress in the US midterm elections, and governments and commentators abroad weighed what it means for relations with the US. Iran's top negotiator called it a 'NO TO WAR' message, the Kremlin said it hopes Trump continues 'peacemaking' in Ukraine, and Europe's relief was tempered by fears of a Trump backlash.",
+        "sources": [
+          "513069e163d9",
+          "5eda57b9cd17",
+          "dcf02aa77977",
+          "0fce97f48323",
+          "fa8ddf9916f1",
+          "b155ed130f8d"
+        ]
+      },
+      "conclusion": {
+        "text": "All coverage agrees Democrats took Congress and foreign capitals are assessing the consequences. West-bloc outlets frame it as countries weighing and worrying about Trump's next moves, while East-bloc outlets foreground named reactions from Iran and the Kremlin and regional views from Asia and Europe. No claims are contested between the sides.",
+        "sources": [
+          "513069e163d9",
+          "5eda57b9cd17",
+          "dcf02aa77977",
+          "0fce97f48323",
+          "fa8ddf9916f1",
+          "b155ed130f8d"
+        ]
+      },
+      "validation": {
+        "kept": 23,
+        "dropped_by_reason": {}
+      }
+    },
+    {
+      "id": "dc05a83979f0",
+      "title": "Indonesia arrests and dismisses president's chief of staff over wiretapping",
+      "rank": 10,
+      "outlet_count": 5,
+      "coverage": {
+        "lean": {
+          "left": 0,
+          "centre": 1,
+          "right": 0
+        },
+        "bloc": {
+          "west": 1,
+          "east": 4
+        }
+      },
+      "blindspot": {
+        "lean": "centre",
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "874c610469d3",
+          "outlet_id": "japantimes",
+          "headline": "Indonesia arrests chief of staff and top policemen for alleged wiretapping of president",
+          "snippet": "The suspects are accused of illegally tapping phones of the president, journalists, politicians, business people and more from 2025 to this year.",
+          "url": "https://www.japantimes.co.jp/news/2026/11/04/asia-pacific/politics/indonesia-wiretapping-president/",
+          "published_at": "2026-11-04T01:43:00Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.japantimes.co.jp/japantimes/uploads/images/2026/11/04/thumbs/400x400/572185.jpg"
+        },
+        {
+          "id": "4200fde340ae",
+          "outlet_id": "thehindu",
+          "headline": "Indonesia arrests ex-police chief over alleged illegal wiretapping of President, officials",
+          "snippet": "‘What was done may have fallen into the category of being considered as leading to treason,’ said a Presidential spokesperson",
+          "url": "https://www.thehindu.com/news/international/indonesia-arrests-ex-police-chief-over-alleged-illegal-wiretapping-of-president-officials/article71664234.ece",
+          "published_at": "2026-11-04T06:25:45Z",
+          "published_at_estimated": false,
+          "image_url": "https://th-i.thgim.com/public/news/national/m1p80r/article71664277.ece/alternates/LANDSCAPE_1200/AFP__20261104__D6CW8NQ__v1__HighRes__FilesIndonesiaPoliticsCrime.jpg"
+        },
+        {
+          "id": "c0db155ee529",
+          "outlet_id": "scmp",
+          "headline": "Indonesia’s Prabowo sacks chief of staff as wiretap scandal tests alliance with Widodo",
+          "snippet": "In one of the biggest scandals to hit the Indonesian National Police (Polri), President Prabowo Subianto on Wednesday sacked his chief of staff, former national police chief Listyo Sigit Prabowo…",
+          "url": "https://www.scmp.com/week-asia/politics/article/3373235/indonesias-prabowo-sacks-chief-staff-wiretap-scandal-tests-alliance-widodo",
+          "published_at": "2026-11-04T07:02:00Z",
+          "published_at_estimated": false,
+          "image_url": "https://cdn.i-scmp.com/sites/default/files/styles/1280x720/public/d8/images/canvas/2026/11/04/82662aee-8ed4-468c-bc7a-4031a542a589_1669f155.jpg?itok=-iLppbsV&v=1793775718"
+        },
+        {
+          "id": "d237e854905c",
+          "outlet_id": "aljazeera",
+          "headline": "Indonesian president’s chief of staff dismissed over alleged wiretapping",
+          "snippet": "Gov't says Listyo may have committed 'treason' after he is arrested and accused of wiretapping top officials' phones.",
+          "url": "https://www.aljazeera.com/news/2026/11/4/indonesian-presidents-chief-of-staff-dismissed-over-alleged",
+          "published_at": "2026-11-04T10:07:36Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "787cb5cd3c91",
+          "outlet_id": "dw",
+          "headline": "Indonesia deploys troops to Jakarta after wiretapping allegations",
+          "snippet": "Indonesian troops are being stationed in Jakarta amid wiretapping allegations implicating the president's chief of staff. Suspects are being accused of illegally tapping the president's phones.",
+          "url": "https://www.dw.com/en/indonesia-deploys-troops-to-jakarta-after-wiretapping-allegations/a-79853779?maca=en-rss-en-world-4025-xml-mrss",
+          "published_at": "2026-11-04T12:52:00Z",
+          "published_at_estimated": false,
+          "image_url": null
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "The president's chief of staff is accused of, or implicated in, illegally wiretapping the president's phones.",
+          "sources": [
+            "874c610469d3",
+            "4200fde340ae",
+            "c0db155ee529",
+            "d237e854905c",
+            "787cb5cd3c91"
+          ]
+        },
+        {
+          "text": "The chief of staff was arrested.",
+          "sources": [
+            "874c610469d3",
+            "4200fde340ae",
+            "d237e854905c"
+          ]
+        },
+        {
+          "text": "The chief of staff, Listyo, was dismissed from his post.",
+          "sources": [
+            "c0db155ee529",
+            "d237e854905c"
+          ]
+        },
+        {
+          "text": "The accused is a former national police chief, and police figures are among those arrested.",
+          "sources": [
+            "874c610469d3",
+            "4200fde340ae",
+            "c0db155ee529"
+          ]
+        },
+        {
+          "text": "The government says the conduct may amount to treason.",
+          "sources": [
+            "4200fde340ae",
+            "d237e854905c"
+          ]
+        },
+        {
+          "text": "The alleged wiretapping targeted officials and others beyond the president.",
+          "sources": [
+            "874c610469d3",
+            "4200fde340ae",
+            "d237e854905c"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "787cb5cd3c91",
+              "quote": "Indonesia deploys troops to Jakarta after wiretapping allegations",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the stationing of troops in Jakarta amid the wiretapping allegations.",
+              "sources": [
+                "787cb5cd3c91"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [],
+      "contested_claims": [],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "787cb5cd3c91",
+              "quote": "Indonesian troops are being stationed in Jakarta",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Foregrounds the troop deployment to Jakarta, describing the chief of staff as implicated in the allegations.",
+              "sources": [
+                "787cb5cd3c91"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "874c610469d3",
+              "quote": "Indonesia arrests chief of staff and top policemen",
+              "field": "headline"
+            },
+            {
+              "article_id": "4200fde340ae",
+              "quote": "leading to treason",
+              "field": "snippet"
+            },
+            {
+              "article_id": "c0db155ee529",
+              "quote": "wiretap scandal tests alliance with Widodo",
+              "field": "headline"
+            },
+            {
+              "article_id": "d237e854905c",
+              "quote": "Indonesian president’s chief of staff dismissed over alleged wiretapping",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the arrest and dismissal of the chief of staff and police figures.",
+              "sources": [
+                "874c610469d3",
+                "4200fde340ae",
+                "c0db155ee529",
+                "d237e854905c"
+              ]
+            },
+            {
+              "text": "Quotes the government's description of possible treason.",
+              "sources": [
+                "4200fde340ae",
+                "d237e854905c"
+              ]
+            },
+            {
+              "text": "Describes the case as a major police scandal testing the alliance with Widodo.",
+              "sources": [
+                "c0db155ee529"
+              ]
+            },
+            {
+              "text": "Lists journalists, politicians and business people among those allegedly tapped from 2025.",
+              "sources": [
+                "874c610469d3"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "Indonesian authorities arrested President Prabowo Subianto's chief of staff, former national police chief Listyo Sigit Prabowo, over alleged illegal wiretapping of the president and others, and the president sacked him. A presidential spokesperson said it may amount to treason, and troops were stationed in Jakarta.",
+        "sources": [
+          "874c610469d3",
+          "4200fde340ae",
+          "c0db155ee529",
+          "d237e854905c",
+          "787cb5cd3c91"
+        ]
+      },
+      "conclusion": {
+        "text": "All coverage agrees the president's chief of staff faces illegal wiretapping allegations involving the president's phones. East-bloc outlets lead with his arrest, dismissal and treason remarks, while the West-bloc outlet leads with troops in Jakarta. No claims are contested between the outlets.",
+        "sources": [
+          "874c610469d3",
+          "4200fde340ae",
+          "c0db155ee529",
+          "d237e854905c",
+          "787cb5cd3c91"
+        ]
+      },
+      "validation": {
+        "kept": 20,
+        "dropped_by_reason": {}
+      }
+    }
+  ]
+}
