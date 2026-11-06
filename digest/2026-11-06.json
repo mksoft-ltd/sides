@@ -1,0 +1,4110 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-11-06T14:02:49.924202Z",
+  "date": "2026-11-06",
+  "meta": {
+    "model": "claude-opus-5-5",
+    "cost_usd": 0.67522,
+    "outlets_polled": 29,
+    "articles_collected": 676,
+    "warnings": [
+      "1 feed(s) failed during collect"
+    ],
+    "validation": {
+      "kept": 313,
+      "dropped_by_reason": {
+        "untrusted_text": 2,
+        "title_ungrounded": 1
+      }
+    }
+  },
+  "outlets": [
+    {
+      "id": "guardian",
+      "name": "The Guardian",
+      "lean": "left",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United Kingdom",
+      "home_url": "https://www.theguardian.com/",
+      "rating_basis": "AllSides media bias rating (Lean Left), checked Oct 2026"
+    },
+    {
+      "id": "independent",
+      "name": "The Independent",
+      "lean": "left",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United Kingdom",
+      "home_url": "https://www.independent.co.uk/",
+      "rating_basis": "AllSides media bias rating (Lean Left), checked Oct 2026"
+    },
+    {
+      "id": "mirror",
+      "name": "Daily Mirror",
+      "lean": "left",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United Kingdom",
+      "home_url": "https://www.mirror.co.uk/",
+      "rating_basis": "Ad Fontes Media bias rating (Skews Left), checked Oct 2026"
+    },
+    {
+      "id": "bbc",
+      "name": "BBC News",
+      "lean": "centre",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "public-service",
+      "country": "United Kingdom",
+      "home_url": "https://www.bbc.co.uk/news",
+      "rating_basis": "AllSides media bias rating (Center), checked Oct 2026"
+    },
+    {
+      "id": "sky",
+      "name": "Sky News",
+      "lean": "centre",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United Kingdom",
+      "home_url": "https://news.sky.com/",
+      "rating_basis": "Ad Fontes Media bias rating (Middle), checked Oct 2026"
+    },
+    {
+      "id": "telegraph",
+      "name": "The Telegraph",
+      "lean": "right",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United Kingdom",
+      "home_url": "https://www.telegraph.co.uk/",
+      "rating_basis": "AllSides media bias rating (Lean Right), checked Oct 2026"
+    },
+    {
+      "id": "dailymail",
+      "name": "Daily Mail",
+      "lean": "right",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United Kingdom",
+      "home_url": "https://www.dailymail.co.uk/",
+      "rating_basis": "AllSides media bias rating (Right), checked Oct 2026"
+    },
+    {
+      "id": "thesun",
+      "name": "The Sun",
+      "lean": "right",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United Kingdom",
+      "home_url": "https://www.thesun.co.uk/",
+      "rating_basis": "AllSides media bias rating (Right), checked Oct 2026"
+    },
+    {
+      "id": "nyt",
+      "name": "The New York Times",
+      "lean": "left",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United States",
+      "home_url": "https://www.nytimes.com/",
+      "rating_basis": "AllSides media bias rating (Lean Left), checked Oct 2026"
+    },
+    {
+      "id": "nbc",
+      "name": "NBC News",
+      "lean": "left",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United States",
+      "home_url": "https://www.nbcnews.com/",
+      "rating_basis": "AllSides media bias rating (Lean Left), checked Oct 2026"
+    },
+    {
+      "id": "huffpost",
+      "name": "HuffPost",
+      "lean": "left",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United States",
+      "home_url": "https://www.huffpost.com/",
+      "rating_basis": "AllSides media bias rating (Left), checked Oct 2026"
+    },
+    {
+      "id": "npr",
+      "name": "NPR",
+      "lean": "centre",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "public-service",
+      "country": "United States",
+      "home_url": "https://www.npr.org/",
+      "rating_basis": "Ad Fontes Media bias rating (Middle / Skews Left), checked Oct 2026"
+    },
+    {
+      "id": "axios",
+      "name": "Axios",
+      "lean": "centre",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United States",
+      "home_url": "https://www.axios.com/",
+      "rating_basis": "AllSides media bias rating (Center), checked Oct 2026"
+    },
+    {
+      "id": "fox",
+      "name": "Fox News",
+      "lean": "right",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United States",
+      "home_url": "https://www.foxnews.com/",
+      "rating_basis": "AllSides media bias rating (Right), checked Oct 2026"
+    },
+    {
+      "id": "nypost",
+      "name": "New York Post",
+      "lean": "right",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United States",
+      "home_url": "https://nypost.com/",
+      "rating_basis": "AllSides media bias rating (Lean Right), checked Oct 2026"
+    },
+    {
+      "id": "examiner",
+      "name": "Washington Examiner",
+      "lean": "right",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United States",
+      "home_url": "https://www.washingtonexaminer.com/",
+      "rating_basis": "AllSides media bias rating (Lean Right), checked Oct 2026"
+    },
+    {
+      "id": "france24",
+      "name": "France 24",
+      "lean": "centre",
+      "region": "europe",
+      "bloc": "west",
+      "ownership": "public-service",
+      "country": "France",
+      "home_url": "https://www.france24.com/en/",
+      "rating_basis": "Ad Fontes Media bias rating (Middle), checked Oct 2026"
+    },
+    {
+      "id": "dw",
+      "name": "DW (Deutsche Welle)",
+      "lean": "centre",
+      "region": "europe",
+      "bloc": "west",
+      "ownership": "public-service",
+      "country": "Germany",
+      "home_url": "https://www.dw.com/en/",
+      "rating_basis": "AllSides media bias rating (Center), checked Oct 2026"
+    },
+    {
+      "id": "aljazeera",
+      "name": "Al Jazeera English",
+      "lean": null,
+      "region": "middle_east",
+      "bloc": "east",
+      "ownership": "state-funded",
+      "country": "Qatar",
+      "home_url": "https://www.aljazeera.com/",
+      "rating_basis": "Funded by the State of Qatar; no left/right tag applied"
+    },
+    {
+      "id": "thenational",
+      "name": "The National (UAE)",
+      "lean": null,
+      "region": "middle_east",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "United Arab Emirates",
+      "home_url": "https://www.thenationalnews.com/",
+      "rating_basis": "Owned by International Media Investments (Abu Dhabi); no left/right tag applied"
+    },
+    {
+      "id": "timesofisrael",
+      "name": "The Times of Israel",
+      "lean": null,
+      "region": "middle_east",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "Israel",
+      "home_url": "https://www.timesofisrael.com/",
+      "rating_basis": "Privately owned; no left/right tag applied"
+    },
+    {
+      "id": "cgtn",
+      "name": "CGTN",
+      "lean": null,
+      "region": "asia",
+      "bloc": "east",
+      "ownership": "state-controlled",
+      "country": "China",
+      "home_url": "https://www.cgtn.com/",
+      "rating_basis": "China Global Television Network, part of state broadcaster China Media Group"
+    },
+    {
+      "id": "ecns",
+      "name": "ECNS (China News Service)",
+      "lean": null,
+      "region": "asia",
+      "bloc": "east",
+      "ownership": "state-controlled",
+      "country": "China",
+      "home_url": "https://www.ecns.cn/",
+      "rating_basis": "English service of China News Service, a state news agency"
+    },
+    {
+      "id": "scmp",
+      "name": "South China Morning Post",
+      "lean": null,
+      "region": "asia",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "Hong Kong",
+      "home_url": "https://www.scmp.com/",
+      "rating_basis": "Owned by Alibaba Group; no left/right tag applied"
+    },
+    {
+      "id": "toi",
+      "name": "The Times of India",
+      "lean": null,
+      "region": "asia",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "India",
+      "home_url": "https://timesofindia.indiatimes.com/",
+      "rating_basis": "Privately owned (Bennett, Coleman & Co.); no left/right tag applied"
+    },
+    {
+      "id": "thehindu",
+      "name": "The Hindu",
+      "lean": null,
+      "region": "asia",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "India",
+      "home_url": "https://www.thehindu.com/",
+      "rating_basis": "Privately owned (The Hindu Group); no left/right tag applied"
+    },
+    {
+      "id": "moscowtimes",
+      "name": "The Moscow Times",
+      "lean": null,
+      "region": "europe",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "Russia",
+      "home_url": "https://www.themoscowtimes.com/",
+      "rating_basis": "Independent, Amsterdam-based since 2022; designated \"undesirable\" by Russia; no left/right tag applied"
+    },
+    {
+      "id": "japantimes",
+      "name": "The Japan Times",
+      "lean": null,
+      "region": "asia",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "Japan",
+      "home_url": "https://www.japantimes.co.jp/",
+      "rating_basis": "Privately owned (News2u Holdings); no left/right tag applied"
+    },
+    {
+      "id": "koreaherald",
+      "name": "The Korea Herald",
+      "lean": null,
+      "region": "asia",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "South Korea",
+      "home_url": "https://www.koreaherald.com/",
+      "rating_basis": "Privately owned (Herald Corporation); no left/right tag applied"
+    }
+  ],
+  "stories": [
+    {
+      "id": "fe1a461efbab",
+      "title": "Wave of hoax bomb threats disrupts flights across Europe for several days",
+      "rank": 1,
+      "outlet_count": 12,
+      "coverage": {
+        "lean": {
+          "left": 3,
+          "centre": 2,
+          "right": 3
+        },
+        "bloc": {
+          "west": 8,
+          "east": 4
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "6e32f1212377",
+          "outlet_id": "mirror",
+          "headline": "Bomb threat on Aer Lingus flight from Dublin to Rome as urgent diversion ordered",
+          "snippet": "Aer Lingus flight EI402 from Dublin to Rome has been diverted to a military base in Evreux, France, after receiving a bomb alert",
+          "url": "https://www.mirror.co.uk/news/world-news/bomb-threat-ein40g-aer-lingus-37845127",
+          "published_at": "2026-11-05T09:14:26Z",
+          "published_at_estimated": false,
+          "image_url": "https://i2-prod.mirror.co.uk/incoming/article37845144.ece/ALTERNATES/s615/2_Diverse-aircraft-taking-off.jpg"
+        },
+        {
+          "id": "f60395ec3d5c",
+          "outlet_id": "dw",
+          "headline": "Bomb threats disrupt several flights across Europe",
+          "snippet": "At least a dozen flights were either diverted or landed with a military escort after bomb or security threats. The first reported case involved a flight from Dublin to Rome landing outside Paris and…",
+          "url": "https://www.dw.com/en/bomb-threats-disrupt-several-flights-across-europe/a-79861216?maca=en-rss-en-world-4025-xml-mrss",
+          "published_at": "2026-11-05T10:10:00Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "fd27c9159ab4",
+          "outlet_id": "fox",
+          "headline": "Multiple flights in Europe diverted because of bomb threats",
+          "snippet": "At least 11 planes from cities, including Dublin, Madrid, and Warsaw, were diverted or grounded over bomb threats that have been determined to be unfounded.",
+          "url": "https://www.foxnews.com/world/multiple-flights-europe-diverted-bomb-threats",
+          "published_at": "2026-11-05T11:33:26Z",
+          "published_at_estimated": false,
+          "image_url": "https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2026/11/931/523/ryanair-sofia-airport-bomb-threats.jpg?ve=1&tl=1"
+        },
+        {
+          "id": "397945108046",
+          "outlet_id": "mirror",
+          "headline": "'Tensions mount over flight bomb threats amid fears they could be state-sponsored'",
+          "snippet": "ANALYSIS: Bomb threats hitting flights are costing economies dear and could be 'high-risk pranksters' or the latest 'hybrid warfare' move by hostile states as global tensions mount",
+          "url": "https://www.mirror.co.uk/news/world-news/bomb-threat-flights-europe-russia-37846936",
+          "published_at": "2026-11-05T15:01:53Z",
+          "published_at_estimated": false,
+          "image_url": "https://i2-prod.mirror.co.uk/news/uk-news/article37847310.ece/ALTERNATES/s615/0_TOPSHOT-FRANCE-AVIATION-SECURITY.jpg"
+        },
+        {
+          "id": "3fdc3b1aa69b",
+          "outlet_id": "mirror",
+          "headline": "Massive bomb hoax impact flights at Heathrow Airport and Birmingham Airport",
+          "snippet": "Mystery flight bomb hoaxers spread chaos across Europe in vicious campaign against passengers as police launch probe into who triggered the alarm and if it was state-sponsored",
+          "url": "https://www.mirror.co.uk/news/uk-news/bomb-hoax-flights-airports-heathrow-37847994",
+          "published_at": "2026-11-05T17:37:46Z",
+          "published_at_estimated": false,
+          "image_url": "https://i2-prod.mirror.co.uk/incoming/article37848105.ece/ALTERNATES/s615/0_ITALY-AIRWAYS-TRANSPORT-BOMB-ALERT.jpg"
+        },
+        {
+          "id": "b94b167e733d",
+          "outlet_id": "bbc",
+          "headline": "Hoax bomb threats target European airlines and airports for second time in a week",
+          "snippet": "At least 21 flights across Europe are affected in what the UK government calls a \"malicious hoax threat\".",
+          "url": "https://www.bbc.co.uk/news/articles/cmpqg08nz3pqo",
+          "published_at": "2026-11-05T17:39:48Z",
+          "published_at_estimated": false,
+          "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/7423/live/1976bf00-d911-11f1-94c6-3f8050561bf5.jpg"
+        },
+        {
+          "id": "0c388d66cb39",
+          "outlet_id": "bbc",
+          "headline": "Bomb hoaxes: Messages reveal how threat was passed on by air traffic control",
+          "snippet": "BBC Verify has been analysing messages after flights across Europe were targeted by fake bomb threats - the second such incident this week.",
+          "url": "https://www.bbc.co.uk/news/videos/cq398m8w41lyo",
+          "published_at": "2026-11-05T18:22:46Z",
+          "published_at_estimated": false,
+          "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/b8ac/live/89154780-d945-11f1-a701-fddedf244c16.png"
+        },
+        {
+          "id": "8e30d179f411",
+          "outlet_id": "nyt",
+          "headline": "Bomb Threats Disrupt European Flights and Rattle Passengers",
+          "snippet": "Passengers recounted landing at a military base and being subjected to security checks and travel delays after threats that turned out to be hoaxes affected planes in Italy, Poland and Spain.",
+          "url": "https://www.nytimes.com/2026/11/05/world/europe/bomb-threats-airline-passengers.html",
+          "published_at": "2026-11-05T19:39:19Z",
+          "published_at_estimated": false,
+          "image_url": "https://static01.nyt.com/images/2026/11/05/multimedia/05int-bomb-threats-scene01-photo-bqtk/05int-bomb-threats-scene01-photo-bqtk-mediumSquareAt3X.jpg"
+        },
+        {
+          "id": "87ecdbc967c5",
+          "outlet_id": "cgtn",
+          "headline": "Multiple bomb threats divert European flights",
+          "snippet": "",
+          "url": "https://newsus.cgtn.com/news/2026-11-06/Multiple-bomb-threats-divert-European-flights-1RQ3dNMGymk/p.html",
+          "published_at": "2026-11-05T21:09:46Z",
+          "published_at_estimated": false,
+          "image_url": "https://newsus.cgtn.com/news/2026-11-06/Multiple-bomb-threats-divert-European-flights-1RQ3dNMGymk/img/f0faf5455f514fba9ae2911e5e2f08f6/f0faf5455f514fba9ae2911e5e2f08f6-1280.jpeg"
+        },
+        {
+          "id": "6b820da1bb87",
+          "outlet_id": "koreaherald",
+          "headline": "Incheon Airport steps up security amid bomb threats in Europe",
+          "snippet": "Police at the Incheon Airport said Friday that they have stepped up security in light of the series of bomb threats targeting over a dozen flights in Europe. Officials said there had been no threat…",
+          "url": "https://www.koreaherald.com/article/10928889",
+          "published_at": "2026-11-06T08:18:12Z",
+          "published_at_estimated": false,
+          "image_url": "https://wimg.heraldcorp.com/news/cms/2026/11/06/news-p.v1.20261106.67b5e0f5af054a51a8edc42305ac0c65_T1.jpg"
+        },
+        {
+          "id": "822e9d5868cc",
+          "outlet_id": "thesun",
+          "headline": "Putin is testing our nerve with plane bomb threat terror… one miscalculation could trigger Nato clash, expert warns",
+          "snippet": "VLADIMIR Putin may be testing Europe's backbone with a string of bomb threats - and will be emboldened to ramp up his shadow attacks if the West doesn't wake up. As his reckless hybrid campaign…",
+          "url": "https://www.thesun.co.uk/news/40929731/putin-tests-europe-bomb-threats/",
+          "published_at": "2026-11-06T10:04:52Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.thesun.co.uk/wp-content%2Fuploads%2F2026%2F11%2Fcrop-40934410.jpg?quality%3D90%26"
+        },
+        {
+          "id": "28e49a3dcfa8",
+          "outlet_id": "thesun",
+          "headline": "Bomb threats hit 16 MORE flights over Europe as planes targeted for third day after dozens of jets grounded",
+          "snippet": "AT least 16 more flights have been hit with fresh bomb threats over Europe in the third day of mid-air panic. Alerts were reported by French, Italian, Czech and other authorities this morning with…",
+          "url": "https://www.thesun.co.uk/news/40935614/europe-plane-bomb-alerts-ground-flights/",
+          "published_at": "2026-11-06T10:24:07Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.thesun.co.uk/wp-content%2Fuploads%2F2026%2F11%2Feb655a31-6640-49a7-abdb-31a71ed23d1c.jpg?quality%3D90%26"
+        },
+        {
+          "id": "936e97ecf98a",
+          "outlet_id": "aljazeera",
+          "headline": "Hoax or bomb threats? What we know about flight disruptions across Europe",
+          "snippet": "Security inspections reveal no explosives as fighter jets escort planes amid Europe's major wave of bomb threats.",
+          "url": "https://www.aljazeera.com/news/2026/11/6/hoax-or-bomb-threats-what-we-know-about-flight-disruptions-across-europe",
+          "published_at": "2026-11-06T11:18:02Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "1e2a499bca25",
+          "outlet_id": "mirror",
+          "headline": "Plane bomb threats: Flights at Heathrow and Birmingham airports hit by hoax",
+          "snippet": "Multiple flights across Europe have been hit by bomb threats for the third day this week",
+          "url": "https://www.mirror.co.uk/news/world-news/europe-plane-bomb-threat-flights-37845303",
+          "published_at": "2026-11-06T12:15:59Z",
+          "published_at_estimated": false,
+          "image_url": "https://i2-prod.mirror.co.uk/incoming/article37850325.ece/ALTERNATES/s615/0_Dublin-Rome-flight-diverted-to-French-military-base-over-bomb-threat-Evreux-France-04-Nov-2026.jpg"
+        },
+        {
+          "id": "160c629a2b6f",
+          "outlet_id": "thenational",
+          "headline": "Flights diverted and airports on alert across Europe",
+          "snippet": "European flights and airports faced disruption and extra security checks on Friday as the authorities in Rome, Sofia and Copenhagen reported threats. Two civilian aircraft — WizzAir flight W64328…",
+          "url": "https://www.thenationalnews.com/news/uk/2026/11/06/flights-diverted-and-airports-on-alert-across-europe/",
+          "published_at": "2026-11-06T12:29:25Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.thenationalnews.com/resizer/v2/24I7H3T4OF5PNJDA5EOMADOJHY.jpg?auth=959a5c1e0156d7cf2aea3628565ac97f86fcddf9d79f55980ef5f9a3a02e8d48&smart=true&width=2778&height=1900"
+        },
+        {
+          "id": "23b526c39a8c",
+          "outlet_id": "bbc",
+          "headline": "Russian extremist group denies sending hoax bomb threats",
+          "snippet": "Scores of flights across Europe have received bomb threats this week, but no explosives have been found so far.",
+          "url": "https://www.bbc.co.uk/news/articles/cm2d66n0lx1yo",
+          "published_at": "2026-11-06T12:51:38Z",
+          "published_at_estimated": false,
+          "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/dddd/live/b610ac80-d9da-11f1-b441-2b33b063138f.jpg"
+        },
+        {
+          "id": "79b6634a80e5",
+          "outlet_id": "nyt",
+          "headline": "What to Know About the Bomb Threats Disrupting Flights in Europe",
+          "snippet": "More threats were reported Friday after dozens of planes were targeted earlier this week. Officials have not reported finding any explosives, but the hoaxes have added to anxiety over hybrid attacks…",
+          "url": "https://www.nytimes.com/2026/11/05/world/europe/bomb-threats-europe-flights-airlines.html",
+          "published_at": "2026-11-06T13:10:03Z",
+          "published_at_estimated": false,
+          "image_url": "https://static01.nyt.com/images/2026/11/05/multimedia/05xp-bomb-threats-tbwg/05xp-bomb-threats-tbwg-mediumSquareAt3X.jpg"
+        },
+        {
+          "id": "d22e2db26058",
+          "outlet_id": "nyt",
+          "headline": "Wave of Hoax Bomb Threats to Flights in Europe Leaves Travelers Frustrated",
+          "snippet": "Bomb threats have disrupted dozens of flights in Europe over the past week. At airports in Rome, Madrid and Warsaw, travelers were more frustrated than fearful.",
+          "url": "https://www.nytimes.com/2026/11/06/world/europe/bomb-threats-planes-flights-europe-travel.html",
+          "published_at": "2026-11-06T13:11:33Z",
+          "published_at_estimated": false,
+          "image_url": "https://static01.nyt.com/images/2026/11/06/multimedia/06int-bomb-threat-voices-1-vgjz/06int-bomb-threat-voices-1-vgjz-mediumSquareAt3X.jpg"
+        },
+        {
+          "id": "e1be039cf56e",
+          "outlet_id": "guardian",
+          "headline": "Bomb threats against European flights ‘likely a coordinated campaign of disruption’, Ireland says – Europe live",
+          "snippet": "Irish government issues statement in response to latest bomb threats against European flights after some Irish media organisations received similar threats Tell us: have you been affected by the…",
+          "url": "https://www.theguardian.com/world/live/2026/nov/06/high-alert-hoax-bomb-threats-france-air-lingus-belgium-pope-leo-europe-live",
+          "published_at": "2026-11-06T13:28:16Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.guim.co.uk/img/media/af13db51b17a65dbfc940a3980063bfbda88b6e9/253_0_4583_3667/master/4583.jpg?width=460&quality=85&auto=format&fit=max&s=695f99cb155de4893aad2c194c57dc9a"
+        },
+        {
+          "id": "3cc867fc80c4",
+          "outlet_id": "guardian",
+          "headline": "Further bomb threats disrupt at least another 18 flights across Europe",
+          "snippet": "All affected planes land safely after apparently continued and coordinated effort to cause chaos for travellers A fresh wave of bomb threats has disrupted air traffic across Europe but the affected…",
+          "url": "https://www.theguardian.com/world/2026/nov/06/further-bomb-threats-disrupt-flights-across-europe",
+          "published_at": "2026-11-06T13:34:59Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.guim.co.uk/img/media/1f88c9a52100be8318eb3a96107a54f59d0a5606/205_0_4147_3317/master/4147.jpg?width=460&quality=85&auto=format&fit=max&s=412586903f7ebc38c5906a596b13f1a4"
+        },
+        {
+          "id": "e579c22fb1ba",
+          "outlet_id": "dailymail",
+          "headline": "Third day of European flights chaos as bomb threats are sent to at least a dozen planes including jets heading to and from Britain",
+          "snippet": "At least eight flights arriving at or leaving Prague airport were targeted by new threats on Friday.",
+          "url": "https://www.dailymail.com/news/article-16271149/Threat-air-traffic-investigated-Danish-airport-day-hoax-bomb-threats-sparked-chaos-Europe.html",
+          "published_at": "2026-11-06T13:44:08Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.dailymail.com/1s/2026/11/06/10/112343869-0-image-a-4_1793961582550.jpg"
+        },
+        {
+          "id": "58e11567dd94",
+          "outlet_id": "mirror",
+          "headline": "Europe plane bomb threats: Aviation chaos as airports receive threats for second day",
+          "snippet": "Multiple flights across Europe have been hit by bomb threats for the third day this week",
+          "url": "https://www.mirror.co.uk/news/world-news/europe-plane-bomb-threats-aviation-37850738",
+          "published_at": "2026-11-06T13:49:05Z",
+          "published_at_estimated": false,
+          "image_url": "https://i2-prod.mirror.co.uk/incoming/article37850786.ece/ALTERNATES/s615/0_Bomb-threat-reported-on-Ryanair-flight-at-Lisbon-Airport-Lisboa-Portugal-06-Nov-2026.jpg"
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "Bomb threats disrupted multiple flights across Europe, with planes diverted or grounded.",
+          "sources": [
+            "f60395ec3d5c",
+            "fd27c9159ab4",
+            "87ecdbc967c5",
+            "160c629a2b6f",
+            "b94b167e733d",
+            "8e30d179f411",
+            "d22e2db26058",
+            "3cc867fc80c4",
+            "28e49a3dcfa8",
+            "e579c22fb1ba",
+            "1e2a499bca25",
+            "936e97ecf98a",
+            "6b820da1bb87"
+          ]
+        },
+        {
+          "text": "The threats were hoaxes or unfounded, and no explosives have been reported found.",
+          "sources": [
+            "fd27c9159ab4",
+            "b94b167e733d",
+            "8e30d179f411",
+            "936e97ecf98a",
+            "23b526c39a8c",
+            "79b6634a80e5",
+            "d22e2db26058",
+            "1e2a499bca25",
+            "3fdc3b1aa69b"
+          ]
+        },
+        {
+          "text": "An Aer Lingus flight from Dublin to Rome was diverted and landed in France, outside Paris.",
+          "sources": [
+            "6e32f1212377",
+            "f60395ec3d5c"
+          ]
+        },
+        {
+          "text": "The threats recurred over several days in the same week, with fresh threats reported on Friday.",
+          "sources": [
+            "b94b167e733d",
+            "0c388d66cb39",
+            "79b6634a80e5",
+            "28e49a3dcfa8",
+            "e579c22fb1ba",
+            "1e2a499bca25",
+            "58e11567dd94",
+            "160c629a2b6f"
+          ]
+        },
+        {
+          "text": "Some affected planes landed at a military base or were escorted by military or fighter jets.",
+          "sources": [
+            "6e32f1212377",
+            "8e30d179f411",
+            "f60395ec3d5c",
+            "936e97ecf98a"
+          ]
+        },
+        {
+          "text": "Flights linked to UK airports, including Heathrow and Birmingham, were among those affected.",
+          "sources": [
+            "3fdc3b1aa69b",
+            "1e2a499bca25",
+            "e579c22fb1ba"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "3fdc3b1aa69b",
+              "quote": "Mystery flight bomb hoaxers spread chaos across Europe in vicious campaign against passengers",
+              "field": "snippet"
+            },
+            {
+              "article_id": "d22e2db26058",
+              "quote": "travelers were more frustrated than fearful",
+              "field": "snippet"
+            },
+            {
+              "article_id": "e1be039cf56e",
+              "quote": "likely a coordinated campaign of disruption",
+              "field": "headline"
+            },
+            {
+              "article_id": "397945108046",
+              "quote": "fears they could be state-sponsored",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Passengers' experiences, including landing at a military base, security checks, delays and frustration.",
+              "sources": [
+                "8e30d179f411",
+                "d22e2db26058"
+              ]
+            },
+            {
+              "text": "The possibility that the threats are state-sponsored or part of hybrid attacks.",
+              "sources": [
+                "397945108046",
+                "3fdc3b1aa69b",
+                "79b6634a80e5"
+              ]
+            },
+            {
+              "text": "The Irish government's statement that the threats are likely a coordinated campaign of disruption.",
+              "sources": [
+                "e1be039cf56e",
+                "3cc867fc80c4"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "b94b167e733d",
+              "quote": "malicious hoax threat",
+              "field": "snippet"
+            },
+            {
+              "article_id": "23b526c39a8c",
+              "quote": "Russian extremist group denies sending hoax bomb threats",
+              "field": "headline"
+            },
+            {
+              "article_id": "0c388d66cb39",
+              "quote": "Messages reveal how threat was passed on by air traffic control",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "The UK government's description of the threats as a malicious hoax.",
+              "sources": [
+                "b94b167e733d"
+              ]
+            },
+            {
+              "text": "BBC Verify's analysis of how the threats were relayed via air traffic control.",
+              "sources": [
+                "0c388d66cb39"
+              ]
+            },
+            {
+              "text": "A denial by a Russian extremist group that it sent the threats.",
+              "sources": [
+                "23b526c39a8c"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "right",
+          "headline_quotes": [
+            {
+              "article_id": "822e9d5868cc",
+              "quote": "Putin is testing our nerve with plane bomb threat terror",
+              "field": "headline"
+            },
+            {
+              "article_id": "28e49a3dcfa8",
+              "quote": "third day of mid-air panic",
+              "field": "snippet"
+            },
+            {
+              "article_id": "fd27c9159ab4",
+              "quote": "determined to be unfounded",
+              "field": "snippet"
+            },
+            {
+              "article_id": "e579c22fb1ba",
+              "quote": "jets heading to and from Britain",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "An expert's view that Putin may be testing Europe and that a miscalculation could trigger a Nato clash.",
+              "sources": [
+                "822e9d5868cc"
+              ]
+            },
+            {
+              "text": "Rising counts of affected flights on the third day, including flights at Prague and to and from Britain.",
+              "sources": [
+                "28e49a3dcfa8",
+                "e579c22fb1ba"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "right",
+          "text": "Right-leaning coverage does not mention the Irish government's statement that the threats are likely a coordinated campaign.",
+          "sources": [
+            "e1be039cf56e"
+          ]
+        },
+        {
+          "lean": "right",
+          "text": "Right-leaning coverage does not mention the Russian extremist group's denial of sending the threats.",
+          "sources": [
+            "23b526c39a8c"
+          ]
+        },
+        {
+          "lean": "left",
+          "text": "Left-leaning coverage does not mention the Russian extremist group's denial of sending the threats.",
+          "sources": [
+            "23b526c39a8c"
+          ]
+        },
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not mention the possibility of state sponsorship or hybrid warfare behind the threats.",
+          "sources": [
+            "397945108046",
+            "3fdc3b1aa69b",
+            "79b6634a80e5",
+            "822e9d5868cc"
+          ]
+        }
+      ],
+      "contested_claims": [],
+      "opinion": [
+        {
+          "text": "A Daily Mirror analysis says the threats could be 'high-risk pranksters' or a 'hybrid warfare' move by hostile states.",
+          "sources": [
+            "397945108046"
+          ]
+        },
+        {
+          "text": "An expert quoted by The Sun says Putin may be testing Europe's backbone and that one miscalculation could trigger a Nato clash.",
+          "sources": [
+            "822e9d5868cc"
+          ]
+        }
+      ],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "b94b167e733d",
+              "quote": "malicious hoax threat",
+              "field": "snippet"
+            },
+            {
+              "article_id": "822e9d5868cc",
+              "quote": "Putin is testing our nerve",
+              "field": "headline"
+            },
+            {
+              "article_id": "e1be039cf56e",
+              "quote": "likely a coordinated campaign of disruption",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Possible state involvement or hybrid attacks, including an expert linking the threats to Putin.",
+              "sources": [
+                "397945108046",
+                "3fdc3b1aa69b",
+                "79b6634a80e5",
+                "822e9d5868cc"
+              ]
+            },
+            {
+              "text": "Statements by the UK and Irish governments characterising the threats.",
+              "sources": [
+                "b94b167e733d",
+                "e1be039cf56e"
+              ]
+            },
+            {
+              "text": "Impact on UK airports and passengers' experiences.",
+              "sources": [
+                "3fdc3b1aa69b",
+                "1e2a499bca25",
+                "e579c22fb1ba",
+                "8e30d179f411",
+                "d22e2db26058"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "6b820da1bb87",
+              "quote": "Incheon Airport steps up security amid bomb threats in Europe",
+              "field": "headline"
+            },
+            {
+              "article_id": "936e97ecf98a",
+              "quote": "Security inspections reveal no explosives as fighter jets escort planes",
+              "field": "snippet"
+            },
+            {
+              "article_id": "160c629a2b6f",
+              "quote": "authorities in Rome, Sofia and Copenhagen reported threats",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Security responses, including stepped-up security at Incheon Airport and extra checks at European airports.",
+              "sources": [
+                "6b820da1bb87",
+                "160c629a2b6f"
+              ]
+            },
+            {
+              "text": "That inspections found no explosives while fighter jets escorted planes.",
+              "sources": [
+                "936e97ecf98a"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "Bomb threats later described as hoaxes disrupted dozens of flights across Europe over several days, with planes diverted, grounded or escorted by military aircraft and no explosives found. The first reported case was an Aer Lingus Dublin–Rome flight diverted to a military base in France. Ireland said the threats were likely a coordinated campaign.",
+        "sources": [
+          "6e32f1212377",
+          "f60395ec3d5c",
+          "fd27c9159ab4",
+          "b94b167e733d",
+          "936e97ecf98a",
+          "23b526c39a8c",
+          "79b6634a80e5",
+          "d22e2db26058",
+          "e1be039cf56e",
+          "28e49a3dcfa8"
+        ]
+      },
+      "conclusion": {
+        "text": "Outlets across leans and blocs agree that hoax bomb threats disrupted dozens of European flights over several days with no explosives found. Left and right Western outlets raise possible state involvement, the BBC reports a Russian extremist group's denial, and East-bloc outlets focus on security responses.",
+        "sources": [
+          "fd27c9159ab4",
+          "b94b167e733d",
+          "936e97ecf98a",
+          "397945108046",
+          "822e9d5868cc",
+          "23b526c39a8c",
+          "6b820da1bb87",
+          "160c629a2b6f"
+        ]
+      },
+      "validation": {
+        "kept": 44,
+        "dropped_by_reason": {}
+      }
+    },
+    {
+      "id": "4673770b2385",
+      "title": "Global tech stocks fall sharply over AI regulation fears after US midterms",
+      "rank": 2,
+      "outlet_count": 11,
+      "coverage": {
+        "lean": {
+          "left": 2,
+          "centre": 2,
+          "right": 2
+        },
+        "bloc": {
+          "west": 6,
+          "east": 5
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "c6d9116ef485",
+          "outlet_id": "telegraph",
+          "headline": "US stocks plummet as Democrat victory sparks investor panic",
+          "snippet": "",
+          "url": "https://www.telegraph.co.uk/business/2026/11/05/nasdaq-us-midterm-elections-ai-tech-musk-tesla-spacex/",
+          "published_at": "2026-11-05T21:32:40Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.telegraph.co.uk/content/dam/business/2026/11/05/TELEMMGLPICT000510434694_17938925698700_trans_NvBQzQNjv4BqpVlberWd9EgFPZtcLiMQf0Rf_Wk3V23H2268P_XkPxc.jpeg"
+        },
+        {
+          "id": "f6963d157a64",
+          "outlet_id": "axios",
+          "headline": "Trump says voters should blame themselves for stock market rout",
+          "snippet": "President Trump said Thursday night that voters had themselves to blame for the stock market's historic sell-off. Why it matters: Two days after Republicans lost the midterm elections in historic…",
+          "url": "https://www.axios.com/2026/11/06/trump-stock-market-sell-off",
+          "published_at": "2026-11-06T00:28:09Z",
+          "published_at_estimated": false,
+          "image_url": "https://images.axios.com/4eBu6tk_KlD-raZcLa2-C4lvsVE=/0x301:3840x2461/1366x768/2026/11/06/1793923999646.jpeg"
+        },
+        {
+          "id": "29d85adf8188",
+          "outlet_id": "japantimes",
+          "headline": "Blue tsunami wipes out $2.5 trillion from Nasdaq as investors fret about AI trade",
+          "snippet": "It was the second straight day of selling in AI stocks and the fifth decline of more than 500 points in the Nasdaq Composite since mid-October.",
+          "url": "https://www.japantimes.co.jp/business/2026/11/06/markets/blue-tsunami-wipes-nasdaq/",
+          "published_at": "2026-11-06T04:00:00Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.japantimes.co.jp/japantimes/uploads/images/2026/11/06/thumbs/400x400/572670.jpg"
+        },
+        {
+          "id": "8a4b51a0ae40",
+          "outlet_id": "thehindu",
+          "headline": "Trump blames Democrats’ midterm win for U.S. stock market selloff",
+          "snippet": "Analysts attributed the fall to fears that Democrats could threaten the AI data centre investment boom, as the Nasdaq had its worst session in percentage terms since April 2025",
+          "url": "https://www.thehindu.com/news/international/trump-blames-democrats-midterm-win-for-us-stock-market-selloff/article71672908.ece",
+          "published_at": "2026-11-06T06:02:16Z",
+          "published_at_estimated": false,
+          "image_url": "https://th-i.thgim.com/public/incoming/ok0fnm/article71673019.ece/alternates/LANDSCAPE_1200/AP11_06_2026_000002A.jpg"
+        },
+        {
+          "id": "7af06912f464",
+          "outlet_id": "koreaherald",
+          "headline": "Seoul stocks crash for 2nd day on AI rout after US midterms",
+          "snippet": "Seoul stocks sank for the second consecutive session on Friday amid fears that a Democratic Congress could decelerate the pace of data center construction for artificial intelligence. The Korean won…",
+          "url": "https://www.koreaherald.com/article/10928775",
+          "published_at": "2026-11-06T07:07:32Z",
+          "published_at_estimated": false,
+          "image_url": "https://wimg.heraldcorp.com/news/cms/2026/11/06/news-p.v1.20261106.397a1e9b8c824ca4b64e057a649571b8_T1.jpg"
+        },
+        {
+          "id": "b6a6fcd1a848",
+          "outlet_id": "koreaherald",
+          "headline": "Kospi plunges 6% amid brutal AI sell-off",
+          "snippet": "Fears of tighter regulation on AI data center investments after the US midterm elections have rattled markets, sending South Korea’s benchmark Kospi below the 5,000 mark at one point during intraday…",
+          "url": "https://www.koreaherald.com/article/10928857",
+          "published_at": "2026-11-06T07:48:53Z",
+          "published_at_estimated": false,
+          "image_url": "https://wimg.heraldcorp.com/news/cms/2026/11/06/news-p.v1.20261106.c10b33af886244c3834b1cf69b2a14a7_T1.jpg"
+        },
+        {
+          "id": "abb616f8a9b8",
+          "outlet_id": "thenational",
+          "headline": "Manus on Markets: $2.3 trillion wiped out as US midterms send markets into a tailspin",
+          "snippet": "From tariff turmoil and stock shocks to market meltdowns, the global financial system has never been in such flux. Manus Cranny, The National's geo-economics editor, cuts through the noise and…",
+          "url": "https://www.thenationalnews.com/business/markets/2026/11/06/manus-on-markets-23-trillion-wiped-out-as-us-midterms-send-markets-into-a-tailspin/",
+          "published_at": "2026-11-06T08:22:34Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.thenationalnews.com/resizer/v2/ZH75TC4FNRES5BO7CLM2BHM6QU.jpg?auth=e6c76891bf0d16d57257d6b6813e007def3abb01ceb11b3896fa176daef3ff0f&smart=true&width=1920&height=1080"
+        },
+        {
+          "id": "ca942ac21bc2",
+          "outlet_id": "nbc",
+          "headline": "Global market rout deepens after midterms intensify AI fears",
+          "snippet": "An intensifying rout of tech stocks hit global markets Friday, with a surge of red tickers spreading from Wall Street to Asia and Europe after the blue wave of the U.S. midterm elections fueled…",
+          "url": "https://www.nbcnews.com/business/markets/global-markets-tech-stocks-ai-midterms-democrats-asia-europe-rcna607794",
+          "published_at": "2026-11-06T08:33:52Z",
+          "published_at_estimated": false,
+          "image_url": "https://media-cldnry.s-nbcnews.com/image/upload/t_fit_1500w/rockcms/2026-11/261106-taiwan-rs-4603f6.jpg"
+        },
+        {
+          "id": "3bcc16a5e532",
+          "outlet_id": "aljazeera",
+          "headline": "Tech stock rout, driven by US AI fears, continues in Asian trading",
+          "snippet": "Global markets are being roiled due to concerns over US data centre expansion and AI regulation.",
+          "url": "https://www.aljazeera.com/economy/2026/11/6/tech-stock-rout-driven-by-us-ai-fears-continues-in-asian-trading",
+          "published_at": "2026-11-06T08:41:05Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "f90577aa9ff3",
+          "outlet_id": "guardian",
+          "headline": "Global stocks plunge amid AI slowdown fears after Democrats’ midterm triumph",
+          "snippet": "Asian and European markets follow Wall Street with sharp fall as FTSE down 1.9% Business live – latest updates European stock markets have fallen sharply as a rout in US tech stocks spread across…",
+          "url": "https://www.theguardian.com/business/2026/nov/06/global-stocks-plunge-amid-ai-slowdown-fears-after-democrats-midterm-triumph",
+          "published_at": "2026-11-06T08:58:22Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.guim.co.uk/img/media/133fcf307a659f484d60938a125776efe501ba4e/407_0_3025_2422/master/3025.jpg?width=460&quality=85&auto=format&fit=max&s=ff3042c93e0c4a87dadb98b73f68be7f"
+        },
+        {
+          "id": "7ff854e77b40",
+          "outlet_id": "guardian",
+          "headline": "Global tech stocks wobble over AI regulation fears after midterms | First Thing",
+          "snippet": "Anticipation that Democrats’ ‘blue wave’ will lead to tighter rules on AI and datacenters sends tech stock plunging. Plus a big eight-legged surprise for customs officials in Peru Don’t already get…",
+          "url": "https://www.theguardian.com/us-news/2026/nov/06/first-thing-tech-stocks-ai-regulation-midterms",
+          "published_at": "2026-11-06T11:59:46Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.guim.co.uk/img/media/3f1c7fe6ddb641e6c5d7bbac9032eca3fce9e017/316_0_3513_2809/master/3513.jpg?width=460&quality=85&auto=format&fit=max&s=23169cde16fecde18dbeb7a2d373336a"
+        },
+        {
+          "id": "62475b2c8e0c",
+          "outlet_id": "nbc",
+          "headline": "Stocks Plunge Amid AI Fears and Political Uncertainty",
+          "snippet": "The S&P 500 and the NASDAQ had their worst day Thursday since April 2025, with tech stocks and companies tied to AI among the biggest losers. Investors say it’s all about the uncertainty over how a…",
+          "url": "https://www.today.com/video/stocks-fall-after-post-election-rally-over-fears-of-ai-restrictions-272990277899",
+          "published_at": "2026-11-06T12:11:06Z",
+          "published_at_estimated": false,
+          "image_url": "https://media-cldnry.s-nbcnews.com/image/upload/t_fit_1500w/mpx/2704722219/2026_11/1793967061198_tdy_news_7a_cheung_stocks_261106_S3_1920x1080-avzjam.jpg"
+        },
+        {
+          "id": "83148b710a87",
+          "outlet_id": "france24",
+          "headline": "Tech giants lose $1 trillion in one day after Democrats victory in midterms",
+          "snippet": "Trillions of dollars have been wiped off the stock value of major tech firms in the US, Europe and Asia. Investors appear worried about the possibility of an AI slowdown and tougher regulation as…",
+          "url": "https://www.france24.com/en/video/20261106-tech-giants-lose-1-trillion-in-one-day-after-democrats-victory-in-midterms",
+          "published_at": "2026-11-06T13:15:27Z",
+          "published_at_estimated": false,
+          "image_url": "https://s.france24.com/media/display/6e1d77ee-d9dc-11f1-9d72-695cb59fade5/w:1024/p:16x9/capture-4f9220cf.jpg"
+        },
+        {
+          "id": "a5582d406d95",
+          "outlet_id": "dailymail",
+          "headline": "Global stocks tumble as AI panic grips markets following Democrat midterms landslide - as Trump declares: 'You only have yourselves to blame!'",
+          "snippet": "Wall Street's volatility 'fear gauge' soared, the Nasdaq sank 5.5 per cent and $3trillion was wiped off S&P 500 firms.",
+          "url": "https://www.dailymail.com/news/article-16270999/Global-stocks-tumble-AI-panic-grips-markets-following-Democrat-midterms-landslide-Trump-declares-You-blame.html",
+          "published_at": "2026-11-06T13:38:32Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.dailymail.com/1s/2026/11/06/08/112342631-0-image-a-7_1793955533828.jpg"
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "Stocks fell sharply after the Democrats' win in the US midterm elections.",
+          "sources": [
+            "c6d9116ef485",
+            "f6963d157a64",
+            "29d85adf8188",
+            "8a4b51a0ae40",
+            "7af06912f464",
+            "b6a6fcd1a848",
+            "abb616f8a9b8",
+            "ca942ac21bc2",
+            "f90577aa9ff3",
+            "7ff854e77b40",
+            "83148b710a87",
+            "a5582d406d95"
+          ]
+        },
+        {
+          "text": "The sell-off is attributed to fears about AI, including tighter regulation or a slowdown in AI investment.",
+          "sources": [
+            "29d85adf8188",
+            "8a4b51a0ae40",
+            "7af06912f464",
+            "b6a6fcd1a848",
+            "ca942ac21bc2",
+            "3bcc16a5e532",
+            "f90577aa9ff3",
+            "7ff854e77b40",
+            "62475b2c8e0c",
+            "83148b710a87",
+            "a5582d406d95"
+          ]
+        },
+        {
+          "text": "Concerns centre on possible curbs on data centre investment or construction.",
+          "sources": [
+            "8a4b51a0ae40",
+            "7af06912f464",
+            "b6a6fcd1a848",
+            "3bcc16a5e532",
+            "7ff854e77b40"
+          ]
+        },
+        {
+          "text": "The losses spread from US markets to Asia and Europe.",
+          "sources": [
+            "7af06912f464",
+            "b6a6fcd1a848",
+            "3bcc16a5e532",
+            "ca942ac21bc2",
+            "f90577aa9ff3",
+            "83148b710a87"
+          ]
+        },
+        {
+          "text": "The Nasdaq had its worst session since April 2025.",
+          "sources": [
+            "8a4b51a0ae40",
+            "62475b2c8e0c"
+          ]
+        },
+        {
+          "text": "President Trump blamed voters or the Democrats' win for the sell-off.",
+          "sources": [
+            "f6963d157a64",
+            "8a4b51a0ae40",
+            "a5582d406d95"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "ca942ac21bc2",
+              "quote": "Global market rout deepens after midterms intensify AI fears",
+              "field": "headline"
+            },
+            {
+              "article_id": "7ff854e77b40",
+              "quote": "tighter rules on AI and datacenters",
+              "field": "snippet"
+            },
+            {
+              "article_id": "62475b2c8e0c",
+              "quote": "Stocks Plunge Amid AI Fears and Political Uncertainty",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the spread of the rout from Wall Street to Asia and Europe, citing the FTSE falling 1.9%.",
+              "sources": [
+                "ca942ac21bc2",
+                "f90577aa9ff3"
+              ]
+            },
+            {
+              "text": "Foregrounds expectations of tighter rules on AI and datacenters, and political uncertainty.",
+              "sources": [
+                "7ff854e77b40",
+                "62475b2c8e0c"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "f6963d157a64",
+              "quote": "voters should blame themselves for stock market rout",
+              "field": "headline"
+            },
+            {
+              "article_id": "83148b710a87",
+              "quote": "Tech giants lose $1 trillion in one day",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with Trump's remark that voters had themselves to blame for the sell-off.",
+              "sources": [
+                "f6963d157a64"
+              ]
+            },
+            {
+              "text": "Foregrounds the scale of losses at major tech firms and worries about an AI slowdown and tougher regulation.",
+              "sources": [
+                "83148b710a87"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "right",
+          "headline_quotes": [
+            {
+              "article_id": "c6d9116ef485",
+              "quote": "Democrat victory sparks investor panic",
+              "field": "headline"
+            },
+            {
+              "article_id": "a5582d406d95",
+              "quote": "AI panic grips markets following Democrat midterms landslide",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Describes the market reaction as panic and links it directly to the Democrat victory.",
+              "sources": [
+                "c6d9116ef485",
+                "a5582d406d95"
+              ]
+            },
+            {
+              "text": "Highlights Trump's 'You only have yourselves to blame!' and figures such as the Nasdaq falling 5.5 per cent.",
+              "sources": [
+                "a5582d406d95"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "right",
+          "text": "Right-leaning coverage does not mention AI regulation or data centre rules as a cause of the fall.",
+          "sources": [
+            "7ff854e77b40",
+            "83148b710a87"
+          ]
+        },
+        {
+          "lean": "left",
+          "text": "Left-leaning coverage does not mention Trump's remarks blaming voters for the sell-off.",
+          "sources": [
+            "f6963d157a64",
+            "a5582d406d95"
+          ]
+        }
+      ],
+      "contested_claims": [],
+      "opinion": [
+        {
+          "text": "The National presents its piece as a column by its geo-economics editor, Manus Cranny, offering his take on market turmoil.",
+          "sources": [
+            "abb616f8a9b8"
+          ]
+        }
+      ],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "c6d9116ef485",
+              "quote": "Democrat victory sparks investor panic",
+              "field": "headline"
+            },
+            {
+              "article_id": "f6963d157a64",
+              "quote": "voters should blame themselves for stock market rout",
+              "field": "headline"
+            },
+            {
+              "article_id": "ca942ac21bc2",
+              "quote": "Global market rout deepens after midterms intensify AI fears",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Foregrounds US political reaction, including Trump's remarks, and the spread of losses to Europe.",
+              "sources": [
+                "f6963d157a64",
+                "a5582d406d95",
+                "f90577aa9ff3",
+                "83148b710a87"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "29d85adf8188",
+              "quote": "Blue tsunami wipes out $2.5 trillion from Nasdaq",
+              "field": "headline"
+            },
+            {
+              "article_id": "b6a6fcd1a848",
+              "quote": "Kospi plunges 6% amid brutal AI sell-off",
+              "field": "headline"
+            },
+            {
+              "article_id": "3bcc16a5e532",
+              "quote": "concerns over US data centre expansion and AI regulation",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Foregrounds the impact on Asian markets, notably South Korea's Kospi falling 6% and below 5,000 intraday.",
+              "sources": [
+                "7af06912f464",
+                "b6a6fcd1a848",
+                "3bcc16a5e532"
+              ]
+            },
+            {
+              "text": "Emphasises fears over US data centre investment and the scale of losses on the Nasdaq.",
+              "sources": [
+                "29d85adf8188",
+                "8a4b51a0ae40",
+                "7af06912f464",
+                "3bcc16a5e532"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "Tech stocks fell sharply worldwide after Democrats won the US midterm elections. Outlets link the sell-off to investor fears of tighter AI regulation and slower data centre investment. The rout spread from Wall Street to Asia and Europe, and President Trump said voters had themselves to blame.",
+        "sources": [
+          "c6d9116ef485",
+          "f6963d157a64",
+          "8a4b51a0ae40",
+          "7af06912f464",
+          "b6a6fcd1a848",
+          "ca942ac21bc2",
+          "3bcc16a5e532",
+          "f90577aa9ff3",
+          "7ff854e77b40",
+          "83148b710a87",
+          "a5582d406d95"
+        ]
+      },
+      "conclusion": {
+        "text": "All sides report a global sell-off after the Democrats' midterm win, tied to AI fears. Right-leaning outlets lead with investor panic and Trump's blame, left-leaning ones with global spread and regulation, and East-bloc outlets with Asian markets. Loss figures cited vary by measure, from $1 trillion to $3 trillion, without direct contradiction.",
+        "sources": [
+          "c6d9116ef485",
+          "a5582d406d95",
+          "ca942ac21bc2",
+          "7ff854e77b40",
+          "7af06912f464",
+          "b6a6fcd1a848",
+          "83148b710a87",
+          "29d85adf8188",
+          "abb616f8a9b8"
+        ]
+      },
+      "validation": {
+        "kept": 33,
+        "dropped_by_reason": {}
+      }
+    },
+    {
+      "id": "95b4649fb0b7",
+      "title": "Federal judge temporarily blocks construction of Trump's triumphal arch near Washington",
+      "rank": 3,
+      "outlet_count": 8,
+      "coverage": {
+        "lean": {
+          "left": 1,
+          "centre": 2,
+          "right": 3
+        },
+        "bloc": {
+          "west": 6,
+          "east": 2
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "949184efba89",
+          "outlet_id": "nbc",
+          "headline": "Judge blocks construction on Trump’s D.C.-area arch after commission’s approval",
+          "snippet": "The Trump administration has said it expects to begin construction immediately, but a judge is considering a plan to temporarily halt the project.",
+          "url": "https://www.nbcnews.com/politics/trump-administration/trump-triumphal-arch-approval-opposition-asks-judge-to-block-rcna607642",
+          "published_at": "2026-11-05T18:56:37Z",
+          "published_at_estimated": false,
+          "image_url": "https://media-cldnry.s-nbcnews.com/image/upload/t_fit_1500w/rockcms/2026-04/260410-triumphal-arch-mn-1432-70f930.jpg"
+        },
+        {
+          "id": "09ade310d2fb",
+          "outlet_id": "npr",
+          "headline": "A judge blocks construction of Trump's arch moments after it won federal approval",
+          "snippet": "The Trump administration hoped to begin construction immediately after a federal panel approved its arch late Thursday. But just after midnight, the judge issued an order blocking work for 14 days.",
+          "url": "https://www.npr.org/2026/11/06/nx-s1-6031990/trump-arch-planning-commission-injunction",
+          "published_at": "2026-11-06T05:05:43Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "4da51ce5f1f1",
+          "outlet_id": "axios",
+          "headline": "Trump's 250-foot arch temporarily blocked by federal judge",
+          "snippet": "A federal judge temporarily blocked construction of President Trump's much-contested triumphal arch near Arlington National Cemetery, hours after the project received final planning approval. Why it…",
+          "url": "https://www.axios.com/local/washington-dc/2026/11/06/trump-arch-dc-arlington-cemetery-construction-lawsuits",
+          "published_at": "2026-11-06T05:54:56Z",
+          "published_at_estimated": false,
+          "image_url": "https://images.axios.com/n3-6FomeEGxQ2NFTZ-gjcyVZQMU=/0x99:5136x2988/1366x768/2026/11/05/1793903847233.jpeg"
+        },
+        {
+          "id": "937559135920",
+          "outlet_id": "nypost",
+          "headline": "Trump’s 250-foot triumphal arch gets green light from key federal panel — but judge blocks construction for at least 14 days",
+          "snippet": "In an 8-4 vote, the commission approved plans to build the 250-foot-high arch just across the Potomac River from the Lincoln Memorial, on a traffic circle between Arlington National Cemetery and…",
+          "url": "https://nypost.com/2026/11/06/us-news/trumps-250-foot-triumphal-arch-gets-greenlight-from-key-federal-panel/",
+          "published_at": "2026-11-06T06:55:20Z",
+          "published_at_estimated": false,
+          "image_url": "https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2FAP26308623103586.jpg?w%3D1024"
+        },
+        {
+          "id": "c376ec770bbc",
+          "outlet_id": "aljazeera",
+          "headline": "US judge halts construction of Trump’s triumphal arch in Washington, DC",
+          "snippet": "A 14-day pause has been ordered blocking the so-called 'Arc de Trump' project in Washington, DC.",
+          "url": "https://www.aljazeera.com/news/2026/11/6/us-judge-halts-construction-of-trumps-triumphal-arch-in-washington-dc",
+          "published_at": "2026-11-06T07:32:08Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "13a1ff5dba80",
+          "outlet_id": "thehindu",
+          "headline": "Federal judge orders 14-day delay on any work beginning on Trump’s monumental arch",
+          "snippet": "Judge Tanya Chutkan’s temporary restraining order came just over an hour after the National Capital Planning Commission approved the memorial arch in an 8-4 vote",
+          "url": "https://www.thehindu.com/news/international/key-federal-panel-approves-trumps-arch-while-it-is-being-challenged-in-court/article71673086.ece",
+          "published_at": "2026-11-06T10:04:41Z",
+          "published_at_estimated": false,
+          "image_url": "https://th-i.thgim.com/public/incoming/65sm9j/article71673139.ece/alternates/LANDSCAPE_1200/AP11_06_2026_000001B.jpg"
+        },
+        {
+          "id": "46991ab22ed1",
+          "outlet_id": "npr",
+          "headline": "Judge halts construction of Trump's arch. And, Labor Department to release jobs report",
+          "snippet": "A judge has blocked construction of Trump's arch moments after it won federal approval to proceed. And, the Labor Department is set to release the latest jobs report today, a day after stocks plunged.",
+          "url": "https://www.npr.org/2026/11/06/g-s1-152213/up-first-newsletter-job-market-trump-arch-school-enrollment-harmeet-dhillon",
+          "published_at": "2026-11-06T12:24:52Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "eef3ee16d461",
+          "outlet_id": "examiner",
+          "headline": "Trump’s planned arch delayed after federal judge orders temporary restraining order",
+          "snippet": "A federal judge temporarily blocked President Donald Trump’s plans to begin construction on a massive triumphal arch near Washington, D.C., hours after a federal planning commission approved a…",
+          "url": "https://www.washingtonexaminer.com/news/justice/4795112/trump-arch-delayed-federal-judge-temporary-restraining-order/",
+          "published_at": "2026-11-06T13:12:39Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.washingtonexaminer.com/wp-content/uploads/2026/10/AP26264499190048.jpg?w=1024"
+        },
+        {
+          "id": "88101498b27b",
+          "outlet_id": "dailymail",
+          "headline": "Judge swiftly blocks Trump's 250-ft arch in Washington after federal panel votes to launch construction",
+          "snippet": "The decision creates a major setback for a project Trump has pursued as part of his efforts to reshape the capital region. The massive monument is set to stand 250 feet tall.",
+          "url": "https://www.dailymail.com/news/article-16270705/Trumps-250-ft-memorial-arch-Washington-federal-panel-votes-construction-hurdle.html",
+          "published_at": "2026-11-06T13:20:37Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.dailymail.com/1s/2026/11/06/04/112340181-0-image-a-22_1793941064794.jpg"
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "A federal judge blocked or halted construction of Trump's arch.",
+          "sources": [
+            "949184efba89",
+            "09ade310d2fb",
+            "4da51ce5f1f1",
+            "937559135920",
+            "c376ec770bbc",
+            "13a1ff5dba80",
+            "46991ab22ed1",
+            "eef3ee16d461",
+            "88101498b27b"
+          ]
+        },
+        {
+          "text": "The block came shortly after a federal panel or planning commission approved the arch.",
+          "sources": [
+            "949184efba89",
+            "09ade310d2fb",
+            "4da51ce5f1f1",
+            "937559135920",
+            "13a1ff5dba80",
+            "46991ab22ed1",
+            "eef3ee16d461",
+            "88101498b27b"
+          ]
+        },
+        {
+          "text": "The order pauses work for 14 days.",
+          "sources": [
+            "09ade310d2fb",
+            "937559135920",
+            "c376ec770bbc",
+            "13a1ff5dba80"
+          ]
+        },
+        {
+          "text": "The arch is planned to be 250 feet tall.",
+          "sources": [
+            "4da51ce5f1f1",
+            "937559135920",
+            "88101498b27b"
+          ]
+        },
+        {
+          "text": "The commission approved the plans in an 8-4 vote.",
+          "sources": [
+            "937559135920",
+            "13a1ff5dba80"
+          ]
+        },
+        {
+          "text": "The Trump administration had expected or hoped to begin construction immediately.",
+          "sources": [
+            "949184efba89",
+            "09ade310d2fb"
+          ]
+        },
+        {
+          "text": "The ruling took the form of a temporary restraining order.",
+          "sources": [
+            "13a1ff5dba80",
+            "eef3ee16d461"
+          ]
+        },
+        {
+          "text": "The site is near Arlington National Cemetery.",
+          "sources": [
+            "4da51ce5f1f1",
+            "937559135920"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "949184efba89",
+              "quote": "Judge blocks construction on Trump’s D.C.-area arch after commission’s approval",
+              "field": "headline"
+            },
+            {
+              "article_id": "949184efba89",
+              "quote": "expects to begin construction immediately",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the administration's stated expectation of starting construction immediately and a judge weighing a temporary halt.",
+              "sources": [
+                "949184efba89"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "09ade310d2fb",
+              "quote": "moments after it won federal approval",
+              "field": "headline"
+            },
+            {
+              "article_id": "4da51ce5f1f1",
+              "quote": "much-contested triumphal arch",
+              "field": "snippet"
+            },
+            {
+              "article_id": "09ade310d2fb",
+              "quote": "just after midnight",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Foregrounds the timing of the order, issued just after midnight and moments after approval.",
+              "sources": [
+                "09ade310d2fb",
+                "46991ab22ed1",
+                "4da51ce5f1f1"
+              ]
+            },
+            {
+              "text": "Describes the arch as much-contested and situates it near Arlington National Cemetery.",
+              "sources": [
+                "4da51ce5f1f1"
+              ]
+            },
+            {
+              "text": "One item pairs the ruling with an upcoming Labor Department jobs report.",
+              "sources": [
+                "46991ab22ed1"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "right",
+          "headline_quotes": [
+            {
+              "article_id": "937559135920",
+              "quote": "gets green light from key federal panel",
+              "field": "headline"
+            },
+            {
+              "article_id": "88101498b27b",
+              "quote": "a major setback",
+              "field": "snippet"
+            },
+            {
+              "article_id": "eef3ee16d461",
+              "quote": "massive triumphal arch",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the commission's approval, including the 8-4 vote and the site across the Potomac from the Lincoln Memorial.",
+              "sources": [
+                "937559135920"
+              ]
+            },
+            {
+              "text": "Describes the ruling as a major setback for Trump's efforts to reshape the capital region.",
+              "sources": [
+                "88101498b27b"
+              ]
+            },
+            {
+              "text": "Highlights the arch's size, at 250 feet tall.",
+              "sources": [
+                "937559135920",
+                "88101498b27b",
+                "eef3ee16d461"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "left",
+          "text": "Left coverage does not mention the 14-day duration of the block.",
+          "sources": [
+            "09ade310d2fb",
+            "937559135920"
+          ]
+        },
+        {
+          "lean": "left",
+          "text": "Left coverage does not mention the arch's planned 250-foot height.",
+          "sources": [
+            "4da51ce5f1f1",
+            "937559135920",
+            "88101498b27b"
+          ]
+        },
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not mention the 8-4 commission vote.",
+          "sources": [
+            "937559135920"
+          ]
+        }
+      ],
+      "contested_claims": [],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "4da51ce5f1f1",
+              "quote": "Trump's 250-foot arch temporarily blocked by federal judge",
+              "field": "headline"
+            },
+            {
+              "article_id": "88101498b27b",
+              "quote": "Judge swiftly blocks Trump's 250-ft arch",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Foregrounds the arch's size, its location and the timing relative to the commission's approval.",
+              "sources": [
+                "4da51ce5f1f1",
+                "937559135920",
+                "88101498b27b",
+                "09ade310d2fb"
+              ]
+            },
+            {
+              "text": "Notes the administration's aim to begin construction immediately.",
+              "sources": [
+                "949184efba89",
+                "09ade310d2fb",
+                "eef3ee16d461"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "c376ec770bbc",
+              "quote": "so-called 'Arc de Trump' project",
+              "field": "snippet"
+            },
+            {
+              "article_id": "13a1ff5dba80",
+              "quote": "Judge Tanya Chutkan’s temporary restraining order",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Names the judge as Tanya Chutkan and the approving body as the National Capital Planning Commission.",
+              "sources": [
+                "13a1ff5dba80"
+              ]
+            },
+            {
+              "text": "Refers to the project by the nickname 'Arc de Trump' and leads with the 14-day pause.",
+              "sources": [
+                "c376ec770bbc",
+                "13a1ff5dba80"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "A federal judge temporarily blocked construction of President Trump's planned triumphal arch near Washington, hours after a federal planning commission approved it. Several reports say the order halts work for 14 days, and two put the commission vote at 8-4.",
+        "sources": [
+          "949184efba89",
+          "09ade310d2fb",
+          "4da51ce5f1f1",
+          "937559135920",
+          "c376ec770bbc",
+          "13a1ff5dba80",
+          "46991ab22ed1",
+          "eef3ee16d461",
+          "88101498b27b"
+        ]
+      },
+      "conclusion": {
+        "text": "All coverage agrees a federal judge temporarily blocked the arch shortly after commission approval, with several citing a 14-day pause. Centre outlets stress the timing, right outlets the approval vote and setback, and East outlets name the judge and the 'Arc de Trump' nickname; no claims are contested.",
+        "sources": [
+          "09ade310d2fb",
+          "4da51ce5f1f1",
+          "937559135920",
+          "88101498b27b",
+          "c376ec770bbc",
+          "13a1ff5dba80",
+          "949184efba89"
+        ]
+      },
+      "validation": {
+        "kept": 36,
+        "dropped_by_reason": {}
+      }
+    },
+    {
+      "id": "29362f806ef0",
+      "title": "Hundreds of thousands join cost-of-living strikes and protests across France",
+      "rank": 4,
+      "outlet_count": 7,
+      "coverage": {
+        "lean": {
+          "left": 2,
+          "centre": 2,
+          "right": 1
+        },
+        "bloc": {
+          "west": 5,
+          "east": 2
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "85287d11ec18",
+          "outlet_id": "mirror",
+          "headline": "Fresh protests in France as unions issue stark cost-of-living warning",
+          "snippet": "France's Interior Ministry said over 600,000 people rallied across the country, including in the capital Paris, to demand higher wages and support the student protest movement",
+          "url": "https://www.mirror.co.uk/news/world-news/france-paris-protests-unions-strike-37845883",
+          "published_at": "2026-11-05T11:52:22Z",
+          "published_at_estimated": false,
+          "image_url": "https://i2-prod.mirror.co.uk/incoming/article37846167.ece/ALTERNATES/s615/0_Nationwide-union-protests-against-government-policy-in-France-Marseille-05-Nov-2026.jpg"
+        },
+        {
+          "id": "66410cd57ae7",
+          "outlet_id": "fox",
+          "headline": "Protests erupt across France after left-wing groups call for mobilization",
+          "snippet": "An estimated 270,000 people joined nationwide strikes and protests across France on Thursday, putting pressure on President Emmanuel Macron's government.",
+          "url": "https://www.foxnews.com/world/protests-erupt-across-france-left-wing-groups-call-mobilization",
+          "published_at": "2026-11-05T14:36:30Z",
+          "published_at_estimated": false,
+          "image_url": "https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2026/11/931/523/riot-police-detain-protester-lyon-france.jpg?ve=1&tl=1"
+        },
+        {
+          "id": "a0c47524491d",
+          "outlet_id": "bbc",
+          "headline": "French protests see numbers surge as unions join strikes over high cost of living",
+          "snippet": "The interior ministry estimates 600,000 people joined protests across France, while the unions say the number was far higher.",
+          "url": "https://www.bbc.co.uk/news/articles/ckx2qzv835pgo",
+          "published_at": "2026-11-05T17:59:53Z",
+          "published_at_estimated": false,
+          "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/f641/live/977c1840-d91c-11f1-b441-2b33b063138f.jpg"
+        },
+        {
+          "id": "0a30cde13c42",
+          "outlet_id": "nyt",
+          "headline": "After Barricades, Riots and Protests, French Workers Go on Strike",
+          "snippet": "Hundreds of demonstrations took place across France on Thursday, escalating weeks of protests against the rising cost of living.",
+          "url": "https://www.nytimes.com/2026/11/05/world/europe/france-protests-general-strike.html",
+          "published_at": "2026-11-05T19:03:51Z",
+          "published_at_estimated": false,
+          "image_url": "https://static01.nyt.com/images/2026/11/05/multimedia/05int-france-protests-vjhc/05int-france-protests-vjhc-mediumSquareAt3X.jpg"
+        },
+        {
+          "id": "9df039696120",
+          "outlet_id": "cgtn",
+          "headline": "Around 600,000 people take part in demonstrations across France",
+          "snippet": "Around 600,000 people took part in demonstrations across France on Thursday, French television channel BFM TV reported, citing an initial estimate by the French Interior Ministry.",
+          "url": "https://news.cgtn.com/news/2026-11-06/Around-600-000-people-take-part-in-demonstrations-across-France-1RQgysAC1gc/p.html",
+          "published_at": "2026-11-06T00:45:29Z",
+          "published_at_estimated": false,
+          "image_url": "https://news.cgtn.com/news/2026-11-06/Around-600-000-people-take-part-in-demonstrations-across-France-1RQgysAC1gc/img/0c0a60f2670441488cb682fac4afc40b/0c0a60f2670441488cb682fac4afc40b-750.png"
+        },
+        {
+          "id": "3851a90bddb4",
+          "outlet_id": "japantimes",
+          "headline": "French protests draw 575,000 amid parliament budget impasse",
+          "snippet": "The office of Prime Minister Sebastien Lecornu has announced he will call labor unions to a conference to present responses to their demands.",
+          "url": "https://www.japantimes.co.jp/news/2026/11/06/world/politics/france-protest-budget-impasse/",
+          "published_at": "2026-11-06T02:23:00Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.japantimes.co.jp/japantimes/uploads/images/2026/11/06/thumbs/400x400/572659.jpg"
+        },
+        {
+          "id": "2683fcb95108",
+          "outlet_id": "france24",
+          "headline": "Mass protests sweep France as huge crowds demand higher wages",
+          "snippet": "Hundreds of thousands of striking workers protested across France on Thursday, November 5, against the rising cost of living following weeks of youth-led demonstrations, with police firing tear gas…",
+          "url": "https://www.france24.com/en/video/20261106-mass-protests-sweep-france-as-huge-crowds-demand-higher-wages",
+          "published_at": "2026-11-06T10:05:40Z",
+          "published_at_estimated": false,
+          "image_url": "https://s.france24.com/media/display/20db6206-d9c4-11f1-ac7f-1beafce15fea/w:1024/p:16x9/EN-20261106-100159-100338-CS.jpg"
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "Protests and strikes took place across France on Thursday.",
+          "sources": [
+            "66410cd57ae7",
+            "0a30cde13c42",
+            "9df039696120",
+            "2683fcb95108",
+            "a0c47524491d",
+            "85287d11ec18"
+          ]
+        },
+        {
+          "text": "The protests were against the rising or high cost of living.",
+          "sources": [
+            "85287d11ec18",
+            "a0c47524491d",
+            "0a30cde13c42",
+            "2683fcb95108"
+          ]
+        },
+        {
+          "text": "Protesters demanded higher wages.",
+          "sources": [
+            "85287d11ec18",
+            "2683fcb95108"
+          ]
+        },
+        {
+          "text": "The Interior Ministry estimated that around 600,000 people took part.",
+          "sources": [
+            "85287d11ec18",
+            "a0c47524491d",
+            "9df039696120"
+          ]
+        },
+        {
+          "text": "The protests followed weeks of earlier demonstrations, described as youth-led or student protests.",
+          "sources": [
+            "0a30cde13c42",
+            "2683fcb95108",
+            "85287d11ec18"
+          ]
+        },
+        {
+          "text": "Unions were involved in the strikes and protests.",
+          "sources": [
+            "85287d11ec18",
+            "a0c47524491d",
+            "3851a90bddb4"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "85287d11ec18",
+              "quote": "unions issue stark cost-of-living warning",
+              "field": "headline"
+            },
+            {
+              "article_id": "0a30cde13c42",
+              "quote": "After Barricades, Riots and Protests, French Workers Go on Strike",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with unions' warning on the cost of living and support for the student protest movement.",
+              "sources": [
+                "85287d11ec18"
+              ]
+            },
+            {
+              "text": "Presents the strikes as an escalation after barricades, riots and weeks of protests.",
+              "sources": [
+                "0a30cde13c42"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "a0c47524491d",
+              "quote": "French protests see numbers surge as unions join strikes",
+              "field": "headline"
+            },
+            {
+              "article_id": "2683fcb95108",
+              "quote": "huge crowds demand higher wages",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Foregrounds rising turnout and unions' claim that numbers were far higher than the ministry estimate.",
+              "sources": [
+                "a0c47524491d"
+              ]
+            },
+            {
+              "text": "Mentions police firing tear gas and the wage demands of striking workers.",
+              "sources": [
+                "2683fcb95108"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "right",
+          "headline_quotes": [
+            {
+              "article_id": "66410cd57ae7",
+              "quote": "after left-wing groups call for mobilization",
+              "field": "headline"
+            },
+            {
+              "article_id": "66410cd57ae7",
+              "quote": "putting pressure on President Emmanuel Macron's government",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Attributes the mobilisation to left-wing groups and highlights pressure on Macron's government.",
+              "sources": [
+                "66410cd57ae7"
+              ]
+            },
+            {
+              "text": "Gives an estimated turnout of 270,000.",
+              "sources": [
+                "66410cd57ae7"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "right",
+          "text": "Right-leaning coverage does not mention the cost of living as the cause of the protests.",
+          "sources": [
+            "85287d11ec18",
+            "a0c47524491d",
+            "0a30cde13c42",
+            "2683fcb95108"
+          ]
+        },
+        {
+          "lean": "right",
+          "text": "Right-leaning coverage does not mention the demand for higher wages.",
+          "sources": [
+            "85287d11ec18",
+            "2683fcb95108"
+          ]
+        },
+        {
+          "lean": "right",
+          "text": "Right-leaning coverage does not mention the Interior Ministry's estimate of around 600,000 participants.",
+          "sources": [
+            "85287d11ec18",
+            "a0c47524491d"
+          ]
+        }
+      ],
+      "contested_claims": [
+        {
+          "claim": "Around 600,000 or more people took part in the protests.",
+          "asserted_by": [
+            "85287d11ec18",
+            "a0c47524491d",
+            "9df039696120"
+          ],
+          "disputed_by": [
+            "66410cd57ae7",
+            "3851a90bddb4"
+          ]
+        }
+      ],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "a0c47524491d",
+              "quote": "unions join strikes over high cost of living",
+              "field": "headline"
+            },
+            {
+              "article_id": "2683fcb95108",
+              "quote": "Mass protests sweep France",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Foregrounds the cost of living, wage demands and union involvement.",
+              "sources": [
+                "85287d11ec18",
+                "a0c47524491d",
+                "0a30cde13c42",
+                "2683fcb95108"
+              ]
+            },
+            {
+              "text": "Mentions political pressure on Macron's government and police use of tear gas.",
+              "sources": [
+                "66410cd57ae7",
+                "2683fcb95108"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "9df039696120",
+              "quote": "Around 600,000 people take part in demonstrations across France",
+              "field": "headline"
+            },
+            {
+              "article_id": "3851a90bddb4",
+              "quote": "amid parliament budget impasse",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with turnout figures, citing BFM TV and an initial Interior Ministry estimate.",
+              "sources": [
+                "9df039696120",
+                "3851a90bddb4"
+              ]
+            },
+            {
+              "text": "Links the protests to a parliamentary budget impasse and Prime Minister Lecornu's plan to call unions to a conference.",
+              "sources": [
+                "3851a90bddb4"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "Strikes and protests took place across France on Thursday against the rising cost of living, with demands for higher wages. The Interior Ministry put turnout at around 600,000, unions said it was far higher, and other reports gave 270,000 or 575,000.",
+        "sources": [
+          "85287d11ec18",
+          "a0c47524491d",
+          "0a30cde13c42",
+          "2683fcb95108",
+          "9df039696120",
+          "66410cd57ae7",
+          "3851a90bddb4"
+        ]
+      },
+      "conclusion": {
+        "text": "Coverage agrees that nationwide protests and strikes took place on Thursday over the cost of living. Left and centre outlets foreground unions and wages, the right-leaning outlet left-wing groups and pressure on Macron, and East outlets turnout and the budget impasse. Turnout stays contested: 600,000 or more against 270,000 or 575,000.",
+        "sources": [
+          "85287d11ec18",
+          "a0c47524491d",
+          "0a30cde13c42",
+          "2683fcb95108",
+          "66410cd57ae7",
+          "9df039696120",
+          "3851a90bddb4"
+        ]
+      },
+      "validation": {
+        "kept": 32,
+        "dropped_by_reason": {}
+      }
+    },
+    {
+      "id": "6af8cf0dae4f",
+      "title": "Kenyan cult leader Paul Mackenzie sentenced to 200 years for starvation deaths",
+      "rank": 5,
+      "outlet_count": 7,
+      "coverage": {
+        "lean": {
+          "left": 1,
+          "centre": 2,
+          "right": 2
+        },
+        "bloc": {
+          "west": 5,
+          "east": 2
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "c1e06a3f5685",
+          "outlet_id": "thesun",
+          "headline": "Evil doomsday cult leader guilty of murdering 190 children after forcing them to starve to death is jailed for 200 years",
+          "snippet": "AN evil doomsday cult leader has been sentenced to 200 years in prison, for the murder of 191 people, all but one of them children. Twisted Paul Mackenzie, 54, ordered cult members to starve their…",
+          "url": "https://www.thesun.co.uk/news/40935955/doomsday-cult-leader-sentenced/",
+          "published_at": "2026-11-06T11:56:00Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.thesun.co.uk/wp-content%2Fuploads%2F2026%2F11%2F190-children-one-reacts-awaits-1121137948.jpg?quality%3D90%26"
+        },
+        {
+          "id": "5913ff37e0dd",
+          "outlet_id": "dw",
+          "headline": "Kenya cult leader Paul Mackenzie sentenced to 200 years",
+          "snippet": "A court in Kenya has sentenced Paul Mackenzie to 200 years in prison for the murders of 190 children and an adult. He told them to starve themselves to death as part of his apocalyptic religious cult.",
+          "url": "https://www.dw.com/en/kenya-cult-leader-paul-mackenzie-sentenced-to-200-years/a-79875112?maca=en-rss-en-world-4025-xml-mrss",
+          "published_at": "2026-11-06T12:03:00Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "53a5a4f4308d",
+          "outlet_id": "dailymail",
+          "headline": "Starvation cult leader is jailed for 200 years for murdering 190 children by telling them to stop eating so they'd die and 'meet Jesus'",
+          "snippet": "The leader of a Kenyan starvation cult found guilty of murdering 190 children faces a possible death penalty as he is sentenced on Friday.",
+          "url": "https://www.dailymail.com/news/article-16270973/Starvation-cult-leader-faces-death-sentence-murdering-190-children-telling-followers-stopped-eating-theyd-die-meet-Jesus.html",
+          "published_at": "2026-11-06T12:36:20Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.dailymail.com/1s/2026/11/06/08/112342209-0-image-a-11_1793954465455.jpg"
+        },
+        {
+          "id": "a2d70148ed19",
+          "outlet_id": "aljazeera",
+          "headline": "Kenyan court sentences starvation cult leader to 200 years",
+          "snippet": "Paul Mackenzie and accomplices were convicted of murdering 190 children and one adult.",
+          "url": "https://www.aljazeera.com/news/2026/11/6/kenyan-court-sentences-starvation-cult-leader-to-200-years",
+          "published_at": "2026-11-06T12:50:24Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "f92e25d06bd2",
+          "outlet_id": "bbc",
+          "headline": "Kenyan doomsday cult leader given life sentence for murdering 191 people",
+          "snippet": "Paul Mackenzie ordered his followers to starve their children to death in a forest so they could \"meet Jesus\".",
+          "url": "https://www.bbc.co.uk/news/articles/cm5yne5984l0o",
+          "published_at": "2026-11-06T12:54:04Z",
+          "published_at_estimated": false,
+          "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/819f/live/03fb9610-d857-11f1-8ac8-af8395a95d7d.jpg"
+        },
+        {
+          "id": "a976196993e7",
+          "outlet_id": "scmp",
+          "headline": "Kenyan doomsday cult leader jailed for 200 years for murdering 191 followers",
+          "snippet": "The leader of a Kenyan doomsday cult linked to the deaths of more than 400 people was sentenced on Friday to 200 years in prison for the murders of 191 people. The High Court in Kenya’s coastal city…",
+          "url": "https://www.scmp.com/news/world/africa/article/3373594/kenyan-doomsday-cult-leader-jailed-200-years-murdering-191-followers",
+          "published_at": "2026-11-06T12:55:28Z",
+          "published_at_estimated": false,
+          "image_url": "https://cdn.i-scmp.com/sites/default/files/styles/1280x720/public/d8/images/canvas/2026/11/06/cf2afdfc-c40a-4b76-83b3-44d47fa3be81_7f89dbed.jpg?itok=pgw84AnW&v=1793969717"
+        },
+        {
+          "id": "1b8655b27ffa",
+          "outlet_id": "nyt",
+          "headline": "Kenya Cult Leader Handed 200 Year Prison Sentence for Mass Murder",
+          "snippet": "Paul Nthenge Mackenzie forced followers to starve themselves to meet Jesus and told parents to make sure their children fasted in the sun and died first.",
+          "url": "https://www.nytimes.com/2026/11/06/world/africa/kenya-cult-leader-prison-sentence-mass-murder-paul-mackenzie.html",
+          "published_at": "2026-11-06T13:53:33Z",
+          "published_at_estimated": false,
+          "image_url": "https://static01.nyt.com/images/2026/11/06/multimedia/06int-kenya-cult-sentence-1-qbvt/06int-kenya-cult-sentence-1-qbvt-mediumSquareAt3X.jpg"
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "Paul Mackenzie was sentenced to 200 years in prison.",
+          "sources": [
+            "c1e06a3f5685",
+            "5913ff37e0dd",
+            "53a5a4f4308d",
+            "a2d70148ed19",
+            "a976196993e7",
+            "1b8655b27ffa"
+          ]
+        },
+        {
+          "text": "He was convicted of murdering 191 people, 190 children and one adult.",
+          "sources": [
+            "c1e06a3f5685",
+            "5913ff37e0dd",
+            "53a5a4f4308d",
+            "a2d70148ed19",
+            "f92e25d06bd2",
+            "a976196993e7"
+          ]
+        },
+        {
+          "text": "The deaths resulted from starvation that Mackenzie ordered or encouraged among his followers.",
+          "sources": [
+            "c1e06a3f5685",
+            "5913ff37e0dd",
+            "53a5a4f4308d",
+            "a2d70148ed19",
+            "f92e25d06bd2",
+            "1b8655b27ffa"
+          ]
+        },
+        {
+          "text": "Followers were told to starve so they could meet Jesus.",
+          "sources": [
+            "53a5a4f4308d",
+            "f92e25d06bd2",
+            "1b8655b27ffa"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "1b8655b27ffa",
+              "quote": "Handed 200 Year Prison Sentence for Mass Murder",
+              "field": "headline"
+            },
+            {
+              "article_id": "1b8655b27ffa",
+              "quote": "told parents to make sure their children fasted in the sun and died first",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the sentence for mass murder and details instructions to parents that children fast in the sun and die first.",
+              "sources": [
+                "1b8655b27ffa"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "5913ff37e0dd",
+              "quote": "Kenya cult leader Paul Mackenzie sentenced to 200 years",
+              "field": "headline"
+            },
+            {
+              "article_id": "f92e25d06bd2",
+              "quote": "given life sentence for murdering 191 people",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Foregrounds the court sentence and the victim count, describing an apocalyptic religious cult.",
+              "sources": [
+                "5913ff37e0dd",
+                "f92e25d06bd2"
+              ]
+            },
+            {
+              "text": "Notes the children were starved to death in a forest.",
+              "sources": [
+                "f92e25d06bd2"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "right",
+          "headline_quotes": [
+            {
+              "article_id": "c1e06a3f5685",
+              "quote": "Evil doomsday cult leader",
+              "field": "headline"
+            },
+            {
+              "article_id": "c1e06a3f5685",
+              "quote": "Twisted Paul Mackenzie, 54",
+              "field": "snippet"
+            },
+            {
+              "article_id": "53a5a4f4308d",
+              "quote": "telling them to stop eating so they'd die and 'meet Jesus'",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the murder of 190 children and describes the leader as evil and twisted.",
+              "sources": [
+                "c1e06a3f5685",
+                "53a5a4f4308d"
+              ]
+            },
+            {
+              "text": "Mentions that he faced a possible death penalty at sentencing.",
+              "sources": [
+                "53a5a4f4308d"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "left",
+          "text": "Left coverage does not state the number of victims, 190 children and one adult.",
+          "sources": [
+            "c1e06a3f5685",
+            "5913ff37e0dd",
+            "53a5a4f4308d",
+            "f92e25d06bd2"
+          ]
+        }
+      ],
+      "contested_claims": [
+        {
+          "claim": "The sentence is described as a life sentence by one outlet, while others describe it as 200 years in prison.",
+          "asserted_by": [
+            "f92e25d06bd2"
+          ],
+          "disputed_by": [
+            "5913ff37e0dd",
+            "a2d70148ed19",
+            "a976196993e7",
+            "1b8655b27ffa",
+            "c1e06a3f5685"
+          ]
+        }
+      ],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "c1e06a3f5685",
+              "quote": "Evil doomsday cult leader",
+              "field": "headline"
+            },
+            {
+              "article_id": "f92e25d06bd2",
+              "quote": "so they could \"meet Jesus\"",
+              "field": "snippet"
+            },
+            {
+              "article_id": "1b8655b27ffa",
+              "quote": "Mass Murder",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Foregrounds the children as victims and the religious motive of meeting Jesus.",
+              "sources": [
+                "c1e06a3f5685",
+                "53a5a4f4308d",
+                "f92e25d06bd2",
+                "1b8655b27ffa"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "a2d70148ed19",
+              "quote": "Kenyan court sentences starvation cult leader to 200 years",
+              "field": "headline"
+            },
+            {
+              "article_id": "a976196993e7",
+              "quote": "linked to the deaths of more than 400 people",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Notes accomplices were also convicted.",
+              "sources": [
+                "a2d70148ed19"
+              ]
+            },
+            {
+              "text": "States the cult is linked to more than 400 deaths and names the High Court in a coastal city.",
+              "sources": [
+                "a976196993e7"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "A court in Kenya sentenced doomsday cult leader Paul Mackenzie to 200 years in prison for murdering 191 people, 190 of them children. He ordered followers to starve themselves and their children to death, which several outlets say was so they could \"meet Jesus\".",
+        "sources": [
+          "c1e06a3f5685",
+          "5913ff37e0dd",
+          "53a5a4f4308d",
+          "a2d70148ed19",
+          "f92e25d06bd2",
+          "a976196993e7",
+          "1b8655b27ffa"
+        ]
+      },
+      "conclusion": null,
+      "validation": {
+        "kept": 27,
+        "dropped_by_reason": {
+          "untrusted_text": 1
+        }
+      }
+    },
+    {
+      "id": "a62a526882da",
+      "title": "Israel’s Herzog yet to decide on who should form government as Eisenkot secures…",
+      "rank": 6,
+      "outlet_count": 6,
+      "coverage": {
+        "lean": {
+          "left": 2,
+          "centre": 1,
+          "right": 0
+        },
+        "bloc": {
+          "west": 3,
+          "east": 3
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "2836d23902f4",
+          "outlet_id": "guardian",
+          "headline": "Israel’s Herzog yet to decide on who should form government as Eisenkot secures significant backing",
+          "snippet": "President says he will make a decision on Sunday about who should try to build a government as Netanyahu rival is endorsed by 67 lawmakers Gadi Eisenkot, the main rival to Benjamin Netanyahu…",
+          "url": "https://www.theguardian.com/world/2026/nov/05/herzog-netanyahu-eisenkot-israel-election-decision",
+          "published_at": "2026-11-05T18:13:01Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.guim.co.uk/img/media/a185514bb9391c025cb28c78344aff4c704d891e/661_145_2662_2130/master/2662.jpg?width=460&quality=85&auto=format&fit=max&s=968a053f6d0d5bbc338e3c59863e2856"
+        },
+        {
+          "id": "09f18c5900c3",
+          "outlet_id": "nyt",
+          "headline": "Israel’s Election Ended With No Clear Winner. These Parties Are Trying to Form a Coalition.",
+          "snippet": "President Isaac Herzog wrapped up two days of talks with party leaders by saying he will ask one of them on Sunday to try to assemble a governing coalition.",
+          "url": "https://www.nytimes.com/2026/11/05/world/middleeast/israel-election-herzog-prime-minister-meetings.html",
+          "published_at": "2026-11-05T23:18:21Z",
+          "published_at_estimated": false,
+          "image_url": "https://static01.nyt.com/images/2026/11/05/multimedia/05int-israel-party-vote-photo-hjzq/05int-israel-party-vote-photo-hjzq-mediumSquareAt3X.jpg"
+        },
+        {
+          "id": "f507178a0081",
+          "outlet_id": "thehindu",
+          "headline": "Eisenkot tipped to seek Israel government as religious party drops Netanyahu",
+          "snippet": "The Opposition leader also received a recommendation from a key lawmaker from the Israeli-Arab minority, whose seats in Parliament soared due to outrage over Netanyahu's policies",
+          "url": "https://www.thehindu.com/news/international/eisenkot-tipped-to-seek-israel-government-as-religious-party-drops-netanyahu/article71669957.ece",
+          "published_at": "2026-11-06T08:03:30Z",
+          "published_at_estimated": false,
+          "image_url": "https://th-i.thgim.com/public/incoming/eaypki/article71670084.ece/alternates/LANDSCAPE_1200/Israel_Elections__3629.jpg"
+        },
+        {
+          "id": "d33a6e15ec87",
+          "outlet_id": "thehindu",
+          "headline": "Eisenkot tipped to seek Israel government with backing of Arab lists",
+          "snippet": "Isaac Herzog held a second day of consultations with political parties on November 5 after the October 27 election; he said he will announce on November 8 whom he will task with trying to form a new…",
+          "url": "https://www.thehindu.com/news/international/eisenkot-tipped-to-seek-israel-government-with-backing-of-arab-lists/article71671757.ece",
+          "published_at": "2026-11-06T08:06:15Z",
+          "published_at_estimated": false,
+          "image_url": "https://th-i.thgim.com/public/news/national/debt5q/article71671761.ece/alternates/LANDSCAPE_1200/AFP__20261028__D4MC79E__v1__HighRes__IsraelVote.jpg"
+        },
+        {
+          "id": "d9833e8f22d7",
+          "outlet_id": "timesofisrael",
+          "headline": "Herzog’s TV show was a desperate push for a unity government most MKs bitterly oppose",
+          "snippet": "The president turned an archaic electoral procedure into a political talk show, pressuring parties to partner with Netanyahu. But he hit a brick wall in the form of the pro-Eisenkot majority",
+          "url": "https://www.timesofisrael.com/herzogs-tv-show-was-a-desperate-push-for-a-unity-government-most-mks-bitterly-oppose/",
+          "published_at": "2026-11-06T08:37:44Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "a4141e6c3999",
+          "outlet_id": "france24",
+          "headline": "Netanyahu rival Eisenkot secures broad backing in bid to form government",
+          "snippet": "Israeli President Isaac Herzog said he will announce on Sunday, November 8, whom he will task with trying to form a new government, after the opposition's Gadi Eisenkot secured a commanding number…",
+          "url": "https://www.france24.com/en/video/20261106-netanyahu-rival-eisenkot-secures-broad-backing-in-bid-to-form-government",
+          "published_at": "2026-11-06T10:02:32Z",
+          "published_at_estimated": false,
+          "image_url": "https://s.france24.com/media/display/ca4b03da-d9c6-11f1-9cf2-695cb59fade5/w:1024/p:16x9/capture-5edc64d1.jpg"
+        },
+        {
+          "id": "275f404d1684",
+          "outlet_id": "france24",
+          "headline": "Israel president to announce Sunday who will form new government",
+          "snippet": "Israeli President Isaac Herzog said he will announce on Sunday, November 8, whom he will task with trying to form a new government, following post-election talks with all party leaders. 46…",
+          "url": "https://www.france24.com/en/video/20261106-israel-president-to-announce-sunday-who-will-form-new-government",
+          "published_at": "2026-11-06T10:39:11Z",
+          "published_at_estimated": false,
+          "image_url": "https://s.france24.com/media/display/ead5c768-d9c9-11f1-b93b-bf1914cabd52/w:1024/p:16x9/capture-19a34eeb.jpg"
+        },
+        {
+          "id": "7c1104a88889",
+          "outlet_id": "thenational",
+          "headline": "How Israel's President will try to break the country's elections deadlock",
+          "snippet": "When Shabbat ends on Saturday evening, Israel will brace itself for the next step in the fraught path to forming its next government after last month’s elections were inconclusive. The next step…",
+          "url": "https://www.thenationalnews.com/news/mena/2026/11/06/how-israels-president-will-try-to-break-the-countrys-elections-deadlock/",
+          "published_at": "2026-11-06T13:15:42Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.thenationalnews.com/resizer/v2/E6577XBGIOM4NXCOJPKCRZHKFU.jpg?auth=0034901d714dfbe32caacba36f99e35667e2fd1e17aa705d2e9a388bf866856c&smart=true&width=7762&height=5177"
+        },
+        {
+          "id": "4bfd23bf8d5d",
+          "outlet_id": "france24",
+          "headline": "Is Israel opposition figure Gadi Eisenkot going to replace Benjamin Netanyahu?",
+          "snippet": "In Israel, Gadi Eisenkot emerged on Thursday, November 5, as the frontrunner to be tasked with forming a government. This comes after one of the two main parties representing ultra-Orthodox Jewish…",
+          "url": "https://www.france24.com/en/video/20261106-is-israel-opposition-figure-gadi-eisenkot-going-to-replace-benjamin-netanyahu",
+          "published_at": "2026-11-06T13:25:57Z",
+          "published_at_estimated": false,
+          "image_url": "https://s.france24.com/media/display/ebb71fde-d9cd-11f1-a086-a575454bc579/w:1024/p:16x9/capture-04af7880.jpg"
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "Herzog said he will announce on Sunday, 8 November, whom he will ask to try to form a government.",
+          "sources": [
+            "2836d23902f4",
+            "09f18c5900c3",
+            "d33a6e15ec87",
+            "a4141e6c3999",
+            "275f404d1684"
+          ]
+        },
+        {
+          "text": "Gadi Eisenkot, Netanyahu's rival, secured broad backing and is the frontrunner to be tasked with forming a government.",
+          "sources": [
+            "2836d23902f4",
+            "a4141e6c3999",
+            "4bfd23bf8d5d",
+            "f507178a0081",
+            "d33a6e15ec87",
+            "d9833e8f22d7"
+          ]
+        },
+        {
+          "text": "Herzog held consultations with party leaders over two days.",
+          "sources": [
+            "09f18c5900c3",
+            "d33a6e15ec87",
+            "275f404d1684"
+          ]
+        },
+        {
+          "text": "The election produced no clear winner.",
+          "sources": [
+            "09f18c5900c3",
+            "7c1104a88889"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "2836d23902f4",
+              "quote": "Eisenkot secures significant backing",
+              "field": "headline"
+            },
+            {
+              "article_id": "2836d23902f4",
+              "quote": "Netanyahu rival is endorsed by 67 lawmakers",
+              "field": "snippet"
+            },
+            {
+              "article_id": "09f18c5900c3",
+              "quote": "Israel’s Election Ended With No Clear Winner",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Gives a count of 67 lawmakers endorsing Eisenkot.",
+              "sources": [
+                "2836d23902f4"
+              ]
+            },
+            {
+              "text": "Leads with the lack of a clear election winner and parties trying to form a coalition.",
+              "sources": [
+                "09f18c5900c3"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "a4141e6c3999",
+              "quote": "Eisenkot secures broad backing in bid to form government",
+              "field": "headline"
+            },
+            {
+              "article_id": "a4141e6c3999",
+              "quote": "secured a commanding number",
+              "field": "snippet"
+            },
+            {
+              "article_id": "4bfd23bf8d5d",
+              "quote": "Is Israel opposition figure Gadi Eisenkot going to replace Benjamin Netanyahu?",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Describes Eisenkot as the frontrunner and raises whether he will replace Netanyahu.",
+              "sources": [
+                "4bfd23bf8d5d",
+                "a4141e6c3999"
+              ]
+            },
+            {
+              "text": "Leads with the date of Herzog's announcement after talks with all party leaders.",
+              "sources": [
+                "275f404d1684"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [],
+      "contested_claims": [],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "2836d23902f4",
+              "quote": "Herzog yet to decide on who should form government",
+              "field": "headline"
+            },
+            {
+              "article_id": "a4141e6c3999",
+              "quote": "Netanyahu rival Eisenkot secures broad backing",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with Herzog's pending Sunday decision and the scale of Eisenkot's backing.",
+              "sources": [
+                "2836d23902f4",
+                "a4141e6c3999",
+                "275f404d1684",
+                "09f18c5900c3"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "f507178a0081",
+              "quote": "religious party drops Netanyahu",
+              "field": "headline"
+            },
+            {
+              "article_id": "d33a6e15ec87",
+              "quote": "with backing of Arab lists",
+              "field": "headline"
+            },
+            {
+              "article_id": "d9833e8f22d7",
+              "quote": "pressuring parties to partner with Netanyahu",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Highlights recommendations for Eisenkot from Arab lists and a religious party dropping Netanyahu.",
+              "sources": [
+                "f507178a0081",
+                "d33a6e15ec87"
+              ]
+            },
+            {
+              "text": "Attributes the rise in Arab-minority seats to outrage over Netanyahu's policies.",
+              "sources": [
+                "f507178a0081"
+              ]
+            },
+            {
+              "text": "Describes Herzog's consultations as a push for a unity government with Netanyahu that met a pro-Eisenkot majority.",
+              "sources": [
+                "d9833e8f22d7"
+              ]
+            },
+            {
+              "text": "Explains the next procedural steps to break the election deadlock.",
+              "sources": [
+                "7c1104a88889"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "After an inconclusive 27 October election, President Isaac Herzog held two days of talks with party leaders. He said he will announce on Sunday, 8 November, whom he will task with forming a government. Opposition leader Gadi Eisenkot, Netanyahu's main rival, secured broad backing, which the Guardian puts at 67 lawmakers.",
+        "sources": [
+          "2836d23902f4",
+          "09f18c5900c3",
+          "d33a6e15ec87",
+          "a4141e6c3999",
+          "275f404d1684",
+          "7c1104a88889"
+        ]
+      },
+      "conclusion": {
+        "text": "All coverage reports Herzog's Sunday announcement and Eisenkot's broad backing. West-bloc outlets lead with the timing and size of his support, while East-bloc outlets add Arab and religious party recommendations, and the Times of Israel describes Herzog pressing parties towards Netanyahu. No direct contradictions appear.",
+        "sources": [
+          "2836d23902f4",
+          "a4141e6c3999",
+          "275f404d1684",
+          "f507178a0081",
+          "d33a6e15ec87",
+          "d9833e8f22d7"
+        ]
+      },
+      "validation": {
+        "kept": 26,
+        "dropped_by_reason": {
+          "title_ungrounded": 1
+        }
+      }
+    },
+    {
+      "id": "f62c0be527ed",
+      "title": "Melania Trump hosts Russian and Ukrainian officials over Oleshky ceasefire",
+      "rank": 7,
+      "outlet_count": 5,
+      "coverage": {
+        "lean": {
+          "left": 2,
+          "centre": 1,
+          "right": 1
+        },
+        "bloc": {
+          "west": 4,
+          "east": 1
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "4501619b904d",
+          "outlet_id": "nbc",
+          "headline": "Melania Trump on Oleshky ceasefire: Russia and Ukraine have chosen 'humanity over war'",
+          "snippet": "First lady Melania Trump hosted delegations from Russia and Ukraine to highlight the humanitarian ceasefire she helped broker in Oleshky. She praised the countries for choosing \"humanity over war\"…",
+          "url": "https://www.nbcnews.com/video/melania-trump-thanks-russia-and-ukraine-for-oleshky-ceasefire-272928837687",
+          "published_at": "2026-11-05T16:41:24Z",
+          "published_at_estimated": false,
+          "image_url": "https://media-cldnry.s-nbcnews.com/image/upload/t_fit_1500w/mpx/2704722219/2026_11/1793896879460_f_mo_dc_melania_oleshky_thanks_261105_S3_1920x1080-ln7kol.jpg"
+        },
+        {
+          "id": "5e7422edc084",
+          "outlet_id": "fox",
+          "headline": "Melania Trump hails Oleshky ceasefire as potential ‘spark’ for progress amid Ukraine-Russia war",
+          "snippet": "Melania Trump called the Oleshky ceasefire \"a spark in a world of darkness\" as Russian and Ukrainian envoys praised the deal at a rare White House event.",
+          "url": "https://www.foxnews.com/world/melania-trump-oleshky-ceasefire-spark-more-enduring-peace-ukraine-russia",
+          "published_at": "2026-11-05T17:26:07Z",
+          "published_at_estimated": false,
+          "image_url": "https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2026/11/931/523/melania-trump-ceasefire-oleshky-white-house.jpg?ve=1&tl=1"
+        },
+        {
+          "id": "0feb3dabc7c3",
+          "outlet_id": "thehindu",
+          "headline": "Melania Trump calls for ‘enduring’ Ukraine truce as rivals meet at White House",
+          "snippet": "The unprecedented meeting hoped to build on a localised six-day truce in the starvation-hit Ukrainian city of Oleshky that U.S. President Donald Trump’s wife had announced last month",
+          "url": "https://www.thehindu.com/news/international/melania-trump-calls-for-enduring-ukraine-truce-as-rivals-meet-at-white-house/article71671601.ece",
+          "published_at": "2026-11-05T19:51:25Z",
+          "published_at_estimated": false,
+          "image_url": "https://th-i.thgim.com/public/incoming/h6jyl3/article71671600.ece/alternates/LANDSCAPE_1200/2026-11-05T165228Z_1893218530_RC2SHOABHCWJ_RTRMADP_3_UKRAINE-CRISIS-MELANIATRUMP.JPG"
+        },
+        {
+          "id": "0f5b7b21e2b2",
+          "outlet_id": "nyt",
+          "headline": "How Melania Trump Became a Dark-Horse Diplomat on Ukraine",
+          "snippet": "Both Moscow and Kyiv say Mrs. Trump’s team was the driving force behind an evacuation of a besieged city. It was also in their interest to deliver her a humanitarian win.",
+          "url": "https://www.nytimes.com/2026/11/05/world/europe/melania-trump-oleshky-ukraine-ceasefire.html",
+          "published_at": "2026-11-05T21:07:31Z",
+          "published_at_estimated": false,
+          "image_url": "https://static01.nyt.com/images/2026/11/05/multimedia/05int-ukraine-oleshky-hgtc/05int-ukraine-oleshky-hgtc-mediumSquareAt3X.jpg"
+        },
+        {
+          "id": "515d5de19da3",
+          "outlet_id": "bbc",
+          "headline": "Melania Trump calls for lasting Ukraine truce as she hosts Russian and Ukrainian officials",
+          "snippet": "The US first lady was credited by all for playing a key though unspecified role in the ceasefire.",
+          "url": "https://www.bbc.co.uk/news/articles/c9p8g085mz07o",
+          "published_at": "2026-11-06T07:56:19Z",
+          "published_at_estimated": false,
+          "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/a4b7/live/4ad22690-d955-11f1-b7f4-8bd3c0617693.jpg"
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "Melania Trump hosted Russian and Ukrainian officials or delegations.",
+          "sources": [
+            "4501619b904d",
+            "5e7422edc084",
+            "0feb3dabc7c3",
+            "515d5de19da3"
+          ]
+        },
+        {
+          "text": "The meeting took place at the White House.",
+          "sources": [
+            "5e7422edc084",
+            "0feb3dabc7c3"
+          ]
+        },
+        {
+          "text": "Melania Trump is credited with a role in the Oleshky ceasefire or evacuation.",
+          "sources": [
+            "4501619b904d",
+            "0feb3dabc7c3",
+            "0f5b7b21e2b2",
+            "515d5de19da3"
+          ]
+        },
+        {
+          "text": "Melania Trump called for an enduring or lasting truce in Ukraine.",
+          "sources": [
+            "0feb3dabc7c3",
+            "515d5de19da3"
+          ]
+        },
+        {
+          "text": "Melania Trump praised the ceasefire.",
+          "sources": [
+            "4501619b904d",
+            "5e7422edc084"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "4501619b904d",
+              "quote": "Russia and Ukraine have chosen 'humanity over war'",
+              "field": "headline"
+            },
+            {
+              "article_id": "0f5b7b21e2b2",
+              "quote": "How Melania Trump Became a Dark-Horse Diplomat on Ukraine",
+              "field": "headline"
+            },
+            {
+              "article_id": "0f5b7b21e2b2",
+              "quote": "It was also in their interest to deliver her a humanitarian win.",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with Melania Trump's praise of both countries for choosing humanity over war.",
+              "sources": [
+                "4501619b904d"
+              ]
+            },
+            {
+              "text": "Describes Melania Trump as a diplomat whose team drove an evacuation of a besieged city, and notes Moscow and Kyiv had an interest in giving her a win.",
+              "sources": [
+                "0f5b7b21e2b2"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "515d5de19da3",
+              "quote": "calls for lasting Ukraine truce",
+              "field": "headline"
+            },
+            {
+              "article_id": "515d5de19da3",
+              "quote": "a key though unspecified role in the ceasefire",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the call for a lasting truce and notes her role in the ceasefire was credited by all but unspecified.",
+              "sources": [
+                "515d5de19da3"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "right",
+          "headline_quotes": [
+            {
+              "article_id": "5e7422edc084",
+              "quote": "a spark in a world of darkness",
+              "field": "snippet"
+            },
+            {
+              "article_id": "5e7422edc084",
+              "quote": "a rare White House event",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with Melania Trump describing the ceasefire as a potential spark for progress, and with Russian and Ukrainian envoys praising the deal.",
+              "sources": [
+                "5e7422edc084"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "left",
+          "text": "Left-leaning coverage does not mention Melania Trump's call for a lasting truce.",
+          "sources": [
+            "515d5de19da3"
+          ]
+        },
+        {
+          "lean": "right",
+          "text": "Right-leaning coverage does not mention Melania Trump's call for a lasting truce.",
+          "sources": [
+            "515d5de19da3"
+          ]
+        }
+      ],
+      "contested_claims": [],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "4501619b904d",
+              "quote": "'humanity over war'",
+              "field": "headline"
+            },
+            {
+              "article_id": "5e7422edc084",
+              "quote": "a spark in a world of darkness",
+              "field": "snippet"
+            },
+            {
+              "article_id": "0f5b7b21e2b2",
+              "quote": "Dark-Horse Diplomat",
+              "field": "headline"
+            },
+            {
+              "article_id": "515d5de19da3",
+              "quote": "credited by all",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Foregrounds Melania Trump's words and the credit she received for the ceasefire or evacuation.",
+              "sources": [
+                "4501619b904d",
+                "5e7422edc084",
+                "0f5b7b21e2b2",
+                "515d5de19da3"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "0feb3dabc7c3",
+              "quote": "The unprecedented meeting",
+              "field": "snippet"
+            },
+            {
+              "article_id": "0feb3dabc7c3",
+              "quote": "a localised six-day truce in the starvation-hit Ukrainian city of Oleshky",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Describes the truce as localised and six days long, in a starvation-hit city, announced by Melania Trump last month.",
+              "sources": [
+                "0feb3dabc7c3"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "US first lady Melania Trump hosted Russian and Ukrainian delegations at the White House to highlight a humanitarian ceasefire in Oleshky that she is credited with helping to bring about. She praised the deal and called for a lasting truce.",
+        "sources": [
+          "4501619b904d",
+          "5e7422edc084",
+          "0feb3dabc7c3",
+          "0f5b7b21e2b2",
+          "515d5de19da3"
+        ]
+      },
+      "conclusion": {
+        "text": "All coverage agrees Melania Trump hosted Russian and Ukrainian officials over an Oleshky ceasefire she is credited with helping bring about. Left-leaning outlets stress her diplomacy and words, the right her 'spark' remark, the centre her call for a lasting truce, and the East-bloc outlet the truce's limited, six-day scope. No claims are disputed.",
+        "sources": [
+          "4501619b904d",
+          "5e7422edc084",
+          "0feb3dabc7c3",
+          "0f5b7b21e2b2",
+          "515d5de19da3"
+        ]
+      },
+      "validation": {
+        "kept": 28,
+        "dropped_by_reason": {}
+      }
+    },
+    {
+      "id": "ea82a4ad8cff",
+      "title": "Nithya Raman defeats Karen Bass to become Los Angeles mayor",
+      "rank": 8,
+      "outlet_count": 5,
+      "coverage": {
+        "lean": {
+          "left": 1,
+          "centre": 2,
+          "right": 0
+        },
+        "bloc": {
+          "west": 3,
+          "east": 2
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "140a1b8102cd",
+          "outlet_id": "nbc",
+          "headline": "Democratic socialist Nithya Raman defeats Karen Bass in the L.A. mayor’s race",
+          "snippet": "NBC News projects the progressive City Council member has unseated Bass, a fixture of California Democratic politics who served one term as mayor.",
+          "url": "https://www.nbcnews.com/politics/2026-election/nithya-raman-los-angeles-mayor-win-democratic-socialist-karen-bass-rcna603379",
+          "published_at": "2026-11-05T17:44:42Z",
+          "published_at_estimated": false,
+          "image_url": "https://media-cldnry.s-nbcnews.com/image/upload/t_fit_1500w/rockcms/2026-10/261022-Nithya-Raman-california-los-angeles-mayor-midterm-vl-1010a-f9fd2a.jpg"
+        },
+        {
+          "id": "2994534b782d",
+          "outlet_id": "axios",
+          "headline": "Raman ousts Bass in LA mayor race for historic socialist win",
+          "snippet": "Democratic socialist Nithya Raman toppled embattled Los Angeles Mayor Karen Bass in a stunning upset, putting South Asian immigrants on course to lead America's two largest cities. Why it matters…",
+          "url": "https://www.axios.com/2026/11/05/nithya-raman-la-mayor-upset-democratic-socialist",
+          "published_at": "2026-11-05T21:36:01Z",
+          "published_at_estimated": false,
+          "image_url": "https://images.axios.com/Y53hX0Yt-x1yhIUudUXUb4q4uBw=/0x0:3888x2187/1366x768/2026/11/05/1793912529110.jpeg"
+        },
+        {
+          "id": "7e6c95338404",
+          "outlet_id": "bbc",
+          "headline": "Democratic socialist defeats incumbent Karen Bass in Los Angeles mayor's race",
+          "snippet": "The results mean America's two most populous cities - New York and Los Angeles - will be led by democratic socialists.",
+          "url": "https://www.bbc.co.uk/news/articles/c6e3xxwk3k11o",
+          "published_at": "2026-11-06T01:28:03Z",
+          "published_at_estimated": false,
+          "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/9b37/live/0e287b40-d96e-11f1-9fd0-cdf612d1539f.jpg"
+        },
+        {
+          "id": "8db4b159e3e1",
+          "outlet_id": "thehindu",
+          "headline": "India-born Nithya Raman beats Democratic incumbent to become LA mayor",
+          "snippet": "Leftist Nithya Raman, who was the first DSA-affiliated Los Angeles City Council member, will now helm the entertainment capital as it prepares to host the 2028 Olympics",
+          "url": "https://www.thehindu.com/news/international/india-born-nithya-raman-beats-democratic-incumbent-to-become-la-mayor/article71671618.ece",
+          "published_at": "2026-11-06T07:50:39Z",
+          "published_at_estimated": false,
+          "image_url": "https://th-i.thgim.com/public/incoming/lybrgf/article71671620.ece/alternates/LANDSCAPE_1200/Election_2_26_Los_Angeles_Mayor_28767.jpg"
+        },
+        {
+          "id": "bc0d43f406b2",
+          "outlet_id": "aljazeera",
+          "headline": "‘City of immigrants’: Who is Nithya Raman, the Los Angeles mayor-elect?",
+          "snippet": "The two biggest cities in the US will now be led by Indian-origin immigrants - both democratic socialists.",
+          "url": "https://www.aljazeera.com/news/2026/11/6/city-of-immigrants-who-is-nithya-raman-the-los-angeles-mayor-elect",
+          "published_at": "2026-11-06T12:41:24Z",
+          "published_at_estimated": false,
+          "image_url": null
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "Nithya Raman defeated incumbent Karen Bass in the Los Angeles mayor's race.",
+          "sources": [
+            "140a1b8102cd",
+            "2994534b782d",
+            "7e6c95338404",
+            "8db4b159e3e1",
+            "bc0d43f406b2"
+          ]
+        },
+        {
+          "text": "Raman is described as a democratic socialist.",
+          "sources": [
+            "140a1b8102cd",
+            "2994534b782d",
+            "7e6c95338404",
+            "bc0d43f406b2"
+          ]
+        },
+        {
+          "text": "The two largest US cities will now both be led by democratic socialists or by leaders of South Asian or Indian origin.",
+          "sources": [
+            "2994534b782d",
+            "7e6c95338404",
+            "bc0d43f406b2"
+          ]
+        },
+        {
+          "text": "Raman is a Los Angeles City Council member.",
+          "sources": [
+            "140a1b8102cd",
+            "8db4b159e3e1"
+          ]
+        },
+        {
+          "text": "Raman is described as an immigrant of South Asian or Indian origin.",
+          "sources": [
+            "2994534b782d",
+            "8db4b159e3e1",
+            "bc0d43f406b2"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "140a1b8102cd",
+              "quote": "Democratic socialist Nithya Raman defeats Karen Bass",
+              "field": "headline"
+            },
+            {
+              "article_id": "140a1b8102cd",
+              "quote": "a fixture of California Democratic politics who served one term as mayor",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the outlet's own projection of the result and describes Bass as a fixture of California Democratic politics who served one term.",
+              "sources": [
+                "140a1b8102cd"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "2994534b782d",
+              "quote": "historic socialist win",
+              "field": "headline"
+            },
+            {
+              "article_id": "2994534b782d",
+              "quote": "in a stunning upset",
+              "field": "snippet"
+            },
+            {
+              "article_id": "7e6c95338404",
+              "quote": "will be led by democratic socialists",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Describes the result as a historic upset and Bass as embattled.",
+              "sources": [
+                "2994534b782d"
+              ]
+            },
+            {
+              "text": "Emphasises that New York and Los Angeles will both be led by democratic socialists.",
+              "sources": [
+                "2994534b782d",
+                "7e6c95338404"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "left",
+          "text": "Left coverage does not mention that America's two largest cities will both be led by democratic socialists or South Asian immigrants.",
+          "sources": [
+            "2994534b782d",
+            "7e6c95338404"
+          ]
+        },
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not mention that Raman is a City Council member.",
+          "sources": [
+            "140a1b8102cd"
+          ]
+        }
+      ],
+      "contested_claims": [],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "2994534b782d",
+              "quote": "Raman ousts Bass in LA mayor race",
+              "field": "headline"
+            },
+            {
+              "article_id": "7e6c95338404",
+              "quote": "Democratic socialist defeats incumbent Karen Bass",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with Raman's democratic socialist label and her defeat of Bass.",
+              "sources": [
+                "140a1b8102cd",
+                "2994534b782d",
+                "7e6c95338404"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "8db4b159e3e1",
+              "quote": "India-born Nithya Raman beats Democratic incumbent",
+              "field": "headline"
+            },
+            {
+              "article_id": "bc0d43f406b2",
+              "quote": "‘City of immigrants’",
+              "field": "headline"
+            },
+            {
+              "article_id": "bc0d43f406b2",
+              "quote": "led by Indian-origin immigrants",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Foregrounds Raman's Indian birth or origin and immigrant background.",
+              "sources": [
+                "8db4b159e3e1",
+                "bc0d43f406b2"
+              ]
+            },
+            {
+              "text": "Notes that Raman will lead Los Angeles as it prepares to host the 2028 Olympics.",
+              "sources": [
+                "8db4b159e3e1"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "Nithya Raman, a democratic socialist Los Angeles City Council member, defeated incumbent Mayor Karen Bass to become Los Angeles mayor-elect. Several outlets note that America's two largest cities will now be led by democratic socialists of South Asian or Indian origin.",
+        "sources": [
+          "140a1b8102cd",
+          "2994534b782d",
+          "7e6c95338404",
+          "8db4b159e3e1",
+          "bc0d43f406b2"
+        ]
+      },
+      "conclusion": null,
+      "validation": {
+        "kept": 24,
+        "dropped_by_reason": {
+          "untrusted_text": 1
+        }
+      }
+    },
+    {
+      "id": "b63ea5800937",
+      "title": "Holocaust survivor wounded in Bondi Beach attack dies nearly a year later",
+      "rank": 9,
+      "outlet_count": 5,
+      "coverage": {
+        "lean": {
+          "left": 2,
+          "centre": 0,
+          "right": 1
+        },
+        "bloc": {
+          "west": 3,
+          "east": 2
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "a216be008fd5",
+          "outlet_id": "mirror",
+          "headline": "Great-grandmother, 90, tragically dies 11 months after being shot during Sydney terror attack",
+          "snippet": "Eva Geller, 90, survived the Holocaust and moved to Australia after the Second World War - but she tragically was shot in the terror attack at Bondi beach last December",
+          "url": "https://www.mirror.co.uk/news/world-news/bondi-beach-terror-attack-grandmother-37849095",
+          "published_at": "2026-11-06T04:22:00Z",
+          "published_at_estimated": false,
+          "image_url": "https://i2-prod.mirror.co.uk/incoming/article37849085.ece/ALTERNATES/s615/0_SDC_MDG_-_29662JPG.jpg"
+        },
+        {
+          "id": "392dfff1b560",
+          "outlet_id": "guardian",
+          "headline": "Bondi beach shooting: Eva Geller, 90, shot during massacre dies in hospital year after antisemitic attack",
+          "snippet": "She was shot on 14 December 2025 during Hanukah festival and had been in and out of hospital since Get our breaking news email, free app or daily news podcast A woman who was shot during the Bondi…",
+          "url": "https://www.theguardian.com/australia-news/2026/nov/06/bondi-beach-shooting-woman-dies-year-after-terror-attack-ntwnfb",
+          "published_at": "2026-11-06T06:26:03Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.guim.co.uk/img/media/e95f544b0f82b645a0c30bbd786da9dc0f9a5069/563_227_1360_1088/master/1360.jpg?width=460&quality=85&auto=format&fit=max&s=9e507b410bc9f51cc9203b67ffcececa"
+        },
+        {
+          "id": "4e0d7564b98d",
+          "outlet_id": "timesofisrael",
+          "headline": "Holocaust survivor, 90, injured in Bondi massacre dies nearly a year after attack",
+          "snippet": "Eva Geller, who fled Romania as a child, was mostly bedridden since deadly terror shooting at Hanukkah event but was able to walk again and had made it to her birthday celebration, rabbi says",
+          "url": "https://www.timesofisrael.com/holocaust-survivor-90-injured-in-bondi-massacre-dies-nearly-a-year-after-attack/",
+          "published_at": "2026-11-06T07:39:31Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "1be05167e6ac",
+          "outlet_id": "thesun",
+          "headline": "Holocaust survivor, 90, shot during Bondi Beach terror attack dies from injuries almost a year on from massacre",
+          "snippet": "A HOLOCAUST survivor who was shot during the \"ISIS-inspired\" Bondi Beach terrorist attack has died in hospital almost a year later. Eva Geller, 90, was among dozens of people ⁠wounded when a father…",
+          "url": "https://www.thesun.co.uk/news/40934197/holocaust-survivor-bondi-beach-terror-attack/",
+          "published_at": "2026-11-06T09:30:43Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.thesun.co.uk/wp-content%2Fuploads%2F2026%2F11%2F2025-sydney-australia-life-slowly-1046315442.jpg?quality%3D90%26"
+        },
+        {
+          "id": "1ba5fe3bbf79",
+          "outlet_id": "toi",
+          "headline": "Holocaust survivor, 90, wounded in Sydney’s Bondi Beach shooting dies nearly a year later",
+          "snippet": "",
+          "url": "https://timesofindia.indiatimes.com/world/rest-of-world/holocaust-survivor-90-wounded-in-sydneys-bondi-beach-shooting-dies-nearly-a-year-later/articleshow/135601979.cms",
+          "published_at": "2026-11-06T09:59:52Z",
+          "published_at_estimated": false,
+          "image_url": "https://static.toiimg.com/photo/msid-135602864,imgsize-51948.cms"
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "The woman who died was 90 years old.",
+          "sources": [
+            "a216be008fd5",
+            "392dfff1b560",
+            "4e0d7564b98d",
+            "1be05167e6ac",
+            "1ba5fe3bbf79"
+          ]
+        },
+        {
+          "text": "She was a Holocaust survivor.",
+          "sources": [
+            "a216be008fd5",
+            "4e0d7564b98d",
+            "1be05167e6ac",
+            "1ba5fe3bbf79"
+          ]
+        },
+        {
+          "text": "She is named as Eva Geller.",
+          "sources": [
+            "a216be008fd5",
+            "392dfff1b560",
+            "4e0d7564b98d",
+            "1be05167e6ac"
+          ]
+        },
+        {
+          "text": "She died nearly a year, or 11 months, after being shot in the Bondi Beach attack.",
+          "sources": [
+            "a216be008fd5",
+            "392dfff1b560",
+            "4e0d7564b98d",
+            "1be05167e6ac",
+            "1ba5fe3bbf79"
+          ]
+        },
+        {
+          "text": "The attack is described as a terror attack.",
+          "sources": [
+            "a216be008fd5",
+            "4e0d7564b98d",
+            "1be05167e6ac"
+          ]
+        },
+        {
+          "text": "The attack is described as a massacre.",
+          "sources": [
+            "392dfff1b560",
+            "4e0d7564b98d",
+            "1be05167e6ac"
+          ]
+        },
+        {
+          "text": "She died in hospital.",
+          "sources": [
+            "392dfff1b560",
+            "1be05167e6ac"
+          ]
+        },
+        {
+          "text": "The shooting took place at a Hanukkah event.",
+          "sources": [
+            "392dfff1b560",
+            "4e0d7564b98d"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "a216be008fd5",
+              "quote": "Great-grandmother, 90, tragically dies",
+              "field": "headline"
+            },
+            {
+              "article_id": "392dfff1b560",
+              "quote": "year after antisemitic attack",
+              "field": "headline"
+            },
+            {
+              "article_id": "392dfff1b560",
+              "quote": "had been in and out of hospital since",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Personal details, describing her as a great-grandmother who moved to Australia after the Second World War.",
+              "sources": [
+                "a216be008fd5"
+              ]
+            },
+            {
+              "text": "Describes the attack as antisemitic and dates the shooting to 14 December 2025 during the Hanukah festival.",
+              "sources": [
+                "392dfff1b560"
+              ]
+            },
+            {
+              "text": "Notes she had been in and out of hospital since the shooting.",
+              "sources": [
+                "392dfff1b560"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "right",
+          "headline_quotes": [
+            {
+              "article_id": "1be05167e6ac",
+              "quote": "dies from injuries almost a year on from massacre",
+              "field": "headline"
+            },
+            {
+              "article_id": "1be05167e6ac",
+              "quote": "ISIS-inspired",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Describes the attack as \"ISIS-inspired\" and states she died from her injuries.",
+              "sources": [
+                "1be05167e6ac"
+              ]
+            },
+            {
+              "text": "States she was among dozens of people wounded.",
+              "sources": [
+                "1be05167e6ac"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "left",
+          "text": "Left-leaning coverage does not mention the attack being described as ISIS-inspired.",
+          "sources": [
+            "1be05167e6ac"
+          ]
+        },
+        {
+          "lean": "right",
+          "text": "Right-leaning coverage does not mention that the shooting took place during the Hanukkah festival.",
+          "sources": [
+            "392dfff1b560"
+          ]
+        }
+      ],
+      "contested_claims": [],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "a216be008fd5",
+              "quote": "shot during Sydney terror attack",
+              "field": "headline"
+            },
+            {
+              "article_id": "392dfff1b560",
+              "quote": "antisemitic attack",
+              "field": "headline"
+            },
+            {
+              "article_id": "1be05167e6ac",
+              "quote": "ISIS-inspired",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Characterises the attack as terrorism, antisemitic or ISIS-inspired.",
+              "sources": [
+                "a216be008fd5",
+                "392dfff1b560",
+                "1be05167e6ac"
+              ]
+            },
+            {
+              "text": "Reports that she died in hospital.",
+              "sources": [
+                "392dfff1b560",
+                "1be05167e6ac"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "4e0d7564b98d",
+              "quote": "who fled Romania as a child",
+              "field": "snippet"
+            },
+            {
+              "article_id": "4e0d7564b98d",
+              "quote": "was able to walk again and had made it to her birthday celebration, rabbi says",
+              "field": "snippet"
+            },
+            {
+              "article_id": "1ba5fe3bbf79",
+              "quote": "wounded in Sydney’s Bondi Beach shooting dies nearly a year later",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Her background as a child who fled Romania and her partial recovery, citing a rabbi.",
+              "sources": [
+                "4e0d7564b98d"
+              ]
+            },
+            {
+              "text": "Notes she was mostly bedridden after the shooting but walked again and reached her birthday celebration.",
+              "sources": [
+                "4e0d7564b98d"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "Eva Geller, a 90-year-old Holocaust survivor shot during the Bondi Beach attack in Sydney, has died nearly a year later. She was shot in December 2025 at a Hanukkah event and died in hospital.",
+        "sources": [
+          "a216be008fd5",
+          "392dfff1b560",
+          "4e0d7564b98d",
+          "1be05167e6ac",
+          "1ba5fe3bbf79"
+        ]
+      },
+      "conclusion": {
+        "text": "All outlets report that the 90-year-old was shot at Bondi Beach and died nearly a year later. Left-leaning outlets add personal and antisemitism details, the right-leaning Sun cites an ISIS-inspired attack, and Times of Israel adds her partial recovery. No claims are contested.",
+        "sources": [
+          "a216be008fd5",
+          "392dfff1b560",
+          "4e0d7564b98d",
+          "1be05167e6ac",
+          "1ba5fe3bbf79"
+        ]
+      },
+      "validation": {
+        "kept": 32,
+        "dropped_by_reason": {}
+      }
+    },
+    {
+      "id": "7ba71da2eba4",
+      "title": "School bus crash in eastern France kills two",
+      "rank": 10,
+      "outlet_count": 5,
+      "coverage": {
+        "lean": {
+          "left": 1,
+          "centre": 3,
+          "right": 0
+        },
+        "bloc": {
+          "west": 4,
+          "east": 1
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "a1a53113203d",
+          "outlet_id": "mirror",
+          "headline": "Two dead as school bus crashes and 'plunges into a ditch' in France",
+          "snippet": "Seventy people were reportedly involved in the crash which saw the bus hit a tree in a ditch in the Lent area, south of Bourg-en-Bresse",
+          "url": "https://www.mirror.co.uk/news/world-news/school-bus-crash-lent-france-37849932",
+          "published_at": "2026-11-06T10:19:40Z",
+          "published_at_estimated": false,
+          "image_url": "https://i2-prod.mirror.co.uk/incoming/article37849928.ece/ALTERNATES/s615/0_FRANCE-TRANSPORT-ROAD-ACCIDENT.jpg"
+        },
+        {
+          "id": "0226f1504a44",
+          "outlet_id": "france24",
+          "headline": "At least two killed, 16 injured in school bus accident in eastern France",
+          "snippet": "A bus carrying school children crashed south of Bourg-en-Bresse in eastern France on Friday, killing at least two people and injuring 16 others. The vehicle was carrying 43 passengers in total.",
+          "url": "https://www.france24.com/en/france/20261106-at-least-two-killed-16-injured-in-school-bus-accident-in-eastern-france",
+          "published_at": "2026-11-06T10:37:42Z",
+          "published_at_estimated": false,
+          "image_url": "https://s.france24.com/media/display/9fa0ca48-d9cb-11f1-bfa1-695cb59fade5/w:1024/p:16x9/000-D6M83MF.jpg"
+        },
+        {
+          "id": "9809a1c45f71",
+          "outlet_id": "sky",
+          "headline": "Two dead after bus carrying schoolchildren crashes in France, officials say",
+          "snippet": "A seven-year-old girl and an 18-year-old boy have been killed after a bus crashed in eastern France, French authorities said.",
+          "url": "https://news.sky.com/story/two-dead-after-bus-carrying-schoolchildren-crashes-in-france-officials-say-13608677",
+          "published_at": "2026-11-06T12:10:00Z",
+          "published_at_estimated": false,
+          "image_url": "https://e3.365dm.com/26/11/1920x1080/skynews-france-school-bus-lent_7398902.jpg?20261106102057"
+        },
+        {
+          "id": "305876a58b36",
+          "outlet_id": "bbc",
+          "headline": "Two dead after bus crashes in France, officials say",
+          "snippet": "One child and one young adult were killed in the crash, local authorities say, with more injured.",
+          "url": "https://www.bbc.co.uk/news/articles/cmly00l4p3lwo",
+          "published_at": "2026-11-06T12:27:33Z",
+          "published_at_estimated": false,
+          "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/5740/live/92c81290-d9cb-11f1-bb8e-efaa31738708.jpg"
+        },
+        {
+          "id": "9fd121d37192",
+          "outlet_id": "thehindu",
+          "headline": "Bus carrying kids to school crashes in France, leaving 2 dead and 16 injured",
+          "snippet": "News broadcaster BFM TV reported that the passengers included children travelling to middle and high schools in the area, with a photo from the scene showing the bus had veered off the road and…",
+          "url": "https://www.thehindu.com/news/international/bus-carrying-kids-to-school-crashes-in-france-leaving-2-dead-and-16-injured/article71674197.ece",
+          "published_at": "2026-11-06T13:23:05Z",
+          "published_at_estimated": false,
+          "image_url": "https://th-i.thgim.com/public/incoming/d2we8k/article71674212.ece/alternates/LANDSCAPE_1200/2026-11-06T103450Z_32173864_RC2AIOACWE68_RTRMADP_3_FRANCE-ACCIDENT.JPG"
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "Two people were killed when a bus crashed in France.",
+          "sources": [
+            "a1a53113203d",
+            "0226f1504a44",
+            "9809a1c45f71",
+            "305876a58b36",
+            "9fd121d37192"
+          ]
+        },
+        {
+          "text": "The bus was carrying schoolchildren.",
+          "sources": [
+            "a1a53113203d",
+            "0226f1504a44",
+            "9809a1c45f71",
+            "9fd121d37192"
+          ]
+        },
+        {
+          "text": "The crash happened in eastern France.",
+          "sources": [
+            "0226f1504a44",
+            "9809a1c45f71",
+            "9fd121d37192"
+          ]
+        },
+        {
+          "text": "The crash took place south of Bourg-en-Bresse.",
+          "sources": [
+            "a1a53113203d",
+            "0226f1504a44"
+          ]
+        },
+        {
+          "text": "Sixteen people were injured.",
+          "sources": [
+            "0226f1504a44",
+            "9fd121d37192"
+          ]
+        },
+        {
+          "text": "The dead were a child and a young adult, described as a seven-year-old girl and an 18-year-old boy.",
+          "sources": [
+            "9809a1c45f71",
+            "305876a58b36"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "a1a53113203d",
+              "quote": "'plunges into a ditch'",
+              "field": "headline"
+            },
+            {
+              "article_id": "a1a53113203d",
+              "quote": "Seventy people were reportedly involved in the crash",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the bus plunging into a ditch and hitting a tree in the Lent area.",
+              "sources": [
+                "a1a53113203d"
+              ]
+            },
+            {
+              "text": "Reports that seventy people were involved in the crash.",
+              "sources": [
+                "a1a53113203d"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "0226f1504a44",
+              "quote": "At least two killed, 16 injured",
+              "field": "headline"
+            },
+            {
+              "article_id": "9809a1c45f71",
+              "quote": "A seven-year-old girl and an 18-year-old boy have been killed",
+              "field": "snippet"
+            },
+            {
+              "article_id": "305876a58b36",
+              "quote": "officials say",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Attributes the casualty details to French or local authorities.",
+              "sources": [
+                "9809a1c45f71",
+                "305876a58b36"
+              ]
+            },
+            {
+              "text": "Foregrounds the ages of the victims and the injury toll.",
+              "sources": [
+                "0226f1504a44",
+                "9809a1c45f71",
+                "305876a58b36"
+              ]
+            },
+            {
+              "text": "Gives the total number of passengers as 43.",
+              "sources": [
+                "0226f1504a44"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "left",
+          "text": "Left coverage does not mention the number of people injured.",
+          "sources": [
+            "0226f1504a44"
+          ]
+        },
+        {
+          "lean": "left",
+          "text": "Left coverage does not mention the ages of the victims.",
+          "sources": [
+            "9809a1c45f71",
+            "305876a58b36"
+          ]
+        },
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not mention the bus hitting a tree in a ditch.",
+          "sources": [
+            "a1a53113203d"
+          ]
+        }
+      ],
+      "contested_claims": [
+        {
+          "claim": "The number of people on or involved in the crash: seventy people reportedly involved versus 43 passengers in total.",
+          "asserted_by": [
+            "a1a53113203d"
+          ],
+          "disputed_by": [
+            "0226f1504a44"
+          ]
+        }
+      ],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "a1a53113203d",
+              "quote": "Two dead as school bus crashes",
+              "field": "headline"
+            },
+            {
+              "article_id": "0226f1504a44",
+              "quote": "At least two killed, 16 injured in school bus accident in eastern France",
+              "field": "headline"
+            },
+            {
+              "article_id": "305876a58b36",
+              "quote": "Two dead after bus crashes in France, officials say",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Foregrounds the death toll, the victims' ages and attribution to officials.",
+              "sources": [
+                "0226f1504a44",
+                "9809a1c45f71",
+                "305876a58b36"
+              ]
+            },
+            {
+              "text": "Gives differing figures for the number of people on board or involved.",
+              "sources": [
+                "a1a53113203d",
+                "0226f1504a44"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "9fd121d37192",
+              "quote": "Bus carrying kids to school crashes in France, leaving 2 dead and 16 injured",
+              "field": "headline"
+            },
+            {
+              "article_id": "9fd121d37192",
+              "quote": "the bus had veered off the road",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Cites BFM TV reporting that passengers included children travelling to middle and high schools.",
+              "sources": [
+                "9fd121d37192"
+              ]
+            },
+            {
+              "text": "Notes a photo from the scene showing the bus had veered off the road.",
+              "sources": [
+                "9fd121d37192"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "A bus carrying schoolchildren crashed in eastern France on Friday, south of Bourg-en-Bresse, killing two people. Authorities said the dead were a seven-year-old girl and an 18-year-old boy, and at least 16 others were injured.",
+        "sources": [
+          "a1a53113203d",
+          "0226f1504a44",
+          "9809a1c45f71",
+          "305876a58b36",
+          "9fd121d37192"
+        ]
+      },
+      "conclusion": {
+        "text": "All outlets report two dead in a school bus crash in France. Centre outlets lead with officials, victims' ages and injuries, the Mirror with the bus plunging into a ditch, and The Hindu with BFM TV's account. The Mirror's seventy people involved differs from France 24's 43 passengers.",
+        "sources": [
+          "a1a53113203d",
+          "0226f1504a44",
+          "9809a1c45f71",
+          "305876a58b36",
+          "9fd121d37192"
+        ]
+      },
+      "validation": {
+        "kept": 31,
+        "dropped_by_reason": {}
+      }
+    }
+  ]
+}
