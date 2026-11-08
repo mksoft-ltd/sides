@@ -1,0 +1,4487 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-11-08T13:02:59.904756Z",
+  "date": "2026-11-08",
+  "meta": {
+    "model": "claude-opus-5-5",
+    "cost_usd": 0.611866,
+    "outlets_polled": 29,
+    "articles_collected": 557,
+    "warnings": [
+      "1 feed(s) failed during collect",
+      "2 feed item(s) dropped at collect (link_off_domain=2)"
+    ],
+    "validation": {
+      "kept": 318,
+      "dropped_by_reason": {
+        "contested_same_outlet": 2,
+        "untrusted_text": 1
+      }
+    }
+  },
+  "outlets": [
+    {
+      "id": "guardian",
+      "name": "The Guardian",
+      "lean": "left",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United Kingdom",
+      "home_url": "https://www.theguardian.com/",
+      "rating_basis": "AllSides media bias rating (Lean Left), checked Oct 2026"
+    },
+    {
+      "id": "independent",
+      "name": "The Independent",
+      "lean": "left",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United Kingdom",
+      "home_url": "https://www.independent.co.uk/",
+      "rating_basis": "AllSides media bias rating (Lean Left), checked Oct 2026"
+    },
+    {
+      "id": "mirror",
+      "name": "Daily Mirror",
+      "lean": "left",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United Kingdom",
+      "home_url": "https://www.mirror.co.uk/",
+      "rating_basis": "Ad Fontes Media bias rating (Skews Left), checked Oct 2026"
+    },
+    {
+      "id": "bbc",
+      "name": "BBC News",
+      "lean": "centre",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "public-service",
+      "country": "United Kingdom",
+      "home_url": "https://www.bbc.co.uk/news",
+      "rating_basis": "AllSides media bias rating (Center), checked Oct 2026"
+    },
+    {
+      "id": "sky",
+      "name": "Sky News",
+      "lean": "centre",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United Kingdom",
+      "home_url": "https://news.sky.com/",
+      "rating_basis": "Ad Fontes Media bias rating (Middle), checked Oct 2026"
+    },
+    {
+      "id": "telegraph",
+      "name": "The Telegraph",
+      "lean": "right",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United Kingdom",
+      "home_url": "https://www.telegraph.co.uk/",
+      "rating_basis": "AllSides media bias rating (Lean Right), checked Oct 2026"
+    },
+    {
+      "id": "dailymail",
+      "name": "Daily Mail",
+      "lean": "right",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United Kingdom",
+      "home_url": "https://www.dailymail.co.uk/",
+      "rating_basis": "AllSides media bias rating (Right), checked Oct 2026"
+    },
+    {
+      "id": "thesun",
+      "name": "The Sun",
+      "lean": "right",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United Kingdom",
+      "home_url": "https://www.thesun.co.uk/",
+      "rating_basis": "AllSides media bias rating (Right), checked Oct 2026"
+    },
+    {
+      "id": "nyt",
+      "name": "The New York Times",
+      "lean": "left",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United States",
+      "home_url": "https://www.nytimes.com/",
+      "rating_basis": "AllSides media bias rating (Lean Left), checked Oct 2026"
+    },
+    {
+      "id": "nbc",
+      "name": "NBC News",
+      "lean": "left",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United States",
+      "home_url": "https://www.nbcnews.com/",
+      "rating_basis": "AllSides media bias rating (Lean Left), checked Oct 2026"
+    },
+    {
+      "id": "huffpost",
+      "name": "HuffPost",
+      "lean": "left",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United States",
+      "home_url": "https://www.huffpost.com/",
+      "rating_basis": "AllSides media bias rating (Left), checked Oct 2026"
+    },
+    {
+      "id": "npr",
+      "name": "NPR",
+      "lean": "centre",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "public-service",
+      "country": "United States",
+      "home_url": "https://www.npr.org/",
+      "rating_basis": "Ad Fontes Media bias rating (Middle / Skews Left), checked Oct 2026"
+    },
+    {
+      "id": "axios",
+      "name": "Axios",
+      "lean": "centre",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United States",
+      "home_url": "https://www.axios.com/",
+      "rating_basis": "AllSides media bias rating (Center), checked Oct 2026"
+    },
+    {
+      "id": "fox",
+      "name": "Fox News",
+      "lean": "right",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United States",
+      "home_url": "https://www.foxnews.com/",
+      "rating_basis": "AllSides media bias rating (Right), checked Oct 2026"
+    },
+    {
+      "id": "nypost",
+      "name": "New York Post",
+      "lean": "right",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United States",
+      "home_url": "https://nypost.com/",
+      "rating_basis": "AllSides media bias rating (Lean Right), checked Oct 2026"
+    },
+    {
+      "id": "examiner",
+      "name": "Washington Examiner",
+      "lean": "right",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United States",
+      "home_url": "https://www.washingtonexaminer.com/",
+      "rating_basis": "AllSides media bias rating (Lean Right), checked Oct 2026"
+    },
+    {
+      "id": "france24",
+      "name": "France 24",
+      "lean": "centre",
+      "region": "europe",
+      "bloc": "west",
+      "ownership": "public-service",
+      "country": "France",
+      "home_url": "https://www.france24.com/en/",
+      "rating_basis": "Ad Fontes Media bias rating (Middle), checked Oct 2026"
+    },
+    {
+      "id": "dw",
+      "name": "DW (Deutsche Welle)",
+      "lean": "centre",
+      "region": "europe",
+      "bloc": "west",
+      "ownership": "public-service",
+      "country": "Germany",
+      "home_url": "https://www.dw.com/en/",
+      "rating_basis": "AllSides media bias rating (Center), checked Oct 2026"
+    },
+    {
+      "id": "aljazeera",
+      "name": "Al Jazeera English",
+      "lean": null,
+      "region": "middle_east",
+      "bloc": "east",
+      "ownership": "state-funded",
+      "country": "Qatar",
+      "home_url": "https://www.aljazeera.com/",
+      "rating_basis": "Funded by the State of Qatar; no left/right tag applied"
+    },
+    {
+      "id": "thenational",
+      "name": "The National (UAE)",
+      "lean": null,
+      "region": "middle_east",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "United Arab Emirates",
+      "home_url": "https://www.thenationalnews.com/",
+      "rating_basis": "Owned by International Media Investments (Abu Dhabi); no left/right tag applied"
+    },
+    {
+      "id": "timesofisrael",
+      "name": "The Times of Israel",
+      "lean": null,
+      "region": "middle_east",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "Israel",
+      "home_url": "https://www.timesofisrael.com/",
+      "rating_basis": "Privately owned; no left/right tag applied"
+    },
+    {
+      "id": "cgtn",
+      "name": "CGTN",
+      "lean": null,
+      "region": "asia",
+      "bloc": "east",
+      "ownership": "state-controlled",
+      "country": "China",
+      "home_url": "https://www.cgtn.com/",
+      "rating_basis": "China Global Television Network, part of state broadcaster China Media Group"
+    },
+    {
+      "id": "ecns",
+      "name": "ECNS (China News Service)",
+      "lean": null,
+      "region": "asia",
+      "bloc": "east",
+      "ownership": "state-controlled",
+      "country": "China",
+      "home_url": "https://www.ecns.cn/",
+      "rating_basis": "English service of China News Service, a state news agency"
+    },
+    {
+      "id": "scmp",
+      "name": "South China Morning Post",
+      "lean": null,
+      "region": "asia",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "Hong Kong",
+      "home_url": "https://www.scmp.com/",
+      "rating_basis": "Owned by Alibaba Group; no left/right tag applied"
+    },
+    {
+      "id": "toi",
+      "name": "The Times of India",
+      "lean": null,
+      "region": "asia",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "India",
+      "home_url": "https://timesofindia.indiatimes.com/",
+      "rating_basis": "Privately owned (Bennett, Coleman & Co.); no left/right tag applied"
+    },
+    {
+      "id": "thehindu",
+      "name": "The Hindu",
+      "lean": null,
+      "region": "asia",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "India",
+      "home_url": "https://www.thehindu.com/",
+      "rating_basis": "Privately owned (The Hindu Group); no left/right tag applied"
+    },
+    {
+      "id": "moscowtimes",
+      "name": "The Moscow Times",
+      "lean": null,
+      "region": "europe",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "Russia",
+      "home_url": "https://www.themoscowtimes.com/",
+      "rating_basis": "Independent, Amsterdam-based since 2022; designated \"undesirable\" by Russia; no left/right tag applied"
+    },
+    {
+      "id": "japantimes",
+      "name": "The Japan Times",
+      "lean": null,
+      "region": "asia",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "Japan",
+      "home_url": "https://www.japantimes.co.jp/",
+      "rating_basis": "Privately owned (News2u Holdings); no left/right tag applied"
+    },
+    {
+      "id": "koreaherald",
+      "name": "The Korea Herald",
+      "lean": null,
+      "region": "asia",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "South Korea",
+      "home_url": "https://www.koreaherald.com/",
+      "rating_basis": "Privately owned (Herald Corporation); no left/right tag applied"
+    }
+  ],
+  "stories": [
+    {
+      "id": "cc2d88fc3418",
+      "title": "Israeli President Herzog asks Gadi Eisenkot to form a government",
+      "rank": 1,
+      "outlet_count": 19,
+      "coverage": {
+        "lean": {
+          "left": 3,
+          "centre": 6,
+          "right": 2
+        },
+        "bloc": {
+          "west": 11,
+          "east": 8
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "0f3d5b898ee4",
+          "outlet_id": "france24",
+          "headline": "🔴 Israeli president picks Netanyahu's rival Eisenkot to try to form government",
+          "snippet": "",
+          "url": "https://www.france24.com/en/middle-east/20261107-israeli-president-picks-netanyahu-s-rival-eisenkot-to-try-to-form-government",
+          "published_at": "2026-11-07T19:38:24Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "beda0f38d6c6",
+          "outlet_id": "guardian",
+          "headline": "Israel’s president picks Yashar leader Gadi Eisenkot to form government",
+          "snippet": "Knesset has been deadlocked since the election last month when Benjamin Netanyahu’s coalition lost its majority Israel’s president has ⁠chosen Gadi Eisenkot, prime minister Benjamin Netanyahu’s…",
+          "url": "https://www.theguardian.com/world/2026/nov/07/israel-president-gadi-eisenkot-form-government",
+          "published_at": "2026-11-07T19:49:39Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.guim.co.uk/img/media/7eec88b1e0176fdcaf9916606ea9a1c049ff2da6/552_347_2266_1813/master/2266.jpg?width=460&quality=85&auto=format&fit=max&s=52ad59783d36ab24d9b366dcb16e7c01"
+        },
+        {
+          "id": "cb98694d55ba",
+          "outlet_id": "dw",
+          "headline": "Israeli president tasks Gadi Eisenkot with forming government",
+          "snippet": "President Isaac Herzog has picked former Israeli military chief Gadi Eisenkot, leader of an anti-Netanyahu alliance, to take the first shot at trying to form a government. Tricky coalition talks are…",
+          "url": "https://www.dw.com/en/israeli-president-tasks-gadi-eisenkot-with-forming-government/a-79888288?maca=en-rss-en-world-4025-xml-mrss",
+          "published_at": "2026-11-07T19:56:00Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "92ceea2449bd",
+          "outlet_id": "scmp",
+          "headline": "Israel’s president taps Eisenkot to form government, in setback for Netanyahu",
+          "snippet": "Israel’s president announced on Saturday he would task Gadi Eisenkot with forming the next government following last week’s election, in what Netanyahu’s rivals see as a first step to remove the…",
+          "url": "https://www.scmp.com/news/world/middle-east/article/3373671/israels-president-taps-eisenkot-form-government-setback-netanyahu",
+          "published_at": "2026-11-07T20:05:19Z",
+          "published_at_estimated": false,
+          "image_url": "https://cdn.i-scmp.com/sites/default/files/styles/1280x720/public/d8/images/canvas/2026/11/08/a0d7e78c-aa50-482b-93fa-902d48d8dad2_aaeb8167.jpg?itok=We4XsTYo&v=1794081911"
+        },
+        {
+          "id": "92d5a0fb30f4",
+          "outlet_id": "sky",
+          "headline": "Blow for Netanyahu as opposition rival asked to form government by Israel's president",
+          "snippet": "Israel's president has asked Benjamin Netanyahu's strongest rival, Gadi Eisenkot, to try to form a government following a deadlocked election.",
+          "url": "https://news.sky.com/story/blow-for-netanyahu-as-opposition-rival-asked-to-form-government-by-israels-president-13609540",
+          "published_at": "2026-11-07T20:10:00Z",
+          "published_at_estimated": false,
+          "image_url": "https://e3.365dm.com/26/10/1920x1080/skynews-gadi-eisenkot-israel-elections_7389637.jpg?20261028121525"
+        },
+        {
+          "id": "af4a3e696450",
+          "outlet_id": "npr",
+          "headline": "Israel's president taps opposition candidate, not Netanyahu, to form a government",
+          "snippet": "Gadi Eisenkot ran as the main rival to Prime Minister Benjamin Netanyahu, but neither won enough support to command a majority. Israel's main parties have recommended Eisenkot form a new government.",
+          "url": "https://www.npr.org/2026/11/07/g-s1-152536/netanyahu-israel-government-eisenkot-herzog",
+          "published_at": "2026-11-07T20:18:18Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "b47d9a99c659",
+          "outlet_id": "axios",
+          "headline": "Netanyahu rival Eisenkot tapped to form Israeli government",
+          "snippet": "Israeli President Isaac Herzog announced Saturday that he will task Gadi Eisenkot, leader of the opposition Yashar party, with forming a new government, dealing a major setback to Prime Minister…",
+          "url": "https://www.axios.com/2026/11/07/israel-eisenkot-netanyahu-government-herzog",
+          "published_at": "2026-11-07T20:48:32Z",
+          "published_at_estimated": false,
+          "image_url": "https://images.axios.com/qwrBYSfq-VrbfEHTlebJnykO8zU=/0x599:5824x3875/1366x768/2026/11/07/1794081070417.jpeg"
+        },
+        {
+          "id": "1ba4f0df50cf",
+          "outlet_id": "examiner",
+          "headline": "Herzog picks Israeli opposition leader to form coalition government",
+          "snippet": "Israeli President Isaac Herzog has given opposition leader Gadi Eisenkot the opportunity to form a coalition government, marking a setback for Prime Minister Benjamin Netanyahu. Herzog announced the…",
+          "url": "https://www.washingtonexaminer.com/news/world/4796596/herzog-pick-israel-opposition-leader-coalition-gadi-eisenkot/",
+          "published_at": "2026-11-07T21:17:06Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.washingtonexaminer.com/wp-content/uploads/2026/11/AP26300857503629.jpg?w=1024"
+        },
+        {
+          "id": "f392f2d0542d",
+          "outlet_id": "nyt",
+          "headline": "Eisenkot Seeks to Oust Netanyahu as Prime Minister. Here’s How.",
+          "snippet": "Gadi Eisenkot gets the chance to form a new government, replacing Benjamin Netanyahu as prime minister. But the obstacles are formidable.",
+          "url": "https://www.nytimes.com/2026/11/07/world/middleeast/eisenkot-israel-new-government.html",
+          "published_at": "2026-11-07T21:52:04Z",
+          "published_at_estimated": false,
+          "image_url": "https://static01.nyt.com/images/2026/11/06/multimedia/06int-israel-eisenkot-01-tjwp/06int-israel-eisenkot-01-tjwp-mediumSquareAt3X-v2.jpg"
+        },
+        {
+          "id": "49d673af7c02",
+          "outlet_id": "fox",
+          "headline": "Israeli president taps Netanyahu rival to form government as coalition battle looms",
+          "snippet": "Gadi Eisenkot secured 67 Knesset endorsements over Benjamin Netanyahu, but deep coalition divisions over Arab parties and conscription cloud his path.",
+          "url": "https://www.foxnews.com/world/israeli-president-picks-netanyahu-rival-form-government-coalition-battle-looms",
+          "published_at": "2026-11-07T22:17:37Z",
+          "published_at_estimated": false,
+          "image_url": "https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2026/07/931/523/israeli-president-isaac-herzog-fox-news-digital-interview.jpg?ve=1&tl=1"
+        },
+        {
+          "id": "1466ce87b8a4",
+          "outlet_id": "bbc",
+          "headline": "Israel's president tasks opposition leader Eisenkot with forming government",
+          "snippet": "Neither PM Benjamin Netanyahu's bloc nor that of his rival secured a majority in last week's election.",
+          "url": "https://www.bbc.co.uk/news/articles/cmy8367lj5xlo",
+          "published_at": "2026-11-07T22:19:59Z",
+          "published_at_estimated": false,
+          "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/1ff8/live/d9aea170-daf1-11f1-a701-fddedf244c16.jpg"
+        },
+        {
+          "id": "689cdc4e6f09",
+          "outlet_id": "mirror",
+          "headline": "Netanyahu faces being ousted as rival given chance to form new Israeli government",
+          "snippet": "Opposition candidate Gadi Eisenkot will get the first opportunity to form a coalition government, Israeli President Isaac Herzog has said",
+          "url": "https://www.mirror.co.uk/news/world-news/netanyahu-faces-being-ousted-rival-37854898",
+          "published_at": "2026-11-07T22:49:37Z",
+          "published_at_estimated": false,
+          "image_url": "https://i2-prod.mirror.co.uk/incoming/article37810812.ece/ALTERNATES/s615/1_Gadi-Eisenkot-Holds-Campaign-Rally-In-Tel-Aviv.jpg"
+        },
+        {
+          "id": "e67e9ce60f20",
+          "outlet_id": "japantimes",
+          "headline": "Israeli president picks Gadi Eisenkot, Netanyahu rival, to try to form government",
+          "snippet": "Israel's president on Saturday chose Gadi Eisenkot, Prime Minister Benjamin Netanyahu's strongest rival, to try to form a new government.",
+          "url": "https://www.japantimes.co.jp/news/2026/11/08/world/politics/israel-president-gadi-eisenkot-government/",
+          "published_at": "2026-11-07T23:07:00Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.japantimes.co.jp/japantimes/uploads/images/2026/11/08/thumbs/400x400/572857.jpg"
+        },
+        {
+          "id": "5835abf0675e",
+          "outlet_id": "cgtn",
+          "headline": "Herzog taps Eisenkot to form next Israeli government",
+          "snippet": "Israeli President Isaac Herzog announced Saturday evening that he would task Yashar party leader Gadi Eisenkot with forming the next government following consultations with political parties.",
+          "url": "https://news.cgtn.com/news/2026-11-08/Herzog-taps-Eisenkot-to-form-next-Israeli-government-1RTzopQZPiw/p.html",
+          "published_at": "2026-11-08T01:20:57Z",
+          "published_at_estimated": false,
+          "image_url": "https://news.cgtn.com/news/2026-11-08/Herzog-taps-Eisenkot-to-form-next-Israeli-government-1RTzopQZPiw/img/f59640f13e5c44e194cc86c0f19ef020/f59640f13e5c44e194cc86c0f19ef020-750.png"
+        },
+        {
+          "id": "45d9b8c5962e",
+          "outlet_id": "timesofisrael",
+          "headline": "Report: Ra’am willing to vote for new Eisenkot-led government even without coalition deal",
+          "snippet": "Fellow Arab-led Joint list won't back such a government but won't act to topple it, Haaretz says * Israel to deport 14 foreign ‘anti-Israel’ activists arrested in West Bank during Palestinian olive…",
+          "url": "https://www.timesofisrael.com/liveblog-november-08-2026/",
+          "published_at": "2026-11-08T02:30:02Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "afc0625fb295",
+          "outlet_id": "koreaherald",
+          "headline": "Israel president taps Eisenkot to form new government",
+          "snippet": "Israel's president announced Saturday he would task Gadi Eisenkot with forming the next government following an election, in what Netanyahu's rivals see as a first step to remove the country's…",
+          "url": "https://www.koreaherald.com/article/10929589",
+          "published_at": "2026-11-08T03:38:39Z",
+          "published_at_estimated": false,
+          "image_url": "https://wimg.heraldcorp.com/news/cms/2026/11/08/rcv.YNA.20261108.PRU20261108100901009_T1.jpg"
+        },
+        {
+          "id": "9a47e60885f9",
+          "outlet_id": "thenational",
+          "headline": "Israeli president picks Eisenkot to form government in setback for Netanyahu",
+          "snippet": "Israeli President Isaac Herzog has chosen former military chief Gadi Eisenkot to form a government, giving Prime Minister Benjamin Netanyahu's main political rival the first opportunity to try to…",
+          "url": "https://www.thenationalnews.com/news/mena/2026/11/08/israeli-president-picks-eisenkot-to-form-government-in-setback-for-netanyahu/",
+          "published_at": "2026-11-08T04:43:33Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.thenationalnews.com/resizer/v2/SFXUTJRZA2AHUL5X4NNTDNOUQ4.jpg?auth=370c506728cdfb39696351dce81105edb93cccca7da1764747d072dfa7cdcb0b&smart=true&width=3416&height=2317"
+        },
+        {
+          "id": "0a797d23e3e1",
+          "outlet_id": "scmp",
+          "headline": "Who is Eisenkot, the former Israeli general expected to replace Netanyahu?",
+          "snippet": "Gadi Eisenkot, an unassuming former army chief of staff, has a pathway to Israel’s top job after President Isaac Herzog tapped him to form the next government. Should he succeed, he would take over…",
+          "url": "https://www.scmp.com/news/world/middle-east/article/3373679/who-eisenkot-former-israeli-general-expected-replace-netanyahu",
+          "published_at": "2026-11-08T05:33:31Z",
+          "published_at_estimated": false,
+          "image_url": "https://cdn.i-scmp.com/sites/default/files/styles/1280x720/public/d8/images/canvas/2026/11/08/770eef80-d0fe-4eb0-9485-d5eb5b1b2ad0_71f58901.jpg?itok=-zHC7gJu&v=1794116002"
+        },
+        {
+          "id": "09ca92108b69",
+          "outlet_id": "thehindu",
+          "headline": "Israeli President picks Gadi Eisenkot, Netanyahu rival, to try to form government",
+          "snippet": "Mr. Eisenkot, a former military chief, has declined to join forces with Arab parties, with whose support he ‌would have a majority of seats in parliament",
+          "url": "https://www.thehindu.com/news/international/israeli-president-picks-gadi-eisenkot-netanyahu-rival-to-try-to-form-government/article71679477.ece",
+          "published_at": "2026-11-08T05:40:16Z",
+          "published_at_estimated": false,
+          "image_url": "https://th-i.thgim.com/public/incoming/4l2p4x/article71679480.ece/alternates/LANDSCAPE_1200/2026-10-28T000220Z_1098553532_RC2ZBOA8L5MY_RTRMADP_3_ISRAEL-ELECTION.JPG"
+        },
+        {
+          "id": "a2d7e14c53ad",
+          "outlet_id": "aljazeera",
+          "headline": "The anti-Netanyahu: Can Gadi Eisenkot give the world a different Israel?",
+          "snippet": "Unpolished and understated, Eisenkot offers a stark contrast to Netanyahu but risks continuing his legacy",
+          "url": "https://www.aljazeera.com/news/2026/11/8/the-anti-netanyahu-can-gadi-eisenkot-give-the-world-a-different-israel",
+          "published_at": "2026-11-08T08:47:36Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "57eb21e7d719",
+          "outlet_id": "nyt",
+          "headline": "Eisenkot, Netanyahu Rival and Opposition Leader, Tapped to Try to Form Government",
+          "snippet": "Gadi Eisenkot, a former military chief, hopes to succeed Benjamin Netanyahu as prime minister by cobbling together a coalition after an inconclusive election.",
+          "url": "https://www.nytimes.com/2026/11/07/world/middleeast/israel-eisenkot-government.html",
+          "published_at": "2026-11-08T09:41:55Z",
+          "published_at_estimated": false,
+          "image_url": "https://static01.nyt.com/images/2026/11/08/multimedia/08int-israel-politics-eisenkot-HFO-vbtf/08int-israel-politics-eisenkot-HFO-vbtf-mediumSquareAt3X.jpg"
+        },
+        {
+          "id": "e292cf49d778",
+          "outlet_id": "france24",
+          "headline": "Israel's Arab-led parties gain influence",
+          "snippet": "Arab-led parties have endorsed Gadi Eisenkot despite his ruling out a coalition with them. Their support is driven by a shared goal: removing Benjamin Netanyahu from power. But could these parties…",
+          "url": "https://www.france24.com/en/israel-s-arab-led-parties-gain-influence",
+          "published_at": "2026-11-08T09:43:26Z",
+          "published_at_estimated": false,
+          "image_url": "https://s.france24.com/media/display/dec0c3da-db57-11f1-b79b-bf1914cabd52/w:1024/p:16x9/EN-20261108-100714-100924-CS.jpg"
+        },
+        {
+          "id": "e52f201c47ec",
+          "outlet_id": "aljazeera",
+          "headline": "Will Eisenkot be able to form Israel’s next gov’t amid divided opposition?",
+          "snippet": "Israel's former military chief has been given the opportunity to form a government after an inconclusive election.",
+          "url": "https://www.aljazeera.com/news/2026/11/8/will-eisenkot-be-able-to-form-israels-next-govt-amid-divided-opposition",
+          "published_at": "2026-11-08T11:34:58Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "4f8d46761ba3",
+          "outlet_id": "koreaherald",
+          "headline": "Netanyahu rival given first chance at forming new government",
+          "snippet": "Israel’s president has designated Prime Minister Benjamin Netanyahu’s main rival, Gadi Eisenkot, as his choice to form the next government. President Isaac Herzog announced his decision late…",
+          "url": "https://www.koreaherald.com/article/10929799",
+          "published_at": "2026-11-08T11:35:06Z",
+          "published_at_estimated": false,
+          "image_url": "https://wimg.heraldcorp.com/news/cms/2026/11/08/news-p.v1.20261108.c97e4e08de024d558033e5378de52671_T1.jpg"
+        },
+        {
+          "id": "68ec5c92ec04",
+          "outlet_id": "nyt",
+          "headline": "Who Is Gadi Eisenkot, Israel’s Opposition Leader?",
+          "snippet": "Mr. Eisenkot, a career general and the leading rival of Prime Minister Benjamin Netanyahu of Israel, will now have up to six weeks to form a coalition.",
+          "url": "https://www.nytimes.com/2026/11/08/world/middleeast/israel-eisenkot-netanyahu-what-to-know.html",
+          "published_at": "2026-11-08T12:33:40Z",
+          "published_at_estimated": false,
+          "image_url": "https://static01.nyt.com/images/2026/11/08/multimedia/08int-israel-eisenkot-wtk-ckmj/08int-israel-eisenkot-wtk-ckmj-mediumSquareAt3X.jpg"
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "President Isaac Herzog chose Gadi Eisenkot to try to form Israel's next government.",
+          "sources": [
+            "0f3d5b898ee4",
+            "beda0f38d6c6",
+            "cb98694d55ba",
+            "92ceea2449bd",
+            "92d5a0fb30f4",
+            "af4a3e696450",
+            "b47d9a99c659",
+            "1ba4f0df50cf",
+            "f392f2d0542d",
+            "49d673af7c02",
+            "1466ce87b8a4",
+            "689cdc4e6f09",
+            "e67e9ce60f20",
+            "5835abf0675e",
+            "afc0625fb295",
+            "9a47e60885f9",
+            "0a797d23e3e1",
+            "09ca92108b69",
+            "57eb21e7d719",
+            "e52f201c47ec",
+            "4f8d46761ba3",
+            "68ec5c92ec04"
+          ]
+        },
+        {
+          "text": "Eisenkot is described as Prime Minister Benjamin Netanyahu's main or strongest rival.",
+          "sources": [
+            "0f3d5b898ee4",
+            "beda0f38d6c6",
+            "92d5a0fb30f4",
+            "af4a3e696450",
+            "b47d9a99c659",
+            "49d673af7c02",
+            "e67e9ce60f20",
+            "9a47e60885f9",
+            "09ca92108b69",
+            "57eb21e7d719",
+            "4f8d46761ba3",
+            "68ec5c92ec04"
+          ]
+        },
+        {
+          "text": "The election was inconclusive, with neither Netanyahu's bloc nor his rival's securing a majority.",
+          "sources": [
+            "beda0f38d6c6",
+            "92d5a0fb30f4",
+            "af4a3e696450",
+            "1466ce87b8a4",
+            "57eb21e7d719",
+            "e52f201c47ec"
+          ]
+        },
+        {
+          "text": "Eisenkot is a former military chief.",
+          "sources": [
+            "cb98694d55ba",
+            "9a47e60885f9",
+            "0a797d23e3e1",
+            "09ca92108b69",
+            "57eb21e7d719",
+            "68ec5c92ec04",
+            "e52f201c47ec"
+          ]
+        },
+        {
+          "text": "Eisenkot leads the Yashar party.",
+          "sources": [
+            "beda0f38d6c6",
+            "b47d9a99c659",
+            "5835abf0675e"
+          ]
+        },
+        {
+          "text": "The decision is described as a setback or blow for Netanyahu.",
+          "sources": [
+            "92ceea2449bd",
+            "92d5a0fb30f4",
+            "b47d9a99c659",
+            "1ba4f0df50cf",
+            "9a47e60885f9"
+          ]
+        },
+        {
+          "text": "Eisenkot has ruled out joining forces with Arab parties.",
+          "sources": [
+            "09ca92108b69",
+            "e292cf49d778"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "689cdc4e6f09",
+              "quote": "Netanyahu faces being ousted",
+              "field": "headline"
+            },
+            {
+              "article_id": "f392f2d0542d",
+              "quote": "But the obstacles are formidable.",
+              "field": "snippet"
+            },
+            {
+              "article_id": "beda0f38d6c6",
+              "quote": "Knesset has been deadlocked since the election last month",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the prospect of Eisenkot replacing or ousting Netanyahu as prime minister.",
+              "sources": [
+                "689cdc4e6f09",
+                "f392f2d0542d",
+                "57eb21e7d719"
+              ]
+            },
+            {
+              "text": "Notes formidable obstacles and a window of up to six weeks to form a coalition.",
+              "sources": [
+                "f392f2d0542d",
+                "68ec5c92ec04"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "92d5a0fb30f4",
+              "quote": "Blow for Netanyahu",
+              "field": "headline"
+            },
+            {
+              "article_id": "cb98694d55ba",
+              "quote": "Tricky coalition talks",
+              "field": "snippet"
+            },
+            {
+              "article_id": "e292cf49d778",
+              "quote": "Israel's Arab-led parties gain influence",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Describes the decision as a setback or blow for Netanyahu.",
+              "sources": [
+                "92d5a0fb30f4",
+                "b47d9a99c659"
+              ]
+            },
+            {
+              "text": "Reports that Israel's main parties recommended Eisenkot.",
+              "sources": [
+                "af4a3e696450"
+              ]
+            },
+            {
+              "text": "Highlights Arab-led parties endorsing Eisenkot despite his ruling out a coalition with them.",
+              "sources": [
+                "e292cf49d778"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "right",
+          "headline_quotes": [
+            {
+              "article_id": "1ba4f0df50cf",
+              "quote": "marking a setback for Prime Minister Benjamin Netanyahu",
+              "field": "snippet"
+            },
+            {
+              "article_id": "49d673af7c02",
+              "quote": "as coalition battle looms",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Describes the move as a setback for Netanyahu.",
+              "sources": [
+                "1ba4f0df50cf"
+              ]
+            },
+            {
+              "text": "Reports 67 Knesset endorsements for Eisenkot and coalition divisions over Arab parties and conscription.",
+              "sources": [
+                "49d673af7c02"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "left",
+          "text": "Left coverage does not mention the role or position of Arab-led parties in coalition-building.",
+          "sources": [
+            "e292cf49d778",
+            "49d673af7c02"
+          ]
+        },
+        {
+          "lean": "right",
+          "text": "Right coverage does not mention that the election left neither bloc with a majority.",
+          "sources": [
+            "beda0f38d6c6",
+            "af4a3e696450",
+            "1466ce87b8a4"
+          ]
+        },
+        {
+          "lean": "right",
+          "text": "Right coverage does not mention Eisenkot's background as a former military chief.",
+          "sources": [
+            "cb98694d55ba",
+            "57eb21e7d719"
+          ]
+        }
+      ],
+      "contested_claims": [],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "92d5a0fb30f4",
+              "quote": "Blow for Netanyahu",
+              "field": "headline"
+            },
+            {
+              "article_id": "689cdc4e6f09",
+              "quote": "Netanyahu faces being ousted",
+              "field": "headline"
+            },
+            {
+              "article_id": "49d673af7c02",
+              "quote": "as coalition battle looms",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the setback for Netanyahu and the prospect of his ouster.",
+              "sources": [
+                "92d5a0fb30f4",
+                "689cdc4e6f09",
+                "1ba4f0df50cf",
+                "b47d9a99c659"
+              ]
+            },
+            {
+              "text": "Foregrounds coalition obstacles, including divisions over Arab parties and conscription.",
+              "sources": [
+                "f392f2d0542d",
+                "49d673af7c02",
+                "cb98694d55ba"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "9a47e60885f9",
+              "quote": "in setback for Netanyahu",
+              "field": "headline"
+            },
+            {
+              "article_id": "45d9b8c5962e",
+              "quote": "Ra’am willing to vote for new Eisenkot-led government even without coalition deal",
+              "field": "headline"
+            },
+            {
+              "article_id": "a2d7e14c53ad",
+              "quote": "The anti-Netanyahu",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Reports that Netanyahu's rivals see the decision as a first step to remove him.",
+              "sources": [
+                "92ceea2449bd",
+                "afc0625fb295"
+              ]
+            },
+            {
+              "text": "Covers Arab party positions, including Ra'am's reported willingness to vote for an Eisenkot-led government.",
+              "sources": [
+                "45d9b8c5962e",
+                "09ca92108b69"
+              ]
+            },
+            {
+              "text": "Profiles Eisenkot as an understated former army chief contrasting with Netanyahu.",
+              "sources": [
+                "0a797d23e3e1",
+                "a2d7e14c53ad"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "Israeli President Isaac Herzog announced on Saturday that he would task opposition leader Gadi Eisenkot, Benjamin Netanyahu's main rival, with forming a government. It follows an election in which neither Netanyahu's bloc nor his rival's won a majority. Several outlets describe the move as a setback for Netanyahu.",
+        "sources": [
+          "b47d9a99c659",
+          "e67e9ce60f20",
+          "5835abf0675e",
+          "92ceea2449bd",
+          "1466ce87b8a4",
+          "af4a3e696450",
+          "1ba4f0df50cf",
+          "9a47e60885f9",
+          "92d5a0fb30f4"
+        ]
+      },
+      "conclusion": {
+        "text": "All sides report Herzog tasking Eisenkot after an inconclusive election, with many calling it a setback for Netanyahu. Left and right outlets stress coalition obstacles, while centre, right and East outlets also cover Arab-led parties' role. The headlines and snippets show no factual dispute.",
+        "sources": [
+          "b47d9a99c659",
+          "1466ce87b8a4",
+          "9a47e60885f9",
+          "f392f2d0542d",
+          "49d673af7c02",
+          "e292cf49d778",
+          "45d9b8c5962e",
+          "09ca92108b69"
+        ]
+      },
+      "validation": {
+        "kept": 38,
+        "dropped_by_reason": {}
+      }
+    },
+    {
+      "id": "e03a6dd91b2c",
+      "title": "Gunman kills six in Krakow's main square; three more found dead at his home",
+      "rank": 2,
+      "outlet_count": 16,
+      "coverage": {
+        "lean": {
+          "left": 4,
+          "centre": 4,
+          "right": 3
+        },
+        "bloc": {
+          "west": 11,
+          "east": 5
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "99e0f0d6e314",
+          "outlet_id": "mirror",
+          "headline": "Gunman opens fire in Polish city centre as six killed and several injured",
+          "snippet": "The attacker allegedly drove a car onto Main Market Square in Krakow, Poland and fired multiple times, with police officers said to be among the victims",
+          "url": "https://www.mirror.co.uk/news/world-news/gunman-opens-fire-polish-city-37854275",
+          "published_at": "2026-11-07T15:18:40Z",
+          "published_at_estimated": false,
+          "image_url": "https://i2-prod.dailyrecord.co.uk/incoming/article37854291.ece/ALTERNATES/s615/0_Screenshot-2026-11-07-at-150949.jpg"
+        },
+        {
+          "id": "606a1743bfa8",
+          "outlet_id": "france24",
+          "headline": "🔴 At least five people killed in shooting in Krakow, Polish police say ⤵️",
+          "snippet": "",
+          "url": "https://www.france24.com/en/europe/20261107-at-least-three-people-killed-shooting-in-polish-city-of-krakow-police-say",
+          "published_at": "2026-11-07T15:26:49Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "2fba97e2f6bd",
+          "outlet_id": "nbc",
+          "headline": "Gunman kills 6 in ‘terror attack’ in Poland, officials say; 3 others found dead in his home",
+          "snippet": "A gunman described as having “ultranationalistic” beliefs fatally shot six people while driving through a public square Saturday in Krakow, Poland, officials said, in what the country’s defense…",
+          "url": "https://www.nbcnews.com/world/europe/poland-krakow-shooting-rcna608001",
+          "published_at": "2026-11-07T15:58:06Z",
+          "published_at_estimated": false,
+          "image_url": "https://media-cldnry.s-nbcnews.com/image/upload/t_fit_1500w/rockcms/2026-11/261107-krakow-poland-shooting-ww-1431-3e6640.jpg"
+        },
+        {
+          "id": "af77c3093932",
+          "outlet_id": "scmp",
+          "headline": "Gunman ‘fascinated by far-right’ kills 6 in Krakow, Poland",
+          "snippet": "Six people were killed and at least 15 wounded on Saturday when a gunman opened fire in the landmark historic centre of Poland’s second city of Krakow, in the country’s deadliest shooting in…",
+          "url": "https://www.scmp.com/news/world/europe/article/3373667/5-killed-shooting-tourist-heart-krakow-poland",
+          "published_at": "2026-11-07T16:33:05Z",
+          "published_at_estimated": false,
+          "image_url": "https://cdn.i-scmp.com/sites/default/files/styles/1280x720/public/d8/images/canvas/2026/11/08/aa6e78c8-145c-4425-b5b5-c64158e11f73_8918fb3c.jpg?itok=MuKrwArq&v=1794075344"
+        },
+        {
+          "id": "d768aaf8ad66",
+          "outlet_id": "fox",
+          "headline": "Gunman opens fire from moving car in European tourist hot spot, leaving 6 dead and at least 15 wounded",
+          "snippet": "A gunman, reportedly wearing military-style fatigues, allegedly opened fire from a moving vehicle on Kraków, Poland's Main Square, killing five and injuring at least 15.",
+          "url": "https://www.foxnews.com/world/gunman-opens-fire-moving-car-european-tourist-hotspot-leaving-5-dead-12-wounded",
+          "published_at": "2026-11-07T17:37:33Z",
+          "published_at_estimated": false,
+          "image_url": "https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2026/11/931/523/krakow-square.jpg?ve=1&tl=1"
+        },
+        {
+          "id": "51dda24eceb0",
+          "outlet_id": "npr",
+          "headline": "Polish gunman who killed 6 people in Krakow has 'ultranationalistic' views, authorities say",
+          "snippet": "A gunman targeted random people as he drove into Krakow's Main Square, a major tourist spot. Police shot and wounded the gunman during a gunfight.",
+          "url": "https://www.npr.org/2026/11/07/g-s1-152532/gunman-opens-fire-in-polish-city-of-krakow-killing-6-people-and-injuring-15",
+          "published_at": "2026-11-07T18:37:36Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "20c91d24ba3d",
+          "outlet_id": "mirror",
+          "headline": "Krakow gunman 'inspired by far-right ideologies' as five foreign nationals hurt",
+          "snippet": "Marcin Kierwiński said the 25-year-old Polish national had been \"shot and neutralised\" by police and remains in hospital in a serious condition",
+          "url": "https://www.mirror.co.uk/news/world-news/krakow-shooting-suspect-inspired-far-37854689",
+          "published_at": "2026-11-07T19:39:17Z",
+          "published_at_estimated": false,
+          "image_url": "https://i2-prod.dailyrecord.co.uk/incoming/article37854694.ece/ALTERNATES/s615/0_APTOPIX-Poland-Shooting-26311600178106.jpg"
+        },
+        {
+          "id": "7a83f080d5f7",
+          "outlet_id": "mirror",
+          "headline": "Brit among 6 killed in Krakow shooting as more bodies found inside suspect's home",
+          "snippet": "The head of Poland's police service Marek Boron confirmed one of the six killed in Krakow's Main Market Square was British, while another Brit was injured in the mass shooting",
+          "url": "https://www.mirror.co.uk/news/uk-news/brit-among-six-killed-horror-37854792",
+          "published_at": "2026-11-07T21:09:56Z",
+          "published_at_estimated": false,
+          "image_url": "https://i2-prod.mirror.co.uk/incoming/article37854795.ece/ALTERNATES/s615/3_POLAND-SHOOTING-POLICE-EMERGENCY.jpg"
+        },
+        {
+          "id": "84a9cb567154",
+          "outlet_id": "france24",
+          "headline": "Gunman kills six in Krakow, three more bodies found at his house",
+          "snippet": "A chilling new discovery in Poland, where three bodies have reportedly been found inside the Krakow gunman's home. That's in addition to six people killed and sixteen wounded when the attacker…",
+          "url": "https://www.france24.com/en/gunmen-kills-six-in-krakow-three-more-bodies-found-at-his-house",
+          "published_at": "2026-11-07T22:47:06Z",
+          "published_at_estimated": false,
+          "image_url": "https://s.france24.com/media/display/3454c354-daeb-11f1-8b85-bf1914cabd52/w:1024/p:16x9/AP26311723511956.jpg"
+        },
+        {
+          "id": "762e93f84d61",
+          "outlet_id": "japantimes",
+          "headline": "Poland in shock after six die in Krakow mass shooting",
+          "snippet": "The scenes of carnage in one of Poland's main tourist attractions shocked a nation that has long viewed itself as safer than much of western Europe.",
+          "url": "https://www.japantimes.co.jp/news/2026/11/08/world/crime-legal/poland-krakow-mass-shooting/",
+          "published_at": "2026-11-07T23:23:00Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.japantimes.co.jp/japantimes/uploads/images/2026/11/08/thumbs/400x400/572859.jpg"
+        },
+        {
+          "id": "a86a9064e201",
+          "outlet_id": "nyt",
+          "headline": "At Least 6 Dead in Poland After Gunman Opens Fire in Krakow, Police Say",
+          "snippet": "The authorities said that the gunman, who began shooting from a car near a market square, was shot and taken to a hospital.",
+          "url": "https://www.nytimes.com/2026/11/07/world/europe/krakow-poland-shooting.html",
+          "published_at": "2026-11-07T23:36:18Z",
+          "published_at_estimated": false,
+          "image_url": "https://static01.nyt.com/images/2026/11/07/multimedia/07int-poland-shooting-zbcg/07int-poland-shooting-zbcg-mediumSquareAt3X.jpg"
+        },
+        {
+          "id": "efbed1840858",
+          "outlet_id": "nbc",
+          "headline": "6 killed, 15 injured in shooting at main market square of Krakow, Poland",
+          "snippet": "Authorities in Poland say they are investigating a shooting on Saturday that left six people dead and at least a 15 injured in the main market square in Krakow, a cultural center of the historic…",
+          "url": "https://www.nbcnews.com/nightly-news/video/6-killed-15-injured-in-shooting-at-main-market-square-of-krakow-poland-273079365572",
+          "published_at": "2026-11-08T00:03:49Z",
+          "published_at_estimated": false,
+          "image_url": "https://media-cldnry.s-nbcnews.com/image/upload/t_fit_1500w/mpx/2704722219/2026_11/1794096224031_wnn_dha_poland_market_shooting_261107_S3_1920x1080-4jaylv.jpg"
+        },
+        {
+          "id": "c04d40b189fe",
+          "outlet_id": "sky",
+          "headline": "Briton among six killed by 'far-right' gunman in Krakow rampage",
+          "snippet": "A 32-year-old British man is among the six people killed in a mass shooting in Krakow, and another was wounded, Polish officials have said.",
+          "url": "https://news.sky.com/story/british-national-among-six-killed-by-far-right-gunman-in-krakow-rampage-13609612",
+          "published_at": "2026-11-08T02:19:00Z",
+          "published_at_estimated": false,
+          "image_url": "https://e3.365dm.com/26/11/1920x1080/skynews-krakow-poland-mass-shooting_7400724.jpg?20261108081858"
+        },
+        {
+          "id": "64cc4dc43803",
+          "outlet_id": "cgtn",
+          "headline": "Poland in shock after six killed in Krakow mass shooting",
+          "snippet": "A Polish gunman likely influenced by far-right ideology killed six people in the main square of the southern city of Krakow before police shot and arrested him, officials said on Saturday, adding…",
+          "url": "https://news.cgtn.com/news/2026-11-08/Poland-in-shock-after-six-killed-in-Krakow-mass-shooting-1RTGRfQaanS/p.html",
+          "published_at": "2026-11-08T02:38:31Z",
+          "published_at_estimated": false,
+          "image_url": "https://news.cgtn.com/news/2026-11-08/Poland-in-shock-after-six-killed-in-Krakow-mass-shooting-1RTGRfQaanS/img/55cd21910d504daf9a2d0c6dafc43a8e/55cd21910d504daf9a2d0c6dafc43a8e-750.png"
+        },
+        {
+          "id": "875de9df7d3b",
+          "outlet_id": "koreaherald",
+          "headline": "Gunman opens fire in Polish market square",
+          "snippet": "Six people were killed and at least 15 wounded on Saturday when a gunman opened fire in the landmark historic center of Poland's second city of Krakow, in the country's deadliest shooting in…",
+          "url": "https://www.koreaherald.com/article/10929609",
+          "published_at": "2026-11-08T04:25:55Z",
+          "published_at_estimated": false,
+          "image_url": "https://wimg.heraldcorp.com/news/cms/2026/11/08/rcv.YNA.20261108.PAP20261108077801009_T1.jpg"
+        },
+        {
+          "id": "dcce8feb2576",
+          "outlet_id": "thehindu",
+          "headline": "Two women, man found dead in Krakow mass-shooting suspect’s home, says Prime Minister",
+          "snippet": "A Polish man with far-right views drove into a busy central square in Krakow on Saturday, November 7, and opened fire, killing six people and injuring 15 others before police shot and wounded him…",
+          "url": "https://www.thehindu.com/news/international/people-found-dead-in-krakow-mass-shooting-suspects-home-says-prime-minister/article71680538.ece",
+          "published_at": "2026-11-08T04:58:51Z",
+          "published_at_estimated": false,
+          "image_url": "https://th-i.thgim.com/public/incoming/tw2xms/article71680553.ece/alternates/LANDSCAPE_1200/Poland_Shooting_15136.jpg"
+        },
+        {
+          "id": "8c17ad9c8360",
+          "outlet_id": "thehindu",
+          "headline": "Gunman kills 5, injures 12 in Poland’s Krakow shooting attack",
+          "snippet": "The gunman aimed at random people as he drove by the city's Main Square, Krakow police said",
+          "url": "https://www.thehindu.com/news/international/gunman-kills-5-injures-12-in-polands-krakow-shooting-attack/article71679139.ece",
+          "published_at": "2026-11-08T05:53:43Z",
+          "published_at_estimated": false,
+          "image_url": "https://th-i.thgim.com/public/incoming/dzdhwx/article71679297.ece/alternates/LANDSCAPE_1200/2026-11-07T152534Z_1136162981_RC23JOAAGU5Q_RTRMADP_3_POLAND-SHOOTING.JPG"
+        },
+        {
+          "id": "9b7a2de3c861",
+          "outlet_id": "france24",
+          "headline": "Poland launches terrorism probe into mass shooting in Krakow",
+          "snippet": "Poland on Sunday launched a terror probe into the mass shooting in Krakow the day before, in which six people were killed and many more were injured. Authorities have said that the 24-year-old…",
+          "url": "https://www.france24.com/en/europe/20261108-poland-launches-terrorism-probe-into-krakow-mass-shooting",
+          "published_at": "2026-11-08T08:59:56Z",
+          "published_at_estimated": false,
+          "image_url": "https://s.france24.com/media/display/f1250eae-db5d-11f1-9d08-a575454bc579/w:1024/p:16x9/df1b226879aa9026b8f83a806b14523cef6d3728.jpg"
+        },
+        {
+          "id": "6b2aba7c8e12",
+          "outlet_id": "bbc",
+          "headline": "How the deadly shooting in Krakow unfolded",
+          "snippet": "Video authenticated by BBC Verify shows the moment gunshots rang out in Krakow's main market square.",
+          "url": "https://www.bbc.co.uk/news/videos/cq74p2zpwyjmo",
+          "published_at": "2026-11-08T09:29:24Z",
+          "published_at_estimated": false,
+          "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/b00d/live/84d82e90-dafc-11f1-a701-fddedf244c16.jpg"
+        },
+        {
+          "id": "6a514213372b",
+          "outlet_id": "guardian",
+          "headline": "Briton among six dead after gunman opens fire in Kraków market square",
+          "snippet": "Three more people found dead at home of suspect, who minister says held ‘ultra-nationalistic’ views Six people were killed and 16 wounded after a gunman opened fire in a busy market square in…",
+          "url": "https://www.theguardian.com/world/2026/nov/07/krakow-poland-shooting-market-square-deaths-gunman",
+          "published_at": "2026-11-08T09:30:22Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.guim.co.uk/img/media/3d8244fe8422d5c0105861b7f544fc699f6bec58/1148_0_5909_4727/master/5909.jpg?width=460&quality=85&auto=format&fit=max&s=13277f2d5735ef8b8758899ff013fd06"
+        },
+        {
+          "id": "ffdf059d27a9",
+          "outlet_id": "dailymail",
+          "headline": "British man among nine killed after Polish gunman, 25, 'shot dead his parents and sister' then opened fire in Krakow in 'far-right terror attack' - as hero cop left fighting for his life",
+          "snippet": "Four women and two men died during the shooting at a crowded market in Krakow before the bodies of the gunman's family - believed to be his parents and sister - were found at his home.",
+          "url": "https://www.dailymail.com/news/article-16274153/Shots-fired-Krakow-main-square.html",
+          "published_at": "2026-11-08T10:05:30Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.dailymail.com/1s/2026/11/07/16/112364981-0-image-a-18_1794067206083.jpg"
+        },
+        {
+          "id": "8de63ad64566",
+          "outlet_id": "thesun",
+          "headline": "Brave surgeons heard gunfire as they ate lunch before racing to save hero cop who shot ‘far-right gunman’ in Poland",
+          "snippet": "TWO brave doctors raced to save the heroic cop who was critically injured after overpowering the alleged far-right gunman in Poland. The respected surgeons were eating at a restaurant in central…",
+          "url": "https://www.thesun.co.uk/news/40957447/surgeons-save-cop-after-poland-shooting/",
+          "published_at": "2026-11-08T11:22:12Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.thesun.co.uk/wp-content%2Fuploads%2F2026%2F11%2Fcrop-40957817.jpg?quality%3D90%26"
+        },
+        {
+          "id": "d41667b79985",
+          "outlet_id": "bbc",
+          "headline": "What we know so far after Krakow gun attack",
+          "snippet": "Six people were killed in a random shooting in Krakow's main square, and three bodies were later found at the home of the attacker.",
+          "url": "https://www.bbc.co.uk/news/articles/cmd7q15drwgeo",
+          "published_at": "2026-11-08T11:22:17Z",
+          "published_at_estimated": false,
+          "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/f6c3/live/95455f00-dac5-11f1-bda8-29fb69dbc026.jpg"
+        },
+        {
+          "id": "cb2252b0f356",
+          "outlet_id": "thehindu",
+          "headline": "Poland mourns victims of Krakow mass shooting as security fears grow",
+          "snippet": "Seventeen people, including two police officers and the gunman, were wounded in the attack, authorities said",
+          "url": "https://www.thehindu.com/news/international/poland-mourns-victims-of-krakow-mass-shooting-as-security-fears-grow/article71680839.ece",
+          "published_at": "2026-11-08T11:31:28Z",
+          "published_at_estimated": false,
+          "image_url": "https://th-i.thgim.com/public/incoming/nxpo4t/article71680855.ece/alternates/LANDSCAPE_1200/2026-11-08T065810Z_1776384781_RC2HJOAM58NO_RTRMADP_3_POLAND-SHOOTING.JPG"
+        },
+        {
+          "id": "ca461b2c4abe",
+          "outlet_id": "guardian",
+          "headline": "Polish prosecutors open terrorism investigation into Kraków shooting",
+          "snippet": "Officials say suspect holds far-right views and three people found dead at his home were his parents and sister Polish prosecutors have opened a terrorism investigation after a 24-year-old man…",
+          "url": "https://www.theguardian.com/world/2026/nov/08/krakow-shooting-poland-terrorism-investigation",
+          "published_at": "2026-11-08T11:50:15Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.guim.co.uk/img/media/4bbf681557c78034b1991a39bd6e7638b55750c2/500_0_5000_4000/master/5000.jpg?width=460&quality=85&auto=format&fit=max&s=abffd5f3757cfde9f29091ab5addce17"
+        },
+        {
+          "id": "112a29e0ad09",
+          "outlet_id": "nyt",
+          "headline": "What to Know About the Mass Shooting in Krakow, Poland",
+          "snippet": "At least nine people were dead and at least 16 injured after shootings in Krakow and another town, the police said. The motive remains unclear.",
+          "url": "https://www.nytimes.com/2026/11/08/world/europe/poland-krakow-mass-shooting.html",
+          "published_at": "2026-11-08T11:52:20Z",
+          "published_at_estimated": false,
+          "image_url": "https://static01.nyt.com/images/2026/11/08/multimedia/08int-poland-shooting-wtk-01-jhbk/08int-poland-shooting-wtk-01-jhbk-mediumSquareAt3X.jpg"
+        },
+        {
+          "id": "4327f8a2b765",
+          "outlet_id": "nbc",
+          "headline": "Kraków shooting that killed 6 was motivated by far-right views, authorities say",
+          "snippet": "World leaders have paid tribute as Poland declared two national days of mourning after a shooter motivated by far-right ideologies killed six people in Kraków on Saturday, in what the country’s…",
+          "url": "https://www.nbcnews.com/world/europe/krakow-shooting-killed-6-motivated-far-right-views-rcna608080",
+          "published_at": "2026-11-08T12:03:34Z",
+          "published_at_estimated": false,
+          "image_url": "https://media-cldnry.s-nbcnews.com/image/upload/t_fit_1500w/rockcms/2026-11/261108-krakow-nd-7dad8f.jpg"
+        },
+        {
+          "id": "7540cba9be6c",
+          "outlet_id": "dailymail",
+          "headline": "Polish police launch terror probe as British man among nine killed by gunman in 'far-right attack' in Krakow - as it's revealed shooter 'murdered his parents and sister' in rampage before stopped by hero cops",
+          "snippet": "The 25-year-old suspect allegedly murdered his parents and sister at home before driving into the city's historic Main Market Square and opening fire on crowds, killing six more people.",
+          "url": "https://www.dailymail.com/news/article-16275885/Polish-police-launch-terror-probe-British-man-nine-killed-gunman-far-right-attack-Krakow-revealed-shooter-murdered-parents-sister-rampage-stopped-hero-cops.html",
+          "published_at": "2026-11-08T12:16:29Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.dailymail.com/1s/2026/11/07/16/112364981-0-image-a-18_1794067206083.jpg"
+        },
+        {
+          "id": "a5130d3063e9",
+          "outlet_id": "koreaherald",
+          "headline": "Poles mourn rare mass killing as authorities say attacker had far-right views",
+          "snippet": "Poland began two days of national mourning on Sunday, after a 24-year-old man with far-right views drove into a busy central square in Krakow and opened fire, killing six people and wounding 15…",
+          "url": "https://www.koreaherald.com/article/10929805",
+          "published_at": "2026-11-08T12:20:09Z",
+          "published_at_estimated": false,
+          "image_url": "https://wimg.heraldcorp.com/news/cms/2026/11/08/news-p.v1.20261108.6cd4bf48741e4338ba4e27999439aa15_T1.jpg"
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "Six people were killed in the shooting in Krakow's main market square.",
+          "sources": [
+            "99e0f0d6e314",
+            "2fba97e2f6bd",
+            "af77c3093932",
+            "51dda24eceb0",
+            "84a9cb567154",
+            "762e93f84d61",
+            "a86a9064e201",
+            "efbed1840858",
+            "c04d40b189fe",
+            "64cc4dc43803",
+            "875de9df7d3b",
+            "dcce8feb2576",
+            "9b7a2de3c861",
+            "6a514213372b",
+            "d41667b79985",
+            "4327f8a2b765",
+            "7540cba9be6c",
+            "a5130d3063e9"
+          ]
+        },
+        {
+          "text": "Three more bodies were found at the gunman's home.",
+          "sources": [
+            "2fba97e2f6bd",
+            "7a83f080d5f7",
+            "84a9cb567154",
+            "dcce8feb2576",
+            "6a514213372b",
+            "ffdf059d27a9",
+            "d41667b79985",
+            "ca461b2c4abe",
+            "7540cba9be6c"
+          ]
+        },
+        {
+          "text": "The gunman fired from a car or after driving into the square.",
+          "sources": [
+            "99e0f0d6e314",
+            "2fba97e2f6bd",
+            "d768aaf8ad66",
+            "51dda24eceb0",
+            "a86a9064e201",
+            "dcce8feb2576",
+            "8c17ad9c8360",
+            "7540cba9be6c",
+            "a5130d3063e9"
+          ]
+        },
+        {
+          "text": "Officials describe the gunman as holding far-right or ultranationalistic views.",
+          "sources": [
+            "2fba97e2f6bd",
+            "af77c3093932",
+            "51dda24eceb0",
+            "20c91d24ba3d",
+            "c04d40b189fe",
+            "64cc4dc43803",
+            "dcce8feb2576",
+            "6a514213372b",
+            "ca461b2c4abe",
+            "4327f8a2b765",
+            "ffdf059d27a9",
+            "7540cba9be6c",
+            "a5130d3063e9"
+          ]
+        },
+        {
+          "text": "Police shot and wounded the gunman, who was taken to hospital.",
+          "sources": [
+            "20c91d24ba3d",
+            "51dda24eceb0",
+            "a86a9064e201",
+            "64cc4dc43803",
+            "dcce8feb2576"
+          ]
+        },
+        {
+          "text": "A British man was among those killed and another Briton was wounded.",
+          "sources": [
+            "7a83f080d5f7",
+            "c04d40b189fe",
+            "6a514213372b",
+            "ffdf059d27a9",
+            "7540cba9be6c"
+          ]
+        },
+        {
+          "text": "Polish authorities opened a terrorism investigation.",
+          "sources": [
+            "9b7a2de3c861",
+            "ca461b2c4abe",
+            "7540cba9be6c"
+          ]
+        },
+        {
+          "text": "Poland declared two days of national mourning.",
+          "sources": [
+            "4327f8a2b765",
+            "a5130d3063e9"
+          ]
+        },
+        {
+          "text": "The gunman targeted people at random.",
+          "sources": [
+            "51dda24eceb0",
+            "8c17ad9c8360",
+            "d41667b79985"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "2fba97e2f6bd",
+              "quote": "Gunman kills 6 in ‘terror attack’ in Poland",
+              "field": "headline"
+            },
+            {
+              "article_id": "7a83f080d5f7",
+              "quote": "Brit among 6 killed in Krakow shooting",
+              "field": "headline"
+            },
+            {
+              "article_id": "4327f8a2b765",
+              "quote": "motivated by far-right views",
+              "field": "headline"
+            },
+            {
+              "article_id": "112a29e0ad09",
+              "quote": "The motive remains unclear.",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the gunman's far-right or ultranationalistic beliefs as described by officials.",
+              "sources": [
+                "2fba97e2f6bd",
+                "20c91d24ba3d",
+                "6a514213372b",
+                "ca461b2c4abe",
+                "4327f8a2b765"
+              ]
+            },
+            {
+              "text": "Foregrounds British and other foreign victims.",
+              "sources": [
+                "7a83f080d5f7",
+                "20c91d24ba3d",
+                "6a514213372b"
+              ]
+            },
+            {
+              "text": "Reports police officers among the victims and tributes from world leaders.",
+              "sources": [
+                "99e0f0d6e314",
+                "4327f8a2b765"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "606a1743bfa8",
+              "quote": "At least five people killed in shooting in Krakow",
+              "field": "headline"
+            },
+            {
+              "article_id": "c04d40b189fe",
+              "quote": "Briton among six killed by 'far-right' gunman in Krakow rampage",
+              "field": "headline"
+            },
+            {
+              "article_id": "9b7a2de3c861",
+              "quote": "Poland launches terrorism probe",
+              "field": "headline"
+            },
+            {
+              "article_id": "6b2aba7c8e12",
+              "quote": "Video authenticated by BBC Verify",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Emphasises the terrorism investigation and the sequence of events.",
+              "sources": [
+                "9b7a2de3c861",
+                "6b2aba7c8e12",
+                "d41667b79985"
+              ]
+            },
+            {
+              "text": "Describes the shooting as random and the square as a major tourist spot.",
+              "sources": [
+                "51dda24eceb0",
+                "d41667b79985"
+              ]
+            },
+            {
+              "text": "Reports the discovery of three bodies at the gunman's house.",
+              "sources": [
+                "84a9cb567154",
+                "d41667b79985"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "right",
+          "headline_quotes": [
+            {
+              "article_id": "d768aaf8ad66",
+              "quote": "European tourist hot spot",
+              "field": "headline"
+            },
+            {
+              "article_id": "ffdf059d27a9",
+              "quote": "hero cop left fighting for his life",
+              "field": "headline"
+            },
+            {
+              "article_id": "8de63ad64566",
+              "quote": "Brave surgeons heard gunfire as they ate lunch",
+              "field": "headline"
+            },
+            {
+              "article_id": "7540cba9be6c",
+              "quote": "shooter 'murdered his parents and sister' in rampage",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Foregrounds the critically injured police officer and the doctors who treated him.",
+              "sources": [
+                "ffdf059d27a9",
+                "8de63ad64566",
+                "7540cba9be6c"
+              ]
+            },
+            {
+              "text": "Leads with the gunman allegedly killing his parents and sister before the square attack, giving a total of nine dead.",
+              "sources": [
+                "ffdf059d27a9",
+                "7540cba9be6c"
+              ]
+            },
+            {
+              "text": "Reports the gunman reportedly wore military-style fatigues.",
+              "sources": [
+                "d768aaf8ad66"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not identify the three people found at the home as the gunman's parents and sister.",
+          "sources": [
+            "ca461b2c4abe",
+            "ffdf059d27a9",
+            "7540cba9be6c"
+          ]
+        },
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not mention the national days of mourning.",
+          "sources": [
+            "4327f8a2b765"
+          ]
+        },
+        {
+          "lean": "right",
+          "text": "Right coverage does not mention the national days of mourning.",
+          "sources": [
+            "4327f8a2b765"
+          ]
+        },
+        {
+          "lean": "right",
+          "text": "Right coverage does not describe the targets as random.",
+          "sources": [
+            "51dda24eceb0",
+            "d41667b79985"
+          ]
+        }
+      ],
+      "contested_claims": [
+        {
+          "claim": "The suspect is 25 years old, rather than 24.",
+          "asserted_by": [
+            "20c91d24ba3d",
+            "ffdf059d27a9",
+            "7540cba9be6c"
+          ],
+          "disputed_by": [
+            "9b7a2de3c861",
+            "ca461b2c4abe",
+            "a5130d3063e9"
+          ]
+        },
+        {
+          "claim": "Authorities say the shooting was motivated by far-right views, while another report says the motive remains unclear.",
+          "asserted_by": [
+            "4327f8a2b765"
+          ],
+          "disputed_by": [
+            "112a29e0ad09"
+          ]
+        }
+      ],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "2fba97e2f6bd",
+              "quote": "‘terror attack’",
+              "field": "headline"
+            },
+            {
+              "article_id": "c04d40b189fe",
+              "quote": "Briton among six killed",
+              "field": "headline"
+            },
+            {
+              "article_id": "ffdf059d27a9",
+              "quote": "hero cop left fighting for his life",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Foregrounds the British victims.",
+              "sources": [
+                "7a83f080d5f7",
+                "c04d40b189fe",
+                "6a514213372b",
+                "ffdf059d27a9",
+                "7540cba9be6c"
+              ]
+            },
+            {
+              "text": "Emphasises the terrorism investigation.",
+              "sources": [
+                "9b7a2de3c861",
+                "ca461b2c4abe",
+                "7540cba9be6c"
+              ]
+            },
+            {
+              "text": "Reports on the injured police officer described as a hero.",
+              "sources": [
+                "ffdf059d27a9",
+                "8de63ad64566",
+                "7540cba9be6c"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "762e93f84d61",
+              "quote": "Poland in shock after six die in Krakow mass shooting",
+              "field": "headline"
+            },
+            {
+              "article_id": "cb2252b0f356",
+              "quote": "as security fears grow",
+              "field": "headline"
+            },
+            {
+              "article_id": "af77c3093932",
+              "quote": "in the country’s deadliest shooting in",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Emphasises national shock and a country that has viewed itself as safer than much of western Europe.",
+              "sources": [
+                "762e93f84d61",
+                "64cc4dc43803"
+              ]
+            },
+            {
+              "text": "Describes the attack as Poland's deadliest shooting and a rare mass killing.",
+              "sources": [
+                "af77c3093932",
+                "875de9df7d3b",
+                "a5130d3063e9"
+              ]
+            },
+            {
+              "text": "Reports national mourning and growing security fears.",
+              "sources": [
+                "cb2252b0f356",
+                "a5130d3063e9"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "A gunman drove into Krakow's Main Market Square on Saturday and opened fire, killing six people and wounding at least 15 before police shot and wounded him. Three more bodies, reported as his parents and sister, were found at his home. Officials say he held far-right views, and prosecutors opened a terrorism investigation.",
+        "sources": [
+          "2fba97e2f6bd",
+          "51dda24eceb0",
+          "dcce8feb2576",
+          "6a514213372b",
+          "ca461b2c4abe",
+          "9b7a2de3c861",
+          "7540cba9be6c",
+          "a5130d3063e9"
+        ]
+      },
+      "conclusion": {
+        "text": "All sides report six killed in Krakow's main square by a gunman officials link to far-right views, with three more bodies at his home. Western outlets foreground British victims, the terror probe and an injured officer; Eastern outlets stress national shock and mourning. Death and injury counts, the suspect's age and the stated motive differ between reports.",
+        "sources": [
+          "2fba97e2f6bd",
+          "c04d40b189fe",
+          "9b7a2de3c861",
+          "ffdf059d27a9",
+          "762e93f84d61",
+          "a5130d3063e9",
+          "606a1743bfa8",
+          "8c17ad9c8360",
+          "112a29e0ad09",
+          "20c91d24ba3d",
+          "ca461b2c4abe"
+        ]
+      },
+      "validation": {
+        "kept": 50,
+        "dropped_by_reason": {
+          "contested_same_outlet": 2
+        }
+      }
+    },
+    {
+      "id": "bc98e78e5196",
+      "title": "Trump offers UFC chief Dana White the White House press secretary job",
+      "rank": 3,
+      "outlet_count": 15,
+      "coverage": {
+        "lean": {
+          "left": 1,
+          "centre": 3,
+          "right": 3
+        },
+        "bloc": {
+          "west": 7,
+          "east": 8
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "b080381cf6c9",
+          "outlet_id": "scmp",
+          "headline": "Trump asks UFC chief Dana White to be his new press secretary: ‘please take the job’",
+          "snippet": "Facing an incoming Democratic Congress, US President Donald Trump struck a combative tone on Saturday, offering friend and “violent fighter” Dana White the White House press secretary job and…",
+          "url": "https://www.scmp.com/news/world/united-states-canada/article/3373670/trump-asks-ufc-chief-dana-white-be-his-new-press-secretary-please-take-job",
+          "published_at": "2026-11-07T19:44:09Z",
+          "published_at_estimated": false,
+          "image_url": "https://cdn.i-scmp.com/sites/default/files/styles/1280x720/public/d8/images/canvas/2026/11/08/d1a61402-b9ba-4c5c-b7b3-3e68be906927_bba6a128.jpg?itok=db0-K4Tf&v=1794080644"
+        },
+        {
+          "id": "2394efa72fef",
+          "outlet_id": "france24",
+          "headline": "'A violent fighter and warrior': Trump offers press secretary role to UFC chief Dana White",
+          "snippet": "US President Donald Trump on Saturday said he was asking mixed martial arts promoter Dana White to be the new White House press secretary. Trump has repeatedly tried to hitch his MAGA brand of…",
+          "url": "https://www.france24.com/en/americas/20261107-a-violent-fighter-and-warrior-trump-offers-press-secretary-role-to-ufc-chief-dana-white",
+          "published_at": "2026-11-07T20:45:45Z",
+          "published_at_estimated": false,
+          "image_url": "https://s.france24.com/media/display/1699b72c-dadf-11f1-8689-d18c5759e759/w:1024/p:16x9/000-C4336TP.jpg"
+        },
+        {
+          "id": "b5daa3dc7472",
+          "outlet_id": "nbc",
+          "headline": "UFC’s Dana White says he will meet Trump on Monday to discuss press secretary offer",
+          "snippet": "President Donald Trump said that he’d offered the job of White House press secretary to the CEO and president of the Ultimate Fighting Championship, Dana White.",
+          "url": "https://www.nbcnews.com/politics/white-house/trump-offers-press-secretary-job-ufc-ceo-dana-white-rcna608039",
+          "published_at": "2026-11-07T21:39:10Z",
+          "published_at_estimated": false,
+          "image_url": "https://media-cldnry.s-nbcnews.com/image/upload/t_fit_1500w/rockcms/2026-11/261107-Dana-White-ch-1621-9b6631.jpg"
+        },
+        {
+          "id": "0b216a6d68f1",
+          "outlet_id": "japantimes",
+          "headline": "Trump taps UFC boss as press secretary and urges criminal probes into Democrats",
+          "snippet": "The posts echoed comments Trump made after a midterm defeat in 2018, when he said his White House would assume \"a war-like posture.\"",
+          "url": "https://www.japantimes.co.jp/news/2026/11/08/world/politics/trump-ufc-press-secretary/",
+          "published_at": "2026-11-07T23:17:00Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.japantimes.co.jp/japantimes/uploads/images/2026/11/08/thumbs/400x400/572860.jpg"
+        },
+        {
+          "id": "377bba266a4b",
+          "outlet_id": "cgtn",
+          "headline": "Trump offers UFC CEO Dana White White House press secretary job",
+          "snippet": "US President Donald Trump said on Saturday that he had offered Dana White, president and CEO of the Ultimate Fighting Championship (UFC), the position of White House press secretary.",
+          "url": "https://news.cgtn.com/news/2026-11-08/Trump-offers-UFC-CEO-Dana-White-White-House-press-secretary-job-1RTwGYPjANW/p.html",
+          "published_at": "2026-11-08T00:16:53Z",
+          "published_at_estimated": false,
+          "image_url": "https://news.cgtn.com/news/2026-11-08/Trump-offers-UFC-CEO-Dana-White-White-House-press-secretary-job-1RTwGYPjANW/img/319ff0895844465ab112c4928dc89334/319ff0895844465ab112c4928dc89334-750.png"
+        },
+        {
+          "id": "644f28bc5e58",
+          "outlet_id": "timesofisrael",
+          "headline": "Trump says he offered White House press secretary post to UFC chief Dana White",
+          "snippet": "White says he will meet US president on Monday, shares image on Instagram of himself standing behind White House podium",
+          "url": "https://www.timesofisrael.com/trump-offers-white-house-press-secretary-post-to-ufc-chief-dana-white/",
+          "published_at": "2026-11-08T00:43:53Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "25357a38cee4",
+          "outlet_id": "nypost",
+          "headline": "Dana White reveals he’s flying to DC ‘right now’ after Trump offered him press secretary gig",
+          "snippet": "Ultimate Fighting Championship CEO Dana White said he was going to meet with President Trump imminently over his offer to become White House Press Secretary.",
+          "url": "https://nypost.com/2026/11/07/us-news/dana-white-reveals-hes-flying-to-dc-right-now-after-trump-offered-him-press-secretary-gig/",
+          "published_at": "2026-11-08T01:14:04Z",
+          "published_at_estimated": false,
+          "image_url": "https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2F2026-offered-position-white-house-147889883.jpg?w%3D1024"
+        },
+        {
+          "id": "91f3c24ce0f3",
+          "outlet_id": "koreaherald",
+          "headline": "Trump asks UFC&apos;s Dana White to be press secretary",
+          "snippet": "US President Donald Trump said Saturday that he has offered the job of White House press secretary to his friend and UFC boss Dana White, an announcement unconventional even for the norm-busting…",
+          "url": "https://www.koreaherald.com/article/10929587",
+          "published_at": "2026-11-08T03:37:39Z",
+          "published_at_estimated": false,
+          "image_url": "https://wimg.heraldcorp.com/news/cms/2026/11/08/rcv.YNA.20261108.PRU20261108079501009_T1.jpg"
+        },
+        {
+          "id": "71be815b91c5",
+          "outlet_id": "examiner",
+          "headline": "Dana White responds to question about Trump’s White House press secretary request",
+          "snippet": "Dana White, the CEO of the UFC and a longtime ally of President Donald Trump, responded to a question on Saturday night about the president saying he should serve as his next White House press…",
+          "url": "https://www.washingtonexaminer.com/news/white-house/4796653/dana-white-responds-question-trump-white-house-press-secretary-request/",
+          "published_at": "2026-11-08T03:46:34Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.washingtonexaminer.com/wp-content/uploads/2026/07/AP26166022092281.jpg?w=1024"
+        },
+        {
+          "id": "bfb3b1b83d18",
+          "outlet_id": "sky",
+          "headline": "Trump asks UFC boss Dana White to be his new press secretary",
+          "snippet": "Donald Trump has asked mixed martial arts promoter Dana White to be his new White House press secretary.",
+          "url": "https://news.sky.com/story/trump-asks-ufc-boss-dana-white-to-become-white-house-press-secretary-13609613",
+          "published_at": "2026-11-08T04:27:00Z",
+          "published_at_estimated": false,
+          "image_url": "https://e3.365dm.com/26/11/1920x1080/skynews-dana-white-trump_7400674.jpg?20261108050154"
+        },
+        {
+          "id": "f53e12cd7570",
+          "outlet_id": "thehindu",
+          "headline": "Trump offers UFC boss press secretary post, urges criminal probes of Democrats",
+          "snippet": "Dana White had earlier shared a photo -- possibly AI-generated -- showing him behind the lectern in the White House press briefing room, captioned “On to the next chapter.”",
+          "url": "https://www.thehindu.com/news/international/trump-says-he-wants-ufc-chief-dana-white-for-white-house-press-secretary/article71679478.ece",
+          "published_at": "2026-11-08T05:50:23Z",
+          "published_at_estimated": false,
+          "image_url": "https://th-i.thgim.com/public/incoming/kouolh/article71679481.ece/alternates/LANDSCAPE_1200/Trump_423_7.jpg"
+        },
+        {
+          "id": "1990cf6e7389",
+          "outlet_id": "dailymail",
+          "headline": "Dana White speaks out after being offered press secretary role as he reveals he's flying to DC 'right now' and will meet Trump in just hours",
+          "snippet": "Dana White is set to meet Donald Trump on Monday after being offered the White House press secretary job. But CNN claims the UFC boss has already rejected the offer.",
+          "url": "https://www.dailymail.com/news/article-16275039/Dana-White-meet-Donald-Trump-offered-press-secretary-job.html",
+          "published_at": "2026-11-08T07:02:32Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.dailymail.com/1s/2026/11/08/07/112372479-0-image-m-21_1794121283182.jpg"
+        },
+        {
+          "id": "104b486b5d06",
+          "outlet_id": "toi",
+          "headline": "The great White mix-up: Did Trump offer White House job to the wrong Dana White?",
+          "snippet": "",
+          "url": "https://timesofindia.indiatimes.com/world/us/the-great-white-mix-up-did-trump-offer-white-house-job-to-the-wrong-dana-white/articleshow/135653662.cms",
+          "published_at": "2026-11-08T07:25:15Z",
+          "published_at_estimated": false,
+          "image_url": "https://static.toiimg.com/photo/msid-135653907,imgsize-1022694.cms"
+        },
+        {
+          "id": "ad503a9ab36e",
+          "outlet_id": "npr",
+          "headline": "UFC's Dana White says he will meet with Trump Monday over offer to be White House press secretary",
+          "snippet": "President Donald Trump said Saturday that he has offered the job of White House press secretary to his friend and UFC boss Dana White.",
+          "url": "https://www.npr.org/2026/11/08/nx-s1-6033900/ufc-dana-white-trump-white-house-press-secretary",
+          "published_at": "2026-11-08T07:35:29Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "bdebe5ca71d1",
+          "outlet_id": "france24",
+          "headline": "Donald Trump wants UFC fighters as assistants",
+          "snippet": "After a series of combative press briefings between the Trump administration and journalists, the US president surprised many by reportedly offering Dana White, the head of the Ultimate Fighting…",
+          "url": "https://www.france24.com/en/donald-trump-wants-ufc-fighters-as-assistants",
+          "published_at": "2026-11-08T09:44:28Z",
+          "published_at_estimated": false,
+          "image_url": "https://s.france24.com/media/display/ad7ce2ee-db58-11f1-b2b1-d18c5759e759/w:1024/p:16x9/EN-20261108-101159-101400-CS.jpg"
+        },
+        {
+          "id": "2ca2d932dd3f",
+          "outlet_id": "aljazeera",
+          "headline": "Could UFC boss Dana White be next White House press secretary?",
+          "snippet": "UFC chief Dana White says he’ll meet Trump after the US president urged him to become White House press secretary.",
+          "url": "https://www.aljazeera.com/video/newsfeed/2026/11/8/could-ufc-boss-dana-white-be-next-white-house-press-secretary",
+          "published_at": "2026-11-08T11:57:05Z",
+          "published_at_estimated": false,
+          "image_url": null
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "Trump said he had offered or asked Dana White, head of the UFC, to become White House press secretary.",
+          "sources": [
+            "b080381cf6c9",
+            "2394efa72fef",
+            "b5daa3dc7472",
+            "0b216a6d68f1",
+            "377bba266a4b",
+            "644f28bc5e58",
+            "25357a38cee4",
+            "91f3c24ce0f3",
+            "71be815b91c5",
+            "bfb3b1b83d18",
+            "f53e12cd7570",
+            "1990cf6e7389",
+            "ad503a9ab36e",
+            "bdebe5ca71d1",
+            "2ca2d932dd3f"
+          ]
+        },
+        {
+          "text": "White said he would meet Trump, with several reports placing the meeting on Monday.",
+          "sources": [
+            "b5daa3dc7472",
+            "644f28bc5e58",
+            "25357a38cee4",
+            "1990cf6e7389",
+            "ad503a9ab36e",
+            "2ca2d932dd3f"
+          ]
+        },
+        {
+          "text": "The announcement was made on Saturday.",
+          "sources": [
+            "b080381cf6c9",
+            "2394efa72fef",
+            "377bba266a4b",
+            "91f3c24ce0f3",
+            "ad503a9ab36e"
+          ]
+        },
+        {
+          "text": "Trump described White as a \"violent fighter\".",
+          "sources": [
+            "b080381cf6c9",
+            "2394efa72fef"
+          ]
+        },
+        {
+          "text": "White shared an image of himself standing behind the White House briefing room podium.",
+          "sources": [
+            "644f28bc5e58",
+            "f53e12cd7570"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "b5daa3dc7472",
+              "quote": "will meet Trump on Monday to discuss press secretary offer",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with White's plan to meet Trump on Monday and identifies him as CEO and president of the UFC.",
+              "sources": [
+                "b5daa3dc7472"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "2394efa72fef",
+              "quote": "A violent fighter and warrior",
+              "field": "headline"
+            },
+            {
+              "article_id": "bdebe5ca71d1",
+              "quote": "Donald Trump wants UFC fighters as assistants",
+              "field": "headline"
+            },
+            {
+              "article_id": "ad503a9ab36e",
+              "quote": "says he will meet with Trump Monday",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Quotes Trump's description of White as a violent fighter and warrior and links the move to Trump's MAGA brand.",
+              "sources": [
+                "2394efa72fef"
+              ]
+            },
+            {
+              "text": "Places the offer after a series of combative press briefings between the administration and journalists.",
+              "sources": [
+                "bdebe5ca71d1"
+              ]
+            },
+            {
+              "text": "Reports White's planned Monday meeting with Trump.",
+              "sources": [
+                "ad503a9ab36e"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "right",
+          "headline_quotes": [
+            {
+              "article_id": "25357a38cee4",
+              "quote": "flying to DC ‘right now’",
+              "field": "headline"
+            },
+            {
+              "article_id": "71be815b91c5",
+              "quote": "a longtime ally of President Donald Trump",
+              "field": "snippet"
+            },
+            {
+              "article_id": "1990cf6e7389",
+              "quote": "CNN claims the UFC boss has already rejected the offer",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with White's own response, including that he was flying to Washington to meet Trump imminently.",
+              "sources": [
+                "25357a38cee4",
+                "71be815b91c5",
+                "1990cf6e7389"
+              ]
+            },
+            {
+              "text": "Describes White as a longtime ally of Trump.",
+              "sources": [
+                "71be815b91c5"
+              ]
+            },
+            {
+              "text": "Reports a CNN claim that White has already rejected the offer.",
+              "sources": [
+                "1990cf6e7389"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "left",
+          "text": "Does not mention Trump's description of White as a violent fighter and warrior.",
+          "sources": [
+            "2394efa72fef"
+          ]
+        },
+        {
+          "lean": "right",
+          "text": "Does not mention Trump's description of White as a violent fighter and warrior.",
+          "sources": [
+            "2394efa72fef"
+          ]
+        }
+      ],
+      "contested_claims": [
+        {
+          "claim": "A CNN claim relayed by one outlet says White has already rejected the offer, while others report he will meet Trump to discuss it.",
+          "asserted_by": [
+            "1990cf6e7389"
+          ],
+          "disputed_by": [
+            "b5daa3dc7472",
+            "ad503a9ab36e"
+          ]
+        }
+      ],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "25357a38cee4",
+              "quote": "flying to DC ‘right now’",
+              "field": "headline"
+            },
+            {
+              "article_id": "2394efa72fef",
+              "quote": "A violent fighter and warrior",
+              "field": "headline"
+            },
+            {
+              "article_id": "1990cf6e7389",
+              "quote": "CNN claims the UFC boss has already rejected the offer",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Foregrounds White's response and his planned meeting with Trump.",
+              "sources": [
+                "b5daa3dc7472",
+                "25357a38cee4",
+                "71be815b91c5",
+                "1990cf6e7389",
+                "ad503a9ab36e"
+              ]
+            },
+            {
+              "text": "Links the offer to combative press briefings and Trump's MAGA brand.",
+              "sources": [
+                "2394efa72fef",
+                "bdebe5ca71d1"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "0b216a6d68f1",
+              "quote": "urges criminal probes into Democrats",
+              "field": "headline"
+            },
+            {
+              "article_id": "b080381cf6c9",
+              "quote": "Facing an incoming Democratic Congress",
+              "field": "snippet"
+            },
+            {
+              "article_id": "104b486b5d06",
+              "quote": "Did Trump offer White House job to the wrong Dana White?",
+              "field": "headline"
+            },
+            {
+              "article_id": "f53e12cd7570",
+              "quote": "possibly AI-generated",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Pairs the offer with Trump urging criminal probes into Democrats.",
+              "sources": [
+                "0b216a6d68f1",
+                "f53e12cd7570"
+              ]
+            },
+            {
+              "text": "Sets the offer against an incoming Democratic Congress and a combative tone, recalling Trump's 2018 midterm remarks.",
+              "sources": [
+                "b080381cf6c9",
+                "0b216a6d68f1"
+              ]
+            },
+            {
+              "text": "Reports White's podium image, with one outlet saying it was possibly AI-generated.",
+              "sources": [
+                "644f28bc5e58",
+                "f53e12cd7570"
+              ]
+            },
+            {
+              "text": "Describes the announcement as unconventional and asks whether the wrong Dana White was offered the job.",
+              "sources": [
+                "91f3c24ce0f3",
+                "104b486b5d06"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "US President Donald Trump said on Saturday that he had offered UFC chief Dana White the job of White House press secretary. White said he would meet Trump on Monday to discuss the offer. Some reports add that Trump also urged criminal probes into Democrats.",
+        "sources": [
+          "377bba266a4b",
+          "2394efa72fef",
+          "bfb3b1b83d18",
+          "91f3c24ce0f3",
+          "ad503a9ab36e",
+          "b5daa3dc7472",
+          "644f28bc5e58",
+          "1990cf6e7389",
+          "0b216a6d68f1",
+          "f53e12cd7570"
+        ]
+      },
+      "conclusion": {
+        "text": "All sides report that Trump offered Dana White the press secretary job and that White planned to meet him. West-bloc right-leaning outlets lead with White's response, while East-bloc outlets add Trump's call for probes into Democrats. One outlet relays a CNN claim that White already rejected the offer, which others do not report.",
+        "sources": [
+          "377bba266a4b",
+          "bfb3b1b83d18",
+          "b5daa3dc7472",
+          "ad503a9ab36e",
+          "25357a38cee4",
+          "71be815b91c5",
+          "0b216a6d68f1",
+          "f53e12cd7570",
+          "1990cf6e7389"
+        ]
+      },
+      "validation": {
+        "kept": 37,
+        "dropped_by_reason": {}
+      }
+    },
+    {
+      "id": "4a03cf177de7",
+      "title": "Aramco building in Riyadh damaged by debris after intercepted Houthi missiles",
+      "rank": 4,
+      "outlet_count": 8,
+      "coverage": {
+        "lean": {
+          "left": 1,
+          "centre": 1,
+          "right": 0
+        },
+        "bloc": {
+          "west": 2,
+          "east": 6
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "6434d4026109",
+          "outlet_id": "thenational",
+          "headline": "Middle East latest: Saudi Aramco building in Riyadh damaged in attempted attack",
+          "snippet": "The Aramco headquarters building, center, in Riyadh, Saudi Arabia, on Saturday, May 10, 2025. The de facto Saudi leader, Mohammed bin Salman, is preparing to welcome Trump back with a grand display…",
+          "url": "https://www.thenationalnews.com/news/mena/2026/11/08/live-riyadh-tower-damage-iran-war/",
+          "published_at": "2026-11-08T03:53:30Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.thenationalnews.com/resizer/v2/HQZZHKDZNBA6JG3Z3HXYEKULYU.jpg?auth=4d254ae09e565e90d4726f3d2e9f7b487e5615c4b2f3c0c8aa9625ecd58f083a&smart=true&width=4000&height=2667"
+        },
+        {
+          "id": "77683986b387",
+          "outlet_id": "aljazeera",
+          "headline": "Saudi Aramco building in Riyadh damaged in ‘attempted’ attack",
+          "snippet": "Saudi Arabia's Energy Ministry says building in the capital was damaged by falling shrapnel.",
+          "url": "https://www.aljazeera.com/news/2026/11/8/saudi-arabia-intercepts-houthi-missiles-targeting-riyadh-eastern-province",
+          "published_at": "2026-11-08T07:40:07Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "7536b549c559",
+          "outlet_id": "thenational",
+          "headline": "Aramco building in Riyadh damaged in attempted attack, ministry says",
+          "snippet": "An administrative building in Riyadh belonging to oil giant Saudi Aramco was damaged by falling shrapnel during an attempted attack on Sunday, the Saudi Ministry of Energy said. The building…",
+          "url": "https://www.thenationalnews.com/news/gulf/2026/11/08/saudi-led-coalition-intercepts-two-houthi-missiles-fired-towards-riyadh/",
+          "published_at": "2026-11-08T07:51:22Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.thenationalnews.com/resizer/v2/3TNWN63I7REPFJWNUS7EOSCTFY.jpg?auth=75c7d699ca5136fa032cf797f03da1f70c51e9610175342beb7fc5e7a4a6804e&smart=true&width=5704&height=3845"
+        },
+        {
+          "id": "d7c753dbdff5",
+          "outlet_id": "france24",
+          "headline": "Middle East live: Riyadh's financial district targeted following deadly Saudi strikes in Yemen",
+          "snippet": "Riyadh’s Aramco Tower was damaged by falling debris on Sunday after the Saudi-led coalition fighting Yemen’s Houthi rebels intercepted two ballistic missiles headed for the capital’s financial…",
+          "url": "https://www.france24.com/en/middle-east/20261108-middle-east-live-riyadh-financial-district-targeted-deadly-strikes-yemen-israel-eisenkot-netanyahu-coalition-government-elections",
+          "published_at": "2026-11-08T09:47:36Z",
+          "published_at_estimated": false,
+          "image_url": "https://s.france24.com/media/display/0e783f10-db4c-11f1-abfd-a575454bc579/w:1024/p:16x9/7f554331a6cdd64418e7973b0fb73c45bab02694.jpg"
+        },
+        {
+          "id": "c23cce4865a6",
+          "outlet_id": "timesofisrael",
+          "headline": "Houthis fire cruise missiles at Saudi Arabia; Riyadh’s Aramco tower damaged by debris",
+          "snippet": "No injuries reported; images show blown-out windows on several floors; Saudi-led coalition says 2 cruise missiles intercepted",
+          "url": "https://www.timesofisrael.com/houthis-fire-cruise-missiles-at-saudi-arabia-riyadhs-aramco-tower-damaged-by-debris/",
+          "published_at": "2026-11-08T10:13:59Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "3b2978261242",
+          "outlet_id": "scmp",
+          "headline": "Saudi Aramco building in Riyadh damaged in attempted attack",
+          "snippet": "An ⁠administrative building belonging to state ⁠oil giant Saudi Aramco in ⁠Riyadh was damaged by falling debris following an attempted attack on Sunday, with no injuries or fatalities reported, the…",
+          "url": "https://www.scmp.com/news/world/middle-east/article/3373700/saudi-aramco-building-riyadh-damaged-attempted-attack",
+          "published_at": "2026-11-08T11:34:24Z",
+          "published_at_estimated": false,
+          "image_url": "https://cdn.i-scmp.com/sites/default/files/styles/1280x720/public/d8/images/canvas/2026/11/08/53e72927-8a5e-47a5-a91e-6e9ec360bc2d_e2ad55b6.jpg?itok=SEjcCnDx&v=1794137655"
+        },
+        {
+          "id": "a5ddf4e802cf",
+          "outlet_id": "thehindu",
+          "headline": "Riyadh financial district targeted in missile attack, Aramco tower damaged: witnesses",
+          "snippet": "Multiple floors of the Aramco tower appeared to have sustained damage, said another witness, with glass shattered and damage to part of the tower's facade visible",
+          "url": "https://www.thehindu.com/news/international/riyadh-financial-district-targeted-in-missile-attack-aramco-tower-damaged-witnesses/article71680790.ece",
+          "published_at": "2026-11-08T11:43:11Z",
+          "published_at_estimated": false,
+          "image_url": "https://th-i.thgim.com/public/incoming/19gcj3/article71680823.ece/alternates/LANDSCAPE_1200/AFP_D6TJ9NQ.jpg"
+        },
+        {
+          "id": "c74387cf2ff3",
+          "outlet_id": "nyt",
+          "headline": "Saudi Aramco Tower Damaged as Yemen’s Houthis Attack Riyadh",
+          "snippet": "The Saudi authorities said no one was injured and that “falling shrapnel” from an intercepted missile had hit the building in the capital’s financial district.",
+          "url": "https://www.nytimes.com/2026/11/08/world/middleeast/saudi-aramco-tower-riyadh-hit.html",
+          "published_at": "2026-11-08T12:16:41Z",
+          "published_at_estimated": false,
+          "image_url": "https://static01.nyt.com/images/2026/11/08/world/08int-saudi-attack-fna/08int-saudi-attack-fna-mediumSquareAt3X.jpg"
+        },
+        {
+          "id": "80fd28ff70e9",
+          "outlet_id": "koreaherald",
+          "headline": "Riyadh financial district targeted, Aramco skyscraper damaged",
+          "snippet": "An Aramco building in Riyadh was targeted in an \"attempted attack\", the Saudi energy ministry said on Sunday, with eyewitnesses telling AFP the skyscraper sustained damage, after the Saudi-led…",
+          "url": "https://www.koreaherald.com/article/10929808",
+          "published_at": "2026-11-08T12:25:42Z",
+          "published_at_estimated": false,
+          "image_url": "https://wimg.heraldcorp.com/news/cms/2026/11/08/news-p.v1.20261108.7c982c295a7d4939b30e66ead5952382_T1.jpg"
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "An Aramco building in Riyadh was damaged.",
+          "sources": [
+            "6434d4026109",
+            "77683986b387",
+            "7536b549c559",
+            "d7c753dbdff5",
+            "c23cce4865a6",
+            "3b2978261242",
+            "a5ddf4e802cf",
+            "c74387cf2ff3",
+            "80fd28ff70e9"
+          ]
+        },
+        {
+          "text": "The damage was caused by falling shrapnel or debris.",
+          "sources": [
+            "77683986b387",
+            "7536b549c559",
+            "d7c753dbdff5",
+            "c23cce4865a6",
+            "3b2978261242",
+            "c74387cf2ff3"
+          ]
+        },
+        {
+          "text": "Saudi Arabia's energy ministry described the incident as an attempted attack.",
+          "sources": [
+            "77683986b387",
+            "7536b549c559",
+            "80fd28ff70e9",
+            "3b2978261242",
+            "6434d4026109"
+          ]
+        },
+        {
+          "text": "The building is in Riyadh's financial district.",
+          "sources": [
+            "d7c753dbdff5",
+            "a5ddf4e802cf",
+            "c74387cf2ff3",
+            "80fd28ff70e9"
+          ]
+        },
+        {
+          "text": "Missiles were intercepted before the debris hit the building.",
+          "sources": [
+            "d7c753dbdff5",
+            "c23cce4865a6",
+            "c74387cf2ff3"
+          ]
+        },
+        {
+          "text": "No injuries were reported.",
+          "sources": [
+            "c23cce4865a6",
+            "3b2978261242",
+            "c74387cf2ff3"
+          ]
+        },
+        {
+          "text": "The missiles are attributed to Yemen's Houthis.",
+          "sources": [
+            "d7c753dbdff5",
+            "c23cce4865a6",
+            "c74387cf2ff3"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "c74387cf2ff3",
+              "quote": "Saudi Aramco Tower Damaged as Yemen’s Houthis Attack Riyadh",
+              "field": "headline"
+            },
+            {
+              "article_id": "c74387cf2ff3",
+              "quote": "“falling shrapnel” from an intercepted missile",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the Houthis as attackers and attributes the no-injury and shrapnel details to Saudi authorities.",
+              "sources": [
+                "c74387cf2ff3"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "d7c753dbdff5",
+              "quote": "Riyadh's financial district targeted following deadly Saudi strikes in Yemen",
+              "field": "headline"
+            },
+            {
+              "article_id": "d7c753dbdff5",
+              "quote": "intercepted two ballistic missiles",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Places the incident after deadly Saudi strikes in Yemen and attributes the interception to the Saudi-led coalition.",
+              "sources": [
+                "d7c753dbdff5"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "left",
+          "text": "The left-leaning coverage does not mention the preceding deadly Saudi strikes in Yemen.",
+          "sources": [
+            "d7c753dbdff5"
+          ]
+        },
+        {
+          "lean": "centre",
+          "text": "The centre coverage does not mention that no injuries were reported.",
+          "sources": [
+            "c74387cf2ff3"
+          ]
+        }
+      ],
+      "contested_claims": [
+        {
+          "claim": "The two intercepted missiles were ballistic missiles, rather than cruise missiles.",
+          "asserted_by": [
+            "d7c753dbdff5"
+          ],
+          "disputed_by": [
+            "c23cce4865a6"
+          ]
+        }
+      ],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "c74387cf2ff3",
+              "quote": "Yemen’s Houthis Attack Riyadh",
+              "field": "headline"
+            },
+            {
+              "article_id": "d7c753dbdff5",
+              "quote": "following deadly Saudi strikes in Yemen",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Names the Houthis in the headline and links the incident to the Yemen conflict.",
+              "sources": [
+                "c74387cf2ff3",
+                "d7c753dbdff5"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "77683986b387",
+              "quote": "damaged in ‘attempted’ attack",
+              "field": "headline"
+            },
+            {
+              "article_id": "a5ddf4e802cf",
+              "quote": "Aramco tower damaged: witnesses",
+              "field": "headline"
+            },
+            {
+              "article_id": "c23cce4865a6",
+              "quote": "images show blown-out windows on several floors",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Most headlines lead with the energy ministry's description of an attempted attack, without naming the attacker.",
+              "sources": [
+                "77683986b387",
+                "7536b549c559",
+                "3b2978261242",
+                "80fd28ff70e9",
+                "6434d4026109"
+              ]
+            },
+            {
+              "text": "Several articles describe visible damage reported by witnesses or shown in images, including shattered glass on multiple floors.",
+              "sources": [
+                "a5ddf4e802cf",
+                "c23cce4865a6",
+                "80fd28ff70e9"
+              ]
+            },
+            {
+              "text": "One article mentions Mohammed bin Salman preparing to welcome Trump back.",
+              "sources": [
+                "6434d4026109"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "An Aramco building in Riyadh's financial district was damaged on Sunday by falling debris or shrapnel after missiles were intercepted. Saudi Arabia's energy ministry called it an attempted attack, and several outlets attribute the missiles to Yemen's Houthis. No injuries were reported.",
+        "sources": [
+          "77683986b387",
+          "7536b549c559",
+          "d7c753dbdff5",
+          "c23cce4865a6",
+          "3b2978261242",
+          "c74387cf2ff3",
+          "80fd28ff70e9",
+          "a5ddf4e802cf",
+          "6434d4026109"
+        ]
+      },
+      "conclusion": {
+        "text": "All coverage agrees an Aramco building in Riyadh was damaged by falling debris, with no injuries reported. West-bloc headlines name the Houthis and the Yemen strikes, while most East-bloc headlines use the ministry's 'attempted attack' wording. France 24 and The Times of Israel differ on whether the missiles were ballistic or cruise.",
+        "sources": [
+          "c74387cf2ff3",
+          "d7c753dbdff5",
+          "77683986b387",
+          "7536b549c559",
+          "3b2978261242",
+          "80fd28ff70e9",
+          "c23cce4865a6"
+        ]
+      },
+      "validation": {
+        "kept": 27,
+        "dropped_by_reason": {}
+      }
+    },
+    {
+      "id": "ba1d9dd2633f",
+      "title": "New Zealand election ends with no clear winner",
+      "rank": 5,
+      "outlet_count": 7,
+      "coverage": {
+        "lean": {
+          "left": 2,
+          "centre": 2,
+          "right": 0
+        },
+        "bloc": {
+          "west": 4,
+          "east": 3
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "3e03736f928e",
+          "outlet_id": "thehindu",
+          "headline": "New Zealand vote still too close to call as results trickle in",
+          "snippet": "New Zealand’s election remained too close to call on November 7, as early results trickled in from across the country, with neither the governing National-Luxon coalition nor Labour falling short of…",
+          "url": "https://www.thehindu.com/news/international/new-zealand-vote-still-too-close-to-call-as-results-trickle-in/article71677647.ece",
+          "published_at": "2026-11-07T10:58:53Z",
+          "published_at_estimated": false,
+          "image_url": "https://th-i.thgim.com/public/incoming/ai14v4/article71677663.ece/alternates/LANDSCAPE_1200/2026-11-07T082434Z_1861295707_RC2WIOAL0HBH_RTRMADP_3_NEWZEALAND-ELECTION.JPG"
+        },
+        {
+          "id": "1f2a3f2f9a04",
+          "outlet_id": "guardian",
+          "headline": "New Zealand election coalition talks will likely take weeks – as it happened",
+          "snippet": "This blog is closed, you can read our report on the New Zealand election here Another update here with 8% of the vote counted. National on 31.2%, Labour 28.4%, the Greens 12.9%, Act 11.2%, NZ First…",
+          "url": "https://www.theguardian.com/world/live/2026/nov/07/nz-general-election-2026-live-updates-results-new-zealand-polls",
+          "published_at": "2026-11-07T13:12:22Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.guim.co.uk/img/media/ca0da5faecb3c527577fc78ebfc856aa865bc8d6/1_0_4998_4000/master/4998.jpg?width=460&quality=85&auto=format&fit=max&s=ded34bcee488a2d8d6318bad59fc450b"
+        },
+        {
+          "id": "0812248edeff",
+          "outlet_id": "nyt",
+          "headline": "New Zealand’s Election ‘Too Close to Call’ as Voters Turn to Minor Parties",
+          "snippet": "Preliminary results showed the right-wing bloc slightly ahead but no clear winner after an election that was dominated by economic concerns.",
+          "url": "https://www.nytimes.com/2026/11/06/world/asia/new-zealand-election-vote.html",
+          "published_at": "2026-11-07T13:13:40Z",
+          "published_at_estimated": false,
+          "image_url": "https://static01.nyt.com/images/2026/11/06/multimedia/06int-NZ-elections-gjhz/06int-NZ-elections-gjhz-mediumSquareAt3X.jpg"
+        },
+        {
+          "id": "3180848bf151",
+          "outlet_id": "bbc",
+          "headline": "'Flat', 'tired', 'cynical': Unusually gloomy Kiwis deliver New Zealand's tightest election in years",
+          "snippet": "The national mood is low, and faith in politics even lower - with voters deserting the major parties at the polls.",
+          "url": "https://www.bbc.co.uk/news/articles/cxr5yyg2nj9eo",
+          "published_at": "2026-11-07T21:36:16Z",
+          "published_at_estimated": false,
+          "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/d485/live/0685e840-dab9-11f1-b441-2b33b063138f.jpg"
+        },
+        {
+          "id": "2187ffd28606",
+          "outlet_id": "japantimes",
+          "headline": "New Zealand preliminary vote leaves it unclear who will govern",
+          "snippet": "Neither current Prime Minister Christopher Luxon nor opposition leader Chris Hipkins claimed victory in their speeches following the election.",
+          "url": "https://www.japantimes.co.jp/news/2026/11/08/asia-pacific/politics/new-zealand-vote-unclear/",
+          "published_at": "2026-11-07T23:10:00Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.japantimes.co.jp/japantimes/uploads/images/2026/11/08/thumbs/400x400/572862.jpg"
+        },
+        {
+          "id": "371529170c48",
+          "outlet_id": "timesofisrael",
+          "headline": "New Zealand in political limbo as initial vote count gives coalition razor-thin lead",
+          "snippet": "While center-right coalition holds one seat majority, remaining votes cast outside electorate and overseas historically favor left; new centrist party may be kingmaker",
+          "url": "https://www.timesofisrael.com/new-zealands-future-unclear-as-initial-vote-count-gives-coalition-razor-thin-lead/",
+          "published_at": "2026-11-08T00:03:14Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "6dfefef34c5b",
+          "outlet_id": "guardian",
+          "headline": "NZ election 2026: New Zealand faces weeks of uncertainty with results ‘too close to call’",
+          "snippet": "National party will be largest in parliament but ultimate shape of next government won’t be settled for some time New Zealand could be facing a weeks-long wait to know the shape of its next…",
+          "url": "https://www.theguardian.com/world/2026/nov/07/new-zealand-election-too-close-to-call-vote-count",
+          "published_at": "2026-11-08T01:00:48Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.guim.co.uk/img/media/7fcb32a817f834d2911af2cc72d2a3a7d313ee0e/688_0_6880_5504/master/6880.jpg?width=460&quality=85&auto=format&fit=max&s=e84b4f6321405d8e1201c960b64d3aef"
+        },
+        {
+          "id": "e04d853652c4",
+          "outlet_id": "france24",
+          "headline": "New Zealand election produces no clear winner as smaller parties make record gains",
+          "snippet": "No clear winner was produced in New Zealand’s legislative elections, setting up the two main blocks – Prime Minister Christopher Luxon and his right-wing coalition and opposition leader Chris…",
+          "url": "https://www.france24.com/en/asia-pacific/20261108-new-zealand-election-produces-no-clear-winner-as-smaller-parties-make-record-gains",
+          "published_at": "2026-11-08T03:01:54Z",
+          "published_at_estimated": false,
+          "image_url": "https://s.france24.com/media/display/c039f738-db20-11f1-a5eb-1beafce15fea/w:1024/p:16x9/c7f3463382f4a345e7ea10396c4211fa925e0888.jpg"
+        },
+        {
+          "id": "1fd7f911527b",
+          "outlet_id": "thehindu",
+          "headline": "New Zealanders won’t know for weeks who won election as neither side secures clear victory",
+          "snippet": "The tightest vote in years delivered a stinging rebuke to the major parties which have long dominated New Zealand politics, Christopher Luxon’s centre-right National party and centre-left Labour led…",
+          "url": "https://www.thehindu.com/news/international/new-zealanders-wont-know-for-weeks-who-won-election-as-neither-side-secures-clear-victory/article71680680.ece",
+          "published_at": "2026-11-08T07:15:25Z",
+          "published_at_estimated": false,
+          "image_url": "https://th-i.thgim.com/public/incoming/iupcvk/article71680698.ece/alternates/LANDSCAPE_1200/2026-11-07T221725Z_147850336_RC2HYNAEMYDY_RTRMADP_3_NEWZEALAND-ELECTION.JPG"
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "The election is too close to call, with no clear winner.",
+          "sources": [
+            "3e03736f928e",
+            "0812248edeff",
+            "6dfefef34c5b",
+            "e04d853652c4",
+            "2187ffd28606",
+            "1fd7f911527b",
+            "371529170c48",
+            "3180848bf151"
+          ]
+        },
+        {
+          "text": "The right-wing or centre-right side, led by National, is slightly ahead in preliminary counts.",
+          "sources": [
+            "0812248edeff",
+            "371529170c48",
+            "6dfefef34c5b",
+            "1f2a3f2f9a04"
+          ]
+        },
+        {
+          "text": "Voters moved away from the major parties, with smaller or minor parties gaining.",
+          "sources": [
+            "0812248edeff",
+            "3180848bf151",
+            "e04d853652c4",
+            "1fd7f911527b"
+          ]
+        },
+        {
+          "text": "The outcome may not be known for weeks.",
+          "sources": [
+            "1f2a3f2f9a04",
+            "6dfefef34c5b",
+            "1fd7f911527b"
+          ]
+        },
+        {
+          "text": "It is described as New Zealand's tightest election in years.",
+          "sources": [
+            "3180848bf151",
+            "1fd7f911527b"
+          ]
+        },
+        {
+          "text": "Christopher Luxon is prime minister and Chris Hipkins is opposition leader.",
+          "sources": [
+            "2187ffd28606",
+            "e04d853652c4"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "1f2a3f2f9a04",
+              "quote": "coalition talks will likely take weeks",
+              "field": "headline"
+            },
+            {
+              "article_id": "0812248edeff",
+              "quote": "Voters Turn to Minor Parties",
+              "field": "headline"
+            },
+            {
+              "article_id": "6dfefef34c5b",
+              "quote": "New Zealand faces weeks of uncertainty",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the weeks-long wait and coalition talks to come.",
+              "sources": [
+                "1f2a3f2f9a04",
+                "6dfefef34c5b"
+              ]
+            },
+            {
+              "text": "Gives partial vote shares, with National on 31.2% and Labour 28.4% at 8% counted.",
+              "sources": [
+                "1f2a3f2f9a04"
+              ]
+            },
+            {
+              "text": "Describes the election as dominated by economic concerns.",
+              "sources": [
+                "0812248edeff"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "3180848bf151",
+              "quote": "'Flat', 'tired', 'cynical': Unusually gloomy Kiwis",
+              "field": "headline"
+            },
+            {
+              "article_id": "e04d853652c4",
+              "quote": "smaller parties make record gains",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Foregrounds a low national mood and low faith in politics.",
+              "sources": [
+                "3180848bf151"
+              ]
+            },
+            {
+              "text": "Emphasises record gains for smaller parties.",
+              "sources": [
+                "e04d853652c4"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not mention that the result may take weeks to settle.",
+          "sources": [
+            "1f2a3f2f9a04",
+            "6dfefef34c5b"
+          ]
+        },
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not mention which side leads the preliminary count.",
+          "sources": [
+            "0812248edeff",
+            "6dfefef34c5b",
+            "1f2a3f2f9a04"
+          ]
+        },
+        {
+          "lean": "left",
+          "text": "Left coverage does not mention the gloomy national mood or low faith in politics.",
+          "sources": [
+            "3180848bf151"
+          ]
+        }
+      ],
+      "contested_claims": [],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "6dfefef34c5b",
+              "quote": "results ‘too close to call’",
+              "field": "headline"
+            },
+            {
+              "article_id": "3180848bf151",
+              "quote": "voters deserting the major parties at the polls",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Emphasises the weeks-long wait, voter mood and minor-party gains.",
+              "sources": [
+                "1f2a3f2f9a04",
+                "6dfefef34c5b",
+                "3180848bf151",
+                "e04d853652c4",
+                "0812248edeff"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "371529170c48",
+              "quote": "new centrist party may be kingmaker",
+              "field": "snippet"
+            },
+            {
+              "article_id": "2187ffd28606",
+              "quote": "leaves it unclear who will govern",
+              "field": "headline"
+            },
+            {
+              "article_id": "1fd7f911527b",
+              "quote": "a stinging rebuke to the major parties",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Notes that neither Luxon nor Hipkins claimed victory.",
+              "sources": [
+                "2187ffd28606"
+              ]
+            },
+            {
+              "text": "Reports a one-seat coalition majority, with remaining votes historically favouring the left.",
+              "sources": [
+                "371529170c48"
+              ]
+            },
+            {
+              "text": "Describes the result as a rebuke to the major parties.",
+              "sources": [
+                "1fd7f911527b"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "New Zealand's election on 7 November produced no clear winner, with preliminary results putting Prime Minister Christopher Luxon's right-wing bloc slightly ahead. Smaller parties gained as voters deserted the major parties, and the shape of the next government may not be known for weeks.",
+        "sources": [
+          "3e03736f928e",
+          "0812248edeff",
+          "371529170c48",
+          "6dfefef34c5b",
+          "e04d853652c4",
+          "1fd7f911527b",
+          "3180848bf151",
+          "1f2a3f2f9a04",
+          "2187ffd28606"
+        ]
+      },
+      "conclusion": {
+        "text": "All sides report a too-close-to-call election with the right-wing bloc narrowly ahead and minor parties gaining. Left outlets stress the weeks of coalition talks, centre outlets the gloomy mood and smaller-party gains, and East outlets the leaders' lack of victory claims and uncounted votes. No outlets contradict one another.",
+        "sources": [
+          "0812248edeff",
+          "371529170c48",
+          "1f2a3f2f9a04",
+          "6dfefef34c5b",
+          "3180848bf151",
+          "e04d853652c4",
+          "2187ffd28606",
+          "1fd7f911527b",
+          "3e03736f928e"
+        ]
+      },
+      "validation": {
+        "kept": 30,
+        "dropped_by_reason": {}
+      }
+    },
+    {
+      "id": "7315ea802e12",
+      "title": "Paraguay's ousted president Santiago Peña charged over Ueno bank collapse",
+      "rank": 6,
+      "outlet_count": 6,
+      "coverage": {
+        "lean": {
+          "left": 2,
+          "centre": 2,
+          "right": 0
+        },
+        "bloc": {
+          "west": 4,
+          "east": 2
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "f3f407aae90f",
+          "outlet_id": "guardian",
+          "headline": "Ousted Paraguay president under house arrest after banking crisis leaves 60% of country unable to access accounts",
+          "snippet": "Santiago Peña was detained minutes after he was impeached by Congress, as protesters took to the streets demanding answers after the suspension of the Ueno bank Paraguay’s rightwing president has…",
+          "url": "https://www.theguardian.com/world/2026/nov/07/ousted-paraguay-president-under-house-arrest-after-banking-crisis-leaves-60-of-country-unable-to-access-accounts",
+          "published_at": "2026-11-07T01:55:11Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.guim.co.uk/img/media/3279bdc7ce3e00c2cbd356e73e342e1cba40051e/294_0_4320_3456/master/4320.jpg?width=460&quality=85&auto=format&fit=max&s=0ec041f108221b973180fffe67be9186"
+        },
+        {
+          "id": "0097e39e749f",
+          "outlet_id": "thehindu",
+          "headline": "How a bank collapse in Paraguay brought down the country’s President | Explained",
+          "snippet": "Millions of customers, abruptly, lost access to their savings accounts and pension payments after regulators seized the bank, setting off a sequence of events that culminated in a change of…",
+          "url": "https://www.thehindu.com/news/international/how-a-bank-collapse-in-paraguay-brought-down-the-countrys-president-explained/article71677767.ece",
+          "published_at": "2026-11-07T10:27:26Z",
+          "published_at_estimated": false,
+          "image_url": "https://th-i.thgim.com/public/incoming/jdk7j1/article71677781.ece/alternates/LANDSCAPE_1200/Paraguay_Bank_Failure__15_7.jpg"
+        },
+        {
+          "id": "22293ed1e9e3",
+          "outlet_id": "france24",
+          "headline": "Paraguay’s impeached president charged over business links to bank collapse",
+          "snippet": "Paraguay’s impeached president Santiago Peña was on Saturday charged over his business links to a major online bank whose sudden collapse locked millions of people out of their money and sparked…",
+          "url": "https://www.france24.com/en/americas/20261107-paraguay-s-impeached-president-charged-over-bank-collapse",
+          "published_at": "2026-11-07T15:49:53Z",
+          "published_at_estimated": false,
+          "image_url": "https://s.france24.com/media/display/13a50202-db1f-11f1-b25a-a575454bc579/w:1024/p:16x9/1af5d113e86f17a56a0a0a89ac52628e81d81c00.jpg"
+        },
+        {
+          "id": "9566c65ba8f2",
+          "outlet_id": "bbc",
+          "headline": "Paraguay's former president charged after bank collapse",
+          "snippet": "Santiago Peña was ousted due to a banking crisis which left millions of people unable to access their money.",
+          "url": "https://www.bbc.co.uk/news/articles/c68jzzvjgdy9o",
+          "published_at": "2026-11-07T19:17:22Z",
+          "published_at_estimated": false,
+          "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/a65d/live/3fe15d20-da57-11f1-af22-a97b84c9ca63.jpg"
+        },
+        {
+          "id": "b2f66eb40951",
+          "outlet_id": "nyt",
+          "headline": "Prosecutors Charge Paraguay’s Former President With Corruption",
+          "snippet": "Santiago Peña was impeached, removed from office, placed under house arrest and charged with using his office to enrich himself after a bank with close ties to his administration went under.",
+          "url": "https://www.nytimes.com/2026/11/06/world/americas/paraguay-president-removed-ueno.html",
+          "published_at": "2026-11-07T20:17:15Z",
+          "published_at_estimated": false,
+          "image_url": "https://static01.nyt.com/images/2026/11/06/multimedia/06int-Paraguay-WTK-glwt/06int-Paraguay-WTK-glwt-mediumSquareAt3X.jpg"
+        },
+        {
+          "id": "537049d04256",
+          "outlet_id": "thehindu",
+          "headline": "Paraguay's ousted President charged with crimes linked to collapse of major bank",
+          "snippet": "In a farewell message released shortly before he was ousted on Friday (November 6), Mr. Peña expressed hope his departure would spare Paraguay further harm",
+          "url": "https://www.thehindu.com/news/international/paraguays-ousted-president-charged-with-crimes-linked-to-collapse-of-major-bank/article71680452.ece",
+          "published_at": "2026-11-08T01:22:02Z",
+          "published_at_estimated": false,
+          "image_url": "https://th-i.thgim.com/public/incoming/ry3w3u/article71680455.ece/alternates/LANDSCAPE_1200/APTOPIX_Paraguay_Bank_Failure_767_.jpg"
+        },
+        {
+          "id": "4298f3ee0eb0",
+          "outlet_id": "timesofisrael",
+          "headline": "Paraguay’s ex-president taken into custody over alleged bank crisis role",
+          "snippet": "Santiago Peña allegedly used his role to keep large amounts of public money deposited at digital lender ueno, whose collapse has left millions struggling to access their funds",
+          "url": "https://www.timesofisrael.com/paraguays-pro-israel-ex-president-taken-into-custody-over-alleged-bank-crisis-role/",
+          "published_at": "2026-11-08T03:29:16Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "ceb05da9a007",
+          "outlet_id": "france24",
+          "headline": "Paraguay: Senate impeached Peña rather than accept his offer to resign",
+          "snippet": "Paraguay's ousted president, Santiago Peña, has been charged over the collapse of Ueno Bank. Initially placed under house arrest, he has since been transferred to a military facility for his own…",
+          "url": "https://www.france24.com/en/video/20261108-paraguay-senate-impeached-pe%C3%B1a-rather-than-accept-his-offer-to-resign",
+          "published_at": "2026-11-08T10:42:59Z",
+          "published_at_estimated": false,
+          "image_url": "https://s.france24.com/media/display/97992746-db60-11f1-b875-695cb59fade5/w:1024/p:16x9/EN-20261108-111033-111218-CS.jpg"
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "Santiago Peña was impeached or ousted as president of Paraguay.",
+          "sources": [
+            "f3f407aae90f",
+            "0097e39e749f",
+            "22293ed1e9e3",
+            "9566c65ba8f2",
+            "b2f66eb40951",
+            "537049d04256",
+            "ceb05da9a007"
+          ]
+        },
+        {
+          "text": "Peña has been charged in connection with the bank's collapse.",
+          "sources": [
+            "22293ed1e9e3",
+            "9566c65ba8f2",
+            "b2f66eb40951",
+            "537049d04256",
+            "ceb05da9a007"
+          ]
+        },
+        {
+          "text": "The bank's collapse left millions of people unable to access their money or savings.",
+          "sources": [
+            "0097e39e749f",
+            "22293ed1e9e3",
+            "9566c65ba8f2",
+            "4298f3ee0eb0"
+          ]
+        },
+        {
+          "text": "Peña was placed under house arrest or taken into custody.",
+          "sources": [
+            "f3f407aae90f",
+            "b2f66eb40951",
+            "4298f3ee0eb0",
+            "ceb05da9a007"
+          ]
+        },
+        {
+          "text": "The bank at the centre of the crisis is Ueno.",
+          "sources": [
+            "f3f407aae90f",
+            "4298f3ee0eb0",
+            "ceb05da9a007"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "f3f407aae90f",
+              "quote": "leaves 60% of country unable to access accounts",
+              "field": "headline"
+            },
+            {
+              "article_id": "f3f407aae90f",
+              "quote": "protesters took to the streets demanding answers",
+              "field": "snippet"
+            },
+            {
+              "article_id": "b2f66eb40951",
+              "quote": "Prosecutors Charge Paraguay’s Former President With Corruption",
+              "field": "headline"
+            },
+            {
+              "article_id": "b2f66eb40951",
+              "quote": "charged with using his office to enrich himself",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the scale of the crisis, putting it at 60% of the country, and with street protests.",
+              "sources": [
+                "f3f407aae90f"
+              ]
+            },
+            {
+              "text": "Describes the charge as corruption and the bank as having close ties to Peña's administration.",
+              "sources": [
+                "b2f66eb40951"
+              ]
+            },
+            {
+              "text": "Notes Peña was detained minutes after impeachment and describes him as rightwing.",
+              "sources": [
+                "f3f407aae90f"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "22293ed1e9e3",
+              "quote": "charged over business links to bank collapse",
+              "field": "headline"
+            },
+            {
+              "article_id": "ceb05da9a007",
+              "quote": "Senate impeached Peña rather than accept his offer to resign",
+              "field": "headline"
+            },
+            {
+              "article_id": "9566c65ba8f2",
+              "quote": "Paraguay's former president charged after bank collapse",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Frames the charges around Peña's business links to the online bank.",
+              "sources": [
+                "22293ed1e9e3"
+              ]
+            },
+            {
+              "text": "Reports the Senate chose impeachment over Peña's resignation offer and that he was moved to a military facility.",
+              "sources": [
+                "ceb05da9a007"
+              ]
+            },
+            {
+              "text": "Describes his ouster as caused by the banking crisis.",
+              "sources": [
+                "9566c65ba8f2"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "left",
+          "text": "Left coverage does not mention Peña's offer to resign or his transfer to a military facility.",
+          "sources": [
+            "ceb05da9a007"
+          ]
+        },
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not mention protesters taking to the streets.",
+          "sources": [
+            "f3f407aae90f"
+          ]
+        }
+      ],
+      "contested_claims": [],
+      "opinion": [
+        {
+          "text": "The Hindu's explainer traces how regulators' seizure of the bank set off events culminating in a change of president.",
+          "sources": [
+            "0097e39e749f"
+          ]
+        }
+      ],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "b2f66eb40951",
+              "quote": "Prosecutors Charge Paraguay’s Former President With Corruption",
+              "field": "headline"
+            },
+            {
+              "article_id": "f3f407aae90f",
+              "quote": "Ousted Paraguay president under house arrest",
+              "field": "headline"
+            },
+            {
+              "article_id": "ceb05da9a007",
+              "quote": "Senate impeached Peña rather than accept his offer to resign",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Foregrounds the impeachment, house arrest, protests and the corruption and business-link charges.",
+              "sources": [
+                "f3f407aae90f",
+                "22293ed1e9e3",
+                "9566c65ba8f2",
+                "b2f66eb40951",
+                "ceb05da9a007"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "0097e39e749f",
+              "quote": "How a bank collapse in Paraguay brought down the country’s President",
+              "field": "headline"
+            },
+            {
+              "article_id": "537049d04256",
+              "quote": "Mr. Peña expressed hope his departure would spare Paraguay further harm",
+              "field": "snippet"
+            },
+            {
+              "article_id": "4298f3ee0eb0",
+              "quote": "allegedly used his role to keep large amounts of public money deposited at digital lender ueno",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Reports Peña's farewell message hoping his departure would spare Paraguay further harm.",
+              "sources": [
+                "537049d04256"
+              ]
+            },
+            {
+              "text": "Details the allegation that Peña kept public money deposited at Ueno.",
+              "sources": [
+                "4298f3ee0eb0"
+              ]
+            },
+            {
+              "text": "Explains the loss of access to savings and pension payments after regulators seized the bank.",
+              "sources": [
+                "0097e39e749f"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "Paraguay's president Santiago Peña was impeached and ousted after the collapse of the digital bank Ueno left millions of people unable to access their money. He was placed under house arrest and charged over his links to the bank, and one report says he was later moved to a military facility.",
+        "sources": [
+          "f3f407aae90f",
+          "0097e39e749f",
+          "22293ed1e9e3",
+          "9566c65ba8f2",
+          "b2f66eb40951",
+          "537049d04256",
+          "4298f3ee0eb0",
+          "ceb05da9a007"
+        ]
+      },
+      "conclusion": {
+        "text": "All coverage agrees Peña was ousted and charged after Ueno's collapse cut millions off from their money. Left outlets stress corruption and protests, centre outlets business links and the Senate's rejection of his resignation, and East-bloc outlets his farewell message and alleged public deposits at Ueno; no outlet disputes another's account.",
+        "sources": [
+          "f3f407aae90f",
+          "b2f66eb40951",
+          "22293ed1e9e3",
+          "ceb05da9a007",
+          "9566c65ba8f2",
+          "537049d04256",
+          "4298f3ee0eb0",
+          "0097e39e749f"
+        ]
+      },
+      "validation": {
+        "kept": 33,
+        "dropped_by_reason": {}
+      }
+    },
+    {
+      "id": "cc18bfb8d049",
+      "title": "Heavy rain floods tens of thousands of displaced people's tents in Gaza",
+      "rank": 7,
+      "outlet_count": 6,
+      "coverage": {
+        "lean": {
+          "left": 0,
+          "centre": 1,
+          "right": 0
+        },
+        "bloc": {
+          "west": 1,
+          "east": 5
+        }
+      },
+      "blindspot": {
+        "lean": "centre",
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "ab0b3f727efe",
+          "outlet_id": "thehindu",
+          "headline": "Heavy rain inundates shelters for people displaced by war in Gaza",
+          "snippet": "In a statement, the Hamas-run government media office said that about \"70,000 tents sheltering tens of thousands of displaced people were flooded on the first day\" of rains",
+          "url": "https://www.thehindu.com/news/international/heavy-rain-inundates-shelters-for-people-displaced-by-war-in-gaza/article71679279.ece",
+          "published_at": "2026-11-07T17:03:25Z",
+          "published_at_estimated": false,
+          "image_url": "https://th-i.thgim.com/public/incoming/8514lc/article71679347.ece/alternates/LANDSCAPE_1200/Israel_Palestinians_Gaza_5166_.jpg"
+        },
+        {
+          "id": "4ebbef5c4ef7",
+          "outlet_id": "japantimes",
+          "headline": "Heavy rain leaves tens of thousands without shelter in Gaza: local authorities",
+          "snippet": "Hundreds of displaced Palestinian families have been seen fleeing camps after they flooded.",
+          "url": "https://www.japantimes.co.jp/news/2026/11/08/world/heavy-rain-shelter-gaza/",
+          "published_at": "2026-11-07T23:28:00Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.japantimes.co.jp/japantimes/uploads/images/2026/11/08/thumbs/400x400/572866.jpg"
+        },
+        {
+          "id": "7de27cfd1684",
+          "outlet_id": "koreaherald",
+          "headline": "Heavy rains leave tens of thousands without shelter in Gaza: local authorities",
+          "snippet": "Heavy rain on Saturday flooded tens of thousands of displaced people's tents in war-devastated Gaza, Palestinian authorities said, leaving them without shelter. In a statement, the Hamas-run…",
+          "url": "https://www.koreaherald.com/article/10929595",
+          "published_at": "2026-11-08T03:44:27Z",
+          "published_at_estimated": false,
+          "image_url": "https://wimg.heraldcorp.com/news/cms/2026/11/08/rcv.YNA.20261107.PRU20261107166701009_T1.jpg"
+        },
+        {
+          "id": "55830ff8e579",
+          "outlet_id": "aljazeera",
+          "headline": "Photos: Heavy rains leave tens of thousands without shelter in Gaza",
+          "snippet": "Heavy rain floods tents housing displaced Palestinians in Gaza as Israeli restrictions on aid hamper response.",
+          "url": "https://www.aljazeera.com/gallery/2026/11/8/photos-heavy-rains-leave-tens-of-thousands-without-shelter-in-gaza",
+          "published_at": "2026-11-08T06:55:24Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "18c52fad9c42",
+          "outlet_id": "aljazeera",
+          "headline": "Floods in Gaza leave tens of thousands without shelter",
+          "snippet": "Civil Defence reports over 1,500 emergency calls as thousands of tents and shelters destroyed after heavy rains.",
+          "url": "https://www.aljazeera.com/news/2026/11/8/floods-in-gaza-leave-tens-of-thousands-without-shelter",
+          "published_at": "2026-11-08T09:28:52Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "f8f8672949c8",
+          "outlet_id": "france24",
+          "headline": "Gaza: Heavy rain inundates thousands of tents",
+          "snippet": "Heavy rainfall has flooded thousands of tents sheltering displaced Palestinians across the Gaza Strip, including in Deir al-Balah. Residents say overflowing sewage has mixed with the floodwater…",
+          "url": "https://www.france24.com/en/gaza-heavy-rain-inundates-thousands-of-tents",
+          "published_at": "2026-11-08T09:42:03Z",
+          "published_at_estimated": false,
+          "image_url": "https://s.france24.com/media/display/25796fa2-db58-11f1-946f-695cb59fade5/w:1024/p:16x9/EN-20261108-100942-101123-CS.jpg"
+        },
+        {
+          "id": "663f39c7ef44",
+          "outlet_id": "thenational",
+          "headline": "Floods kill two in Iraq and swamp tens of thousands of tents in Gaza as heavy rain hits region",
+          "snippet": "Heavy rain has brought disaster on two fronts, as flash floods in northern Iraq killed two people while flooding in Gaza inundated displacement camps, leaving tens of thousands soaked with few…",
+          "url": "https://www.thenationalnews.com/news/mena/2026/11/08/floods-kill-two-in-iraq-and-swamp-tens-of-thousands-of-tents-in-gaza-as-heavy-rain-hits-region/",
+          "published_at": "2026-11-08T09:56:12Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.thenationalnews.com/resizer/v2/BK6JQTWZDSY4UYQH44LN3KW4CI.jpg?auth=c07bc2c0d7fa6925116a3843b8fe2248a5868537d10fc90c1ae86a8f32f9d03d&smart=true&width=4025&height=2683"
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "Heavy rain flooded tents and shelters housing displaced people in Gaza.",
+          "sources": [
+            "ab0b3f727efe",
+            "4ebbef5c4ef7",
+            "7de27cfd1684",
+            "55830ff8e579",
+            "18c52fad9c42",
+            "f8f8672949c8",
+            "663f39c7ef44"
+          ]
+        },
+        {
+          "text": "Tens of thousands of people were left without shelter or affected by the flooding.",
+          "sources": [
+            "ab0b3f727efe",
+            "4ebbef5c4ef7",
+            "7de27cfd1684",
+            "55830ff8e579",
+            "18c52fad9c42",
+            "663f39c7ef44"
+          ]
+        },
+        {
+          "text": "The figures were attributed to local or Palestinian authorities, including the Hamas-run government media office.",
+          "sources": [
+            "ab0b3f727efe",
+            "4ebbef5c4ef7",
+            "7de27cfd1684"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "f8f8672949c8",
+              "quote": "Heavy rain inundates thousands of tents",
+              "field": "headline"
+            },
+            {
+              "article_id": "f8f8672949c8",
+              "quote": "Residents say overflowing sewage has mixed with the floodwater",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with residents' accounts of overflowing sewage mixing with floodwater, and names Deir al-Balah as an affected area.",
+              "sources": [
+                "f8f8672949c8"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [],
+      "contested_claims": [],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "f8f8672949c8",
+              "quote": "Heavy rain inundates thousands of tents",
+              "field": "headline"
+            },
+            {
+              "article_id": "f8f8672949c8",
+              "quote": "including in Deir al-Balah",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Foregrounds residents' reports of sewage mixing with floodwater across the Gaza Strip.",
+              "sources": [
+                "f8f8672949c8"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "ab0b3f727efe",
+              "quote": "70,000 tents sheltering tens of thousands of displaced people were flooded on the first day",
+              "field": "snippet"
+            },
+            {
+              "article_id": "55830ff8e579",
+              "quote": "Israeli restrictions on aid hamper response",
+              "field": "snippet"
+            },
+            {
+              "article_id": "18c52fad9c42",
+              "quote": "Civil Defence reports over 1,500 emergency calls",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Cites official figures from local authorities, including about 70,000 flooded tents and over 1,500 emergency calls.",
+              "sources": [
+                "ab0b3f727efe",
+                "7de27cfd1684",
+                "18c52fad9c42"
+              ]
+            },
+            {
+              "text": "Al Jazeera states that Israeli restrictions on aid hamper the response.",
+              "sources": [
+                "55830ff8e579"
+              ]
+            },
+            {
+              "text": "Reports displaced families fleeing flooded camps.",
+              "sources": [
+                "4ebbef5c4ef7"
+              ]
+            },
+            {
+              "text": "The National places Gaza alongside flash floods in northern Iraq that killed two people.",
+              "sources": [
+                "663f39c7ef44"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "Heavy rain flooded tents sheltering displaced Palestinians across Gaza, leaving tens of thousands without shelter, according to local authorities. The Hamas-run government media office said about 70,000 tents were flooded on the first day, and Civil Defence reported over 1,500 emergency calls.",
+        "sources": [
+          "ab0b3f727efe",
+          "4ebbef5c4ef7",
+          "7de27cfd1684",
+          "55830ff8e579",
+          "18c52fad9c42",
+          "f8f8672949c8",
+          "663f39c7ef44"
+        ]
+      },
+      "conclusion": {
+        "text": "All outlets report heavy rain flooding displaced people's tents in Gaza. France 24 (west, centre) leads with sewage mixing with floodwater, while East-bloc outlets lead with local authorities' figures, and Al Jazeera cites Israeli aid restrictions. No contradictions appear between the blocs.",
+        "sources": [
+          "ab0b3f727efe",
+          "4ebbef5c4ef7",
+          "7de27cfd1684",
+          "55830ff8e579",
+          "18c52fad9c42",
+          "f8f8672949c8",
+          "663f39c7ef44"
+        ]
+      },
+      "validation": {
+        "kept": 18,
+        "dropped_by_reason": {}
+      }
+    },
+    {
+      "id": "c35358308993",
+      "title": "Russian strikes on Ukraine's energy grid ahead of Abu Dhabi talks",
+      "rank": 8,
+      "outlet_count": 5,
+      "coverage": {
+        "lean": {
+          "left": 1,
+          "centre": 2,
+          "right": 0
+        },
+        "bloc": {
+          "west": 3,
+          "east": 2
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "3386a2fdc864",
+          "outlet_id": "dw",
+          "headline": "Ukraine: Russia hits Kyiv with airstrikes ahead of trilateral talks",
+          "snippet": "The strikes hit a major bridge and energy facilities in the Kyiv region. President Volodymyr Zelenskyy accused Moscow of trying to \"push\" Ukraine \"into a blackout\" ahead of talks in Abu Dhabi.",
+          "url": "https://www.dw.com/en/ukraine-russia-hits-kyiv-with-airstrikes-ahead-of-trilateral-talks/a-79883851?maca=en-rss-en-world-4025-xml-mrss",
+          "published_at": "2026-11-07T09:21:00Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "ca33b7eb6ef0",
+          "outlet_id": "moscowtimes",
+          "headline": "Russia Pounds Power Facilities Around Kyiv, Damages Major Bridge",
+          "snippet": "With temperatures reaching freezing in the Ukrainian capital, Russian energy strikes are putting Ukraine's heating system under strain.",
+          "url": "https://www.themoscowtimes.com/2026/11/07/russia-pounds-power-facilities-around-kyiv-damages-major-bridge-a94198",
+          "published_at": "2026-11-07T10:19:49Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "1b64f5ba3ba3",
+          "outlet_id": "bbc",
+          "headline": "Russian strikes wound nine and damage Ukraine's power network ahead of talks",
+          "snippet": "The attacks come before Ukrainian and Russian delegations are due to take part in trilateral talks in Abu Dhabi next week.",
+          "url": "https://www.bbc.co.uk/news/articles/cm4g1nq8158po",
+          "published_at": "2026-11-07T12:49:36Z",
+          "published_at_estimated": false,
+          "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/0554/live/2786bc40-daa0-11f1-a523-f508a3e924cb.jpg"
+        },
+        {
+          "id": "c2572d0631b0",
+          "outlet_id": "huffpost",
+          "headline": "Missile Attacks Wound 9 As Ukraine Prepares For Talks With Russia And The U.S.",
+          "snippet": "The new round of negotiations would be the fourth brokered by the Trump administration, the most recent having been in Geneva in February.",
+          "url": "https://www.huffpost.com/entry/missile-attacks-wound-9-ukraine-prepares-talks-ussia-united-states_n_6aef259ce4b043b6d4e2e14d",
+          "published_at": "2026-11-07T13:47:23Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "18d1f9af961e",
+          "outlet_id": "thehindu",
+          "headline": "Ukraine says Russia ramps up strikes to pressure Kyiv at talks",
+          "snippet": "Ukraine's Energy Ministry said \"a massive attack on a number of energy facilities\" had plunged five regions into darkness and significantly hampered electricity transmission in Kyiv and surrounding…",
+          "url": "https://www.thehindu.com/news/international/ukraine-says-russia-ramps-up-strikes-to-pressure-kyiv-at-talks/article71679254.ece",
+          "published_at": "2026-11-07T16:55:28Z",
+          "published_at_estimated": false,
+          "image_url": "https://th-i.thgim.com/public/incoming/4ovcuv/article71679334.ece/alternates/LANDSCAPE_1200/2026-11-07T135900Z_1896179256_RC2WIOAX55EF_RTRMADP_3_UKRAINE-CRISIS-ATTACK-ZAPORIZHZHIA-FUNERAL.JPG"
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "Russian strikes hit energy or power facilities in Ukraine, including around Kyiv.",
+          "sources": [
+            "3386a2fdc864",
+            "ca33b7eb6ef0",
+            "1b64f5ba3ba3",
+            "18d1f9af961e"
+          ]
+        },
+        {
+          "text": "The attacks came ahead of negotiations involving Ukraine and Russia.",
+          "sources": [
+            "3386a2fdc864",
+            "1b64f5ba3ba3",
+            "c2572d0631b0",
+            "18d1f9af961e"
+          ]
+        },
+        {
+          "text": "Nine people were wounded in the attacks.",
+          "sources": [
+            "1b64f5ba3ba3",
+            "c2572d0631b0"
+          ]
+        },
+        {
+          "text": "A major bridge was damaged in the strikes.",
+          "sources": [
+            "3386a2fdc864",
+            "ca33b7eb6ef0"
+          ]
+        },
+        {
+          "text": "The talks are trilateral and due to take place in Abu Dhabi.",
+          "sources": [
+            "3386a2fdc864",
+            "1b64f5ba3ba3"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "c2572d0631b0",
+              "quote": "Missile Attacks Wound 9",
+              "field": "headline"
+            },
+            {
+              "article_id": "c2572d0631b0",
+              "quote": "the fourth brokered by the Trump administration",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with casualties and Ukraine's preparation for talks with Russia and the US.",
+              "sources": [
+                "c2572d0631b0"
+              ]
+            },
+            {
+              "text": "Places the talks in a series brokered by the Trump administration, the latest previously held in Geneva in February.",
+              "sources": [
+                "c2572d0631b0"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "3386a2fdc864",
+              "quote": "Russia hits Kyiv with airstrikes ahead of trilateral talks",
+              "field": "headline"
+            },
+            {
+              "article_id": "3386a2fdc864",
+              "quote": "\"into a blackout\"",
+              "field": "snippet"
+            },
+            {
+              "article_id": "1b64f5ba3ba3",
+              "quote": "Russian strikes wound nine and damage Ukraine's power network ahead of talks",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with damage to energy facilities and the power network.",
+              "sources": [
+                "3386a2fdc864",
+                "1b64f5ba3ba3"
+              ]
+            },
+            {
+              "text": "Reports Zelenskyy's accusation that Moscow is trying to push Ukraine into a blackout before the talks.",
+              "sources": [
+                "3386a2fdc864"
+              ]
+            },
+            {
+              "text": "Notes the trilateral talks are set for Abu Dhabi next week.",
+              "sources": [
+                "3386a2fdc864",
+                "1b64f5ba3ba3"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "left",
+          "text": "Left coverage does not mention that the strikes hit energy facilities or the power network.",
+          "sources": [
+            "3386a2fdc864",
+            "1b64f5ba3ba3"
+          ]
+        },
+        {
+          "lean": "left",
+          "text": "Left coverage does not mention that the talks are to be held in Abu Dhabi.",
+          "sources": [
+            "3386a2fdc864",
+            "1b64f5ba3ba3"
+          ]
+        },
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not mention that the talks would be the fourth round brokered by the Trump administration, after Geneva in February.",
+          "sources": [
+            "c2572d0631b0"
+          ]
+        }
+      ],
+      "contested_claims": [],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "1b64f5ba3ba3",
+              "quote": "Russian strikes wound nine",
+              "field": "headline"
+            },
+            {
+              "article_id": "3386a2fdc864",
+              "quote": "ahead of trilateral talks",
+              "field": "headline"
+            },
+            {
+              "article_id": "c2572d0631b0",
+              "quote": "Ukraine Prepares For Talks With Russia And The U.S.",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Foregrounds the timing of the strikes before the talks and the nine people wounded.",
+              "sources": [
+                "3386a2fdc864",
+                "1b64f5ba3ba3",
+                "c2572d0631b0"
+              ]
+            },
+            {
+              "text": "Reports Zelenskyy's blackout accusation against Moscow.",
+              "sources": [
+                "3386a2fdc864"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "ca33b7eb6ef0",
+              "quote": "Russia Pounds Power Facilities Around Kyiv, Damages Major Bridge",
+              "field": "headline"
+            },
+            {
+              "article_id": "ca33b7eb6ef0",
+              "quote": "With temperatures reaching freezing",
+              "field": "snippet"
+            },
+            {
+              "article_id": "18d1f9af961e",
+              "quote": "plunged five regions into darkness",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Foregrounds the strain on Ukraine's heating system as temperatures reach freezing.",
+              "sources": [
+                "ca33b7eb6ef0"
+              ]
+            },
+            {
+              "text": "Cites Ukraine's Energy Ministry on five regions losing power and Ukraine's view that strikes aim to pressure Kyiv at talks.",
+              "sources": [
+                "18d1f9af961e"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "Russian strikes hit energy facilities and a major bridge in the Kyiv region, wounding nine people. Ukraine's Energy Ministry said five regions lost power. The attacks came ahead of trilateral talks in Abu Dhabi involving Ukraine, Russia and the US.",
+        "sources": [
+          "3386a2fdc864",
+          "ca33b7eb6ef0",
+          "1b64f5ba3ba3",
+          "c2572d0631b0",
+          "18d1f9af961e"
+        ]
+      },
+      "conclusion": null,
+      "validation": {
+        "kept": 29,
+        "dropped_by_reason": {
+          "untrusted_text": 1
+        }
+      }
+    },
+    {
+      "id": "6d007368b820",
+      "title": "New round of protests across France despite police ban",
+      "rank": 9,
+      "outlet_count": 5,
+      "coverage": {
+        "lean": {
+          "left": 1,
+          "centre": 0,
+          "right": 2
+        },
+        "bloc": {
+          "west": 3,
+          "east": 2
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "1366fba3ee65",
+          "outlet_id": "scmp",
+          "headline": "Clashes in Paris after new French protests",
+          "snippet": "Thousands of people protested across France on Saturday in a new show of anger against the government with clashes erupting between police and some protesters in Paris despite a lower turnout than…",
+          "url": "https://www.scmp.com/news/world/europe/article/3373669/clashes-paris-after-new-french-protests",
+          "published_at": "2026-11-07T18:05:42Z",
+          "published_at_estimated": false,
+          "image_url": "https://cdn.i-scmp.com/sites/default/files/styles/1280x720/public/d8/images/canvas/2026/11/08/c16a6879-ae61-405d-aa6e-c4db712f9236_273d125f.jpg?itok=bPV5rUVG&v=1794074734"
+        },
+        {
+          "id": "1928362f8226",
+          "outlet_id": "fox",
+          "headline": "Paris agitators defy police orders, renew nationwide protests centered in Paris",
+          "snippet": "Videos and photos show tear gas and fires throughout Paris as 70,000 security forces deploy against France protests despite police bans on gatherings.",
+          "url": "https://www.foxnews.com/world/paris-agitators-defy-police-orders-renew-nationwide-protests-centered-paris",
+          "published_at": "2026-11-07T19:32:27Z",
+          "published_at_estimated": false,
+          "image_url": "https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2026/11/931/523/Paris_tear_gas.jpg?ve=1&tl=1"
+        },
+        {
+          "id": "db8afc96fad0",
+          "outlet_id": "nyt",
+          "headline": "Another Day of France’s Protests Unfurl During an Autumn of Discontent",
+          "snippet": "The crowds were smaller on Saturday than in previous weeks’ demonstrations, but the animating sense of grievance remained.",
+          "url": "https://www.nytimes.com/2026/11/07/world/europe/france-fourth-saturday-protests.html",
+          "published_at": "2026-11-07T21:00:19Z",
+          "published_at_estimated": false,
+          "image_url": "https://static01.nyt.com/images/2026/11/07/multimedia/07int-france-protest-hqvk/07int-france-protest-hqvk-mediumSquareAt3X.jpg"
+        },
+        {
+          "id": "a0bb66580626",
+          "outlet_id": "thesun",
+          "headline": "Angry French rioters defy protest ban as thousands flock to the streets and clash with cops in fourth weekend of chaos",
+          "snippet": "FURIOUS French rioters defied protests bans as thousands swarmed the streets and clashed with cops in a fourth weekend of chaos. Police launched tear gas and stun grenades as a fresh wave of fury…",
+          "url": "https://www.thesun.co.uk/news/40955210/french-rioters-defy-ban-clash-with-police/",
+          "published_at": "2026-11-07T23:20:04Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.thesun.co.uk/wp-content%2Fuploads%2F2026%2F11%2Fnewspress-collage-ho5zgyn4s-1794092022906.jpg?quality%3D90%26"
+        },
+        {
+          "id": "9918e1a4e4fa",
+          "outlet_id": "koreaherald",
+          "headline": "New mass protests in France as police seek to thwart banned rally",
+          "snippet": "Tens of thousands of people were set to protest across France Saturday in a new show of anger against the government with Paris police imposing strict security to prevent an unauthorized gathering…",
+          "url": "https://www.koreaherald.com/article/10929593",
+          "published_at": "2026-11-08T03:42:50Z",
+          "published_at_estimated": false,
+          "image_url": "https://wimg.heraldcorp.com/news/cms/2026/11/08/rcv.YNA.20261108.PAF20261108186701009_T1.jpg"
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "A new round of protests took place across France on Saturday.",
+          "sources": [
+            "1366fba3ee65",
+            "1928362f8226",
+            "db8afc96fad0",
+            "a0bb66580626",
+            "9918e1a4e4fa"
+          ]
+        },
+        {
+          "text": "The protests went ahead despite police bans on gatherings.",
+          "sources": [
+            "1928362f8226",
+            "a0bb66580626",
+            "9918e1a4e4fa"
+          ]
+        },
+        {
+          "text": "Clashes occurred between police and protesters, centred on Paris.",
+          "sources": [
+            "1366fba3ee65",
+            "1928362f8226",
+            "a0bb66580626"
+          ]
+        },
+        {
+          "text": "Police used tear gas.",
+          "sources": [
+            "1928362f8226",
+            "a0bb66580626"
+          ]
+        },
+        {
+          "text": "Turnout was lower than in previous weeks' demonstrations.",
+          "sources": [
+            "1366fba3ee65",
+            "db8afc96fad0"
+          ]
+        },
+        {
+          "text": "The protests express anger against the government.",
+          "sources": [
+            "1366fba3ee65",
+            "9918e1a4e4fa"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "db8afc96fad0",
+              "quote": "an Autumn of Discontent",
+              "field": "headline"
+            },
+            {
+              "article_id": "db8afc96fad0",
+              "quote": "the animating sense of grievance remained",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the smaller crowds while stressing that the underlying grievance persisted.",
+              "sources": [
+                "db8afc96fad0"
+              ]
+            },
+            {
+              "text": "Places the day within a wider season of discontent.",
+              "sources": [
+                "db8afc96fad0"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "right",
+          "headline_quotes": [
+            {
+              "article_id": "1928362f8226",
+              "quote": "Paris agitators defy police orders",
+              "field": "headline"
+            },
+            {
+              "article_id": "a0bb66580626",
+              "quote": "Angry French rioters defy protest ban",
+              "field": "headline"
+            },
+            {
+              "article_id": "a0bb66580626",
+              "quote": "fourth weekend of chaos",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Describes participants as agitators and rioters defying police bans.",
+              "sources": [
+                "1928362f8226",
+                "a0bb66580626"
+              ]
+            },
+            {
+              "text": "Foregrounds tear gas, fires, stun grenades and clashes with police.",
+              "sources": [
+                "1928362f8226",
+                "a0bb66580626"
+              ]
+            },
+            {
+              "text": "Cites the deployment of 70,000 security forces.",
+              "sources": [
+                "1928362f8226"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "left",
+          "text": "Left-lean coverage does not mention the police ban on gatherings.",
+          "sources": [
+            "1928362f8226",
+            "a0bb66580626"
+          ]
+        },
+        {
+          "lean": "left",
+          "text": "Left-lean coverage does not mention clashes with police or the use of tear gas.",
+          "sources": [
+            "1928362f8226",
+            "a0bb66580626"
+          ]
+        },
+        {
+          "lean": "right",
+          "text": "Right-lean coverage does not mention that crowds were smaller than in previous weeks.",
+          "sources": [
+            "db8afc96fad0"
+          ]
+        }
+      ],
+      "contested_claims": [],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "1928362f8226",
+              "quote": "70,000 security forces deploy against France protests",
+              "field": "snippet"
+            },
+            {
+              "article_id": "a0bb66580626",
+              "quote": "clash with cops in fourth weekend of chaos",
+              "field": "headline"
+            },
+            {
+              "article_id": "db8afc96fad0",
+              "quote": "Autumn of Discontent",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Emphasises protesters defying bans and the scale of police response, including tear gas and fires.",
+              "sources": [
+                "1928362f8226",
+                "a0bb66580626"
+              ]
+            },
+            {
+              "text": "Notes the persistence of grievance despite smaller crowds.",
+              "sources": [
+                "db8afc96fad0"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "1366fba3ee65",
+              "quote": "a new show of anger against the government",
+              "field": "snippet"
+            },
+            {
+              "article_id": "9918e1a4e4fa",
+              "quote": "police seek to thwart banned rally",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Frames the protests as anger directed against the government.",
+              "sources": [
+                "1366fba3ee65",
+                "9918e1a4e4fa"
+              ]
+            },
+            {
+              "text": "Highlights police security measures to prevent an unauthorised gathering.",
+              "sources": [
+                "9918e1a4e4fa"
+              ]
+            },
+            {
+              "text": "Reports clashes in Paris alongside a lower turnout.",
+              "sources": [
+                "1366fba3ee65"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "Thousands of people protested across France on Saturday in a new show of anger against the government, despite police bans on gatherings. Clashes broke out between police and some protesters in Paris, where tear gas was used, and crowds were smaller than in previous weeks.",
+        "sources": [
+          "1366fba3ee65",
+          "1928362f8226",
+          "db8afc96fad0",
+          "a0bb66580626",
+          "9918e1a4e4fa"
+        ]
+      },
+      "conclusion": {
+        "text": "Coverage agrees that protests spread across France on Saturday despite police bans, with clashes in Paris. Right-lean outlets lead with rioters, tear gas and chaos, the left-lean outlet with lingering grievance amid smaller crowds, and East-bloc outlets with anti-government anger and police security measures.",
+        "sources": [
+          "1366fba3ee65",
+          "1928362f8226",
+          "db8afc96fad0",
+          "a0bb66580626",
+          "9918e1a4e4fa"
+        ]
+      },
+      "validation": {
+        "kept": 31,
+        "dropped_by_reason": {}
+      }
+    },
+    {
+      "id": "b24fb893dacb",
+      "title": "Magnitude 5.7 earthquake injures dozens in central Japan",
+      "rank": 10,
+      "outlet_count": 4,
+      "coverage": {
+        "lean": {
+          "left": 1,
+          "centre": 0,
+          "right": 1
+        },
+        "bloc": {
+          "west": 2,
+          "east": 2
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "6955517fd3a2",
+          "outlet_id": "japantimes",
+          "headline": "Magnitude 5.7 quake injures dozens in central Japan",
+          "snippet": "The quake struck at 1:04 am in Shizuoka Prefecture but no tsunami warning was issued.",
+          "url": "https://www.japantimes.co.jp/news/2026/11/08/japan/earthquake-aichi-sunday/",
+          "published_at": "2026-11-08T03:35:00Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.japantimes.co.jp/japantimes/uploads/images/2026/11/08/thumbs/400x400/572879.jpg"
+        },
+        {
+          "id": "7a63187b5d73",
+          "outlet_id": "thehindu",
+          "headline": "Strong earthquake shakes central Japan, shattering store windows, injuring at least 22",
+          "snippet": "The quake, which struck at 1:04 a.m., was located about 40 kilometres below the earth’s surface in Shizuoka Prefecture. Aichi and Shizuoka are neighbouring regions",
+          "url": "https://www.thehindu.com/news/international/strong-earthquake-strikes-japan/article71680450.ece",
+          "published_at": "2026-11-08T05:42:49Z",
+          "published_at_estimated": false,
+          "image_url": "https://th-i.thgim.com/public/incoming/hvwgae/article71680451.ece/alternates/LANDSCAPE_1200/Japan_Earthquake_12867.jpg"
+        },
+        {
+          "id": "e6cd4797702a",
+          "outlet_id": "mirror",
+          "headline": "Japan rocked by 5.7 magnitude earthquake as windows shatter and mudslide warning issued",
+          "snippet": "The 5.7 magnitude earthquake struck a wide area including the cities of Kyoto and Nara, sending terrified residents fleeing from buildings and leaving at least 22 injured",
+          "url": "https://www.mirror.co.uk/news/world-news/japan-earthquake-aichi-magnitude-mudslides-37836733",
+          "published_at": "2026-11-08T07:51:02Z",
+          "published_at_estimated": false,
+          "image_url": "https://i2-prod.mirror.co.uk/incoming/article37855081.ece/ALTERNATES/s615/1_Japan-Earthquake-26312257582951.jpg"
+        },
+        {
+          "id": "a357563c4542",
+          "outlet_id": "thesun",
+          "headline": "Huge 5.7-mag earthquake hits Japan with at least 25 injured & windows shattered as locals warned of more violent tremors",
+          "snippet": "AT least 25 people are injured after a powerful earthquake struck Japan this morning. People were forced to flee their homes in the middle of the night as the 5.7 magnitude quake shook central…",
+          "url": "https://www.thesun.co.uk/news/40956755/huge-earthquake-hits-japan-injures-dozens/",
+          "published_at": "2026-11-08T07:59:52Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.thesun.co.uk/wp-content%2Fuploads%2F2026%2F11%2Fnewspress-collage-t7qtsyjnx-1794127041344.jpg?quality%3D90%26"
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "The earthquake had a magnitude of 5.7.",
+          "sources": [
+            "6955517fd3a2",
+            "e6cd4797702a",
+            "a357563c4542"
+          ]
+        },
+        {
+          "text": "The quake struck central Japan.",
+          "sources": [
+            "6955517fd3a2",
+            "7a63187b5d73",
+            "a357563c4542"
+          ]
+        },
+        {
+          "text": "The quake struck at 1:04 am in Shizuoka Prefecture.",
+          "sources": [
+            "6955517fd3a2",
+            "7a63187b5d73"
+          ]
+        },
+        {
+          "text": "Windows were shattered.",
+          "sources": [
+            "7a63187b5d73",
+            "e6cd4797702a",
+            "a357563c4542"
+          ]
+        },
+        {
+          "text": "Residents fled buildings or homes during the night.",
+          "sources": [
+            "e6cd4797702a",
+            "a357563c4542"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "e6cd4797702a",
+              "quote": "Japan rocked by 5.7 magnitude earthquake",
+              "field": "headline"
+            },
+            {
+              "article_id": "e6cd4797702a",
+              "quote": "sending terrified residents fleeing from buildings",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Describes the quake as striking a wide area including the cities of Kyoto and Nara.",
+              "sources": [
+                "e6cd4797702a"
+              ]
+            },
+            {
+              "text": "Leads with shattered windows and a mudslide warning.",
+              "sources": [
+                "e6cd4797702a"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "right",
+          "headline_quotes": [
+            {
+              "article_id": "a357563c4542",
+              "quote": "Huge 5.7-mag earthquake hits Japan",
+              "field": "headline"
+            },
+            {
+              "article_id": "a357563c4542",
+              "quote": "locals warned of more violent tremors",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Reports at least 25 people injured.",
+              "sources": [
+                "a357563c4542"
+              ]
+            },
+            {
+              "text": "Emphasises warnings of more violent tremors and people fleeing homes in the middle of the night.",
+              "sources": [
+                "a357563c4542"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "right",
+          "text": "Right-leaning coverage does not mention a mudslide warning.",
+          "sources": [
+            "e6cd4797702a"
+          ]
+        },
+        {
+          "lean": "left",
+          "text": "Left-leaning coverage does not mention warnings of further tremors.",
+          "sources": [
+            "a357563c4542"
+          ]
+        }
+      ],
+      "contested_claims": [
+        {
+          "claim": "The number injured is at least 22.",
+          "asserted_by": [
+            "7a63187b5d73",
+            "e6cd4797702a"
+          ],
+          "disputed_by": [
+            "a357563c4542"
+          ]
+        }
+      ],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "e6cd4797702a",
+              "quote": "windows shatter and mudslide warning issued",
+              "field": "headline"
+            },
+            {
+              "article_id": "a357563c4542",
+              "quote": "People were forced to flee their homes in the middle of the night",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Foregrounds residents fleeing and warnings of mudslides or further tremors.",
+              "sources": [
+                "e6cd4797702a",
+                "a357563c4542"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "6955517fd3a2",
+              "quote": "no tsunami warning was issued",
+              "field": "snippet"
+            },
+            {
+              "article_id": "7a63187b5d73",
+              "quote": "about 40 kilometres below the earth’s surface",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Gives the time of the quake, 1:04 am, and its location in Shizuoka Prefecture.",
+              "sources": [
+                "6955517fd3a2",
+                "7a63187b5d73"
+              ]
+            },
+            {
+              "text": "Notes the quake's depth of about 40 kilometres and that no tsunami warning was issued.",
+              "sources": [
+                "6955517fd3a2",
+                "7a63187b5d73"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "A magnitude 5.7 earthquake struck central Japan at 1:04 am in Shizuoka Prefecture, shattering windows and injuring dozens. Reported injury counts range from at least 22 to at least 25. No tsunami warning was issued, though a mudslide warning and a warning of further tremors were reported.",
+        "sources": [
+          "6955517fd3a2",
+          "7a63187b5d73",
+          "e6cd4797702a",
+          "a357563c4542"
+        ]
+      },
+      "conclusion": {
+        "text": "All outlets report a strong quake in central Japan that injured dozens, with three giving magnitude 5.7. East-bloc outlets lead with time, location, depth and the absence of a tsunami warning, while West-bloc outlets emphasise fleeing residents and warnings. The injury count differs between at least 22 and at least 25.",
+        "sources": [
+          "6955517fd3a2",
+          "7a63187b5d73",
+          "e6cd4797702a",
+          "a357563c4542"
+        ]
+      },
+      "validation": {
+        "kept": 25,
+        "dropped_by_reason": {}
+      }
+    }
+  ]
+}
