@@ -1,0 +1,4338 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-11-11T13:53:41.377163Z",
+  "date": "2026-11-11",
+  "meta": {
+    "model": "claude-opus-5-5",
+    "cost_usd": 0.678888,
+    "outlets_polled": 29,
+    "articles_collected": 664,
+    "warnings": [
+      "1 feed(s) failed during collect"
+    ],
+    "validation": {
+      "kept": 337,
+      "dropped_by_reason": {
+        "untrusted_text": 2
+      }
+    }
+  },
+  "outlets": [
+    {
+      "id": "guardian",
+      "name": "The Guardian",
+      "lean": "left",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United Kingdom",
+      "home_url": "https://www.theguardian.com/",
+      "rating_basis": "AllSides media bias rating (Lean Left), checked Oct 2026"
+    },
+    {
+      "id": "independent",
+      "name": "The Independent",
+      "lean": "left",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United Kingdom",
+      "home_url": "https://www.independent.co.uk/",
+      "rating_basis": "AllSides media bias rating (Lean Left), checked Oct 2026"
+    },
+    {
+      "id": "mirror",
+      "name": "Daily Mirror",
+      "lean": "left",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United Kingdom",
+      "home_url": "https://www.mirror.co.uk/",
+      "rating_basis": "Ad Fontes Media bias rating (Skews Left), checked Oct 2026"
+    },
+    {
+      "id": "bbc",
+      "name": "BBC News",
+      "lean": "centre",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "public-service",
+      "country": "United Kingdom",
+      "home_url": "https://www.bbc.co.uk/news",
+      "rating_basis": "AllSides media bias rating (Center), checked Oct 2026"
+    },
+    {
+      "id": "sky",
+      "name": "Sky News",
+      "lean": "centre",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United Kingdom",
+      "home_url": "https://news.sky.com/",
+      "rating_basis": "Ad Fontes Media bias rating (Middle), checked Oct 2026"
+    },
+    {
+      "id": "telegraph",
+      "name": "The Telegraph",
+      "lean": "right",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United Kingdom",
+      "home_url": "https://www.telegraph.co.uk/",
+      "rating_basis": "AllSides media bias rating (Lean Right), checked Oct 2026"
+    },
+    {
+      "id": "dailymail",
+      "name": "Daily Mail",
+      "lean": "right",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United Kingdom",
+      "home_url": "https://www.dailymail.co.uk/",
+      "rating_basis": "AllSides media bias rating (Right), checked Oct 2026"
+    },
+    {
+      "id": "thesun",
+      "name": "The Sun",
+      "lean": "right",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United Kingdom",
+      "home_url": "https://www.thesun.co.uk/",
+      "rating_basis": "AllSides media bias rating (Right), checked Oct 2026"
+    },
+    {
+      "id": "nyt",
+      "name": "The New York Times",
+      "lean": "left",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United States",
+      "home_url": "https://www.nytimes.com/",
+      "rating_basis": "AllSides media bias rating (Lean Left), checked Oct 2026"
+    },
+    {
+      "id": "nbc",
+      "name": "NBC News",
+      "lean": "left",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United States",
+      "home_url": "https://www.nbcnews.com/",
+      "rating_basis": "AllSides media bias rating (Lean Left), checked Oct 2026"
+    },
+    {
+      "id": "huffpost",
+      "name": "HuffPost",
+      "lean": "left",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United States",
+      "home_url": "https://www.huffpost.com/",
+      "rating_basis": "AllSides media bias rating (Left), checked Oct 2026"
+    },
+    {
+      "id": "npr",
+      "name": "NPR",
+      "lean": "centre",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "public-service",
+      "country": "United States",
+      "home_url": "https://www.npr.org/",
+      "rating_basis": "Ad Fontes Media bias rating (Middle / Skews Left), checked Oct 2026"
+    },
+    {
+      "id": "axios",
+      "name": "Axios",
+      "lean": "centre",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United States",
+      "home_url": "https://www.axios.com/",
+      "rating_basis": "AllSides media bias rating (Center), checked Oct 2026"
+    },
+    {
+      "id": "fox",
+      "name": "Fox News",
+      "lean": "right",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United States",
+      "home_url": "https://www.foxnews.com/",
+      "rating_basis": "AllSides media bias rating (Right), checked Oct 2026"
+    },
+    {
+      "id": "nypost",
+      "name": "New York Post",
+      "lean": "right",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United States",
+      "home_url": "https://nypost.com/",
+      "rating_basis": "AllSides media bias rating (Lean Right), checked Oct 2026"
+    },
+    {
+      "id": "examiner",
+      "name": "Washington Examiner",
+      "lean": "right",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United States",
+      "home_url": "https://www.washingtonexaminer.com/",
+      "rating_basis": "AllSides media bias rating (Lean Right), checked Oct 2026"
+    },
+    {
+      "id": "france24",
+      "name": "France 24",
+      "lean": "centre",
+      "region": "europe",
+      "bloc": "west",
+      "ownership": "public-service",
+      "country": "France",
+      "home_url": "https://www.france24.com/en/",
+      "rating_basis": "Ad Fontes Media bias rating (Middle), checked Oct 2026"
+    },
+    {
+      "id": "dw",
+      "name": "DW (Deutsche Welle)",
+      "lean": "centre",
+      "region": "europe",
+      "bloc": "west",
+      "ownership": "public-service",
+      "country": "Germany",
+      "home_url": "https://www.dw.com/en/",
+      "rating_basis": "AllSides media bias rating (Center), checked Oct 2026"
+    },
+    {
+      "id": "aljazeera",
+      "name": "Al Jazeera English",
+      "lean": null,
+      "region": "middle_east",
+      "bloc": "east",
+      "ownership": "state-funded",
+      "country": "Qatar",
+      "home_url": "https://www.aljazeera.com/",
+      "rating_basis": "Funded by the State of Qatar; no left/right tag applied"
+    },
+    {
+      "id": "thenational",
+      "name": "The National (UAE)",
+      "lean": null,
+      "region": "middle_east",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "United Arab Emirates",
+      "home_url": "https://www.thenationalnews.com/",
+      "rating_basis": "Owned by International Media Investments (Abu Dhabi); no left/right tag applied"
+    },
+    {
+      "id": "timesofisrael",
+      "name": "The Times of Israel",
+      "lean": null,
+      "region": "middle_east",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "Israel",
+      "home_url": "https://www.timesofisrael.com/",
+      "rating_basis": "Privately owned; no left/right tag applied"
+    },
+    {
+      "id": "cgtn",
+      "name": "CGTN",
+      "lean": null,
+      "region": "asia",
+      "bloc": "east",
+      "ownership": "state-controlled",
+      "country": "China",
+      "home_url": "https://www.cgtn.com/",
+      "rating_basis": "China Global Television Network, part of state broadcaster China Media Group"
+    },
+    {
+      "id": "ecns",
+      "name": "ECNS (China News Service)",
+      "lean": null,
+      "region": "asia",
+      "bloc": "east",
+      "ownership": "state-controlled",
+      "country": "China",
+      "home_url": "https://www.ecns.cn/",
+      "rating_basis": "English service of China News Service, a state news agency"
+    },
+    {
+      "id": "scmp",
+      "name": "South China Morning Post",
+      "lean": null,
+      "region": "asia",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "Hong Kong",
+      "home_url": "https://www.scmp.com/",
+      "rating_basis": "Owned by Alibaba Group; no left/right tag applied"
+    },
+    {
+      "id": "toi",
+      "name": "The Times of India",
+      "lean": null,
+      "region": "asia",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "India",
+      "home_url": "https://timesofindia.indiatimes.com/",
+      "rating_basis": "Privately owned (Bennett, Coleman & Co.); no left/right tag applied"
+    },
+    {
+      "id": "thehindu",
+      "name": "The Hindu",
+      "lean": null,
+      "region": "asia",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "India",
+      "home_url": "https://www.thehindu.com/",
+      "rating_basis": "Privately owned (The Hindu Group); no left/right tag applied"
+    },
+    {
+      "id": "moscowtimes",
+      "name": "The Moscow Times",
+      "lean": null,
+      "region": "europe",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "Russia",
+      "home_url": "https://www.themoscowtimes.com/",
+      "rating_basis": "Independent, Amsterdam-based since 2022; designated \"undesirable\" by Russia; no left/right tag applied"
+    },
+    {
+      "id": "japantimes",
+      "name": "The Japan Times",
+      "lean": null,
+      "region": "asia",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "Japan",
+      "home_url": "https://www.japantimes.co.jp/",
+      "rating_basis": "Privately owned (News2u Holdings); no left/right tag applied"
+    },
+    {
+      "id": "koreaherald",
+      "name": "The Korea Herald",
+      "lean": null,
+      "region": "asia",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "South Korea",
+      "home_url": "https://www.koreaherald.com/",
+      "rating_basis": "Privately owned (Herald Corporation); no left/right tag applied"
+    }
+  ],
+  "stories": [
+    {
+      "id": "aecee48c3fbb",
+      "title": "US House Republicans block effort to impeach Defense Secretary Hegseth",
+      "rank": 1,
+      "outlet_count": 13,
+      "coverage": {
+        "lean": {
+          "left": 4,
+          "centre": 4,
+          "right": 1
+        },
+        "bloc": {
+          "west": 9,
+          "east": 4
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "5df659edf765",
+          "outlet_id": "axios",
+          "headline": "Hegseth comes out swinging against Massie impeachment push",
+          "snippet": "Defense Secretary Pete Hegseth lambasted Rep. Thomas Massie's (R-KY) push to oust him, likening the impeachment effort to Democrats' successful impeachments of President Trump. The big picture: As…",
+          "url": "https://www.axios.com/2026/11/10/hegseth-press-conference-massie-impeachment",
+          "published_at": "2026-11-10T13:46:45Z",
+          "published_at_estimated": false,
+          "image_url": "https://images.axios.com/-25yDoRufueo7WNs8trAK3IPzQk=/0x0:5662x3185/1366x768/2026/11/10/1794316303541.jpeg"
+        },
+        {
+          "id": "6d621bcdaf6b",
+          "outlet_id": "nyt",
+          "headline": "What to Know About Thomas Massie, Leader of Drive to Impeach Hegseth",
+          "snippet": "Representative Thomas Massie, Republican of Kentucky, is retiring at the end of his term after losing to a primary challenger backed by President Trump.",
+          "url": "https://www.nytimes.com/2026/11/10/us/thomas-massie-impeachment-hegseth.html",
+          "published_at": "2026-11-10T15:30:06Z",
+          "published_at_estimated": false,
+          "image_url": "https://static01.nyt.com/images/2026/11/10/multimedia/10pol-massie-topart-pzkw/10pol-massie-topart-pzkw-mediumSquareAt3X.jpg"
+        },
+        {
+          "id": "c6ead8637003",
+          "outlet_id": "axios",
+          "headline": "Vance says Hegseth impeachment vote \"isn't about Iran\"",
+          "snippet": "Vice President JD Vance on Tuesday said that the vote to impeach Defense Secretary Pete Hegseth \"isn't about Iran,\" but rather his willingness to take on challenges at the Pentagon. Why it matters…",
+          "url": "https://www.axios.com/2026/11/10/hegseth-impeachment-iran-jd-vance",
+          "published_at": "2026-11-10T17:34:03Z",
+          "published_at_estimated": false,
+          "image_url": "https://images.axios.com/tcgrk8yjW5mDic5VVkmuoPNozbw=/0x61:3798x2197/1366x768/2026/11/10/1794329790435.jpeg"
+        },
+        {
+          "id": "1702fb7d2a91",
+          "outlet_id": "cgtn",
+          "headline": "Hegseth defends war record amid US House impeachment effort",
+          "snippet": "",
+          "url": "https://newsus.cgtn.com/news/2026-11-11/Hegseth-defends-war-record-amid-US-House-impeachment-effort-1RYp5B8tw08/p.html",
+          "published_at": "2026-11-10T21:56:19Z",
+          "published_at_estimated": false,
+          "image_url": "https://newsus.cgtn.com/news/2026-11-11/Hegseth-defends-war-record-amid-US-House-impeachment-effort-1RYp5B8tw08/img/d9aa4e061de04e2799d0f84439f0b658/d9aa4e061de04e2799d0f84439f0b658-1280.jpeg"
+        },
+        {
+          "id": "1f1cf43da0a9",
+          "outlet_id": "cgtn",
+          "headline": "US House blocks impeachment effort against Defense Secretary Hegseth",
+          "snippet": "",
+          "url": "https://news.cgtn.com/news/2026-11-11/news-1RYtVlMjbCo/p.html",
+          "published_at": "2026-11-10T23:03:14Z",
+          "published_at_estimated": false,
+          "image_url": "https://news.cgtn.com/resource/default/img/breaking.png"
+        },
+        {
+          "id": "ce72726ab58a",
+          "outlet_id": "axios",
+          "headline": "GOP House rejects Hegseth impeachment effort",
+          "snippet": "House Republicans voted Tuesday evening to block an effort to impeach Defense Secretary Pete Hegseth, shielding a top Trump administration official from a politically embarrassing rebuke. Why it…",
+          "url": "https://www.axios.com/2026/11/10/pete-hegseth-impeachment-house-republicans-massie",
+          "published_at": "2026-11-10T23:06:08Z",
+          "published_at_estimated": false,
+          "image_url": "https://images.axios.com/BHsshZrw_NH094JoF2Oz1PLdmlY=/0x527:7069x4503/1366x768/2026/11/10/1794344478919.jpeg"
+        },
+        {
+          "id": "b3ce7b4d94e3",
+          "outlet_id": "thehindu",
+          "headline": "U.S. Republicans derail bid to impeach Hegseth",
+          "snippet": "The House voted 211 to 204 to send the impeachment resolution to the Judiciary Committee; this halts the immediate impeachment drive but does not prevent Democrats from reviving the effort after…",
+          "url": "https://www.thehindu.com/news/international/us-republicans-derail-bid-to-impeach-hegseth/article71687959.ece",
+          "published_at": "2026-11-11T01:30:55Z",
+          "published_at_estimated": false,
+          "image_url": "https://th-i.thgim.com/public/incoming/5xee5p/article71688094.ece/alternates/LANDSCAPE_1200/2026-11-10T220533Z_286105116_RC29LOA8PF04_RTRMADP_3_USA-TRUMP-HEGSETH-IMPEACHMENT.JPG"
+        },
+        {
+          "id": "994717e0e1dd",
+          "outlet_id": "examiner",
+          "headline": "Pelosi one of 11 Democrats who failed to vote in Hegseth impeachment bid",
+          "snippet": "Eleven House Democrats, including Rep. Nancy Pelosi (D-CA), missed the vote to advance the articles of impeachment against War Secretary Pete Hegseth on Tuesday. The impeachment bid is effectively…",
+          "url": "https://www.washingtonexaminer.com/news/house/4799658/pelosi-eleven-democrats-missed-vote-hegseth-impeachment/",
+          "published_at": "2026-11-11T03:19:14Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.washingtonexaminer.com/wp-content/uploads/2026/11/AP26223839766106.jpg?w=1024"
+        },
+        {
+          "id": "5404ef996010",
+          "outlet_id": "timesofisrael",
+          "headline": "With GOP still in control, US House blocks effort to impeach Hegseth",
+          "snippet": "Vote may only delay impeachment push until Democrats take charge of Congress; Pentagon chief slams effort as 'sabotage,' while Trump calls GOP lawmaker who submitted resolution a 'TOTAL LOSER!'",
+          "url": "https://www.timesofisrael.com/with-gop-still-in-control-us-house-blocks-effort-to-impeach-hegseth/",
+          "published_at": "2026-11-11T03:27:13Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "12e89fa82d3a",
+          "outlet_id": "mirror",
+          "headline": "Donald Trump lashes out at Republican 'loser' in tantrum over Hegseth impeachment attempt",
+          "snippet": "The impeachment attempt comes after a major loss for the Republican Party last week, and although Pete Hegseth was saved from impeachment on Tuesday, attempts may be made again in January",
+          "url": "https://www.mirror.co.uk/news/world-news/pete-hegseth-impeachment-trump-tantrum-37864357",
+          "published_at": "2026-11-11T04:24:17Z",
+          "published_at_estimated": false,
+          "image_url": "https://i2-prod.mirror.co.uk/incoming/article37862741.ece/ALTERNATES/s615/1_President-Trump-Meets-With-His-Cabinet-At-The-White-House.jpg"
+        },
+        {
+          "id": "989e136efd42",
+          "outlet_id": "france24",
+          "headline": "House Republicans quash effort to impeach Defense Secretary Hegseth",
+          "snippet": "Rochelle Ferguson Bouyahi, our international affairs editor, has more.",
+          "url": "https://www.france24.com/en/house-republicans-quash-effort-to-impeach-defense-secretary-hegseth",
+          "published_at": "2026-11-11T09:55:04Z",
+          "published_at_estimated": false,
+          "image_url": "https://s.france24.com/media/display/d94bf444-ddb2-11f1-ad88-695cb59fade5/w:1024/p:16x9/EN-20261111-100134-100727-CS.jpg"
+        },
+        {
+          "id": "b345ceb11e8f",
+          "outlet_id": "aljazeera",
+          "headline": "Did Democrats save Pete Hegseth from impeachment?",
+          "snippet": "Eleven Democrats are absent from procedural vote that narrowly shelves House impeachment vote against defence secretary.",
+          "url": "https://www.aljazeera.com/news/2026/11/11/did-democrats-save-pete-hegseth-from-impeachment",
+          "published_at": "2026-11-11T10:32:03Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "cf46f1c022dc",
+          "outlet_id": "bbc",
+          "headline": "US House blocks bid to impeach Defence Secretary Pete Hegseth",
+          "snippet": "Trump welcomes the outcome, praising Hegseth as a \"Great American Patriot\", but Democrats can try again next year.",
+          "url": "https://www.bbc.co.uk/news/articles/cxly4y5jzl0qo",
+          "published_at": "2026-11-11T11:47:22Z",
+          "published_at_estimated": false,
+          "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/5391/live/eb55ba30-dd67-11f1-a701-fddedf244c16.jpg"
+        },
+        {
+          "id": "91295ebed0e7",
+          "outlet_id": "guardian",
+          "headline": "Pete Hegseth survives effort to impeach him | First Thing",
+          "snippet": "House Republicans block impeachment resolution that cited US military actions in Iran, Yemen and Venezuela. Plus, SS United States to be sunk to create artificial reef Don’t already get First Thing…",
+          "url": "https://www.theguardian.com/us-news/2026/nov/11/first-thing-pete-hegseth-survives-effort-to-impeach-him",
+          "published_at": "2026-11-11T12:04:36Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.guim.co.uk/img/media/e6e2e6605c259204ddc5b504bcc172c9156dad4b/947_0_4715_3774/master/4715.jpg?width=460&quality=85&auto=format&fit=max&s=87f705022e24213d859669e65b421786"
+        },
+        {
+          "id": "b982967c472e",
+          "outlet_id": "nbc",
+          "headline": "House Republicans Block Motion to Impeach Pete Hegseth",
+          "snippet": "Defense Secretary Pete Hegseth narrowly avoided an impeachment threat in Congress after House Republicans banded together to shelve the resolution against him. NBC’s Garrett Haake reports for TODAY.",
+          "url": "https://www.today.com/video/house-republicans-block-motion-to-impeach-pete-hegseth-273259589897",
+          "published_at": "2026-11-11T12:08:11Z",
+          "published_at_estimated": false,
+          "image_url": "https://media-cldnry.s-nbcnews.com/image/upload/t_fit_1500w/mpx/2704722219/2026_11/1794398885404_tdy_news_7a_haake_hegseth_vote_261111_S3_1920x1080-ll8sbe.jpg"
+        },
+        {
+          "id": "92bbee5b722d",
+          "outlet_id": "france24",
+          "headline": "US House votes to derail impeachment of Defense Secretary Hegseth",
+          "snippet": "Republicans in ​the US House ​of Representatives banded together on Tuesday ​to ‌derail ⁠aneffort to impeach ‌Defense Secretary Pete Hegseth. Fraser Jackson, our correspondant in Washington DC, has…",
+          "url": "https://www.france24.com/en/us-house-votes-to-derail-impeachment-of-defense-secretary-hegseth",
+          "published_at": "2026-11-11T12:17:22Z",
+          "published_at_estimated": false,
+          "image_url": "https://s.france24.com/media/display/8f9877d4-ddc9-11f1-b424-5f54d898a954/w:1024/p:16x9/2026-11-10T155719Z-652015653-RC23LOADBZX1-RTRMADP-3-USA-POLAND.jpg"
+        },
+        {
+          "id": "8cdf1a787c42",
+          "outlet_id": "npr",
+          "headline": "House effectively ends Hegseth impeachment. And, 3 men accused of plotting U.K. attacks",
+          "snippet": "Defense Secretary Pete Hegseth has been spared from the House's impeachment effort, at least for now. And, federal prosecutors arrested three men accused of being Iran-backed operatives.",
+          "url": "https://www.npr.org/2026/11/11/g-s1-152949/up-first-newsletter-pete-hegseth-jim-jordan-iran-backed-trio-us-bases",
+          "published_at": "2026-11-11T12:21:59Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "5529d7e718b1",
+          "outlet_id": "guardian",
+          "headline": "GOP branded ‘sinking ship’ as Republicans block efforts to impeach Hegseth – US politics live",
+          "snippet": "Trump hails ‘exoneration of a Great American Patriot’ as moves against his defense secretary fail for now House Republicans block effort to impeach Hegseth Sign up for the US Breaking News email…",
+          "url": "https://www.theguardian.com/us-news/live/2026/nov/11/donald-trump-pete-hegseth-impeachment-democrats-republicans-arlington-latest-news-updates",
+          "published_at": "2026-11-11T13:41:52Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.guim.co.uk/img/media/b7838838f4e1ef5eb81581e00f7bc4e47c6a741a/303_0_2918_2334/master/2918.jpg?width=460&quality=85&auto=format&fit=max&s=a7592935554e05ae4be8ae655b38dc54"
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "The US House, with Republicans voting together, blocked or shelved the effort to impeach Pete Hegseth.",
+          "sources": [
+            "ce72726ab58a",
+            "1f1cf43da0a9",
+            "b3ce7b4d94e3",
+            "5404ef996010",
+            "989e136efd42",
+            "cf46f1c022dc",
+            "91295ebed0e7",
+            "b982967c472e",
+            "92bbee5b722d",
+            "8cdf1a787c42",
+            "5529d7e718b1",
+            "12e89fa82d3a",
+            "b345ceb11e8f"
+          ]
+        },
+        {
+          "text": "The vote took place on Tuesday.",
+          "sources": [
+            "ce72726ab58a",
+            "994717e0e1dd",
+            "92bbee5b722d",
+            "12e89fa82d3a"
+          ]
+        },
+        {
+          "text": "The outcome may only be temporary, with Democrats able to try again next year or in January.",
+          "sources": [
+            "b3ce7b4d94e3",
+            "5404ef996010",
+            "12e89fa82d3a",
+            "cf46f1c022dc",
+            "8cdf1a787c42",
+            "5529d7e718b1"
+          ]
+        },
+        {
+          "text": "Republican Rep. Thomas Massie led or submitted the impeachment push.",
+          "sources": [
+            "5df659edf765",
+            "6d621bcdaf6b",
+            "5404ef996010"
+          ]
+        },
+        {
+          "text": "Trump praised Hegseth as a \"Great American Patriot\" after the vote.",
+          "sources": [
+            "cf46f1c022dc",
+            "5529d7e718b1"
+          ]
+        },
+        {
+          "text": "Trump called the Republican lawmaker behind the resolution a 'loser'.",
+          "sources": [
+            "5404ef996010",
+            "12e89fa82d3a"
+          ]
+        },
+        {
+          "text": "Eleven House Democrats did not vote.",
+          "sources": [
+            "994717e0e1dd",
+            "b345ceb11e8f"
+          ]
+        },
+        {
+          "text": "The vote was narrow.",
+          "sources": [
+            "b982967c472e",
+            "b345ceb11e8f",
+            "b3ce7b4d94e3"
+          ]
+        },
+        {
+          "text": "Hegseth publicly attacked or defended himself against the impeachment effort.",
+          "sources": [
+            "5df659edf765",
+            "5404ef996010",
+            "1702fb7d2a91"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "12e89fa82d3a",
+              "quote": "lashes out at Republican 'loser' in tantrum",
+              "field": "headline"
+            },
+            {
+              "article_id": "5529d7e718b1",
+              "quote": "GOP branded ‘sinking ship’",
+              "field": "headline"
+            },
+            {
+              "article_id": "6d621bcdaf6b",
+              "quote": "retiring at the end of his term after losing to a primary challenger backed by President Trump",
+              "field": "snippet"
+            },
+            {
+              "article_id": "91295ebed0e7",
+              "quote": "cited US military actions in Iran, Yemen and Venezuela",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Trump's attack on the Republican lawmaker behind the impeachment effort.",
+              "sources": [
+                "12e89fa82d3a"
+              ]
+            },
+            {
+              "text": "Massie's background, including his primary loss to a Trump-backed challenger and his retirement.",
+              "sources": [
+                "6d621bcdaf6b"
+              ]
+            },
+            {
+              "text": "Republican setbacks, including a major loss last week and the 'sinking ship' label.",
+              "sources": [
+                "12e89fa82d3a",
+                "5529d7e718b1"
+              ]
+            },
+            {
+              "text": "The resolution's grounds in US military actions in Iran, Yemen and Venezuela.",
+              "sources": [
+                "91295ebed0e7"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "5df659edf765",
+              "quote": "Hegseth comes out swinging against Massie impeachment push",
+              "field": "headline"
+            },
+            {
+              "article_id": "c6ead8637003",
+              "quote": "isn't about Iran",
+              "field": "headline"
+            },
+            {
+              "article_id": "ce72726ab58a",
+              "quote": "shielding a top Trump administration official from a politically embarrassing rebuke",
+              "field": "snippet"
+            },
+            {
+              "article_id": "cf46f1c022dc",
+              "quote": "Democrats can try again next year",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Hegseth's response, likening the effort to the Democrats' impeachments of Trump.",
+              "sources": [
+                "5df659edf765"
+              ]
+            },
+            {
+              "text": "Vice President Vance's statement that the vote was not about Iran but about Hegseth taking on challenges at the Pentagon.",
+              "sources": [
+                "c6ead8637003"
+              ]
+            },
+            {
+              "text": "The vote as sparing a senior administration official an embarrassing rebuke, possibly only for now.",
+              "sources": [
+                "ce72726ab58a",
+                "8cdf1a787c42",
+                "cf46f1c022dc"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "right",
+          "headline_quotes": [
+            {
+              "article_id": "994717e0e1dd",
+              "quote": "Pelosi one of 11 Democrats who failed to vote in Hegseth impeachment bid",
+              "field": "headline"
+            },
+            {
+              "article_id": "994717e0e1dd",
+              "quote": "War Secretary Pete Hegseth",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "The eleven Democrats, including Nancy Pelosi, who missed the vote.",
+              "sources": [
+                "994717e0e1dd"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "right",
+          "text": "Right coverage does not mention Trump's reaction to the vote or to Massie.",
+          "sources": [
+            "cf46f1c022dc",
+            "5529d7e718b1",
+            "12e89fa82d3a"
+          ]
+        },
+        {
+          "lean": "right",
+          "text": "Right coverage does not mention that Democrats could revive the effort next year.",
+          "sources": [
+            "cf46f1c022dc",
+            "12e89fa82d3a",
+            "8cdf1a787c42"
+          ]
+        },
+        {
+          "lean": "left",
+          "text": "Left coverage does not mention that eleven Democrats missed the vote.",
+          "sources": [
+            "994717e0e1dd"
+          ]
+        },
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not mention that eleven Democrats missed the vote.",
+          "sources": [
+            "994717e0e1dd"
+          ]
+        }
+      ],
+      "contested_claims": [
+        {
+          "claim": "Whether the impeachment effort is about Iran: Vance says it is not, while the resolution is reported as citing US military actions in Iran.",
+          "asserted_by": [
+            "c6ead8637003"
+          ],
+          "disputed_by": [
+            "91295ebed0e7"
+          ]
+        }
+      ],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "ce72726ab58a",
+              "quote": "GOP House rejects Hegseth impeachment effort",
+              "field": "headline"
+            },
+            {
+              "article_id": "989e136efd42",
+              "quote": "House Republicans quash effort to impeach Defense Secretary Hegseth",
+              "field": "headline"
+            },
+            {
+              "article_id": "cf46f1c022dc",
+              "quote": "Trump welcomes the outcome",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Reactions from Trump, Vance and Hegseth to the effort and the vote.",
+              "sources": [
+                "cf46f1c022dc",
+                "5529d7e718b1",
+                "12e89fa82d3a",
+                "c6ead8637003",
+                "5df659edf765"
+              ]
+            },
+            {
+              "text": "Massie's role and background.",
+              "sources": [
+                "6d621bcdaf6b",
+                "5df659edf765"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "1702fb7d2a91",
+              "quote": "Hegseth defends war record amid US House impeachment effort",
+              "field": "headline"
+            },
+            {
+              "article_id": "b3ce7b4d94e3",
+              "quote": "The House voted 211 to 204 to send the impeachment resolution to the Judiciary Committee",
+              "field": "snippet"
+            },
+            {
+              "article_id": "5404ef996010",
+              "quote": "With GOP still in control, US House blocks effort to impeach Hegseth",
+              "field": "headline"
+            },
+            {
+              "article_id": "b345ceb11e8f",
+              "quote": "Did Democrats save Pete Hegseth from impeachment?",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "The procedural mechanics and vote count, with the resolution sent to committee.",
+              "sources": [
+                "b3ce7b4d94e3"
+              ]
+            },
+            {
+              "text": "Republican control of the House and the prospect of revival when Democrats take charge.",
+              "sources": [
+                "5404ef996010",
+                "b3ce7b4d94e3"
+              ]
+            },
+            {
+              "text": "The role of absent Democrats in the narrow outcome.",
+              "sources": [
+                "b345ceb11e8f"
+              ]
+            },
+            {
+              "text": "Hegseth's defence of his war record.",
+              "sources": [
+                "1702fb7d2a91"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "House Republicans voted on Tuesday to block an effort, led by Republican Rep. Thomas Massie, to impeach Defense Secretary Pete Hegseth. The Hindu reports a 211 to 204 vote sending the resolution to the Judiciary Committee. Trump praised Hegseth, and several outlets say Democrats could revive the effort next year.",
+        "sources": [
+          "ce72726ab58a",
+          "5df659edf765",
+          "6d621bcdaf6b",
+          "b3ce7b4d94e3",
+          "cf46f1c022dc",
+          "5529d7e718b1",
+          "5404ef996010",
+          "12e89fa82d3a",
+          "92bbee5b722d"
+        ]
+      },
+      "conclusion": {
+        "text": "All coverage reports that House Republicans blocked the Hegseth impeachment effort, possibly only for now. Left outlets lead with Trump's attack on Massie, centre with Hegseth's and Vance's responses, and the right and Al Jazeera with absent Democrats. Vance's claim the vote is not about Iran sits against a report that the resolution cited Iran.",
+        "sources": [
+          "ce72726ab58a",
+          "1f1cf43da0a9",
+          "cf46f1c022dc",
+          "12e89fa82d3a",
+          "5df659edf765",
+          "c6ead8637003",
+          "994717e0e1dd",
+          "b345ceb11e8f",
+          "91295ebed0e7",
+          "8cdf1a787c42"
+        ]
+      },
+      "validation": {
+        "kept": 47,
+        "dropped_by_reason": {}
+      }
+    },
+    {
+      "id": "d3fb686a597d",
+      "title": "Russia and Ukraine agree prisoner exchange after US-mediated talks in Abu Dhabi",
+      "rank": 2,
+      "outlet_count": 12,
+      "coverage": {
+        "lean": {
+          "left": 4,
+          "centre": 2,
+          "right": 0
+        },
+        "bloc": {
+          "west": 6,
+          "east": 6
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "54d3928f1257",
+          "outlet_id": "cgtn",
+          "headline": "Russian, Ukrainian delegations arrive in Abu Dhabi for talks",
+          "snippet": "Russian and Ukrainian delegations arrived in Abu Dhabi, the capital of the United Arab Emirates (UAE), on Monday to participate in trilateral talks involving Russia, Ukraine and the United States.",
+          "url": "https://news.cgtn.com/news/2026-11-10/Russian-Ukrainian-delegations-arrive-in-Abu-Dhabi-for-talks-1RWZp641PRC/p.html",
+          "published_at": "2026-11-10T03:13:16Z",
+          "published_at_estimated": false,
+          "image_url": "https://news.cgtn.com/news/2026-11-10/Russian-Ukrainian-delegations-arrive-in-Abu-Dhabi-for-talks-1RWZp641PRC/img/35e2157f6b00436ea874d802b87f6c6a/35e2157f6b00436ea874d802b87f6c6a-1920.png"
+        },
+        {
+          "id": "9049e95c289d",
+          "outlet_id": "nyt",
+          "headline": "Ukraine Peace Talks Resume This Week in Abu Dhabi",
+          "snippet": "U.S.-led talks to end the war between Russia and Ukraine will resume this week in Abu Dhabi. A cease-fire won’t be on the table.",
+          "url": "https://www.nytimes.com/2026/11/09/world/europe/ukraine-russia-peace-talks.html",
+          "published_at": "2026-11-10T03:39:35Z",
+          "published_at_estimated": false,
+          "image_url": "https://static01.nyt.com/images/2026/11/09/multimedia/09int-ukraine-russia-talks-vfqh/09int-ukraine-russia-talks-vfqh-mediumSquareAt3X.jpg"
+        },
+        {
+          "id": "1427dcac6ea2",
+          "outlet_id": "cgtn",
+          "headline": "Ukrainian delegation meets US envoys ahead of Russia talks",
+          "snippet": "",
+          "url": "https://news.cgtn.com/news/2026-11-10/news-1RXpE3onnfq/p.html",
+          "published_at": "2026-11-10T07:35:45Z",
+          "published_at_estimated": false,
+          "image_url": "https://news.cgtn.com/news/2026-11-10/news-1RXpE3onnfq/img/7186924dafe446d4b06152d47087e41b/7186924dafe446d4b06152d47087e41b-750.png"
+        },
+        {
+          "id": "6be915e55981",
+          "outlet_id": "cgtn",
+          "headline": "New round of Russia-US-Ukraine trilateral talks begins in Abu Dhabi",
+          "snippet": "A new round of trilateral talks involving Russia, the United States and Ukraine began Tuesday in Abu Dhabi, the capital of the United Arab Emirates.",
+          "url": "https://news.cgtn.com/news/2026-11-10/news-1RXskAxlM1q/p.html",
+          "published_at": "2026-11-10T08:13:20Z",
+          "published_at_estimated": false,
+          "image_url": "https://news.cgtn.com/news/2026-11-10/news-1RXskAxlM1q/img/54de56c50bbd4815980af35c5fd2a5c4/54de56c50bbd4815980af35c5fd2a5c4-750.png"
+        },
+        {
+          "id": "7e42473beea7",
+          "outlet_id": "moscowtimes",
+          "headline": "Russia and Ukraine Hold New Round of U.S.-Mediated Peace Talks in Abu Dhabi",
+          "snippet": "The two-day negotiations mark a resumption of peace efforts that stalled earlier this year after Trump launched the war against Iran.",
+          "url": "https://www.themoscowtimes.com/2026/11/10/russia-and-ukraine-hold-new-round-of-us-mediated-peace-talks-in-abu-dhabi-a94216",
+          "published_at": "2026-11-10T08:35:00Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "53b7c2da9c39",
+          "outlet_id": "huffpost",
+          "headline": "U.S.-Mediated Talks On Ending Russia-Ukraine War Begin In Abu Dhabi",
+          "snippet": "Hopes of progress in ending Europe’s biggest conflict since World War II are tempered by the absence of any significant breakthroughs this year.",
+          "url": "https://www.huffpost.com/entry/russia-ukraine-us-abu-dhabi-talks_n_6af2e591e4b0a8468d8a807d",
+          "published_at": "2026-11-10T09:45:01Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "3ddd2274e941",
+          "outlet_id": "thehindu",
+          "headline": "Ukraine’s Zelenskyy says he is pleased with messages from U.S. envoys on diplomatic efforts to end war",
+          "snippet": "“I see changes. I am very happy about what I hear,” Mr. Zelenskyy said when asked about the recent messages by U.S. presidential ‌envoys ⁠Jared Kushner and Steve Witkoff",
+          "url": "https://www.thehindu.com/news/international/ukraines-zelenskyy-says-he-is-pleased-with-messages-from-us-envoys-on-diplomatic-efforts-to-end-war/article71687545.ece",
+          "published_at": "2026-11-11T02:54:53Z",
+          "published_at_estimated": false,
+          "image_url": "https://th-i.thgim.com/public/incoming/uokytk/article71688073.ece/alternates/LANDSCAPE_1200/2026-11-10T231204Z_908975751_RC20LOAXJB00_RTRMADP_3_UKRAINE-CRISIS-ZELENSKIY-DENMARK.JPG"
+        },
+        {
+          "id": "6044c1d06322",
+          "outlet_id": "aljazeera",
+          "headline": "Putin is not ready to make peace in Abu Dhabi",
+          "snippet": "The Russian leader still believes he can outlast Western support for Ukraine.",
+          "url": "https://www.aljazeera.com/opinions/2026/11/11/putin-is-not-ready-to-make-peace-in-abu-dhabi",
+          "published_at": "2026-11-11T08:37:31Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "0a1af8962782",
+          "outlet_id": "aljazeera",
+          "headline": "What do Kyiv residents think about giving up territory to Russia?",
+          "snippet": "US President Donald Trump says post-war Ukraine will have a 'different shape' ahead of peace talks in Abu Dhabi.",
+          "url": "https://www.aljazeera.com/video/newsfeed/2026/11/11/what-do-kyiv-residents-think-about-giving-up-territory-to-russia",
+          "published_at": "2026-11-11T09:07:59Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "8f92a604a399",
+          "outlet_id": "thenational",
+          "headline": "Abu Dhabi peace talks yield agreement on large-scale prisoner exchange between Russia and Ukraine",
+          "snippet": "Russia and Ukraine agreed on Wednesday to a large-scale prisoner exchange after two days of crucial talks in Abu Dhabi that also yielded progress on practical issues, including mechanisms to monitor…",
+          "url": "https://www.thenationalnews.com/news/mena/2026/11/11/uae-optimistic-russia-ukraine-talks-will-achieve-positive-breakthrough/",
+          "published_at": "2026-11-11T09:13:48Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.thenationalnews.com/resizer/v2/6UYKEBXBH4CLQVS225ILQ3U5AU.jpg?auth=57426f4759659e1c5ac1c9ce6d0e54f4d913f1f8520fe8f1c77c3fad3c1cc518&smart=true&width=5858&height=3905"
+        },
+        {
+          "id": "f64bfa4c6c5e",
+          "outlet_id": "moscowtimes",
+          "headline": "Russia and Ukraine Agree to Major Prisoner Exchange After Latest Peace Talks End",
+          "snippet": "The White House is leading a renewed push to mediate a deal that would bring an end to Russia’s full-scale war against Ukraine.",
+          "url": "https://www.themoscowtimes.com/2026/11/11/russia-and-ukraine-agree-to-major-prisoner-exchange-after-latest-peace-talks-end-a94227",
+          "published_at": "2026-11-11T09:58:00Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "bf469b9c8eea",
+          "outlet_id": "france24",
+          "headline": "Russia, Ukraine start second day of US-led talks: Kyiv lead negotiator",
+          "snippet": "Russia and Ukraine have resumed US-mediated talks in Abu Dhabi for a second day, Kyiv's chief negotiator Rustem Umerov said on Wednesday.",
+          "url": "https://www.france24.com/en/russia-ukraine-start-second-day-of-us-led-talks-kyiv-lead-negotiator",
+          "published_at": "2026-11-11T10:42:35Z",
+          "published_at_estimated": false,
+          "image_url": "https://s.france24.com/media/display/1e5afdd0-ddb0-11f1-b63d-695cb59fade5/w:1024/p:16x9/EN-20261111-080428-080610-CS.jpg"
+        },
+        {
+          "id": "c6b40656fc7a",
+          "outlet_id": "thehindu",
+          "headline": "Russia, Ukraine agree to major prisoner swap after U.S.-brokered talks in Abu Dhabi",
+          "snippet": "The two sides have exchanged thousands of captured soldiers throughout the almost five-year war, started by Russia’s 2022 invasion",
+          "url": "https://www.thehindu.com/news/international/russia-ukraine-agree-to-prisoner-swap-at-us-brokered-talks/article71689267.ece",
+          "published_at": "2026-11-11T12:27:29Z",
+          "published_at_estimated": false,
+          "image_url": "https://th-i.thgim.com/public/incoming/1r338q/article71689691.ece/alternates/LANDSCAPE_1200/2026-11-11T121539Z_1035325634_RC2OLOA6XBUN_RTRMADP_3_UKRAINE-CRISIS-TALKS.JPG"
+        },
+        {
+          "id": "7854b65b59c2",
+          "outlet_id": "nbc",
+          "headline": "Russia and Ukraine Agree on Large-Scale Prisoner Exchange",
+          "snippet": "White House Special Envoy Jared Kushner says Russian and Ukraine have agreed on a large-scale prisoner exchange. The agreement follows two days of U.S.-mediated talks in Abu Dhabi.",
+          "url": "https://www.today.com/video/russia-and-ukraine-agree-on-large-scale-prisoner-exchange-273268293511",
+          "published_at": "2026-11-11T13:11:40Z",
+          "published_at_estimated": false,
+          "image_url": "https://media-cldnry.s-nbcnews.com/image/upload/t_fit_1500w/mpx/2704722219/2026_11/1794402696562_tdy_news_8a_russia_ukraine_exchange_261111_S3_1920x1080-nkqgaj.jpg"
+        },
+        {
+          "id": "0e916c787773",
+          "outlet_id": "aljazeera",
+          "headline": "Russia-Ukraine talks in Abu Dhabi end with prisoner exchange agreement",
+          "snippet": "The talks in the UAE capital were the first ⁠between the two warring sides since February.",
+          "url": "https://www.aljazeera.com/news/2026/11/11/russia-ukraine-talks-in-abu-dhabi-end-with-prisoner-exchange-agreement",
+          "published_at": "2026-11-11T13:16:30Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "23dfe5ec4faa",
+          "outlet_id": "guardian",
+          "headline": "US envoys to meet Putin and Zelenskyy separately after peace talks see some progress - Europe Live",
+          "snippet": "US negotiators to meet Putin in Moscow, Zelenskyy in Dublin next Separately, I am also keeping an eye on Italy, with reports that several schools are being evacuated after receiving bomb threats by…",
+          "url": "https://www.theguardian.com/world/live/2026/nov/11/europe-ukraine-russia-us-talks-abu-dhabi-zelenskyy-latest-news-updates",
+          "published_at": "2026-11-11T13:29:00Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.guim.co.uk/img/media/9ea491e2eb2440edbdf11e08147b7a5a43b45d81/642_0_4516_3612/master/4516.jpg?width=460&quality=85&auto=format&fit=max&s=aa1fe894b413ccb2d1f15ea60175b180"
+        },
+        {
+          "id": "62c5c47db993",
+          "outlet_id": "npr",
+          "headline": "Russia and Ukraine agree to a large exchange of prisoners of war, officials say",
+          "snippet": "Russia and Ukraine have agreed to a large exchange of prisoners of war. U.S.-mediated talks in Abu Dhabi led to this decision, marking the biggest humanitarian release since the war began in 2022.",
+          "url": "https://www.npr.org/2026/11/11/g-s1-152954/russia-ukraine-war-talks",
+          "published_at": "2026-11-11T13:30:00Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "bec0c684f5d3",
+          "outlet_id": "ecns",
+          "headline": "New round of Russia-U.S.-Ukraine talks held in Abu Dhabi",
+          "snippet": "Representatives from Russia, the United States and Ukraine attend a new round of trilateral talks in Abu Dhabi, the capital of the United Arab Emirates, on Nov. 10, 2026.",
+          "url": "https://www.ecns.cn/cns-wire/2026-11-11/detail-ihfmypxx3539110.shtml",
+          "published_at": "2026-11-11T13:56:42Z",
+          "published_at_estimated": false,
+          "image_url": null
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "Russia, Ukraine and the United States held a new round of talks in Abu Dhabi, with the US acting as mediator.",
+          "sources": [
+            "54d3928f1257",
+            "9049e95c289d",
+            "6be915e55981",
+            "7e42473beea7",
+            "53b7c2da9c39",
+            "bf469b9c8eea",
+            "c6b40656fc7a",
+            "7854b65b59c2",
+            "62c5c47db993",
+            "bec0c684f5d3"
+          ]
+        },
+        {
+          "text": "The talks lasted two days.",
+          "sources": [
+            "7e42473beea7",
+            "8f92a604a399",
+            "bf469b9c8eea",
+            "7854b65b59c2"
+          ]
+        },
+        {
+          "text": "Russia and Ukraine agreed to a large-scale prisoner exchange as a result of the talks.",
+          "sources": [
+            "8f92a604a399",
+            "f64bfa4c6c5e",
+            "c6b40656fc7a",
+            "7854b65b59c2",
+            "0e916c787773",
+            "62c5c47db993"
+          ]
+        },
+        {
+          "text": "US envoys Jared Kushner and Steve Witkoff are involved in the diplomatic effort.",
+          "sources": [
+            "3ddd2274e941",
+            "7854b65b59c2"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "9049e95c289d",
+              "quote": "A cease-fire won’t be on the table",
+              "field": "snippet"
+            },
+            {
+              "article_id": "53b7c2da9c39",
+              "quote": "are tempered by the absence of any significant breakthroughs this year",
+              "field": "snippet"
+            },
+            {
+              "article_id": "7854b65b59c2",
+              "quote": "Russia and Ukraine Agree on Large-Scale Prisoner Exchange",
+              "field": "headline"
+            },
+            {
+              "article_id": "23dfe5ec4faa",
+              "quote": "US envoys to meet Putin and Zelenskyy separately after peace talks see some progress",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Notes the limits of the talks: no ceasefire on the table and no significant breakthroughs this year.",
+              "sources": [
+                "9049e95c289d",
+                "53b7c2da9c39"
+              ]
+            },
+            {
+              "text": "Attributes the prisoner-exchange announcement to White House envoy Jared Kushner.",
+              "sources": [
+                "7854b65b59c2"
+              ]
+            },
+            {
+              "text": "Highlights next steps, with US negotiators to meet Putin in Moscow and Zelenskyy in Dublin.",
+              "sources": [
+                "23dfe5ec4faa"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "bf469b9c8eea",
+              "quote": "Kyiv's chief negotiator Rustem Umerov said on Wednesday",
+              "field": "snippet"
+            },
+            {
+              "article_id": "62c5c47db993",
+              "quote": "marking the biggest humanitarian release since the war began in 2022",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Cites Kyiv's chief negotiator Rustem Umerov on the resumption of talks for a second day.",
+              "sources": [
+                "bf469b9c8eea"
+              ]
+            },
+            {
+              "text": "Describes the agreed exchange as the biggest humanitarian release since the war began in 2022.",
+              "sources": [
+                "62c5c47db993"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not mention the planned separate meetings of US negotiators with Putin and Zelenskyy.",
+          "sources": [
+            "23dfe5ec4faa"
+          ]
+        },
+        {
+          "lean": "left",
+          "text": "Left coverage does not mention Kyiv's chief negotiator Rustem Umerov.",
+          "sources": [
+            "bf469b9c8eea"
+          ]
+        }
+      ],
+      "contested_claims": [],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "9049e95c289d",
+              "quote": "A cease-fire won’t be on the table",
+              "field": "snippet"
+            },
+            {
+              "article_id": "7854b65b59c2",
+              "quote": "Russia and Ukraine Agree on Large-Scale Prisoner Exchange",
+              "field": "headline"
+            },
+            {
+              "article_id": "62c5c47db993",
+              "quote": "marking the biggest humanitarian release since the war began in 2022",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Foregrounds the prisoner exchange alongside the limits of the talks and the next round of envoy meetings.",
+              "sources": [
+                "9049e95c289d",
+                "53b7c2da9c39",
+                "7854b65b59c2",
+                "23dfe5ec4faa",
+                "62c5c47db993"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "6be915e55981",
+              "quote": "A new round of trilateral talks involving Russia, the United States and Ukraine began Tuesday in Abu Dhabi",
+              "field": "snippet"
+            },
+            {
+              "article_id": "7e42473beea7",
+              "quote": "stalled earlier this year after Trump launched the war against Iran",
+              "field": "snippet"
+            },
+            {
+              "article_id": "6044c1d06322",
+              "quote": "Putin is not ready to make peace in Abu Dhabi",
+              "field": "headline"
+            },
+            {
+              "article_id": "3ddd2274e941",
+              "quote": "I see changes. I am very happy about what I hear",
+              "field": "snippet"
+            },
+            {
+              "article_id": "8f92a604a399",
+              "quote": "also yielded progress on practical issues, including mechanisms to monitor",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Describes the format as trilateral talks, including the delegations' arrival and meetings.",
+              "sources": [
+                "54d3928f1257",
+                "1427dcac6ea2",
+                "6be915e55981",
+                "bec0c684f5d3"
+              ]
+            },
+            {
+              "text": "Links the earlier stall in peace efforts to Trump launching the war against Iran.",
+              "sources": [
+                "7e42473beea7"
+              ]
+            },
+            {
+              "text": "Reports Zelenskyy as pleased with messages from US envoys.",
+              "sources": [
+                "3ddd2274e941"
+              ]
+            },
+            {
+              "text": "States that Putin is not ready to make peace and believes he can outlast Western support for Ukraine.",
+              "sources": [
+                "6044c1d06322"
+              ]
+            },
+            {
+              "text": "Raises the question of territory, citing Trump saying post-war Ukraine will have a 'different shape'.",
+              "sources": [
+                "0a1af8962782"
+              ]
+            },
+            {
+              "text": "Reports progress on practical issues, including monitoring mechanisms.",
+              "sources": [
+                "8f92a604a399"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "Russian, Ukrainian and US delegations held two days of US-mediated talks in Abu Dhabi, after which Russia and Ukraine agreed a large-scale prisoner exchange. White House envoy Jared Kushner announced the agreement, and US negotiators are to meet Putin and Zelenskyy separately next.",
+        "sources": [
+          "6be915e55981",
+          "7e42473beea7",
+          "8f92a604a399",
+          "f64bfa4c6c5e",
+          "c6b40656fc7a",
+          "7854b65b59c2",
+          "0e916c787773",
+          "62c5c47db993",
+          "23dfe5ec4faa"
+        ]
+      },
+      "conclusion": {
+        "text": "Coverage across leans and blocs agrees that US-mediated talks in Abu Dhabi produced a large-scale prisoner exchange. Western outlets stress the talks' limits and next envoy meetings; Eastern outlets add the trilateral format, Zelenskyy's positive remarks and a view that Putin is not ready for peace. No claims are contradicted.",
+        "sources": [
+          "7854b65b59c2",
+          "62c5c47db993",
+          "8f92a604a399",
+          "0e916c787773",
+          "9049e95c289d",
+          "23dfe5ec4faa",
+          "6be915e55981",
+          "3ddd2274e941",
+          "6044c1d06322"
+        ]
+      },
+      "validation": {
+        "kept": 34,
+        "dropped_by_reason": {}
+      }
+    },
+    {
+      "id": "76618d84d46d",
+      "title": "Nvidia CEO Jensen Huang faces scrutiny over affair with alleged Chinese spy",
+      "rank": 3,
+      "outlet_count": 9,
+      "coverage": {
+        "lean": {
+          "left": 3,
+          "centre": 1,
+          "right": 2
+        },
+        "bloc": {
+          "west": 6,
+          "east": 3
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "070cf9b4da1d",
+          "outlet_id": "nyt",
+          "headline": "The Nvidia Affair",
+          "snippet": "An illicit relationship between the C.E.O. and an alleged Chinese spy is putting the spotlight on a murky ecosystem of companies smuggling A.I. chips into China.",
+          "url": "https://www.nytimes.com/2026/11/09/world/nvidia-affair-jensen-huang-russell-brand.html",
+          "published_at": "2026-11-10T05:43:35Z",
+          "published_at_estimated": false,
+          "image_url": "https://static01.nyt.com/images/2026/11/10/multimedia/10int-theworld-nvidia-01-wkfl-promo/10int-theworld-nvidia-01-wkfl-promo-mediumSquareAt3X.jpg"
+        },
+        {
+          "id": "de5e3d9a27a7",
+          "outlet_id": "thenational",
+          "headline": "Jensen Huang scheduled for Nvidia's GTC event as criticism and scrutiny increase",
+          "snippet": "Embattled Nvidia chief executive Jensen Huang has cancelled plans to attend several technology summits, but he remains listed as the main speaker for his company's GTC event in Washington next…",
+          "url": "https://www.thenationalnews.com/future/technology/2026/11/11/nvidia-ceo-jensen-huang-alice-huang/",
+          "published_at": "2026-11-10T20:42:52Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.thenationalnews.com/resizer/v2/GDQHAVWZ4FGHPLIPBXK7JZ7MHY?auth=92944954c82f8fa8475629bfe0a1667f62bb69504928fd471424e596c31b6697&smart=true&width=5359&height=3015"
+        },
+        {
+          "id": "003ef2d60550",
+          "outlet_id": "axios",
+          "headline": "Scoop: Commerce Department received national security warning on Nvidia CEO affair",
+          "snippet": "Commerce Secretary Howard Lutnick was sent a highly classified memo warning about Nvidia CEO Jensen Huang's relationship with suspected Chinese spy Alice Huang, multiple sources familiar told Axios…",
+          "url": "https://www.axios.com/2026/11/10/lutnick-nvidia-jensen-huang-china-memo",
+          "published_at": "2026-11-10T23:47:04Z",
+          "published_at_estimated": false,
+          "image_url": "https://images.axios.com/QdGvTen2GCBvveTn-c0W9R2D7XY=/0x0:4000x2250/1366x768/2026/11/10/1794352029848.jpeg"
+        },
+        {
+          "id": "beb21b1a0999",
+          "outlet_id": "examiner",
+          "headline": "Republicans recoil over Nvidia CEO spy allegations as feds investigate: ‘I lost my breath’",
+          "snippet": "Senate Republicans pressed for answers Tuesday over allegations that Chinese intelligence targeted Nvidia CEO Jensen Huang, raising questions about who in the Trump administration knew of the…",
+          "url": "https://www.washingtonexaminer.com/news/justice/4799564/republicans-nvidia-ceo-china-spy-investigation/",
+          "published_at": "2026-11-11T02:21:22Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.washingtonexaminer.com/wp-content/uploads/2026/11/jensen-huang-spy-affair.jpg?w=1024"
+        },
+        {
+          "id": "81463f7d69a0",
+          "outlet_id": "thehindu",
+          "headline": "How Nvidia CEO Jensen Huang's extramarital affair could cause collateral damage in Washington",
+          "snippet": "Nvidia CEO Jensen Huang confronts a widening political and legal storm in Washington over an alleged extramarital affair and claims a former Megaspeed executive spied for China, as federal…",
+          "url": "https://www.thehindu.com/news/international/how-nvidia-ceo-jensen-huangs-extramarital-affair-could-cause-collateral-damage-in-washington/article71688529.ece",
+          "published_at": "2026-11-11T07:54:08Z",
+          "published_at_estimated": false,
+          "image_url": "https://th-i.thgim.com/public/incoming/x6fzmv/article71688596.ece/alternates/LANDSCAPE_1200/US_Nvidia_Jensen_Huang_Fallout_83942.jpg"
+        },
+        {
+          "id": "748a78c3aa7c",
+          "outlet_id": "scmp",
+          "headline": "Nvidia CEO Jensen Huang’s affair: everything you need to know",
+          "snippet": "We have put together stories from our coverage of Jensen Huang’s affair and its potential repercussions. If you would like to see more of our reporting, please consider subscribing. 1. Could Jensen…",
+          "url": "https://www.scmp.com/news/article/3374047/nvidia-ceo-jensen-huangs-affair-everything-you-need-know",
+          "published_at": "2026-11-11T08:20:27Z",
+          "published_at_estimated": false,
+          "image_url": "https://cdn.i-scmp.com/sites/default/files/styles/1280x720/public/d8/images/canvas/2026/11/11/b99db741-da18-4b90-8581-37c87fec3d6d_ff4acf89.jpg?itok=yalVKGA5&v=1794383346"
+        },
+        {
+          "id": "05b86bae34ba",
+          "outlet_id": "thehindu",
+          "headline": "Alice Huang, who reportedly had affair with Nvidia CEO, is Chinese banker turned tech exec",
+          "snippet": "An affair between Nvidia's Jensen Huang and Alice Huang, who reportedly was suspected of working as a spy for Beijing, has rocked the tech and political worlds",
+          "url": "https://www.thehindu.com/news/international/alice-huang-who-reportedly-had-affair-with-nvidia-ceo-is-chinese-banker-turned-tech-exec/article71688893.ece",
+          "published_at": "2026-11-11T08:53:03Z",
+          "published_at_estimated": false,
+          "image_url": "https://th-i.thgim.com/public/incoming/11jqkp/article71688946.ece/alternates/LANDSCAPE_1200/2026-11-10T025315Z_781474958_RC2BKOASZBEJ_RTRMADP_3_NVIDIA-PROBE-CEO.JPG"
+        },
+        {
+          "id": "9cd3c022e1f9",
+          "outlet_id": "guardian",
+          "headline": "Nvidia hires leading US law firm to investigate Jensen Huang’s relationship",
+          "snippet": "Move comes as chipmaker reels from reports its CEO was having an affair with an alleged Chinese spy Business live – latest updates Nvidia has appointed a leading US law firm to conduct a “thorough…",
+          "url": "https://www.theguardian.com/technology/2026/nov/11/nvidia-hires-leading-us-law-firm-to-investigate-jensen-huang-relationship",
+          "published_at": "2026-11-11T11:49:12Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.guim.co.uk/img/media/b76023068afd6989a4d83782e8ad21ac88094570/327_0_3331_2666/master/3331.jpg?width=460&quality=85&auto=format&fit=max&s=6da6404f0c51a432aa465c864e40df72"
+        },
+        {
+          "id": "4db8dc9d77fa",
+          "outlet_id": "dailymail",
+          "headline": "Why Nvidia's stock market pain is hurting your pension but you don't have to worry if you follow this plan: RACHEL RICKARD STRAUS",
+          "snippet": "The pensions and Isas of millions of British savers have been dented this week by the revelation that a middle-aged man thousands of miles away had an affair.",
+          "url": "https://www.dailymail.com/money/investing/article-16282475/Why-Nvidias-stock-market-pain-hurting-pension-you-dont-worry-you-follow-plan-RACHEL-RICKARD-STRAUS.html",
+          "published_at": "2026-11-11T13:17:28Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.dailymail.com/1s/2026/11/11/13/112426901-0-image-m-9_1794403024617.jpg"
+        },
+        {
+          "id": "54191d5bc792",
+          "outlet_id": "dailymail",
+          "headline": "Jensen Huang's 'spy' mistress had a secret HUSBAND: Nvidia plot thickens as details emerge on lover's past with financier who fell foul of Chinese authorities",
+          "snippet": "The alleged Chinese spy with whom Nvidia boss Jensen Huang admitted to having an affair was previously in a relationship with a financier who had been accused of insider trading in China.",
+          "url": "https://www.dailymail.com/news/article-16283335/Jensen-Huang-Nvidia-spy-mistress-husband.html",
+          "published_at": "2026-11-11T13:18:17Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.dailymail.com/1s/2026/11/11/05/112409077-0-image-m-26_1794374264383.jpg"
+        },
+        {
+          "id": "5178691ab758",
+          "outlet_id": "nbc",
+          "headline": "Chinese espionage expert discusses Nvidia CEO investigation",
+          "snippet": "Nicholas Eftimiades, a retired senior intelligence officer and author of the book “Chinese Espionage Operations and Tactics,” talks about the methods Chinese spies use to infiltrate American…",
+          "url": "https://www.nbcnews.com/now/video/nvidia-ceo-investigation-intensifies-273269829504",
+          "published_at": "2026-11-11T13:32:31Z",
+          "published_at_estimated": false,
+          "image_url": "https://media-cldnry.s-nbcnews.com/image/upload/t_fit_1500w/mpx/2704722219/2026_11/1794403944571_now_mnn_nvidia_ceo_analysis_261111_S3_1920x1080-jm76y3.jpg"
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "Jensen Huang had an affair or relationship with a woman described as an alleged or suspected Chinese spy.",
+          "sources": [
+            "070cf9b4da1d",
+            "003ef2d60550",
+            "05b86bae34ba",
+            "9cd3c022e1f9",
+            "54191d5bc792",
+            "81463f7d69a0"
+          ]
+        },
+        {
+          "text": "The woman is named as Alice Huang.",
+          "sources": [
+            "003ef2d60550",
+            "05b86bae34ba"
+          ]
+        },
+        {
+          "text": "Federal authorities are investigating the matter.",
+          "sources": [
+            "beb21b1a0999",
+            "81463f7d69a0",
+            "5178691ab758"
+          ]
+        },
+        {
+          "text": "Huang faces mounting political scrutiny and criticism, including in Washington.",
+          "sources": [
+            "beb21b1a0999",
+            "81463f7d69a0",
+            "de5e3d9a27a7"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "070cf9b4da1d",
+              "quote": "a murky ecosystem of companies smuggling A.I. chips into China",
+              "field": "snippet"
+            },
+            {
+              "article_id": "9cd3c022e1f9",
+              "quote": "Nvidia hires leading US law firm",
+              "field": "headline"
+            },
+            {
+              "article_id": "5178691ab758",
+              "quote": "the methods Chinese spies use to infiltrate American",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Links the affair to companies smuggling AI chips into China.",
+              "sources": [
+                "070cf9b4da1d"
+              ]
+            },
+            {
+              "text": "Leads with Nvidia appointing a law firm to investigate its CEO's relationship.",
+              "sources": [
+                "9cd3c022e1f9"
+              ]
+            },
+            {
+              "text": "Features an intelligence expert on Chinese espionage methods.",
+              "sources": [
+                "5178691ab758"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "003ef2d60550",
+              "quote": "Commerce Department received national security warning on Nvidia CEO affair",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Reports that Commerce Secretary Howard Lutnick was sent a highly classified memo warning about the relationship.",
+              "sources": [
+                "003ef2d60550"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "right",
+          "headline_quotes": [
+            {
+              "article_id": "beb21b1a0999",
+              "quote": "Republicans recoil over Nvidia CEO spy allegations",
+              "field": "headline"
+            },
+            {
+              "article_id": "54191d5bc792",
+              "quote": "Jensen Huang's 'spy' mistress had a secret HUSBAND",
+              "field": "headline"
+            },
+            {
+              "article_id": "4db8dc9d77fa",
+              "quote": "Why Nvidia's stock market pain is hurting your pension",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Foregrounds Senate Republican questions about who in the Trump administration knew of the allegations.",
+              "sources": [
+                "beb21b1a0999"
+              ]
+            },
+            {
+              "text": "Details the woman's past relationship with a financier accused of insider trading in China.",
+              "sources": [
+                "54191d5bc792"
+              ]
+            },
+            {
+              "text": "Focuses on the effect of Nvidia's share fall on British savers' pensions and Isas.",
+              "sources": [
+                "4db8dc9d77fa"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "right",
+          "text": "Right-leaning coverage does not mention Nvidia hiring a US law firm to investigate the relationship.",
+          "sources": [
+            "9cd3c022e1f9"
+          ]
+        },
+        {
+          "lean": "left",
+          "text": "Left-leaning coverage does not mention the classified memo sent to Commerce Secretary Howard Lutnick.",
+          "sources": [
+            "003ef2d60550"
+          ]
+        },
+        {
+          "lean": "left",
+          "text": "Left-leaning coverage does not mention Senate Republicans pressing for answers.",
+          "sources": [
+            "beb21b1a0999"
+          ]
+        }
+      ],
+      "contested_claims": [],
+      "opinion": [
+        {
+          "text": "A Daily Mail column by Rachel Rickard Straus argues savers need not worry about Nvidia's stock fall if they follow her plan.",
+          "sources": [
+            "4db8dc9d77fa"
+          ]
+        },
+        {
+          "text": "Retired intelligence officer Nicholas Eftimiades discusses methods Chinese spies use to infiltrate American targets.",
+          "sources": [
+            "5178691ab758"
+          ]
+        }
+      ],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "003ef2d60550",
+              "quote": "Commerce Department received national security warning on Nvidia CEO affair",
+              "field": "headline"
+            },
+            {
+              "article_id": "beb21b1a0999",
+              "quote": "Republicans recoil over Nvidia CEO spy allegations",
+              "field": "headline"
+            },
+            {
+              "article_id": "070cf9b4da1d",
+              "quote": "The Nvidia Affair",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Emphasises national security warnings, political reaction and espionage concerns.",
+              "sources": [
+                "003ef2d60550",
+                "beb21b1a0999",
+                "5178691ab758",
+                "070cf9b4da1d"
+              ]
+            },
+            {
+              "text": "Covers corporate and financial consequences, including a law firm probe and share price effects.",
+              "sources": [
+                "9cd3c022e1f9",
+                "4db8dc9d77fa"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "de5e3d9a27a7",
+              "quote": "Embattled Nvidia chief executive Jensen Huang has cancelled plans to attend several technology summits",
+              "field": "snippet"
+            },
+            {
+              "article_id": "81463f7d69a0",
+              "quote": "could cause collateral damage in Washington",
+              "field": "headline"
+            },
+            {
+              "article_id": "05b86bae34ba",
+              "quote": "is Chinese banker turned tech exec",
+              "field": "headline"
+            },
+            {
+              "article_id": "748a78c3aa7c",
+              "quote": "everything you need to know",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Reports Huang cancelled several summit appearances but remains the main speaker at Nvidia's GTC event in Washington.",
+              "sources": [
+                "de5e3d9a27a7"
+              ]
+            },
+            {
+              "text": "Profiles Alice Huang as a Chinese banker turned tech executive and a former Megaspeed executive.",
+              "sources": [
+                "05b86bae34ba",
+                "81463f7d69a0"
+              ]
+            },
+            {
+              "text": "Presents explainer-style round-ups of the affair and its potential repercussions.",
+              "sources": [
+                "748a78c3aa7c",
+                "81463f7d69a0"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "Nvidia CEO Jensen Huang faces scrutiny over an affair with Alice Huang, described as an alleged or suspected Chinese spy. Federal authorities are investigating, Senate Republicans have pressed for answers, and Nvidia has hired a US law firm to investigate the relationship.",
+        "sources": [
+          "070cf9b4da1d",
+          "003ef2d60550",
+          "beb21b1a0999",
+          "81463f7d69a0",
+          "05b86bae34ba",
+          "9cd3c022e1f9",
+          "54191d5bc792",
+          "5178691ab758"
+        ]
+      },
+      "conclusion": {
+        "text": "Coverage agrees Huang had an affair with an alleged Chinese spy now under federal investigation. Western outlets stress national security warnings, Republican questions and chip smuggling, while Eastern outlets focus on Huang's schedule, Alice Huang's background and explainers. No outlets dispute each other's facts.",
+        "sources": [
+          "070cf9b4da1d",
+          "003ef2d60550",
+          "beb21b1a0999",
+          "81463f7d69a0",
+          "de5e3d9a27a7",
+          "05b86bae34ba",
+          "748a78c3aa7c",
+          "9cd3c022e1f9"
+        ]
+      },
+      "validation": {
+        "kept": 37,
+        "dropped_by_reason": {}
+      }
+    },
+    {
+      "id": "7e13d89eb878",
+      "title": "US soldier arrested in UK on suspicion of spying for Russia",
+      "rank": 4,
+      "outlet_count": 8,
+      "coverage": {
+        "lean": {
+          "left": 1,
+          "centre": 2,
+          "right": 2
+        },
+        "bloc": {
+          "west": 5,
+          "east": 3
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "3f9ca350ba86",
+          "outlet_id": "dw",
+          "headline": "British counterterrorism police arrest US soldier accused of spying on behalf of Russia",
+          "snippet": "A member of the US Army has been arrested near Gloucester in England. Police said he was suspected of espionage activity in connection with Russia. Investigators from the US and UK are involved in…",
+          "url": "https://www.dw.com/en/british-counterterrorism-police-arrest-us-soldier-accused-of-spying-on-behalf-of-russia/a-79913240?maca=en-rss-en-world-4025-xml-mrss",
+          "published_at": "2026-11-10T19:35:00Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "e04c7f5dfe08",
+          "outlet_id": "fox",
+          "headline": "Senior US Army soldier arrested in UK on suspicion of spying for Russia",
+          "snippet": "U.K. police arrested a senior U.S. Army soldier in a Russia-linked espionage probe, drawing a sharp warning from FBI Director Kash Patel.",
+          "url": "https://www.foxnews.com/world/senior-us-army-soldier-arrested-uk-suspicion-spying-russia",
+          "published_at": "2026-11-10T21:51:09Z",
+          "published_at_estimated": false,
+          "image_url": "https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2026/11/931/523/metropolitan-police.jpg?ve=1&tl=1"
+        },
+        {
+          "id": "d18f74a2ec34",
+          "outlet_id": "nyt",
+          "headline": "US Soldier Is Arrested in UK on Suspicion of Spying for Russia",
+          "snippet": "The 41-year-old man, who was not named, was in custody pending possible charges after a joint investigation with the F.B.I. and U.S. military intelligence.",
+          "url": "https://www.nytimes.com/2026/11/10/world/europe/uk-us-army-arrest-espionage-russia.html",
+          "published_at": "2026-11-10T22:24:05Z",
+          "published_at_estimated": false,
+          "image_url": "https://static01.nyt.com/images/2026/11/10/multimedia/10int-uk-soldier-1-qlpj/10int-uk-soldier-1-qlpj-mediumSquareAt3X.jpg"
+        },
+        {
+          "id": "79cdedc0e053",
+          "outlet_id": "thehindu",
+          "headline": "U.S. Army member arrested in U.K. for alleged Russian links",
+          "snippet": "The U.K. authorities said the investigation was not linked to other ongoing counterterrorism investigations",
+          "url": "https://www.thehindu.com/news/international/us-army-member-arrested-in-uk-for-alleged-russian-links/article71687547.ece",
+          "published_at": "2026-11-10T23:35:05Z",
+          "published_at_estimated": false,
+          "image_url": "https://th-i.thgim.com/public/news/national/hn7z2b/article71687745.ece/alternates/LANDSCAPE_1200/iStock-1323017775.jpg"
+        },
+        {
+          "id": "2cdc6441109d",
+          "outlet_id": "timesofisrael",
+          "headline": "Senior US officer in NATO unit arrested in UK on suspicion of spying for Russia",
+          "snippet": "41-year-old man serving in military alliance's Allied Rapid Reaction Corp suspected of assisting foreign intelligence and obtaining or disclosing protected information",
+          "url": "https://www.timesofisrael.com/senior-us-officer-in-nato-unit-arrested-in-uk-on-suspicion-of-spying-for-russia/",
+          "published_at": "2026-11-11T06:24:45Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "6f909154db5e",
+          "outlet_id": "france24",
+          "headline": "UK authorities arrest US soldier suspected of spying for Russia",
+          "snippet": "A member of the US army suspected of spying for Russia was arrested in Britain on Tuesday, London police said, following an investigation with support from the American military and law enforcement.",
+          "url": "https://www.france24.com/en/uk-authorities-arrests-us-soldier-suspected-of-spying-for-russia",
+          "published_at": "2026-11-11T09:41:06Z",
+          "published_at_estimated": false,
+          "image_url": "https://s.france24.com/media/display/19b8116e-ddb0-11f1-9db5-f71d22e7fea9/w:1024/p:16x9/EN-20261111-080643-080817-CS.jpg"
+        },
+        {
+          "id": "7b7176aaefba",
+          "outlet_id": "thesun",
+          "headline": "Cops swoop on home hours after US army soldier stationed at UK barracks arrested on suspicion of spying for Russia",
+          "snippet": "A SENIOR American soldier arrested on suspicion of spying for the Russians was living in a quiet-cul-de-sac surrounded by British families near the gates of a local primary school. The 41-year-old…",
+          "url": "https://www.thesun.co.uk/news/40989227/police-raid-home-after-soldier-arrested-spying-russia/",
+          "published_at": "2026-11-11T11:51:35Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.thesun.co.uk/wp-content%2Fuploads%2F2026%2F11%2Fnewspress-collage-lrs3684rd-1794397857674.jpg?quality%3D90%26"
+        },
+        {
+          "id": "0d3c856ce02a",
+          "outlet_id": "aljazeera",
+          "headline": "US soldier arrested for Russia spying: What we know",
+          "snippet": "A 41-year-old man has been arrested near Gloucester on suspicion of offences under the National Security Act.",
+          "url": "https://www.aljazeera.com/news/2026/11/11/us-soldier-arrested-for-russia-spying-what-we-know",
+          "published_at": "2026-11-11T12:23:22Z",
+          "published_at_estimated": false,
+          "image_url": null
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "A member of the US Army was arrested in the UK on suspicion of espionage connected with Russia.",
+          "sources": [
+            "3f9ca350ba86",
+            "e04c7f5dfe08",
+            "d18f74a2ec34",
+            "79cdedc0e053",
+            "2cdc6441109d",
+            "6f909154db5e",
+            "7b7176aaefba",
+            "0d3c856ce02a"
+          ]
+        },
+        {
+          "text": "The arrested man is 41 years old.",
+          "sources": [
+            "d18f74a2ec34",
+            "2cdc6441109d",
+            "7b7176aaefba",
+            "0d3c856ce02a"
+          ]
+        },
+        {
+          "text": "The arrest took place near Gloucester in England.",
+          "sources": [
+            "3f9ca350ba86",
+            "0d3c856ce02a"
+          ]
+        },
+        {
+          "text": "US agencies, including the FBI and military, were involved in the investigation alongside UK authorities.",
+          "sources": [
+            "3f9ca350ba86",
+            "d18f74a2ec34",
+            "6f909154db5e"
+          ]
+        },
+        {
+          "text": "The soldier is described as senior.",
+          "sources": [
+            "e04c7f5dfe08",
+            "2cdc6441109d",
+            "7b7176aaefba"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "d18f74a2ec34",
+              "quote": "who was not named",
+              "field": "snippet"
+            },
+            {
+              "article_id": "d18f74a2ec34",
+              "quote": "in custody pending possible charges",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the man's custody status pending possible charges and the joint investigation with the FBI and US military intelligence.",
+              "sources": [
+                "d18f74a2ec34"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "3f9ca350ba86",
+              "quote": "British counterterrorism police arrest US soldier",
+              "field": "headline"
+            },
+            {
+              "article_id": "6f909154db5e",
+              "quote": "with support from the American military and law enforcement",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Emphasises the role of UK police and the cooperation between British and American investigators.",
+              "sources": [
+                "3f9ca350ba86",
+                "6f909154db5e"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "right",
+          "headline_quotes": [
+            {
+              "article_id": "e04c7f5dfe08",
+              "quote": "drawing a sharp warning from FBI Director Kash Patel",
+              "field": "snippet"
+            },
+            {
+              "article_id": "7b7176aaefba",
+              "quote": "living in a quiet-cul-de-sac surrounded by British families",
+              "field": "snippet"
+            },
+            {
+              "article_id": "7b7176aaefba",
+              "quote": "Cops swoop on home",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Highlights the soldier's seniority and a warning from FBI Director Kash Patel.",
+              "sources": [
+                "e04c7f5dfe08",
+                "7b7176aaefba"
+              ]
+            },
+            {
+              "text": "Describes the residential setting where the soldier lived, near a primary school, and a police search of the home.",
+              "sources": [
+                "7b7176aaefba"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "right",
+          "text": "Right-leaning coverage does not mention that the investigation was conducted jointly with US agencies.",
+          "sources": [
+            "3f9ca350ba86",
+            "d18f74a2ec34",
+            "6f909154db5e"
+          ]
+        },
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not mention the man's age of 41.",
+          "sources": [
+            "d18f74a2ec34",
+            "7b7176aaefba"
+          ]
+        }
+      ],
+      "contested_claims": [],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "e04c7f5dfe08",
+              "quote": "sharp warning from FBI Director Kash Patel",
+              "field": "snippet"
+            },
+            {
+              "article_id": "d18f74a2ec34",
+              "quote": "joint investigation with the F.B.I. and U.S. military intelligence",
+              "field": "snippet"
+            },
+            {
+              "article_id": "7b7176aaefba",
+              "quote": "near the gates of a local primary school",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Foregrounds US-UK investigative cooperation, US official reaction and details of where the soldier lived.",
+              "sources": [
+                "3f9ca350ba86",
+                "e04c7f5dfe08",
+                "d18f74a2ec34",
+                "6f909154db5e",
+                "7b7176aaefba"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "2cdc6441109d",
+              "quote": "Senior US officer in NATO unit",
+              "field": "headline"
+            },
+            {
+              "article_id": "79cdedc0e053",
+              "quote": "not linked to other ongoing counterterrorism investigations",
+              "field": "snippet"
+            },
+            {
+              "article_id": "0d3c856ce02a",
+              "quote": "offences under the National Security Act",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Notes the man served in NATO's Allied Rapid Reaction Corps and was suspected of disclosing protected information.",
+              "sources": [
+                "2cdc6441109d"
+              ]
+            },
+            {
+              "text": "Reports the legal basis of the arrest under the National Security Act and that the case was not linked to other counterterrorism investigations.",
+              "sources": [
+                "79cdedc0e053",
+                "0d3c856ce02a"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "A 41-year-old US Army member has been arrested in England, near Gloucester, on suspicion of spying for Russia. UK police said the case was investigated with support from US military and law enforcement agencies. The man, who was not named, was held pending possible charges.",
+        "sources": [
+          "3f9ca350ba86",
+          "e04c7f5dfe08",
+          "d18f74a2ec34",
+          "79cdedc0e053",
+          "2cdc6441109d",
+          "6f909154db5e",
+          "7b7176aaefba",
+          "0d3c856ce02a"
+        ]
+      },
+      "conclusion": null,
+      "validation": {
+        "kept": 28,
+        "dropped_by_reason": {
+          "untrusted_text": 1
+        }
+      }
+    },
+    {
+      "id": "7b576d5fcc3f",
+      "title": "Hoax bomb threat emails force school evacuations in Italy, UK and Ireland",
+      "rank": 5,
+      "outlet_count": 8,
+      "coverage": {
+        "lean": {
+          "left": 0,
+          "centre": 3,
+          "right": 2
+        },
+        "bloc": {
+          "west": 5,
+          "east": 3
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "39245193dcb7",
+          "outlet_id": "thesun",
+          "headline": "Schools across Scotland EVACUATED & cops called in over ‘bomb threats’ as pupils & staff ushered from premises",
+          "snippet": "SCHOOLS across Scotland have been hit with bomb threats after a suspicious email was sent to premises nationwide. A number of schools are currently being evacuated following the security alert. In…",
+          "url": "https://www.thesun.co.uk/news/40987930/scottish-schools-evacuated-bomb-threats/",
+          "published_at": "2026-11-11T10:06:22Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.thesun.co.uk/wp-content%2Fuploads%2F2026%2F11%2FOff-platform-pics-2026-11-11T103145.322-1.png"
+        },
+        {
+          "id": "19e6c41f13a9",
+          "outlet_id": "sky",
+          "headline": "Threatening emails sent to thousands of schools across UK, Ireland and Italy treated as hoaxes",
+          "snippet": "Threatening emails sent to thousands of schools across the UK, Ireland and Italy are being treated as hoaxes.",
+          "url": "https://news.sky.com/story/threatening-emails-sent-to-hundreds-of-schools-in-northern-ireland-and-scotland-treated-as-hoaxes-police-say-13610920",
+          "published_at": "2026-11-11T10:47:00Z",
+          "published_at_estimated": false,
+          "image_url": "https://e3.365dm.com/26/11/1920x1080/skynews-italy-rome-school_7403911.jpg?20261111133007"
+        },
+        {
+          "id": "9b8b224163f1",
+          "outlet_id": "france24",
+          "headline": "🔴Italy: At least 300 schools evacuated after email bomb alerts",
+          "snippet": "",
+          "url": "https://www.france24.com/en/europe/20261111-hundreds-of-schools-in-italy-evacuated-after-receiving-bomb-threats",
+          "published_at": "2026-11-11T10:59:06Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "ff9f6f91bed5",
+          "outlet_id": "thesun",
+          "headline": "Bomb threats spark evacuation of 300 schools in Italy as email warns ‘we will annihilate you’ after UK hit by alerts",
+          "snippet": "TERRIFYING bomb threats have forced hundreds of schools in Italy to be evacuated after a chilling email read: \"We have come to annihilate you.\" At least ​300 Italian schools were sent the disturbing…",
+          "url": "https://www.thesun.co.uk/news/40987382/bomb-threats-evacuate-italian-schools/",
+          "published_at": "2026-11-11T11:37:46Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.thesun.co.uk/wp-content%2Fuploads%2F2026%2F11%2Fnewspress-collage-kksqm6gnq-1794396890703.jpg?quality%3D90%26"
+        },
+        {
+          "id": "1e8e54fdfb3d",
+          "outlet_id": "toi",
+          "headline": "'Genocide against Italians': Over 300 schools evacuated after bomb threats in Italy",
+          "snippet": "",
+          "url": "https://timesofindia.indiatimes.com/world/europe/genocide-against-italians-over-300-schools-evacuated-after-bomb-threats-in-italy/articleshow/135735451.cms",
+          "published_at": "2026-11-11T11:45:15Z",
+          "published_at_estimated": false,
+          "image_url": "https://static.toiimg.com/photo/msid-135736207,imgsize-195950.cms"
+        },
+        {
+          "id": "156664494935",
+          "outlet_id": "scmp",
+          "headline": "Hoax bomb alerts sent to schools in Italy, UK and Ireland",
+          "snippet": "More than 300 schools in Italy were evacuated on Wednesday after hoax bomb alerts in several European nations, the latest in a series of threats and cyberattacks on supermarkets, blood banks, air…",
+          "url": "https://www.scmp.com/news/world/europe/article/3374103/over-300-italian-schools-evacuated-after-receiving-same-emailed-bomb-alert",
+          "published_at": "2026-11-11T11:47:16Z",
+          "published_at_estimated": false,
+          "image_url": "https://cdn.i-scmp.com/sites/default/files/styles/1280x720/public/d8/images/canvas/2026/11/11/636478ec-433f-486f-9897-ad046a18f0d4_29b07429.jpg?itok=GLeAxrqi&v=1794401835"
+        },
+        {
+          "id": "8a36f6b62921",
+          "outlet_id": "bbc",
+          "headline": "Hundreds of Italian schools hit by threats in suspected bomb hoax",
+          "snippet": "Emails containing the false warnings were sent to schools in Rome, Naples, Vicenza, Florence, Pisa, Trieste and other Italian cities, officials say.",
+          "url": "https://www.bbc.co.uk/news/articles/cwz0k79pr8z2o",
+          "published_at": "2026-11-11T12:30:29Z",
+          "published_at_estimated": false,
+          "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/80c9/live/fc093bd0-ddc7-11f1-9053-236ccb99630c.jpg"
+        },
+        {
+          "id": "d05c742aef96",
+          "outlet_id": "dailymail",
+          "headline": "Schools evacuated across Scotland and Northern Ireland after nearly 800 receive 'bomb threats' in second wave of suspicious emails",
+          "snippet": "Some pupils were sent home for the day following the threats to schools in Scotland including Glasgow, Edinburgh, Fife and the Highlands as well as in Northern Ireland.",
+          "url": "https://www.dailymail.com/news/article-16284041/Schools-evacuated-Scotland-Northern-Ireland-bomb-threat.html",
+          "published_at": "2026-11-11T13:00:40Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.dailymail.com/1s/2026/11/11/11/112440003-0-image-a-6_1794397134982.jpg"
+        },
+        {
+          "id": "6dff5cbf75b7",
+          "outlet_id": "aljazeera",
+          "headline": "At least 300 schools evacuated in Italy after email bomb alerts",
+          "snippet": "Italian PM Meloni says there is no danger as UK and Northern Ireland authorities also report 'bogus' alerts.",
+          "url": "https://www.aljazeera.com/news/2026/11/11/at-least-300-italian-schools-evacuated-after-email-bomb-alerts",
+          "published_at": "2026-11-11T13:18:36Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "338805a2bef8",
+          "outlet_id": "thesun",
+          "headline": "Chilling Scots school bomb hoax revealed – as group behind flight chaos & TV hacks claim responsibility",
+          "snippet": "SCHOOLS across Scotland targeted by a sickening bomb hoax received a disturbing email - threatening a GENOCIDE. Pupils and staff across the country were evacuated this morning amid security fears…",
+          "url": "https://www.thesun.co.uk/news/40991663/scotland-school-bomb-hoax-threat-group-responsibility/",
+          "published_at": "2026-11-11T13:19:26Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.thesun.co.uk/wp-content%2Fuploads%2F2026%2F11%2FMixCollage-11-Nov-2026-01-18-PM-3135.jpg?quality%3D90%26"
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "Hundreds of schools in Italy, at least 300, were evacuated after bomb threats sent by email.",
+          "sources": [
+            "9b8b224163f1",
+            "ff9f6f91bed5",
+            "1e8e54fdfb3d",
+            "156664494935",
+            "6dff5cbf75b7",
+            "8a36f6b62921"
+          ]
+        },
+        {
+          "text": "Schools in the UK, including Scotland and Northern Ireland, also received threatening emails or bomb alerts.",
+          "sources": [
+            "39245193dcb7",
+            "d05c742aef96",
+            "338805a2bef8",
+            "19e6c41f13a9",
+            "156664494935",
+            "6dff5cbf75b7"
+          ]
+        },
+        {
+          "text": "The threats are described as hoaxes, false warnings or bogus alerts.",
+          "sources": [
+            "19e6c41f13a9",
+            "156664494935",
+            "8a36f6b62921",
+            "6dff5cbf75b7",
+            "338805a2bef8"
+          ]
+        },
+        {
+          "text": "The emails referred to genocide or annihilation.",
+          "sources": [
+            "1e8e54fdfb3d",
+            "338805a2bef8",
+            "ff9f6f91bed5"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "19e6c41f13a9",
+              "quote": "treated as hoaxes",
+              "field": "headline"
+            },
+            {
+              "article_id": "9b8b224163f1",
+              "quote": "At least 300 schools evacuated after email bomb alerts",
+              "field": "headline"
+            },
+            {
+              "article_id": "8a36f6b62921",
+              "quote": "suspected bomb hoax",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the threats being treated as hoaxes across several countries.",
+              "sources": [
+                "19e6c41f13a9",
+                "8a36f6b62921"
+              ]
+            },
+            {
+              "text": "Names Italian cities whose schools received the emails, attributed to officials.",
+              "sources": [
+                "8a36f6b62921"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "right",
+          "headline_quotes": [
+            {
+              "article_id": "39245193dcb7",
+              "quote": "Schools across Scotland EVACUATED & cops called in",
+              "field": "headline"
+            },
+            {
+              "article_id": "ff9f6f91bed5",
+              "quote": "email warns ‘we will annihilate you’",
+              "field": "headline"
+            },
+            {
+              "article_id": "338805a2bef8",
+              "quote": "group behind flight chaos & TV hacks claim responsibility",
+              "field": "headline"
+            },
+            {
+              "article_id": "d05c742aef96",
+              "quote": "second wave of suspicious emails",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Focuses on evacuations of schools across Scotland and Northern Ireland, with nearly 800 schools receiving threats.",
+              "sources": [
+                "39245193dcb7",
+                "d05c742aef96",
+                "338805a2bef8"
+              ]
+            },
+            {
+              "text": "Foregrounds the threatening wording of the emails.",
+              "sources": [
+                "ff9f6f91bed5",
+                "338805a2bef8"
+              ]
+            },
+            {
+              "text": "Reports that a group linked to flight disruption and TV hacks claimed responsibility.",
+              "sources": [
+                "338805a2bef8"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not mention the threatening wording of the emails, such as references to genocide or annihilation.",
+          "sources": [
+            "ff9f6f91bed5",
+            "338805a2bef8",
+            "1e8e54fdfb3d"
+          ]
+        },
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not mention a group claiming responsibility.",
+          "sources": [
+            "338805a2bef8"
+          ]
+        },
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not mention evacuations in Scotland specifically.",
+          "sources": [
+            "39245193dcb7",
+            "d05c742aef96",
+            "338805a2bef8"
+          ]
+        }
+      ],
+      "contested_claims": [],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "19e6c41f13a9",
+              "quote": "Threatening emails sent to thousands of schools across UK, Ireland and Italy",
+              "field": "headline"
+            },
+            {
+              "article_id": "39245193dcb7",
+              "quote": "Schools across Scotland EVACUATED",
+              "field": "headline"
+            },
+            {
+              "article_id": "338805a2bef8",
+              "quote": "claim responsibility",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Gives detail on UK evacuations, particularly in Scotland and Northern Ireland.",
+              "sources": [
+                "39245193dcb7",
+                "d05c742aef96",
+                "338805a2bef8",
+                "19e6c41f13a9"
+              ]
+            },
+            {
+              "text": "Reports a claim of responsibility by a group linked to flight disruption and TV hacks.",
+              "sources": [
+                "338805a2bef8"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "1e8e54fdfb3d",
+              "quote": "'Genocide against Italians'",
+              "field": "headline"
+            },
+            {
+              "article_id": "6dff5cbf75b7",
+              "quote": "Italian PM Meloni says there is no danger",
+              "field": "snippet"
+            },
+            {
+              "article_id": "156664494935",
+              "quote": "the latest in a series of threats and cyberattacks",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the Italian evacuations and Meloni's statement that there is no danger.",
+              "sources": [
+                "1e8e54fdfb3d",
+                "6dff5cbf75b7",
+                "156664494935"
+              ]
+            },
+            {
+              "text": "Places the alerts in a series of threats and cyberattacks on targets such as supermarkets and blood banks.",
+              "sources": [
+                "156664494935"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "Emailed bomb threats led to the evacuation of at least 300 schools in Italy on Wednesday, while schools in Scotland and Northern Ireland were also evacuated. Emails sent to schools across the UK, Ireland and Italy are being treated as hoaxes, and Italian PM Meloni said there was no danger.",
+        "sources": [
+          "9b8b224163f1",
+          "ff9f6f91bed5",
+          "1e8e54fdfb3d",
+          "156664494935",
+          "6dff5cbf75b7",
+          "8a36f6b62921",
+          "39245193dcb7",
+          "d05c742aef96",
+          "19e6c41f13a9",
+          "338805a2bef8"
+        ]
+      },
+      "conclusion": {
+        "text": "All sides report at least 300 Italian school evacuations and threats reaching the UK and Ireland, described as hoaxes. Right-leaning outlets lead with Scottish evacuations, the emails' wording and a responsibility claim; centre outlets lead with hoax status. East-bloc outlets add Meloni's no-danger remark and a wider series of threats; no contradictions appear.",
+        "sources": [
+          "9b8b224163f1",
+          "156664494935",
+          "6dff5cbf75b7",
+          "19e6c41f13a9",
+          "8a36f6b62921",
+          "39245193dcb7",
+          "338805a2bef8",
+          "ff9f6f91bed5",
+          "1e8e54fdfb3d",
+          "d05c742aef96"
+        ]
+      },
+      "validation": {
+        "kept": 31,
+        "dropped_by_reason": {}
+      }
+    },
+    {
+      "id": "99fac39a5068",
+      "title": "US charges three alleged Iran-backed men over plots including RAF Fairford attack",
+      "rank": 6,
+      "outlet_count": 7,
+      "coverage": {
+        "lean": {
+          "left": 1,
+          "centre": 3,
+          "right": 1
+        },
+        "bloc": {
+          "west": 5,
+          "east": 2
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "c15d090f5dcc",
+          "outlet_id": "axios",
+          "headline": "3 charged with plotting terror attacks in U.S., Europe",
+          "snippet": "The U.S. charged three individuals in connection with alleged Iranian-linked terror plots, including a September scheme against a British Royal Air Force Base that housed U.S. military personnel and…",
+          "url": "https://www.axios.com/2026/11/10/doj-charges-terror-plots-europe-us",
+          "published_at": "2026-11-10T20:46:53Z",
+          "published_at_estimated": false,
+          "image_url": "https://images.axios.com/giEK8fA-0JNTzNFIGu6UV5-gBvk=/0x0:4497x2530/1366x768/2026/11/10/1794342620038.jpeg"
+        },
+        {
+          "id": "eaf20014eac4",
+          "outlet_id": "thenational",
+          "headline": "US charges three men over alleged Iran-backed terror plots, including at RAF Fairford",
+          "snippet": "The US has charged three Iranians suspected of allegedly plotting terrorist attacks in Europe and the US, including at a British RAF Base in Fairford in September that was housing American military…",
+          "url": "https://www.thenationalnews.com/news/us/2026/11/10/iran-fairford-plot-charges/",
+          "published_at": "2026-11-10T22:15:01Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.thenationalnews.com/resizer/v2/FI7BPAPDBJWWOOY7MMNRHGVUQA.jpg?auth=2cc02c1cdd5f5379b765cd92e819c9510f16d46ab83d200d2f098ef71296835d&smart=true&width=5500&height=3667"
+        },
+        {
+          "id": "f45774f255f6",
+          "outlet_id": "thehindu",
+          "headline": "U.S. charges three ‘Iranian operatives’ over U.K. airbase plot",
+          "snippet": "Mohammad Baqer Saad Dawood al-Saadi, Mohsen Mohajeri and Mohammad Ali al-Hassani allegedly helped plan and direct the September incident at Britain’s RAF Fairford airbase",
+          "url": "https://www.thehindu.com/news/international/us-charges-three-iranian-operatives-over-uk-airbase-plot/article71687536.ece",
+          "published_at": "2026-11-10T23:09:18Z",
+          "published_at_estimated": false,
+          "image_url": "https://th-i.thgim.com/public/incoming/jei9uk/article71687538.ece/alternates/LANDSCAPE_1200/2026-10-12T160308Z_330812997_RC2ZSNAVKQ4B_RTRMADP_3_BRITAIN-USA-FAIRFORD.JPG"
+        },
+        {
+          "id": "72595e62cdd0",
+          "outlet_id": "bbc",
+          "headline": "Three Iran-backed suspects plotted attacks including RAF Fairford incident, US says",
+          "snippet": "The US Department of Justice says the men were involved in a string of plots, including a major incident near the UK airbase that is used by US armed forces.",
+          "url": "https://www.bbc.co.uk/news/articles/c3rryrryk59zo",
+          "published_at": "2026-11-11T01:01:20Z",
+          "published_at_estimated": false,
+          "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/9ba2/live/c17cf610-dd8f-11f1-8c82-87885cae71d3.jpg"
+        },
+        {
+          "id": "fc535c7f574f",
+          "outlet_id": "nbc",
+          "headline": "U.S. charges 3 men with plotting multiple terror attacks, including on British air base",
+          "snippet": "One of the men helped direct the planned attack against the air base while he was in a U.S. prison, according to a Justice Department indictment.",
+          "url": "https://www.nbcnews.com/world/united-kingdom/us-charges-3-men-plotting-multiple-terrorist-attacks-planned-attack-uk-rcna608647",
+          "published_at": "2026-11-11T01:22:54Z",
+          "published_at_estimated": false,
+          "image_url": "https://media-cldnry.s-nbcnews.com/image/upload/t_fit_1500w/rockcms/2026-10/261020-raf-fairford-b1-bomber-vl-348p-e3b1e2.jpg"
+        },
+        {
+          "id": "e80d3c150d3b",
+          "outlet_id": "thesun",
+          "headline": "Iran ‘terrorist’ unmasked as RAF Fairford plot ‘mastermind’ gave ‘coded messages in calls’ from New York prison cell",
+          "snippet": "AN Iran-backed operative accused of masterminding a foiled terror attack on RAF Fairford allegedly directed the plot using coded messages from inside a New York prison cell. Mohammad al-Saadi, 32…",
+          "url": "https://www.thesun.co.uk/news/40986714/iran-raf-fairford-terrorism-prison/",
+          "published_at": "2026-11-11T09:51:44Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.thesun.co.uk/wp-content%2Fuploads%2F2026%2F11%2Fnewspress-collage-um1n8mi38-1794390089521.jpg?quality%3D90%26"
+        },
+        {
+          "id": "205b35ae9da4",
+          "outlet_id": "npr",
+          "headline": "Iran-backed trio accused of plotting attacks on U.K. base hosting U.S. jets",
+          "snippet": "Iran-backed operatives have been charged over nearly 20 attacks, including a plot on a U.K. base housing U.S. troops. Separately, a U.S. soldier is held in the U.K. on Russia spying claims.",
+          "url": "https://www.npr.org/2026/11/10/nx-s1-6036786/uk-iran-airbase-russia-spy",
+          "published_at": "2026-11-11T10:02:54Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "e6c2312a7ffc",
+          "outlet_id": "thenational",
+          "headline": "Indicted Iranians 'filmed studying map of London as they plot sabotage attacks'",
+          "snippet": "Iranian suspects accused of plotting attacks in the US and Europe were filmed studying a map of London as they planned a campaign to “focus” on the UK capital, documents released by US authorities…",
+          "url": "https://www.thenationalnews.com/news/us/2026/11/11/indicted-iranians-filmed-studying-map-of-london-as-they-plot-sabotage-attacks/",
+          "published_at": "2026-11-11T13:15:39Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.thenationalnews.com/resizer/v2/WHVCWM74ZVDM3FVHM4JGS2E7IA.jpg?auth=8bf41cc6d0df1c3beac02be13a99caee0800ccdb3fc96fde62b095c70d5d2fa8&smart=true&width=400&height=214"
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "The US has charged three men in connection with alleged Iran-linked or Iran-backed plots.",
+          "sources": [
+            "c15d090f5dcc",
+            "eaf20014eac4",
+            "f45774f255f6",
+            "72595e62cdd0",
+            "fc535c7f574f",
+            "205b35ae9da4",
+            "e6c2312a7ffc"
+          ]
+        },
+        {
+          "text": "The alleged plots include one against RAF Fairford, a British air base.",
+          "sources": [
+            "c15d090f5dcc",
+            "eaf20014eac4",
+            "f45774f255f6",
+            "72595e62cdd0",
+            "fc535c7f574f",
+            "e80d3c150d3b",
+            "205b35ae9da4"
+          ]
+        },
+        {
+          "text": "The base is described as housing or being used by US military personnel.",
+          "sources": [
+            "c15d090f5dcc",
+            "eaf20014eac4",
+            "72595e62cdd0",
+            "205b35ae9da4"
+          ]
+        },
+        {
+          "text": "The RAF Fairford plot or incident took place in September.",
+          "sources": [
+            "c15d090f5dcc",
+            "eaf20014eac4",
+            "f45774f255f6"
+          ]
+        },
+        {
+          "text": "The alleged plots targeted locations in both the US and Europe.",
+          "sources": [
+            "c15d090f5dcc",
+            "eaf20014eac4",
+            "e6c2312a7ffc"
+          ]
+        },
+        {
+          "text": "One of the men allegedly directed the air base plot from inside a US prison.",
+          "sources": [
+            "fc535c7f574f",
+            "e80d3c150d3b"
+          ]
+        },
+        {
+          "text": "Mohammad al-Saadi is named as one of the accused.",
+          "sources": [
+            "f45774f255f6",
+            "e80d3c150d3b"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "fc535c7f574f",
+              "quote": "plotting multiple terror attacks",
+              "field": "headline"
+            },
+            {
+              "article_id": "fc535c7f574f",
+              "quote": "while he was in a U.S. prison",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the multiple plots and cites a Justice Department indictment saying one man directed the base attack from a US prison.",
+              "sources": [
+                "fc535c7f574f"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "c15d090f5dcc",
+              "quote": "3 charged with plotting terror attacks in U.S., Europe",
+              "field": "headline"
+            },
+            {
+              "article_id": "72595e62cdd0",
+              "quote": "Three Iran-backed suspects plotted attacks including RAF Fairford incident, US says",
+              "field": "headline"
+            },
+            {
+              "article_id": "205b35ae9da4",
+              "quote": "charged over nearly 20 attacks",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Emphasises the scale of the alleged plots, described as a string of plots or nearly 20 attacks.",
+              "sources": [
+                "72595e62cdd0",
+                "205b35ae9da4"
+              ]
+            },
+            {
+              "text": "Foregrounds that the targeted base houses or is used by US forces.",
+              "sources": [
+                "c15d090f5dcc",
+                "72595e62cdd0",
+                "205b35ae9da4"
+              ]
+            },
+            {
+              "text": "Separately notes a US soldier held in the UK on Russia spying claims.",
+              "sources": [
+                "205b35ae9da4"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "right",
+          "headline_quotes": [
+            {
+              "article_id": "e80d3c150d3b",
+              "quote": "unmasked as RAF Fairford plot ‘mastermind’",
+              "field": "headline"
+            },
+            {
+              "article_id": "e80d3c150d3b",
+              "quote": "coded messages from inside a New York prison cell",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Focuses on one accused man, Mohammad al-Saadi, described as the plot's mastermind using coded messages from a New York prison cell.",
+              "sources": [
+                "e80d3c150d3b"
+              ]
+            },
+            {
+              "text": "Describes the RAF Fairford attack as foiled.",
+              "sources": [
+                "e80d3c150d3b"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "right",
+          "text": "Does not mention that three men were charged.",
+          "sources": [
+            "c15d090f5dcc",
+            "72595e62cdd0",
+            "fc535c7f574f",
+            "205b35ae9da4"
+          ]
+        },
+        {
+          "lean": "right",
+          "text": "Does not mention that the base houses US military personnel.",
+          "sources": [
+            "c15d090f5dcc",
+            "72595e62cdd0",
+            "205b35ae9da4"
+          ]
+        },
+        {
+          "lean": "centre",
+          "text": "Does not mention that one man allegedly directed the plot from a US prison.",
+          "sources": [
+            "fc535c7f574f",
+            "e80d3c150d3b"
+          ]
+        }
+      ],
+      "contested_claims": [],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "e80d3c150d3b",
+              "quote": "from New York prison cell",
+              "field": "headline"
+            },
+            {
+              "article_id": "205b35ae9da4",
+              "quote": "nearly 20 attacks",
+              "field": "snippet"
+            },
+            {
+              "article_id": "72595e62cdd0",
+              "quote": "used by US armed forces",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Foregrounds the prison-based direction of the plot and the number of alleged attacks.",
+              "sources": [
+                "fc535c7f574f",
+                "e80d3c150d3b",
+                "205b35ae9da4"
+              ]
+            },
+            {
+              "text": "Attributes the allegations to the US Department of Justice.",
+              "sources": [
+                "72595e62cdd0",
+                "fc535c7f574f"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "f45774f255f6",
+              "quote": "U.S. charges three ‘Iranian operatives’ over U.K. airbase plot",
+              "field": "headline"
+            },
+            {
+              "article_id": "eaf20014eac4",
+              "quote": "three Iranians suspected of allegedly plotting",
+              "field": "snippet"
+            },
+            {
+              "article_id": "e6c2312a7ffc",
+              "quote": "filmed studying map of London",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Names all three accused men.",
+              "sources": [
+                "f45774f255f6"
+              ]
+            },
+            {
+              "text": "Reports the suspects were filmed studying a map of London while planning a campaign to focus on the UK capital, citing US documents.",
+              "sources": [
+                "e6c2312a7ffc"
+              ]
+            },
+            {
+              "text": "Describes the accused as Iranians.",
+              "sources": [
+                "eaf20014eac4",
+                "e6c2312a7ffc"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "The US has charged three men over alleged Iran-linked terror plots in the US and Europe, including a September plot targeting Britain's RAF Fairford base, which houses US military personnel. A Justice Department indictment says one man helped direct the air base plot while in a US prison.",
+        "sources": [
+          "c15d090f5dcc",
+          "eaf20014eac4",
+          "f45774f255f6",
+          "72595e62cdd0",
+          "fc535c7f574f",
+          "e80d3c150d3b",
+          "205b35ae9da4"
+        ]
+      },
+      "conclusion": {
+        "text": "Coverage agrees that the US charged three men over alleged Iran-linked plots including one at RAF Fairford. West-bloc outlets emphasise direction of the plot from a US prison and the number of attacks, while East-bloc outlets name the men and report a London focus. No outlet's account contradicts another's.",
+        "sources": [
+          "c15d090f5dcc",
+          "eaf20014eac4",
+          "f45774f255f6",
+          "72595e62cdd0",
+          "fc535c7f574f",
+          "e80d3c150d3b",
+          "205b35ae9da4",
+          "e6c2312a7ffc"
+        ]
+      },
+      "validation": {
+        "kept": 36,
+        "dropped_by_reason": {}
+      }
+    },
+    {
+      "id": "9506cfdd57cc",
+      "title": "Heavy rain and floods devastate tent camps in Gaza",
+      "rank": 7,
+      "outlet_count": 7,
+      "coverage": {
+        "lean": {
+          "left": 2,
+          "centre": 0,
+          "right": 1
+        },
+        "bloc": {
+          "west": 3,
+          "east": 4
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "1bd0c2f2ebc1",
+          "outlet_id": "telegraph",
+          "headline": "Gaza floods are an “immediate humanitarian emergency”, warns Trump’s Board of Peace",
+          "snippet": "Israel urged to allow more winter supplies to enter the Strip",
+          "url": "https://www.telegraph.co.uk/global-health/terror-and-security/gaza-floods-humanitarian-emergency-trump-board-of-peace/",
+          "published_at": "2026-11-10T14:03:57Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.telegraph.co.uk/content/dam/global-health/2026/11/10/TELEMMGLPICT000510763284_17943181031930_trans_NvBQzQNjv4BqpVlberWd9EgFPZtcLiMQf0Rf_Wk3V23H2268P_XkPxc.jpeg"
+        },
+        {
+          "id": "9918a8c3b608",
+          "outlet_id": "nyt",
+          "headline": "Gaza Floods Kill 4",
+          "snippet": "At least four people from one family died and thousands lost their shelters when a storm battered overcrowded tent camps. Israel says Gaza will not be rebuilt until Hamas disarms.",
+          "url": "https://www.nytimes.com/2026/11/10/world/middleeast/gaza-flooding-israel.html",
+          "published_at": "2026-11-10T19:24:50Z",
+          "published_at_estimated": false,
+          "image_url": "https://static01.nyt.com/images/2026/11/10/multimedia/10int-gaza-floods-01-tgqc/10int-gaza-floods-01-tgqc-mediumSquareAt3X.jpg"
+        },
+        {
+          "id": "55f076af54fb",
+          "outlet_id": "cgtn",
+          "headline": "UN steps up Gaza aid efforts as heavy rains affect over 200,000 people",
+          "snippet": "UN humanitarians said on Tuesday that they and partners are scrambling to aid more than 200,000 residents of Gaza who, according to estimates, may have been affected following the heavy rains over…",
+          "url": "https://news.cgtn.com/news/2026-11-11/UN-steps-up-Gaza-aid-efforts-as-heavy-rains-affect-over-200-000-people-1RYEZNp8Cly/p.html",
+          "published_at": "2026-11-11T01:54:02Z",
+          "published_at_estimated": false,
+          "image_url": "https://news.cgtn.com/news/2026-11-11/UN-steps-up-Gaza-aid-efforts-as-heavy-rains-affect-over-200-000-people-1RYEZNp8Cly/img/03a45cd935b540ab9139509dbdea3267/03a45cd935b540ab9139509dbdea3267-1920.png"
+        },
+        {
+          "id": "ce1a72499be6",
+          "outlet_id": "timesofisrael",
+          "headline": "Under criticism, PM’s office insists winter supplies entering Gaza but Hamas must disarm before reconstruction",
+          "snippet": "English-language statement says terror group is the one 'responsible for the suffering' of the Strip's residents, asserts Israel 'committed to the success of President Trump's 20-point plan'",
+          "url": "https://www.timesofisrael.com/under-criticism-pms-office-insists-winter-supplies-entering-gaza-but-hamas-must-disarm-before-reconstruction/",
+          "published_at": "2026-11-11T02:43:32Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "e924071c06ec",
+          "outlet_id": "thenational",
+          "headline": "Peace must not get bogged down in Gaza's winter mud",
+          "snippet": "The deaths of five people, including three children, in a tent collapse in Deir Al Balah are a terrible reminder that, for Palestinians in Gaza, an ostensible ceasefire has yet to bring anything…",
+          "url": "https://www.thenationalnews.com/opinion/editorial/2026/11/11/gaza-palestine-israel-board-of-peace-trump-us-washington/",
+          "published_at": "2026-11-11T03:00:00Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.thenationalnews.com/resizer/v2/DIPLDWIRJGEYXPH5NGARNMUD6A.jpg?auth=312a9cb04e24798b818d79a412ce5caf6094fb7d169d9891c2b86bb9cb4f2706&smart=true&width=5472&height=3648"
+        },
+        {
+          "id": "eeab51fe10fe",
+          "outlet_id": "guardian",
+          "headline": "Thousands without shelter face lethal conditions in storm-hit Gaza as they wait for 150,000 tents",
+          "snippet": "Charities warn of lack of protection amid health fears for more than 940,000 displaced people living in flood-prone areas Tens of thousands of Palestinians have been left in waterlogged and damaged…",
+          "url": "https://www.theguardian.com/global-development/2026/nov/11/thousands-without-shelter-lethal-cold-storm-gaza-israel-tents-displaced-people-flood",
+          "published_at": "2026-11-11T05:00:32Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.guim.co.uk/img/media/09ed02ace6dac194c648de150485e68fa9c38bbb/294_0_5600_4480/master/5600.jpg?width=460&quality=85&auto=format&fit=max&s=527a7a42a13f98e41febc171bd016e05"
+        },
+        {
+          "id": "de0562fcc851",
+          "outlet_id": "aljazeera",
+          "headline": "Gaza’s infrastructure collapse leaves residents defenceless against floods",
+          "snippet": "Winter weather has continued to wreak havoc in Gaza, with flooding and strong winds.",
+          "url": "https://www.aljazeera.com/news/2026/11/11/gaza-infrastructure-collapse-leaves-residents-defenceless-against-floods",
+          "published_at": "2026-11-11T10:12:37Z",
+          "published_at_estimated": false,
+          "image_url": null
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "Heavy rain, storms and flooding have hit Gaza.",
+          "sources": [
+            "1bd0c2f2ebc1",
+            "9918a8c3b608",
+            "55f076af54fb",
+            "eeab51fe10fe",
+            "de0562fcc851",
+            "e924071c06ec"
+          ]
+        },
+        {
+          "text": "People have died in the storm-hit tent camps.",
+          "sources": [
+            "9918a8c3b608",
+            "e924071c06ec"
+          ]
+        },
+        {
+          "text": "Thousands of displaced Palestinians have lost or lack shelter in tent camps.",
+          "sources": [
+            "9918a8c3b608",
+            "eeab51fe10fe",
+            "e924071c06ec"
+          ]
+        },
+        {
+          "text": "Israel says Gaza will not be rebuilt until Hamas disarms.",
+          "sources": [
+            "9918a8c3b608",
+            "ce1a72499be6"
+          ]
+        },
+        {
+          "text": "The entry of winter supplies into Gaza is at issue, with Israel urged to allow more and the PM's office insisting supplies are entering.",
+          "sources": [
+            "1bd0c2f2ebc1",
+            "ce1a72499be6"
+          ]
+        },
+        {
+          "text": "Humanitarian bodies, including the UN, charities and the Board of Peace, are warning about or responding to the situation.",
+          "sources": [
+            "1bd0c2f2ebc1",
+            "55f076af54fb",
+            "eeab51fe10fe"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "9918a8c3b608",
+              "quote": "Gaza Floods Kill 4",
+              "field": "headline"
+            },
+            {
+              "article_id": "eeab51fe10fe",
+              "quote": "Thousands without shelter face lethal conditions",
+              "field": "headline"
+            },
+            {
+              "article_id": "eeab51fe10fe",
+              "quote": "as they wait for 150,000 tents",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the death toll and the loss of shelter in overcrowded tent camps.",
+              "sources": [
+                "9918a8c3b608",
+                "eeab51fe10fe"
+              ]
+            },
+            {
+              "text": "Highlights charity warnings over health and protection for more than 940,000 displaced people in flood-prone areas.",
+              "sources": [
+                "eeab51fe10fe"
+              ]
+            },
+            {
+              "text": "Reports Israel's position that Gaza will not be rebuilt until Hamas disarms.",
+              "sources": [
+                "9918a8c3b608"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "right",
+          "headline_quotes": [
+            {
+              "article_id": "1bd0c2f2ebc1",
+              "quote": "immediate humanitarian emergency",
+              "field": "headline"
+            },
+            {
+              "article_id": "1bd0c2f2ebc1",
+              "quote": "Israel urged to allow more winter supplies to enter the Strip",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the Board of Peace's warning of a humanitarian emergency.",
+              "sources": [
+                "1bd0c2f2ebc1"
+              ]
+            },
+            {
+              "text": "Foregrounds the call for Israel to allow more winter supplies into Gaza.",
+              "sources": [
+                "1bd0c2f2ebc1"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "right",
+          "text": "Right-leaning coverage does not mention deaths from the floods.",
+          "sources": [
+            "9918a8c3b608"
+          ]
+        },
+        {
+          "lean": "right",
+          "text": "Right-leaning coverage does not mention Israel's position that Gaza will not be rebuilt until Hamas disarms.",
+          "sources": [
+            "9918a8c3b608"
+          ]
+        },
+        {
+          "lean": "left",
+          "text": "Left-leaning coverage does not mention the Board of Peace warning or the call for Israel to allow more winter supplies.",
+          "sources": [
+            "1bd0c2f2ebc1"
+          ]
+        }
+      ],
+      "contested_claims": [],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "9918a8c3b608",
+              "quote": "Gaza Floods Kill 4",
+              "field": "headline"
+            },
+            {
+              "article_id": "eeab51fe10fe",
+              "quote": "Thousands without shelter face lethal conditions",
+              "field": "headline"
+            },
+            {
+              "article_id": "1bd0c2f2ebc1",
+              "quote": "immediate humanitarian emergency",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Foregrounds deaths, lost shelter and the wait for tents.",
+              "sources": [
+                "9918a8c3b608",
+                "eeab51fe10fe"
+              ]
+            },
+            {
+              "text": "Highlights humanitarian warnings and calls for more winter supplies.",
+              "sources": [
+                "1bd0c2f2ebc1",
+                "eeab51fe10fe"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "55f076af54fb",
+              "quote": "heavy rains affect over 200,000 people",
+              "field": "headline"
+            },
+            {
+              "article_id": "ce1a72499be6",
+              "quote": "Hamas must disarm before reconstruction",
+              "field": "headline"
+            },
+            {
+              "article_id": "e924071c06ec",
+              "quote": "an ostensible ceasefire has yet to bring anything",
+              "field": "snippet"
+            },
+            {
+              "article_id": "de0562fcc851",
+              "quote": "infrastructure collapse leaves residents defenceless against floods",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Reports the scale of the UN aid effort for more than 200,000 affected residents.",
+              "sources": [
+                "55f076af54fb"
+              ]
+            },
+            {
+              "text": "Carries the Israeli PM's office statement that winter supplies are entering and that Hamas is responsible for residents' suffering.",
+              "sources": [
+                "ce1a72499be6"
+              ]
+            },
+            {
+              "text": "Links the deaths, including three children, to a ceasefire that has yet to bring relief.",
+              "sources": [
+                "e924071c06ec"
+              ]
+            },
+            {
+              "text": "Attributes residents' vulnerability to the collapse of Gaza's infrastructure.",
+              "sources": [
+                "de0562fcc851"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "Heavy rain and a storm flooded overcrowded tent camps in Gaza. Reports cite at least four to five deaths and thousands left without shelter. UN humanitarians say more than 200,000 people may be affected, while Israel's PM office says winter supplies are entering but Hamas must disarm before reconstruction.",
+        "sources": [
+          "9918a8c3b608",
+          "e924071c06ec",
+          "eeab51fe10fe",
+          "55f076af54fb",
+          "ce1a72499be6",
+          "de0562fcc851",
+          "1bd0c2f2ebc1"
+        ]
+      },
+      "conclusion": {
+        "text": "All sides report flooding in Gaza's tent camps and humanitarian warnings. Western outlets lead with deaths, shelter shortages and calls for more supplies; Eastern coverage ranges from UN aid scale and infrastructure collapse to the Israeli PM's office blaming Hamas. Death figures cited vary, four in one report and five in another.",
+        "sources": [
+          "9918a8c3b608",
+          "eeab51fe10fe",
+          "1bd0c2f2ebc1",
+          "55f076af54fb",
+          "de0562fcc851",
+          "ce1a72499be6",
+          "e924071c06ec"
+        ]
+      },
+      "validation": {
+        "kept": 34,
+        "dropped_by_reason": {}
+      }
+    },
+    {
+      "id": "228f6cdae68a",
+      "title": "COP31 climate summit opens in Antalya with leaders' talks",
+      "rank": 8,
+      "outlet_count": 7,
+      "coverage": {
+        "lean": {
+          "left": 1,
+          "centre": 0,
+          "right": 1
+        },
+        "bloc": {
+          "west": 2,
+          "east": 5
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "916dbcac918e",
+          "outlet_id": "thehindu",
+          "headline": "EU climate chief Wopke Hoekstra warns 'expectations low' from COP31 summit",
+          "snippet": "\"If indeed we manage to make electrification the sole focus, or close to the sole focus of the COP, I think we have a chance to deliver on something that is truly meaningful,\" Wopke Hoekstra said",
+          "url": "https://www.thehindu.com/news/international/eu-climate-chief-wopke-hoekstra-warns-expectations-low-from-cop31-summit/article71686827.ece",
+          "published_at": "2026-11-10T15:54:18Z",
+          "published_at_estimated": false,
+          "image_url": "https://th-i.thgim.com/public/incoming/uqt72k/article71687077.ece/alternates/LANDSCAPE_1200/2025-07-02T100025Z_2115836927_RC29EFA4PMIO_RTRMADP_3_CLIMATE-CHANGE-EU-2040.JPG"
+        },
+        {
+          "id": "05f72f1dea02",
+          "outlet_id": "mirror",
+          "headline": "Greta Thunberg takes swipe at world leaders during COP31 climate talks",
+          "snippet": "Following her arrival at the United Nations summit in the Turkish resort city of Antalya, Greta Thunberg warned that the talks were being influenced by lobbyists",
+          "url": "https://www.mirror.co.uk/news/world-news/greta-thunberg-speech-cop31-climate-37864084",
+          "published_at": "2026-11-10T20:03:20Z",
+          "published_at_estimated": false,
+          "image_url": "https://i2-prod.mirror.co.uk/incoming/article37864100.ece/ALTERNATES/s615/1_Climate-COP31-Turkey-26314427264163.jpg"
+        },
+        {
+          "id": "d2a74878303e",
+          "outlet_id": "thehindu",
+          "headline": "World leaders take stage at COP31 but big names missing",
+          "snippet": "COP31 host Turkiye is championing a voluntary initiative to accelerate the electrification of transport, buildings and industry, with a target of raising electricity’s share of global energy…",
+          "url": "https://www.thehindu.com/sci-tech/energy-and-environment/world-leaders-take-stage-at-cop31-but-big-names-missing/article71688148.ece",
+          "published_at": "2026-11-11T03:20:36Z",
+          "published_at_estimated": false,
+          "image_url": "https://th-i.thgim.com/public/sci-tech/energy-and-environment/hei3cj/article71688152.ece/alternates/LANDSCAPE_1200/COP31.jpg"
+        },
+        {
+          "id": "24df17663d1c",
+          "outlet_id": "scmp",
+          "headline": "World leaders begin UN climate talks amid concerns action on global warming too slow",
+          "snippet": "World leaders began arriving on Wednesday to start formal discussions at the United Nations climate change conference in Turkey, hoping to agree on concrete actions to curb global warming after a…",
+          "url": "https://www.scmp.com/news/world/africa/article/3374065/world-leaders-begin-un-climate-talks-amid-concerns-action-global-warming-too-slow",
+          "published_at": "2026-11-11T09:11:32Z",
+          "published_at_estimated": false,
+          "image_url": "https://cdn.i-scmp.com/sites/default/files/styles/1280x720/public/d8/images/canvas/2026/11/11/290410b8-11c2-40a4-b922-fd868a5fcf3b_f6ae0c96.jpg?itok=tTuSfBkF&v=1794388288"
+        },
+        {
+          "id": "761f8e4abb3c",
+          "outlet_id": "japantimes",
+          "headline": "Japan, eight others get fossil award over leaders skipping climate talks",
+          "snippet": "From the Group of Seven countries, British Prime Minister Andy Burnham is the only leader expected to attend the summit.",
+          "url": "https://www.japantimes.co.jp/news/2026/11/11/japan/climate-talks-fossil-award/",
+          "published_at": "2026-11-11T11:10:00Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.japantimes.co.jp/japantimes/uploads/images/2026/11/11/thumbs/400x400/573502.jpg"
+        },
+        {
+          "id": "dd99a03106c3",
+          "outlet_id": "thenational",
+          "headline": "UAE sends high-level delegation to Cop31 climate summit in Turkey",
+          "snippet": "Sheikh Saud bin Saqr Al Qasimi, Ruler of Ras Al Khaimah, arrived in Antalya, Turkey, on Wednesday as head of a high-level UAE delegation attending the Cop31 climate summit. Sheikh Saud is…",
+          "url": "https://www.thenationalnews.com/news/uae/2026/11/11/uae-sends-high-level-delegation-to-cop31-climate-summit-in-turkey/",
+          "published_at": "2026-11-11T11:21:02Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.thenationalnews.com/resizer/v2/XTM6SVYL65ESXOCGIO7BRHEMAU.jpeg?auth=c059ff7900423a6229ba226fce310736cff15007973957681505b0d4b91543b1&smart=true&width=7200&height=4800"
+        },
+        {
+          "id": "fd69e1fca43e",
+          "outlet_id": "aljazeera",
+          "headline": "‘Climate crisis is outrunning us,’ UN chief Guterres says at COP31",
+          "snippet": "Guterres says the world must fight harder, accuses the fossil fuel lobby of delaying climate action at critical talks.",
+          "url": "https://www.aljazeera.com/news/2026/11/11/climate-crisis-is-outrunning-us-un-chief-guterres-says-at-cop31",
+          "published_at": "2026-11-11T12:48:21Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "b75d92462570",
+          "outlet_id": "dailymail",
+          "headline": "Virtue-signalling Burnham boasts of wind farm boom as he jets off to COP climate 'talking shop' in Turkey… but every other G7 leader skips summit",
+          "snippet": "The PM hailed a £12billion investment in two major projects off the Norfolk coast as he prepares to head for the COP31 gathering.",
+          "url": "https://www.dailymail.com/news/article-16283671/Burnham-wind-farms-COP-climate-Turkey-G7-Trump.html",
+          "published_at": "2026-11-11T13:46:59Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.dailymail.com/1s/2026/11/11/08/112436037-0-image-m-6_1794384892871.jpg"
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "The COP31 UN climate summit is being held in Antalya, Turkey.",
+          "sources": [
+            "05f72f1dea02",
+            "dd99a03106c3",
+            "24df17663d1c",
+            "d2a74878303e",
+            "b75d92462570"
+          ]
+        },
+        {
+          "text": "World leaders have begun formal discussions at the summit.",
+          "sources": [
+            "24df17663d1c",
+            "d2a74878303e"
+          ]
+        },
+        {
+          "text": "Several major leaders are not attending; Andy Burnham is the only G7 leader expected to attend.",
+          "sources": [
+            "761f8e4abb3c",
+            "b75d92462570",
+            "d2a74878303e"
+          ]
+        },
+        {
+          "text": "Electrification is presented as a central focus, promoted by host Turkiye and by EU climate chief Wopke Hoekstra.",
+          "sources": [
+            "916dbcac918e",
+            "d2a74878303e"
+          ]
+        },
+        {
+          "text": "Speakers at the summit said lobbying, including by the fossil fuel lobby, is influencing or delaying climate action.",
+          "sources": [
+            "05f72f1dea02",
+            "fd69e1fca43e"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "05f72f1dea02",
+              "quote": "Greta Thunberg takes swipe at world leaders",
+              "field": "headline"
+            },
+            {
+              "article_id": "05f72f1dea02",
+              "quote": "the talks were being influenced by lobbyists",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with Greta Thunberg's criticism of world leaders and her warning that lobbyists are influencing the talks.",
+              "sources": [
+                "05f72f1dea02"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "right",
+          "headline_quotes": [
+            {
+              "article_id": "b75d92462570",
+              "quote": "Virtue-signalling Burnham boasts of wind farm boom",
+              "field": "headline"
+            },
+            {
+              "article_id": "b75d92462570",
+              "quote": "talking shop",
+              "field": "headline"
+            },
+            {
+              "article_id": "b75d92462570",
+              "quote": "every other G7 leader skips summit",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Foregrounds Burnham's attendance and a £12billion investment in two wind projects off the Norfolk coast, describing the summit as a 'talking shop'.",
+              "sources": [
+                "b75d92462570"
+              ]
+            },
+            {
+              "text": "Emphasises that every other G7 leader is skipping the summit.",
+              "sources": [
+                "b75d92462570"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "left",
+          "text": "Left coverage does not mention that Burnham is the only G7 leader attending while other G7 leaders skip the summit.",
+          "sources": [
+            "b75d92462570"
+          ]
+        },
+        {
+          "lean": "right",
+          "text": "Right coverage does not mention warnings that lobbyists are influencing the talks.",
+          "sources": [
+            "05f72f1dea02"
+          ]
+        }
+      ],
+      "contested_claims": [],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "05f72f1dea02",
+              "quote": "Greta Thunberg takes swipe at world leaders",
+              "field": "headline"
+            },
+            {
+              "article_id": "b75d92462570",
+              "quote": "every other G7 leader skips summit",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Focuses on individual figures: Thunberg's criticism of leaders and lobbyists, and Burnham's attendance and wind farm investment.",
+              "sources": [
+                "05f72f1dea02",
+                "b75d92462570"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "916dbcac918e",
+              "quote": "warns 'expectations low' from COP31 summit",
+              "field": "headline"
+            },
+            {
+              "article_id": "d2a74878303e",
+              "quote": "World leaders take stage at COP31 but big names missing",
+              "field": "headline"
+            },
+            {
+              "article_id": "761f8e4abb3c",
+              "quote": "Japan, eight others get fossil award over leaders skipping climate talks",
+              "field": "headline"
+            },
+            {
+              "article_id": "fd69e1fca43e",
+              "quote": "Climate crisis is outrunning us",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Emphasises low expectations and concerns that action on global warming is too slow.",
+              "sources": [
+                "916dbcac918e",
+                "24df17663d1c",
+                "fd69e1fca43e"
+              ]
+            },
+            {
+              "text": "Highlights electrification as the summit's proposed focus, including host Turkiye's voluntary initiative.",
+              "sources": [
+                "916dbcac918e",
+                "d2a74878303e"
+              ]
+            },
+            {
+              "text": "Reports leader absences, including a fossil award given to Japan and eight others over leaders skipping the talks.",
+              "sources": [
+                "761f8e4abb3c",
+                "d2a74878303e"
+              ]
+            },
+            {
+              "text": "Covers national delegations, such as the high-level UAE delegation led by the Ruler of Ras Al Khaimah.",
+              "sources": [
+                "dd99a03106c3"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "The UN COP31 climate summit opened in Antalya, Turkey, with world leaders beginning formal talks. Several big names are absent, with British Prime Minister Andy Burnham the only G7 leader expected to attend. Host Turkiye is championing electrification, while Guterres and Greta Thunberg pointed to fossil fuel or lobbyist influence.",
+        "sources": [
+          "05f72f1dea02",
+          "24df17663d1c",
+          "d2a74878303e",
+          "761f8e4abb3c",
+          "b75d92462570",
+          "fd69e1fca43e"
+        ]
+      },
+      "conclusion": {
+        "text": "All coverage agrees COP31 opened in Antalya with many major leaders absent and Burnham the only G7 leader expected. The left leads with Thunberg's lobbyist warning, the right with Burnham's wind investment and a 'talking shop' description, and East-bloc outlets with low expectations, electrification and absences. No claims are contested between the sides.",
+        "sources": [
+          "05f72f1dea02",
+          "b75d92462570",
+          "761f8e4abb3c",
+          "916dbcac918e",
+          "d2a74878303e",
+          "24df17663d1c"
+        ]
+      },
+      "validation": {
+        "kept": 28,
+        "dropped_by_reason": {}
+      }
+    },
+    {
+      "id": "1d29d2773424",
+      "title": "US judge allows Trump's $10bn defamation case against BBC to proceed",
+      "rank": 9,
+      "outlet_count": 6,
+      "coverage": {
+        "lean": {
+          "left": 1,
+          "centre": 2,
+          "right": 1
+        },
+        "bloc": {
+          "west": 4,
+          "east": 2
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "6e87e0e603ba",
+          "outlet_id": "thehindu",
+          "headline": "U.S. judge says Trump’s $10 billion BBC defamation case can proceed",
+          "snippet": "U.S. District Judge Jeffrey Kuntz in Florida declined to throw out Mr. Trump’s defamation ​claim against the BBC, ‌saying Mr. Trump had plausibly alleged that the broadcaster damaged his reputation…",
+          "url": "https://www.thehindu.com/news/international/us-judge-says-trumps-10-billion-bbc-defamation-case-can-proceed/article71688097.ece",
+          "published_at": "2026-11-11T00:36:19Z",
+          "published_at_estimated": false,
+          "image_url": "https://th-i.thgim.com/public/incoming/ocesge/article71688098.ece/alternates/LANDSCAPE_1200/2026-10-07T185455Z_1498628222_RC2PHIAD8GCM_RTRMADP_3_BBC-M-A-C4.JPG"
+        },
+        {
+          "id": "5a3c89d77d19",
+          "outlet_id": "bbc",
+          "headline": "Judge allows Trump's $10bn defamation case against BBC to proceed",
+          "snippet": "But the court dismisses the other part of Trump's lawsuit that alleged the BBC had violated a Florida law.",
+          "url": "https://www.bbc.co.uk/news/articles/cm93rpy6lx0do",
+          "published_at": "2026-11-11T01:18:09Z",
+          "published_at_estimated": false,
+          "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/7671/live/0710fae0-ddd2-11f1-b441-2b33b063138f.jpg"
+        },
+        {
+          "id": "78a93fcd5515",
+          "outlet_id": "mirror",
+          "headline": "Trump slams BBC as ‘terrible abuser of the truth’ after judge rules on defamation lawsuit",
+          "snippet": "Both the US president and the BBC have issued statements as the Trump-appointed judge has allowed the $10bn (£7.5 billion) defamation lawsuit against BBC to proceed",
+          "url": "https://www.mirror.co.uk/news/us-news/trump-bbc-defamation-lawsuit-decision-37864339",
+          "published_at": "2026-11-11T02:32:13Z",
+          "published_at_estimated": false,
+          "image_url": "https://i2-prod.dailyrecord.co.uk/news/uk-world-news/article36882343.ece/ALTERNATES/s615/2_President-Trump-Returns-To-Nations-Capital-After-Weekend-In-Florida.jpg"
+        },
+        {
+          "id": "de24e9d7c297",
+          "outlet_id": "sky",
+          "headline": "Trump's lawsuit against BBC can go ahead, judge rules",
+          "snippet": "The BBC's attempt to have Donald Trump's $10bn (£7.5bn) defamation claim thrown out has been dismissed by a Florida court.",
+          "url": "https://news.sky.com/story/bbc-bid-to-throw-out-donald-trumps-defamation-case-dismissed-in-court-13610819",
+          "published_at": "2026-11-11T06:07:00Z",
+          "published_at_estimated": false,
+          "image_url": "https://e3.365dm.com/26/02/1920x1080/skynews-bbc-donald-trump_7163251.jpg?20260212143757"
+        },
+        {
+          "id": "741b5e9adb2d",
+          "outlet_id": "scmp",
+          "headline": "US judge rejects BBC bid to dismiss Trump defamation case",
+          "snippet": "A federal judge has allowed US President Donald Trump’s multibillion-dollar defamation suit against the BBC to proceed, rejecting a bid by the British broadcaster to dismiss the case. Trump has…",
+          "url": "https://www.scmp.com/news/world/united-states-canada/article/3374096/us-judge-rejects-bbc-bid-dismiss-trump-defamation-case",
+          "published_at": "2026-11-11T11:16:09Z",
+          "published_at_estimated": false,
+          "image_url": "https://cdn.i-scmp.com/sites/default/files/styles/1280x720/public/d8/images/canvas/2026/11/11/abcb66e9-0cbf-4578-945a-580f6282572f_be79e4f7.jpg?itok=wZMs4nt7&v=1794395768"
+        },
+        {
+          "id": "a702e21ec30c",
+          "outlet_id": "thesun",
+          "headline": "Trump’s $10bn BBC lawsuit to go ahead as judge rejects broadcaster’s bid to dismiss case over edited Panorama speech",
+          "snippet": "DONALD Trump's $10 billion lawsuit against the BBC will be allowed to proceed after a judge rejected a bid by the broadcaster to dismiss the case. The US president hailed the ruling as a \"huge…",
+          "url": "https://www.thesun.co.uk/news/40990577/trump-panorama-edit-lawsuit-speech/",
+          "published_at": "2026-11-11T12:35:27Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.thesun.co.uk/wp-content%2Fuploads%2F2026%2F11%2Fnewspress-collage-ajwte1y10-1794400320429.jpg?quality%3D90%26"
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "A US judge has allowed Trump's defamation case against the BBC to proceed.",
+          "sources": [
+            "6e87e0e603ba",
+            "5a3c89d77d19",
+            "78a93fcd5515",
+            "de24e9d7c297",
+            "741b5e9adb2d",
+            "a702e21ec30c"
+          ]
+        },
+        {
+          "text": "The judge rejected the BBC's attempt to have the claim thrown out.",
+          "sources": [
+            "6e87e0e603ba",
+            "de24e9d7c297",
+            "741b5e9adb2d",
+            "a702e21ec30c"
+          ]
+        },
+        {
+          "text": "The lawsuit seeks $10bn, given as £7.5bn in some reports.",
+          "sources": [
+            "6e87e0e603ba",
+            "5a3c89d77d19",
+            "78a93fcd5515",
+            "de24e9d7c297",
+            "a702e21ec30c"
+          ]
+        },
+        {
+          "text": "The ruling was made by a court in Florida.",
+          "sources": [
+            "6e87e0e603ba",
+            "de24e9d7c297"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "78a93fcd5515",
+              "quote": "Trump slams BBC as ‘terrible abuser of the truth’",
+              "field": "headline"
+            },
+            {
+              "article_id": "78a93fcd5515",
+              "quote": "the Trump-appointed judge",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with Trump's criticism of the BBC after the ruling and notes both he and the BBC issued statements.",
+              "sources": [
+                "78a93fcd5515"
+              ]
+            },
+            {
+              "text": "Describes the judge as Trump-appointed.",
+              "sources": [
+                "78a93fcd5515"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "5a3c89d77d19",
+              "quote": "But the court dismisses the other part of Trump's lawsuit",
+              "field": "snippet"
+            },
+            {
+              "article_id": "de24e9d7c297",
+              "quote": "Trump's lawsuit against BBC can go ahead, judge rules",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Notes that the court dismissed the part of the lawsuit alleging the BBC violated a Florida law.",
+              "sources": [
+                "5a3c89d77d19"
+              ]
+            },
+            {
+              "text": "Focuses on the court ruling itself and the BBC's failed attempt to have the claim thrown out.",
+              "sources": [
+                "de24e9d7c297"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "right",
+          "headline_quotes": [
+            {
+              "article_id": "a702e21ec30c",
+              "quote": "over edited Panorama speech",
+              "field": "headline"
+            },
+            {
+              "article_id": "a702e21ec30c",
+              "quote": "The US president hailed the ruling as a \"huge",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Identifies the case as concerning an edited Panorama speech.",
+              "sources": [
+                "a702e21ec30c"
+              ]
+            },
+            {
+              "text": "Reports Trump's welcoming of the ruling.",
+              "sources": [
+                "a702e21ec30c"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "left",
+          "text": "Does not mention that the court dismissed the part of the suit alleging a breach of Florida law.",
+          "sources": [
+            "5a3c89d77d19"
+          ]
+        },
+        {
+          "lean": "right",
+          "text": "Does not mention that the court dismissed the part of the suit alleging a breach of Florida law.",
+          "sources": [
+            "5a3c89d77d19"
+          ]
+        },
+        {
+          "lean": "centre",
+          "text": "Does not mention Trump's reaction to the ruling.",
+          "sources": [
+            "78a93fcd5515",
+            "a702e21ec30c"
+          ]
+        },
+        {
+          "lean": "centre",
+          "text": "Does not mention that the case concerns an edited Panorama speech.",
+          "sources": [
+            "a702e21ec30c"
+          ]
+        },
+        {
+          "lean": "left",
+          "text": "Does not mention that the case concerns an edited Panorama speech.",
+          "sources": [
+            "a702e21ec30c"
+          ]
+        }
+      ],
+      "contested_claims": [],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "78a93fcd5515",
+              "quote": "Trump slams BBC as ‘terrible abuser of the truth’",
+              "field": "headline"
+            },
+            {
+              "article_id": "5a3c89d77d19",
+              "quote": "But the court dismisses the other part of Trump's lawsuit",
+              "field": "snippet"
+            },
+            {
+              "article_id": "a702e21ec30c",
+              "quote": "over edited Panorama speech",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Reports Trump's reaction to the ruling and the statements issued by both parties.",
+              "sources": [
+                "78a93fcd5515",
+                "a702e21ec30c"
+              ]
+            },
+            {
+              "text": "Notes the partial dismissal relating to Florida law and the Panorama edit at the heart of the case.",
+              "sources": [
+                "5a3c89d77d19",
+                "a702e21ec30c"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "6e87e0e603ba",
+              "quote": "Mr. Trump had plausibly alleged that the broadcaster damaged his reputation",
+              "field": "snippet"
+            },
+            {
+              "article_id": "741b5e9adb2d",
+              "quote": "US judge rejects BBC bid to dismiss Trump defamation case",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Names the judge as US District Judge Jeffrey Kuntz and gives his reasoning that Trump plausibly alleged reputational damage.",
+              "sources": [
+                "6e87e0e603ba"
+              ]
+            },
+            {
+              "text": "Leads with the rejection of the BBC's bid to dismiss, describing a multibillion-dollar suit.",
+              "sources": [
+                "741b5e9adb2d"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "A federal judge in Florida allowed Donald Trump's $10bn defamation lawsuit against the BBC to proceed, rejecting the broadcaster's bid to dismiss it. The court dismissed another part of the suit alleging a breach of Florida law. Trump welcomed the ruling and criticised the BBC.",
+        "sources": [
+          "6e87e0e603ba",
+          "5a3c89d77d19",
+          "78a93fcd5515",
+          "de24e9d7c297",
+          "741b5e9adb2d",
+          "a702e21ec30c"
+        ]
+      },
+      "conclusion": null,
+      "validation": {
+        "kept": 31,
+        "dropped_by_reason": {
+          "untrusted_text": 1
+        }
+      }
+    },
+    {
+      "id": "46b9078ef3e3",
+      "title": "Krakow mass shooting aftermath in Poland",
+      "rank": 10,
+      "outlet_count": 6,
+      "coverage": {
+        "lean": {
+          "left": 2,
+          "centre": 2,
+          "right": 2
+        },
+        "bloc": {
+          "west": 6,
+          "east": 0
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": "west"
+      },
+      "articles": [
+        {
+          "id": "8c9eb050cbe3",
+          "outlet_id": "bbc",
+          "headline": "Polish unity on show as thousands join silent march for Krakow shooting victims",
+          "snippet": "Fiercely proud of its reputation for safety, Poland has been profoundly shaken by Saturday's attack, writes Sarah Rainsford.",
+          "url": "https://www.bbc.co.uk/news/articles/cqkg5gm4nr4no",
+          "published_at": "2026-11-10T05:38:53Z",
+          "published_at_estimated": false,
+          "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/2788/live/5536cf80-dcdb-11f1-a701-fddedf244c16.jpg"
+        },
+        {
+          "id": "5b330806923f",
+          "outlet_id": "dw",
+          "headline": "Fact check: Online disinformation rife after Krakow mass shooting",
+          "snippet": "Fake and AI-manipulated images spread online in the hours after the Krakow attack, fueling false narratives about the mass shooting. DW Fact Check examined what's real, and what isn't.",
+          "url": "https://www.dw.com/en/fact-check-online-disinformation-rife-after-krakow-mass-shooting/a-79900620?maca=en-rss-en-world-4025-xml-mrss",
+          "published_at": "2026-11-10T10:02:00Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "6d497c57aea4",
+          "outlet_id": "nyt",
+          "headline": "Mass Killing in Poland Becomes Cause for a Political Fight",
+          "snippet": "The government blames the far right for inspiring the gunman, while the opposition accuses the government of lax security.",
+          "url": "https://www.nytimes.com/2026/11/09/world/europe/poland-mass-shooting-krakow-politics.html",
+          "published_at": "2026-11-10T11:29:10Z",
+          "published_at_estimated": false,
+          "image_url": "https://static01.nyt.com/images/2026/11/09/multimedia/09int-poland-new2-pqvj/09int-poland-new2-pqvj-mediumSquareAt3X.jpg"
+        },
+        {
+          "id": "1e5e8488d3c2",
+          "outlet_id": "mirror",
+          "headline": "British teen among 16 injured in Krakow market square shooting that killed six",
+          "snippet": "Harry Marchant is among those injured in the shooting in Krakow's Main Market Square, with another Brit man also confirmed to have died in the attack",
+          "url": "https://www.mirror.co.uk/news/world-news/brit-teen-krakow-poland-shooting-37860026",
+          "published_at": "2026-11-10T15:59:25Z",
+          "published_at_estimated": false,
+          "image_url": "https://i2-prod.mirror.co.uk/incoming/article37863425.ece/ALTERNATES/s615/2_harry-marchant.jpg"
+        },
+        {
+          "id": "112a29e0ad09",
+          "outlet_id": "nyt",
+          "headline": "Suspect in Mass Shooting in Krakow, Poland, Dies in Hospital. Here’s What to Know.",
+          "snippet": "Nine people were dead after shootings in Krakow and another town. The gunman died in the hospital and his motive remains unclear.",
+          "url": "https://www.nytimes.com/2026/11/08/world/europe/poland-krakow-mass-shooting.html",
+          "published_at": "2026-11-10T18:59:21Z",
+          "published_at_estimated": false,
+          "image_url": "https://static01.nyt.com/images/2026/11/10/multimedia/10int-poland-new-lkct/10int-poland-new-lkct-mediumSquareAt3X.jpg"
+        },
+        {
+          "id": "996c9be51661",
+          "outlet_id": "thesun",
+          "headline": "Brit tourist, 32, among nine killed in Poland shooting rampage is pictured as details of victims emerge",
+          "snippet": "A BRIT tourist who was killed in a horror mass shooting in Poland has been pictured. James Thomas Campbell, 32, died after a lone gunman opened fire at random while driving through Krakow’s packed…",
+          "url": "https://www.thesun.co.uk/news/40974671/brit-killed-poland-shooting-rampage/",
+          "published_at": "2026-11-11T12:09:21Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.thesun.co.uk/wp-content%2Fuploads%2F2026%2F11%2Fnewspress-collage-pqda95g5x-1794398514328.jpg?quality%3D90%26"
+        },
+        {
+          "id": "08079ff86b02",
+          "outlet_id": "dailymail",
+          "headline": "Fundraising appeal launched to help British teenager injured in Krakow shooting",
+          "snippet": "An appeal has been launched to help repatriate a 19-year-old British man who was injured in the shooting in the Polish city of Krakow.",
+          "url": "https://www.dailymail.com/news/article-16284289/British-DJ-named-victims-killed-Krakow-gun-massacre.html",
+          "published_at": "2026-11-11T13:22:40Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.dailymail.com/1s/2026/11/11/13/112425545-0-Harry_Marchant_19_from_York_suffered_a_gunshot_wound_in_the_horr-a-5_1794402093090.jpg"
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "A mass shooting took place in Krakow, Poland.",
+          "sources": [
+            "8c9eb050cbe3",
+            "5b330806923f",
+            "6d497c57aea4",
+            "1e5e8488d3c2",
+            "112a29e0ad09",
+            "996c9be51661",
+            "08079ff86b02"
+          ]
+        },
+        {
+          "text": "A British man was among those killed in the attack.",
+          "sources": [
+            "1e5e8488d3c2",
+            "996c9be51661"
+          ]
+        },
+        {
+          "text": "A young British man was injured in the shooting.",
+          "sources": [
+            "1e5e8488d3c2",
+            "08079ff86b02"
+          ]
+        },
+        {
+          "text": "Nine people were killed in the shootings.",
+          "sources": [
+            "112a29e0ad09",
+            "996c9be51661"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "6d497c57aea4",
+              "quote": "Mass Killing in Poland Becomes Cause for a Political Fight",
+              "field": "headline"
+            },
+            {
+              "article_id": "1e5e8488d3c2",
+              "quote": "British teen among 16 injured",
+              "field": "headline"
+            },
+            {
+              "article_id": "112a29e0ad09",
+              "quote": "his motive remains unclear",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "The political dispute, with the government blaming the far right and the opposition accusing it of lax security.",
+              "sources": [
+                "6d497c57aea4"
+              ]
+            },
+            {
+              "text": "The gunman's death in hospital and the unclear motive.",
+              "sources": [
+                "112a29e0ad09"
+              ]
+            },
+            {
+              "text": "A British teenager, Harry Marchant, among the injured and a British man among the dead.",
+              "sources": [
+                "1e5e8488d3c2"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "8c9eb050cbe3",
+              "quote": "Polish unity on show as thousands join silent march",
+              "field": "headline"
+            },
+            {
+              "article_id": "5b330806923f",
+              "quote": "Online disinformation rife after Krakow mass shooting",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "National reaction, with thousands joining a silent march and Poland described as profoundly shaken.",
+              "sources": [
+                "8c9eb050cbe3"
+              ]
+            },
+            {
+              "text": "Fake and AI-manipulated images spreading online after the attack.",
+              "sources": [
+                "5b330806923f"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "right",
+          "headline_quotes": [
+            {
+              "article_id": "996c9be51661",
+              "quote": "Brit tourist, 32, among nine killed in Poland shooting rampage",
+              "field": "headline"
+            },
+            {
+              "article_id": "08079ff86b02",
+              "quote": "Fundraising appeal launched to help British teenager injured",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "The British victims, naming James Thomas Campbell, 32, as killed.",
+              "sources": [
+                "996c9be51661"
+              ]
+            },
+            {
+              "text": "A fundraising appeal to repatriate an injured 19-year-old British man.",
+              "sources": [
+                "08079ff86b02"
+              ]
+            },
+            {
+              "text": "A lone gunman described as opening fire at random while driving through Krakow.",
+              "sources": [
+                "996c9be51661"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not mention British victims among the dead or injured.",
+          "sources": [
+            "1e5e8488d3c2",
+            "996c9be51661",
+            "08079ff86b02"
+          ]
+        },
+        {
+          "lean": "right",
+          "text": "Right coverage does not mention the political dispute between government and opposition over the attack.",
+          "sources": [
+            "6d497c57aea4"
+          ]
+        },
+        {
+          "lean": "right",
+          "text": "Right coverage does not mention that the suspect died in hospital.",
+          "sources": [
+            "112a29e0ad09"
+          ]
+        },
+        {
+          "lean": "left",
+          "text": "Left coverage does not mention the silent march or online disinformation after the attack.",
+          "sources": [
+            "8c9eb050cbe3",
+            "5b330806923f"
+          ]
+        }
+      ],
+      "contested_claims": [],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "6d497c57aea4",
+              "quote": "Becomes Cause for a Political Fight",
+              "field": "headline"
+            },
+            {
+              "article_id": "8c9eb050cbe3",
+              "quote": "thousands join silent march for Krakow shooting victims",
+              "field": "headline"
+            },
+            {
+              "article_id": "996c9be51661",
+              "quote": "Brit tourist, 32, among nine killed",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "British victims of the attack.",
+              "sources": [
+                "1e5e8488d3c2",
+                "996c9be51661",
+                "08079ff86b02"
+              ]
+            },
+            {
+              "text": "Poland's reaction, including a silent march and a political dispute.",
+              "sources": [
+                "8c9eb050cbe3",
+                "6d497c57aea4"
+              ]
+            },
+            {
+              "text": "Disinformation spreading online after the shooting.",
+              "sources": [
+                "5b330806923f"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "A mass shooting in Krakow, Poland, left people dead and injured. The New York Times reports nine dead across Krakow and another town, and says the gunman died in hospital with his motive unclear. British victims were among the dead and injured, and thousands joined a silent march.",
+        "sources": [
+          "112a29e0ad09",
+          "1e5e8488d3c2",
+          "996c9be51661",
+          "08079ff86b02",
+          "8c9eb050cbe3"
+        ]
+      },
+      "conclusion": {
+        "text": "All outlets report a mass shooting in Krakow. Left outlets add the political dispute and the gunman's death, centre outlets focus on a silent march and online disinformation, and right outlets focus on British victims. No outlet disputes another's account.",
+        "sources": [
+          "6d497c57aea4",
+          "112a29e0ad09",
+          "1e5e8488d3c2",
+          "8c9eb050cbe3",
+          "5b330806923f",
+          "996c9be51661",
+          "08079ff86b02"
+        ]
+      },
+      "validation": {
+        "kept": 31,
+        "dropped_by_reason": {}
+      }
+    }
+  ]
+}
