@@ -1,0 +1,4607 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-11-14T13:16:13.238722Z",
+  "date": "2026-11-14",
+  "meta": {
+    "model": "claude-opus-5-5",
+    "cost_usd": 0.66293,
+    "outlets_polled": 29,
+    "articles_collected": 599,
+    "warnings": [
+      "1 feed(s) failed during collect"
+    ],
+    "validation": {
+      "kept": 330,
+      "dropped_by_reason": {
+        "untrusted_text": 1
+      }
+    }
+  },
+  "outlets": [
+    {
+      "id": "guardian",
+      "name": "The Guardian",
+      "lean": "left",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United Kingdom",
+      "home_url": "https://www.theguardian.com/",
+      "rating_basis": "AllSides media bias rating (Lean Left), checked Oct 2026"
+    },
+    {
+      "id": "independent",
+      "name": "The Independent",
+      "lean": "left",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United Kingdom",
+      "home_url": "https://www.independent.co.uk/",
+      "rating_basis": "AllSides media bias rating (Lean Left), checked Oct 2026"
+    },
+    {
+      "id": "mirror",
+      "name": "Daily Mirror",
+      "lean": "left",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United Kingdom",
+      "home_url": "https://www.mirror.co.uk/",
+      "rating_basis": "Ad Fontes Media bias rating (Skews Left), checked Oct 2026"
+    },
+    {
+      "id": "bbc",
+      "name": "BBC News",
+      "lean": "centre",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "public-service",
+      "country": "United Kingdom",
+      "home_url": "https://www.bbc.co.uk/news",
+      "rating_basis": "AllSides media bias rating (Center), checked Oct 2026"
+    },
+    {
+      "id": "sky",
+      "name": "Sky News",
+      "lean": "centre",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United Kingdom",
+      "home_url": "https://news.sky.com/",
+      "rating_basis": "Ad Fontes Media bias rating (Middle), checked Oct 2026"
+    },
+    {
+      "id": "telegraph",
+      "name": "The Telegraph",
+      "lean": "right",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United Kingdom",
+      "home_url": "https://www.telegraph.co.uk/",
+      "rating_basis": "AllSides media bias rating (Lean Right), checked Oct 2026"
+    },
+    {
+      "id": "dailymail",
+      "name": "Daily Mail",
+      "lean": "right",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United Kingdom",
+      "home_url": "https://www.dailymail.co.uk/",
+      "rating_basis": "AllSides media bias rating (Right), checked Oct 2026"
+    },
+    {
+      "id": "thesun",
+      "name": "The Sun",
+      "lean": "right",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United Kingdom",
+      "home_url": "https://www.thesun.co.uk/",
+      "rating_basis": "AllSides media bias rating (Right), checked Oct 2026"
+    },
+    {
+      "id": "nyt",
+      "name": "The New York Times",
+      "lean": "left",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United States",
+      "home_url": "https://www.nytimes.com/",
+      "rating_basis": "AllSides media bias rating (Lean Left), checked Oct 2026"
+    },
+    {
+      "id": "nbc",
+      "name": "NBC News",
+      "lean": "left",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United States",
+      "home_url": "https://www.nbcnews.com/",
+      "rating_basis": "AllSides media bias rating (Lean Left), checked Oct 2026"
+    },
+    {
+      "id": "huffpost",
+      "name": "HuffPost",
+      "lean": "left",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United States",
+      "home_url": "https://www.huffpost.com/",
+      "rating_basis": "AllSides media bias rating (Left), checked Oct 2026"
+    },
+    {
+      "id": "npr",
+      "name": "NPR",
+      "lean": "centre",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "public-service",
+      "country": "United States",
+      "home_url": "https://www.npr.org/",
+      "rating_basis": "Ad Fontes Media bias rating (Middle / Skews Left), checked Oct 2026"
+    },
+    {
+      "id": "axios",
+      "name": "Axios",
+      "lean": "centre",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United States",
+      "home_url": "https://www.axios.com/",
+      "rating_basis": "AllSides media bias rating (Center), checked Oct 2026"
+    },
+    {
+      "id": "fox",
+      "name": "Fox News",
+      "lean": "right",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United States",
+      "home_url": "https://www.foxnews.com/",
+      "rating_basis": "AllSides media bias rating (Right), checked Oct 2026"
+    },
+    {
+      "id": "nypost",
+      "name": "New York Post",
+      "lean": "right",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United States",
+      "home_url": "https://nypost.com/",
+      "rating_basis": "AllSides media bias rating (Lean Right), checked Oct 2026"
+    },
+    {
+      "id": "examiner",
+      "name": "Washington Examiner",
+      "lean": "right",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United States",
+      "home_url": "https://www.washingtonexaminer.com/",
+      "rating_basis": "AllSides media bias rating (Lean Right), checked Oct 2026"
+    },
+    {
+      "id": "france24",
+      "name": "France 24",
+      "lean": "centre",
+      "region": "europe",
+      "bloc": "west",
+      "ownership": "public-service",
+      "country": "France",
+      "home_url": "https://www.france24.com/en/",
+      "rating_basis": "Ad Fontes Media bias rating (Middle), checked Oct 2026"
+    },
+    {
+      "id": "dw",
+      "name": "DW (Deutsche Welle)",
+      "lean": "centre",
+      "region": "europe",
+      "bloc": "west",
+      "ownership": "public-service",
+      "country": "Germany",
+      "home_url": "https://www.dw.com/en/",
+      "rating_basis": "AllSides media bias rating (Center), checked Oct 2026"
+    },
+    {
+      "id": "aljazeera",
+      "name": "Al Jazeera English",
+      "lean": null,
+      "region": "middle_east",
+      "bloc": "east",
+      "ownership": "state-funded",
+      "country": "Qatar",
+      "home_url": "https://www.aljazeera.com/",
+      "rating_basis": "Funded by the State of Qatar; no left/right tag applied"
+    },
+    {
+      "id": "thenational",
+      "name": "The National (UAE)",
+      "lean": null,
+      "region": "middle_east",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "United Arab Emirates",
+      "home_url": "https://www.thenationalnews.com/",
+      "rating_basis": "Owned by International Media Investments (Abu Dhabi); no left/right tag applied"
+    },
+    {
+      "id": "timesofisrael",
+      "name": "The Times of Israel",
+      "lean": null,
+      "region": "middle_east",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "Israel",
+      "home_url": "https://www.timesofisrael.com/",
+      "rating_basis": "Privately owned; no left/right tag applied"
+    },
+    {
+      "id": "cgtn",
+      "name": "CGTN",
+      "lean": null,
+      "region": "asia",
+      "bloc": "east",
+      "ownership": "state-controlled",
+      "country": "China",
+      "home_url": "https://www.cgtn.com/",
+      "rating_basis": "China Global Television Network, part of state broadcaster China Media Group"
+    },
+    {
+      "id": "ecns",
+      "name": "ECNS (China News Service)",
+      "lean": null,
+      "region": "asia",
+      "bloc": "east",
+      "ownership": "state-controlled",
+      "country": "China",
+      "home_url": "https://www.ecns.cn/",
+      "rating_basis": "English service of China News Service, a state news agency"
+    },
+    {
+      "id": "scmp",
+      "name": "South China Morning Post",
+      "lean": null,
+      "region": "asia",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "Hong Kong",
+      "home_url": "https://www.scmp.com/",
+      "rating_basis": "Owned by Alibaba Group; no left/right tag applied"
+    },
+    {
+      "id": "toi",
+      "name": "The Times of India",
+      "lean": null,
+      "region": "asia",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "India",
+      "home_url": "https://timesofindia.indiatimes.com/",
+      "rating_basis": "Privately owned (Bennett, Coleman & Co.); no left/right tag applied"
+    },
+    {
+      "id": "thehindu",
+      "name": "The Hindu",
+      "lean": null,
+      "region": "asia",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "India",
+      "home_url": "https://www.thehindu.com/",
+      "rating_basis": "Privately owned (The Hindu Group); no left/right tag applied"
+    },
+    {
+      "id": "moscowtimes",
+      "name": "The Moscow Times",
+      "lean": null,
+      "region": "europe",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "Russia",
+      "home_url": "https://www.themoscowtimes.com/",
+      "rating_basis": "Independent, Amsterdam-based since 2022; designated \"undesirable\" by Russia; no left/right tag applied"
+    },
+    {
+      "id": "japantimes",
+      "name": "The Japan Times",
+      "lean": null,
+      "region": "asia",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "Japan",
+      "home_url": "https://www.japantimes.co.jp/",
+      "rating_basis": "Privately owned (News2u Holdings); no left/right tag applied"
+    },
+    {
+      "id": "koreaherald",
+      "name": "The Korea Herald",
+      "lean": null,
+      "region": "asia",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "South Korea",
+      "home_url": "https://www.koreaherald.com/",
+      "rating_basis": "Privately owned (Herald Corporation); no left/right tag applied"
+    }
+  ],
+  "stories": [
+    {
+      "id": "77628b462b0e",
+      "title": "FAA nationwide ground stop halts US flights, causing mass cancellations",
+      "rank": 1,
+      "outlet_count": 16,
+      "coverage": {
+        "lean": {
+          "left": 2,
+          "centre": 4,
+          "right": 3
+        },
+        "bloc": {
+          "west": 9,
+          "east": 7
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "ba1d4793d6b0",
+          "outlet_id": "france24",
+          "headline": "🔴 US flight authority orders national ground stop over air traffic control 'communication issue'",
+          "snippet": "",
+          "url": "https://www.france24.com/en/americas/20261113-us-flight-authority-orders-national-ground-stop-over-air-traffic-control-communication-issue",
+          "published_at": "2026-11-13T21:29:31Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "94fac88eec7c",
+          "outlet_id": "scmp",
+          "headline": "US flight departures resume after FAA lifts nationwide ground stop",
+          "snippet": "The Federal Aviation Administration (FAA) says airplane departures can resume after the agency lifted a nationwide ground stop caused by communications problems. Air travel across the United States…",
+          "url": "https://www.scmp.com/news/world/united-states-canada/article/3374411/flights-stopped-across-us-due-extraordinary-circumstances-faa-says",
+          "published_at": "2026-11-13T21:33:43Z",
+          "published_at_estimated": false,
+          "image_url": "https://cdn.i-scmp.com/sites/default/files/styles/1280x720/public/d8/images/canvas/2026/11/14/98439ed6-1baa-410b-ad3a-c5a662707f91_ae6dba71.jpg?itok=CpoGjeF4&v=1794611867"
+        },
+        {
+          "id": "2cdb8b11e5be",
+          "outlet_id": "thenational",
+          "headline": "US flights resume after nationwide ground stop",
+          "snippet": "US authorities have lifted a nationwide ground stop that lasted four hours, disrupted thousands of flights and stranded passengers across the country, clearing the way for airlines to resume…",
+          "url": "https://www.thenationalnews.com/news/us/2026/11/13/flights-grounded-faa-nationwide-ground-stop/",
+          "published_at": "2026-11-13T21:43:28Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.thenationalnews.com/resizer/v2/NFFAQ4QEBFCJTOOU337IG6AYEY.jpg?auth=50544770c1b324bdf2210c8e55b028113d54ca6bc7255027a9ba62f0f876476a&smart=true&width=5571&height=3134"
+        },
+        {
+          "id": "aa3f8e52907d",
+          "outlet_id": "npr",
+          "headline": "What we know about the FAA nationwide ground stop",
+          "snippet": "The Federal Aviation Administration took an extraordinary step Friday afternoon by issuing a nationwide ground stop. No planes are taking off at any airport and millions of passengers are stranded.",
+          "url": "https://www.npr.org/2026/11/13/nx-s1-6040388/what-we-know-about-the-faa-nationwide-ground-stop",
+          "published_at": "2026-11-13T22:27:38Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "4a27d535d558",
+          "outlet_id": "npr",
+          "headline": "Stuck on the tarmac without information: Travelers share their ground stop experiences",
+          "snippet": "Passengers stuck on airplanes on tarmacs across the country during the FAA ground stop on Friday share their stories.",
+          "url": "https://www.npr.org/2026/11/13/nx-s1-6040397/stuck-on-the-tarmac-without-information-travelers-share-their-ground-stop-experiences",
+          "published_at": "2026-11-13T22:36:45Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "e073855caa8a",
+          "outlet_id": "npr",
+          "headline": "DHS head Markwayne Mullin says there is not a threat to the U.S. amid FAA ground stop",
+          "snippet": "Department of Homeland Security Secretary Markwayne Mullin spoke to at the White House on Friday afternoon after the FAA issues a total ground stop. NPR was there for the briefing.",
+          "url": "https://www.npr.org/2026/11/13/nx-s1-6040418/dhs-head-markwayne-mullin-says-there-is-not-a-threat-to-the-u-s-amid-faa-ground-stop",
+          "published_at": "2026-11-13T22:36:46Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "d8f86b107fa9",
+          "outlet_id": "france24",
+          "headline": "Passengers face further cancellations as US flights slowly resume after ground stop",
+          "snippet": "While flights in the United States started resuming on Saturday following the longest nationwide ground stop in 25 years, more than 2,000 flights have been cancelled as airlines work to return to…",
+          "url": "https://www.france24.com/en/americas/20261113-us-air-travel-resumption-will-take-time-after-hours-long-stop",
+          "published_at": "2026-11-13T22:43:22Z",
+          "published_at_estimated": false,
+          "image_url": "https://s.france24.com/media/display/8070c46a-dff8-11f1-bbc8-f71d22e7fea9/w:1024/p:16x9/063-2304502550.jpg"
+        },
+        {
+          "id": "8979a09f82b4",
+          "outlet_id": "thesun",
+          "headline": "Chaos at UK airports as flights to America cancelled and passengers facing severe delays after US grounded ALL planes",
+          "snippet": "BRITS travelling to or from America are facing widespread cancellations and delays today after the US grounded all planes on Friday night. The disruption has spilled into today, as 10,000 flights to…",
+          "url": "https://www.thesun.co.uk/news/41021415/brit-flight-america-cancelled-faa-grounds-planes-disruption/",
+          "published_at": "2026-11-13T23:01:19Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.thesun.co.uk/wp-content%2Fuploads%2F2026%2F11%2Faerial-view-row-british-airways-1111401147_c1085d.jpg?quality%3D90%26"
+        },
+        {
+          "id": "54a0e14c4888",
+          "outlet_id": "japantimes",
+          "headline": "U.S. air travel resumption will ‘take time’ after hours-long stop",
+          "snippet": "The nationwide stop Friday left hundreds of thousands of passengers in limbo, with some pulled off planes moments before departure.",
+          "url": "https://www.japantimes.co.jp/news/2026/11/14/world/departing-us-flights-grounded-canceled/",
+          "published_at": "2026-11-13T23:29:00Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.japantimes.co.jp/japantimes/uploads/images/2026/11/14/thumbs/400x400/574011.jpg"
+        },
+        {
+          "id": "e8b16f37902a",
+          "outlet_id": "nypost",
+          "headline": "JetBlue cancels most remaining flights due to FAA ground stop — and predicts chaos won’t end soon",
+          "snippet": "\"Flights already in the air are continuing to their destinations. We expect disruptions to continue into tomorrow,\" the airline noted.",
+          "url": "https://nypost.com/2026/11/13/us-news/jetblue-cancels-most-remaining-flights-due-to-faa-ground-stop-predicts-chaos-wont-end-soon/",
+          "published_at": "2026-11-14T01:16:47Z",
+          "published_at_estimated": false,
+          "image_url": "https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2Fpassengers-look-departures-arrivals-boards-148679438_a957cb.jpg?w%3D1024"
+        },
+        {
+          "id": "6b42c5315bdd",
+          "outlet_id": "koreaherald",
+          "headline": "Flights halted at airports across US due to air traffic control communications problems",
+          "snippet": "The Federal Aviation Administration grounded all flights nationwide Friday afternoon for just the second time since the 9/11 attacks, as officials cited \"extraordinary circumstances\" caused by…",
+          "url": "https://www.koreaherald.com/article/10936914",
+          "published_at": "2026-11-14T01:22:38Z",
+          "published_at_estimated": false,
+          "image_url": "https://wimg.heraldcorp.com/news/cms/2026/11/14/news-p.v1.20261114.208d5bb9d4ee44fbbe20b753dd791902_T1.png"
+        },
+        {
+          "id": "091190d46cee",
+          "outlet_id": "koreaherald",
+          "headline": "US ground stop delays flights from Incheon Airport",
+          "snippet": "Flights from South Korea's Incheon International Airport to major US cities were delayed by about two hours Saturday following a nationwide ground stop in the United States caused by air traffic…",
+          "url": "https://www.koreaherald.com/article/10936928",
+          "published_at": "2026-11-14T01:36:14Z",
+          "published_at_estimated": false,
+          "image_url": "https://wimg.heraldcorp.com/news/cms/2026/11/14/news-p.v1.20261114.632e23ce999c4ba9b39f95d54f071859_T1.jpg"
+        },
+        {
+          "id": "c5268198eb62",
+          "outlet_id": "bbc",
+          "headline": "'We'll get home one day' - US travellers impacted by nationwide ground stop",
+          "snippet": "Passengers throughout the country were impacted over what the Federal Aviation Administration (FAA) describes as “safety and communication issues”.",
+          "url": "https://www.bbc.co.uk/news/videos/c893ryz7lw33o",
+          "published_at": "2026-11-14T01:47:36Z",
+          "published_at_estimated": false,
+          "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/41c9/live/7d390f90-dfcc-11f1-b441-2b33b063138f.jpg"
+        },
+        {
+          "id": "a4b57c35e048",
+          "outlet_id": "nbc",
+          "headline": "Duffy details timeline of ground stop, demands more FAA funding",
+          "snippet": "Secretary of Transportation Sean Duffy gives the timeline of the paralyzing FAA ground stop, which left travelers across the country stranded for hours. Duffy says the issue was due to old…",
+          "url": "https://www.nbcnews.com/video/duffy-details-timeline-of-ground-stop-demands-more-faa-funding-273494085679",
+          "published_at": "2026-11-14T01:52:22Z",
+          "published_at_estimated": false,
+          "image_url": "https://media-cldnry.s-nbcnews.com/image/upload/t_fit_1500w/mpx/2704722219/2026_11/1794621135079_nbc_spec_faa_duffy_timeline_261113_S3_1920x1080-g0b3j8.jpg"
+        },
+        {
+          "id": "75bda219f33e",
+          "outlet_id": "axios",
+          "headline": "FAA ends hours-long nationwide ground stop",
+          "snippet": "The FAA lifted its nationwide ground stop Friday night after hours of chaos and thousands of delays and cancellations. Why it matters: The effects of the rare and extreme move will likely ripple…",
+          "url": "https://www.axios.com/2026/11/13/faa-nationwide-ground-stop",
+          "published_at": "2026-11-14T02:10:10Z",
+          "published_at_estimated": false,
+          "image_url": "https://images.axios.com/GnUhQbvQbFZf-A--p4aNzjhRAXo=/0x0:1920x1080/1366x768/2025/11/06/1762458318387.jpeg"
+        },
+        {
+          "id": "41010bb3e8f4",
+          "outlet_id": "nypost",
+          "headline": "FAA lifts nationwide ground stop, 4 hours after air traffic chaos began — but thousands of NYC travelers left stranded",
+          "snippet": "The Federal Aviation Administration announced the unprecedented move just before 4 p.m. to ground all flights.",
+          "url": "https://nypost.com/2026/11/13/us-news/faa-lifts-nationwide-ground-stop-4-hours-after-air-traffic-chaos-began/",
+          "published_at": "2026-11-14T02:24:16Z",
+          "published_at_estimated": false,
+          "image_url": "https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2Fairplanes-sit-tarmac-newark-liberty-148698569.jpg?w%3D1024"
+        },
+        {
+          "id": "65696dac87aa",
+          "outlet_id": "france24",
+          "headline": "US flights resume after nationwide ground stop lifted",
+          "snippet": "The United States on Friday lifted an hours-long ground stop at the nation's airports, with top officials explaining that the disruption was not due to a cyberattack or a sweeping Microsoft outage…",
+          "url": "https://www.france24.com/en/americas/20261114-us-flights-resume-after-nationwide-ground-stop-lifted-aviation",
+          "published_at": "2026-11-14T02:35:48Z",
+          "published_at_estimated": false,
+          "image_url": "https://s.france24.com/media/display/de33210e-dfd2-11f1-8675-29048b396e03/w:1024/p:16x9/AP26317844187470.jpg"
+        },
+        {
+          "id": "557fd39092a0",
+          "outlet_id": "koreaherald",
+          "headline": "US says airspace now &apos;opened up,&apos; no cyberattack",
+          "snippet": "The United States on Friday lifted an hours-long ground stop at the nation's airports, with top officials explaining that the disruption was due to old equipment and not a cyberattack or sweeping…",
+          "url": "https://www.koreaherald.com/article/10936972",
+          "published_at": "2026-11-14T02:39:59Z",
+          "published_at_estimated": false,
+          "image_url": "https://wimg.heraldcorp.com/news/cms/2026/11/14/news-p.v1.20261114.77506b790f934f22b645664cb83a2952_T1.jpg"
+        },
+        {
+          "id": "8cce0d7bcf2d",
+          "outlet_id": "thehindu",
+          "headline": "U.S. flights resume after hours-long outage as FAA lifts nationwide ground stop",
+          "snippet": "Disruption not due to a cyberattack or a sweeping Microsoft outage, top officials said; the incident marked only the second time such an alert was given in U.S. airspace since the 9/11 attacks",
+          "url": "https://www.thehindu.com/news/international/all-departing-us-flights-grounded-due-to-communication-outage/article71700667.ece",
+          "published_at": "2026-11-14T02:41:10Z",
+          "published_at_estimated": false,
+          "image_url": "https://th-i.thgim.com/public/incoming/qtxodl/article71700671.ece/alternates/LANDSCAPE_1200/2026-11-13T235613Z_1835360810_RC2BNOA1CG6D_RTRMADP_3_USA-FAA-GROUND-STOP.JPG"
+        },
+        {
+          "id": "821e8cdb2f48",
+          "outlet_id": "france24",
+          "headline": "FAA lifts nationwide ground stop on all US flights",
+          "snippet": "The United States on Friday lifted an hours-long ground stop at the nation's airports, with top officials explaining that the disruption was not due to a cyberattack or a sweeping Microsoft outage.",
+          "url": "https://www.france24.com/en/video/20261114-faa-lifts-nationwide-ground-stop-on-all-us-flights",
+          "published_at": "2026-11-14T02:50:21Z",
+          "published_at_estimated": false,
+          "image_url": "https://s.france24.com/media/display/b957cd96-dfd5-11f1-857f-f71d22e7fea9/w:1024/p:16x9/EN-20261114-030158-030311-CS.jpg"
+        },
+        {
+          "id": "f025b23fe182",
+          "outlet_id": "scmp",
+          "headline": "Hong Kong travellers face 2 days of delays as US ground stop hits 16 city flights",
+          "snippet": "Flights between the United States and Hong Kong will face continued disruptions over the next two days, the Airport Authority has warned, after a nationwide US ground stop forced the cancellation of…",
+          "url": "https://www.scmp.com/news/hong-kong/transport/article/3374424/cathay-pacific-warns-delays-after-us-ground-stop-hits-hong-kong-bound-flights",
+          "published_at": "2026-11-14T04:50:00Z",
+          "published_at_estimated": false,
+          "image_url": "https://cdn.i-scmp.com/sites/default/files/styles/1280x720/public/d8/images/canvas/2026/11/14/107f12a5-b487-4fd1-af27-43cd270f7138_5a41ae3e.jpg?itok=AMCHF39M&v=1794652978"
+        },
+        {
+          "id": "feecc94cb150",
+          "outlet_id": "guardian",
+          "headline": "US-bound flights out of Australia delayed after telecommunications outage grounded American planes",
+          "snippet": "Sydney and Melbourne airports say flights were affected by now-lifted ban on departures in US US flight outage – live updates Get our breaking news email, free app or daily news podcast Some…",
+          "url": "https://www.theguardian.com/australia-news/2026/nov/14/us-bound-flights-out-of-australia-grounded-as-telecommunications-outage-affects-american-travel",
+          "published_at": "2026-11-14T04:56:06Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.guim.co.uk/img/media/0f73a43c7adabdff5e4709c7319a3e2dd6459d4d/2337_146_6560_5249/master/6560.jpg?width=460&quality=85&auto=format&fit=max&s=d7637622cefc9dbefd46da10c16d12b7"
+        },
+        {
+          "id": "82cb0f96485e",
+          "outlet_id": "thehindu",
+          "headline": "U.S. FAA ground stop updates: Flights resume as hours-long halt lifted; Trump admin. blames 'overloaded' systems",
+          "snippet": "Trump administration rules out foul play, Transportation Secretary says major communications outage caused by decades old technology",
+          "url": "https://www.thehindu.com/news/international/us-flights-grounded-faa-nationwide-stop-usa-flights-live-updates-november-14-2026/article71700693.ece",
+          "published_at": "2026-11-14T06:29:38Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "728dfc0e9f46",
+          "outlet_id": "thehindu",
+          "headline": "Trump administration blames ‘overloaded’ systems for ground stop after FAA lets flights resume",
+          "snippet": "Thousands of flights and potentially over a million travellers were affected from coast to coast",
+          "url": "https://www.thehindu.com/news/international/trump-administration-blames-overloaded-systems-for-ground-stop-after-faa-lets-flights-resume/article71700826.ece",
+          "published_at": "2026-11-14T06:30:02Z",
+          "published_at_estimated": false,
+          "image_url": "https://th-i.thgim.com/public/incoming/d1panq/article71700849.ece/alternates/LANDSCAPE_1200/AP11_14_2026_000003B.jpg"
+        },
+        {
+          "id": "36a75e34cf8b",
+          "outlet_id": "dailymail",
+          "headline": "White House declares 'national emergency' over hours-long FAA ground stop: 'Nothing is certain right now'",
+          "snippet": "The halt triggered immediate chaos and confusion for travelers, with departure boards at many airports showing flights were operating normally, even as many were unable to board.",
+          "url": "https://www.dailymail.com/news/article-16291587/FAA-groundstop-live.html",
+          "published_at": "2026-11-14T06:57:49Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.dailymail.com/1s/2026/11/13/22/112500225-0-image-a-2_1794608878268.jpg"
+        },
+        {
+          "id": "9c02e88bb9ad",
+          "outlet_id": "dailymail",
+          "headline": "Selfless pilot is praised for personally thanking each passenger after being stuck on tarmac for hours before getting wheelchair for traveler in need",
+          "snippet": "The gesture came after the American Airlines plane was stuck on the tarmac for more than two hours during the rare ground stop of all flights across the country on Friday.",
+          "url": "https://www.dailymail.com/news/article-16291929/Selfless-pilot-praised-personally-thanking-passenger-stuck-tarmac-hours-getting-wheelchair-traveler-need.html",
+          "published_at": "2026-11-14T06:58:23Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.dailymail.com/1s/2026/11/14/04/112503159-0-image-m-34_1794632326166.jpg"
+        },
+        {
+          "id": "e198d31e2bd4",
+          "outlet_id": "dailymail",
+          "headline": "Ultimate irony as shameless former Transportation Secretary Pete Buttigieg bemoans being left stranded in ground stop chaos",
+          "snippet": "Former US Transportation Secretary Buttigieg joked about his replacement Sean Duffy's performance at a convention for Democrats in Denver.",
+          "url": "https://www.dailymail.com/news/article-16291881/Pete-Buttigieg-Sean-Duffy-flight-chaos.html",
+          "published_at": "2026-11-14T07:32:31Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.dailymail.com/1s/2026/11/14/06/112503593-0-image-m-19_1794636429181.jpg"
+        },
+        {
+          "id": "3900e3ec5b35",
+          "outlet_id": "bbc",
+          "headline": "What we know about the ground stop and what to do if you're affected",
+          "snippet": "US officials say the disruption was caused by old equipment overloading and not a cyber-attack.",
+          "url": "https://www.bbc.co.uk/news/articles/cqx2wyvyr3zzo",
+          "published_at": "2026-11-14T07:42:11Z",
+          "published_at_estimated": false,
+          "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/14ef/live/f4aae840-dfd7-11f1-b441-2b33b063138f.jpg"
+        },
+        {
+          "id": "c88b1f5a934e",
+          "outlet_id": "thesun",
+          "headline": "Millions of passengers face DAYS of airport delays after thousands of flights grounded across US over system meltdown",
+          "snippet": "MILLIONS of airline passengers are facing crippling delays after flights across the US were grounded without warning for just the second time since 9/11. Holidaymakers have been warned to brace for…",
+          "url": "https://www.thesun.co.uk/news/41022090/us-airport-delays-europe-flights-scrapped/",
+          "published_at": "2026-11-14T08:06:13Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.thesun.co.uk/wp-content%2Fuploads%2F2026%2F11%2Fnewspress-collage-b2ll2sfyb-1794643545932.jpg?quality%3D90%26"
+        },
+        {
+          "id": "0f00363347e2",
+          "outlet_id": "dailymail",
+          "headline": "Americans face day of travel hell after worst airport crisis since 9/11 left 1.5 million passengers stranded with more than 3,100 flights delayed or canceled today... while White House says it could happen AGAIN",
+          "snippet": "Trump administration officials have warned that the disruption, which Department of Homeland Security (DHS) Secretary Markwayne Mullin called a 'national emergency,' could happen again.",
+          "url": "https://www.dailymail.com/news/article-16292041/ground-stop-explained-airports-faa-flights-canceled.html",
+          "published_at": "2026-11-14T08:13:02Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.dailymail.com/1s/2026/11/14/06/112503477-0-image-a-17_1794637847043.jpg"
+        },
+        {
+          "id": "a27985dca64f",
+          "outlet_id": "toi",
+          "headline": "US flight chaos in photos: Long queues, crowded terminals and thousands of passengers in limbo",
+          "snippet": "",
+          "url": "https://timesofindia.indiatimes.com/world/us/us-flight-chaos-in-photos-long-queues-crowded-terminals-and-thousands-of-passengers-in-limbo/photostory/135824081.cms",
+          "published_at": "2026-11-14T08:15:38Z",
+          "published_at_estimated": false,
+          "image_url": "https://static.toiimg.com/photo/msid-135824081,imgsize-70226.cms"
+        },
+        {
+          "id": "b63d81c84225",
+          "outlet_id": "france24",
+          "headline": "US nationwide flight ground stop: \"Our routers got overloaded with data\"",
+          "snippet": "On Friday, the Federal Aviation Administration issued a rare nationwide ground stop. More than 8,200 flights, or over 31% of those scheduled in the United States, were canceled. The ground stop…",
+          "url": "https://www.france24.com/en/us-nationwide-flight-ground-stop-our-routers-got-overloaded-with-data",
+          "published_at": "2026-11-14T10:14:09Z",
+          "published_at_estimated": false,
+          "image_url": "https://s.france24.com/media/display/a3b36d9c-e011-11f1-b125-f71d22e7fea9/w:1024/p:16x9/EN-20261114-100114-100358-CS-01.jpg"
+        },
+        {
+          "id": "cc470df789de",
+          "outlet_id": "axios",
+          "headline": "3,000 flights cancelled as FAA ground stop chaos stretches into 2nd day",
+          "snippet": "The chaos from the FAA's nationwide ground stop lingered into early Saturday morning, with thousands of flights cancelled as airlines played catch-up. Why it matters: Millions of travelers will find…",
+          "url": "https://www.axios.com/2026/11/14/faa-ground-stop-saturday",
+          "published_at": "2026-11-14T10:28:42Z",
+          "published_at_estimated": false,
+          "image_url": "https://images.axios.com/txIGVU9cS2v79j0W9r2prbqCWBQ=/0x873:7498x5091/1366x768/2026/11/14/1794651723742.jpeg"
+        },
+        {
+          "id": "c2b3a06becde",
+          "outlet_id": "toi",
+          "headline": "US flight chaos: Trump official seeks $50 billion for air traffic control",
+          "snippet": "",
+          "url": "https://timesofindia.indiatimes.com/world/us/us-flight-chaos-trump-official-seeks-50-billion-for-air-traffic-control-overhaul-after-nationwide-disruptions/articleshow/135830168.cms",
+          "published_at": "2026-11-14T10:45:51Z",
+          "published_at_estimated": false,
+          "image_url": "https://static.toiimg.com/photo/msid-135830318,imgsize-77533.cms"
+        },
+        {
+          "id": "fb7e2f24bdfa",
+          "outlet_id": "timesofisrael",
+          "headline": "Over 2,000 flights canceled Saturday across US after mass air traffic control failure",
+          "snippet": "Airlines struggle to recover from longest US ground stop in 25 years after officials blame 'decades-old' communication equipment; Passengers wait for hours onboard and in terminals",
+          "url": "https://www.timesofisrael.com/over-2000-flights-remain-canceled-saturday-across-us-after-air-traffic-control-failure/",
+          "published_at": "2026-11-14T11:19:49Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "21d0cc3ac800",
+          "outlet_id": "dailymail",
+          "headline": "Live updates: Misery for thousands at UK airports as transatlantic flights are cancelled after US grounded ALL planes - days after AI 'Smart' tool was launched",
+          "snippet": "Follow the Daily Mail's coverage as air passengers face disruption after all flights were grounded across the US days after an AI 'Smart' tool was launched:",
+          "url": "https://www.dailymail.com/news/article-16292167/Live-updates-Misery-thousands-UK-airports.html",
+          "published_at": "2026-11-14T11:27:37Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.dailymail.com/1s/2026/11/14/07/112504253-0-image-a-25_1794642888328.jpg"
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "The FAA ordered a nationwide ground stop on Friday, halting flights across the United States.",
+          "sources": [
+            "ba1d4793d6b0",
+            "aa3f8e52907d",
+            "6b42c5315bdd",
+            "41010bb3e8f4",
+            "b63d81c84225",
+            "c88b1f5a934e"
+          ]
+        },
+        {
+          "text": "The ground stop was lifted after several hours, about four by some counts, and departures resumed.",
+          "sources": [
+            "94fac88eec7c",
+            "2cdb8b11e5be",
+            "75bda219f33e",
+            "41010bb3e8f4",
+            "65696dac87aa",
+            "821e8cdb2f48",
+            "557fd39092a0",
+            "8cce0d7bcf2d"
+          ]
+        },
+        {
+          "text": "The stop was linked to air traffic control communication problems.",
+          "sources": [
+            "ba1d4793d6b0",
+            "94fac88eec7c",
+            "6b42c5315bdd",
+            "091190d46cee",
+            "c5268198eb62",
+            "feecc94cb150"
+          ]
+        },
+        {
+          "text": "Officials said the disruption was not caused by a cyberattack or a sweeping Microsoft outage.",
+          "sources": [
+            "65696dac87aa",
+            "821e8cdb2f48",
+            "557fd39092a0",
+            "8cce0d7bcf2d",
+            "3900e3ec5b35",
+            "82cb0f96485e"
+          ]
+        },
+        {
+          "text": "Officials attributed the outage to old or decades-old equipment becoming overloaded.",
+          "sources": [
+            "557fd39092a0",
+            "3900e3ec5b35",
+            "a4b57c35e048",
+            "82cb0f96485e",
+            "728dfc0e9f46",
+            "fb7e2f24bdfa",
+            "b63d81c84225"
+          ]
+        },
+        {
+          "text": "It was described as only the second such nationwide stop since the 9/11 attacks, or the longest in 25 years.",
+          "sources": [
+            "6b42c5315bdd",
+            "8cce0d7bcf2d",
+            "c88b1f5a934e",
+            "d8f86b107fa9",
+            "fb7e2f24bdfa"
+          ]
+        },
+        {
+          "text": "Cancellations and delays continued into Saturday, with thousands of flights cancelled.",
+          "sources": [
+            "d8f86b107fa9",
+            "cc470df789de",
+            "fb7e2f24bdfa",
+            "0f00363347e2",
+            "e8b16f37902a",
+            "c88b1f5a934e"
+          ]
+        },
+        {
+          "text": "Passengers were left waiting on planes on tarmacs and in terminals for hours.",
+          "sources": [
+            "4a27d535d558",
+            "9c02e88bb9ad",
+            "fb7e2f24bdfa",
+            "54a0e14c4888"
+          ]
+        },
+        {
+          "text": "The disruption spread to flights abroad, including the UK, Australia, South Korea and Hong Kong.",
+          "sources": [
+            "8979a09f82b4",
+            "21d0cc3ac800",
+            "feecc94cb150",
+            "091190d46cee",
+            "f025b23fe182"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "a4b57c35e048",
+              "quote": "demands more FAA funding",
+              "field": "headline"
+            },
+            {
+              "article_id": "feecc94cb150",
+              "quote": "US-bound flights out of Australia delayed",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with Transportation Secretary Sean Duffy's timeline of the stop and his call for more FAA funding.",
+              "sources": [
+                "a4b57c35e048"
+              ]
+            },
+            {
+              "text": "Foregrounds knock-on delays to US-bound flights from Sydney and Melbourne.",
+              "sources": [
+                "feecc94cb150"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "aa3f8e52907d",
+              "quote": "What we know about the FAA nationwide ground stop",
+              "field": "headline"
+            },
+            {
+              "article_id": "4a27d535d558",
+              "quote": "Stuck on the tarmac without information",
+              "field": "headline"
+            },
+            {
+              "article_id": "821e8cdb2f48",
+              "quote": "not due to a cyberattack or a sweeping Microsoft outage",
+              "field": "snippet"
+            },
+            {
+              "article_id": "b63d81c84225",
+              "quote": "Our routers got overloaded with data",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Emphasises officials' explanations, including that the cause was not a cyberattack and that DHS saw no threat.",
+              "sources": [
+                "65696dac87aa",
+                "821e8cdb2f48",
+                "e073855caa8a",
+                "3900e3ec5b35"
+              ]
+            },
+            {
+              "text": "Foregrounds passenger experiences and practical guidance for those affected.",
+              "sources": [
+                "4a27d535d558",
+                "c5268198eb62",
+                "3900e3ec5b35"
+              ]
+            },
+            {
+              "text": "Reports scale figures, including more than 8,200 cancelled flights, over 31% of those scheduled.",
+              "sources": [
+                "b63d81c84225",
+                "cc470df789de"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "right",
+          "headline_quotes": [
+            {
+              "article_id": "8979a09f82b4",
+              "quote": "Chaos at UK airports",
+              "field": "headline"
+            },
+            {
+              "article_id": "36a75e34cf8b",
+              "quote": "White House declares 'national emergency'",
+              "field": "headline"
+            },
+            {
+              "article_id": "0f00363347e2",
+              "quote": "worst airport crisis since 9/11",
+              "field": "headline"
+            },
+            {
+              "article_id": "0f00363347e2",
+              "quote": "could happen AGAIN",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with chaos and disruption, including for British travellers at UK airports.",
+              "sources": [
+                "8979a09f82b4",
+                "21d0cc3ac800",
+                "c88b1f5a934e",
+                "41010bb3e8f4"
+              ]
+            },
+            {
+              "text": "Reports the disruption being called a 'national emergency' and officials warning it could happen again.",
+              "sources": [
+                "36a75e34cf8b",
+                "0f00363347e2"
+              ]
+            },
+            {
+              "text": "Carries side stories: a pilot thanking passengers, Pete Buttigieg being stranded, and the recent launch of an AI 'Smart' tool.",
+              "sources": [
+                "9c02e88bb9ad",
+                "e198d31e2bd4",
+                "21d0cc3ac800"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "right",
+          "text": "Right-leaning coverage does not mention officials ruling out a cyberattack or attributing the outage to old equipment.",
+          "sources": [
+            "65696dac87aa",
+            "821e8cdb2f48",
+            "3900e3ec5b35",
+            "a4b57c35e048"
+          ]
+        },
+        {
+          "lean": "left",
+          "text": "Left-leaning coverage does not mention officials ruling out a cyberattack.",
+          "sources": [
+            "65696dac87aa",
+            "821e8cdb2f48",
+            "3900e3ec5b35"
+          ]
+        },
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not mention Sean Duffy's demand for more FAA funding.",
+          "sources": [
+            "a4b57c35e048"
+          ]
+        }
+      ],
+      "contested_claims": [
+        {
+          "claim": "Millions of passengers were stranded or delayed by the ground stop.",
+          "asserted_by": [
+            "aa3f8e52907d",
+            "c88b1f5a934e",
+            "0f00363347e2"
+          ],
+          "disputed_by": [
+            "54a0e14c4888"
+          ]
+        }
+      ],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "75bda219f33e",
+              "quote": "FAA ends hours-long nationwide ground stop",
+              "field": "headline"
+            },
+            {
+              "article_id": "4a27d535d558",
+              "quote": "Stuck on the tarmac without information",
+              "field": "headline"
+            },
+            {
+              "article_id": "36a75e34cf8b",
+              "quote": "White House declares 'national emergency'",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Foregrounds passenger experiences and the scale of chaos in the US and at UK airports.",
+              "sources": [
+                "4a27d535d558",
+                "c5268198eb62",
+                "8979a09f82b4",
+                "0f00363347e2"
+              ]
+            },
+            {
+              "text": "Reports statements from US officials including Duffy and DHS Secretary Markwayne Mullin.",
+              "sources": [
+                "a4b57c35e048",
+                "e073855caa8a",
+                "0f00363347e2"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "2cdb8b11e5be",
+              "quote": "US flights resume after nationwide ground stop",
+              "field": "headline"
+            },
+            {
+              "article_id": "82cb0f96485e",
+              "quote": "Trump admin. blames 'overloaded' systems",
+              "field": "headline"
+            },
+            {
+              "article_id": "f025b23fe182",
+              "quote": "Hong Kong travellers face 2 days of delays",
+              "field": "headline"
+            },
+            {
+              "article_id": "c2b3a06becde",
+              "quote": "Trump official seeks $50 billion for air traffic control",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the resumption of flights and the Trump administration's attribution of blame to overloaded, decades-old systems.",
+              "sources": [
+                "94fac88eec7c",
+                "2cdb8b11e5be",
+                "82cb0f96485e",
+                "728dfc0e9f46",
+                "fb7e2f24bdfa"
+              ]
+            },
+            {
+              "text": "Foregrounds regional knock-on effects at Incheon and Hong Kong airports.",
+              "sources": [
+                "091190d46cee",
+                "f025b23fe182"
+              ]
+            },
+            {
+              "text": "Reports a Trump official seeking $50 billion for air traffic control.",
+              "sources": [
+                "c2b3a06becde"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "The FAA issued a nationwide ground stop on Friday, halting US departures over air traffic control communication problems, and lifted it after about four hours. Officials said old equipment, not a cyberattack, was to blame, and thousands of cancellations continued into Saturday.",
+        "sources": [
+          "ba1d4793d6b0",
+          "2cdb8b11e5be",
+          "41010bb3e8f4",
+          "557fd39092a0",
+          "3900e3ec5b35",
+          "d8f86b107fa9",
+          "cc470df789de",
+          "fb7e2f24bdfa"
+        ]
+      },
+      "conclusion": {
+        "text": "All sides report the nationwide stop, its lifting after hours and cancellations continuing into Saturday. Centre and East outlets stress officials ruling out a cyberattack; right-leaning outlets lead with chaos and a 'national emergency'; left with funding and Australia. Passenger figures differ, from hundreds of thousands to millions.",
+        "sources": [
+          "2cdb8b11e5be",
+          "821e8cdb2f48",
+          "557fd39092a0",
+          "36a75e34cf8b",
+          "8979a09f82b4",
+          "a4b57c35e048",
+          "feecc94cb150",
+          "54a0e14c4888",
+          "aa3f8e52907d"
+        ]
+      },
+      "validation": {
+        "kept": 45,
+        "dropped_by_reason": {}
+      }
+    },
+    {
+      "id": "4ed01e6f2965",
+      "title": "Microsoft restores services after global outage of Outlook, Teams and Copilot",
+      "rank": 2,
+      "outlet_count": 15,
+      "coverage": {
+        "lean": {
+          "left": 4,
+          "centre": 4,
+          "right": 1
+        },
+        "bloc": {
+          "west": 9,
+          "east": 6
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "dcd91b6bb0dc",
+          "outlet_id": "mirror",
+          "headline": "Microsoft issues update on cause of global outage of Teams and Outlook",
+          "snippet": "The outage is still plaguing Microsoft users hours since it began, affecting several platforms, including Outlook, Teams and Copilot, as the tech giant saying it still working to solve the issues",
+          "url": "https://www.mirror.co.uk/news/world-news/microsoft-outage-teams-outlook-copilot-37872842",
+          "published_at": "2026-11-13T04:04:00Z",
+          "published_at_estimated": false,
+          "image_url": "https://i2-prod.mirror.co.uk/tech/article37872628.ece/ALTERNATES/s615/5_In-this-photo-illustration-the-popular-mail-application.jpg"
+        },
+        {
+          "id": "df73f1f6394a",
+          "outlet_id": "mirror",
+          "headline": "Microsoft down: All we know about outage so far and who is affected – from NHS to schools",
+          "snippet": "GPs, councils and schools are among the UK institutions impacted by the global Microsoft outage - which started on Thursday - as people have been warned some services are not working",
+          "url": "https://www.mirror.co.uk/news/world-news/microsoft-down-365-outlook-outage-37873034",
+          "published_at": "2026-11-13T08:35:22Z",
+          "published_at_estimated": false,
+          "image_url": "https://i2-prod.mirror.co.uk/incoming/article37873098.ece/ALTERNATES/s615/1_Global-Microsoft-Outage-Knocks-Out-Outlook-Teams-and-Copilot-India-13-Nov-2026.jpg"
+        },
+        {
+          "id": "bdd5941e1921",
+          "outlet_id": "mirror",
+          "headline": "Microsoft outage 'could be one of most damaging in history'",
+          "snippet": "Experts have been reacting to the major global outage this morning",
+          "url": "https://www.mirror.co.uk/news/world-news/microsoft-outage-could-one-most-37873311",
+          "published_at": "2026-11-13T09:30:50Z",
+          "published_at_estimated": false,
+          "image_url": "https://i2-prod.mirror.co.uk/news/uk-news/article37873310.ece/ALTERNATES/s615/0_Microsoft-Outage-Takes-Down-Outlook-Email-And-Other-Services-For-Hours.jpg"
+        },
+        {
+          "id": "887d975c944a",
+          "outlet_id": "cgtn",
+          "headline": "The Microsoft outage China barely felt: A lesson on data sovereignty",
+          "snippet": "",
+          "url": "https://news.cgtn.com/news/2026-11-13/The-Microsoft-outage-China-barely-felt-A-lesson-on-data-sovereignty-1S2ri8aDEgo/p.html",
+          "published_at": "2026-11-13T10:09:34Z",
+          "published_at_estimated": false,
+          "image_url": "https://news.cgtn.com/news/2026-11-13/The-Microsoft-outage-China-barely-felt-A-lesson-on-data-sovereignty-1S2ri8aDEgo/img/035fcab438034a11b13ec16a64d1a33d/035fcab438034a11b13ec16a64d1a33d-1920.jpeg"
+        },
+        {
+          "id": "6a8ef93c9f0a",
+          "outlet_id": "huffpost",
+          "headline": "Microsoft Reports Progress As It Tries To Recover Email, Other Services In Global Outage",
+          "snippet": "The outage affected a wide range of Microsoft 365 services including Outlook, Teams and AI assistant Copilot.",
+          "url": "https://www.huffpost.com/entry/microsoft-outage_n_6af6ec51e4b065342906b58b",
+          "published_at": "2026-11-13T11:01:24Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "10fea0b78898",
+          "outlet_id": "guardian",
+          "headline": "Microsoft outage: company scrambles to fix global issue that took down Outlook and Teams",
+          "snippet": "Tech firm says it is ‘deeply sorry’ for disruption that took services down and has now addressed the underlying issue What caused the outage and when will it be fixed? Microsoft outage hits UK…",
+          "url": "https://www.theguardian.com/technology/2026/nov/13/microsoft-outage-outlook-teams-word-excel-reports",
+          "published_at": "2026-11-13T17:41:15Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.guim.co.uk/img/media/dfa589c16097054908f431498d8161b7edbee12f/399_0_6288_5030/master/6288.jpg?width=460&quality=85&auto=format&fit=max&s=2879856e0ea9c39e70e525b9469bd43f"
+        },
+        {
+          "id": "bb6152ffc2dd",
+          "outlet_id": "scmp",
+          "headline": "Microsoft ‘deeply sorry’ for global outage, says issue not caused by cyber or AI agents",
+          "snippet": "Microsoft on Friday apologised for a global outage that disrupted public services and businesses around the world, as it reported a “broad recovery” for Outlook email and other services. The company…",
+          "url": "https://www.scmp.com/news/world/article/3374408/microsoft-deeply-sorry-global-outage-says-issue-not-caused-cyber-or-ai-agents",
+          "published_at": "2026-11-13T18:43:24Z",
+          "published_at_estimated": false,
+          "image_url": "https://cdn.i-scmp.com/sites/default/files/styles/1280x720/public/d8/images/canvas/2026/11/14/10be4e09-a8ca-47d6-b6ef-ca112362ac08_c2ab7838.jpg?itok=-QtXJ0Y-&v=1794595400"
+        },
+        {
+          "id": "3b77002e2c0b",
+          "outlet_id": "axios",
+          "headline": "How the Microsoft outage impacted courts and governments",
+          "snippet": "Courts and governments worldwide felt the impact of this week's Microsoft outage, which sidelined work and stymied communication. Why it matters: When Microsoft's popular workplace software went…",
+          "url": "https://www.axios.com/2026/11/13/microsoft-outage-hits-courts-congress",
+          "published_at": "2026-11-13T19:59:55Z",
+          "published_at_estimated": false,
+          "image_url": "https://images.axios.com/0j7JeFP26H-zFM9uoX6Ed8DS7C8=/1366x768/smart/2023/07/13/164219-1689266539043.jpg"
+        },
+        {
+          "id": "0c7a6d512b99",
+          "outlet_id": "mirror",
+          "headline": "Microsoft outage updates: Outlook and Teams issues continue amid 'improvements'",
+          "snippet": "Thousands of people across the UK faced problems accessing Microsoft services such as Outlook, Teams and Copilot on Friday amid a global outage affecting millions of users",
+          "url": "https://www.mirror.co.uk/news/world-news/microsoft-outage-live-teams-outlook-37872878",
+          "published_at": "2026-11-14T00:43:22Z",
+          "published_at_estimated": false,
+          "image_url": "https://i2-prod.mirror.co.uk/incoming/article37873098.ece/ALTERNATES/s615/1_Global-Microsoft-Outage-Knocks-Out-Outlook-Teams-and-Copilot-India-13-Nov-2026.jpg"
+        },
+        {
+          "id": "dc70959482dd",
+          "outlet_id": "thehindu",
+          "headline": "Microsoft Outage updates: No ETA yet on full recovery, company says",
+          "snippet": "Microsoft services are beginning to come back online after a massive global outage left millions of users without access for nearly 18 hours",
+          "url": "https://www.thehindu.com/sci-tech/technology/microsoft-outage-live-updates-november-13-2026-steps-to-fix-outlook-and-other-apps-ongoing/article71696624.ece",
+          "published_at": "2026-11-14T01:18:21Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "522734e07d09",
+          "outlet_id": "koreaherald",
+          "headline": "Microsoft apologizes as global service outage stretches into second day",
+          "snippet": "Microsoft issued an apology as a global outage affecting its email and office software services stretched into a second day, disrupting businesses and government agencies worldwide. \"We deeply…",
+          "url": "https://www.koreaherald.com/article/10936977",
+          "published_at": "2026-11-14T03:04:59Z",
+          "published_at_estimated": false,
+          "image_url": "https://wimg.heraldcorp.com/news/cms/2026/11/14/news-p.v1.20261114.7ca5fdcbdf1841f697ddafcd5520bba3_T1.jpg"
+        },
+        {
+          "id": "050438f44cda",
+          "outlet_id": "japantimes",
+          "headline": "Microsoft says services fully restored after outage roiled world",
+          "snippet": "Access has been fully restored to itd flagship software, ending an outage that paralyzed government offices, traders and businesses around the world.",
+          "url": "https://www.japantimes.co.jp/business/2026/11/14/microsoft-outage-recovered/",
+          "published_at": "2026-11-14T04:53:00Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.japantimes.co.jp/japantimes/uploads/images/2026/11/14/thumbs/400x400/573999.jpg"
+        },
+        {
+          "id": "0b826cc00655",
+          "outlet_id": "france24",
+          "headline": "Microsoft says all services 'fully recovered' after global outage",
+          "snippet": "The tech giant confirmed on Saturday morning that all services have recovered ⁠across ‌Teams, Outlook, Copilot and ⁠other applications, ​ending a ‌global outage ‌that ​crippled online communications…",
+          "url": "https://www.france24.com/en/technology/20261114-microsoft-says-consumer-products-fully-recovered-business-services-improving",
+          "published_at": "2026-11-14T06:07:56Z",
+          "published_at_estimated": false,
+          "image_url": "https://s.france24.com/media/display/847567e0-dfef-11f1-93ed-695cb59fade5/w:1024/p:16x9/AP26313848301021.jpg"
+        },
+        {
+          "id": "75dacdd3d301",
+          "outlet_id": "guardian",
+          "headline": "Microsoft ‘deeply sorry’ for global outage that could have billion-dollar impact on Australia",
+          "snippet": "Experts say disruption exposes ‘Australia’s reliance on foreign technology’ as software giant says services being restored Get our breaking news email, free app or daily news podcast The Microsoft…",
+          "url": "https://www.theguardian.com/australia-news/2026/nov/14/microsoft-deeply-sorry-for-global-disruption-that-could-have-billion-dollar-impact-on-australia",
+          "published_at": "2026-11-14T06:19:04Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.guim.co.uk/img/media/6e00c0e827484eda171fc2f542c59ea59f98fec9/411_82_4687_3752/master/4687.jpg?width=460&quality=85&auto=format&fit=max&s=a9f25033b8e3a507243e0ccc6bf3f882"
+        },
+        {
+          "id": "d42335b89c5b",
+          "outlet_id": "bbc",
+          "headline": "Microsoft says services fully restored after day-long global outage",
+          "snippet": "Efforts to address the underlying problem with Outlook, Teams and Copilot are complete, the tech firm says.",
+          "url": "https://www.bbc.co.uk/news/articles/c6rrg51rkz09o",
+          "published_at": "2026-11-14T06:42:27Z",
+          "published_at_estimated": false,
+          "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/5f18/live/9b3a5370-df98-11f1-a9ad-6774a3284d10.jpg"
+        },
+        {
+          "id": "8200f45eaaeb",
+          "outlet_id": "timesofisrael",
+          "headline": "Microsoft restores service to Outlook and Teams after global outage",
+          "snippet": "Tech giant blamed server issues for the incident that crippled two of the most widely used workplace applications with hundreds of millions of users",
+          "url": "https://www.timesofisrael.com/microsoft-restores-service-to-outlook-and-teams-after-global-outage/",
+          "published_at": "2026-11-14T08:19:46Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "657f325d93a9",
+          "outlet_id": "thehindu",
+          "headline": "Microsoft Outage updates: Global outage ends after tech giant restores services across all affected systems",
+          "snippet": "After nearly 24 hours of global outage, lasting from November 12 to November 14, Microsoft restores services across all platforms",
+          "url": "https://www.thehindu.com/sci-tech/technology/microsoft-outlook-outage-status-microsoft-365-services-live-updates-november-14-2026/article71700692.ece",
+          "published_at": "2026-11-14T08:41:48Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "5168211346f4",
+          "outlet_id": "dw",
+          "headline": "Microsoft says all services working again",
+          "snippet": "US tech giant Microsoft says it has fixed problems that led to a global outage of its services. The glitch severely disrupted online communications in businesses and governments for more than 24…",
+          "url": "https://www.dw.com/en/microsoft-says-all-services-working-again/a-79946887?maca=en-rss-en-world-4025-xml-mrss",
+          "published_at": "2026-11-14T09:06:00Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "ce39c2533cda",
+          "outlet_id": "thehindu",
+          "headline": "Microsoft says services fully restored after hourslong global outage",
+          "snippet": "The ‌technology giant said it was “monitoring the backlog of email messages ‌accrued during this ​event” before considering the issue with ⁠the enterprise services resolved.",
+          "url": "https://www.thehindu.com/sci-tech/technology/microsoft-says-consumer-products-services-recovered-still-monitoring-enterprise-services/article71701075.ece",
+          "published_at": "2026-11-14T09:58:34Z",
+          "published_at_estimated": false,
+          "image_url": "https://th-i.thgim.com/public/incoming/nxwdcm/article71701099.ece/alternates/LANDSCAPE_1200/2026-11-13T173220Z_2141743725_RC25NOAG2APY_RTRMADP_3_MICROSOFT-OUTAGES.JPG"
+        },
+        {
+          "id": "4e6ba7950af1",
+          "outlet_id": "dailymail",
+          "headline": "The Microsoft outage wasn't quite the disaster movie we'd feared, but next time it could be so different: GUY ADAMS",
+          "snippet": "Friday's Microsoft crash appears to have had comparatively benign consequences compared to Hollywood disaster movie How It Ends.",
+          "url": "https://www.dailymail.com/news/article-16291629/Microsoft-outage-disaster-movie-GUY-ADAMS.html",
+          "published_at": "2026-11-14T10:14:03Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.dailymail.com/1s/2026/11/13/23/112488685-0-image-m-14_1794612475997.jpg"
+        },
+        {
+          "id": "b95758b33ccd",
+          "outlet_id": "france24",
+          "headline": "Microsoft's widespread outages caused global chaos, including in the healthcasre industry",
+          "snippet": "Microsoft says it is seeing improvements in its service availability after an hours-long disruption knocked out its platforms including Outlook and Teams. The outage has affected hundreds of…",
+          "url": "https://www.france24.com/en/microsoft-s-widespread-outages-caused-global-chaos-including-in-the-healthcasre-industry",
+          "published_at": "2026-11-14T11:07:33Z",
+          "published_at_estimated": false,
+          "image_url": "https://s.france24.com/media/display/0281a17e-e01a-11f1-bec4-f71d22e7fea9/w:1024/p:16x9/EN-20261114-080413-080559-CS.jpg"
+        },
+        {
+          "id": "cfd6fc457389",
+          "outlet_id": "thehindu",
+          "headline": "Microsoft Outage: Why did Microsoft Outlook and other products go offline globally?",
+          "snippet": "The number of affected services came with significant consequences for professional users as well as entire sectors",
+          "url": "https://www.thehindu.com/sci-tech/technology/microsoft-outage-why-did-microsoft-outlook-and-other-products-go-offline-globally/article71696554.ece",
+          "published_at": "2026-11-14T11:19:36Z",
+          "published_at_estimated": false,
+          "image_url": "https://th-i.thgim.com/public/incoming/31c78c/article71696610.ece/alternates/LANDSCAPE_1200/Microsoft_14689.jpg"
+        },
+        {
+          "id": "b2badff52855",
+          "outlet_id": "guardian",
+          "headline": "Microsoft says services fully restored after global outage hits governments",
+          "snippet": "Tech company says operations restored to all customers and regions affected by one of worst IT failures in years Microsoft has said its service has been fully restored after a massive outage that…",
+          "url": "https://www.theguardian.com/technology/2026/nov/14/microsoft-says-services-fully-restored-after-global-outage",
+          "published_at": "2026-11-14T11:54:31Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.guim.co.uk/img/media/6e00c0e827484eda171fc2f542c59ea59f98fec9/397_0_4924_3939/master/4924.jpg?width=460&quality=85&auto=format&fit=max&s=db97224a43be50e04df1fd8f3b508e10"
+        },
+        {
+          "id": "04c9f22d07e1",
+          "outlet_id": "dailymail",
+          "headline": "Microsoft 365 is back up! Tech giant says outage that crippled NHS, police, businesses, courts and schools is over (now we've just got to plough through all those unread e-mails)",
+          "snippet": "Office workers joked online they now have hundreds of emails to go through after they were unable to log in to their accounts for hours on Friday.",
+          "url": "https://www.dailymail.com/news/article-16292359/Microsoft-365-outage-emails.html",
+          "published_at": "2026-11-14T12:17:24Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.dailymail.com/1s/2026/11/14/12/112505471-0-image-m-9_1794658379780.jpg"
+        },
+        {
+          "id": "5d417cdc4aa8",
+          "outlet_id": "nyt",
+          "headline": "Microsoft’s Global Outage and Fixes: What We Know",
+          "snippet": "Disruptions to the company’s email, messaging and other products lasted about 36 hours, hampering companies and services around the world.",
+          "url": "https://www.nytimes.com/2026/11/13/technology/microsoft-outage-what-to-know.html",
+          "published_at": "2026-11-14T13:10:10Z",
+          "published_at_estimated": false,
+          "image_url": "https://static01.nyt.com/images/2026/11/13/multimedia/13xp-microsoftWWK-1-lfcv/13xp-microsoftWWK-1-lfcv-mediumSquareAt3X.jpg"
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "The outage affected Microsoft services including Outlook, Teams and Copilot.",
+          "sources": [
+            "dcd91b6bb0dc",
+            "6a8ef93c9f0a",
+            "0c7a6d512b99",
+            "0b826cc00655",
+            "d42335b89c5b",
+            "10fea0b78898",
+            "8200f45eaaeb",
+            "b95758b33ccd"
+          ]
+        },
+        {
+          "text": "Microsoft said its services had been fully restored after the outage.",
+          "sources": [
+            "050438f44cda",
+            "0b826cc00655",
+            "d42335b89c5b",
+            "8200f45eaaeb",
+            "657f325d93a9",
+            "5168211346f4",
+            "ce39c2533cda",
+            "b2badff52855",
+            "04c9f22d07e1"
+          ]
+        },
+        {
+          "text": "Microsoft apologised, saying it was 'deeply sorry' for the disruption.",
+          "sources": [
+            "10fea0b78898",
+            "bb6152ffc2dd",
+            "522734e07d09",
+            "75dacdd3d301"
+          ]
+        },
+        {
+          "text": "The outage disrupted governments, public services and businesses around the world.",
+          "sources": [
+            "bb6152ffc2dd",
+            "3b77002e2c0b",
+            "522734e07d09",
+            "050438f44cda",
+            "5168211346f4",
+            "b2badff52855",
+            "04c9f22d07e1",
+            "df73f1f6394a"
+          ]
+        },
+        {
+          "text": "A backlog of email messages built up during the outage.",
+          "sources": [
+            "ce39c2533cda",
+            "04c9f22d07e1"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "df73f1f6394a",
+              "quote": "who is affected – from NHS to schools",
+              "field": "headline"
+            },
+            {
+              "article_id": "bdd5941e1921",
+              "quote": "could be one of most damaging in history",
+              "field": "headline"
+            },
+            {
+              "article_id": "75dacdd3d301",
+              "quote": "could have billion-dollar impact on Australia",
+              "field": "headline"
+            },
+            {
+              "article_id": "b2badff52855",
+              "quote": "one of worst IT failures in years",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Impact on UK institutions such as GPs, councils and schools.",
+              "sources": [
+                "df73f1f6394a",
+                "0c7a6d512b99"
+              ]
+            },
+            {
+              "text": "Expert assessments of the scale of damage, including a possible billion-dollar impact on Australia and its reliance on foreign technology.",
+              "sources": [
+                "bdd5941e1921",
+                "75dacdd3d301"
+              ]
+            },
+            {
+              "text": "Microsoft's apology and its progress in recovering services.",
+              "sources": [
+                "10fea0b78898",
+                "6a8ef93c9f0a",
+                "75dacdd3d301"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "3b77002e2c0b",
+              "quote": "How the Microsoft outage impacted courts and governments",
+              "field": "headline"
+            },
+            {
+              "article_id": "0b826cc00655",
+              "quote": "Microsoft says all services 'fully recovered' after global outage",
+              "field": "headline"
+            },
+            {
+              "article_id": "b95758b33ccd",
+              "quote": "caused global chaos, including in the healthcasre industry",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Impact on courts, governments and the healthcare industry.",
+              "sources": [
+                "3b77002e2c0b",
+                "b95758b33ccd",
+                "5168211346f4"
+              ]
+            },
+            {
+              "text": "Microsoft's statement that all services had fully recovered.",
+              "sources": [
+                "0b826cc00655",
+                "d42335b89c5b",
+                "5168211346f4"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "right",
+          "headline_quotes": [
+            {
+              "article_id": "04c9f22d07e1",
+              "quote": "Microsoft 365 is back up!",
+              "field": "headline"
+            },
+            {
+              "article_id": "04c9f22d07e1",
+              "quote": "crippled NHS, police, businesses, courts and schools",
+              "field": "headline"
+            },
+            {
+              "article_id": "4e6ba7950af1",
+              "quote": "wasn't quite the disaster movie we'd feared",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Disruption to the NHS, police, businesses, courts and schools, and office workers facing unread emails.",
+              "sources": [
+                "04c9f22d07e1"
+              ]
+            },
+            {
+              "text": "A column comparing the outage with a disaster film and describing its consequences as comparatively benign.",
+              "sources": [
+                "4e6ba7950af1"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "right",
+          "text": "Right-leaning coverage does not mention Microsoft's apology.",
+          "sources": [
+            "10fea0b78898",
+            "75dacdd3d301"
+          ]
+        },
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not mention Microsoft's apology.",
+          "sources": [
+            "10fea0b78898",
+            "75dacdd3d301"
+          ]
+        },
+        {
+          "lean": "left",
+          "text": "Left-leaning coverage does not mention the impact on courts.",
+          "sources": [
+            "3b77002e2c0b",
+            "04c9f22d07e1"
+          ]
+        }
+      ],
+      "contested_claims": [
+        {
+          "claim": "The outage lasted nearly 24 hours.",
+          "asserted_by": [
+            "657f325d93a9"
+          ],
+          "disputed_by": [
+            "5168211346f4",
+            "5d417cdc4aa8"
+          ]
+        },
+        {
+          "claim": "The outage was among the most damaging or worst IT failures.",
+          "asserted_by": [
+            "bdd5941e1921",
+            "b2badff52855"
+          ],
+          "disputed_by": [
+            "4e6ba7950af1"
+          ]
+        }
+      ],
+      "opinion": [
+        {
+          "text": "Daily Mail columnist Guy Adams says the outage had comparatively benign consequences but warns next time could be very different.",
+          "sources": [
+            "4e6ba7950af1"
+          ]
+        }
+      ],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "df73f1f6394a",
+              "quote": "from NHS to schools",
+              "field": "headline"
+            },
+            {
+              "article_id": "3b77002e2c0b",
+              "quote": "impacted courts and governments",
+              "field": "headline"
+            },
+            {
+              "article_id": "75dacdd3d301",
+              "quote": "exposes ‘Australia’s reliance on foreign technology’",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Impact on specific institutions in the UK, Australia and elsewhere, including health services, courts and schools.",
+              "sources": [
+                "df73f1f6394a",
+                "3b77002e2c0b",
+                "75dacdd3d301",
+                "b95758b33ccd",
+                "04c9f22d07e1"
+              ]
+            },
+            {
+              "text": "Microsoft's confirmation that services were fully restored.",
+              "sources": [
+                "0b826cc00655",
+                "d42335b89c5b",
+                "5168211346f4",
+                "b2badff52855"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "887d975c944a",
+              "quote": "The Microsoft outage China barely felt: A lesson on data sovereignty",
+              "field": "headline"
+            },
+            {
+              "article_id": "bb6152ffc2dd",
+              "quote": "says issue not caused by cyber or AI agents",
+              "field": "headline"
+            },
+            {
+              "article_id": "8200f45eaaeb",
+              "quote": "Tech giant blamed server issues",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "The cause of the outage, with Microsoft attributing it to server issues and ruling out cyber or AI agents.",
+              "sources": [
+                "bb6152ffc2dd",
+                "8200f45eaaeb",
+                "cfd6fc457389"
+              ]
+            },
+            {
+              "text": "China's limited exposure to the outage, framed as a lesson on data sovereignty.",
+              "sources": [
+                "887d975c944a"
+              ]
+            },
+            {
+              "text": "The outage's duration and the email backlog during recovery.",
+              "sources": [
+                "dc70959482dd",
+                "522734e07d09",
+                "657f325d93a9",
+                "ce39c2533cda"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [
+        {
+          "topic": "Duration of the outage.",
+          "west": {
+            "text": "The disruption lasted more than 24 hours, or about 36 hours.",
+            "sources": [
+              "5168211346f4",
+              "5d417cdc4aa8"
+            ]
+          },
+          "east": {
+            "text": "The outage lasted nearly 24 hours.",
+            "sources": [
+              "657f325d93a9"
+            ]
+          }
+        }
+      ],
+      "summary": {
+        "text": "A global Microsoft outage disrupted Outlook, Teams, Copilot and other services, affecting governments, businesses and public services worldwide. Microsoft said it was 'deeply sorry' and later said all services had been fully restored.",
+        "sources": [
+          "dcd91b6bb0dc",
+          "6a8ef93c9f0a",
+          "10fea0b78898",
+          "bb6152ffc2dd",
+          "522734e07d09",
+          "0b826cc00655",
+          "d42335b89c5b",
+          "5168211346f4",
+          "b2badff52855",
+          "050438f44cda"
+        ]
+      },
+      "conclusion": {
+        "text": "All sides report a global outage of Outlook, Teams and Copilot and Microsoft's statement that services were fully restored. Western outlets focus on impact on UK, Australian and public institutions; Eastern outlets add the cause and data sovereignty. Duration figures and the severity of the outage differ between outlets.",
+        "sources": [
+          "6a8ef93c9f0a",
+          "d42335b89c5b",
+          "050438f44cda",
+          "df73f1f6394a",
+          "75dacdd3d301",
+          "bb6152ffc2dd",
+          "887d975c944a",
+          "657f325d93a9",
+          "5d417cdc4aa8",
+          "bdd5941e1921",
+          "4e6ba7950af1"
+        ]
+      },
+      "validation": {
+        "kept": 42,
+        "dropped_by_reason": {}
+      }
+    },
+    {
+      "id": "0d55d48f8a98",
+      "title": "White House confirms Trump, Xi and Putin trilateral meeting at APEC in Shenzhen",
+      "rank": 3,
+      "outlet_count": 12,
+      "coverage": {
+        "lean": {
+          "left": 1,
+          "centre": 3,
+          "right": 2
+        },
+        "bloc": {
+          "west": 6,
+          "east": 6
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "dbcd740baa80",
+          "outlet_id": "nbc",
+          "headline": "Trump, Xi and Putin plan an unprecedented meeting on the sidelines of APEC, officials say",
+          "snippet": "President Donald Trump will meet with the leaders of China and Russia on the sidelines of the Asia-Pacific Economic Cooperation summit in Shenzen, China’s tech hub, next week, an unprecedented…",
+          "url": "https://www.nbcnews.com/world/china/trump-xi-putin-plan-unprecedented-joint-meeting-sidelines-apec-officia-rcna609275",
+          "published_at": "2026-11-14T00:08:58Z",
+          "published_at_estimated": false,
+          "image_url": "https://media-cldnry.s-nbcnews.com/image/upload/t_fit_1500w/rockcms/2026-11/261106-Xi-Trump-Putin-vsb-1846-405edd.jpg"
+        },
+        {
+          "id": "e732f7d6568e",
+          "outlet_id": "japantimes",
+          "headline": "Trump to raise nuclear-arms cuts with Putin and Xi at historic trilateral summit",
+          "snippet": "Trump wants to talk about reducing nuclear arsenals and is also set to bring up his war in Iran — but is not expected to discuss the war in Ukraine.",
+          "url": "https://www.japantimes.co.jp/news/2026/11/14/asia-pacific/politics/trump-xi-putin-trilateral-apec/",
+          "published_at": "2026-11-14T00:23:00Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.japantimes.co.jp/japantimes/uploads/images/2026/11/14/thumbs/400x400/574007.jpg"
+        },
+        {
+          "id": "0b579c8166ab",
+          "outlet_id": "scmp",
+          "headline": "White House confirms US-China-Russia trilateral talks on Apec sidelines",
+          "snippet": "The White House on Friday confirmed an unprecedented meeting between leaders of the US, China and Russia on the sidelines of the Asia-Pacific Economic Cooperation (Apec) summit in Shenzhen next…",
+          "url": "https://www.scmp.com/news/china/diplomacy/article/3374415/white-house-confirms-us-china-russia-trilateral-apec-sidelines",
+          "published_at": "2026-11-14T00:30:57Z",
+          "published_at_estimated": false,
+          "image_url": "https://cdn.i-scmp.com/sites/default/files/styles/1280x720/public/d8/images/canvas/2026/11/14/25f1c183-07f0-40d8-b9a7-1bbb97ebfaa6_9dcf4d3b.jpg?itok=HlwpEW0j&v=1794616908"
+        },
+        {
+          "id": "d6436e64093b",
+          "outlet_id": "koreaherald",
+          "headline": "Trump to hold talks with Xi, Putin next week",
+          "snippet": "US President Donald Trump is set to hold talks with Chinese President Xi Jinping and Russian President Vladimir Putin during a visit to China next week, with no diplomatic contact with North Korea…",
+          "url": "https://www.koreaherald.com/article/10936945",
+          "published_at": "2026-11-14T01:56:10Z",
+          "published_at_estimated": false,
+          "image_url": "https://wimg.heraldcorp.com/news/cms/2026/11/14/news-p.v1.20261114.1b38c2c5eac44f4b8cd3c8606631b702_T1.jpg"
+        },
+        {
+          "id": "f5609631feb1",
+          "outlet_id": "thehindu",
+          "headline": "Donald Trump to raise nuclear-arms cuts with Putin, Xi on November 19, White House says",
+          "snippet": "Vladimir Putin, Xi Jinping and Donald Trump are expected to meet on the sidelines of the Asia-Pacific Economic Cooperation forum in Shenzhen",
+          "url": "https://www.thehindu.com/news/international/donald-trump-to-raise-nuclear-arms-cuts-with-putin-xi-on-november-19-white-house-says/article71700773.ece",
+          "published_at": "2026-11-14T04:28:56Z",
+          "published_at_estimated": false,
+          "image_url": "https://th-i.thgim.com/public/incoming/q9hrk0/article71700784.ece/alternates/LANDSCAPE_1200/2026-11-14T013340Z_1611935053_RC2BMOADNL82_RTRMADP_3_APEC-SUMMIT-TRILATERAL-MEETING.JPG"
+        },
+        {
+          "id": "75a764b52f45",
+          "outlet_id": "thehindu",
+          "headline": "Trump, Xi and Putin plan unprecedented joint meeting on sidelines of APEC in China: officials",
+          "snippet": "For the Kremlin, the planned trilateral meeting is a coveted chance to posture as a superpower on par with Washington and Beijing",
+          "url": "https://www.thehindu.com/news/international/trump-xi-and-putin-plan-an-unprecedented-joint-meeting-apec-summit-china/article71700699.ece",
+          "published_at": "2026-11-14T04:29:53Z",
+          "published_at_estimated": false,
+          "image_url": "https://th-i.thgim.com/public/incoming/vpye4h/article71700721.ece/alternates/LANDSCAPE_1200/Trump_Xi_Putin_Summit__2388.jpg"
+        },
+        {
+          "id": "8ed8fa7b05b6",
+          "outlet_id": "france24",
+          "headline": "China to host first-ever trilateral meeting between Trump, Xi and Putin next week",
+          "snippet": "The three leaders are scheduled to meet on the sidelines of the Asia-Pacific Economic Cooperation summit in Shenzhen on Thursday, the White House confirmed. US officials said discussions will…",
+          "url": "https://www.france24.com/en/asia-pacific/20261114-china-to-host-first-ever-trilateral-meeting-between-trump-xi-and-putin-next-week-us-says",
+          "published_at": "2026-11-14T05:09:23Z",
+          "published_at_estimated": false,
+          "image_url": "https://s.france24.com/media/display/d6e9de44-dfd0-11f1-a098-5f54d898a954/w:1024/p:16x9/AP26267449248594.jpg"
+        },
+        {
+          "id": "a4c2e0d08022",
+          "outlet_id": "examiner",
+          "headline": "Jensen Huang Chinese spy scandal won’t be discussed as Trump prepares for historic trilateral with Xi and Putin",
+          "snippet": "President Donald Trump will not discuss the alleged Chinese spy scandal that precipitated the downfall of former Nvidia CEO Jensen Huang with Chinese President Xi Jinping when he meets with him…",
+          "url": "https://www.washingtonexaminer.com/news/white-house/4803638/jensen-huang-chinese-spy-scandal-trump-trilateral-xi-putin/",
+          "published_at": "2026-11-14T05:14:59Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.washingtonexaminer.com/wp-content/uploads/2026/11/AP26315094202388.jpg?w=1024"
+        },
+        {
+          "id": "f8ed2d6ff230",
+          "outlet_id": "dailymail",
+          "headline": "Trump to attend first-ever meeting between leaders of US, China and Russia in just days... but Nvidia 'honeypot' scandal and war in Ukraine will not be discussed",
+          "snippet": "The leaders of the United States, China and Russia plan to meet Thursday on the sidelines of next week's Asia-Pacific Economic Cooperation summit in China's tech hub of Shenzhen.",
+          "url": "https://www.dailymail.com/news/article-16291913/Trump-Putin-Xi-meeting-Nvidia-Jensen-Huang.html",
+          "published_at": "2026-11-14T05:26:09Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.dailymail.com/1s/2026/11/14/04/112502887-0-image-a-4_1794628986833.jpg"
+        },
+        {
+          "id": "cb35e74edb9b",
+          "outlet_id": "bbc",
+          "headline": "Trump, Putin and Xi plan historic joint meeting in China next week, White House says",
+          "snippet": "Trump will discuss the \"reduction of nuclear weapons\" during the unprecedented talks, a spokeswoman says.",
+          "url": "https://www.bbc.co.uk/news/articles/ckz74jzpy18do",
+          "published_at": "2026-11-14T05:52:31Z",
+          "published_at_estimated": false,
+          "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/172e/live/be162960-dfc9-11f1-81be-1f9bcd2a4214.jpg"
+        },
+        {
+          "id": "e33a861fb579",
+          "outlet_id": "sky",
+          "headline": "Trump, Xi and Putin to hold unprecedented meeting, White House says",
+          "snippet": "The leaders of the US, China and Russia will hold an unprecedented meeting on the sidelines of a major economic summit, the White House has said.",
+          "url": "https://news.sky.com/story/trump-xi-and-putin-to-hold-unprecedented-meeting-white-house-says-13612124",
+          "published_at": "2026-11-14T08:19:00Z",
+          "published_at_estimated": false,
+          "image_url": "https://e3.365dm.com/26/11/1920x1080/skynews-donald-trump-xi-jinping_7406284.jpg?20261114085215"
+        },
+        {
+          "id": "4b97a7e3fbdd",
+          "outlet_id": "aljazeera",
+          "headline": "Trump-Xi-Putin trilateral meeting at APEC: What to expect",
+          "snippet": "A nuclear treaty and the US's war on Iran are among priority topics for China, Russia and US leaders.",
+          "url": "https://www.aljazeera.com/news/2026/11/14/trump-xi-putin-trilateral-meeting-at-apec-what-to-expect",
+          "published_at": "2026-11-14T12:14:14Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "b2b92941efc1",
+          "outlet_id": "timesofisrael",
+          "headline": "Trump, Xi and Putin plan an unprecedented joint meeting on the sidelines of APEC",
+          "snippet": "US president wants to use the meeting to push a new nuclear disarmament pact; Zelensky expresses concern that the three could try formulate a possible Ukraine deal behind Kyiv’s back",
+          "url": "https://www.timesofisrael.com/trump-xi-and-putin-plan-an-unprecedented-joint-meeting-on-the-sidelines-of-apec/",
+          "published_at": "2026-11-14T12:26:43Z",
+          "published_at_estimated": false,
+          "image_url": null
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "Trump, Xi and Putin are to meet on the sidelines of the Asia-Pacific Economic Cooperation summit in Shenzhen, China, next week.",
+          "sources": [
+            "dbcd740baa80",
+            "0b579c8166ab",
+            "f5609631feb1",
+            "75a764b52f45",
+            "8ed8fa7b05b6",
+            "f8ed2d6ff230",
+            "cb35e74edb9b",
+            "e33a861fb579",
+            "4b97a7e3fbdd",
+            "b2b92941efc1",
+            "d6436e64093b"
+          ]
+        },
+        {
+          "text": "The White House confirmed the planned meeting.",
+          "sources": [
+            "0b579c8166ab",
+            "f5609631feb1",
+            "8ed8fa7b05b6",
+            "cb35e74edb9b",
+            "e33a861fb579"
+          ]
+        },
+        {
+          "text": "The meeting is described as unprecedented, first-ever or historic.",
+          "sources": [
+            "dbcd740baa80",
+            "0b579c8166ab",
+            "75a764b52f45",
+            "8ed8fa7b05b6",
+            "f8ed2d6ff230",
+            "cb35e74edb9b",
+            "e33a861fb579",
+            "b2b92941efc1",
+            "e732f7d6568e",
+            "a4c2e0d08022"
+          ]
+        },
+        {
+          "text": "Trump intends to raise reducing nuclear weapons or a nuclear treaty at the meeting.",
+          "sources": [
+            "e732f7d6568e",
+            "f5609631feb1",
+            "cb35e74edb9b",
+            "4b97a7e3fbdd",
+            "b2b92941efc1"
+          ]
+        },
+        {
+          "text": "The meeting is scheduled for Thursday, 19 November.",
+          "sources": [
+            "8ed8fa7b05b6",
+            "f8ed2d6ff230",
+            "f5609631feb1"
+          ]
+        },
+        {
+          "text": "The war in Ukraine is not expected to be discussed.",
+          "sources": [
+            "e732f7d6568e",
+            "f8ed2d6ff230"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "dbcd740baa80",
+              "quote": "plan an unprecedented meeting on the sidelines of APEC, officials say",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Attributes the plan to officials and describes Shenzhen as China's tech hub.",
+              "sources": [
+                "dbcd740baa80"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "8ed8fa7b05b6",
+              "quote": "China to host first-ever trilateral meeting",
+              "field": "headline"
+            },
+            {
+              "article_id": "cb35e74edb9b",
+              "quote": "plan historic joint meeting in China next week, White House says",
+              "field": "headline"
+            },
+            {
+              "article_id": "e33a861fb579",
+              "quote": "to hold unprecedented meeting, White House says",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with White House confirmation of the meeting.",
+              "sources": [
+                "8ed8fa7b05b6",
+                "cb35e74edb9b",
+                "e33a861fb579"
+              ]
+            },
+            {
+              "text": "Notes Trump will discuss the reduction of nuclear weapons, per a spokeswoman.",
+              "sources": [
+                "cb35e74edb9b"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "right",
+          "headline_quotes": [
+            {
+              "article_id": "a4c2e0d08022",
+              "quote": "Jensen Huang Chinese spy scandal won’t be discussed",
+              "field": "headline"
+            },
+            {
+              "article_id": "f8ed2d6ff230",
+              "quote": "Nvidia 'honeypot' scandal and war in Ukraine will not be discussed",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with topics excluded from the talks: an alleged Chinese spy scandal linked to former Nvidia CEO Jensen Huang.",
+              "sources": [
+                "a4c2e0d08022",
+                "f8ed2d6ff230"
+              ]
+            },
+            {
+              "text": "Notes the war in Ukraine will not be discussed.",
+              "sources": [
+                "f8ed2d6ff230"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "left",
+          "text": "Does not mention the alleged Nvidia-linked Chinese spy scandal being excluded from the talks.",
+          "sources": [
+            "a4c2e0d08022",
+            "f8ed2d6ff230"
+          ]
+        },
+        {
+          "lean": "centre",
+          "text": "Does not mention the alleged Nvidia-linked Chinese spy scandal being excluded from the talks.",
+          "sources": [
+            "a4c2e0d08022",
+            "f8ed2d6ff230"
+          ]
+        },
+        {
+          "lean": "left",
+          "text": "Does not mention nuclear weapons reduction as a topic Trump will raise.",
+          "sources": [
+            "cb35e74edb9b"
+          ]
+        },
+        {
+          "lean": "right",
+          "text": "Does not mention nuclear weapons reduction as a topic Trump will raise.",
+          "sources": [
+            "cb35e74edb9b"
+          ]
+        },
+        {
+          "lean": "centre",
+          "text": "Does not mention that the war in Ukraine will not be discussed.",
+          "sources": [
+            "f8ed2d6ff230"
+          ]
+        }
+      ],
+      "contested_claims": [],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "e33a861fb579",
+              "quote": "Trump, Xi and Putin to hold unprecedented meeting, White House says",
+              "field": "headline"
+            },
+            {
+              "article_id": "a4c2e0d08022",
+              "quote": "Jensen Huang Chinese spy scandal won’t be discussed",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Emphasises White House confirmation and the unprecedented nature of the meeting.",
+              "sources": [
+                "dbcd740baa80",
+                "8ed8fa7b05b6",
+                "cb35e74edb9b",
+                "e33a861fb579"
+              ]
+            },
+            {
+              "text": "Right-leaning Western outlets foreground topics excluded from the talks, including the Nvidia-linked spy scandal and Ukraine.",
+              "sources": [
+                "a4c2e0d08022",
+                "f8ed2d6ff230"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "e732f7d6568e",
+              "quote": "Trump to raise nuclear-arms cuts with Putin and Xi at historic trilateral summit",
+              "field": "headline"
+            },
+            {
+              "article_id": "75a764b52f45",
+              "quote": "a coveted chance to posture as a superpower on par with Washington and Beijing",
+              "field": "snippet"
+            },
+            {
+              "article_id": "b2b92941efc1",
+              "quote": "Zelensky expresses concern",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Emphasises nuclear arms reduction as Trump's agenda.",
+              "sources": [
+                "e732f7d6568e",
+                "f5609631feb1",
+                "4b97a7e3fbdd",
+                "b2b92941efc1"
+              ]
+            },
+            {
+              "text": "Notes the US war on Iran as a topic for the talks.",
+              "sources": [
+                "e732f7d6568e",
+                "4b97a7e3fbdd"
+              ]
+            },
+            {
+              "text": "Describes the meeting as a chance for the Kremlin to posture as a superpower.",
+              "sources": [
+                "75a764b52f45"
+              ]
+            },
+            {
+              "text": "Reports Zelensky's concern that the three could formulate a Ukraine deal without Kyiv.",
+              "sources": [
+                "b2b92941efc1"
+              ]
+            },
+            {
+              "text": "Notes no diplomatic contact with North Korea is planned during the visit.",
+              "sources": [
+                "d6436e64093b"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "The White House has confirmed that Donald Trump, Xi Jinping and Vladimir Putin plan to meet on the sidelines of the APEC summit in Shenzhen next week. Coverage describes the meeting as unprecedented or first-ever. Trump intends to raise reducing nuclear weapons.",
+        "sources": [
+          "0b579c8166ab",
+          "8ed8fa7b05b6",
+          "cb35e74edb9b",
+          "e33a861fb579",
+          "f5609631feb1",
+          "dbcd740baa80",
+          "f8ed2d6ff230",
+          "e732f7d6568e",
+          "b2b92941efc1"
+        ]
+      },
+      "conclusion": {
+        "text": "All sides report a White House-confirmed, unprecedented Trump-Xi-Putin meeting at APEC in Shenzhen. Centre and Eastern outlets foreground nuclear arms cuts, while right-leaning outlets lead with the Nvidia-linked spy scandal and Ukraine being excluded. No coverage disputes the core facts.",
+        "sources": [
+          "0b579c8166ab",
+          "8ed8fa7b05b6",
+          "cb35e74edb9b",
+          "e33a861fb579",
+          "e732f7d6568e",
+          "4b97a7e3fbdd",
+          "a4c2e0d08022",
+          "f8ed2d6ff230",
+          "dbcd740baa80"
+        ]
+      },
+      "validation": {
+        "kept": 36,
+        "dropped_by_reason": {}
+      }
+    },
+    {
+      "id": "0765147feaa9",
+      "title": "Tanker collides with cruise ship on Mississippi in New Orleans; all aboard survive",
+      "rank": 4,
+      "outlet_count": 10,
+      "coverage": {
+        "lean": {
+          "left": 2,
+          "centre": 3,
+          "right": 2
+        },
+        "bloc": {
+          "west": 7,
+          "east": 3
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "09d2fa981766",
+          "outlet_id": "scmp",
+          "headline": "Miracle on the Mississippi: everyone safe after tanker hits and sinks New Orleans cruise",
+          "snippet": "At least 180 passengers and crew members were rescued Friday after a tanker lost control, hit and sank a paddleboat on the Mississippi River, the mayor of New Orleans said. Video from the scene…",
+          "url": "https://www.scmp.com/news/world/united-states-canada/article/3374410/tanker-hits-new-orleans-cruise-boat-carrying-129-passengers",
+          "published_at": "2026-11-13T20:49:15Z",
+          "published_at_estimated": false,
+          "image_url": "https://cdn.i-scmp.com/sites/default/files/styles/1280x720/public/d8/images/canvas/2026/11/14/4768064f-4b29-4406-b530-e2f26d2b6497_30e92c5d.jpg?itok=Sr8dao9W&v=1794602943"
+        },
+        {
+          "id": "8fbc673741a9",
+          "outlet_id": "dw",
+          "headline": "Tanker collides with cruise ship on Mississippi in New Orleans",
+          "snippet": "A freighter collided with a cruise ship carrying around 130 people in New Orleans, causing the paddlewheel vessel to capsize. More than 30 people were hospitalized, but all passengers survived and…",
+          "url": "https://www.dw.com/en/tanker-collides-with-cruise-ship-on-mississippi-in-new-orleans/a-79945080?maca=en-rss-en-world-4025-xml-mrss",
+          "published_at": "2026-11-13T21:31:00Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "0fd3ab9b75ba",
+          "outlet_id": "thenational",
+          "headline": "Passengers and crew safe after tanker strikes docked cruise ship in New Orleans",
+          "snippet": "All passengers and crew members aboard a river cruise ship that capsized after a tanker collision in New Orleans on Friday are accounted for, with 32 people hospitalised but none critically injured…",
+          "url": "https://www.thenationalnews.com/news/us/2026/11/13/new-orleans-rescue-operations-underway-after-tanker-strikes-docked-cruise-ship/",
+          "published_at": "2026-11-13T21:58:44Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.thenationalnews.com/resizer/v2/5BKML7UYKHQK7XQALVFX5OYG74.jpg?auth=219e6388bd3b10a101844e42c7de1f5b7ac23cb6d85ed562f6df39409d3ef1f3&smart=true&width=1572&height=1050"
+        },
+        {
+          "id": "aeb28d179eba",
+          "outlet_id": "bbc",
+          "headline": "'Miracle on Mississippi' - All passengers rescued after New Orleans cruise ship collision",
+          "snippet": "The collision leaves 32 people in hospital with non-critical injuries, but no-one unaccounted for.",
+          "url": "https://www.bbc.co.uk/news/articles/cw20xmy0m5yyo",
+          "published_at": "2026-11-13T23:40:45Z",
+          "published_at_estimated": false,
+          "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/0a5e/live/65a2f270-dfad-11f1-be1f-9dae57fabf82.jpg"
+        },
+        {
+          "id": "545bb85ab68c",
+          "outlet_id": "nbc",
+          "headline": "All accounted for after tanker crashes into New Orleans riverboat",
+          "snippet": "More than 100 passengers and crew were rescued after a tanker struck a river cruise on the Mississippi River in New Orleans, prompting a massive rescue operation that sent 32 people to the hospital…",
+          "url": "https://www.nbcnews.com/nightly-news/video/all-accounted-for-after-tanker-crashes-into-new-orleans-riverboat-273486405725",
+          "published_at": "2026-11-14T00:17:52Z",
+          "published_at_estimated": false,
+          "image_url": "https://media-cldnry.s-nbcnews.com/image/upload/t_fit_1500w/mpx/2704722219/2026_11/1794615467767_nn_gso_nola_riverboat_crasg_261113_S3_1920x1080-85kj54.jpg"
+        },
+        {
+          "id": "0eb779cde03e",
+          "outlet_id": "axios",
+          "headline": "Mississippi River cruise crash has no fatalities, critical injuries",
+          "snippet": "Thirty-two people are in local hospitals and all passengers and crew are accounted for after a tanker collided with a Mississippi River cruise ship near the Port of New Orleans, officials said…",
+          "url": "https://www.axios.com/2026/11/13/new-orleans-cruise-ship-tanker-strike",
+          "published_at": "2026-11-14T01:17:59Z",
+          "published_at_estimated": false,
+          "image_url": "https://images.axios.com/RjNO3LFOrmnrFJzqUeftkuxA0mw=/0x137:1600x1037/1366x768/2026/11/13/1794612816564.jpeg"
+        },
+        {
+          "id": "4530daf39f56",
+          "outlet_id": "mirror",
+          "headline": "Horrifying video shows passengers clinging onto American Heritage cruise ship after tanker crash",
+          "snippet": "Between 180 and 190 passengers were aboard the cruise ship, New Orleans Mayor Helena Moreno said at a Friday news conference",
+          "url": "https://www.mirror.co.uk/news/world-news/american-heritage-cruise-ship-video-37876755",
+          "published_at": "2026-11-14T01:48:00Z",
+          "published_at_estimated": false,
+          "image_url": "https://i2-prod.mirror.co.uk/incoming/article37876759.ece/ALTERNATES/s615/2_New-Orleans-Cruise-Ship-26317800415239.jpg"
+        },
+        {
+          "id": "75a63dd63c02",
+          "outlet_id": "thehindu",
+          "headline": "All passengers, crew on New Orleans cruise ship survive crash with tanker on Mississippi River",
+          "snippet": "Tanker owned by subsidiary of Chinese shipbuilder; too early to tell what might have caused the crash, but videos indicate some kind of catastrophic system failure on the vessel, a maritime law…",
+          "url": "https://www.thehindu.com/news/international/new-orleans-usa-tanker-ship-river-cruise-crash-updates/article71699607.ece",
+          "published_at": "2026-11-14T02:12:12Z",
+          "published_at_estimated": false,
+          "image_url": "https://th-i.thgim.com/public/incoming/409voc/article71699744.ece/alternates/LANDSCAPE_1200/New_Orleans_Cruise_Ship__7457.jpg"
+        },
+        {
+          "id": "a661b678a85c",
+          "outlet_id": "thesun",
+          "headline": "Horrifying moment tanker hurtles into cruise ship before terrified passengers cling to sides as it capsizes into river",
+          "snippet": "THIS is the horrifying moment a huge tanker hurtles into a cruise ship carrying nearly 200 people, capsizing the vessel and hospitalising dozens. Terrifying clips show passengers clinging to the…",
+          "url": "https://www.thesun.co.uk/news/41022541/horror-tanker-new-orleans-capsize/",
+          "published_at": "2026-11-14T09:20:23Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.thesun.co.uk/wp-content%2Fuploads%2F2026%2F11%2Fnewspress-collage-43cn85q1f-1794655563411.jpg?quality%3D90%26"
+        },
+        {
+          "id": "58a6274e8a69",
+          "outlet_id": "thehindu",
+          "headline": "No Indians onboard in carrier involved in Mississippi mishap",
+          "snippet": "",
+          "url": "https://www.thehindu.com/news/international/no-indians-onboard-in-carrier-involved-in-mississippi-mishap/article71701456.ece",
+          "published_at": "2026-11-14T10:24:04Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "c7ad43042f67",
+          "outlet_id": "bbc",
+          "headline": "Watch: Cruise ship overturns after collision with tanker in New Orleans",
+          "snippet": "Around 130 people were rescued from a cruise ship after it was struck by a tanker while docked in New Orleans, Louisiana on Friday.",
+          "url": "https://www.bbc.co.uk/news/videos/ck4gn4y77m40o",
+          "published_at": "2026-11-14T11:30:10Z",
+          "published_at_estimated": false,
+          "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/3089/live/3bf0cfe0-e027-11f1-a701-fddedf244c16.jpg"
+        },
+        {
+          "id": "83cc1a106369",
+          "outlet_id": "dailymail",
+          "headline": "Terrifying moment holiday couple film tanker heading straight towards them to sink their cruise ship - before 180 lives are saved in Miracle of the Mississippi",
+          "snippet": "The American Heritage, operated by American Cruise Lines, was docked on the river in New Orleans, Louisiana, on Friday when it was hit by the Atlantic Asphalt shortly after midday.",
+          "url": "https://www.dailymail.com/news/article-16292257/cruise-ship-couple-film-tanker-crash-Mississippi.html",
+          "published_at": "2026-11-14T13:06:45Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.dailymail.com/1s/2026/11/14/11/112505115-0-image-m-19_1794654176217.jpg"
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "A tanker collided with a cruise ship on the Mississippi River in New Orleans.",
+          "sources": [
+            "09d2fa981766",
+            "8fbc673741a9",
+            "0fd3ab9b75ba",
+            "aeb28d179eba",
+            "545bb85ab68c",
+            "0eb779cde03e",
+            "4530daf39f56",
+            "75a63dd63c02",
+            "a661b678a85c",
+            "c7ad43042f67",
+            "83cc1a106369"
+          ]
+        },
+        {
+          "text": "All passengers and crew survived or were accounted for.",
+          "sources": [
+            "09d2fa981766",
+            "8fbc673741a9",
+            "0fd3ab9b75ba",
+            "aeb28d179eba",
+            "545bb85ab68c",
+            "0eb779cde03e",
+            "75a63dd63c02",
+            "83cc1a106369"
+          ]
+        },
+        {
+          "text": "Thirty-two people were taken to hospital.",
+          "sources": [
+            "0fd3ab9b75ba",
+            "aeb28d179eba",
+            "545bb85ab68c",
+            "0eb779cde03e"
+          ]
+        },
+        {
+          "text": "None of those hospitalised were critically injured.",
+          "sources": [
+            "0fd3ab9b75ba",
+            "aeb28d179eba",
+            "0eb779cde03e"
+          ]
+        },
+        {
+          "text": "The cruise ship capsized or sank after the collision.",
+          "sources": [
+            "09d2fa981766",
+            "8fbc673741a9",
+            "0fd3ab9b75ba",
+            "a661b678a85c",
+            "c7ad43042f67",
+            "83cc1a106369"
+          ]
+        },
+        {
+          "text": "The cruise ship was docked when it was hit.",
+          "sources": [
+            "0fd3ab9b75ba",
+            "c7ad43042f67",
+            "83cc1a106369"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "545bb85ab68c",
+              "quote": "All accounted for after tanker crashes into New Orleans riverboat",
+              "field": "headline"
+            },
+            {
+              "article_id": "545bb85ab68c",
+              "quote": "prompting a massive rescue operation",
+              "field": "snippet"
+            },
+            {
+              "article_id": "4530daf39f56",
+              "quote": "Horrifying video shows passengers clinging onto American Heritage cruise ship",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the rescue operation and everyone being accounted for.",
+              "sources": [
+                "545bb85ab68c"
+              ]
+            },
+            {
+              "text": "Foregrounds video of passengers clinging to the ship and the mayor's figure of 180 to 190 aboard.",
+              "sources": [
+                "4530daf39f56"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "aeb28d179eba",
+              "quote": "'Miracle on Mississippi' - All passengers rescued",
+              "field": "headline"
+            },
+            {
+              "article_id": "0eb779cde03e",
+              "quote": "has no fatalities, critical injuries",
+              "field": "headline"
+            },
+            {
+              "article_id": "8fbc673741a9",
+              "quote": "carrying around 130 people",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with casualty figures: no deaths, 32 in hospital and no critical injuries.",
+              "sources": [
+                "aeb28d179eba",
+                "0eb779cde03e",
+                "8fbc673741a9"
+              ]
+            },
+            {
+              "text": "Gives the number aboard or rescued as around 130.",
+              "sources": [
+                "8fbc673741a9",
+                "c7ad43042f67"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "right",
+          "headline_quotes": [
+            {
+              "article_id": "a661b678a85c",
+              "quote": "Horrifying moment tanker hurtles into cruise ship",
+              "field": "headline"
+            },
+            {
+              "article_id": "83cc1a106369",
+              "quote": "Terrifying moment holiday couple film tanker heading straight towards them",
+              "field": "headline"
+            },
+            {
+              "article_id": "83cc1a106369",
+              "quote": "180 lives are saved in Miracle of the Mississippi",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Foregrounds footage of the impact and passengers clinging to the vessel.",
+              "sources": [
+                "a661b678a85c",
+                "83cc1a106369"
+              ]
+            },
+            {
+              "text": "Names the vessels: the American Heritage, operated by American Cruise Lines, and the Atlantic Asphalt.",
+              "sources": [
+                "83cc1a106369"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "left",
+          "text": "Left coverage does not mention that the cruise ship capsized or sank.",
+          "sources": [
+            "8fbc673741a9",
+            "c7ad43042f67",
+            "a661b678a85c",
+            "83cc1a106369"
+          ]
+        },
+        {
+          "lean": "right",
+          "text": "Right coverage does not mention that none of the injured were critically hurt.",
+          "sources": [
+            "aeb28d179eba",
+            "0eb779cde03e"
+          ]
+        },
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not name the cruise ship as the American Heritage.",
+          "sources": [
+            "4530daf39f56",
+            "83cc1a106369"
+          ]
+        }
+      ],
+      "contested_claims": [
+        {
+          "claim": "The cruise ship was carrying around 130 people.",
+          "asserted_by": [
+            "8fbc673741a9",
+            "c7ad43042f67"
+          ],
+          "disputed_by": [
+            "4530daf39f56",
+            "a661b678a85c",
+            "83cc1a106369",
+            "09d2fa981766"
+          ]
+        }
+      ],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "aeb28d179eba",
+              "quote": "'Miracle on Mississippi'",
+              "field": "headline"
+            },
+            {
+              "article_id": "a661b678a85c",
+              "quote": "Horrifying moment tanker hurtles into cruise ship",
+              "field": "headline"
+            },
+            {
+              "article_id": "0eb779cde03e",
+              "quote": "has no fatalities, critical injuries",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Emphasises the dramatic footage and the survival of everyone aboard.",
+              "sources": [
+                "aeb28d179eba",
+                "a661b678a85c",
+                "4530daf39f56",
+                "83cc1a106369",
+                "c7ad43042f67"
+              ]
+            },
+            {
+              "text": "Reports casualty figures attributed to officials and the New Orleans mayor.",
+              "sources": [
+                "0eb779cde03e",
+                "4530daf39f56"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "09d2fa981766",
+              "quote": "Miracle on the Mississippi: everyone safe",
+              "field": "headline"
+            },
+            {
+              "article_id": "75a63dd63c02",
+              "quote": "Tanker owned by subsidiary of Chinese shipbuilder",
+              "field": "snippet"
+            },
+            {
+              "article_id": "58a6274e8a69",
+              "quote": "No Indians onboard in carrier involved in Mississippi mishap",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Reports the tanker's ownership by a subsidiary of a Chinese shipbuilder and possible catastrophic system failure.",
+              "sources": [
+                "75a63dd63c02"
+              ]
+            },
+            {
+              "text": "Notes that no Indians were aboard.",
+              "sources": [
+                "58a6274e8a69"
+              ]
+            },
+            {
+              "text": "Reports that the tanker lost control, citing the New Orleans mayor.",
+              "sources": [
+                "09d2fa981766"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "A tanker struck a river cruise ship on the Mississippi in New Orleans on Friday, causing it to capsize. All passengers and crew were accounted for, with 32 people taken to hospital and none critically injured. Reported numbers aboard range from around 130 to 190.",
+        "sources": [
+          "09d2fa981766",
+          "8fbc673741a9",
+          "0fd3ab9b75ba",
+          "aeb28d179eba",
+          "545bb85ab68c",
+          "0eb779cde03e",
+          "4530daf39f56",
+          "c7ad43042f67",
+          "a661b678a85c",
+          "83cc1a106369"
+        ]
+      },
+      "conclusion": {
+        "text": "All sides report a tanker hitting a docked cruise ship in New Orleans with everyone surviving and 32 hospitalised. Western tabloids lead with dramatic footage, while Eastern outlets add tanker ownership and possible system failure. The number aboard is reported as around 130 by some and 180 to 190 by others.",
+        "sources": [
+          "0fd3ab9b75ba",
+          "aeb28d179eba",
+          "0eb779cde03e",
+          "a661b678a85c",
+          "83cc1a106369",
+          "75a63dd63c02",
+          "8fbc673741a9",
+          "c7ad43042f67",
+          "4530daf39f56"
+        ]
+      },
+      "validation": {
+        "kept": 38,
+        "dropped_by_reason": {}
+      }
+    },
+    {
+      "id": "3de273333cfd",
+      "title": "SpaceX Starship reaches orbit but booster catch fails",
+      "rank": 5,
+      "outlet_count": 8,
+      "coverage": {
+        "lean": {
+          "left": 2,
+          "centre": 3,
+          "right": 2
+        },
+        "bloc": {
+          "west": 7,
+          "east": 1
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "a7d47222a5cd",
+          "outlet_id": "scmp",
+          "headline": "SpaceX’s bid for Starship double catch thwarted, as booster ends up in ocean",
+          "snippet": "SpaceX launched Starship towards orbit on Friday in its boldest test yet: a 22-hour flight that aimed to capture the entire rocket in a move meant to accelerate moon and Mars travel. But Elon Musk’s…",
+          "url": "https://www.scmp.com/news/world/united-states-canada/article/3374413/spacexs-bid-starship-double-catch-thwarted-booster-ends-ocean",
+          "published_at": "2026-11-13T23:23:21Z",
+          "published_at_estimated": false,
+          "image_url": "https://cdn.i-scmp.com/sites/default/files/styles/1280x720/public/d8/images/canvas/2026/11/14/b1e848bd-16b3-40bd-9445-55a49b31e145_265c7ec9.jpg?itok=evnSO9wu&v=1794612195"
+        },
+        {
+          "id": "a1f796194495",
+          "outlet_id": "bbc",
+          "headline": "Setback for SpaceX Starship rocket's double-catch test",
+          "snippet": "Elon Musk’s company aborted an attempted catch of the rocket’s booster - instead it came down in the ocean.",
+          "url": "https://www.bbc.co.uk/news/articles/ckregdgnl0xpo",
+          "published_at": "2026-11-14T00:01:01Z",
+          "published_at_estimated": false,
+          "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/1b1a/live/3f2ee680-dfbc-11f1-9e98-11d1980367a2.jpg"
+        },
+        {
+          "id": "a8c719284b26",
+          "outlet_id": "nbc",
+          "headline": "SpaceX historic test flight takes off",
+          "snippet": "One of the few flights taking off tonight was SpaceX's Starship rocket. How were they allowed to do that, and what’s the goal of the mission? NBC News’ Gadi Schwartz reports.",
+          "url": "https://www.nbcnews.com/nightly-news/video/spacex-historic-test-flight-takes-off-273485893908",
+          "published_at": "2026-11-14T00:17:35Z",
+          "published_at_estimated": false,
+          "image_url": "https://media-cldnry.s-nbcnews.com/image/upload/t_fit_1500w/mpx/2704722219/2026_11/1794615450757_nn_gsc_spacex_261113_S3_1920x1080-x63y1f.jpg"
+        },
+        {
+          "id": "ae7442de51cf",
+          "outlet_id": "dw",
+          "headline": "SpaceX launches Starship rocket, fails to recover booster",
+          "snippet": "SpaceX had planned to catch and later reuse both stages of its biggest rocket for the first time. But the booster exploded over the Gulf of Mexico, while the spacecraft continued into orbit.",
+          "url": "https://www.dw.com/en/spacex-launches-starship-rocket-fails-to-recover-booster/a-79946091?maca=en-rss-en-world-4025-xml-mrss",
+          "published_at": "2026-11-14T02:24:00Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "fd8e45193fb1",
+          "outlet_id": "mirror",
+          "headline": "SpaceX Starship booster erupts into fireball and crashes into sea - ending hopes for breakthrough",
+          "snippet": "Tonight, SpaceX had hoped to launch a history-making mission in Texas, with the goal of retrieving a rocket from orbit intact this weekend - but it didn't go to plan",
+          "url": "https://www.mirror.co.uk/news/world-news/spacex-starship-erupts-into-fireball-37876774",
+          "published_at": "2026-11-14T02:26:28Z",
+          "published_at_estimated": false,
+          "image_url": "https://i2-prod.mirror.co.uk/incoming/article37876777.ece/ALTERNATES/s615/2_SpaceX-Super-Heavy-Booster-Explodes-During-Starship-Flight-15-Starbase-Texas-USA-13-Nov-2026.jpg"
+        },
+        {
+          "id": "66e5ef17064b",
+          "outlet_id": "france24",
+          "headline": "SpaceX's Starship encounters problems during 15th test flight",
+          "snippet": "Elon Musk’s SpaceX successfully launched its Starship, the world's largest spaceship, into orbit where it should release 15 satellites for its Starlink network. A few minutes after lift off however…",
+          "url": "https://www.france24.com/en/spacex-s-starship-encounters-problems-during-15th-test-flight",
+          "published_at": "2026-11-14T10:21:09Z",
+          "published_at_estimated": false,
+          "image_url": "https://s.france24.com/media/display/eb59b9c4-e013-11f1-9576-f71d22e7fea9/w:1024/p:16x9/EN-20261114-101129-101300-CS.jpg"
+        },
+        {
+          "id": "a744987fe1b7",
+          "outlet_id": "nypost",
+          "headline": "SpaceX’s Starship soars into orbit — after booster explodes in Gulf of Mexico",
+          "snippet": "The loss of the booster meant Elon Musk’s company missed out on a double catch.",
+          "url": "https://nypost.com/2026/11/14/us-news/spacexs-starship-soars-into-orbit-after-booster-explodes-in-gulf-of-mexico/",
+          "published_at": "2026-11-14T11:14:44Z",
+          "published_at_estimated": false,
+          "image_url": "https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2F2026-mission-aims-achieve-first-148709728.jpg?w%3D1024"
+        },
+        {
+          "id": "8409e6401933",
+          "outlet_id": "dailymail",
+          "headline": "SpaceX setback for Elon Musk as attempt to catch booster rocket ends in fireball - but firm still hopes to grab Starship spacecraft with giant chopsticks",
+          "snippet": "An unspecified problem forced SpaceX to abort the recovery of the booster for the world's most powerful rocket, the Starship, but the company still hopes it can pull off its first 'catch' of the…",
+          "url": "https://www.dailymail.com/news/article-16292209/SpaceX-setback-Elon-Musk-rocket-fireball.html",
+          "published_at": "2026-11-14T11:26:27Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.dailymail.com/1s/2026/11/14/08/112504413-0-image-m-18_1794644611715.jpg"
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "SpaceX launched its Starship rocket on a test flight.",
+          "sources": [
+            "a7d47222a5cd",
+            "a8c719284b26",
+            "ae7442de51cf",
+            "fd8e45193fb1",
+            "66e5ef17064b",
+            "a744987fe1b7",
+            "8409e6401933"
+          ]
+        },
+        {
+          "text": "The Starship spacecraft reached or headed into orbit.",
+          "sources": [
+            "a7d47222a5cd",
+            "ae7442de51cf",
+            "66e5ef17064b",
+            "a744987fe1b7"
+          ]
+        },
+        {
+          "text": "The attempt to catch or recover the booster failed, and the booster ended up in the ocean, sea or Gulf of Mexico.",
+          "sources": [
+            "a7d47222a5cd",
+            "a1f796194495",
+            "ae7442de51cf",
+            "fd8e45193fb1",
+            "a744987fe1b7",
+            "8409e6401933"
+          ]
+        },
+        {
+          "text": "The booster exploded or ended in a fireball.",
+          "sources": [
+            "ae7442de51cf",
+            "fd8e45193fb1",
+            "a744987fe1b7",
+            "8409e6401933"
+          ]
+        },
+        {
+          "text": "The mission aimed at a double catch, recovering both stages of the rocket.",
+          "sources": [
+            "a7d47222a5cd",
+            "a1f796194495",
+            "ae7442de51cf",
+            "a744987fe1b7"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "a8c719284b26",
+              "quote": "SpaceX historic test flight takes off",
+              "field": "headline"
+            },
+            {
+              "article_id": "fd8e45193fb1",
+              "quote": "booster erupts into fireball and crashes into sea",
+              "field": "headline"
+            },
+            {
+              "article_id": "fd8e45193fb1",
+              "quote": "ending hopes for breakthrough",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the launch as historic and asks how it was allowed when few other flights took off.",
+              "sources": [
+                "a8c719284b26"
+              ]
+            },
+            {
+              "text": "Foregrounds the booster fireball and the end of hopes for a breakthrough.",
+              "sources": [
+                "fd8e45193fb1"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "a1f796194495",
+              "quote": "Setback for SpaceX Starship rocket's double-catch test",
+              "field": "headline"
+            },
+            {
+              "article_id": "ae7442de51cf",
+              "quote": "fails to recover booster",
+              "field": "headline"
+            },
+            {
+              "article_id": "66e5ef17064b",
+              "quote": "encounters problems during 15th test flight",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Describes the test as a setback centred on the failed booster recovery.",
+              "sources": [
+                "a1f796194495",
+                "ae7442de51cf",
+                "66e5ef17064b"
+              ]
+            },
+            {
+              "text": "Notes the spacecraft continued into orbit, where it should release 15 Starlink satellites.",
+              "sources": [
+                "ae7442de51cf",
+                "66e5ef17064b"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "right",
+          "headline_quotes": [
+            {
+              "article_id": "a744987fe1b7",
+              "quote": "SpaceX’s Starship soars into orbit — after booster explodes in Gulf of Mexico",
+              "field": "headline"
+            },
+            {
+              "article_id": "8409e6401933",
+              "quote": "SpaceX setback for Elon Musk",
+              "field": "headline"
+            },
+            {
+              "article_id": "8409e6401933",
+              "quote": "still hopes to grab Starship spacecraft with giant chopsticks",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Pairs the spacecraft reaching orbit with the booster explosion.",
+              "sources": [
+                "a744987fe1b7"
+              ]
+            },
+            {
+              "text": "Names Elon Musk in the setback and notes the company still hopes to catch the spacecraft.",
+              "sources": [
+                "8409e6401933"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "left",
+          "text": "Left-leaning coverage does not mention that the Starship spacecraft reached orbit.",
+          "sources": [
+            "ae7442de51cf",
+            "66e5ef17064b",
+            "a744987fe1b7"
+          ]
+        }
+      ],
+      "contested_claims": [],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "a1f796194495",
+              "quote": "Setback for SpaceX Starship rocket's double-catch test",
+              "field": "headline"
+            },
+            {
+              "article_id": "a744987fe1b7",
+              "quote": "SpaceX’s Starship soars into orbit — after booster explodes in Gulf of Mexico",
+              "field": "headline"
+            },
+            {
+              "article_id": "a8c719284b26",
+              "quote": "SpaceX historic test flight takes off",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Foregrounds the booster loss, often describing an explosion or fireball.",
+              "sources": [
+                "ae7442de51cf",
+                "fd8e45193fb1",
+                "a744987fe1b7",
+                "8409e6401933"
+              ]
+            },
+            {
+              "text": "Some reports add the Starlink satellite payload and the 15th test flight.",
+              "sources": [
+                "66e5ef17064b"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "a7d47222a5cd",
+              "quote": "SpaceX’s bid for Starship double catch thwarted",
+              "field": "headline"
+            },
+            {
+              "article_id": "a7d47222a5cd",
+              "quote": "its boldest test yet",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Describes a 22-hour flight aimed at capturing the entire rocket to accelerate moon and Mars travel.",
+              "sources": [
+                "a7d47222a5cd"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "SpaceX launched its Starship rocket on a test flight that aimed to catch and reuse both stages. The spacecraft continued into orbit, but the booster catch was aborted and the booster came down in the sea, with several outlets reporting that it exploded over the Gulf of Mexico.",
+        "sources": [
+          "a7d47222a5cd",
+          "a1f796194495",
+          "a8c719284b26",
+          "ae7442de51cf",
+          "fd8e45193fb1",
+          "66e5ef17064b",
+          "a744987fe1b7",
+          "8409e6401933"
+        ]
+      },
+      "conclusion": {
+        "text": "All outlets report the Starship launch, and those covering recovery agree the booster was lost at sea. Left outlets lead with the historic launch or the fireball, centre outlets with a setback, right outlets pair orbit with the explosion and Musk; the East outlet stresses the bold 22-hour test. No claims are disputed.",
+        "sources": [
+          "a7d47222a5cd",
+          "a1f796194495",
+          "a8c719284b26",
+          "ae7442de51cf",
+          "fd8e45193fb1",
+          "66e5ef17064b",
+          "a744987fe1b7",
+          "8409e6401933"
+        ]
+      },
+      "validation": {
+        "kept": 31,
+        "dropped_by_reason": {}
+      }
+    },
+    {
+      "id": "3f899e58edd5",
+      "title": "Bessent blames Lutnick's Commerce Department over Nvidia chip exports to Megaspeed",
+      "rank": 6,
+      "outlet_count": 6,
+      "coverage": {
+        "lean": {
+          "left": 2,
+          "centre": 2,
+          "right": 1
+        },
+        "bloc": {
+          "west": 5,
+          "east": 1
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "13567072fa50",
+          "outlet_id": "nyt",
+          "headline": "Howard Lutnick Took Softer Line on Nvidia as Calls for Tougher Controls Grew",
+          "snippet": "Critics say Howard Lutnick, the commerce secretary, and his department have shielded Nvidia as concerns have grown over A.I. chip sales to firms like Megaspeed.",
+          "url": "https://www.nytimes.com/2026/11/12/us/politics/lutnick-nvidia-commerce-china-chips.html",
+          "published_at": "2026-11-13T14:02:13Z",
+          "published_at_estimated": false,
+          "image_url": "https://static01.nyt.com/images/2026/11/12/multimedia/12dc-commerce-nvidia-fzpt/12dc-commerce-nvidia-fzpt-mediumSquareAt3X.jpg"
+        },
+        {
+          "id": "42ee11949cc7",
+          "outlet_id": "axios",
+          "headline": "Bessent puts Megaspeed heat on Lutnick: \"Commerce has the pen\"",
+          "snippet": "Treasury Secretary Scott Bessent said in a Friday interview that while his department and others agreed on placing Megaspeed on a special list of companies that pose national security concerns, the…",
+          "url": "https://www.axios.com/2026/11/13/bessent-lutnick-megaspeed-nvidia",
+          "published_at": "2026-11-13T14:18:45Z",
+          "published_at_estimated": false,
+          "image_url": "https://images.axios.com/Tb8k0ajTSQBS1lHWJXMTjEArtIk=/0x0:3602x2026/1366x768/2026/11/13/1794578687551.jpeg"
+        },
+        {
+          "id": "e7851cddd4ee",
+          "outlet_id": "guardian",
+          "headline": "Nvidia scandal: US treasury chief blames Lutnick’s commerce department over alleged lack of action",
+          "snippet": "US commerce secretary faces sack as questions emerge over senior Trump officials’ knowledge of alleged Chinese spy’s ties to Jensen Huang US politics – live updates The US commerce secretary, Howard…",
+          "url": "https://www.theguardian.com/technology/2026/nov/13/nvidia-scandal-sparks-us-national-security-concerns-china",
+          "published_at": "2026-11-13T19:51:28Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.guim.co.uk/img/media/5534caea091e39afe776168281e50dd327c8be8e/563_0_3334_2668/master/3334.jpg?width=460&quality=85&auto=format&fit=max&s=db4acf009d092d25d744ff058c51eb75"
+        },
+        {
+          "id": "c89e20dca2e5",
+          "outlet_id": "bbc",
+          "headline": "Nvidia scandal fallout widens as Trump's treasury secretary blames cabinet colleague",
+          "snippet": "Scott Bessent suggests Howard Lutnick’s commerce department failed to ban exports of Nvidia's chips to a firm thought to have links with China.",
+          "url": "https://www.bbc.co.uk/news/articles/cqvg2d1eg7zro",
+          "published_at": "2026-11-13T19:53:57Z",
+          "published_at_estimated": false,
+          "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/2783/live/a5cdb560-df6c-11f1-9892-87464bbcc2b8.jpg"
+        },
+        {
+          "id": "ae0d5e871ec1",
+          "outlet_id": "scmp",
+          "headline": "Bessent blames US Commerce Department for not restricting Nvidia chip exports to China",
+          "snippet": "US Treasury Secretary Scott Bessent on Friday blamed the Commerce Department, led by Howard Lutnick, for delaying the blacklisting of Megaspeed, an Nvidia customer suspected of diverting advanced AI…",
+          "url": "https://www.scmp.com/news/china/diplomacy/article/3374409/bessent-blames-us-commerce-department-not-restricting-nvidia-chip-exports-china",
+          "published_at": "2026-11-13T20:20:33Z",
+          "published_at_estimated": false,
+          "image_url": "https://cdn.i-scmp.com/sites/default/files/styles/1280x720/public/d8/images/canvas/2026/11/14/13f9bfd1-a256-4797-8b2b-96e1a403daeb_c8367995.jpg?itok=z45ubSDI&v=1794601222"
+        },
+        {
+          "id": "4d0970f8236c",
+          "outlet_id": "dailymail",
+          "headline": "Trump Cabinet civil war breaks out after Scott Bessent throws Howard Lutnick under the bus live on CNBC over Nvidia scandal",
+          "snippet": "Scott Bessent bashed Howard Lutnick for resisting efforts to crack down on a foreign company at the center of an alleged Chinese espionage scandal.",
+          "url": "https://www.dailymail.com/news/article-16290623/Trump-Cabinet-civil-war-breaks-Scott-Bessent-throws-Howard-Lutnick-bus-live-CNBC-Nvidia-scandal.html",
+          "published_at": "2026-11-14T06:40:45Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.dailymail.com/1s/2026/11/13/15/112492913-0-image-m-11_1794584072568.jpg"
+        },
+        {
+          "id": "6024289edeb3",
+          "outlet_id": "axios",
+          "headline": "MAGA turns on Lutnick amid China spy scandal",
+          "snippet": "Commerce Secretary Lutnick has become the face of the Trump administration's troubled response to Chinese espionage and potential national security threats. The most intense scrutiny is coming from…",
+          "url": "https://www.axios.com/2026/11/14/lutnick-commerce-china",
+          "published_at": "2026-11-14T12:30:11Z",
+          "published_at_estimated": false,
+          "image_url": "https://images.axios.com/xvaGTLBzS7Gw0ZAZoHYMJ-e7fW4=/0x266:7728x4613/1366x768/2026/11/13/1794587701813.jpeg"
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "Scott Bessent blamed Howard Lutnick or his Commerce Department over the handling of Nvidia chip exports.",
+          "sources": [
+            "42ee11949cc7",
+            "e7851cddd4ee",
+            "c89e20dca2e5",
+            "ae0d5e871ec1",
+            "4d0970f8236c"
+          ]
+        },
+        {
+          "text": "The company at issue is Megaspeed, described as an Nvidia customer or a firm with suspected links to China.",
+          "sources": [
+            "13567072fa50",
+            "42ee11949cc7",
+            "ae0d5e871ec1",
+            "c89e20dca2e5"
+          ]
+        },
+        {
+          "text": "Bessent made his remarks on Friday in an interview.",
+          "sources": [
+            "42ee11949cc7",
+            "ae0d5e871ec1"
+          ]
+        },
+        {
+          "text": "The dispute is linked to an alleged Chinese spy or espionage scandal.",
+          "sources": [
+            "e7851cddd4ee",
+            "4d0970f8236c",
+            "6024289edeb3"
+          ]
+        },
+        {
+          "text": "Lutnick is under mounting criticism over his department's approach.",
+          "sources": [
+            "13567072fa50",
+            "e7851cddd4ee",
+            "6024289edeb3"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "13567072fa50",
+              "quote": "Howard Lutnick Took Softer Line on Nvidia as Calls for Tougher Controls Grew",
+              "field": "headline"
+            },
+            {
+              "article_id": "13567072fa50",
+              "quote": "have shielded Nvidia",
+              "field": "snippet"
+            },
+            {
+              "article_id": "e7851cddd4ee",
+              "quote": "US commerce secretary faces sack",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with critics' view that Lutnick and his department shielded Nvidia as calls for tougher chip controls grew.",
+              "sources": [
+                "13567072fa50"
+              ]
+            },
+            {
+              "text": "Reports that Lutnick faces the sack and that questions surround senior officials' knowledge of an alleged spy's ties to Jensen Huang.",
+              "sources": [
+                "e7851cddd4ee"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "42ee11949cc7",
+              "quote": "\"Commerce has the pen\"",
+              "field": "headline"
+            },
+            {
+              "article_id": "c89e20dca2e5",
+              "quote": "Nvidia scandal fallout widens",
+              "field": "headline"
+            },
+            {
+              "article_id": "6024289edeb3",
+              "quote": "MAGA turns on Lutnick amid China spy scandal",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Foregrounds Bessent's statement that his department and others agreed on listing Megaspeed, placing responsibility with Commerce.",
+              "sources": [
+                "42ee11949cc7"
+              ]
+            },
+            {
+              "text": "Describes Lutnick as the face of the administration's troubled response to Chinese espionage, with scrutiny from MAGA figures.",
+              "sources": [
+                "6024289edeb3"
+              ]
+            },
+            {
+              "text": "Describes the episode as a widening fallout, with Bessent blaming a cabinet colleague.",
+              "sources": [
+                "c89e20dca2e5"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "right",
+          "headline_quotes": [
+            {
+              "article_id": "4d0970f8236c",
+              "quote": "Trump Cabinet civil war breaks out",
+              "field": "headline"
+            },
+            {
+              "article_id": "4d0970f8236c",
+              "quote": "throws Howard Lutnick under the bus live on CNBC",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with open conflict inside Trump's cabinet, with Bessent criticising Lutnick on CNBC.",
+              "sources": [
+                "4d0970f8236c"
+              ]
+            },
+            {
+              "text": "Says Lutnick resisted efforts to crack down on a foreign company at the centre of an alleged Chinese espionage scandal.",
+              "sources": [
+                "4d0970f8236c"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "right",
+          "text": "Right-leaning coverage does not name Megaspeed as the company involved.",
+          "sources": [
+            "13567072fa50",
+            "42ee11949cc7",
+            "c89e20dca2e5"
+          ]
+        },
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not mention questions over the alleged spy's ties to Jensen Huang or that Lutnick faces the sack.",
+          "sources": [
+            "e7851cddd4ee"
+          ]
+        },
+        {
+          "lean": "left",
+          "text": "Left-leaning coverage does not mention Bessent's statement that several departments agreed on placing Megaspeed on a national security list.",
+          "sources": [
+            "42ee11949cc7"
+          ]
+        }
+      ],
+      "contested_claims": [],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "c89e20dca2e5",
+              "quote": "Trump's treasury secretary blames cabinet colleague",
+              "field": "headline"
+            },
+            {
+              "article_id": "4d0970f8236c",
+              "quote": "Trump Cabinet civil war breaks out",
+              "field": "headline"
+            },
+            {
+              "article_id": "6024289edeb3",
+              "quote": "MAGA turns on Lutnick amid China spy scandal",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Foregrounds the alleged Chinese espionage scandal and political pressure on Lutnick within the Trump administration.",
+              "sources": [
+                "e7851cddd4ee",
+                "4d0970f8236c",
+                "6024289edeb3",
+                "13567072fa50"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "ae0d5e871ec1",
+              "quote": "for not restricting Nvidia chip exports to China",
+              "field": "headline"
+            },
+            {
+              "article_id": "ae0d5e871ec1",
+              "quote": "for delaying the blacklisting of Megaspeed",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Frames the dispute as about chip exports to China and describes Megaspeed as an Nvidia customer suspected of diverting advanced AI products.",
+              "sources": [
+                "ae0d5e871ec1"
+              ]
+            },
+            {
+              "text": "Does not mention espionage, focusing on Commerce delaying the blacklisting.",
+              "sources": [
+                "ae0d5e871ec1"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "US Treasury Secretary Scott Bessent on Friday blamed the Commerce Department, led by Howard Lutnick, for not restricting Nvidia chip exports to Megaspeed, a firm suspected of links to China. Coverage ties the dispute to an alleged Chinese espionage scandal. Lutnick faces growing criticism, including from within the MAGA movement.",
+        "sources": [
+          "42ee11949cc7",
+          "e7851cddd4ee",
+          "c89e20dca2e5",
+          "ae0d5e871ec1",
+          "4d0970f8236c",
+          "6024289edeb3",
+          "13567072fa50"
+        ]
+      },
+      "conclusion": {
+        "text": "All sides report Bessent blaming Lutnick's Commerce Department over Nvidia chip exports to Megaspeed. Left outlets stress claims Lutnick shielded Nvidia, centre outlets Bessent's 'Commerce has the pen' line and MAGA criticism, the right a cabinet 'civil war'. The East-bloc outlet frames it as exports to China without mentioning espionage; no claims are directly contradicted.",
+        "sources": [
+          "42ee11949cc7",
+          "e7851cddd4ee",
+          "c89e20dca2e5",
+          "ae0d5e871ec1",
+          "4d0970f8236c",
+          "13567072fa50",
+          "6024289edeb3"
+        ]
+      },
+      "validation": {
+        "kept": 33,
+        "dropped_by_reason": {}
+      }
+    },
+    {
+      "id": "20a7f221ffc0",
+      "title": "Rubio attacks ICC and international law in Federalist Society speech",
+      "rank": 7,
+      "outlet_count": 6,
+      "coverage": {
+        "lean": {
+          "left": 1,
+          "centre": 0,
+          "right": 2
+        },
+        "bloc": {
+          "west": 3,
+          "east": 3
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "cd9fe6d30b04",
+          "outlet_id": "japantimes",
+          "headline": "Rubio labels international law a tool of elites and attacks ICC",
+          "snippet": "The Secretary of State warned that the U.S. would never submit to the \"sterile vision of radical judges or soulless global bureaucrats.\"",
+          "url": "https://www.japantimes.co.jp/news/2026/11/14/world/politics/rubio-international-law-icc/",
+          "published_at": "2026-11-14T02:09:00Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.japantimes.co.jp/japantimes/uploads/images/2026/11/14/thumbs/400x400/574000.jpg"
+        },
+        {
+          "id": "80fdfe6e1bf9",
+          "outlet_id": "examiner",
+          "headline": "Rubio’s Federalist Society performance fuels 2028 fire: ‘If he runs, he’ll be formidable’",
+          "snippet": "Attendees leaving the Federalist Society’s National Lawyers Convention on Friday said they heard something more than a pep talk for Republicans after their midterm losses. To many of them, Secretary…",
+          "url": "https://www.washingtonexaminer.com/news/white-house/4803686/rubio-federalist-society-speech-fuels-2028-talk/",
+          "published_at": "2026-11-14T03:06:53Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.washingtonexaminer.com/wp-content/uploads/2026/11/AP26317824418051.jpg?w=1024"
+        },
+        {
+          "id": "06726089b164",
+          "outlet_id": "timesofisrael",
+          "headline": "Rubio warns ICC against ‘quoting laws to men with swords’",
+          "snippet": "US secretary of state denounces 'weaponization of international law,' hits out at International Criminal Court for deriving its powers from 'laws we neither consent nor control'",
+          "url": "https://www.timesofisrael.com/rubio-warns-icc-against-quoting-laws-to-men-with-swords/",
+          "published_at": "2026-11-14T03:29:49Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "3e92f0df0a20",
+          "outlet_id": "nbc",
+          "headline": "Rubio urges conservatives to uplift their ideology, brushes off GOP midterm losses",
+          "snippet": "Secretary of State Marco Rubio on Friday downplayed Republicans’ devastating losses in the midterm elections, instead telling supporters, “Politics requires more than simply winning elections.”",
+          "url": "https://www.nbcnews.com/politics/trump-administration/rubio-urges-conservatives-uplift-ideology-brushes-republicans-midterm-rcna609284",
+          "published_at": "2026-11-14T03:38:33Z",
+          "published_at_estimated": false,
+          "image_url": "https://media-cldnry.s-nbcnews.com/image/upload/t_fit_1500w/rockcms/2026-11/261113-rubio-washington-ww-1706-4ebead.jpg"
+        },
+        {
+          "id": "c632bfaf4d24",
+          "outlet_id": "nypost",
+          "headline": "Marco Rubio’s daughter steals show at his first post-midterm speech: ‘I don’t know where she got this!’",
+          "snippet": "“I don't know where she got this,” Rubio said of his daughter's public speaking skills. “There’s no stage fright. She's not afraid to speak. I don't really like public speaking that much, but she…",
+          "url": "https://nypost.com/2026/11/13/us-news/marco-rubios-daughter-steals-the-show-at-his-first-post-midterm-speech-i-dont-know-where-she-got-this/",
+          "published_at": "2026-11-14T04:35:54Z",
+          "published_at_estimated": false,
+          "image_url": "https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2Fdaniella-rubio-speaks-secretary-marco-148705872.jpg?w%3D1024"
+        },
+        {
+          "id": "340d5e8a0952",
+          "outlet_id": "thehindu",
+          "headline": "Rubio assails international court in speech to conservative legal group",
+          "snippet": "The U.S., Mr. Rubio said, would not “submit to the sterile vision of radical judges or soulless global bureaucrats”",
+          "url": "https://www.thehindu.com/news/international/rubio-assails-international-court-in-speech-to-conservative-legal-group/article71700928.ece",
+          "published_at": "2026-11-14T06:20:28Z",
+          "published_at_estimated": false,
+          "image_url": "https://th-i.thgim.com/public/incoming/k6p3zy/article71700956.ece/alternates/LANDSCAPE_1200/2026-11-14T000337Z_932700695_RC29NOAFKUC9_RTRMADP_3_USA-RUBIO.JPG"
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "Marco Rubio, the US Secretary of State, gave the speech on Friday.",
+          "sources": [
+            "80fdfe6e1bf9",
+            "3e92f0df0a20",
+            "cd9fe6d30b04",
+            "06726089b164"
+          ]
+        },
+        {
+          "text": "The speech was to the Federalist Society, a conservative legal group.",
+          "sources": [
+            "80fdfe6e1bf9",
+            "340d5e8a0952"
+          ]
+        },
+        {
+          "text": "The speech followed Republican losses in the midterm elections.",
+          "sources": [
+            "80fdfe6e1bf9",
+            "3e92f0df0a20",
+            "c632bfaf4d24"
+          ]
+        },
+        {
+          "text": "Rubio attacked the International Criminal Court and international law in the speech.",
+          "sources": [
+            "cd9fe6d30b04",
+            "06726089b164",
+            "340d5e8a0952"
+          ]
+        },
+        {
+          "text": "Rubio said the US would not submit to the \"sterile vision of radical judges or soulless global bureaucrats.\"",
+          "sources": [
+            "cd9fe6d30b04",
+            "340d5e8a0952"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "3e92f0df0a20",
+              "quote": "brushes off GOP midterm losses",
+              "field": "headline"
+            },
+            {
+              "article_id": "3e92f0df0a20",
+              "quote": "Politics requires more than simply winning elections.",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with Rubio downplaying what it describes as Republicans' devastating midterm losses and urging conservatives to uplift their ideology.",
+              "sources": [
+                "3e92f0df0a20"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "right",
+          "headline_quotes": [
+            {
+              "article_id": "80fdfe6e1bf9",
+              "quote": "fuels 2028 fire",
+              "field": "headline"
+            },
+            {
+              "article_id": "c632bfaf4d24",
+              "quote": "daughter steals show at his first post-midterm speech",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Emphasises attendees' view that the speech signals Rubio's potential as a 2028 candidate.",
+              "sources": [
+                "80fdfe6e1bf9"
+              ]
+            },
+            {
+              "text": "Foregrounds Rubio's daughter and his remarks about her public speaking.",
+              "sources": [
+                "c632bfaf4d24"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "left",
+          "text": "Left coverage does not mention attendees' speculation about a 2028 presidential run by Rubio.",
+          "sources": [
+            "80fdfe6e1bf9"
+          ]
+        }
+      ],
+      "contested_claims": [],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "3e92f0df0a20",
+              "quote": "brushes off GOP midterm losses",
+              "field": "headline"
+            },
+            {
+              "article_id": "80fdfe6e1bf9",
+              "quote": "fuels 2028 fire",
+              "field": "headline"
+            },
+            {
+              "article_id": "c632bfaf4d24",
+              "quote": "daughter steals show at his first post-midterm speech",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Centres on US domestic politics: the midterm losses, a possible 2028 run and Rubio's daughter.",
+              "sources": [
+                "3e92f0df0a20",
+                "80fdfe6e1bf9",
+                "c632bfaf4d24"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "cd9fe6d30b04",
+              "quote": "Rubio labels international law a tool of elites and attacks ICC",
+              "field": "headline"
+            },
+            {
+              "article_id": "06726089b164",
+              "quote": "quoting laws to men with swords",
+              "field": "headline"
+            },
+            {
+              "article_id": "340d5e8a0952",
+              "quote": "Rubio assails international court in speech to conservative legal group",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with Rubio's attack on the ICC and his description of international law as a tool of elites.",
+              "sources": [
+                "cd9fe6d30b04",
+                "06726089b164",
+                "340d5e8a0952"
+              ]
+            },
+            {
+              "text": "Quotes Rubio denouncing the 'weaponization of international law' and the ICC's powers deriving from laws the US does not consent to.",
+              "sources": [
+                "06726089b164"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "Secretary of State Marco Rubio spoke on Friday at the Federalist Society's National Lawyers Convention, his first speech after Republican midterm losses. Some reports say he attacked the International Criminal Court and international law. Others say he played down the midterm defeats, and attendees discussed a possible 2028 run.",
+        "sources": [
+          "80fdfe6e1bf9",
+          "3e92f0df0a20",
+          "c632bfaf4d24",
+          "cd9fe6d30b04",
+          "06726089b164",
+          "340d5e8a0952"
+        ]
+      },
+      "conclusion": {
+        "text": "Coverage agrees Rubio addressed the Federalist Society after Republican midterm losses. West-bloc outlets lead with domestic politics, the midterms, 2028 talk and his daughter. East-bloc outlets lead with his attack on the ICC and international law. No outlets contradict one another.",
+        "sources": [
+          "80fdfe6e1bf9",
+          "3e92f0df0a20",
+          "c632bfaf4d24",
+          "cd9fe6d30b04",
+          "06726089b164",
+          "340d5e8a0952"
+        ]
+      },
+      "validation": {
+        "kept": 24,
+        "dropped_by_reason": {}
+      }
+    },
+    {
+      "id": "033a82db7d8a",
+      "title": "Zelensky says US floated Ukraine ceding Donbas in exchange for NATO membership",
+      "rank": 8,
+      "outlet_count": 6,
+      "coverage": {
+        "lean": {
+          "left": 0,
+          "centre": 3,
+          "right": 1
+        },
+        "bloc": {
+          "west": 4,
+          "east": 2
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "cdda4ef5ba0e",
+          "outlet_id": "france24",
+          "headline": "US proposed Ukraine cedes Donbas in exchange for joining NATO, Zelensky says",
+          "snippet": "President Zelensky said the US had proposed ceding Ukraine's eastern city of Donbas to Russia, in exchange for Ukrainian membership of NATO, following the latest round of peace talks in Abu Dhabi…",
+          "url": "https://www.france24.com/en/europe/20261114-us-negotiators-suggest-ukraine-cedes-territory-in-exchange-for-nato-membership",
+          "published_at": "2026-11-14T10:30:04Z",
+          "published_at_estimated": false,
+          "image_url": "https://s.france24.com/media/display/70cfdcca-e012-11f1-8f8f-5f54d898a954/w:1024/p:16x9/AP26316802067115.jpg"
+        },
+        {
+          "id": "635a8b00315a",
+          "outlet_id": "dw",
+          "headline": "Ukraine: Zelenskyy says security deal could go to referendum",
+          "snippet": "The US has broached the idea of Kyiv giving up the Donbas region in exchange for NATO membership, the Ukrainian president said.",
+          "url": "https://www.dw.com/en/ukraine-zelenskyy-says-security-deal-could-go-to-referendum/a-79947535?maca=en-rss-en-world-4025-xml-mrss",
+          "published_at": "2026-11-14T11:40:00Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "f1354cc6721f",
+          "outlet_id": "bbc",
+          "headline": "US has floated Ukraine ceding Donbas for Nato membership, Zelensky says",
+          "snippet": "The Ukrainian president says US envoys touted the exchange as part of efforts to end the war with Russia.",
+          "url": "https://www.bbc.co.uk/news/articles/cwvg2l312ylqo",
+          "published_at": "2026-11-14T11:41:20Z",
+          "published_at_estimated": false,
+          "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/d028/live/47c10ab0-e013-11f1-b441-2b33b063138f.jpg"
+        },
+        {
+          "id": "3583493b340b",
+          "outlet_id": "aljazeera",
+          "headline": "Three killed in Russia as Ukraine claims US floated NATO membership option",
+          "snippet": "Zelenskyy says the US asked for the first time whether Kyiv would cede land to Moscow in exchange for the NATO bid.",
+          "url": "https://www.aljazeera.com/news/2026/11/14/three-killed-in-russia-as-ukraine-claims-us-floated-nato-membership-option",
+          "published_at": "2026-11-14T11:43:06Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "ea5a56a7367c",
+          "outlet_id": "thehindu",
+          "headline": "U.S. proposes Ukraine cede territory in exchange for joining NATO: Zelensky",
+          "snippet": "Volodymyr Zelensky said Russia had rejected a ceasefire on energy targets at talks in Abu Dhabi, as Moscow was “betting everything” on this winter’s campaign",
+          "url": "https://www.thehindu.com/news/international/us-proposes-ukraine-cede-territory-in-exchange-for-joining-nato-zelensky/article71701653.ece",
+          "published_at": "2026-11-14T12:37:48Z",
+          "published_at_estimated": false,
+          "image_url": "https://th-i.thgim.com/public/incoming/4a9pjg/article71701714.ece/alternates/LANDSCAPE_1200/2026-11-11T112134Z_548942827_RC2NLOACGMCS_RTRMADP_3_UKRAINE-CRISIS-ZELENSKIY-DENMARK.JPG"
+        },
+        {
+          "id": "94f701c8fbf0",
+          "outlet_id": "dailymail",
+          "headline": "US said Ukraine could give Donbas to Russia in exchange for joining Nato, Zelensky claims as peace talks end with no breakthrough",
+          "snippet": "Ukraine's president's comments on Saturday - in which he also said Russia has rejected an energy ceasefire - come as efforts to end the war continued during peace talks this week.",
+          "url": "https://www.dailymail.com/news/article-16292401/Ukraine-Donbas-Russia-exchange-joining-Nato-Zelensky.html",
+          "published_at": "2026-11-14T12:41:06Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.dailymail.com/1s/2026/11/14/12/112505547-0-image-m-15_1794659827012.jpg"
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "Zelensky said the US raised the idea of Ukraine ceding territory, named by most as the Donbas, in exchange for NATO membership.",
+          "sources": [
+            "cdda4ef5ba0e",
+            "635a8b00315a",
+            "f1354cc6721f",
+            "3583493b340b",
+            "ea5a56a7367c",
+            "94f701c8fbf0"
+          ]
+        },
+        {
+          "text": "The remarks followed peace talks in Abu Dhabi.",
+          "sources": [
+            "cdda4ef5ba0e",
+            "ea5a56a7367c"
+          ]
+        },
+        {
+          "text": "Zelensky said Russia had rejected a ceasefire on energy targets.",
+          "sources": [
+            "ea5a56a7367c",
+            "94f701c8fbf0"
+          ]
+        },
+        {
+          "text": "The proposal was described as part of efforts to end the war with Russia.",
+          "sources": [
+            "f1354cc6721f",
+            "94f701c8fbf0"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "cdda4ef5ba0e",
+              "quote": "US proposed Ukraine cedes Donbas in exchange for joining NATO, Zelensky says",
+              "field": "headline"
+            },
+            {
+              "article_id": "635a8b00315a",
+              "quote": "Zelenskyy says security deal could go to referendum",
+              "field": "headline"
+            },
+            {
+              "article_id": "f1354cc6721f",
+              "quote": "US has floated Ukraine ceding Donbas for Nato membership",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the reported US proposal of Donbas in exchange for NATO membership, attributed to Zelensky.",
+              "sources": [
+                "cdda4ef5ba0e",
+                "635a8b00315a",
+                "f1354cc6721f"
+              ]
+            },
+            {
+              "text": "One headline leads with Zelensky saying a security deal could go to a referendum.",
+              "sources": [
+                "635a8b00315a"
+              ]
+            },
+            {
+              "text": "Says US envoys touted the exchange as part of efforts to end the war.",
+              "sources": [
+                "f1354cc6721f"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "right",
+          "headline_quotes": [
+            {
+              "article_id": "94f701c8fbf0",
+              "quote": "Zelensky claims as peace talks end with no breakthrough",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Pairs the reported US proposal with peace talks ending without a breakthrough and Russia rejecting an energy ceasefire.",
+              "sources": [
+                "94f701c8fbf0"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not mention Russia rejecting an energy ceasefire or the talks ending with no breakthrough.",
+          "sources": [
+            "94f701c8fbf0"
+          ]
+        },
+        {
+          "lean": "right",
+          "text": "Right coverage does not mention a possible referendum on a security deal.",
+          "sources": [
+            "635a8b00315a"
+          ]
+        },
+        {
+          "lean": "right",
+          "text": "Right coverage does not mention that the talks took place in Abu Dhabi.",
+          "sources": [
+            "cdda4ef5ba0e"
+          ]
+        }
+      ],
+      "contested_claims": [
+        {
+          "claim": "Donbas is described as an eastern city of Ukraine.",
+          "asserted_by": [
+            "cdda4ef5ba0e"
+          ],
+          "disputed_by": [
+            "635a8b00315a"
+          ]
+        }
+      ],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "f1354cc6721f",
+              "quote": "US has floated Ukraine ceding Donbas for Nato membership, Zelensky says",
+              "field": "headline"
+            },
+            {
+              "article_id": "94f701c8fbf0",
+              "quote": "peace talks end with no breakthrough",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Headlines name the Donbas specifically as the territory in the reported exchange.",
+              "sources": [
+                "cdda4ef5ba0e",
+                "f1354cc6721f",
+                "94f701c8fbf0"
+              ]
+            },
+            {
+              "text": "Mentions a possible referendum on a security deal.",
+              "sources": [
+                "635a8b00315a"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "3583493b340b",
+              "quote": "Three killed in Russia as Ukraine claims US floated NATO membership option",
+              "field": "headline"
+            },
+            {
+              "article_id": "ea5a56a7367c",
+              "quote": "U.S. proposes Ukraine cede territory in exchange for joining NATO: Zelensky",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Refers to ceding land or territory rather than naming the Donbas.",
+              "sources": [
+                "3583493b340b",
+                "ea5a56a7367c"
+              ]
+            },
+            {
+              "text": "Reports three killed in Russia and says the US asked for the first time about ceding land.",
+              "sources": [
+                "3583493b340b"
+              ]
+            },
+            {
+              "text": "Reports Zelensky saying Moscow was betting everything on this winter's campaign.",
+              "sources": [
+                "ea5a56a7367c"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "Ukrainian President Volodymyr Zelensky said the US had proposed that Ukraine cede the Donbas to Russia in exchange for NATO membership. He spoke after the latest round of peace talks in Abu Dhabi, and also said Russia had rejected a ceasefire on energy targets.",
+        "sources": [
+          "cdda4ef5ba0e",
+          "635a8b00315a",
+          "f1354cc6721f",
+          "3583493b340b",
+          "ea5a56a7367c",
+          "94f701c8fbf0"
+        ]
+      },
+      "conclusion": {
+        "text": "All outlets report Zelensky saying the US raised Ukraine ceding territory for NATO membership. Western outlets name the Donbas and some stress the referendum or no breakthrough, while Eastern outlets add deaths in Russia and Moscow's winter campaign. One outlet calls Donbas a city, another a region.",
+        "sources": [
+          "cdda4ef5ba0e",
+          "635a8b00315a",
+          "f1354cc6721f",
+          "3583493b340b",
+          "ea5a56a7367c",
+          "94f701c8fbf0"
+        ]
+      },
+      "validation": {
+        "kept": 27,
+        "dropped_by_reason": {}
+      }
+    },
+    {
+      "id": "842c35333092",
+      "title": "Democrat Jonathan Kreiss-Tomkins wins Alaska governor's race",
+      "rank": 9,
+      "outlet_count": 4,
+      "coverage": {
+        "lean": {
+          "left": 1,
+          "centre": 1,
+          "right": 2
+        },
+        "bloc": {
+          "west": 4,
+          "east": 0
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": "west"
+      },
+      "articles": [
+        {
+          "id": "380242543a84",
+          "outlet_id": "nbc",
+          "headline": "Democrat Jonathan Kreiss-Tomkins wins the Alaska governor’s race",
+          "snippet": "Democrat Jonathan Kreiss-Tomkins has won the Alaska governor’s race, NBC News projects, flipping control of the office from Republicans.",
+          "url": "https://www.nbcnews.com/politics/2026-election/jonathan-kreiss-tomkins-democrat-wins-alaska-governor-race-rcna606558",
+          "published_at": "2026-11-14T05:05:00Z",
+          "published_at_estimated": false,
+          "image_url": "https://media-cldnry.s-nbcnews.com/image/upload/t_fit_1500w/rockcms/2026-10/261030-Jonathan-Kreiss-Tomkins-ch-1321-9e72b7.jpg"
+        },
+        {
+          "id": "d426869da4c3",
+          "outlet_id": "npr",
+          "headline": "Democrat Jonathan Kreiss-Tomkins wins race for Alaska governor, replaces a Republican",
+          "snippet": "Kreiss-Tomkins, a former state legislator, ran a campaign emphasizing bipartisanship in the the state that usually votes Republican. At 37, he'll be the youngest governor in the state's history.",
+          "url": "https://www.npr.org/2026/11/14/g-s1-151719/midterms-alaska-governor-kreiss-tomkins",
+          "published_at": "2026-11-14T05:12:43Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "bed05098b50a",
+          "outlet_id": "dailymail",
+          "headline": "Democrat wins Alaska governor's race for the first time in nearly 30 years as Yale dropout, 37, defeats former talk show host",
+          "snippet": "His victory means Democrats will control the governor's office in 30 states, including several they flipped after years of Republican control in places such as Iowa, Georgia, Ohio and Texas.",
+          "url": "https://www.dailymail.com/news/article-16292045/Jonathan-Kreiss-Tomkins-Democrat-Alaska-Governor.html",
+          "published_at": "2026-11-14T06:11:40Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.dailymail.com/1s/2026/11/14/05/112503371-0-image-m-14_1794633620747.jpg"
+        },
+        {
+          "id": "43a004a1dca9",
+          "outlet_id": "nypost",
+          "headline": "Jonathan Kreiss-Tomkins becomes first Democrat since 1998 elected governor in Alaska",
+          "snippet": "His victory means Democrats will control the governor’s office in 30 states.",
+          "url": "https://nypost.com/2026/11/14/us-news/jonathan-kreiss-tomkins-becomes-first-democrat-since-1998-elected-governor-in-alaska/",
+          "published_at": "2026-11-14T07:17:04Z",
+          "published_at_estimated": false,
+          "image_url": "https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2Falaska-gubernatorial-candidate-jonathan-kreiss-148667427.jpg?w%3D1024"
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "Democrat Jonathan Kreiss-Tomkins won the Alaska governor's race.",
+          "sources": [
+            "380242543a84",
+            "d426869da4c3",
+            "bed05098b50a",
+            "43a004a1dca9"
+          ]
+        },
+        {
+          "text": "His win takes the governor's office from Republican control.",
+          "sources": [
+            "380242543a84",
+            "d426869da4c3"
+          ]
+        },
+        {
+          "text": "Kreiss-Tomkins is 37 years old.",
+          "sources": [
+            "d426869da4c3",
+            "bed05098b50a"
+          ]
+        },
+        {
+          "text": "He is the first Democrat to win the Alaska governorship in nearly 30 years, since 1998.",
+          "sources": [
+            "bed05098b50a",
+            "43a004a1dca9"
+          ]
+        },
+        {
+          "text": "His victory means Democrats will control the governor's office in 30 states.",
+          "sources": [
+            "bed05098b50a",
+            "43a004a1dca9"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "380242543a84",
+              "quote": "NBC News projects",
+              "field": "snippet"
+            },
+            {
+              "article_id": "380242543a84",
+              "quote": "flipping control of the office from Republicans",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the result as a network projection and the flip of the office from Republicans.",
+              "sources": [
+                "380242543a84"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "d426869da4c3",
+              "quote": "ran a campaign emphasizing bipartisanship",
+              "field": "snippet"
+            },
+            {
+              "article_id": "d426869da4c3",
+              "quote": "the youngest governor in the state's history",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Emphasises his bipartisan campaign in a usually Republican state, his legislative background and that he will be the state's youngest governor.",
+              "sources": [
+                "d426869da4c3"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "right",
+          "headline_quotes": [
+            {
+              "article_id": "bed05098b50a",
+              "quote": "for the first time in nearly 30 years",
+              "field": "headline"
+            },
+            {
+              "article_id": "bed05098b50a",
+              "quote": "Yale dropout, 37, defeats former talk show host",
+              "field": "headline"
+            },
+            {
+              "article_id": "43a004a1dca9",
+              "quote": "first Democrat since 1998 elected governor in Alaska",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the historical rarity of a Democratic win in Alaska.",
+              "sources": [
+                "bed05098b50a",
+                "43a004a1dca9"
+              ]
+            },
+            {
+              "text": "Places the result in a national tally of Democrats controlling 30 governorships, including flips in Iowa, Georgia, Ohio and Texas.",
+              "sources": [
+                "bed05098b50a",
+                "43a004a1dca9"
+              ]
+            },
+            {
+              "text": "Describes the winner as a Yale dropout and his opponent as a former talk show host.",
+              "sources": [
+                "bed05098b50a"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "left",
+          "text": "Does not mention that Democrats will control the governor's office in 30 states.",
+          "sources": [
+            "bed05098b50a",
+            "43a004a1dca9"
+          ]
+        },
+        {
+          "lean": "left",
+          "text": "Does not mention his age of 37.",
+          "sources": [
+            "d426869da4c3",
+            "bed05098b50a"
+          ]
+        },
+        {
+          "lean": "centre",
+          "text": "Does not mention that Democrats will control the governor's office in 30 states.",
+          "sources": [
+            "bed05098b50a",
+            "43a004a1dca9"
+          ]
+        },
+        {
+          "lean": "right",
+          "text": "Does not mention his campaign's emphasis on bipartisanship or his past as a state legislator.",
+          "sources": [
+            "d426869da4c3"
+          ]
+        }
+      ],
+      "contested_claims": [],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "380242543a84",
+              "quote": "flipping control of the office from Republicans",
+              "field": "snippet"
+            },
+            {
+              "article_id": "d426869da4c3",
+              "quote": "the youngest governor in the state's history",
+              "field": "snippet"
+            },
+            {
+              "article_id": "43a004a1dca9",
+              "quote": "first Democrat since 1998 elected governor in Alaska",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Emphasises the shift from Republican control and the first Democratic win since 1998.",
+              "sources": [
+                "380242543a84",
+                "d426869da4c3",
+                "bed05098b50a",
+                "43a004a1dca9"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "Democrat Jonathan Kreiss-Tomkins has won the Alaska governor's race, taking the office from Republicans. He is 37, a former state legislator, and the first Democrat elected Alaska governor since 1998.",
+        "sources": [
+          "380242543a84",
+          "d426869da4c3",
+          "bed05098b50a",
+          "43a004a1dca9"
+        ]
+      },
+      "conclusion": null,
+      "validation": {
+        "kept": 26,
+        "dropped_by_reason": {
+          "untrusted_text": 1
+        }
+      }
+    },
+    {
+      "id": "8913c60d5479",
+      "title": "Iran claims strike on US radar in Bahrain as US downs drones",
+      "rank": 10,
+      "outlet_count": 4,
+      "coverage": {
+        "lean": {
+          "left": 2,
+          "centre": 1,
+          "right": 0
+        },
+        "bloc": {
+          "west": 3,
+          "east": 1
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "36ae998bbd37",
+          "outlet_id": "guardian",
+          "headline": "Iran says it targeted US military radar in Bahrain in retaliatory strike",
+          "snippet": "First direct attack on US military installations for months was in response to US airstrike on communications tower Iran’s Islamic Revolutionary Guard Corps says it has targeted and destroyed a US…",
+          "url": "https://www.theguardian.com/world/2026/nov/13/iran-us-radar-bahrain-sirik-hormuz",
+          "published_at": "2026-11-13T13:52:11Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.guim.co.uk/img/media/f76fa0a8488f1c05bc755c935f60793cc0caee3d/448_0_4480_3584/master/4480.jpg?width=460&quality=85&auto=format&fit=max&s=42eddb21a5d14fc74cde9eea68dad583"
+        },
+        {
+          "id": "8105050cf663",
+          "outlet_id": "huffpost",
+          "headline": "U.S. Military Downs 2 Iranian Attack Drones As Iran Claims A Strike On U.S. Radar In Bahrain",
+          "snippet": "Neither Iran’s claim of striking the radar nor its account of the tanker incident could be independently verified.",
+          "url": "https://www.huffpost.com/entry/united-states-military-downs-2-iranian-attack-drones-iran-claims-strike-american-radar-bahrain_n_6af71b02e4b065342906cbdd",
+          "published_at": "2026-11-13T14:18:08Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "b3bc9ca3e1f9",
+          "outlet_id": "dw",
+          "headline": "Iran targeted US radar system in Bahrain",
+          "snippet": "Iran claimed it struck US radar systems in Bahrain, while the US said it had intercepted the attacks. Clashes continue in the Strait of Hormuz, as the war remains in a state of de-escalation.",
+          "url": "https://www.dw.com/en/iran-targeted-us-radar-system-in-bahrain/a-79942640?maca=en-rss-en-world-4025-xml-mrss",
+          "published_at": "2026-11-13T15:32:00Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "8ea846b83cac",
+          "outlet_id": "thehindu",
+          "headline": "Iran says it struck U.S. military radar in Bahrain",
+          "snippet": "The IRGC says the strait is closed, while the U.S. Navy claims that it has opened a southern route for commercial vessels to exit and enter the critical waterway, while maintaining its “ironclad…",
+          "url": "https://www.thehindu.com/news/international/iran-says-it-struck-us-military-radar-in-bahrain/article71696537.ece",
+          "published_at": "2026-11-13T15:51:14Z",
+          "published_at_estimated": false,
+          "image_url": "https://th-i.thgim.com/public/incoming/d845dx/article71696582.ece/alternates/LANDSCAPE_1200/2026-11-08T175031Z_603691181_RC2PJOACU6TK_RTRMADP_3_IRAN-CRISIS.JPG"
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "Iran says it targeted or struck a US military radar in Bahrain.",
+          "sources": [
+            "36ae998bbd37",
+            "8105050cf663",
+            "b3bc9ca3e1f9",
+            "8ea846b83cac"
+          ]
+        },
+        {
+          "text": "The US says it intercepted the Iranian attacks, with one report specifying two Iranian attack drones were downed.",
+          "sources": [
+            "8105050cf663",
+            "b3bc9ca3e1f9"
+          ]
+        },
+        {
+          "text": "Tensions continue over the Strait of Hormuz, with clashes and competing claims about whether the waterway is open.",
+          "sources": [
+            "b3bc9ca3e1f9",
+            "8ea846b83cac"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "36ae998bbd37",
+              "quote": "in retaliatory strike",
+              "field": "headline"
+            },
+            {
+              "article_id": "36ae998bbd37",
+              "quote": "First direct attack on US military installations for months",
+              "field": "snippet"
+            },
+            {
+              "article_id": "8105050cf663",
+              "quote": "U.S. Military Downs 2 Iranian Attack Drones",
+              "field": "headline"
+            },
+            {
+              "article_id": "8105050cf663",
+              "quote": "could be independently verified",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Presents the strike as retaliation for a US airstrike on a communications tower and as the first direct attack on US installations for months.",
+              "sources": [
+                "36ae998bbd37"
+              ]
+            },
+            {
+              "text": "Leads with the US downing two drones and notes that Iran's claims, including about a tanker incident, could not be independently verified.",
+              "sources": [
+                "8105050cf663"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "b3bc9ca3e1f9",
+              "quote": "Iran targeted US radar system in Bahrain",
+              "field": "headline"
+            },
+            {
+              "article_id": "b3bc9ca3e1f9",
+              "quote": "the US said it had intercepted the attacks",
+              "field": "snippet"
+            },
+            {
+              "article_id": "b3bc9ca3e1f9",
+              "quote": "the war remains in a state of de-escalation",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Sets Iran's claim against the US statement that the attacks were intercepted.",
+              "sources": [
+                "b3bc9ca3e1f9"
+              ]
+            },
+            {
+              "text": "Places the incident within continuing clashes in the Strait of Hormuz and a war described as in de-escalation.",
+              "sources": [
+                "b3bc9ca3e1f9"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "left",
+          "text": "Left coverage does not mention continuing clashes in the Strait of Hormuz or the war being described as in a state of de-escalation.",
+          "sources": [
+            "b3bc9ca3e1f9"
+          ]
+        },
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not mention that the strike was described as retaliation for a US airstrike on a communications tower.",
+          "sources": [
+            "36ae998bbd37"
+          ]
+        },
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not mention that Iran's claims could not be independently verified.",
+          "sources": [
+            "8105050cf663"
+          ]
+        }
+      ],
+      "contested_claims": [
+        {
+          "claim": "Iran's strike hit and destroyed a US radar in Bahrain.",
+          "asserted_by": [
+            "36ae998bbd37",
+            "8ea846b83cac"
+          ],
+          "disputed_by": [
+            "b3bc9ca3e1f9",
+            "8105050cf663"
+          ]
+        }
+      ],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "36ae998bbd37",
+              "quote": "Iran says it targeted US military radar in Bahrain in retaliatory strike",
+              "field": "headline"
+            },
+            {
+              "article_id": "8105050cf663",
+              "quote": "Neither Iran’s claim of striking the radar nor its account of the tanker incident could be independently verified.",
+              "field": "snippet"
+            },
+            {
+              "article_id": "b3bc9ca3e1f9",
+              "quote": "the US said it had intercepted the attacks",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Pairs Iran's claim with US statements of interception and notes the claim is unverified.",
+              "sources": [
+                "8105050cf663",
+                "b3bc9ca3e1f9"
+              ]
+            },
+            {
+              "text": "Gives context of retaliation for a US airstrike and continuing clashes in the Strait of Hormuz.",
+              "sources": [
+                "36ae998bbd37",
+                "b3bc9ca3e1f9"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "8ea846b83cac",
+              "quote": "Iran says it struck U.S. military radar in Bahrain",
+              "field": "headline"
+            },
+            {
+              "article_id": "8ea846b83cac",
+              "quote": "The IRGC says the strait is closed",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Foregrounds competing claims over the strait: the IRGC says it is closed, while the US Navy says it opened a southern route for commercial vessels.",
+              "sources": [
+                "8ea846b83cac"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "Iran's Revolutionary Guard says it struck a US military radar in Bahrain, which one report describes as retaliation for a US airstrike on a communications tower. US forces said they downed two Iranian attack drones and intercepted the attacks. Reports say the Iranian claim could not be independently verified and that tensions continue around the Strait of Hormuz.",
+        "sources": [
+          "36ae998bbd37",
+          "8105050cf663",
+          "b3bc9ca3e1f9",
+          "8ea846b83cac"
+        ]
+      },
+      "conclusion": {
+        "text": "All outlets report Iran's claim of striking a US radar in Bahrain. Left coverage stresses retaliation and unverifiability, the centre stresses interception and Hormuz clashes, and the East outlet the dispute over the strait. Whether the radar was destroyed or the attacks intercepted remains contested between Iranian and US accounts.",
+        "sources": [
+          "36ae998bbd37",
+          "8105050cf663",
+          "b3bc9ca3e1f9",
+          "8ea846b83cac"
+        ]
+      },
+      "validation": {
+        "kept": 28,
+        "dropped_by_reason": {}
+      }
+    }
+  ]
+}
