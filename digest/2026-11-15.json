@@ -1,0 +1,3914 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-11-15T13:45:16.495978Z",
+  "date": "2026-11-15",
+  "meta": {
+    "model": "claude-opus-5-5",
+    "cost_usd": 0.620844,
+    "outlets_polled": 29,
+    "articles_collected": 537,
+    "warnings": [
+      "1 feed(s) failed during collect",
+      "1 feed item(s) dropped at collect (link_off_domain=1)"
+    ],
+    "validation": {
+      "kept": 282,
+      "dropped_by_reason": {
+        "untrusted_text": 1
+      }
+    }
+  },
+  "outlets": [
+    {
+      "id": "guardian",
+      "name": "The Guardian",
+      "lean": "left",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United Kingdom",
+      "home_url": "https://www.theguardian.com/",
+      "rating_basis": "AllSides media bias rating (Lean Left), checked Oct 2026"
+    },
+    {
+      "id": "independent",
+      "name": "The Independent",
+      "lean": "left",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United Kingdom",
+      "home_url": "https://www.independent.co.uk/",
+      "rating_basis": "AllSides media bias rating (Lean Left), checked Oct 2026"
+    },
+    {
+      "id": "mirror",
+      "name": "Daily Mirror",
+      "lean": "left",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United Kingdom",
+      "home_url": "https://www.mirror.co.uk/",
+      "rating_basis": "Ad Fontes Media bias rating (Skews Left), checked Oct 2026"
+    },
+    {
+      "id": "bbc",
+      "name": "BBC News",
+      "lean": "centre",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "public-service",
+      "country": "United Kingdom",
+      "home_url": "https://www.bbc.co.uk/news",
+      "rating_basis": "AllSides media bias rating (Center), checked Oct 2026"
+    },
+    {
+      "id": "sky",
+      "name": "Sky News",
+      "lean": "centre",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United Kingdom",
+      "home_url": "https://news.sky.com/",
+      "rating_basis": "Ad Fontes Media bias rating (Middle), checked Oct 2026"
+    },
+    {
+      "id": "telegraph",
+      "name": "The Telegraph",
+      "lean": "right",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United Kingdom",
+      "home_url": "https://www.telegraph.co.uk/",
+      "rating_basis": "AllSides media bias rating (Lean Right), checked Oct 2026"
+    },
+    {
+      "id": "dailymail",
+      "name": "Daily Mail",
+      "lean": "right",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United Kingdom",
+      "home_url": "https://www.dailymail.co.uk/",
+      "rating_basis": "AllSides media bias rating (Right), checked Oct 2026"
+    },
+    {
+      "id": "thesun",
+      "name": "The Sun",
+      "lean": "right",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United Kingdom",
+      "home_url": "https://www.thesun.co.uk/",
+      "rating_basis": "AllSides media bias rating (Right), checked Oct 2026"
+    },
+    {
+      "id": "nyt",
+      "name": "The New York Times",
+      "lean": "left",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United States",
+      "home_url": "https://www.nytimes.com/",
+      "rating_basis": "AllSides media bias rating (Lean Left), checked Oct 2026"
+    },
+    {
+      "id": "nbc",
+      "name": "NBC News",
+      "lean": "left",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United States",
+      "home_url": "https://www.nbcnews.com/",
+      "rating_basis": "AllSides media bias rating (Lean Left), checked Oct 2026"
+    },
+    {
+      "id": "huffpost",
+      "name": "HuffPost",
+      "lean": "left",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United States",
+      "home_url": "https://www.huffpost.com/",
+      "rating_basis": "AllSides media bias rating (Left), checked Oct 2026"
+    },
+    {
+      "id": "npr",
+      "name": "NPR",
+      "lean": "centre",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "public-service",
+      "country": "United States",
+      "home_url": "https://www.npr.org/",
+      "rating_basis": "Ad Fontes Media bias rating (Middle / Skews Left), checked Oct 2026"
+    },
+    {
+      "id": "axios",
+      "name": "Axios",
+      "lean": "centre",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United States",
+      "home_url": "https://www.axios.com/",
+      "rating_basis": "AllSides media bias rating (Center), checked Oct 2026"
+    },
+    {
+      "id": "fox",
+      "name": "Fox News",
+      "lean": "right",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United States",
+      "home_url": "https://www.foxnews.com/",
+      "rating_basis": "AllSides media bias rating (Right), checked Oct 2026"
+    },
+    {
+      "id": "nypost",
+      "name": "New York Post",
+      "lean": "right",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United States",
+      "home_url": "https://nypost.com/",
+      "rating_basis": "AllSides media bias rating (Lean Right), checked Oct 2026"
+    },
+    {
+      "id": "examiner",
+      "name": "Washington Examiner",
+      "lean": "right",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United States",
+      "home_url": "https://www.washingtonexaminer.com/",
+      "rating_basis": "AllSides media bias rating (Lean Right), checked Oct 2026"
+    },
+    {
+      "id": "france24",
+      "name": "France 24",
+      "lean": "centre",
+      "region": "europe",
+      "bloc": "west",
+      "ownership": "public-service",
+      "country": "France",
+      "home_url": "https://www.france24.com/en/",
+      "rating_basis": "Ad Fontes Media bias rating (Middle), checked Oct 2026"
+    },
+    {
+      "id": "dw",
+      "name": "DW (Deutsche Welle)",
+      "lean": "centre",
+      "region": "europe",
+      "bloc": "west",
+      "ownership": "public-service",
+      "country": "Germany",
+      "home_url": "https://www.dw.com/en/",
+      "rating_basis": "AllSides media bias rating (Center), checked Oct 2026"
+    },
+    {
+      "id": "aljazeera",
+      "name": "Al Jazeera English",
+      "lean": null,
+      "region": "middle_east",
+      "bloc": "east",
+      "ownership": "state-funded",
+      "country": "Qatar",
+      "home_url": "https://www.aljazeera.com/",
+      "rating_basis": "Funded by the State of Qatar; no left/right tag applied"
+    },
+    {
+      "id": "thenational",
+      "name": "The National (UAE)",
+      "lean": null,
+      "region": "middle_east",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "United Arab Emirates",
+      "home_url": "https://www.thenationalnews.com/",
+      "rating_basis": "Owned by International Media Investments (Abu Dhabi); no left/right tag applied"
+    },
+    {
+      "id": "timesofisrael",
+      "name": "The Times of Israel",
+      "lean": null,
+      "region": "middle_east",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "Israel",
+      "home_url": "https://www.timesofisrael.com/",
+      "rating_basis": "Privately owned; no left/right tag applied"
+    },
+    {
+      "id": "cgtn",
+      "name": "CGTN",
+      "lean": null,
+      "region": "asia",
+      "bloc": "east",
+      "ownership": "state-controlled",
+      "country": "China",
+      "home_url": "https://www.cgtn.com/",
+      "rating_basis": "China Global Television Network, part of state broadcaster China Media Group"
+    },
+    {
+      "id": "ecns",
+      "name": "ECNS (China News Service)",
+      "lean": null,
+      "region": "asia",
+      "bloc": "east",
+      "ownership": "state-controlled",
+      "country": "China",
+      "home_url": "https://www.ecns.cn/",
+      "rating_basis": "English service of China News Service, a state news agency"
+    },
+    {
+      "id": "scmp",
+      "name": "South China Morning Post",
+      "lean": null,
+      "region": "asia",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "Hong Kong",
+      "home_url": "https://www.scmp.com/",
+      "rating_basis": "Owned by Alibaba Group; no left/right tag applied"
+    },
+    {
+      "id": "toi",
+      "name": "The Times of India",
+      "lean": null,
+      "region": "asia",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "India",
+      "home_url": "https://timesofindia.indiatimes.com/",
+      "rating_basis": "Privately owned (Bennett, Coleman & Co.); no left/right tag applied"
+    },
+    {
+      "id": "thehindu",
+      "name": "The Hindu",
+      "lean": null,
+      "region": "asia",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "India",
+      "home_url": "https://www.thehindu.com/",
+      "rating_basis": "Privately owned (The Hindu Group); no left/right tag applied"
+    },
+    {
+      "id": "moscowtimes",
+      "name": "The Moscow Times",
+      "lean": null,
+      "region": "europe",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "Russia",
+      "home_url": "https://www.themoscowtimes.com/",
+      "rating_basis": "Independent, Amsterdam-based since 2022; designated \"undesirable\" by Russia; no left/right tag applied"
+    },
+    {
+      "id": "japantimes",
+      "name": "The Japan Times",
+      "lean": null,
+      "region": "asia",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "Japan",
+      "home_url": "https://www.japantimes.co.jp/",
+      "rating_basis": "Privately owned (News2u Holdings); no left/right tag applied"
+    },
+    {
+      "id": "koreaherald",
+      "name": "The Korea Herald",
+      "lean": null,
+      "region": "asia",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "South Korea",
+      "home_url": "https://www.koreaherald.com/",
+      "rating_basis": "Privately owned (Herald Corporation); no left/right tag applied"
+    }
+  ],
+  "stories": [
+    {
+      "id": "fb98bf3d5312",
+      "title": "US officials blame faulty router upgrade for nationwide FAA ground stop",
+      "rank": 1,
+      "outlet_count": 10,
+      "coverage": {
+        "lean": {
+          "left": 1,
+          "centre": 4,
+          "right": 1
+        },
+        "bloc": {
+          "west": 6,
+          "east": 4
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "75bda219f33e",
+          "outlet_id": "axios",
+          "headline": "FAA ends hours-long nationwide ground stop",
+          "snippet": "The FAA lifted its nationwide ground stop Friday night after hours of chaos and thousands of delays and cancellations. Why it matters: The effects of the rare and extreme move will likely ripple…",
+          "url": "https://www.axios.com/2026/11/13/faa-nationwide-ground-stop",
+          "published_at": "2026-11-14T02:10:10Z",
+          "published_at_estimated": false,
+          "image_url": "https://images.axios.com/GnUhQbvQbFZf-A--p4aNzjhRAXo=/0x0:1920x1080/1366x768/2025/11/06/1762458318387.jpeg"
+        },
+        {
+          "id": "cc470df789de",
+          "outlet_id": "axios",
+          "headline": "3,000 flights cancelled as FAA ground stop chaos stretches into 2nd day",
+          "snippet": "The chaos from the FAA's nationwide ground stop lingered into early Saturday morning, with thousands of flights cancelled as airlines played catch-up. Why it matters: Millions of travelers will find…",
+          "url": "https://www.axios.com/2026/11/14/faa-ground-stop-saturday",
+          "published_at": "2026-11-14T10:28:42Z",
+          "published_at_estimated": false,
+          "image_url": "https://images.axios.com/txIGVU9cS2v79j0W9r2prbqCWBQ=/0x873:7498x5091/1366x768/2026/11/14/1794651723742.jpeg"
+        },
+        {
+          "id": "396e400a9665",
+          "outlet_id": "nbc",
+          "headline": "FAA ground stop throws college football into chaos, while the NFL is safe",
+          "snippet": "A Federal Aviation Administration ground stop that lasted more than four hours and canceled over 7,000 flights Friday affected the travel plans for several pro and college teams across multiple…",
+          "url": "https://www.nbcnews.com/sports/college-football/faa-ground-stop-college-football-nfl-nba-nhl-rcna609309",
+          "published_at": "2026-11-14T16:42:41Z",
+          "published_at_estimated": false,
+          "image_url": "https://media-cldnry.s-nbcnews.com/image/upload/t_fit_1500w/rockcms/2026-11/261114-Oklahoma-Memorial-Stadium-ch-1110-0b9e72.jpg"
+        },
+        {
+          "id": "9ea7bffc1289",
+          "outlet_id": "axios",
+          "headline": "FAA back at \"full operations\" after Friday outage, Transportation Sec. says",
+          "snippet": "Transportation Secretary Sean Duffy said Saturday that all FAA systems are back to \"full operations\" after an hours-long outage Friday evening that grounded all air traffic across the U.S. The big…",
+          "url": "https://www.axios.com/2026/11/14/faa-ground-stop-outage-update",
+          "published_at": "2026-11-14T16:56:12Z",
+          "published_at_estimated": false,
+          "image_url": "https://images.axios.com/8yf1pmiMMDLYbNa2GXqdAcod0MM=/0x0:4000x2250/1366x768/2026/11/14/1794673567933.jpeg"
+        },
+        {
+          "id": "32f4488cd0bd",
+          "outlet_id": "npr",
+          "headline": "Maintenance gone awry caused nation-wide ground stop, says Transportation Secretary",
+          "snippet": "Transportation Secretary Sean Duffy points blame toward contractor in explaining Friday's nation-wide aviation ground stop.",
+          "url": "https://www.npr.org/2026/11/14/nx-s1-6040942/maintenance-gone-awry-caused-nation-wide-ground-stop-says-transportation-secretary",
+          "published_at": "2026-11-14T22:48:38Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "3900e3ec5b35",
+          "outlet_id": "bbc",
+          "headline": "How telecoms upgrade work sparked US flight chaos",
+          "snippet": "US officials say the disruption was caused by old equipment overloading and not a cyber-attack.",
+          "url": "https://www.bbc.co.uk/news/articles/cqx2wyvyr3zzo",
+          "published_at": "2026-11-14T23:11:27Z",
+          "published_at_estimated": false,
+          "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/14ef/live/f4aae840-dfd7-11f1-b441-2b33b063138f.jpg"
+        },
+        {
+          "id": "c0f84afd1ed7",
+          "outlet_id": "timesofisrael",
+          "headline": "US aviation shutdown blamed on single installed router undergoing routine maintenance",
+          "snippet": "Incident is latest in a string of mishaps for aging air traffic control telecom system, with routers that should have been replaced in 2006 thought to be culprit for mass failure",
+          "url": "https://www.timesofisrael.com/us-aviation-shutdown-blamed-on-l3-harris-installed-router-undergoing-routine-maintenance/",
+          "published_at": "2026-11-15T01:07:57Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "beaaa42a8040",
+          "outlet_id": "npr",
+          "headline": "FAA ground stop disrupts college football",
+          "snippet": "Some college football games were delayed a few hours on Saturday or postponed to Sunday. And in Oklahoma at least, there will be perks for fans to make up for the inconvenience, including cheap beers.",
+          "url": "https://www.npr.org/2026/11/14/nx-s1-6041115/faa-ground-stop-college-football-delays",
+          "published_at": "2026-11-15T01:13:59Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "26ccb97f7f07",
+          "outlet_id": "thehindu",
+          "headline": "U.S. air travel should recover from ground stop by end of November 15, FAA says",
+          "snippet": "New technology being added to the nation's air traffic control system overloaded antiquated equipment and caused “intermittent” communications and radar gaps, leading to the flight shutdown of more…",
+          "url": "https://www.thehindu.com/news/international/us-air-travel-should-recover-from-ground-stop-by-end-of-november-15-faa-says/article71703985.ece",
+          "published_at": "2026-11-15T02:56:54Z",
+          "published_at_estimated": false,
+          "image_url": "https://th-i.thgim.com/public/incoming/aobtxp/article71703998.ece/alternates/LANDSCAPE_1200/2026-11-14T154335Z_775010430_RC2ONOAU1BYX_RTRMADP_3_USA-FAA-GROUND-STOP.JPG"
+        },
+        {
+          "id": "4400f68165ec",
+          "outlet_id": "koreaherald",
+          "headline": "Repair of old copper wiring caused US flight disruption: Trump admin",
+          "snippet": "NEW YORK (AFP) -- Weary travelers endured more flight disruptions as service resumed at US airports after an hours-long total stoppage, with officials saying the situation should return to normal…",
+          "url": "https://www.koreaherald.com/article/10937466",
+          "published_at": "2026-11-15T04:21:12Z",
+          "published_at_estimated": false,
+          "image_url": "https://wimg.heraldcorp.com/news/cms/2026/11/15/rcv.YNA.20261115.PAF20261115061601009_T1.jpg"
+        },
+        {
+          "id": "096bab73978b",
+          "outlet_id": "bbc",
+          "headline": "Copper wire upgrade behind US flight suspension, transport secretary says",
+          "snippet": "The US government is trying to find out whether the chaos was caused by \"incompetence\" or faulty equipment.",
+          "url": "https://www.bbc.co.uk/news/articles/c6wy9lynq4qno",
+          "published_at": "2026-11-15T07:10:31Z",
+          "published_at_estimated": false,
+          "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/3177/live/2aeb3c20-e0c3-11f1-b441-2b33b063138f.jpg"
+        },
+        {
+          "id": "728dfc0e9f46",
+          "outlet_id": "thehindu",
+          "headline": "Trump administration blames ‘overloaded’ systems for ground stop after FAA lets flights resume",
+          "snippet": "Thousands of flights and potentially over a million travellers were affected from coast to coast",
+          "url": "https://www.thehindu.com/news/international/trump-administration-blames-overloaded-systems-for-ground-stop-after-faa-lets-flights-resume/article71700826.ece",
+          "published_at": "2026-11-15T08:56:34Z",
+          "published_at_estimated": false,
+          "image_url": "https://th-i.thgim.com/public/incoming/d1panq/article71700849.ece/alternates/LANDSCAPE_1200/AP11_14_2026_000003B.jpg"
+        },
+        {
+          "id": "ecbb521d0bc8",
+          "outlet_id": "aljazeera",
+          "headline": "What forced the US to ground all planes? A router switch, we now know",
+          "snippet": "US officials say a routine upgrade that went awry caused the mass disruption of air travel.",
+          "url": "https://www.aljazeera.com/news/2026/11/15/what-forced-the-us-to-ground-all-planes-a-router-switch-we-now-know",
+          "published_at": "2026-11-15T09:17:49Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "b1edf123c18d",
+          "outlet_id": "timesofisrael",
+          "headline": "FAA chief says US air travel should return to normal by ‘close of business’ Sunday",
+          "snippet": "After ground stop affected nearly 20,000 flights over weekend, Bryan Bedford predicts that air traffic will resume in full; lawmakers call for transportation chief's resignation",
+          "url": "https://www.timesofisrael.com/faa-chief-says-us-air-travel-should-return-to-normal-by-close-of-business-sunday/",
+          "published_at": "2026-11-15T11:04:03Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "97589cff8e2c",
+          "outlet_id": "france24",
+          "headline": "Air travel issues persist in the US after nationwide ground stop",
+          "snippet": "After almost five hours of grounded flights in the US, flights have resumed. However, passengers are still waiting and wading through tough logistics to get to their destinations after massive…",
+          "url": "https://www.france24.com/en/air-travel-issues-persist-in-the-us-after-nationwide-ground-stop",
+          "published_at": "2026-11-15T12:12:28Z",
+          "published_at_estimated": false,
+          "image_url": "https://s.france24.com/media/display/ae37617a-e0ec-11f1-9eb5-f71d22e7fea9/w:1024/p:16x9/EN-20261115-080531-080704-CS.jpg"
+        },
+        {
+          "id": "91918bcb6e37",
+          "outlet_id": "nypost",
+          "headline": "FAA router in middle-of-nowhere Arkansas identified as cause of nationwide flight chaos",
+          "snippet": "A single malfunctioning FAA router in rural Arkansas appears to have caused the air travel chaos that grounded all flights across the US Friday, according to a new report.",
+          "url": "https://nypost.com/2026/11/15/us-news/faa-router-in-middle-of-nowhere-arkansas-identified-as-cause-of-nationwide-flight-chaos/",
+          "published_at": "2026-11-15T13:37:59Z",
+          "published_at_estimated": false,
+          "image_url": "https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2Fen-wikipedia-org-wiki-south-148856391.jpg"
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "The FAA's nationwide ground stop grounded flights across the US for hours before being lifted and flights resumed.",
+          "sources": [
+            "75bda219f33e",
+            "9ea7bffc1289",
+            "97589cff8e2c",
+            "91918bcb6e37",
+            "4400f68165ec",
+            "728dfc0e9f46",
+            "396e400a9665"
+          ]
+        },
+        {
+          "text": "Thousands of flights were cancelled or delayed, with disruption continuing after the stop ended.",
+          "sources": [
+            "75bda219f33e",
+            "cc470df789de",
+            "396e400a9665",
+            "728dfc0e9f46",
+            "b1edf123c18d",
+            "97589cff8e2c",
+            "4400f68165ec"
+          ]
+        },
+        {
+          "text": "US officials attributed the stop to maintenance or upgrade work that went wrong.",
+          "sources": [
+            "32f4488cd0bd",
+            "3900e3ec5b35",
+            "096bab73978b",
+            "ecbb521d0bc8",
+            "c0f84afd1ed7",
+            "26ccb97f7f07",
+            "4400f68165ec"
+          ]
+        },
+        {
+          "text": "Old or antiquated equipment is described as part of the cause.",
+          "sources": [
+            "3900e3ec5b35",
+            "26ccb97f7f07",
+            "c0f84afd1ed7",
+            "4400f68165ec"
+          ]
+        },
+        {
+          "text": "A router is identified as the source of the failure.",
+          "sources": [
+            "c0f84afd1ed7",
+            "ecbb521d0bc8",
+            "91918bcb6e37"
+          ]
+        },
+        {
+          "text": "Transportation Secretary Sean Duffy gave the official explanation and said systems were back to full operations.",
+          "sources": [
+            "9ea7bffc1289",
+            "32f4488cd0bd",
+            "096bab73978b"
+          ]
+        },
+        {
+          "text": "College football games were disrupted, with some delayed or postponed.",
+          "sources": [
+            "396e400a9665",
+            "beaaa42a8040"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "396e400a9665",
+              "quote": "throws college football into chaos, while the NFL is safe",
+              "field": "headline"
+            },
+            {
+              "article_id": "396e400a9665",
+              "quote": "canceled over 7,000 flights Friday",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the effect on college and professional sports teams' travel.",
+              "sources": [
+                "396e400a9665"
+              ]
+            },
+            {
+              "text": "Gives a figure of over 7,000 cancelled flights on Friday.",
+              "sources": [
+                "396e400a9665"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "75bda219f33e",
+              "quote": "FAA ends hours-long nationwide ground stop",
+              "field": "headline"
+            },
+            {
+              "article_id": "32f4488cd0bd",
+              "quote": "Maintenance gone awry caused nation-wide ground stop",
+              "field": "headline"
+            },
+            {
+              "article_id": "3900e3ec5b35",
+              "quote": "not a cyber-attack",
+              "field": "snippet"
+            },
+            {
+              "article_id": "096bab73978b",
+              "quote": "Copper wire upgrade behind US flight suspension",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Foregrounds the Transportation Secretary's statements, including blame directed at a contractor.",
+              "sources": [
+                "9ea7bffc1289",
+                "32f4488cd0bd",
+                "096bab73978b"
+              ]
+            },
+            {
+              "text": "Reports officials ruling out a cyber-attack and a government inquiry into whether incompetence or faulty equipment was to blame.",
+              "sources": [
+                "3900e3ec5b35",
+                "096bab73978b"
+              ]
+            },
+            {
+              "text": "Emphasises lingering cancellations and passenger difficulties after flights resumed.",
+              "sources": [
+                "cc470df789de",
+                "97589cff8e2c",
+                "75bda219f33e"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "right",
+          "headline_quotes": [
+            {
+              "article_id": "91918bcb6e37",
+              "quote": "FAA router in middle-of-nowhere Arkansas identified as cause of nationwide flight chaos",
+              "field": "headline"
+            },
+            {
+              "article_id": "91918bcb6e37",
+              "quote": "according to a new report",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with a single malfunctioning router in rural Arkansas as the apparent cause, citing a new report.",
+              "sources": [
+                "91918bcb6e37"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "left",
+          "text": "Left coverage does not mention the cause officials gave for the ground stop.",
+          "sources": [
+            "32f4488cd0bd",
+            "3900e3ec5b35",
+            "096bab73978b",
+            "91918bcb6e37"
+          ]
+        },
+        {
+          "lean": "right",
+          "text": "Right coverage does not mention Transportation Secretary Sean Duffy or his statements.",
+          "sources": [
+            "9ea7bffc1289",
+            "32f4488cd0bd",
+            "096bab73978b"
+          ]
+        },
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not mention that the router was located in Arkansas.",
+          "sources": [
+            "91918bcb6e37"
+          ]
+        }
+      ],
+      "contested_claims": [],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "cc470df789de",
+              "quote": "3,000 flights cancelled as FAA ground stop chaos stretches into 2nd day",
+              "field": "headline"
+            },
+            {
+              "article_id": "3900e3ec5b35",
+              "quote": "How telecoms upgrade work sparked US flight chaos",
+              "field": "headline"
+            },
+            {
+              "article_id": "91918bcb6e37",
+              "quote": "FAA router in middle-of-nowhere Arkansas identified as cause of nationwide flight chaos",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Emphasises travel chaos, cancellations and effects on sports fixtures.",
+              "sources": [
+                "cc470df789de",
+                "75bda219f33e",
+                "396e400a9665",
+                "beaaa42a8040",
+                "97589cff8e2c"
+              ]
+            },
+            {
+              "text": "Foregrounds the Transportation Secretary's explanation and the denial of a cyber-attack.",
+              "sources": [
+                "9ea7bffc1289",
+                "32f4488cd0bd",
+                "3900e3ec5b35",
+                "096bab73978b"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "c0f84afd1ed7",
+              "quote": "routers that should have been replaced in 2006",
+              "field": "snippet"
+            },
+            {
+              "article_id": "728dfc0e9f46",
+              "quote": "Trump administration blames ‘overloaded’ systems",
+              "field": "headline"
+            },
+            {
+              "article_id": "ecbb521d0bc8",
+              "quote": "A router switch, we now know",
+              "field": "headline"
+            },
+            {
+              "article_id": "b1edf123c18d",
+              "quote": "lawmakers call for transportation chief's resignation",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Describes the incident as the latest in a string of mishaps for an ageing air traffic control telecom system.",
+              "sources": [
+                "c0f84afd1ed7",
+                "26ccb97f7f07"
+              ]
+            },
+            {
+              "text": "Attributes the explanation to the Trump administration.",
+              "sources": [
+                "4400f68165ec",
+                "728dfc0e9f46"
+              ]
+            },
+            {
+              "text": "Reports FAA chief Bryan Bedford's recovery timeline and lawmakers' calls for the transportation chief to resign.",
+              "sources": [
+                "b1edf123c18d",
+                "26ccb97f7f07"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "The FAA imposed a nationwide ground stop on Friday that halted all US air traffic for hours, causing thousands of cancellations and delays before flights resumed. Transportation Secretary Sean Duffy and other US officials attributed it to maintenance or upgrade work on old telecoms equipment, including a router, and said it was not a cyber-attack.",
+        "sources": [
+          "75bda219f33e",
+          "9ea7bffc1289",
+          "cc470df789de",
+          "32f4488cd0bd",
+          "3900e3ec5b35",
+          "096bab73978b",
+          "ecbb521d0bc8",
+          "c0f84afd1ed7",
+          "91918bcb6e37",
+          "26ccb97f7f07"
+        ]
+      },
+      "conclusion": {
+        "text": "All sides report the ground stop, the resulting disruption and officials' attribution to upgrade or maintenance work on old equipment. Left coverage leads with sport, centre with the secretary's statements, right with an Arkansas router; East outlets add the ageing system and resignation calls. No direct contradictions appear.",
+        "sources": [
+          "75bda219f33e",
+          "32f4488cd0bd",
+          "3900e3ec5b35",
+          "396e400a9665",
+          "9ea7bffc1289",
+          "91918bcb6e37",
+          "c0f84afd1ed7",
+          "b1edf123c18d",
+          "4400f68165ec"
+        ]
+      },
+      "validation": {
+        "kept": 38,
+        "dropped_by_reason": {}
+      }
+    },
+    {
+      "id": "ebca0cfe1d6a",
+      "title": "SpaceX catches Starship upper stage with tower arms after booster is lost",
+      "rank": 2,
+      "outlet_count": 9,
+      "coverage": {
+        "lean": {
+          "left": 2,
+          "centre": 4,
+          "right": 1
+        },
+        "bloc": {
+          "west": 7,
+          "east": 2
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "ae7442de51cf",
+          "outlet_id": "dw",
+          "headline": "SpaceX launches Starship rocket, fails to recover booster",
+          "snippet": "SpaceX had planned to catch and later reuse both stages of its biggest rocket for the first time. But the booster exploded over the Gulf of Mexico, while the spacecraft continued into orbit.",
+          "url": "https://www.dw.com/en/spacex-launches-starship-rocket-fails-to-recover-booster/a-79946091?maca=en-rss-en-world-4025-xml-mrss",
+          "published_at": "2026-11-14T02:24:00Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "fd8e45193fb1",
+          "outlet_id": "mirror",
+          "headline": "SpaceX Starship booster erupts into fireball and crashes into sea - ending hopes for breakthrough",
+          "snippet": "Tonight, SpaceX had hoped to launch a history-making mission in Texas, with the goal of retrieving a rocket from orbit intact this weekend - but it didn't go to plan",
+          "url": "https://www.mirror.co.uk/news/world-news/spacex-starship-erupts-into-fireball-37876774",
+          "published_at": "2026-11-14T02:26:28Z",
+          "published_at_estimated": false,
+          "image_url": "https://i2-prod.mirror.co.uk/incoming/article37876777.ece/ALTERNATES/s615/2_SpaceX-Super-Heavy-Booster-Explodes-During-Starship-Flight-15-Starbase-Texas-USA-13-Nov-2026.jpg"
+        },
+        {
+          "id": "9c8beb38d9e8",
+          "outlet_id": "france24",
+          "headline": "Elon Musk's SpaceX aborts booster recovery due to technical issues",
+          "snippet": "Elon Musk's SpaceX is in the midst of a 15th test-flight of its Starship rocket. The company was hoping to pull off the first-ever \"double catch\" - with both the booster and the ship itself coming…",
+          "url": "https://www.france24.com/en/elon-musk-s-spacex-aborts-booster-recovery-due-to-technical-issues",
+          "published_at": "2026-11-14T17:33:37Z",
+          "published_at_estimated": false,
+          "image_url": "https://s.france24.com/media/display/0ecebe06-e02b-11f1-b834-f71d22e7fea9/w:1024/p:16x9/EN-20261114-080810-081151-CS-01.jpg"
+        },
+        {
+          "id": "2ff8c869d1b3",
+          "outlet_id": "france24",
+          "headline": "SpaceX's Starship completes first-ever mid-air catch after return from orbit",
+          "snippet": "SpaceX's Starship spacecraft made a successful return to Earth on Saturday, completing its first mid-air catch by giant robot arms in Texas, after an aborted recovery attempt.",
+          "url": "https://www.france24.com/en/spacex-starship-set-for-return-to-earth-after-failed-booster-catch",
+          "published_at": "2026-11-14T20:51:24Z",
+          "published_at_estimated": false,
+          "image_url": "https://s.france24.com/media/display/db6b6746-e073-11f1-8695-695cb59fade5/w:1024/p:16x9/000-D7H72W2.jpg"
+        },
+        {
+          "id": "98fa1ff0e21c",
+          "outlet_id": "scmp",
+          "headline": "SpaceX successfully carries out first-ever spaceship catch",
+          "snippet": "SpaceX’s Starship made a triumphant return to Earth on Saturday, caught in mid-air by giant mechanical arms where its journey began 22 hours earlier. It was the grand finale that Elon Musk and his…",
+          "url": "https://www.scmp.com/news/world/united-states-canada/article/3374463/spacex-successfully-carries-out-first-ever-spaceship-catch",
+          "published_at": "2026-11-14T21:32:46Z",
+          "published_at_estimated": false,
+          "image_url": "https://cdn.i-scmp.com/sites/default/files/styles/1280x720/public/d8/images/canvas/2026/11/15/c660f1ae-8b76-472f-acc7-d56c6e5e8e98_c44e6f59.jpg?itok=yfxd8i33&v=1794691954"
+        },
+        {
+          "id": "8904c10e5781",
+          "outlet_id": "npr",
+          "headline": "SpaceX successfully catches Starship and makes history",
+          "snippet": "The company's spacecraft returned to its Texas launchpad in dramatic fashion — by carefully lowering itself until two metal arms attached to the launch tower could secure it.",
+          "url": "https://www.npr.org/2026/11/14/g-s1-153786/spacex-successfully-catches-starship-and-makes-history",
+          "published_at": "2026-11-14T21:42:41Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "4b737ce28119",
+          "outlet_id": "bbc",
+          "headline": "'Can you believe it?': SpaceX catches part of its Starship rocket on return to Earth",
+          "snippet": "SpaceX has performed the historic catch using mechanical arms nicknamed \"chopsticks\".",
+          "url": "https://www.bbc.co.uk/news/videos/cwlym2gy3y3eo",
+          "published_at": "2026-11-14T22:09:40Z",
+          "published_at_estimated": false,
+          "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/aeb5/live/e1baf430-e074-11f1-a701-fddedf244c16.jpg"
+        },
+        {
+          "id": "c00501ac8169",
+          "outlet_id": "guardian",
+          "headline": "SpaceX’s Starship returns to launch pad from orbit in victory for company",
+          "snippet": "Although booster exploded, company caught upper stage for first time in campaign to make megarocket reusable SpaceX’s megarocket Starship returned to its Texas launch tower on Saturday, a milestone…",
+          "url": "https://www.theguardian.com/science/2026/nov/14/spacex-starship-double-catch",
+          "published_at": "2026-11-14T22:35:06Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.guim.co.uk/img/media/8d43d90555e696b8b0c519ba0b4fd459453f0aab/304_0_3038_2430/master/3038.jpg?width=460&quality=85&auto=format&fit=max&s=c0f0b7505ab0d01732d09163c00bac91"
+        },
+        {
+          "id": "46a0c9f51c9d",
+          "outlet_id": "nypost",
+          "headline": "SpaceX recovers Starship with giant tower arms in historic first",
+          "snippet": "“It was almost magic,” NASA Administrator Jared Isaacman said via X.",
+          "url": "https://nypost.com/2026/11/14/us-news/spacex-recovers-starship-with-giant-tower-arms-in-historic-first/",
+          "published_at": "2026-11-15T01:17:49Z",
+          "published_at_estimated": false,
+          "image_url": "https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2Fspacexs-mega-rocket-starship-returns-148775347.jpg?w%3D1024"
+        },
+        {
+          "id": "323efb379c69",
+          "outlet_id": "mirror",
+          "headline": "SpaceX Starship makes dramatic return to Earth after being 'caught' in mid-air by mechanical arms",
+          "snippet": "Nasa administrator Jared Isaacman called the feat 'almost magic' after a set back on Friday, when the first stage booster exploded after a lift-off from Texas",
+          "url": "https://www.mirror.co.uk/news/world-news/space-x-starship-elon-musk-37878434",
+          "published_at": "2026-11-15T02:19:10Z",
+          "published_at_estimated": false,
+          "image_url": "https://i2-prod.mirror.co.uk/incoming/article37878433.ece/ALTERNATES/s615/1_GettyImages-2305152482.jpg"
+        },
+        {
+          "id": "26c7ad5812d9",
+          "outlet_id": "france24",
+          "headline": "SpaceX makes rocketry history by recapturing massive reusable rocketship",
+          "snippet": "After failing to catch a booster yesterday, SpaceX managed to recapture its massive reusable rocketship, \"Starship\" for the first time. Smaller previous models have successfully relanded but they…",
+          "url": "https://www.france24.com/en/spacex-makes-rocketry-history-by-recapturing-massive-reusable-rocketship",
+          "published_at": "2026-11-15T09:42:55Z",
+          "published_at_estimated": false,
+          "image_url": "https://s.france24.com/media/display/8c43ae00-e080-11f1-8286-f71d22e7fea9/w:1024/p:16x9/2026-11-14T213803Z-704233441-RC2XNOAR9QE8-RTRMADP-3-SPACE-SPACEX-STARSHIP.jpg"
+        },
+        {
+          "id": "ef4663e28835",
+          "outlet_id": "thehindu",
+          "headline": "SpaceX pulls off first-ever spaceship ‘catch’",
+          "snippet": "Starship returned from orbit and was caught by the “chopstick arms” at SpaceX’s Starbase launch pad in Texas, in a milestone for fully reusable rockets",
+          "url": "https://www.thehindu.com/news/international/spacexs-starship-returns-from-orbit-and-is-captured-by-launch-pad-arms-in-a-dramatic-first/article71703046.ece",
+          "published_at": "2026-11-15T12:55:36Z",
+          "published_at_estimated": false,
+          "image_url": "https://th-i.thgim.com/public/incoming/dxm9i4/article71703047.ece/alternates/LANDSCAPE_1200/SpaceX_Starship_Launch_78562.jpg"
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "The Starship upper stage was caught by mechanical arms on the launch tower in Texas.",
+          "sources": [
+            "2ff8c869d1b3",
+            "98fa1ff0e21c",
+            "8904c10e5781",
+            "4b737ce28119",
+            "c00501ac8169",
+            "46a0c9f51c9d",
+            "323efb379c69",
+            "26c7ad5812d9",
+            "ef4663e28835"
+          ]
+        },
+        {
+          "text": "This was the first time the Starship spacecraft itself had been caught in this way.",
+          "sources": [
+            "2ff8c869d1b3",
+            "98fa1ff0e21c",
+            "c00501ac8169",
+            "46a0c9f51c9d",
+            "26c7ad5812d9",
+            "ef4663e28835",
+            "8904c10e5781"
+          ]
+        },
+        {
+          "text": "The booster was not recovered; several articles say it exploded after lift-off.",
+          "sources": [
+            "ae7442de51cf",
+            "fd8e45193fb1",
+            "9c8beb38d9e8",
+            "2ff8c869d1b3",
+            "c00501ac8169",
+            "323efb379c69",
+            "26c7ad5812d9"
+          ]
+        },
+        {
+          "text": "The spacecraft returned to Earth from orbit.",
+          "sources": [
+            "ae7442de51cf",
+            "2ff8c869d1b3",
+            "c00501ac8169",
+            "ef4663e28835"
+          ]
+        },
+        {
+          "text": "The effort is part of SpaceX's aim to make the rocket reusable.",
+          "sources": [
+            "ae7442de51cf",
+            "c00501ac8169",
+            "26c7ad5812d9",
+            "ef4663e28835"
+          ]
+        },
+        {
+          "text": "NASA Administrator Jared Isaacman called the feat 'almost magic'.",
+          "sources": [
+            "46a0c9f51c9d",
+            "323efb379c69"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "fd8e45193fb1",
+              "quote": "SpaceX Starship booster erupts into fireball and crashes into sea",
+              "field": "headline"
+            },
+            {
+              "article_id": "fd8e45193fb1",
+              "quote": "ending hopes for breakthrough",
+              "field": "headline"
+            },
+            {
+              "article_id": "c00501ac8169",
+              "quote": "victory for company",
+              "field": "headline"
+            },
+            {
+              "article_id": "323efb379c69",
+              "quote": "makes dramatic return to Earth",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Early left coverage leads with the booster explosion and describes it as ending hopes for a breakthrough.",
+              "sources": [
+                "fd8e45193fb1"
+              ]
+            },
+            {
+              "text": "Later left coverage describes the upper-stage catch as a victory and milestone while noting the booster setback.",
+              "sources": [
+                "c00501ac8169",
+                "323efb379c69"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "ae7442de51cf",
+              "quote": "fails to recover booster",
+              "field": "headline"
+            },
+            {
+              "article_id": "9c8beb38d9e8",
+              "quote": "aborts booster recovery due to technical issues",
+              "field": "headline"
+            },
+            {
+              "article_id": "8904c10e5781",
+              "quote": "makes history",
+              "field": "headline"
+            },
+            {
+              "article_id": "4b737ce28119",
+              "quote": "'Can you believe it?'",
+              "field": "headline"
+            },
+            {
+              "article_id": "26c7ad5812d9",
+              "quote": "makes rocketry history",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Initial centre reports lead with the failed booster recovery and the planned first \"double catch\".",
+              "sources": [
+                "ae7442de51cf",
+                "9c8beb38d9e8"
+              ]
+            },
+            {
+              "text": "Later centre reports describe the upper-stage catch as historic, detailing the tower arms nicknamed \"chopsticks\".",
+              "sources": [
+                "2ff8c869d1b3",
+                "8904c10e5781",
+                "4b737ce28119",
+                "26c7ad5812d9"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "right",
+          "headline_quotes": [
+            {
+              "article_id": "46a0c9f51c9d",
+              "quote": "in historic first",
+              "field": "headline"
+            },
+            {
+              "article_id": "46a0c9f51c9d",
+              "quote": "It was almost magic",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the catch as a historic first and quotes NASA Administrator Jared Isaacman's praise.",
+              "sources": [
+                "46a0c9f51c9d"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "right",
+          "text": "Right-leaning coverage does not mention that the booster exploded or was not recovered.",
+          "sources": [
+            "ae7442de51cf",
+            "fd8e45193fb1",
+            "9c8beb38d9e8",
+            "c00501ac8169",
+            "323efb379c69",
+            "26c7ad5812d9"
+          ]
+        },
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not mention NASA Administrator Jared Isaacman's 'almost magic' remark.",
+          "sources": [
+            "46a0c9f51c9d",
+            "323efb379c69"
+          ]
+        }
+      ],
+      "contested_claims": [],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "ae7442de51cf",
+              "quote": "fails to recover booster",
+              "field": "headline"
+            },
+            {
+              "article_id": "fd8e45193fb1",
+              "quote": "ending hopes for breakthrough",
+              "field": "headline"
+            },
+            {
+              "article_id": "46a0c9f51c9d",
+              "quote": "in historic first",
+              "field": "headline"
+            },
+            {
+              "article_id": "8904c10e5781",
+              "quote": "makes history",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Western coverage reports both the booster explosion and the subsequent first catch of the upper stage.",
+              "sources": [
+                "ae7442de51cf",
+                "fd8e45193fb1",
+                "9c8beb38d9e8",
+                "2ff8c869d1b3",
+                "c00501ac8169",
+                "323efb379c69",
+                "26c7ad5812d9"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "98fa1ff0e21c",
+              "quote": "made a triumphant return to Earth",
+              "field": "snippet"
+            },
+            {
+              "article_id": "ef4663e28835",
+              "quote": "milestone for fully reusable rockets",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Eastern coverage focuses on the first-ever spaceship catch and reusability, without mentioning the booster loss.",
+              "sources": [
+                "98fa1ff0e21c",
+                "ef4663e28835"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "SpaceX launched its Starship rocket from Texas aiming to catch both stages for the first time, but the booster exploded over the Gulf of Mexico. The Starship upper stage went on to orbit, returned on Saturday and was caught by mechanical arms on the launch tower for the first time.",
+        "sources": [
+          "ae7442de51cf",
+          "fd8e45193fb1",
+          "9c8beb38d9e8",
+          "2ff8c869d1b3",
+          "98fa1ff0e21c",
+          "8904c10e5781",
+          "c00501ac8169",
+          "323efb379c69",
+          "26c7ad5812d9",
+          "ef4663e28835"
+        ]
+      },
+      "conclusion": {
+        "text": "All sides report that Starship's upper stage was caught by tower arms for the first time. Western left and centre outlets also report the booster explosion, with early pieces leading with it, while the right-leaning and East-bloc articles focus on the catch alone. No contradictions appear between the accounts.",
+        "sources": [
+          "ae7442de51cf",
+          "fd8e45193fb1",
+          "c00501ac8169",
+          "2ff8c869d1b3",
+          "8904c10e5781",
+          "46a0c9f51c9d",
+          "98fa1ff0e21c",
+          "ef4663e28835"
+        ]
+      },
+      "validation": {
+        "kept": 34,
+        "dropped_by_reason": {}
+      }
+    },
+    {
+      "id": "a2f3733f7ed4",
+      "title": "Israeli strike in Gaza kills Hamas Rafah Brigade commander Samir Abu Younis",
+      "rank": 3,
+      "outlet_count": 9,
+      "coverage": {
+        "lean": {
+          "left": 0,
+          "centre": 2,
+          "right": 2
+        },
+        "bloc": {
+          "west": 4,
+          "east": 5
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "edd2c1e37293",
+          "outlet_id": "cgtn",
+          "headline": "Hamas says senior armed commander killed in Israeli strike",
+          "snippet": "",
+          "url": "https://news.cgtn.com/news/2026-11-15/Hamas-says-senior-armed-commander-killed-in-Israeli-strike-1S5gM102H28/p.html",
+          "published_at": "2026-11-15T01:58:03Z",
+          "published_at_estimated": false,
+          "image_url": "https://news.cgtn.com/news/2026-11-15/Hamas-says-senior-armed-commander-killed-in-Israeli-strike-1S5gM102H28/img/7ac3ba6869534379a823a437557a2fe8/7ac3ba6869534379a823a437557a2fe8-1920.png"
+        },
+        {
+          "id": "228e43980661",
+          "outlet_id": "thehindu",
+          "headline": "Israeli military says it struck senior armed Hamas commander",
+          "snippet": "Hamas later confirmed his ‌death and said his ‌funeral ⁠would be held on Sunday (November 15) ⁠afternoon in Khan Younis in the southern Gaza Strip",
+          "url": "https://www.thehindu.com/news/international/israeli-military-says-it-struck-senior-armed-hamas-commander/article71704070.ece",
+          "published_at": "2026-11-15T04:02:00Z",
+          "published_at_estimated": false,
+          "image_url": "https://th-i.thgim.com/public/incoming/h60k9g/article71704078.ece/alternates/LANDSCAPE_1200/APTOPIX_Israel_Palestinians_Gaza_97_56.jpg"
+        },
+        {
+          "id": "8f359c7f09ff",
+          "outlet_id": "sky",
+          "headline": "Hamas says senior commander killed in Israeli airstrike",
+          "snippet": "A senior Hamas commander who helped plan and oversee the 7 October 2023 attack had been killed in an Israeli airstrike, according to the Palestinian militant group.",
+          "url": "https://news.sky.com/story/hamas-says-senior-commander-killed-in-israeli-airstrike-13612384",
+          "published_at": "2026-11-15T05:16:00Z",
+          "published_at_estimated": false,
+          "image_url": "https://e3.365dm.com/26/11/1920x1080/skynews-khan-younis-gaza-israeli-airstrike_7406841.jpg?20261115074940"
+        },
+        {
+          "id": "ebb8097616a5",
+          "outlet_id": "timesofisrael",
+          "headline": "Chief of Hamas’s Rafah Brigade killed in Israeli strike, 2 months after predecessor",
+          "snippet": "Military targets veteran Hamas commander Samir Abu Younis as he walks down street in southern Gaza's Khan Younis, both IDF and terror group confirm",
+          "url": "https://www.timesofisrael.com/chief-of-hamass-rafah-brigade-killed-in-israeli-strike-2-months-after-predecessor/",
+          "published_at": "2026-11-15T06:30:53Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "68b757e60463",
+          "outlet_id": "bbc",
+          "headline": "Israel kills Hamas commander in strike on Gaza camp, officials say",
+          "snippet": "Both Hamas and IDF officials confirm the death of Samir Abu Younis, commander of the Rafah Brigade.",
+          "url": "https://www.bbc.co.uk/news/articles/cqrkg4r6mg7xo",
+          "published_at": "2026-11-15T08:17:41Z",
+          "published_at_estimated": false,
+          "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/4c19/live/fcdf6660-e0ce-11f1-a701-fddedf244c16.jpg"
+        },
+        {
+          "id": "1f15761265f9",
+          "outlet_id": "thenational",
+          "headline": "Senior Hamas military commander killed in Israeli strike in southern Gaza",
+          "snippet": "Hamas on Sunday said the commander of its Rafah Brigade, who was a key figure in planning and overseeing the October 7, 2023 attacks, was killed in an Israeli air strike in southern Gaza. Samir…",
+          "url": "https://www.thenationalnews.com/news/mena/2026/11/15/senior-hamas-military-commander-killed-in-israeli-strike-in-southern-gaza/",
+          "published_at": "2026-11-15T10:30:19Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.thenationalnews.com/resizer/v2/B3E4G3J3XBXA5QWYQ3Y4STCPSY.jpg?auth=030b6ca13336ff8ce0fdf79625f4c28749ea4a3cf4096344f35ed863daa6a069&smart=true&width=5500&height=3667"
+        },
+        {
+          "id": "c73a54f079e6",
+          "outlet_id": "scmp",
+          "headline": "Top Hamas commander killed in Israeli strike in Gaza",
+          "snippet": "Hamas said on Sunday that a senior commander who helped plan and oversee the October 7, 2023, attack on Israel had been killed in an Israeli air strike, with the Israeli ‌military confirming his…",
+          "url": "https://www.scmp.com/news/world/middle-east/article/3374498/top-hamas-commander-killed-israeli-strike-gaza",
+          "published_at": "2026-11-15T12:02:08Z",
+          "published_at_estimated": false,
+          "image_url": "https://cdn.i-scmp.com/sites/default/files/styles/1280x720/public/d8/images/canvas/2026/11/15/9dd51bb9-974a-4d4b-8fba-d3f5a9645717_f9254521.jpg?itok=hMysTpsG&v=1794744123"
+        },
+        {
+          "id": "bf0a8e95cb0f",
+          "outlet_id": "dailymail",
+          "headline": "Israel kills Hamas commander who helped mastermind October 7 attacks in targeted strike on Gaza camp",
+          "snippet": "Hamas's Al-Qassam Brigades military wing confirmed Samir Abu Younis's death and the IDF have said 'steps were taken to mitigate harm to civilians' when planning the strike.",
+          "url": "https://www.dailymail.com/news/article-16294031/Israel-kills-Hamas-commander.html",
+          "published_at": "2026-11-15T12:20:42Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.dailymail.com/1s/2026/11/15/09/112517579-0-image-m-17_1794736226155.jpg"
+        },
+        {
+          "id": "aa7499ed8e2f",
+          "outlet_id": "thesun",
+          "headline": "Top Hamas commander Samir Mahmoud Abu Younis, 53, who oversaw October 7 massacre killed in Israeli air strike",
+          "snippet": "AN evil Hamas brute who helped plan and oversaw the October 7 massacre has been killed in an Israeli airstrike. Samir Abu Younis, 53, served as commander of the Rafah Brigade in Hamas' military wing…",
+          "url": "https://www.thesun.co.uk/news/41029547/hamas-commander-killed-israeli-strike/",
+          "published_at": "2026-11-15T13:31:53Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.thesun.co.uk/wp-content%2Fuploads%2F2026%2F11%2Fnewspress-collage-mmm4y7mxr-1794749429414.jpg?quality%3D90%26"
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "A senior Hamas commander was killed in an Israeli strike in Gaza.",
+          "sources": [
+            "edd2c1e37293",
+            "228e43980661",
+            "8f359c7f09ff",
+            "ebb8097616a5",
+            "68b757e60463",
+            "1f15761265f9",
+            "c73a54f079e6",
+            "bf0a8e95cb0f",
+            "aa7499ed8e2f"
+          ]
+        },
+        {
+          "text": "The commander is named as Samir Abu Younis.",
+          "sources": [
+            "ebb8097616a5",
+            "68b757e60463",
+            "bf0a8e95cb0f",
+            "aa7499ed8e2f"
+          ]
+        },
+        {
+          "text": "He commanded Hamas's Rafah Brigade.",
+          "sources": [
+            "ebb8097616a5",
+            "68b757e60463",
+            "1f15761265f9",
+            "aa7499ed8e2f"
+          ]
+        },
+        {
+          "text": "Both Hamas and the Israeli military confirmed his death.",
+          "sources": [
+            "228e43980661",
+            "ebb8097616a5",
+            "68b757e60463",
+            "c73a54f079e6",
+            "bf0a8e95cb0f"
+          ]
+        },
+        {
+          "text": "He helped plan and oversee the 7 October 2023 attack.",
+          "sources": [
+            "8f359c7f09ff",
+            "1f15761265f9",
+            "c73a54f079e6",
+            "bf0a8e95cb0f",
+            "aa7499ed8e2f"
+          ]
+        },
+        {
+          "text": "The strike took place in southern Gaza, with Khan Younis named as the location or funeral site.",
+          "sources": [
+            "228e43980661",
+            "ebb8097616a5",
+            "1f15761265f9"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "8f359c7f09ff",
+              "quote": "Hamas says senior commander killed in Israeli airstrike",
+              "field": "headline"
+            },
+            {
+              "article_id": "68b757e60463",
+              "quote": "Israel kills Hamas commander in strike on Gaza camp, officials say",
+              "field": "headline"
+            },
+            {
+              "article_id": "8f359c7f09ff",
+              "quote": "according to the Palestinian militant group",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Attributes the death and the commander's role to Hamas and to officials.",
+              "sources": [
+                "8f359c7f09ff",
+                "68b757e60463"
+              ]
+            },
+            {
+              "text": "Reports that both Hamas and IDF officials confirmed the death.",
+              "sources": [
+                "68b757e60463"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "right",
+          "headline_quotes": [
+            {
+              "article_id": "bf0a8e95cb0f",
+              "quote": "who helped mastermind October 7 attacks",
+              "field": "headline"
+            },
+            {
+              "article_id": "aa7499ed8e2f",
+              "quote": "AN evil Hamas brute",
+              "field": "snippet"
+            },
+            {
+              "article_id": "aa7499ed8e2f",
+              "quote": "who oversaw October 7 massacre",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the commander's role in the 7 October attacks, describing them as a massacre.",
+              "sources": [
+                "bf0a8e95cb0f",
+                "aa7499ed8e2f"
+              ]
+            },
+            {
+              "text": "Reports the IDF statement that steps were taken to mitigate harm to civilians.",
+              "sources": [
+                "bf0a8e95cb0f"
+              ]
+            },
+            {
+              "text": "Gives the commander's age as 53.",
+              "sources": [
+                "aa7499ed8e2f"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not mention the IDF statement that steps were taken to mitigate harm to civilians.",
+          "sources": [
+            "bf0a8e95cb0f"
+          ]
+        }
+      ],
+      "contested_claims": [],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "bf0a8e95cb0f",
+              "quote": "targeted strike on Gaza camp",
+              "field": "headline"
+            },
+            {
+              "article_id": "aa7499ed8e2f",
+              "quote": "October 7 massacre",
+              "field": "headline"
+            },
+            {
+              "article_id": "68b757e60463",
+              "quote": "officials say",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Foregrounds the commander's role in the 7 October attacks.",
+              "sources": [
+                "8f359c7f09ff",
+                "bf0a8e95cb0f",
+                "aa7499ed8e2f"
+              ]
+            },
+            {
+              "text": "Describes the strike as hitting a Gaza camp.",
+              "sources": [
+                "68b757e60463",
+                "bf0a8e95cb0f"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "edd2c1e37293",
+              "quote": "Hamas says senior armed commander killed in Israeli strike",
+              "field": "headline"
+            },
+            {
+              "article_id": "228e43980661",
+              "quote": "Israeli military says it struck senior armed Hamas commander",
+              "field": "headline"
+            },
+            {
+              "article_id": "ebb8097616a5",
+              "quote": "2 months after predecessor",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Attributes the killing to statements by Hamas or the Israeli military.",
+              "sources": [
+                "edd2c1e37293",
+                "228e43980661",
+                "1f15761265f9",
+                "c73a54f079e6"
+              ]
+            },
+            {
+              "text": "Notes the funeral in Khan Younis and that the strike came two months after his predecessor was killed.",
+              "sources": [
+                "228e43980661",
+                "ebb8097616a5"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "An Israeli strike in southern Gaza killed Samir Abu Younis, commander of Hamas's Rafah Brigade, with both Hamas and the Israeli military confirming his death. Several outlets report he helped plan and oversee the 7 October 2023 attack.",
+        "sources": [
+          "edd2c1e37293",
+          "228e43980661",
+          "8f359c7f09ff",
+          "ebb8097616a5",
+          "68b757e60463",
+          "1f15761265f9",
+          "c73a54f079e6",
+          "bf0a8e95cb0f",
+          "aa7499ed8e2f"
+        ]
+      },
+      "conclusion": {
+        "text": "All outlets report a senior Hamas commander killed by an Israeli strike, most noting confirmation from both sides. Right-leaning outlets lead with 'mastermind' and 'massacre' wording and one carries an IDF civilian-harm statement, while centre and Eastern outlets attribute the account to Hamas or officials. No claims are contradicted.",
+        "sources": [
+          "edd2c1e37293",
+          "228e43980661",
+          "8f359c7f09ff",
+          "68b757e60463",
+          "1f15761265f9",
+          "c73a54f079e6",
+          "bf0a8e95cb0f",
+          "aa7499ed8e2f"
+        ]
+      },
+      "validation": {
+        "kept": 30,
+        "dropped_by_reason": {}
+      }
+    },
+    {
+      "id": "f840321a143a",
+      "title": "Iran launches drone attack on US radar installation at Bahrain air base",
+      "rank": 4,
+      "outlet_count": 8,
+      "coverage": {
+        "lean": {
+          "left": 2,
+          "centre": 1,
+          "right": 1
+        },
+        "bloc": {
+          "west": 4,
+          "east": 4
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "25aea1e4b8aa",
+          "outlet_id": "thenational",
+          "headline": "Middle East latest: Bahrain says it intercepted Iranian aerial attacks after nationwide alert",
+          "snippet": "High rise buildings are pictured in the Manama skyline on February 14, 2026. (Photo by Giuseppe CACACE / AFP)",
+          "url": "https://www.thenationalnews.com/news/mena/2026/11/15/iran-war-live-bahrain-nationwide-threat-alert/",
+          "published_at": "2026-11-15T04:15:30Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.thenationalnews.com/resizer/v2/EMHK2A3WNJBH5PGI46EPJJBFNM.jpg?auth=403594b834686ed9ab196ed638de46dff11dab91ef7f1cce38d80dd97220ab47&smart=true&width=6000&height=4000"
+        },
+        {
+          "id": "abb2a1a25045",
+          "outlet_id": "thenational",
+          "headline": "Bahrain intercepts Iranian attacks after first nationwide alert in months",
+          "snippet": "Bahrain intercepted several Iranian aerial attacks on Sunday, the kingdom's military said, as Tehran claimed to have struck a US military installation in the Gulf state. The Bahrain Defence Force…",
+          "url": "https://www.thenationalnews.com/news/gulf/2026/11/15/bahrain-issues-first-nationwide-alert-in-months-as-iran-claims-attack-on-base-hosting-us-helicopters/",
+          "published_at": "2026-11-15T04:57:29Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.thenationalnews.com/resizer/v2/5IS3HYLXF5AWRAIY7T35R4BQVM.JPG?auth=1942d2bfcde7cc63279149ff2cd2d36befa120cc7b34b3555dbef6dd1483e0f4&smart=true&width=6000&height=4000"
+        },
+        {
+          "id": "b3d25ac0bc3c",
+          "outlet_id": "thehindu",
+          "headline": "Sirens sound in Bahrain as Iran’s Guards claim drone attack",
+          "snippet": "Bahrain, ⁠home to ⁠the U.S. Navy’s Fifth Fleet, urged citizens and ​residents to ‌remain calm and proceed to the nearest safe location, ‌its Interior Ministry ​said",
+          "url": "https://www.thehindu.com/news/international/bahrain-interior-ministry-potential-threats-us-navys-fifth-fleet-attack-on-november-15/article71704092.ece",
+          "published_at": "2026-11-15T05:39:39Z",
+          "published_at_estimated": false,
+          "image_url": "https://th-i.thgim.com/public/news/national/andhra-pradesh/vz2us4/article71704102.ece/alternates/LANDSCAPE_1200/Shaikh%20Rashid%20bin%20Abdullah%20Al%20Khalifa.jpg"
+        },
+        {
+          "id": "2505f1e251ca",
+          "outlet_id": "japantimes",
+          "headline": "Bahrain issues first threat alerts since September as Iran says it attacked U.S. base",
+          "snippet": "Iran's Revolutionary Guard Corps said it had attacked a U.S. military base in Bahrain in retaliation for \"hostile U.S. actions.\"",
+          "url": "https://www.japantimes.co.jp/news/2026/11/15/world/iran-bahrain-us-attack/",
+          "published_at": "2026-11-15T06:46:00Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.japantimes.co.jp/japantimes/uploads/images/2026/11/15/thumbs/400x400/574107.jpg"
+        },
+        {
+          "id": "8177e8b1c3cc",
+          "outlet_id": "mirror",
+          "headline": "Iran attacks US radar with drone blitz after Trump claim war 'effectively over'",
+          "snippet": "The Iranian Revolutionary Guard says it has destroyed a radar system at a base in Bahrain in an assault using drones but this has been denied by officials who said missiles were intercepted",
+          "url": "https://www.mirror.co.uk/news/world-news/iran-us-base-bahrain-trump-37878646",
+          "published_at": "2026-11-15T09:34:18Z",
+          "published_at_estimated": false,
+          "image_url": "https://i2-prod.mirror.co.uk/incoming/article37878652.ece/ALTERNATES/s615/0_US-President-Trump-gives-update-after-meeting-with-Qatari-prime-minister-Washington-USA-09-Nov-2.jpg"
+        },
+        {
+          "id": "257f5feafeaa",
+          "outlet_id": "aljazeera",
+          "headline": "Iran says it targets US radar in Bahrain. What do we know?",
+          "snippet": "Bahrain Defence Force says its air defence systems thwart several Iranian 'aerial attacks'.",
+          "url": "https://www.aljazeera.com/news/2026/11/15/iran-says-it-targets-us-radar-in-bahrain-what-do-we-know",
+          "published_at": "2026-11-15T09:41:27Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "9743b288aec6",
+          "outlet_id": "japantimes",
+          "headline": "Iran strikes Bahrain base, repeats path to U.S. deal remains open",
+          "snippet": "The strike on Bahrain is the first since early September when Iranian drones also targeted a U.S. base in the UAE.",
+          "url": "https://www.japantimes.co.jp/news/2026/11/15/world/iran-bahrain-base-us-deal/",
+          "published_at": "2026-11-15T09:49:00Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.japantimes.co.jp/japantimes/uploads/images/2026/11/15/thumbs/400x400/574141.jpg"
+        },
+        {
+          "id": "1dd1f7aa645b",
+          "outlet_id": "france24",
+          "headline": "Iran claims attack on US military airbase in Bahrain",
+          "snippet": "Iranian military confirmed on Sunday an attack on a US military base in Bahrain, in its second targeting the Middle Eastern country in the space of three days. Bahrain's military said it had…",
+          "url": "https://www.france24.com/en/middle-east/20261115-iran-claims-attack-on-us-military-airbase-in-bahrain",
+          "published_at": "2026-11-15T09:57:35Z",
+          "published_at_estimated": false,
+          "image_url": "https://s.france24.com/media/display/3bb0cb5a-e0d8-11f1-a866-3f371022a770/w:1024/p:16x9/000-99GY7E6-1.jpg"
+        },
+        {
+          "id": "dfcb19ad8d03",
+          "outlet_id": "dailymail",
+          "headline": "Bahrain intercepts Iranian drone attacks on US military base",
+          "snippet": "Iran has fired several drones at a US military base in Bahrain overnight, targeting their air defence radar system in a series of attacks.",
+          "url": "https://www.dailymail.com/news/article-16294021/Bahrain-Iranian-drone-attacks-US-military-base.html",
+          "published_at": "2026-11-15T12:03:58Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.dailymail.com/1s/2026/11/15/09/112517441-0-image-a-33_1794734247751.jpg"
+        },
+        {
+          "id": "99e419c2f8f5",
+          "outlet_id": "nyt",
+          "headline": "Iran Attacks Bahrain for the Second Time in Days",
+          "snippet": "The resumption of attacks after a two-month lull comes as peace talks between the U.S. and Iran appear to have stalled.",
+          "url": "https://www.nytimes.com/2026/11/15/world/middleeast/bahrain-iran-israel.html",
+          "published_at": "2026-11-15T12:07:04Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "eaa6e56add85",
+          "outlet_id": "aljazeera",
+          "headline": "Iran targets US military radar in Bahrain in ‘retaliatory’ drone strikes",
+          "snippet": "Iran’s IRGC says six drones were launched at a US radar installation at an air base in Bahrain.",
+          "url": "https://www.aljazeera.com/video/newsfeed/2026/11/15/iran-targets-us-military-radar-in-bahrain-in-retaliatory-drone-strikes",
+          "published_at": "2026-11-15T12:15:51Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "5a008b7bf5c6",
+          "outlet_id": "aljazeera",
+          "headline": "Bahrain accuses Iran of attacking its territory to ‘settle’ score with US",
+          "snippet": "Tehran says its air attacks on countries cooperating with the US are justified under international law.",
+          "url": "https://www.aljazeera.com/news/2026/11/15/bahrain-accuses-iran-of-attacking-its-territory-to-settle-score-with-us",
+          "published_at": "2026-11-15T12:36:19Z",
+          "published_at_estimated": false,
+          "image_url": null
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "Iran says it attacked a US military base or installation in Bahrain.",
+          "sources": [
+            "abb2a1a25045",
+            "b3d25ac0bc3c",
+            "2505f1e251ca",
+            "8177e8b1c3cc",
+            "257f5feafeaa",
+            "9743b288aec6",
+            "1dd1f7aa645b",
+            "dfcb19ad8d03",
+            "99e419c2f8f5",
+            "eaa6e56add85"
+          ]
+        },
+        {
+          "text": "Bahrain says it intercepted Iranian aerial attacks.",
+          "sources": [
+            "25aea1e4b8aa",
+            "abb2a1a25045",
+            "257f5feafeaa",
+            "dfcb19ad8d03",
+            "8177e8b1c3cc"
+          ]
+        },
+        {
+          "text": "The target was a US radar system at the base.",
+          "sources": [
+            "8177e8b1c3cc",
+            "257f5feafeaa",
+            "dfcb19ad8d03",
+            "eaa6e56add85"
+          ]
+        },
+        {
+          "text": "The attack was carried out with drones.",
+          "sources": [
+            "b3d25ac0bc3c",
+            "8177e8b1c3cc",
+            "dfcb19ad8d03",
+            "eaa6e56add85"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "8177e8b1c3cc",
+              "quote": "after Trump claim war 'effectively over'",
+              "field": "headline"
+            },
+            {
+              "article_id": "99e419c2f8f5",
+              "quote": "peace talks between the U.S. and Iran appear to have stalled",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Places the attack against US-Iran diplomacy, citing a Trump claim that the war is over and stalled peace talks.",
+              "sources": [
+                "8177e8b1c3cc",
+                "99e419c2f8f5"
+              ]
+            },
+            {
+              "text": "Reports the IRGC claim that a radar was destroyed alongside officials' denial.",
+              "sources": [
+                "8177e8b1c3cc"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "1dd1f7aa645b",
+              "quote": "Iran claims attack on US military airbase in Bahrain",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with Iran's claim and describes it as the second targeting of Bahrain in three days.",
+              "sources": [
+                "1dd1f7aa645b"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "right",
+          "headline_quotes": [
+            {
+              "article_id": "dfcb19ad8d03",
+              "quote": "Bahrain intercepts Iranian drone attacks on US military base",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with Bahrain's interception and the targeting of an air defence radar system.",
+              "sources": [
+                "dfcb19ad8d03"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "right",
+          "text": "Does not mention the state of US-Iran peace talks or diplomacy.",
+          "sources": [
+            "99e419c2f8f5",
+            "8177e8b1c3cc"
+          ]
+        },
+        {
+          "lean": "centre",
+          "text": "Does not mention the state of US-Iran peace talks or diplomacy.",
+          "sources": [
+            "99e419c2f8f5",
+            "8177e8b1c3cc"
+          ]
+        }
+      ],
+      "contested_claims": [
+        {
+          "claim": "Whether this was Iran's second attack on Bahrain within days or the first since early September.",
+          "asserted_by": [
+            "99e419c2f8f5",
+            "1dd1f7aa645b"
+          ],
+          "disputed_by": [
+            "9743b288aec6",
+            "2505f1e251ca"
+          ]
+        }
+      ],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "8177e8b1c3cc",
+              "quote": "Iran attacks US radar with drone blitz",
+              "field": "headline"
+            },
+            {
+              "article_id": "99e419c2f8f5",
+              "quote": "Iran Attacks Bahrain for the Second Time in Days",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Foregrounds US-Iran diplomacy and describes renewed attacks within days.",
+              "sources": [
+                "8177e8b1c3cc",
+                "99e419c2f8f5",
+                "1dd1f7aa645b"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "eaa6e56add85",
+              "quote": "in ‘retaliatory’ drone strikes",
+              "field": "headline"
+            },
+            {
+              "article_id": "5a008b7bf5c6",
+              "quote": "justified under international law",
+              "field": "snippet"
+            },
+            {
+              "article_id": "9743b288aec6",
+              "quote": "repeats path to U.S. deal remains open",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Reports Iran's justification as retaliation for hostile US actions and as lawful under international law.",
+              "sources": [
+                "2505f1e251ca",
+                "eaa6e56add85",
+                "5a008b7bf5c6"
+              ]
+            },
+            {
+              "text": "Covers Bahrain's nationwide alert, calls for calm and its accusation that Iran used its territory to settle a score with the US.",
+              "sources": [
+                "abb2a1a25045",
+                "b3d25ac0bc3c",
+                "2505f1e251ca",
+                "5a008b7bf5c6"
+              ]
+            },
+            {
+              "text": "Gives a specific figure of six drones launched, per the IRGC.",
+              "sources": [
+                "eaa6e56add85"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [
+        {
+          "topic": "Timing relative to previous Iranian attacks on Bahrain.",
+          "west": {
+            "text": "Describes this as Iran's second attack on Bahrain in days or within three days.",
+            "sources": [
+              "99e419c2f8f5",
+              "1dd1f7aa645b"
+            ]
+          },
+          "east": {
+            "text": "Describes this as the first strike on Bahrain since early September.",
+            "sources": [
+              "9743b288aec6"
+            ]
+          }
+        }
+      ],
+      "summary": {
+        "text": "Iran's Revolutionary Guard said it launched drones at a US radar installation at an air base in Bahrain, calling it retaliation for hostile US actions. Bahrain's military said its air defences intercepted several Iranian aerial attacks, and the kingdom issued a nationwide alert.",
+        "sources": [
+          "eaa6e56add85",
+          "2505f1e251ca",
+          "8177e8b1c3cc",
+          "abb2a1a25045",
+          "257f5feafeaa",
+          "dfcb19ad8d03",
+          "25aea1e4b8aa",
+          "b3d25ac0bc3c"
+        ]
+      },
+      "conclusion": {
+        "text": "All sides report Iran's claimed drone attack on a US base in Bahrain and Bahrain's interceptions. Western outlets stress stalled US-Iran talks, while Eastern outlets foreground Iran's retaliation and legality claims. Whether it was the second attack in days or the first since September differs between them.",
+        "sources": [
+          "abb2a1a25045",
+          "dfcb19ad8d03",
+          "8177e8b1c3cc",
+          "99e419c2f8f5",
+          "eaa6e56add85",
+          "5a008b7bf5c6",
+          "1dd1f7aa645b",
+          "9743b288aec6"
+        ]
+      },
+      "validation": {
+        "kept": 27,
+        "dropped_by_reason": {}
+      }
+    },
+    {
+      "id": "4b2540bf5237",
+      "title": "Zelensky says US floated Ukraine ceding Donbas in exchange for NATO membership",
+      "rank": 5,
+      "outlet_count": 8,
+      "coverage": {
+        "lean": {
+          "left": 1,
+          "centre": 4,
+          "right": 0
+        },
+        "bloc": {
+          "west": 5,
+          "east": 3
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "635a8b00315a",
+          "outlet_id": "dw",
+          "headline": "Ukraine: Zelenskyy says security deal could go to referendum",
+          "snippet": "The US has broached the idea of Kyiv giving up the Donbas region in exchange for NATO membership, the Ukrainian president said.",
+          "url": "https://www.dw.com/en/ukraine-zelenskyy-says-security-deal-could-go-to-referendum/a-79947535?maca=en-rss-en-world-4025-xml-mrss",
+          "published_at": "2026-11-14T11:40:00Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "ea5a56a7367c",
+          "outlet_id": "thehindu",
+          "headline": "U.S. proposes Ukraine cede territory in exchange for joining NATO: Zelensky",
+          "snippet": "Volodymyr Zelensky said Russia had rejected a ceasefire on energy targets at talks in Abu Dhabi, as Moscow was “betting everything” on this winter’s campaign",
+          "url": "https://www.thehindu.com/news/international/us-proposes-ukraine-cede-territory-in-exchange-for-joining-nato-zelensky/article71701653.ece",
+          "published_at": "2026-11-14T12:37:48Z",
+          "published_at_estimated": false,
+          "image_url": "https://th-i.thgim.com/public/incoming/4a9pjg/article71701714.ece/alternates/LANDSCAPE_1200/2026-11-11T112134Z_548942827_RC2NLOACGMCS_RTRMADP_3_UKRAINE-CRISIS-ZELENSKIY-DENMARK.JPG"
+        },
+        {
+          "id": "0b2cf4199fe4",
+          "outlet_id": "sky",
+          "headline": "US asked if Ukraine would give up parts of Donbas for NATO membership, Zelenskyy says",
+          "snippet": "The US has asked for the first time whether Ukraine would withdraw from parts of the Donbas region if Kyiv were admitted to NATO, Volodymyr Zelenskyy said.",
+          "url": "https://news.sky.com/story/us-asks-if-ukraine-would-give-up-parts-of-donbas-for-nato-membership-zelenskyy-says-13612188",
+          "published_at": "2026-11-14T13:12:00Z",
+          "published_at_estimated": false,
+          "image_url": "https://e3.365dm.com/26/11/1920x1080/skynews-zelenskyy-dublin_7406411.jpg?20261114133024"
+        },
+        {
+          "id": "f1354cc6721f",
+          "outlet_id": "bbc",
+          "headline": "US has floated Ukraine ceding Donbas for Nato membership, Zelensky says",
+          "snippet": "The US has not confirmed the Ukrainian president's comments - a US official told the BBC \"many ideas continue to be discussed\".",
+          "url": "https://www.bbc.co.uk/news/articles/cwvg2l312ylqo",
+          "published_at": "2026-11-14T22:37:25Z",
+          "published_at_estimated": false,
+          "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/fc82/live/f8afbeb0-e087-11f1-b780-31cc9daf154a.jpg"
+        },
+        {
+          "id": "00377ccd5b37",
+          "outlet_id": "koreaherald",
+          "headline": "US suggested Kyiv cede land for NATO, Zelenskyy says",
+          "snippet": "KYIV, Ukraine (AFP) -- Washington suggested Kyiv cede land to Moscow in exchange for joining NATO, President Volodymyr Zelenskyy said in comments released Saturday, saying his country's relationship…",
+          "url": "https://www.koreaherald.com/article/10937471",
+          "published_at": "2026-11-15T04:27:55Z",
+          "published_at_estimated": false,
+          "image_url": "https://wimg.heraldcorp.com/news/cms/2026/11/15/rcv.YNA.20261114.PUP20261114009801009_T1.jpg"
+        },
+        {
+          "id": "76e33b8b7db0",
+          "outlet_id": "thehindu",
+          "headline": "U.S. suggested Kyiv cede land to Russia in exchange for joining NATO, says Zelenskyy",
+          "snippet": "President Volodymyr Zelenskyy also warned the Kremlin was “betting everything” on this winter’s military campaign",
+          "url": "https://www.thehindu.com/news/international/us-suggested-kyiv-cede-land-to-russia-in-exchange-for-joining-nato-says-zelenskyy/article71704053.ece",
+          "published_at": "2026-11-15T06:25:16Z",
+          "published_at_estimated": false,
+          "image_url": "https://th-i.thgim.com/public/incoming/celdpx/article71704055.ece/alternates/LANDSCAPE_1200/Russia_Ukraine_War_397_9.jpg"
+        },
+        {
+          "id": "f297548ff795",
+          "outlet_id": "mirror",
+          "headline": "US floats Ukraine ceding Donbas in exchange for NATO membership, Zelensky says",
+          "snippet": "Ukrainian leader Volodymyr Zelensky says Kyiv has been asked if it would withdraw from the eastern Donbas region in return for becoming a member of NATO",
+          "url": "https://www.mirror.co.uk/news/world-news/floats-ukraine-ceding-donbas-exchange-37878581",
+          "published_at": "2026-11-15T08:52:59Z",
+          "published_at_estimated": false,
+          "image_url": "https://i2-prod.mirror.co.uk/incoming/article37878584.ece/ALTERNATES/s615/0_IRELAND-EUROPE-EPC-POLITICS-DIPLOMACY-SUMMIT.jpg"
+        },
+        {
+          "id": "bf468e1bdf30",
+          "outlet_id": "aljazeera",
+          "headline": "Give Donbas, take NATO seat: Could new US pitch work for Ukraine, Russia?",
+          "snippet": "Ukraine's NATO ambition has always been a red line for the Kremlin. Giving up territory has been a no-no for Ukraine.",
+          "url": "https://www.aljazeera.com/news/2026/11/15/give-donbas-take-nato-seat-could-new-us-pitch-work-for-ukraine-russia",
+          "published_at": "2026-11-15T10:58:36Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "a386af32fb25",
+          "outlet_id": "france24",
+          "headline": "Will Ukraine make territorial concessions for NATO membership?",
+          "snippet": "The United States suggested Ukraine make territorial concessions in exchange for a NATO membership, according to Volodymyr Zelensky. The Ukrainian president also claims that Russia has rejected an…",
+          "url": "https://www.france24.com/en/will-ukraine-make-territorial-concessions-for-nato-membership",
+          "published_at": "2026-11-15T12:14:54Z",
+          "published_at_estimated": false,
+          "image_url": "https://s.france24.com/media/display/a2d6cf0e-e0ed-11f1-b351-29048b396e03/w:1024/p:16x9/EN-20261115-100632-100811-CS.jpg"
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "Zelensky said the US had suggested Ukraine cede the Donbas region or territory in exchange for NATO membership.",
+          "sources": [
+            "635a8b00315a",
+            "ea5a56a7367c",
+            "0b2cf4199fe4",
+            "f1354cc6721f",
+            "00377ccd5b37",
+            "76e33b8b7db0",
+            "f297548ff795",
+            "bf468e1bdf30",
+            "a386af32fb25"
+          ]
+        },
+        {
+          "text": "Zelensky said Russia had rejected a ceasefire, described in one report as a ceasefire on energy targets at talks in Abu Dhabi.",
+          "sources": [
+            "ea5a56a7367c",
+            "a386af32fb25"
+          ]
+        },
+        {
+          "text": "Zelensky said the Kremlin was “betting everything” on this winter’s military campaign.",
+          "sources": [
+            "ea5a56a7367c",
+            "76e33b8b7db0"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "f297548ff795",
+              "quote": "US floats Ukraine ceding Donbas in exchange for NATO membership",
+              "field": "headline"
+            },
+            {
+              "article_id": "f297548ff795",
+              "quote": "withdraw from the eastern Donbas region in return for becoming a member of NATO",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with Kyiv being asked whether it would withdraw from the eastern Donbas region in return for NATO membership.",
+              "sources": [
+                "f297548ff795"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "635a8b00315a",
+              "quote": "Zelenskyy says security deal could go to referendum",
+              "field": "headline"
+            },
+            {
+              "article_id": "0b2cf4199fe4",
+              "quote": "The US has asked for the first time",
+              "field": "snippet"
+            },
+            {
+              "article_id": "f1354cc6721f",
+              "quote": "The US has not confirmed the Ukrainian president's comments",
+              "field": "snippet"
+            },
+            {
+              "article_id": "a386af32fb25",
+              "quote": "Will Ukraine make territorial concessions for NATO membership?",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Notes that a security deal could go to a referendum.",
+              "sources": [
+                "635a8b00315a"
+              ]
+            },
+            {
+              "text": "Describes the US question as asked for the first time and concerning parts of the Donbas.",
+              "sources": [
+                "0b2cf4199fe4"
+              ]
+            },
+            {
+              "text": "Reports that the US has not confirmed the comments, with a US official saying many ideas are being discussed.",
+              "sources": [
+                "f1354cc6721f"
+              ]
+            },
+            {
+              "text": "Frames the story as a question about whether Ukraine will make territorial concessions.",
+              "sources": [
+                "a386af32fb25"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "left",
+          "text": "Does not mention that the US has not confirmed Zelensky's comments.",
+          "sources": [
+            "f1354cc6721f"
+          ]
+        },
+        {
+          "lean": "left",
+          "text": "Does not mention that a security deal could go to a referendum.",
+          "sources": [
+            "635a8b00315a"
+          ]
+        },
+        {
+          "lean": "left",
+          "text": "Does not mention Zelensky's claim that Russia rejected a ceasefire.",
+          "sources": [
+            "a386af32fb25"
+          ]
+        }
+      ],
+      "contested_claims": [],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "f1354cc6721f",
+              "quote": "US has floated Ukraine ceding Donbas for Nato membership, Zelensky says",
+              "field": "headline"
+            },
+            {
+              "article_id": "635a8b00315a",
+              "quote": "security deal could go to referendum",
+              "field": "headline"
+            },
+            {
+              "article_id": "0b2cf4199fe4",
+              "quote": "asked for the first time",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Focuses on the Donbas specifically, the possibility of a referendum and the lack of US confirmation.",
+              "sources": [
+                "635a8b00315a",
+                "0b2cf4199fe4",
+                "f1354cc6721f",
+                "f297548ff795"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "ea5a56a7367c",
+              "quote": "Moscow was “betting everything” on this winter’s campaign",
+              "field": "snippet"
+            },
+            {
+              "article_id": "76e33b8b7db0",
+              "quote": "U.S. suggested Kyiv cede land to Russia in exchange for joining NATO",
+              "field": "headline"
+            },
+            {
+              "article_id": "bf468e1bdf30",
+              "quote": "Could new US pitch work for Ukraine, Russia?",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Foregrounds Russia's position, including the rejected energy ceasefire and the Kremlin's winter campaign.",
+              "sources": [
+                "ea5a56a7367c",
+                "76e33b8b7db0"
+              ]
+            },
+            {
+              "text": "Describes NATO membership as a red line for the Kremlin and giving up territory as unacceptable for Ukraine.",
+              "sources": [
+                "bf468e1bdf30"
+              ]
+            },
+            {
+              "text": "Refers to ceding land to Russia or Moscow.",
+              "sources": [
+                "00377ccd5b37",
+                "76e33b8b7db0"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "Ukrainian President Volodymyr Zelensky said the United States had floated the idea of Ukraine giving up the Donbas region, or territory, in exchange for NATO membership. He also said Russia had rejected a ceasefire on energy targets and was “betting everything” on its winter campaign. The US has not confirmed his comments.",
+        "sources": [
+          "635a8b00315a",
+          "ea5a56a7367c",
+          "0b2cf4199fe4",
+          "f1354cc6721f",
+          "00377ccd5b37",
+          "76e33b8b7db0",
+          "f297548ff795",
+          "bf468e1bdf30",
+          "a386af32fb25"
+        ]
+      },
+      "conclusion": {
+        "text": "All outlets report Zelensky saying the US floated Ukraine ceding territory for NATO membership. Western outlets add the referendum idea and the lack of US confirmation, while Eastern outlets give more weight to Russia's stance and the winter campaign. No outlets contradict each other.",
+        "sources": [
+          "635a8b00315a",
+          "f1354cc6721f",
+          "ea5a56a7367c",
+          "76e33b8b7db0",
+          "bf468e1bdf30",
+          "0b2cf4199fe4",
+          "00377ccd5b37",
+          "f297548ff795",
+          "a386af32fb25"
+        ]
+      },
+      "validation": {
+        "kept": 29,
+        "dropped_by_reason": {}
+      }
+    },
+    {
+      "id": "425d8d8c35b6",
+      "title": "Tanker collides with docked cruise ship in New Orleans; port sues tanker owner",
+      "rank": 6,
+      "outlet_count": 7,
+      "coverage": {
+        "lean": {
+          "left": 1,
+          "centre": 2,
+          "right": 2
+        },
+        "bloc": {
+          "west": 5,
+          "east": 2
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "4530daf39f56",
+          "outlet_id": "mirror",
+          "headline": "Horrifying video shows passengers clinging onto American Heritage cruise ship after tanker crash",
+          "snippet": "Between 180 and 190 passengers were aboard the cruise ship, New Orleans Mayor Helena Moreno said at a Friday news conference",
+          "url": "https://www.mirror.co.uk/news/world-news/american-heritage-cruise-ship-video-37876755",
+          "published_at": "2026-11-14T01:48:00Z",
+          "published_at_estimated": false,
+          "image_url": "https://i2-prod.mirror.co.uk/incoming/article37876759.ece/ALTERNATES/s615/2_New-Orleans-Cruise-Ship-26317800415239.jpg"
+        },
+        {
+          "id": "58a6274e8a69",
+          "outlet_id": "thehindu",
+          "headline": "No Indians onboard in carrier involved in Mississippi mishap",
+          "snippet": "",
+          "url": "https://www.thehindu.com/news/international/no-indians-onboard-in-carrier-involved-in-mississippi-mishap/article71701456.ece",
+          "published_at": "2026-11-14T10:24:04Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "c7ad43042f67",
+          "outlet_id": "bbc",
+          "headline": "Watch: Cruise ship overturns after collision with tanker in New Orleans",
+          "snippet": "Around 130 people were rescued from a cruise ship after it was struck by a tanker while docked in New Orleans, Louisiana on Friday.",
+          "url": "https://www.bbc.co.uk/news/videos/ck4gn4y77m40o",
+          "published_at": "2026-11-14T19:14:33Z",
+          "published_at_estimated": false,
+          "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/3089/live/3bf0cfe0-e027-11f1-a701-fddedf244c16.jpg"
+        },
+        {
+          "id": "0eea9eaf4f81",
+          "outlet_id": "sky",
+          "headline": "New Orleans port officials sue owner of tanker that hit river cruise boat",
+          "snippet": "New Orleans port officials are suing the owner of a tanker that lost control and crashed into a cruise boat on the Mississippi River.",
+          "url": "https://news.sky.com/story/new-orleans-port-officials-sue-owner-of-tanker-that-hit-cruise-ship-13612331",
+          "published_at": "2026-11-14T19:40:00Z",
+          "published_at_estimated": false,
+          "image_url": "https://e3.365dm.com/26/11/1920x1080/skynews-mississippi-cruise-boat_7406846.jpg?20261115081011"
+        },
+        {
+          "id": "9a329181b227",
+          "outlet_id": "bbc",
+          "headline": "New Orleans port files $1m lawsuit over 'miracle on the Mississippi' tanker collision",
+          "snippet": "The lawsuit filed by New Orleans officials also requests that the tanker involved in the collision with the cruise ship be seized and sold to pay for damages.",
+          "url": "https://www.bbc.co.uk/news/articles/cwe89y2r5j20o",
+          "published_at": "2026-11-14T22:27:06Z",
+          "published_at_estimated": false,
+          "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/6592/live/907a90a0-e090-11f1-a701-fddedf244c16.jpg"
+        },
+        {
+          "id": "f2580a7dc3b4",
+          "outlet_id": "timesofisrael",
+          "headline": "Tanker collides with cruise ship on Mississippi River; all passengers and crew survive",
+          "snippet": "American Heritage cruise boat flipped while emergency workers were still trying to get everyone off, and dozens were dragged from the river; 32 treated for non-critical injuries",
+          "url": "https://www.timesofisrael.com/tanker-collides-with-cruise-ship-on-mississipi-river-all-passengers-and-crew-survive/",
+          "published_at": "2026-11-15T00:23:13Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "d3c6d9d9d247",
+          "outlet_id": "thesun",
+          "headline": "Tanker owners sued for $1m over terrifying cruise ship collision which left passengers stranded in water after capsizing",
+          "snippet": "A $1MILLION lawsuit has been filed after a tanker crashed into a cruise ship docked in New Orleans. Nearly 200 passengers on board the cruise survived the Mississippi River horror as the packed…",
+          "url": "https://www.thesun.co.uk/news/41027918/tanker-owners-sues-cruise-collision/",
+          "published_at": "2026-11-15T00:56:54Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.thesun.co.uk/wp-content%2Fuploads%2F2026%2F11%2Famerican-heritage-river-cruise-paddleboat-1122914535.jpg?quality%3D90%26"
+        },
+        {
+          "id": "d91a01b54530",
+          "outlet_id": "nypost",
+          "headline": "Tanker that struck New Orleans cruise ship had history of navigational systems issues: report",
+          "snippet": "The tanker that slammed into a docked New Orleans riverboat and hospitalized dozens had been flagged with issues by officials numerous times.",
+          "url": "https://nypost.com/2026/11/14/us-news/tanker-that-slammed-into-docked-nola-riverboat-had-history-of-navigational-systems-issues-report/",
+          "published_at": "2026-11-15T01:02:12Z",
+          "published_at_estimated": false,
+          "image_url": "https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2Famerican-heritage-river-cruise-paddleboat-148680899_cbab02.jpg?w%3D1024"
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "A tanker collided with a cruise ship docked in New Orleans on the Mississippi River.",
+          "sources": [
+            "c7ad43042f67",
+            "0eea9eaf4f81",
+            "f2580a7dc3b4",
+            "d3c6d9d9d247",
+            "d91a01b54530",
+            "4530daf39f56",
+            "58a6274e8a69"
+          ]
+        },
+        {
+          "text": "The cruise ship overturned or capsized after the collision.",
+          "sources": [
+            "c7ad43042f67",
+            "f2580a7dc3b4",
+            "d3c6d9d9d247"
+          ]
+        },
+        {
+          "text": "New Orleans port officials are suing the tanker's owner, with the lawsuit put at $1m.",
+          "sources": [
+            "0eea9eaf4f81",
+            "9a329181b227",
+            "d3c6d9d9d247"
+          ]
+        },
+        {
+          "text": "Passengers survived the collision, with dozens treated for injuries or hospitalised.",
+          "sources": [
+            "f2580a7dc3b4",
+            "d3c6d9d9d247",
+            "d91a01b54530"
+          ]
+        },
+        {
+          "text": "The cruise ship is named as the American Heritage.",
+          "sources": [
+            "4530daf39f56",
+            "f2580a7dc3b4"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "4530daf39f56",
+              "quote": "Horrifying video shows passengers clinging onto American Heritage cruise ship after tanker crash",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with video of passengers clinging to the ship and cites the mayor's figure of 180 to 190 passengers aboard.",
+              "sources": [
+                "4530daf39f56"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "c7ad43042f67",
+              "quote": "Cruise ship overturns after collision with tanker in New Orleans",
+              "field": "headline"
+            },
+            {
+              "article_id": "0eea9eaf4f81",
+              "quote": "New Orleans port officials sue owner of tanker that hit river cruise boat",
+              "field": "headline"
+            },
+            {
+              "article_id": "9a329181b227",
+              "quote": "'miracle on the Mississippi'",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Emphasises the port's lawsuit, including a request that the tanker be seized and sold to pay for damages.",
+              "sources": [
+                "0eea9eaf4f81",
+                "9a329181b227"
+              ]
+            },
+            {
+              "text": "Reports around 130 people were rescued from the cruise ship.",
+              "sources": [
+                "c7ad43042f67"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "right",
+          "headline_quotes": [
+            {
+              "article_id": "d3c6d9d9d247",
+              "quote": "Tanker owners sued for $1m over terrifying cruise ship collision",
+              "field": "headline"
+            },
+            {
+              "article_id": "d91a01b54530",
+              "quote": "had history of navigational systems issues",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the $1m lawsuit and passengers left in the water after capsizing.",
+              "sources": [
+                "d3c6d9d9d247"
+              ]
+            },
+            {
+              "text": "Reports the tanker had been flagged by officials numerous times for navigational systems issues.",
+              "sources": [
+                "d91a01b54530"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "left",
+          "text": "Left coverage does not mention the port's lawsuit against the tanker's owner.",
+          "sources": [
+            "0eea9eaf4f81",
+            "9a329181b227",
+            "d3c6d9d9d247"
+          ]
+        },
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not mention reports that the tanker had a history of navigational systems issues.",
+          "sources": [
+            "d91a01b54530"
+          ]
+        }
+      ],
+      "contested_claims": [],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "9a329181b227",
+              "quote": "New Orleans port files $1m lawsuit",
+              "field": "headline"
+            },
+            {
+              "article_id": "4530daf39f56",
+              "quote": "Horrifying video shows passengers clinging",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Emphasises the lawsuit against the tanker owner and the dramatic scenes of the capsizing.",
+              "sources": [
+                "0eea9eaf4f81",
+                "9a329181b227",
+                "d3c6d9d9d247",
+                "4530daf39f56",
+                "c7ad43042f67"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "58a6274e8a69",
+              "quote": "No Indians onboard in carrier involved in Mississippi mishap",
+              "field": "headline"
+            },
+            {
+              "article_id": "f2580a7dc3b4",
+              "quote": "all passengers and crew survive",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Focuses on survival of all aboard, injury numbers and the absence of Indian nationals on board.",
+              "sources": [
+                "58a6274e8a69",
+                "f2580a7dc3b4"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "A tanker struck the American Heritage cruise ship while it was docked on the Mississippi River in New Orleans on Friday, and the ship overturned. Outlets report all passengers and crew survived, with dozens treated or hospitalised. New Orleans port officials have filed a $1m lawsuit against the tanker's owner.",
+        "sources": [
+          "c7ad43042f67",
+          "f2580a7dc3b4",
+          "4530daf39f56",
+          "d91a01b54530",
+          "0eea9eaf4f81",
+          "9a329181b227",
+          "d3c6d9d9d247"
+        ]
+      },
+      "conclusion": {
+        "text": "All sides report a tanker striking a docked cruise ship in New Orleans that then overturned. West-bloc centre and right outlets lead with the $1m lawsuit, the right adds the tanker's navigational history, the left leads with video; East outlets focus on survival and nationality. No direct contradictions appear.",
+        "sources": [
+          "c7ad43042f67",
+          "f2580a7dc3b4",
+          "9a329181b227",
+          "d3c6d9d9d247",
+          "d91a01b54530",
+          "4530daf39f56",
+          "58a6274e8a69",
+          "0eea9eaf4f81"
+        ]
+      },
+      "validation": {
+        "kept": 26,
+        "dropped_by_reason": {}
+      }
+    },
+    {
+      "id": "83fe8d8a9055",
+      "title": "Jordan court sentences three men to death over Karak church attack",
+      "rank": 7,
+      "outlet_count": 7,
+      "coverage": {
+        "lean": {
+          "left": 0,
+          "centre": 2,
+          "right": 0
+        },
+        "bloc": {
+          "west": 2,
+          "east": 5
+        }
+      },
+      "blindspot": {
+        "lean": "centre",
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "a5945e85db5b",
+          "outlet_id": "thenational",
+          "headline": "Jordan church attack: Court sentences three men to death by hanging",
+          "snippet": "Jordan on Sunday sentenced three men to death by hanging for carrying out an attack at a church last month that killed nine people and wounded 34. The attack on October 23, during a funeral at the…",
+          "url": "https://www.thenationalnews.com/news/mena/2026/11/15/jordan-sentences-three-men-to-death-over-deadly-church-attack/",
+          "published_at": "2026-11-15T07:41:50Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.thenationalnews.com/resizer/v2/A52IUCMLXBEMBBHOS2HU3M3KLE.jpg?auth=d4751a22a98df0e9c45f976e8fd16b71df46975394cdda4e5e4e4300501b2e39&smart=true&width=1152&height=648"
+        },
+        {
+          "id": "944dfb828698",
+          "outlet_id": "aljazeera",
+          "headline": "Jordan sentences three men to death by hanging after deadly church attack",
+          "snippet": "Three men have been convicted of carrying out an attack on a church in the Karak governorate that killed nine people.",
+          "url": "https://www.aljazeera.com/news/2026/11/15/jordan-sentences-three-men-to-death-by-hanging-after-deadly-church-attack",
+          "published_at": "2026-11-15T08:15:04Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "bd6fe99cb40b",
+          "outlet_id": "france24",
+          "headline": "Three sentenced to death over Jordan church attack",
+          "snippet": "A Jordanian court on Sunday sentenced the three gunmen responsible for a terror attack on a church funeral procession in the village of Hamoud that killed nine and wounded others. The attack…",
+          "url": "https://www.france24.com/en/middle-east/20261115-three-sentenced-to-death-over-jordan-church-attack",
+          "published_at": "2026-11-15T08:53:39Z",
+          "published_at_estimated": false,
+          "image_url": "https://s.france24.com/media/display/eb10e528-e0d1-11f1-ba89-695cb59fade5/w:1024/p:16x9/AP26299487770405.jpg"
+        },
+        {
+          "id": "2cbe7a845c66",
+          "outlet_id": "thehindu",
+          "headline": "Jordan sentences three men to death over church attack",
+          "snippet": "Gunmen killed nine people and wounded 25 others when they stormed a funeral at a Greek Orthodox church in Hammoud village, in Jordan's Karak governorate on October 23",
+          "url": "https://www.thehindu.com/news/international/jordan-sentences-three-men-to-death-over-church-attack/article71704395.ece",
+          "published_at": "2026-11-15T09:00:51Z",
+          "published_at_estimated": false,
+          "image_url": "https://th-i.thgim.com/public/incoming/yvwmp6/article71704407.ece/alternates/LANDSCAPE_1200/APTOPIX_Jordan_Church_Shooting_926_6.jpg"
+        },
+        {
+          "id": "9a05c2bfda65",
+          "outlet_id": "toi",
+          "headline": "Jordan sentences 3 men to death for October church attack that killed 9",
+          "snippet": "A Jordanian court has handed down death sentences to three men for their participation in a horrific terrorist attack that occurred during a funeral at St George’s Greek Orthodox Church in Hammoud…",
+          "url": "https://timesofindia.indiatimes.com/world/middle-east/jordan-sentences-3-men-to-death-for-october-church-attack-that-killed-9/articleshow/135851876.cms",
+          "published_at": "2026-11-15T09:37:47Z",
+          "published_at_estimated": false,
+          "image_url": "https://static.toiimg.com/photo/msid-135852317,imgsize-182986.cms"
+        },
+        {
+          "id": "76eaa146c0ca",
+          "outlet_id": "bbc",
+          "headline": "Three men sentenced to death in Jordan over fatal church mass shooting",
+          "snippet": "The attack on funeral at a Greek Orthodox church killed nine and injured 34 others last month.",
+          "url": "https://www.bbc.co.uk/news/articles/c3rrg9xgqlwpo",
+          "published_at": "2026-11-15T11:06:32Z",
+          "published_at_estimated": false,
+          "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/0fb0/live/ed275c50-e0dd-11f1-a701-fddedf244c16.jpg"
+        },
+        {
+          "id": "d41742994bd7",
+          "outlet_id": "scmp",
+          "headline": "Jordan sentences 3 men to death over deadly church attack",
+          "snippet": "A Jordanian court on Sunday sentenced three men to death by hanging over a deadly church shooting, as the kingdom’s Christmas celebrations were cancelled in solidarity with the victims’ families…",
+          "url": "https://www.scmp.com/news/world/middle-east/article/3374499/jordan-sentences-3-men-death-over-deadly-church-attack",
+          "published_at": "2026-11-15T12:13:48Z",
+          "published_at_estimated": false,
+          "image_url": "https://cdn.i-scmp.com/sites/default/files/styles/1280x720/public/d8/images/canvas/2026/11/15/a42ece83-fb38-4965-8c89-8ffd7ef2cdfd_e2b91c38.jpg?itok=7sxkP9OV&v=1794744816"
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "A Jordanian court sentenced three men to death over the church attack.",
+          "sources": [
+            "a5945e85db5b",
+            "944dfb828698",
+            "bd6fe99cb40b",
+            "2cbe7a845c66",
+            "9a05c2bfda65",
+            "76eaa146c0ca",
+            "d41742994bd7"
+          ]
+        },
+        {
+          "text": "The attack killed nine people.",
+          "sources": [
+            "a5945e85db5b",
+            "944dfb828698",
+            "bd6fe99cb40b",
+            "2cbe7a845c66",
+            "9a05c2bfda65",
+            "76eaa146c0ca"
+          ]
+        },
+        {
+          "text": "The attack took place during a funeral.",
+          "sources": [
+            "a5945e85db5b",
+            "bd6fe99cb40b",
+            "2cbe7a845c66",
+            "9a05c2bfda65",
+            "76eaa146c0ca"
+          ]
+        },
+        {
+          "text": "The church was Greek Orthodox.",
+          "sources": [
+            "2cbe7a845c66",
+            "9a05c2bfda65",
+            "76eaa146c0ca"
+          ]
+        },
+        {
+          "text": "The sentence is death by hanging.",
+          "sources": [
+            "a5945e85db5b",
+            "944dfb828698",
+            "d41742994bd7"
+          ]
+        },
+        {
+          "text": "The attack happened in October, in Hammoud (Hamoud) village in the Karak governorate.",
+          "sources": [
+            "a5945e85db5b",
+            "944dfb828698",
+            "bd6fe99cb40b",
+            "2cbe7a845c66",
+            "9a05c2bfda65"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "bd6fe99cb40b",
+              "quote": "terror attack on a church funeral procession",
+              "field": "snippet"
+            },
+            {
+              "article_id": "76eaa146c0ca",
+              "quote": "fatal church mass shooting",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Describes the convicted men as the gunmen responsible for a terror attack on a funeral procession.",
+              "sources": [
+                "bd6fe99cb40b"
+              ]
+            },
+            {
+              "text": "Describes the attack as a mass shooting that killed nine and injured 34.",
+              "sources": [
+                "76eaa146c0ca"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [],
+      "contested_claims": [
+        {
+          "claim": "The number of people wounded in the attack was 34.",
+          "asserted_by": [
+            "a5945e85db5b",
+            "76eaa146c0ca"
+          ],
+          "disputed_by": [
+            "2cbe7a845c66"
+          ]
+        }
+      ],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "bd6fe99cb40b",
+              "quote": "Three sentenced to death over Jordan church attack",
+              "field": "headline"
+            },
+            {
+              "article_id": "76eaa146c0ca",
+              "quote": "Three men sentenced to death in Jordan over fatal church mass shooting",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the sentences and describes the attack as a terror attack or mass shooting at a funeral.",
+              "sources": [
+                "bd6fe99cb40b",
+                "76eaa146c0ca"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "a5945e85db5b",
+              "quote": "Court sentences three men to death by hanging",
+              "field": "headline"
+            },
+            {
+              "article_id": "9a05c2bfda65",
+              "quote": "horrific terrorist attack",
+              "field": "snippet"
+            },
+            {
+              "article_id": "d41742994bd7",
+              "quote": "the kingdom’s Christmas celebrations were cancelled in solidarity with the victims’ families",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Specifies that the death sentences are by hanging.",
+              "sources": [
+                "a5945e85db5b",
+                "944dfb828698",
+                "d41742994bd7"
+              ]
+            },
+            {
+              "text": "Names the church as St George’s Greek Orthodox Church and calls the attack terrorist.",
+              "sources": [
+                "9a05c2bfda65"
+              ]
+            },
+            {
+              "text": "Reports that Jordan's Christmas celebrations were cancelled in solidarity with victims' families.",
+              "sources": [
+                "d41742994bd7"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "A Jordanian court on Sunday sentenced three men to death, by hanging according to several reports, over an October attack on a funeral at a Greek Orthodox church in Hammoud village, Karak governorate. The attack killed nine people.",
+        "sources": [
+          "a5945e85db5b",
+          "944dfb828698",
+          "bd6fe99cb40b",
+          "2cbe7a845c66",
+          "9a05c2bfda65",
+          "76eaa146c0ca",
+          "d41742994bd7"
+        ]
+      },
+      "conclusion": {
+        "text": "All outlets report three death sentences over the church attack, and most report nine dead. West outlets call it a terror attack or mass shooting, while several East outlets stress hanging and one notes cancelled Christmas celebrations. The wounded figure differs: 34 in some reports, 25 in another.",
+        "sources": [
+          "a5945e85db5b",
+          "944dfb828698",
+          "bd6fe99cb40b",
+          "2cbe7a845c66",
+          "9a05c2bfda65",
+          "76eaa146c0ca",
+          "d41742994bd7"
+        ]
+      },
+      "validation": {
+        "kept": 22,
+        "dropped_by_reason": {}
+      }
+    },
+    {
+      "id": "9b793df55634",
+      "title": "Federal judge temporarily blocks closure of DC's East Potomac golf course",
+      "rank": 8,
+      "outlet_count": 5,
+      "coverage": {
+        "lean": {
+          "left": 1,
+          "centre": 2,
+          "right": 1
+        },
+        "bloc": {
+          "west": 4,
+          "east": 1
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "709d2806d2fa",
+          "outlet_id": "nbc",
+          "headline": "Judge temporarily halts Trump’s ‘Trash Island’ golf course redevelopment in D.C.",
+          "snippet": "The Trump administration cannot close East Potomac Park to the public for now, a federal judge in Washington ruled Saturday, dealing a blow to the president’s effort to renovate its golf course.",
+          "url": "https://www.nbcnews.com/politics/trump-administration/judge-temporarily-blocks-trumps-plan-redevelop-east-potomac-golf-cours-rcna609366",
+          "published_at": "2026-11-15T02:46:52Z",
+          "published_at_estimated": false,
+          "image_url": "https://media-cldnry.s-nbcnews.com/image/upload/t_fit_1500w/rockcms/2026-10/261019-potomac-golf-course-vl-1048a-48c250.jpg"
+        },
+        {
+          "id": "fb4802ab2a17",
+          "outlet_id": "thehindu",
+          "headline": "Judge temporarily blocks Trump from moving ahead on Washington public golf course redevelopment",
+          "snippet": "U.S. District Judge Ana Reyes issued the temporary restraining order before the East Potomac Golf Links was due to close on November 15 for 15 months",
+          "url": "https://www.thehindu.com/news/international/judge-temporarily-blocks-trump-from-moving-ahead-on-washington-public-golf-course-redevelopment/article71704032.ece",
+          "published_at": "2026-11-15T02:54:53Z",
+          "published_at_estimated": false,
+          "image_url": "https://th-i.thgim.com/public/incoming/8e4zwl/article71704037.ece/alternates/LANDSCAPE_1200/2026-11-14T110018Z_932004478_RC2LKOAEPGUW_RTRMADP_3_IRAN-CRISIS-TRUMP.JPG"
+        },
+        {
+          "id": "68227f249fc8",
+          "outlet_id": "bbc",
+          "headline": "Judge temporarily blocks Trump from closing Washington DC golf course for renovation",
+          "snippet": "It is the latest development in a months-long challenge to the US president's plans for East Potomac Golf Links.",
+          "url": "https://www.bbc.co.uk/news/articles/c6j9mn7l14y0o",
+          "published_at": "2026-11-15T03:21:04Z",
+          "published_at_estimated": false,
+          "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/4be0/live/054b94d0-e09e-11f1-a701-fddedf244c16.jpg"
+        },
+        {
+          "id": "281c4eb4d2e8",
+          "outlet_id": "npr",
+          "headline": "Judge temporarily blocks Trump from moving ahead on Washington public golf course redevelopment",
+          "snippet": "A federal judge on Saturday ordered a two-week delay to any work at a historic Washington public golf course not far from the White House.",
+          "url": "https://www.npr.org/2026/11/14/nx-s1-6041152/judge-trump-golf-course-blocks",
+          "published_at": "2026-11-15T04:28:45Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "2470e9443647",
+          "outlet_id": "nypost",
+          "headline": "Federal judge blocks Trump from moving ahead on Washington public golf course redevelopment",
+          "snippet": "US District Judge Ana Reyes issued the temporary restraining order before the East Potomac Golf Links was due to close Sunday for 15 months.",
+          "url": "https://nypost.com/2026/11/15/us-news/trump-blocked-from-moving-ahead-on-washington-public-golf-course-redevelopment-judge-orders/",
+          "published_at": "2026-11-15T06:41:42Z",
+          "published_at_estimated": false,
+          "image_url": "https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2Fgolfers-play-ahead-planned-closure-148772002.jpg?w%3D1024"
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "A federal judge has blocked the Trump administration from moving ahead with closing or redeveloping a public golf course in Washington.",
+          "sources": [
+            "709d2806d2fa",
+            "fb4802ab2a17",
+            "68227f249fc8",
+            "281c4eb4d2e8",
+            "2470e9443647"
+          ]
+        },
+        {
+          "text": "The block is temporary.",
+          "sources": [
+            "709d2806d2fa",
+            "fb4802ab2a17",
+            "68227f249fc8",
+            "281c4eb4d2e8",
+            "2470e9443647"
+          ]
+        },
+        {
+          "text": "The ruling was issued on Saturday.",
+          "sources": [
+            "709d2806d2fa",
+            "281c4eb4d2e8"
+          ]
+        },
+        {
+          "text": "US District Judge Ana Reyes issued a temporary restraining order before the course was due to close for 15 months.",
+          "sources": [
+            "fb4802ab2a17",
+            "2470e9443647"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "709d2806d2fa",
+              "quote": "Trump’s ‘Trash Island’ golf course redevelopment",
+              "field": "headline"
+            },
+            {
+              "article_id": "709d2806d2fa",
+              "quote": "dealing a blow to the president’s effort to renovate its golf course",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Describes the ruling as a blow to the president's renovation effort and refers to the project as 'Trash Island'.",
+              "sources": [
+                "709d2806d2fa"
+              ]
+            },
+            {
+              "text": "Leads with the administration being unable to close East Potomac Park to the public for now.",
+              "sources": [
+                "709d2806d2fa"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "68227f249fc8",
+              "quote": "a months-long challenge to the US president's plans",
+              "field": "snippet"
+            },
+            {
+              "article_id": "281c4eb4d2e8",
+              "quote": "ordered a two-week delay to any work",
+              "field": "snippet"
+            },
+            {
+              "article_id": "281c4eb4d2e8",
+              "quote": "historic Washington public golf course",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Places the ruling within a months-long challenge to the president's plans.",
+              "sources": [
+                "68227f249fc8"
+              ]
+            },
+            {
+              "text": "Specifies a two-week delay to any work and describes the course as historic and near the White House.",
+              "sources": [
+                "281c4eb4d2e8"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "right",
+          "headline_quotes": [
+            {
+              "article_id": "2470e9443647",
+              "quote": "Federal judge blocks Trump from moving ahead",
+              "field": "headline"
+            },
+            {
+              "article_id": "2470e9443647",
+              "quote": "due to close Sunday for 15 months",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Names Judge Ana Reyes and the temporary restraining order, and notes the course was due to close Sunday for 15 months.",
+              "sources": [
+                "2470e9443647"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "left",
+          "text": "Left coverage does not name Judge Ana Reyes or mention the planned 15-month closure.",
+          "sources": [
+            "2470e9443647"
+          ]
+        },
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not name Judge Ana Reyes or mention the planned 15-month closure.",
+          "sources": [
+            "2470e9443647"
+          ]
+        },
+        {
+          "lean": "right",
+          "text": "Right coverage does not mention the two-week length of the delay.",
+          "sources": [
+            "281c4eb4d2e8"
+          ]
+        }
+      ],
+      "contested_claims": [],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "709d2806d2fa",
+              "quote": "Judge temporarily halts Trump’s ‘Trash Island’ golf course redevelopment in D.C.",
+              "field": "headline"
+            },
+            {
+              "article_id": "68227f249fc8",
+              "quote": "Judge temporarily blocks Trump from closing Washington DC golf course for renovation",
+              "field": "headline"
+            },
+            {
+              "article_id": "2470e9443647",
+              "quote": "Federal judge blocks Trump from moving ahead",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Western coverage variously stresses the blow to the president's effort, the months-long legal challenge and the two-week delay.",
+              "sources": [
+                "709d2806d2fa",
+                "68227f249fc8",
+                "281c4eb4d2e8"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "fb4802ab2a17",
+              "quote": "Judge temporarily blocks Trump from moving ahead on Washington public golf course redevelopment",
+              "field": "headline"
+            },
+            {
+              "article_id": "fb4802ab2a17",
+              "quote": "due to close on November 15 for 15 months",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Names Judge Ana Reyes and the temporary restraining order, and gives the planned closure date of 15 November and its 15-month length.",
+              "sources": [
+                "fb4802ab2a17"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "A federal judge on Saturday temporarily blocked the Trump administration from closing Washington's East Potomac Golf Links for redevelopment. US District Judge Ana Reyes issued a temporary restraining order before the course was due to close for 15 months, and NPR reports a two-week delay to any work.",
+        "sources": [
+          "709d2806d2fa",
+          "fb4802ab2a17",
+          "68227f249fc8",
+          "281c4eb4d2e8",
+          "2470e9443647"
+        ]
+      },
+      "conclusion": null,
+      "validation": {
+        "kept": 27,
+        "dropped_by_reason": {
+          "untrusted_text": 1
+        }
+      }
+    },
+    {
+      "id": "8193d928a8cb",
+      "title": "Microsoft restores services after prolonged global outage",
+      "rank": 9,
+      "outlet_count": 5,
+      "coverage": {
+        "lean": {
+          "left": 1,
+          "centre": 2,
+          "right": 0
+        },
+        "bloc": {
+          "west": 3,
+          "east": 2
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "4496b96ca336",
+          "outlet_id": "cgtn",
+          "headline": "Microsoft apologizes for global outage, rules out cyberattack",
+          "snippet": "",
+          "url": "https://news.cgtn.com/news/2026-11-14/Microsoft-apologizes-for-global-outage-rules-out-cyberattack-1S3I9qOB6F2/p.html",
+          "published_at": "2026-11-14T03:29:04Z",
+          "published_at_estimated": false,
+          "image_url": "https://news.cgtn.com/news/2026-11-14/Microsoft-apologizes-for-global-outage-rules-out-cyberattack-1S3I9qOB6F2/img/40d0b761923e4dadb1ed77b42ac8d265/40d0b761923e4dadb1ed77b42ac8d265-250.png"
+        },
+        {
+          "id": "5168211346f4",
+          "outlet_id": "dw",
+          "headline": "Microsoft says all services working again",
+          "snippet": "US tech giant Microsoft says it has fixed problems that led to a global outage of its services. The glitch severely disrupted online communications in businesses and governments for more than 24…",
+          "url": "https://www.dw.com/en/microsoft-says-all-services-working-again/a-79946887?maca=en-rss-en-world-4025-xml-mrss",
+          "published_at": "2026-11-14T09:06:00Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "5d417cdc4aa8",
+          "outlet_id": "nyt",
+          "headline": "Microsoft’s Global Outage and Fixes: What We Know",
+          "snippet": "Disruptions to the company’s email, messaging and other products lasted about 36 hours, hampering companies and services around the world.",
+          "url": "https://www.nytimes.com/2026/11/13/technology/microsoft-outage-what-to-know.html",
+          "published_at": "2026-11-14T13:15:55Z",
+          "published_at_estimated": false,
+          "image_url": "https://static01.nyt.com/images/2026/11/13/multimedia/13xp-microsoftWWK-1-lfcv/13xp-microsoftWWK-1-lfcv-mediumSquareAt3X.jpg"
+        },
+        {
+          "id": "5374523df175",
+          "outlet_id": "cgtn",
+          "headline": "Microsoft announces service 'restored,' global outage over",
+          "snippet": "Tech giant Microsoft said on Saturday it had \"restored service\" to customers, effectively bringing to a close a massive outage that caused chaos and disrupted public services and businesses around…",
+          "url": "https://news.cgtn.com/news/2026-11-15/Microsoft-announces-service-restored-global-outage-over-1S5bb8KYL4c/p.html",
+          "published_at": "2026-11-15T00:46:04Z",
+          "published_at_estimated": false,
+          "image_url": "https://news.cgtn.com/news/2026-11-15/Microsoft-announces-service-restored-global-outage-over-1S5bb8KYL4c/img/dfb940305bcf4e17846e4b6349400da3/dfb940305bcf4e17846e4b6349400da3-750.jpeg"
+        },
+        {
+          "id": "cfd6fc457389",
+          "outlet_id": "thehindu",
+          "headline": "How the Microsoft outage affected millions worldwide | Explained",
+          "snippet": "The number of affected services came with significant consequences for professional users as well as entire sectors",
+          "url": "https://www.thehindu.com/sci-tech/technology/microsoft-outage-why-did-microsoft-outlook-and-other-products-go-offline-globally/article71696554.ece",
+          "published_at": "2026-11-15T02:20:32Z",
+          "published_at_estimated": false,
+          "image_url": "https://th-i.thgim.com/public/incoming/31c78c/article71696610.ece/alternates/LANDSCAPE_1200/Microsoft_14689.jpg"
+        },
+        {
+          "id": "dbda0deba0f8",
+          "outlet_id": "france24",
+          "headline": "Are we too reliant on technology? Questions arise after Microsoft's widespread outages",
+          "snippet": "This week's Microsoft outage highlighted the risks of relying on a single technology provider for essential services. The disruption lasted nearly 24 hours, impacting millions of users across more…",
+          "url": "https://www.france24.com/en/are-we-too-reliant-on-technology-questions-arise-after-microsoft-s-widespread-outages",
+          "published_at": "2026-11-15T11:44:50Z",
+          "published_at_estimated": false,
+          "image_url": "https://s.france24.com/media/display/ce0cd38e-e0e9-11f1-9f1d-5f54d898a954/w:1024/p:16x9/2026-11-13T173221Z-378621988-RC25NOA5EH6J-RTRMADP-3-MICROSOFT-OUTAGES.jpg"
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "Microsoft says it has fixed the problems and restored service, ending the global outage.",
+          "sources": [
+            "5168211346f4",
+            "5374523df175"
+          ]
+        },
+        {
+          "text": "The outage was global and disrupted businesses and governments or public services.",
+          "sources": [
+            "5168211346f4",
+            "5d417cdc4aa8",
+            "5374523df175",
+            "cfd6fc457389",
+            "dbda0deba0f8"
+          ]
+        },
+        {
+          "text": "The outage affected millions of users.",
+          "sources": [
+            "cfd6fc457389",
+            "dbda0deba0f8"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "5d417cdc4aa8",
+              "quote": "Microsoft’s Global Outage and Fixes: What We Know",
+              "field": "headline"
+            },
+            {
+              "article_id": "5d417cdc4aa8",
+              "quote": "lasted about 36 hours",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the duration of about 36 hours and the email, messaging and other products affected.",
+              "sources": [
+                "5d417cdc4aa8"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "5168211346f4",
+              "quote": "Microsoft says all services working again",
+              "field": "headline"
+            },
+            {
+              "article_id": "dbda0deba0f8",
+              "quote": "Are we too reliant on technology?",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with Microsoft's statement that all services are working again.",
+              "sources": [
+                "5168211346f4"
+              ]
+            },
+            {
+              "text": "Raises questions about the risks of relying on a single technology provider for essential services.",
+              "sources": [
+                "dbda0deba0f8"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "left",
+          "text": "Left coverage does not mention questions about the risks of relying on a single technology provider for essential services.",
+          "sources": [
+            "dbda0deba0f8"
+          ]
+        }
+      ],
+      "contested_claims": [
+        {
+          "claim": "The outage lasted more than 24 hours, about 36 hours by one account.",
+          "asserted_by": [
+            "5d417cdc4aa8",
+            "5168211346f4"
+          ],
+          "disputed_by": [
+            "dbda0deba0f8"
+          ]
+        }
+      ],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "5168211346f4",
+              "quote": "Microsoft says all services working again",
+              "field": "headline"
+            },
+            {
+              "article_id": "5d417cdc4aa8",
+              "quote": "lasted about 36 hours",
+              "field": "snippet"
+            },
+            {
+              "article_id": "dbda0deba0f8",
+              "quote": "Questions arise after Microsoft's widespread outages",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Emphasises the duration of the outage and the restoration of services.",
+              "sources": [
+                "5168211346f4",
+                "5d417cdc4aa8",
+                "dbda0deba0f8"
+              ]
+            },
+            {
+              "text": "Raises the risks of reliance on a single technology provider.",
+              "sources": [
+                "dbda0deba0f8"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "4496b96ca336",
+              "quote": "Microsoft apologizes for global outage, rules out cyberattack",
+              "field": "headline"
+            },
+            {
+              "article_id": "5374523df175",
+              "quote": "caused chaos and disrupted public services and businesses",
+              "field": "snippet"
+            },
+            {
+              "article_id": "cfd6fc457389",
+              "quote": "How the Microsoft outage affected millions worldwide",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with Microsoft's apology and its ruling out of a cyberattack.",
+              "sources": [
+                "4496b96ca336"
+              ]
+            },
+            {
+              "text": "Describes the outage as massive and causing chaos, with consequences for professional users and entire sectors.",
+              "sources": [
+                "5374523df175",
+                "cfd6fc457389"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "Microsoft says it has restored services after a global outage that disrupted its email, messaging and other products for businesses and public services worldwide. Reports put the disruption at between nearly 24 and about 36 hours. CGTN reports that Microsoft apologised and ruled out a cyberattack.",
+        "sources": [
+          "5168211346f4",
+          "5d417cdc4aa8",
+          "5374523df175",
+          "4496b96ca336",
+          "dbda0deba0f8"
+        ]
+      },
+      "conclusion": {
+        "text": "All sides report Microsoft restoring service after a global outage that disrupted businesses and public services. Western outlets foreground duration and reliance on a single provider; Eastern outlets lead with the apology, the ruled-out cyberattack and the scale of impact. The outage's duration is stated differently, from nearly 24 to about 36 hours.",
+        "sources": [
+          "5168211346f4",
+          "5d417cdc4aa8",
+          "dbda0deba0f8",
+          "4496b96ca336",
+          "5374523df175",
+          "cfd6fc457389"
+        ]
+      },
+      "validation": {
+        "kept": 24,
+        "dropped_by_reason": {}
+      }
+    },
+    {
+      "id": "eec52120f025",
+      "title": "Trump, Putin and Xi plan joint meeting in China during APEC week",
+      "rank": 10,
+      "outlet_count": 5,
+      "coverage": {
+        "lean": {
+          "left": 1,
+          "centre": 2,
+          "right": 0
+        },
+        "bloc": {
+          "west": 3,
+          "east": 2
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "cb35e74edb9b",
+          "outlet_id": "bbc",
+          "headline": "Trump, Putin and Xi plan historic joint meeting in China next week, White House says",
+          "snippet": "Trump will discuss the \"reduction of nuclear weapons\" during the unprecedented talks, a spokeswoman says.",
+          "url": "https://www.bbc.co.uk/news/articles/ckz74jzpy18do",
+          "published_at": "2026-11-14T15:53:55Z",
+          "published_at_estimated": false,
+          "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/172e/live/be162960-dfc9-11f1-81be-1f9bcd2a4214.jpg"
+        },
+        {
+          "id": "b9f7810491f4",
+          "outlet_id": "koreaherald",
+          "headline": "Trump, Xi, Putin plan unprecedented joint meeting",
+          "snippet": "The leaders of the United States, China and Russia plan to meet Thursday on the sidelines of this week's Asia-Pacific Economic Cooperation summit in China's tech hub of Shenzhen — an unprecedented…",
+          "url": "https://www.koreaherald.com/article/10937469",
+          "published_at": "2026-11-15T04:25:04Z",
+          "published_at_estimated": false,
+          "image_url": "https://wimg.heraldcorp.com/news/cms/2026/11/15/rcv.YNA.20261114.PAP20261114112101009_T1.jpg"
+        },
+        {
+          "id": "40cd366a77e5",
+          "outlet_id": "japantimes",
+          "headline": "Trump-Putin-Xi meeting likely to be short on substance, rich in symbolism",
+          "snippet": "The talks with the leaders of two countries that represent the biggest challenges to American power could set a worrying precedent for U.S. allies.",
+          "url": "https://www.japantimes.co.jp/news/2026/11/15/asia-pacific/politics/trilateral-us-china-russia-trump-xi-putin/",
+          "published_at": "2026-11-15T06:12:00Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.japantimes.co.jp/japantimes/uploads/images/2026/11/15/thumbs/400x400/574111.jpg"
+        },
+        {
+          "id": "e4a4f12f64f3",
+          "outlet_id": "guardian",
+          "headline": "Anthony Albanese welcomes Trump-Xi-Putin summit – even as European leaders express reservations",
+          "snippet": "‘We think dialogue is a good thing,’ Australian PM says after German chancellor urges the US to work with Europe for peace in Ukraine Australia has endorsed this week’s historic summit between…",
+          "url": "https://www.theguardian.com/australia-news/2026/nov/15/anthony-albanese-welcomes-trump-xi-putin-summit-even-as-european-leaders-express-reservations",
+          "published_at": "2026-11-15T06:22:32Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.guim.co.uk/img/media/bdce7545dc691e9936e076cd03bde7e3cc7e3a2a/264_0_3267_2614/master/3267.jpg?width=460&quality=85&auto=format&fit=max&s=138da03a1adbfcb166ad14e3a515c6b9"
+        },
+        {
+          "id": "5c5a09c562f3",
+          "outlet_id": "dw",
+          "headline": "Beijing faces its Russia dilemma amid talk of Xi-Trump-Putin summit",
+          "snippet": "China is forced to tread carefully as it considers hosting a meeting between Xi Jinping, Vladimir Putin, and Donald Trump. While the optics are sure to favor Moscow, Beijing is risking its image on…",
+          "url": "https://www.dw.com/en/beijing-faces-its-russia-dilemma-amid-talk-of-xi-trump-putin-summit/a-79942427?maca=en-rss-en-world-4025-xml-mrss",
+          "published_at": "2026-11-15T06:31:00Z",
+          "published_at_estimated": false,
+          "image_url": null
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "Trump, Putin and Xi plan a joint meeting in China.",
+          "sources": [
+            "cb35e74edb9b",
+            "b9f7810491f4",
+            "e4a4f12f64f3",
+            "40cd366a77e5"
+          ]
+        },
+        {
+          "text": "The meeting is described as historic or unprecedented.",
+          "sources": [
+            "cb35e74edb9b",
+            "b9f7810491f4",
+            "e4a4f12f64f3"
+          ]
+        },
+        {
+          "text": "The meeting is set for this week or next week.",
+          "sources": [
+            "cb35e74edb9b",
+            "b9f7810491f4",
+            "e4a4f12f64f3"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "e4a4f12f64f3",
+              "quote": "Anthony Albanese welcomes Trump-Xi-Putin summit",
+              "field": "headline"
+            },
+            {
+              "article_id": "e4a4f12f64f3",
+              "quote": "even as European leaders express reservations",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with Australia's endorsement of the summit and the prime minister's view that dialogue is a good thing.",
+              "sources": [
+                "e4a4f12f64f3"
+              ]
+            },
+            {
+              "text": "Notes the German chancellor urging the US to work with Europe for peace in Ukraine.",
+              "sources": [
+                "e4a4f12f64f3"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "cb35e74edb9b",
+              "quote": "historic joint meeting in China next week, White House says",
+              "field": "headline"
+            },
+            {
+              "article_id": "cb35e74edb9b",
+              "quote": "reduction of nuclear weapons",
+              "field": "snippet"
+            },
+            {
+              "article_id": "5c5a09c562f3",
+              "quote": "Beijing faces its Russia dilemma",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Attributes the plan to the White House and highlights nuclear weapons reduction as a topic.",
+              "sources": [
+                "cb35e74edb9b"
+              ]
+            },
+            {
+              "text": "Focuses on China treading carefully as possible host, with optics described as favouring Moscow.",
+              "sources": [
+                "5c5a09c562f3"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "left",
+          "text": "Left coverage does not mention the White House statement that Trump will discuss the reduction of nuclear weapons.",
+          "sources": [
+            "cb35e74edb9b"
+          ]
+        },
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not mention Australia's welcome of the summit or European leaders' reservations.",
+          "sources": [
+            "e4a4f12f64f3"
+          ]
+        }
+      ],
+      "contested_claims": [],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "cb35e74edb9b",
+              "quote": "Trump, Putin and Xi plan historic joint meeting in China next week",
+              "field": "headline"
+            },
+            {
+              "article_id": "e4a4f12f64f3",
+              "quote": "even as European leaders express reservations",
+              "field": "headline"
+            },
+            {
+              "article_id": "5c5a09c562f3",
+              "quote": "Beijing is risking its image",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Emphasises nuclear weapons talks, allied reactions from Australia and Europe, and China's position regarding Russia.",
+              "sources": [
+                "cb35e74edb9b",
+                "e4a4f12f64f3",
+                "5c5a09c562f3"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "b9f7810491f4",
+              "quote": "Trump, Xi, Putin plan unprecedented joint meeting",
+              "field": "headline"
+            },
+            {
+              "article_id": "40cd366a77e5",
+              "quote": "likely to be short on substance, rich in symbolism",
+              "field": "headline"
+            },
+            {
+              "article_id": "40cd366a77e5",
+              "quote": "could set a worrying precedent for U.S. allies",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Gives logistical detail: Thursday, on the sidelines of the APEC summit in Shenzhen.",
+              "sources": [
+                "b9f7810491f4"
+              ]
+            },
+            {
+              "text": "Describes the talks as likely symbolic and as a possible worrying precedent for US allies.",
+              "sources": [
+                "40cd366a77e5"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "The leaders of the United States, China and Russia plan an unprecedented joint meeting on the sidelines of this week's APEC summit in Shenzhen, China. A White House spokeswoman said Trump will discuss the reduction of nuclear weapons. Australia's prime minister welcomed the talks while European leaders expressed reservations.",
+        "sources": [
+          "cb35e74edb9b",
+          "b9f7810491f4",
+          "e4a4f12f64f3"
+        ]
+      },
+      "conclusion": {
+        "text": "All sides report a planned, unprecedented Trump-Putin-Xi meeting in China. Western outlets emphasise nuclear talks, allied reactions and China's Russia dilemma, while Eastern outlets give the Shenzhen APEC setting and frame the talks as symbolic and a concern for US allies. No outlet's account contradicts another's.",
+        "sources": [
+          "cb35e74edb9b",
+          "e4a4f12f64f3",
+          "5c5a09c562f3",
+          "b9f7810491f4",
+          "40cd366a77e5"
+        ]
+      },
+      "validation": {
+        "kept": 25,
+        "dropped_by_reason": {}
+      }
+    }
+  ]
+}
