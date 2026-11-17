@@ -1,0 +1,3608 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-11-17T15:47:58.976759Z",
+  "date": "2026-11-17",
+  "meta": {
+    "model": "claude-opus-5-5",
+    "cost_usd": 0.639002,
+    "outlets_polled": 29,
+    "articles_collected": 674,
+    "warnings": [
+      "1 feed(s) failed during collect"
+    ],
+    "validation": {
+      "kept": 277,
+      "dropped_by_reason": {
+        "untrusted_text": 3
+      }
+    }
+  },
+  "outlets": [
+    {
+      "id": "guardian",
+      "name": "The Guardian",
+      "lean": "left",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United Kingdom",
+      "home_url": "https://www.theguardian.com/",
+      "rating_basis": "AllSides media bias rating (Lean Left), checked Oct 2026"
+    },
+    {
+      "id": "independent",
+      "name": "The Independent",
+      "lean": "left",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United Kingdom",
+      "home_url": "https://www.independent.co.uk/",
+      "rating_basis": "AllSides media bias rating (Lean Left), checked Oct 2026"
+    },
+    {
+      "id": "mirror",
+      "name": "Daily Mirror",
+      "lean": "left",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United Kingdom",
+      "home_url": "https://www.mirror.co.uk/",
+      "rating_basis": "Ad Fontes Media bias rating (Skews Left), checked Oct 2026"
+    },
+    {
+      "id": "bbc",
+      "name": "BBC News",
+      "lean": "centre",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "public-service",
+      "country": "United Kingdom",
+      "home_url": "https://www.bbc.co.uk/news",
+      "rating_basis": "AllSides media bias rating (Center), checked Oct 2026"
+    },
+    {
+      "id": "sky",
+      "name": "Sky News",
+      "lean": "centre",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United Kingdom",
+      "home_url": "https://news.sky.com/",
+      "rating_basis": "Ad Fontes Media bias rating (Middle), checked Oct 2026"
+    },
+    {
+      "id": "telegraph",
+      "name": "The Telegraph",
+      "lean": "right",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United Kingdom",
+      "home_url": "https://www.telegraph.co.uk/",
+      "rating_basis": "AllSides media bias rating (Lean Right), checked Oct 2026"
+    },
+    {
+      "id": "dailymail",
+      "name": "Daily Mail",
+      "lean": "right",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United Kingdom",
+      "home_url": "https://www.dailymail.co.uk/",
+      "rating_basis": "AllSides media bias rating (Right), checked Oct 2026"
+    },
+    {
+      "id": "thesun",
+      "name": "The Sun",
+      "lean": "right",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United Kingdom",
+      "home_url": "https://www.thesun.co.uk/",
+      "rating_basis": "AllSides media bias rating (Right), checked Oct 2026"
+    },
+    {
+      "id": "nyt",
+      "name": "The New York Times",
+      "lean": "left",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United States",
+      "home_url": "https://www.nytimes.com/",
+      "rating_basis": "AllSides media bias rating (Lean Left), checked Oct 2026"
+    },
+    {
+      "id": "nbc",
+      "name": "NBC News",
+      "lean": "left",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United States",
+      "home_url": "https://www.nbcnews.com/",
+      "rating_basis": "AllSides media bias rating (Lean Left), checked Oct 2026"
+    },
+    {
+      "id": "huffpost",
+      "name": "HuffPost",
+      "lean": "left",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United States",
+      "home_url": "https://www.huffpost.com/",
+      "rating_basis": "AllSides media bias rating (Left), checked Oct 2026"
+    },
+    {
+      "id": "npr",
+      "name": "NPR",
+      "lean": "centre",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "public-service",
+      "country": "United States",
+      "home_url": "https://www.npr.org/",
+      "rating_basis": "Ad Fontes Media bias rating (Middle / Skews Left), checked Oct 2026"
+    },
+    {
+      "id": "axios",
+      "name": "Axios",
+      "lean": "centre",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United States",
+      "home_url": "https://www.axios.com/",
+      "rating_basis": "AllSides media bias rating (Center), checked Oct 2026"
+    },
+    {
+      "id": "fox",
+      "name": "Fox News",
+      "lean": "right",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United States",
+      "home_url": "https://www.foxnews.com/",
+      "rating_basis": "AllSides media bias rating (Right), checked Oct 2026"
+    },
+    {
+      "id": "nypost",
+      "name": "New York Post",
+      "lean": "right",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United States",
+      "home_url": "https://nypost.com/",
+      "rating_basis": "AllSides media bias rating (Lean Right), checked Oct 2026"
+    },
+    {
+      "id": "examiner",
+      "name": "Washington Examiner",
+      "lean": "right",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United States",
+      "home_url": "https://www.washingtonexaminer.com/",
+      "rating_basis": "AllSides media bias rating (Lean Right), checked Oct 2026"
+    },
+    {
+      "id": "france24",
+      "name": "France 24",
+      "lean": "centre",
+      "region": "europe",
+      "bloc": "west",
+      "ownership": "public-service",
+      "country": "France",
+      "home_url": "https://www.france24.com/en/",
+      "rating_basis": "Ad Fontes Media bias rating (Middle), checked Oct 2026"
+    },
+    {
+      "id": "dw",
+      "name": "DW (Deutsche Welle)",
+      "lean": "centre",
+      "region": "europe",
+      "bloc": "west",
+      "ownership": "public-service",
+      "country": "Germany",
+      "home_url": "https://www.dw.com/en/",
+      "rating_basis": "AllSides media bias rating (Center), checked Oct 2026"
+    },
+    {
+      "id": "aljazeera",
+      "name": "Al Jazeera English",
+      "lean": null,
+      "region": "middle_east",
+      "bloc": "east",
+      "ownership": "state-funded",
+      "country": "Qatar",
+      "home_url": "https://www.aljazeera.com/",
+      "rating_basis": "Funded by the State of Qatar; no left/right tag applied"
+    },
+    {
+      "id": "thenational",
+      "name": "The National (UAE)",
+      "lean": null,
+      "region": "middle_east",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "United Arab Emirates",
+      "home_url": "https://www.thenationalnews.com/",
+      "rating_basis": "Owned by International Media Investments (Abu Dhabi); no left/right tag applied"
+    },
+    {
+      "id": "timesofisrael",
+      "name": "The Times of Israel",
+      "lean": null,
+      "region": "middle_east",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "Israel",
+      "home_url": "https://www.timesofisrael.com/",
+      "rating_basis": "Privately owned; no left/right tag applied"
+    },
+    {
+      "id": "cgtn",
+      "name": "CGTN",
+      "lean": null,
+      "region": "asia",
+      "bloc": "east",
+      "ownership": "state-controlled",
+      "country": "China",
+      "home_url": "https://www.cgtn.com/",
+      "rating_basis": "China Global Television Network, part of state broadcaster China Media Group"
+    },
+    {
+      "id": "ecns",
+      "name": "ECNS (China News Service)",
+      "lean": null,
+      "region": "asia",
+      "bloc": "east",
+      "ownership": "state-controlled",
+      "country": "China",
+      "home_url": "https://www.ecns.cn/",
+      "rating_basis": "English service of China News Service, a state news agency"
+    },
+    {
+      "id": "scmp",
+      "name": "South China Morning Post",
+      "lean": null,
+      "region": "asia",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "Hong Kong",
+      "home_url": "https://www.scmp.com/",
+      "rating_basis": "Owned by Alibaba Group; no left/right tag applied"
+    },
+    {
+      "id": "toi",
+      "name": "The Times of India",
+      "lean": null,
+      "region": "asia",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "India",
+      "home_url": "https://timesofindia.indiatimes.com/",
+      "rating_basis": "Privately owned (Bennett, Coleman & Co.); no left/right tag applied"
+    },
+    {
+      "id": "thehindu",
+      "name": "The Hindu",
+      "lean": null,
+      "region": "asia",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "India",
+      "home_url": "https://www.thehindu.com/",
+      "rating_basis": "Privately owned (The Hindu Group); no left/right tag applied"
+    },
+    {
+      "id": "moscowtimes",
+      "name": "The Moscow Times",
+      "lean": null,
+      "region": "europe",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "Russia",
+      "home_url": "https://www.themoscowtimes.com/",
+      "rating_basis": "Independent, Amsterdam-based since 2022; designated \"undesirable\" by Russia; no left/right tag applied"
+    },
+    {
+      "id": "japantimes",
+      "name": "The Japan Times",
+      "lean": null,
+      "region": "asia",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "Japan",
+      "home_url": "https://www.japantimes.co.jp/",
+      "rating_basis": "Privately owned (News2u Holdings); no left/right tag applied"
+    },
+    {
+      "id": "koreaherald",
+      "name": "The Korea Herald",
+      "lean": null,
+      "region": "asia",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "South Korea",
+      "home_url": "https://www.koreaherald.com/",
+      "rating_basis": "Privately owned (Herald Corporation); no left/right tag applied"
+    }
+  ],
+  "stories": [
+    {
+      "id": "de14651a6926",
+      "title": "Ukraine strikes Kerch bridge to Crimea for a second day, collapsing a road section",
+      "rank": 1,
+      "outlet_count": 13,
+      "coverage": {
+        "lean": {
+          "left": 4,
+          "centre": 3,
+          "right": 2
+        },
+        "bloc": {
+          "west": 9,
+          "east": 4
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "e6b4ab9dc0ad",
+          "outlet_id": "moscowtimes",
+          "headline": "Ukraine Strikes Crimean Bridge for Second Day as Russia Pounds Kyiv Bridges",
+          "snippet": "Tuesday’s closure on the bridge came less than a day after traffic resumed following a drone attack that shut the crossing for more than 16 hours.",
+          "url": "https://www.themoscowtimes.com/2026/11/17/ukraine-strikes-crimean-bridge-for-second-day-as-russia-pounds-kyiv-bridges-a94281",
+          "published_at": "2026-11-17T08:31:00Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "140ad932b3bb",
+          "outlet_id": "mirror",
+          "headline": "Putin humiliated as crucial Kerch Bridge collapses under huge Ukrainian onslaught",
+          "snippet": "A key bridge connecting Russia and occupied Crimea has been critically damaged following a night of intense strikes by Kyiv",
+          "url": "https://www.mirror.co.uk/news/world-news/kerch-crimean-bridge-attack-ukraine-37884446",
+          "published_at": "2026-11-17T08:36:32Z",
+          "published_at_estimated": false,
+          "image_url": "https://i2-prod.mirror.co.uk/incoming/article37884514.ece/ALTERNATES/s615/0_The-Crimean-Bridge-Photo-Astra.jpg"
+        },
+        {
+          "id": "facb79b68e53",
+          "outlet_id": "thenational",
+          "headline": "Ukraine and Russia attack key bridges ahead of China talks",
+          "snippet": "Ukraine attacked the Crimean Bridge for the second straight day as Russia launched strikes on key routes across the Dnipro River, with both sides seeking to increase the cost of the war before…",
+          "url": "https://www.thenationalnews.com/news/europe/2026/11/17/ukraine-and-russia-attack-key-bridges-ahead-of-china-talks/",
+          "published_at": "2026-11-17T08:43:02Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.thenationalnews.com/resizer/v2/7LD3XRIFPJWC2DTXIX63GF5NII.jpg?auth=d5decf7dc0fd887cd6bf5ffd91413d83e6d7ce39a428eed64bb5007887e8eca3&smart=true&width=5076&height=3060"
+        },
+        {
+          "id": "f4f1fd88501c",
+          "outlet_id": "nbc",
+          "headline": "Vladimir Putin’s prized bridge is partially destroyed in Ukrainian strike",
+          "snippet": "A key bridge connecting the occupied Crimean Peninsula with mainland Russia suffered significant damage Tuesday, a landmark blow to President Vladimir Putin.",
+          "url": "https://www.nbcnews.com/world/russia/kerch-bridge-strikes-putin-crimea-ukraine-russia-war-kyiv-rcna609756",
+          "published_at": "2026-11-17T09:06:06Z",
+          "published_at_estimated": false,
+          "image_url": "https://media-cldnry.s-nbcnews.com/image/upload/t_fit_1500w/rockcms/2026-11/261117-kerch-mb-0840-c3bfa3.jpg"
+        },
+        {
+          "id": "a74a607cd6bc",
+          "outlet_id": "npr",
+          "headline": "Ukraine strikes major Russian bridge with drones and missiles as aerial attacks escalate",
+          "snippet": "A Ukrainian drone and missile attack prepared over several weeks struck a vital Russian rail and road bridge to the occupied Crimean Peninsula, Ukrainian President Volodymyr Zelenskyy said Tuesday.",
+          "url": "https://www.npr.org/2026/11/17/g-s1-153946/russia-ukraine-war",
+          "published_at": "2026-11-17T09:50:45Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "bf2d2775bdc4",
+          "outlet_id": "nbc",
+          "headline": "Ukrainian strike damages key Russian bridge in Crimea",
+          "snippet": "A key bridge connecting the occupied Crimean Peninsula with mainland Russia was severely damaged in a Ukrainian strike. Russian President Putin had made construction of the bridge his flagship…",
+          "url": "https://www.nbcnews.com/video/ukrainian-strike-damages-key-russian-bridge-in-crimea-273630789724",
+          "published_at": "2026-11-17T09:56:47Z",
+          "published_at_estimated": false,
+          "image_url": "https://media-cldnry.s-nbcnews.com/image/upload/t_fit_1500w/mpx/2704722219/2026_11/f_tov_lon_crimea_bridge_261117.00_00_10_15.Still001-khqy6r.jpg"
+        },
+        {
+          "id": "4910a0ad663b",
+          "outlet_id": "thesun",
+          "headline": "Zelensky reveals secret ‘seven-phase’ mission behind incredible blitz of Putin’s £3billion bridge as section collapses",
+          "snippet": "UKRAINIAN leader Volodymyr Zelensky has revealed the secret mission behind the “perfect” blitz of Vladimir Putin’s £3billion Crimea Bridge. A giant 745ft-wide arch and a section of roadway on the…",
+          "url": "https://www.thesun.co.uk/news/41047239/zelensky-secret-mission-destroys-putin-bridge/",
+          "published_at": "2026-11-17T11:30:45Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.thesun.co.uk/wp-content%2Fuploads%2F2026%2F11%2Fvolodymyr-zelenskyy-reception-ukrainian-1120697137.jpg?quality%3D90%26"
+        },
+        {
+          "id": "cf816a2edbc1",
+          "outlet_id": "france24",
+          "headline": "Ukraine, Russia hit key bridges ahead of Putin-Xi-Trump summit",
+          "snippet": "Ukraine struck Russia's Crimean bridge for the second night in a row on Tuesday, shutting it down, while Russia hit two major bridges in Kyiv -- the latest wave of attacks that come ahead of a…",
+          "url": "https://www.france24.com/en/video/20261117-ukraine-russia-hit-key-bridges-ahead-of-putin-xi-trump-summit",
+          "published_at": "2026-11-17T12:00:59Z",
+          "published_at_estimated": false,
+          "image_url": "https://s.france24.com/media/display/e31c0bb0-e27d-11f1-98b4-c5c0357b2a0c/w:1024/p:16x9/EN-20261117-120243-120556-CS.jpg"
+        },
+        {
+          "id": "9bb3e86a566e",
+          "outlet_id": "france24",
+          "headline": "Ukraine strikes major Russian bridge in Crimea with drones and missiles",
+          "snippet": "Ukrainian drones and missiles struck a vital bridge linking Russia to the occupied Crimean Peninsula, Ukrainian President Volodymyr Zelensky said Tuesday, calling it an “unprecedented” operation as…",
+          "url": "https://www.france24.com/en/video/20261117-ukraine-strikes-major-russian-bridge-in-crimea-with-drones-and-missiles",
+          "published_at": "2026-11-17T12:17:34Z",
+          "published_at_estimated": false,
+          "image_url": "https://s.france24.com/media/display/3fef4026-e280-11f1-b561-1ba7ddfab527/w:1024/p:16x9/EN-20261117-130150-130338-CS.jpg"
+        },
+        {
+          "id": "82bd79125cd5",
+          "outlet_id": "bbc",
+          "headline": "Putin's Crimea bridge partly collapses as Zelensky hails 'unprecedented' attack by Ukraine",
+          "snippet": "Ukraine says the missile and drone attack on the strategic bridge in the Russian-annexed Crimea took weeks to plan.",
+          "url": "https://www.bbc.co.uk/news/articles/cw772jk4rvmxo",
+          "published_at": "2026-11-17T13:01:11Z",
+          "published_at_estimated": false,
+          "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/222d/live/db8315b0-e278-11f1-99a1-253766e7ad8b.png"
+        },
+        {
+          "id": "19542695ae56",
+          "outlet_id": "scmp",
+          "headline": "Ukraine damages Russia’s Crimean bridge in major strike",
+          "snippet": "Ukrainian drones and missiles destroyed the central road section of the bridge linking Russia and Crimea on Tuesday, inflicting a military and symbolic blow on President Vladimir Putin two days…",
+          "url": "https://www.scmp.com/news/world/russia-central-asia/article/3374785/ukraine-damages-russias-crimean-bridge-major-strike",
+          "published_at": "2026-11-17T13:21:42Z",
+          "published_at_estimated": false,
+          "image_url": "https://cdn.i-scmp.com/sites/default/files/styles/1280x720/public/d8/images/canvas/2026/11/17/37d568ed-39f3-456d-8753-9528f60ca879_e5c6c57c.jpg?itok=f58ATY70&v=1794921698"
+        },
+        {
+          "id": "19da3681e212",
+          "outlet_id": "guardian",
+          "headline": "Ukraine critically damages Kerch bridge linking occupied Crimea with Russia",
+          "snippet": "Zelenskyy praises ‘unprecedented attack’ but Kremlin claims bridge will be restored and will be ‘better than ever’ Europe live – follow latest Ukraine has critically damaged the Kerch bridge linking…",
+          "url": "https://www.theguardian.com/world/2026/nov/17/ukraine-strikes-critical-damage-russia-kerch-bridge-crimea",
+          "published_at": "2026-11-17T13:25:02Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.guim.co.uk/img/media/99e6f379e7967f001cc660aae2f7b71f118e92a8/0_0_1500_1200/master/1500.jpg?width=460&quality=85&auto=format&fit=max&s=3d25e29b8a93e948500025ad5bfa2c97"
+        },
+        {
+          "id": "8edceff9eb18",
+          "outlet_id": "aljazeera",
+          "headline": "‘Unprecedented’ Ukraine attack on Crimean bridge",
+          "snippet": "Ukraine has struck the Kerch Bridge linking Russia to Russian-annexed Crimea for a second day.",
+          "url": "https://www.aljazeera.com/video/newsfeed/2026/11/17/unprecedented-ukraine-attack-on-crimean-bridge",
+          "published_at": "2026-11-17T13:29:27Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "c94ae81ab337",
+          "outlet_id": "dailymail",
+          "headline": "Ukraine declares Putin's Crimean bridge 'beyond repair' after unleashing second drone attack as section collapses into river",
+          "snippet": "Vladimir Putin's Kerch Bridge, which connects Russia with the occupied Crimean Peninsula, has been damaged after it was struck by a second Ukrainian airstrike in 24 hours.",
+          "url": "https://www.dailymail.com/news/article-16298675/Putins-Crimean-bridge-seriously-damaged-second-attack-Ukraine-drones-section-collapses-river.html",
+          "published_at": "2026-11-17T15:36:31Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.dailymail.com/1s/2026/11/17/07/112552735-0-image-a-5_1794900148898.jpg"
+        },
+        {
+          "id": "24c24c6a8579",
+          "outlet_id": "nyt",
+          "headline": "Ukraine Attacks Kerch Bridge Linking Russia to Occupied Crimea",
+          "snippet": "Destroying the structure, the only one connecting Russia to the occupied Crimean Peninsula, has long been a top objective for Kyiv.",
+          "url": "https://www.nytimes.com/2026/11/17/world/europe/ukraine-kyiv-russia-kerch-bridge-crimea.html",
+          "published_at": "2026-11-17T15:37:57Z",
+          "published_at_estimated": false,
+          "image_url": "https://static01.nyt.com/images/2026/11/17/multimedia/17int-russia-ukraine-bridges-jfql/17int-russia-ukraine-bridges-jfql-mediumSquareAt3X.jpg"
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "Ukraine struck the bridge linking Russia with occupied Crimea.",
+          "sources": [
+            "e6b4ab9dc0ad",
+            "140ad932b3bb",
+            "facb79b68e53",
+            "f4f1fd88501c",
+            "a74a607cd6bc",
+            "bf2d2775bdc4",
+            "4910a0ad663b",
+            "cf816a2edbc1",
+            "9bb3e86a566e",
+            "82bd79125cd5",
+            "19542695ae56",
+            "19da3681e212",
+            "8edceff9eb18",
+            "c94ae81ab337",
+            "24c24c6a8579"
+          ]
+        },
+        {
+          "text": "It was the second day or second consecutive attack on the bridge.",
+          "sources": [
+            "e6b4ab9dc0ad",
+            "facb79b68e53",
+            "cf816a2edbc1",
+            "8edceff9eb18",
+            "c94ae81ab337"
+          ]
+        },
+        {
+          "text": "The attack used drones and missiles.",
+          "sources": [
+            "a74a607cd6bc",
+            "9bb3e86a566e",
+            "82bd79125cd5",
+            "19542695ae56"
+          ]
+        },
+        {
+          "text": "The bridge was severely damaged, with a section collapsing or being destroyed.",
+          "sources": [
+            "140ad932b3bb",
+            "f4f1fd88501c",
+            "bf2d2775bdc4",
+            "4910a0ad663b",
+            "82bd79125cd5",
+            "19542695ae56",
+            "19da3681e212",
+            "c94ae81ab337"
+          ]
+        },
+        {
+          "text": "Zelensky described the attack as 'unprecedented'.",
+          "sources": [
+            "9bb3e86a566e",
+            "82bd79125cd5",
+            "19da3681e212",
+            "8edceff9eb18"
+          ]
+        },
+        {
+          "text": "Ukraine says the operation was planned over weeks.",
+          "sources": [
+            "a74a607cd6bc",
+            "82bd79125cd5"
+          ]
+        },
+        {
+          "text": "Russia struck bridges in Kyiv or across the Dnipro River at the same time.",
+          "sources": [
+            "e6b4ab9dc0ad",
+            "facb79b68e53",
+            "cf816a2edbc1"
+          ]
+        },
+        {
+          "text": "The attacks came ahead of a summit or talks involving China.",
+          "sources": [
+            "facb79b68e53",
+            "cf816a2edbc1"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "140ad932b3bb",
+              "quote": "Putin humiliated as crucial Kerch Bridge collapses",
+              "field": "headline"
+            },
+            {
+              "article_id": "f4f1fd88501c",
+              "quote": "a landmark blow to President Vladimir Putin",
+              "field": "snippet"
+            },
+            {
+              "article_id": "19da3681e212",
+              "quote": "Ukraine critically damages Kerch bridge",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the blow to Putin personally and the bridge as his flagship project.",
+              "sources": [
+                "140ad932b3bb",
+                "f4f1fd88501c",
+                "bf2d2775bdc4"
+              ]
+            },
+            {
+              "text": "Notes destroying the bridge has long been a top Kyiv objective, and reports the Kremlin's claim it will be restored.",
+              "sources": [
+                "24c24c6a8579",
+                "19da3681e212"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "a74a607cd6bc",
+              "quote": "as aerial attacks escalate",
+              "field": "headline"
+            },
+            {
+              "article_id": "82bd79125cd5",
+              "quote": "Zelensky hails 'unprecedented' attack by Ukraine",
+              "field": "headline"
+            },
+            {
+              "article_id": "cf816a2edbc1",
+              "quote": "Ukraine, Russia hit key bridges ahead of Putin-Xi-Trump summit",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with Zelensky's account of a weeks-planned drone and missile operation.",
+              "sources": [
+                "a74a607cd6bc",
+                "9bb3e86a566e",
+                "82bd79125cd5"
+              ]
+            },
+            {
+              "text": "Places the strike alongside Russian strikes on Kyiv bridges ahead of a summit.",
+              "sources": [
+                "cf816a2edbc1"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "right",
+          "headline_quotes": [
+            {
+              "article_id": "4910a0ad663b",
+              "quote": "Zelensky reveals secret ‘seven-phase’ mission",
+              "field": "headline"
+            },
+            {
+              "article_id": "c94ae81ab337",
+              "quote": "Ukraine declares Putin's Crimean bridge 'beyond repair'",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Emphasises the bridge as Putin's, its £3billion cost and a secret 'seven-phase' mission.",
+              "sources": [
+                "4910a0ad663b"
+              ]
+            },
+            {
+              "text": "Reports Ukraine's claim that the bridge is beyond repair after a section fell into the river.",
+              "sources": [
+                "c94ae81ab337"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "left",
+          "text": "Left coverage does not mention Russian strikes on Kyiv bridges or the upcoming summit.",
+          "sources": [
+            "cf816a2edbc1"
+          ]
+        },
+        {
+          "lean": "right",
+          "text": "Right coverage does not mention Russian strikes on Kyiv bridges or the upcoming summit.",
+          "sources": [
+            "cf816a2edbc1"
+          ]
+        },
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not mention the Kremlin's claim that the bridge will be restored.",
+          "sources": [
+            "19da3681e212"
+          ]
+        },
+        {
+          "lean": "right",
+          "text": "Right coverage does not mention the Kremlin's claim that the bridge will be restored.",
+          "sources": [
+            "19da3681e212"
+          ]
+        }
+      ],
+      "contested_claims": [
+        {
+          "claim": "Ukraine says the bridge is beyond repair, while the Kremlin says it will be restored and be 'better than ever'.",
+          "asserted_by": [
+            "c94ae81ab337"
+          ],
+          "disputed_by": [
+            "19da3681e212"
+          ]
+        }
+      ],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "f4f1fd88501c",
+              "quote": "Vladimir Putin’s prized bridge is partially destroyed",
+              "field": "headline"
+            },
+            {
+              "article_id": "140ad932b3bb",
+              "quote": "Putin humiliated as crucial Kerch Bridge collapses",
+              "field": "headline"
+            },
+            {
+              "article_id": "82bd79125cd5",
+              "quote": "Zelensky hails 'unprecedented' attack by Ukraine",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Frequently frames the bridge as Putin's and the strike as a blow to him.",
+              "sources": [
+                "f4f1fd88501c",
+                "140ad932b3bb",
+                "bf2d2775bdc4",
+                "4910a0ad663b",
+                "82bd79125cd5",
+                "c94ae81ab337"
+              ]
+            },
+            {
+              "text": "Foregrounds Zelensky's account of the planning and scale of the operation.",
+              "sources": [
+                "a74a607cd6bc",
+                "9bb3e86a566e",
+                "82bd79125cd5",
+                "4910a0ad663b"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "facb79b68e53",
+              "quote": "Ukraine and Russia attack key bridges ahead of China talks",
+              "field": "headline"
+            },
+            {
+              "article_id": "e6b4ab9dc0ad",
+              "quote": "as Russia Pounds Kyiv Bridges",
+              "field": "headline"
+            },
+            {
+              "article_id": "19542695ae56",
+              "quote": "inflicting a military and symbolic blow on President Vladimir Putin",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Places the strike alongside Russian attacks on Kyiv and Dnipro bridges, with both sides raising the war's cost before China talks.",
+              "sources": [
+                "facb79b68e53",
+                "e6b4ab9dc0ad"
+              ]
+            },
+            {
+              "text": "Notes the closure followed an earlier drone attack that shut the crossing for more than 16 hours.",
+              "sources": [
+                "e6b4ab9dc0ad",
+                "8edceff9eb18"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "Ukraine struck the Kerch bridge linking Russia to occupied Crimea for a second day, using drones and missiles, and a section of the bridge collapsed. Zelensky called the attack 'unprecedented' and said it took weeks to plan. Russia struck bridges in Kyiv, ahead of talks involving China.",
+        "sources": [
+          "e6b4ab9dc0ad",
+          "facb79b68e53",
+          "cf816a2edbc1",
+          "8edceff9eb18",
+          "c94ae81ab337",
+          "a74a607cd6bc",
+          "9bb3e86a566e",
+          "82bd79125cd5",
+          "19542695ae56",
+          "4910a0ad663b",
+          "19da3681e212"
+        ]
+      },
+      "conclusion": {
+        "text": "All sides report Ukraine struck the Crimea bridge for a second day, damaging or collapsing a section. Western outlets often frame it as a blow to Putin, while Eastern outlets more often pair it with Russian strikes on Kyiv bridges. Whether the bridge can be repaired is contested between Ukrainian and Kremlin statements.",
+        "sources": [
+          "e6b4ab9dc0ad",
+          "facb79b68e53",
+          "8edceff9eb18",
+          "19542695ae56",
+          "140ad932b3bb",
+          "f4f1fd88501c",
+          "c94ae81ab337",
+          "19da3681e212"
+        ]
+      },
+      "validation": {
+        "kept": 39,
+        "dropped_by_reason": {}
+      }
+    },
+    {
+      "id": "2d2a8ef2320c",
+      "title": "Trump raises possibility of meeting Kim Jong Un in China",
+      "rank": 2,
+      "outlet_count": 7,
+      "coverage": {
+        "lean": {
+          "left": 1,
+          "centre": 1,
+          "right": 1
+        },
+        "bloc": {
+          "west": 3,
+          "east": 4
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "d3b43336eaa7",
+          "outlet_id": "koreaherald",
+          "headline": "As Trump seeks talks, Kim heads to Mount Paektu. A political signal?",
+          "snippet": "Kim Jong-un's latest visit to Mount Paektu, a site associated with political decisions and shifts in Pyongyang's foreign policy, has fueled speculation over whether the North Korean leader is…",
+          "url": "https://www.koreaherald.com/article/10939872",
+          "published_at": "2026-11-17T05:12:09Z",
+          "published_at_estimated": false,
+          "image_url": "https://wimg.heraldcorp.com/news/cms/2026/11/17/news-p.v1.20261117.a7b3538a80654be9bbcf5f37b3df7090_T1.jpg"
+        },
+        {
+          "id": "433be29693cb",
+          "outlet_id": "japantimes",
+          "headline": "Odds improve on Trump-Kim meeting on APEC sidelines, analysts say",
+          "snippet": "Views are shifting after the Kremlin said a meeting between Kim and Russian President Vladimir Putin was possible.",
+          "url": "https://www.japantimes.co.jp/news/2026/11/17/asia-pacific/politics/trump-kim-meeting-odds-rise/",
+          "published_at": "2026-11-17T07:25:00Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.japantimes.co.jp/japantimes/uploads/images/2026/11/17/thumbs/400x400/574562.jpg"
+        },
+        {
+          "id": "48c5672d75b6",
+          "outlet_id": "thehindu",
+          "headline": "North Korea’s Kim visits ski resort as Donald Trump hints at possible meeting",
+          "snippet": "We may meet with Kim Jong Un also, so that'll be good, Donald Trump told reporters",
+          "url": "https://www.thehindu.com/news/international/north-koreas-kim-visits-ski-resort-as-donald-trump-hints-at-possible-meeting/article71710685.ece",
+          "published_at": "2026-11-17T08:07:32Z",
+          "published_at_estimated": false,
+          "image_url": "https://th-i.thgim.com/public/incoming/r2fpmd/article71710717.ece/alternates/LANDSCAPE_1200/AFP__20261117__D7NM9T6__v2__HighRes__TopshotNkoreaPolitics.jpg"
+        },
+        {
+          "id": "25d8999f583e",
+          "outlet_id": "bbc",
+          "headline": "Will President Trump meet Kim Jong Un?",
+          "snippet": "President Trump says he would be keen to meet the North Korea leader in China.",
+          "url": "https://www.bbc.co.uk/news/videos/c6grew79p7qdo",
+          "published_at": "2026-11-17T10:13:27Z",
+          "published_at_estimated": false,
+          "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/4583/live/99273800-e263-11f1-a094-5fdc692f3e33.jpg"
+        },
+        {
+          "id": "8fc2ac0351f9",
+          "outlet_id": "koreaherald",
+          "headline": "Trump says Kim &apos;would like to&apos; attend APEC summit in China",
+          "snippet": "US President Donald Trump said Tuesday that North Korean leader Kim Jong-un \"would like to\" attend this week's Asia-Pacific Economic Cooperation (APEC) summit in China, leaving open the possibility…",
+          "url": "https://www.koreaherald.com/article/10940356",
+          "published_at": "2026-11-17T11:36:57Z",
+          "published_at_estimated": false,
+          "image_url": "https://wimg.heraldcorp.com/news/cms/2026/11/17/news-p.v1.20261117.bb42fce34c29476fbca70dd2eb4be974_T1.png"
+        },
+        {
+          "id": "64b7868c5078",
+          "outlet_id": "thesun",
+          "headline": "Moment grinning Kim Jong-un puffs cigarette at ski resort with wife as Trump hints at meeting with North Korean despot",
+          "snippet": "THIS is the moment a grinning Kim Jong-un puffs away on a cigarette as he watches his daughter slalom down a ski slope. The North Korean despot, 42, enjoyed a rare family outing as he inspected a…",
+          "url": "https://www.thesun.co.uk/news/41047777/kim-jong-un-cigarette-trump-meeting/",
+          "published_at": "2026-11-17T12:05:17Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.thesun.co.uk/wp-content%2Fuploads%2F2026%2F11%2Fnewspress-collage-4556np0we-1794916884764.jpg?quality%3D90%26"
+        },
+        {
+          "id": "8027faa64479",
+          "outlet_id": "mirror",
+          "headline": "Kim Jong-un spotted with daughter at North Korea's new luxury ski resort amid rumours he's set to meet Trump",
+          "snippet": "Pictures from North Korea showed Kim Jong-un and his family inspecting a new ski resort close to the Chinese border, as Trump suggested he could meet the dictator this week",
+          "url": "https://www.mirror.co.uk/news/world-news/kim-jong-un-trump-daughter-37885611",
+          "published_at": "2026-11-17T13:04:40Z",
+          "published_at_estimated": false,
+          "image_url": "https://i2-prod.mirror.co.uk/incoming/article37885923.ece/ALTERNATES/s615/0_North-Korea-Kim-26320859362058.jpg"
+        },
+        {
+          "id": "04f33e64db12",
+          "outlet_id": "scmp",
+          "headline": "Planes, trains and automobiles: what we know about Kim Jong-un’s foreign travels",
+          "snippet": "US President Donald Trump’s suggestion on Monday that he might meet North Korean leader Kim Jong-un in China this week has thrown up a logistical challenge. According to the White House’s schedule…",
+          "url": "https://www.scmp.com/news/china/diplomacy/article/3374779/planes-trains-and-automobiles-what-we-know-about-kim-jong-uns-foreign-travels",
+          "published_at": "2026-11-17T15:00:13Z",
+          "published_at_estimated": false,
+          "image_url": "https://cdn.i-scmp.com/sites/default/files/styles/1280x720/public/d8/images/canvas/2026/11/17/f9f19fa6-ce07-4518-930b-a77e4ce0d44e_5123891a.jpg?itok=hgtGVlmM&v=1794919476"
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "Trump raised the possibility of meeting Kim Jong-un, with several reports placing the potential meeting in China this week.",
+          "sources": [
+            "25d8999f583e",
+            "8fc2ac0351f9",
+            "04f33e64db12",
+            "48c5672d75b6",
+            "64b7868c5078",
+            "8027faa64479",
+            "433be29693cb"
+          ]
+        },
+        {
+          "text": "The possible meeting is linked to the Asia-Pacific Economic Cooperation (APEC) summit in China.",
+          "sources": [
+            "8fc2ac0351f9",
+            "433be29693cb"
+          ]
+        },
+        {
+          "text": "Kim visited a ski resort, accompanied by family members including his daughter.",
+          "sources": [
+            "48c5672d75b6",
+            "64b7868c5078",
+            "8027faa64479"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "8027faa64479",
+              "quote": "North Korea's new luxury ski resort",
+              "field": "headline"
+            },
+            {
+              "article_id": "8027faa64479",
+              "quote": "Trump suggested he could meet the dictator this week",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with Kim and his daughter at a new ski resort close to the Chinese border, alongside rumours of a meeting with Trump.",
+              "sources": [
+                "8027faa64479"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "25d8999f583e",
+              "quote": "Will President Trump meet Kim Jong Un?",
+              "field": "headline"
+            },
+            {
+              "article_id": "25d8999f583e",
+              "quote": "keen to meet the North Korea leader in China",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Frames the story as an open question, citing Trump saying he would be keen to meet Kim in China.",
+              "sources": [
+                "25d8999f583e"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "right",
+          "headline_quotes": [
+            {
+              "article_id": "64b7868c5078",
+              "quote": "grinning Kim Jong-un puffs cigarette at ski resort with wife",
+              "field": "headline"
+            },
+            {
+              "article_id": "64b7868c5078",
+              "quote": "North Korean despot",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Foregrounds images of Kim smoking and watching his daughter ski on a family outing, with Trump's hint at a meeting secondary.",
+              "sources": [
+                "64b7868c5078"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not mention Kim's visit to a ski resort with his family.",
+          "sources": [
+            "64b7868c5078",
+            "8027faa64479"
+          ]
+        }
+      ],
+      "contested_claims": [],
+      "opinion": [
+        {
+          "text": "Analysts say the odds of a Trump-Kim meeting on the APEC sidelines have improved after the Kremlin said a Kim-Putin meeting was possible.",
+          "sources": [
+            "433be29693cb"
+          ]
+        },
+        {
+          "text": "Kim's visit to Mount Paektu, a site associated with political decisions, has fuelled speculation that it may be a political signal.",
+          "sources": [
+            "d3b43336eaa7"
+          ]
+        }
+      ],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "64b7868c5078",
+              "quote": "North Korean despot",
+              "field": "headline"
+            },
+            {
+              "article_id": "8027faa64479",
+              "quote": "amid rumours he's set to meet Trump",
+              "field": "headline"
+            },
+            {
+              "article_id": "25d8999f583e",
+              "quote": "Will President Trump meet Kim Jong Un?",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Western outlets foreground Kim's family outing at a ski resort and describe him as a despot or dictator.",
+              "sources": [
+                "64b7868c5078",
+                "8027faa64479"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "433be29693cb",
+              "quote": "Odds improve on Trump-Kim meeting on APEC sidelines",
+              "field": "headline"
+            },
+            {
+              "article_id": "d3b43336eaa7",
+              "quote": "Kim heads to Mount Paektu. A political signal?",
+              "field": "headline"
+            },
+            {
+              "article_id": "04f33e64db12",
+              "quote": "has thrown up a logistical challenge",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Eastern outlets emphasise the APEC summit context and a possible Kim-Putin meeting.",
+              "sources": [
+                "8fc2ac0351f9",
+                "433be29693cb"
+              ]
+            },
+            {
+              "text": "They also examine Kim's Mount Paektu visit as a possible signal and the logistics of his foreign travel.",
+              "sources": [
+                "d3b43336eaa7",
+                "04f33e64db12"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "US President Donald Trump suggested he might meet North Korean leader Kim Jong-un in China this week, saying Kim \"would like to\" attend the APEC summit there. At the same time, pictures showed Kim and his family inspecting a new ski resort near the Chinese border.",
+        "sources": [
+          "25d8999f583e",
+          "8fc2ac0351f9",
+          "04f33e64db12",
+          "48c5672d75b6",
+          "64b7868c5078",
+          "8027faa64479"
+        ]
+      },
+      "conclusion": {
+        "text": "All sides report Trump raising a possible meeting with Kim in China this week. Western outlets lead with Kim's ski resort outing and call him a despot or dictator, while Eastern outlets focus on APEC, analysts' views, a possible Kim-Putin meeting and travel logistics. No coverage contradicts another.",
+        "sources": [
+          "25d8999f583e",
+          "64b7868c5078",
+          "8027faa64479",
+          "8fc2ac0351f9",
+          "433be29693cb",
+          "04f33e64db12",
+          "d3b43336eaa7",
+          "48c5672d75b6"
+        ]
+      },
+      "validation": {
+        "kept": 26,
+        "dropped_by_reason": {}
+      }
+    },
+    {
+      "id": "25848c8973cd",
+      "title": "Trump arrives in the Philippines to begin Asia trip",
+      "rank": 3,
+      "outlet_count": 7,
+      "coverage": {
+        "lean": {
+          "left": 2,
+          "centre": 2,
+          "right": 1
+        },
+        "bloc": {
+          "west": 5,
+          "east": 2
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "c52fb3294665",
+          "outlet_id": "nypost",
+          "headline": "Trump greeted with ‘YMCA’ in Philippines to kick off Asia trip ahead of nuclear talks with Xi and Putin",
+          "snippet": "President Donald Trump arrived in the Philippines on Tuesday, where he was scheduled to meet regional partners, talk trade, and seek a break from a series of setbacks at home, ranging from a major…",
+          "url": "https://nypost.com/2026/11/17/us-news/trump-arrives-in-philippines-to-kick-off-asia-trip-ahead-of-historic-three-way-nuclear-talks-with-xi-and-putin/",
+          "published_at": "2026-11-17T10:17:11Z",
+          "published_at_estimated": false,
+          "image_url": "https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2Fus-president-donald-trump-waves-149068632.jpg?w%3D1024"
+        },
+        {
+          "id": "f932514963f5",
+          "outlet_id": "france24",
+          "headline": "Trump arrives in Philippines to kick off Asia trip",
+          "snippet": "US President Donald Trump arrived in the Philippines on Tuesday at the tail end of a Southeast Asian summit, with protests awaiting him as he prepares for the first meeting in two years of the Quad…",
+          "url": "https://www.france24.com/en/video/20261117-trump-arrives-in-philippines-to-kick-off-asia-trip",
+          "published_at": "2026-11-17T10:21:23Z",
+          "published_at_estimated": false,
+          "image_url": "https://s.france24.com/media/display/3bcbaca8-e26e-11f1-a00c-5f54d898a954/w:1024/p:16x9/EN-20261117-101225-101519-CS.jpg"
+        },
+        {
+          "id": "fa9d30f68416",
+          "outlet_id": "npr",
+          "headline": "Trump arrives in Philippines to kick off Asia trip",
+          "snippet": "Manila is President Trump's first stop on a three-day trip that will later take him to China for historic three-way nuclear talks with Chinese President Xi Jinping and Russian President Vladimir…",
+          "url": "https://www.npr.org/2026/11/17/nx-s1-6043702/trump-arrives-philippines",
+          "published_at": "2026-11-17T10:43:55Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "374e86e3f99f",
+          "outlet_id": "nyt",
+          "headline": "Trump Will Miss Most of the ASEAN Summit",
+          "snippet": "President Trump arrived in Manila as the meeting was wrapping up, a sign of how U.S. policy has left the region balancing between Washington and Beijing.",
+          "url": "https://www.nytimes.com/2026/11/17/world/asia/trump-manila-asean-late.html",
+          "published_at": "2026-11-17T10:51:03Z",
+          "published_at_estimated": false,
+          "image_url": "https://static01.nyt.com/images/2026/11/16/multimedia/00int-asean-trump-01-ptql/00int-asean-trump-01-ptql-mediumSquareAt3X.jpg"
+        },
+        {
+          "id": "3c03d5fda3ba",
+          "outlet_id": "thenational",
+          "headline": "Trump to discuss Iran war with Xi and Putin as he begins Asia trip",
+          "snippet": "US President Donald Trump said on Tuesday he would discuss the Iran war with Xi Jinping and Vladimir Putin in a highly anticipated meeting during his trip to Asia this week. Mr Trump began his trip…",
+          "url": "https://www.thenationalnews.com/news/mena/2026/11/17/trump-to-discuss-iran-war-with-xi-and-putin-as-he-begins-asia-trip/",
+          "published_at": "2026-11-17T11:35:00Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.thenationalnews.com/resizer/v2/63PDLDWYMTTV7LR4VXSHVD7BPI.jpg?auth=18d896d2c900d2d1e5b4b544855f71df2e6dbeb6ec0e01b7a5709716fc3278fa&smart=true&width=3000&height=2000"
+        },
+        {
+          "id": "b1f8149ca8d4",
+          "outlet_id": "nbc",
+          "headline": "Trump Arrives in Asia for Historic Meeting With Xi Jinping and Putin",
+          "snippet": "President Donald Trump touched down in the Philippines on Tuesday for a summit with Southeast Asian nations ahead of his meeting with his counterparts from Russia and China on Thursday. It comes as…",
+          "url": "https://www.today.com/video/trump-suggests-north-korea-s-kim-jong-un-may-join-asia-meeting-273634885662",
+          "published_at": "2026-11-17T12:21:54Z",
+          "published_at_estimated": false,
+          "image_url": "https://media-cldnry.s-nbcnews.com/image/upload/t_fit_1500w/mpx/2704722219/2026_11/1794918109370_tdy_news_7a_haake_trump_asia_261117_S3_1920x1080-0pe9jg.jpg"
+        },
+        {
+          "id": "4e05d41d899d",
+          "outlet_id": "nyt",
+          "headline": "A Visual Tour of President Trump’s Visits to Asia",
+          "snippet": "President Trump landed in the Philippines on the first stop of a 48-hour Asia trip during which he is expected to meet with leaders including the presidents of Russia and China.",
+          "url": "https://www.nytimes.com/2026/11/17/world/asia/president-trump-visits-asia.html",
+          "published_at": "2026-11-17T14:26:17Z",
+          "published_at_estimated": false,
+          "image_url": "https://static01.nyt.com/images/2026/11/17/multimedia/17int-trump-asia-visual-stack-01-lkgb/17int-trump-asia-visual-stack-01-lkgb-mediumSquareAt3X.jpg"
+        },
+        {
+          "id": "fc59d8eca38f",
+          "outlet_id": "scmp",
+          "headline": "A trade deal, rare earths and a Quad revival: day 1 of Trump’s Asia trip",
+          "snippet": "US President Donald Trump arrived in Manila on Tuesday to start a three-day Asian swing, seeking to deepen ties with the region just weeks after his Republican Party suffered heavy losses in the…",
+          "url": "https://www.scmp.com/news/china/diplomacy/article/3374794/trade-deal-rare-earths-and-quad-revival-day-1-trumps-asia-trip",
+          "published_at": "2026-11-17T14:49:46Z",
+          "published_at_estimated": false,
+          "image_url": "https://cdn.i-scmp.com/sites/default/files/styles/1280x720/public/d8/images/canvas/2026/11/17/42d213b8-34b4-4a3e-94dc-0a67dc692896_fe2900e3.jpg?itok=_kAES59_&v=1794926977"
+        },
+        {
+          "id": "6dbc02ab25a4",
+          "outlet_id": "scmp",
+          "headline": "Trump eyes China after brief Manila stop, seeking chemistry with Xi amid fresh AI strains",
+          "snippet": "Barely hours after arriving in Manila on Tuesday, US President Donald Trump was already looking ahead to his meeting with Chinese President Xi Jinping in Shenzhen. “We have some very important…",
+          "url": "https://www.scmp.com/news/china/diplomacy/article/3374795/trump-eyes-china-after-brief-manila-stop-seeking-chemistry-xi-amid-fresh-ai-strains",
+          "published_at": "2026-11-17T15:39:39Z",
+          "published_at_estimated": false,
+          "image_url": "https://cdn.i-scmp.com/sites/default/files/styles/1280x720/public/d8/images/canvas/2026/11/17/6abf86ce-551a-4b0a-8334-225c3ac7612b_95036dd3.jpg?itok=bQ-2RTZQ&v=1794929922"
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "Trump arrived in the Philippines, in Manila, on Tuesday as the first stop of an Asia trip.",
+          "sources": [
+            "c52fb3294665",
+            "f932514963f5",
+            "fa9d30f68416",
+            "374e86e3f99f",
+            "b1f8149ca8d4",
+            "4e05d41d899d",
+            "fc59d8eca38f",
+            "6dbc02ab25a4"
+          ]
+        },
+        {
+          "text": "The trip includes a meeting with the leaders of China and Russia, Xi Jinping and Vladimir Putin.",
+          "sources": [
+            "c52fb3294665",
+            "fa9d30f68416",
+            "3c03d5fda3ba",
+            "b1f8149ca8d4",
+            "4e05d41d899d"
+          ]
+        },
+        {
+          "text": "The meeting with Xi and Putin is described as nuclear talks.",
+          "sources": [
+            "c52fb3294665",
+            "fa9d30f68416"
+          ]
+        },
+        {
+          "text": "Trump arrived at the end of a Southeast Asian (ASEAN) summit.",
+          "sources": [
+            "f932514963f5",
+            "374e86e3f99f",
+            "b1f8149ca8d4"
+          ]
+        },
+        {
+          "text": "Trade is on the agenda of the trip.",
+          "sources": [
+            "c52fb3294665",
+            "fc59d8eca38f"
+          ]
+        },
+        {
+          "text": "The trip comes after political setbacks for Trump and his party at home.",
+          "sources": [
+            "c52fb3294665",
+            "fc59d8eca38f"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "374e86e3f99f",
+              "quote": "Trump Will Miss Most of the ASEAN Summit",
+              "field": "headline"
+            },
+            {
+              "article_id": "374e86e3f99f",
+              "quote": "balancing between Washington and Beijing",
+              "field": "snippet"
+            },
+            {
+              "article_id": "b1f8149ca8d4",
+              "quote": "Historic Meeting With Xi Jinping and Putin",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Emphasises that Trump arrived as the ASEAN summit was ending and links this to the region balancing between Washington and Beijing.",
+              "sources": [
+                "374e86e3f99f"
+              ]
+            },
+            {
+              "text": "Leads with the historic meeting with Xi and Putin.",
+              "sources": [
+                "b1f8149ca8d4",
+                "4e05d41d899d"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "f932514963f5",
+              "quote": "with protests awaiting him",
+              "field": "snippet"
+            },
+            {
+              "article_id": "fa9d30f68416",
+              "quote": "historic three-way nuclear talks",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Notes protests awaiting Trump and the first Quad meeting in two years.",
+              "sources": [
+                "f932514963f5"
+              ]
+            },
+            {
+              "text": "Frames Manila as the first stop before historic three-way nuclear talks in China.",
+              "sources": [
+                "fa9d30f68416"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "right",
+          "headline_quotes": [
+            {
+              "article_id": "c52fb3294665",
+              "quote": "Trump greeted with ‘YMCA’ in Philippines",
+              "field": "headline"
+            },
+            {
+              "article_id": "c52fb3294665",
+              "quote": "seek a break from a series of setbacks at home",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the musical greeting in the Philippines and the upcoming nuclear talks with Xi and Putin.",
+              "sources": [
+                "c52fb3294665"
+              ]
+            },
+            {
+              "text": "Mentions meetings with regional partners, trade and setbacks at home.",
+              "sources": [
+                "c52fb3294665"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "left",
+          "text": "Left-leaning coverage does not mention setbacks or electoral losses at home ahead of the trip.",
+          "sources": [
+            "c52fb3294665"
+          ]
+        },
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not mention setbacks or electoral losses at home ahead of the trip.",
+          "sources": [
+            "c52fb3294665"
+          ]
+        },
+        {
+          "lean": "left",
+          "text": "Left-leaning coverage does not mention protests awaiting Trump in the Philippines.",
+          "sources": [
+            "f932514963f5"
+          ]
+        }
+      ],
+      "contested_claims": [
+        {
+          "claim": "The length of Trump's Asia trip: described as a 48-hour trip versus a three-day trip.",
+          "asserted_by": [
+            "4e05d41d899d"
+          ],
+          "disputed_by": [
+            "fa9d30f68416",
+            "fc59d8eca38f"
+          ]
+        }
+      ],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "f932514963f5",
+              "quote": "Trump arrives in Philippines to kick off Asia trip",
+              "field": "headline"
+            },
+            {
+              "article_id": "b1f8149ca8d4",
+              "quote": "Historic Meeting With Xi Jinping and Putin",
+              "field": "headline"
+            },
+            {
+              "article_id": "374e86e3f99f",
+              "quote": "Trump Will Miss Most of the ASEAN Summit",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Focuses on the arrival, the timing relative to the ASEAN summit and the upcoming nuclear talks with Xi and Putin.",
+              "sources": [
+                "c52fb3294665",
+                "f932514963f5",
+                "fa9d30f68416",
+                "374e86e3f99f",
+                "b1f8149ca8d4",
+                "4e05d41d899d"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "3c03d5fda3ba",
+              "quote": "Trump to discuss Iran war with Xi and Putin",
+              "field": "headline"
+            },
+            {
+              "article_id": "fc59d8eca38f",
+              "quote": "A trade deal, rare earths and a Quad revival",
+              "field": "headline"
+            },
+            {
+              "article_id": "6dbc02ab25a4",
+              "quote": "seeking chemistry with Xi amid fresh AI strains",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Highlights Trump's statement that he would discuss the Iran war with Xi and Putin.",
+              "sources": [
+                "3c03d5fda3ba"
+              ]
+            },
+            {
+              "text": "Foregrounds trade, rare earths, a Quad revival and the Republican Party's heavy losses.",
+              "sources": [
+                "fc59d8eca38f"
+              ]
+            },
+            {
+              "text": "Frames the Manila stop as brief, with attention on meeting Xi in Shenzhen amid AI strains.",
+              "sources": [
+                "6dbc02ab25a4"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "US President Donald Trump arrived in Manila, Philippines, on Tuesday to begin an Asia trip, reaching a Southeast Asian summit as it was wrapping up. The trip is set to include a meeting with Chinese President Xi Jinping and Russian President Vladimir Putin, described by some outlets as nuclear talks.",
+        "sources": [
+          "c52fb3294665",
+          "f932514963f5",
+          "fa9d30f68416",
+          "374e86e3f99f",
+          "b1f8149ca8d4",
+          "4e05d41d899d",
+          "fc59d8eca38f",
+          "6dbc02ab25a4",
+          "3c03d5fda3ba"
+        ]
+      },
+      "conclusion": null,
+      "validation": {
+        "kept": 34,
+        "dropped_by_reason": {
+          "untrusted_text": 1
+        }
+      }
+    },
+    {
+      "id": "924b7b8cfd42",
+      "title": "Xi, Trump and Putin set for trilateral summit at APEC in Shenzhen",
+      "rank": 4,
+      "outlet_count": 7,
+      "coverage": {
+        "lean": {
+          "left": 1,
+          "centre": 2,
+          "right": 0
+        },
+        "bloc": {
+          "west": 3,
+          "east": 4
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "06efc323255d",
+          "outlet_id": "ecns",
+          "headline": "Xi to hold China-Russia-U.S. summit with Putin, Trump",
+          "snippet": "",
+          "url": "https://www.ecns.cn/news/politics/2026-11-16/detail-ihfmypxx3545301.shtml",
+          "published_at": "2026-11-16T10:24:31Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "a5f8d89f1b19",
+          "outlet_id": "thehindu",
+          "headline": "Beijing hails ‘groundbreaking significance’ of U.S., China, Russia summit in Shenzhen",
+          "snippet": "The meeting is likely to be more symbolic than substantial. U.S. officials have indicated that the agenda is the war in Ukraine, the situation in West Asia, including stabilising global energy…",
+          "url": "https://www.thehindu.com/news/international/beijing-hails-groundbreaking-significance-of-us-china-russia-summit-in-shenzhen/article71707480.ece",
+          "published_at": "2026-11-16T11:49:02Z",
+          "published_at_estimated": false,
+          "image_url": "https://th-i.thgim.com/public/incoming/ad7ysk/article71707561.ece/alternates/LANDSCAPE_1200/Trump-to-raise-GSBGQ3RU2.3.jpg.jpg"
+        },
+        {
+          "id": "7c74d41bf4d8",
+          "outlet_id": "moscowtimes",
+          "headline": "Kremlin Says Putin-Xi-Trump Meeting in China Will Have Major Impact on Global Affairs",
+          "snippet": "The three leaders are due to sit down together at the same time as China hosts a summit of the APEC forum in Shenzhen.",
+          "url": "https://www.themoscowtimes.com/2026/11/16/kremlin-says-putin-xi-trump-meeting-in-china-will-have-major-impact-on-global-affairs-a94268",
+          "published_at": "2026-11-16T14:00:00Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "31c38d85e0e4",
+          "outlet_id": "nyt",
+          "headline": "Trump to Hold Meeting with Xi and Putin During Asia Trip: What to Know",
+          "snippet": "President Trump will also meet with regional leaders, including Australia’s prime minister, who said “we want to see a de-escalation in the conflicts.”",
+          "url": "https://www.nytimes.com/2026/11/16/world/asia/trump-asia-china-xi-putin.html",
+          "published_at": "2026-11-16T21:42:52Z",
+          "published_at_estimated": false,
+          "image_url": "https://static01.nyt.com/images/2026/11/16/multimedia/16int-trump-summit-wtk-qjkm/16int-trump-summit-wtk-qjkm-mediumSquareAt3X.jpg"
+        },
+        {
+          "id": "727865b2020e",
+          "outlet_id": "japantimes",
+          "headline": "What’s on the agenda for leaders at this week’s APEC summit?",
+          "snippet": "World leaders are set to tackle a range of issues, with all eyes on a trilateral meeting between U.S., Chinese and Russian leaders.",
+          "url": "https://www.japantimes.co.jp/news/2026/11/17/asia-pacific/politics/apec-summit-issues-leaders/",
+          "published_at": "2026-11-17T03:12:00Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.japantimes.co.jp/japantimes/uploads/images/2026/11/17/thumbs/400x400/574461.jpg"
+        },
+        {
+          "id": "7bcb614c792f",
+          "outlet_id": "axios",
+          "headline": "U.S. allies on edge as Trump heads to summit with Xi and Putin",
+          "snippet": "President Trump's trilateral summit with Chinese President Xi Jinping and Russian President Vladimir Putin has the makings of an unpredictable spectacle — and that's exactly what has U.S. allies…",
+          "url": "https://www.axios.com/2026/11/17/trump-xi-putin-summit-europe-worried",
+          "published_at": "2026-11-17T10:10:10Z",
+          "published_at_estimated": false,
+          "image_url": "https://images.axios.com/1cEmuqJOIBCZ9-FHs7ynMVJ_DKw=/0x0:1920x1080/1366x768/2025/12/10/1765405167165.jpeg"
+        },
+        {
+          "id": "6b1ef290fd10",
+          "outlet_id": "dw",
+          "headline": "APEC summit: What Trump, Xi and Putin want",
+          "snippet": "Trump, Xi and Putin will hold their first trilateral meeting on the sidelines of APEC. With different priorities on trade, Ukraine, Iran and arms control, what does each leader hope to gain?",
+          "url": "https://www.dw.com/en/apec-summit-what-trump-xi-and-putin-want/a-79970462?maca=en-rss-en-world-4025-xml-mrss",
+          "published_at": "2026-11-17T14:25:00Z",
+          "published_at_estimated": false,
+          "image_url": null
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "The US, Chinese and Russian leaders are due to hold a trilateral meeting.",
+          "sources": [
+            "06efc323255d",
+            "a5f8d89f1b19",
+            "7c74d41bf4d8",
+            "31c38d85e0e4",
+            "727865b2020e",
+            "7bcb614c792f",
+            "6b1ef290fd10"
+          ]
+        },
+        {
+          "text": "The meeting takes place alongside the APEC summit.",
+          "sources": [
+            "7c74d41bf4d8",
+            "727865b2020e",
+            "6b1ef290fd10"
+          ]
+        },
+        {
+          "text": "China is hosting, with Shenzhen named as the venue.",
+          "sources": [
+            "a5f8d89f1b19",
+            "7c74d41bf4d8"
+          ]
+        },
+        {
+          "text": "The war in Ukraine is among the issues on the agenda.",
+          "sources": [
+            "a5f8d89f1b19",
+            "6b1ef290fd10"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "31c38d85e0e4",
+              "quote": "Trump to Hold Meeting with Xi and Putin During Asia Trip",
+              "field": "headline"
+            },
+            {
+              "article_id": "31c38d85e0e4",
+              "quote": "we want to see a de-escalation in the conflicts.",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Places the meeting within Trump's Asia trip and notes he will also meet regional leaders, including Australia's prime minister, who called for de-escalation.",
+              "sources": [
+                "31c38d85e0e4"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "7bcb614c792f",
+              "quote": "U.S. allies on edge",
+              "field": "headline"
+            },
+            {
+              "article_id": "7bcb614c792f",
+              "quote": "has the makings of an unpredictable spectacle",
+              "field": "snippet"
+            },
+            {
+              "article_id": "6b1ef290fd10",
+              "quote": "What Trump, Xi and Putin want",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the concern of US allies about the summit.",
+              "sources": [
+                "7bcb614c792f"
+              ]
+            },
+            {
+              "text": "Describes it as the leaders' first trilateral meeting and sets out differing priorities on trade, Ukraine, Iran and arms control.",
+              "sources": [
+                "6b1ef290fd10"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "left",
+          "text": "Left coverage does not name specific agenda items such as Ukraine, trade, Iran or arms control.",
+          "sources": [
+            "6b1ef290fd10"
+          ]
+        },
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not mention Trump's meetings with regional leaders such as Australia's prime minister.",
+          "sources": [
+            "31c38d85e0e4"
+          ]
+        }
+      ],
+      "contested_claims": [
+        {
+          "claim": "The meeting will have a major impact on global affairs, rather than being mainly symbolic.",
+          "asserted_by": [
+            "7c74d41bf4d8"
+          ],
+          "disputed_by": [
+            "a5f8d89f1b19"
+          ]
+        }
+      ],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "7bcb614c792f",
+              "quote": "U.S. allies on edge as Trump heads to summit with Xi and Putin",
+              "field": "headline"
+            },
+            {
+              "article_id": "31c38d85e0e4",
+              "quote": "Trump to Hold Meeting with Xi and Putin During Asia Trip: What to Know",
+              "field": "headline"
+            },
+            {
+              "article_id": "6b1ef290fd10",
+              "quote": "what does each leader hope to gain?",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Frames the meeting around Trump's trip, allies' unease and each leader's aims.",
+              "sources": [
+                "31c38d85e0e4",
+                "7bcb614c792f",
+                "6b1ef290fd10"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "06efc323255d",
+              "quote": "Xi to hold China-Russia-U.S. summit with Putin, Trump",
+              "field": "headline"
+            },
+            {
+              "article_id": "a5f8d89f1b19",
+              "quote": "Beijing hails ‘groundbreaking significance’",
+              "field": "headline"
+            },
+            {
+              "article_id": "7c74d41bf4d8",
+              "quote": "Will Have Major Impact on Global Affairs",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Reports Chinese and Russian official statements on the summit's significance, with Xi presented as host.",
+              "sources": [
+                "06efc323255d",
+                "a5f8d89f1b19",
+                "7c74d41bf4d8"
+              ]
+            },
+            {
+              "text": "Sets out the agenda, including Ukraine, West Asia and energy stability, and notes the trilateral meeting is the focus of APEC.",
+              "sources": [
+                "a5f8d89f1b19",
+                "727865b2020e"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "Xi Jinping, Donald Trump and Vladimir Putin are set to hold a trilateral meeting alongside the APEC summit that China is hosting in Shenzhen. Reported agenda items include the war in Ukraine, West Asia, trade, Iran and arms control, and Beijing and the Kremlin describe the meeting as highly significant.",
+        "sources": [
+          "06efc323255d",
+          "a5f8d89f1b19",
+          "7c74d41bf4d8",
+          "31c38d85e0e4",
+          "727865b2020e",
+          "7bcb614c792f",
+          "6b1ef290fd10"
+        ]
+      },
+      "conclusion": {
+        "text": "All coverage agrees the three leaders will meet alongside APEC in China. Western outlets frame it around Trump's trip, allies' unease and each leader's aims, while Eastern outlets lead with Beijing's and the Kremlin's claims of significance. Whether it will be substantial or mainly symbolic is stated differently.",
+        "sources": [
+          "06efc323255d",
+          "a5f8d89f1b19",
+          "7c74d41bf4d8",
+          "31c38d85e0e4",
+          "727865b2020e",
+          "7bcb614c792f",
+          "6b1ef290fd10"
+        ]
+      },
+      "validation": {
+        "kept": 26,
+        "dropped_by_reason": {}
+      }
+    },
+    {
+      "id": "001634360e61",
+      "title": "Xi and Carney meet in Shenzhen and agree China-Canada tariff cuts",
+      "rank": 5,
+      "outlet_count": 6,
+      "coverage": {
+        "lean": {
+          "left": 1,
+          "centre": 2,
+          "right": 0
+        },
+        "bloc": {
+          "west": 3,
+          "east": 3
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "88c2cec2e269",
+          "outlet_id": "cgtn",
+          "headline": "Chinese President Xi Jinping meets Canadian PM Mark Carney in Shenzhen",
+          "snippet": "Chinese President Xi Jinping on Tuesday met with Canadian Prime Minister Mark Carney in Shenzhen.",
+          "url": "https://news.cgtn.com/news/2026-11-17/Chinese-President-Xi-Jinping-meets-Canadian-PM-Mark-Carney-in-Shenzhen-1S8GoV70E8w/p.html",
+          "published_at": "2026-11-17T02:50:49Z",
+          "published_at_estimated": false,
+          "image_url": "https://news.cgtn.com/news/2026-11-17/Chinese-President-Xi-Jinping-meets-Canadian-PM-Mark-Carney-in-Shenzhen-1S8GoV70E8w/img/69fb9b27424a46b8bbcdcfd190b72551/69fb9b27424a46b8bbcdcfd190b72551-1280.jpeg"
+        },
+        {
+          "id": "fded89819bdc",
+          "outlet_id": "thehindu",
+          "headline": "Xi, Carney call for deeper ties as Canada looks beyond U.S. for trade",
+          "snippet": "Mark Carney said that the exchanges between Canada and China have increased in the past months and praised that now there is ‘greater predictability and stability’ in their relationship",
+          "url": "https://www.thehindu.com/news/international/xi-carney-call-for-deeper-ties-as-canada-looks-beyond-us-for-trade/article71710632.ece",
+          "published_at": "2026-11-17T06:51:12Z",
+          "published_at_estimated": false,
+          "image_url": "https://th-i.thgim.com/public/incoming/pufclo/article71710668.ece/alternates/LANDSCAPE_1200/Canada_Carney_China__84_8.jpg"
+        },
+        {
+          "id": "416b547ba73f",
+          "outlet_id": "france24",
+          "headline": "China, Canada agree to further reduce tariffs at APEC summit in Shenzhen",
+          "snippet": "China is hosting the 21-member Asia-Pacific Economic Cooperation (APEC) summit in Shenzhen this week, hoping to use the tech megalopolis to showcase its vision for international trade and…",
+          "url": "https://www.france24.com/en/tv-shows/business/20261117-china-canada-agree-to-further-reduce-tariffs-at-apec-summit-in-shenzhen",
+          "published_at": "2026-11-17T09:45:26Z",
+          "published_at_estimated": false,
+          "image_url": "https://s.france24.com/media/display/36dae0c6-e267-11f1-b463-695cb59fade5/w:1024/p:16x9/capture-672c7708.jpg"
+        },
+        {
+          "id": "7c3a63c1f179",
+          "outlet_id": "nyt",
+          "headline": "Carney and Xi Announce Canada-China Trade Pact",
+          "snippet": "The agreement between Canada and China and the cordial relations on display by their leaders contrast with the current Canada-U.S. relationship.",
+          "url": "https://www.nytimes.com/2026/11/17/world/canada/carney-china-xi-trade-apec.html",
+          "published_at": "2026-11-17T09:46:43Z",
+          "published_at_estimated": false,
+          "image_url": "https://static01.nyt.com/images/2026/11/17/multimedia/17int-canada-china-trade-qwgf/17int-canada-china-trade-qwgf-mediumSquareAt3X.jpg"
+        },
+        {
+          "id": "97891df8d9cd",
+          "outlet_id": "scmp",
+          "headline": "China and Canada agree on fresh tariff relief as Xi and Carney continue thaw",
+          "snippet": "Chinese President Xi Jinping and Canadian Prime Minister Mark Carney have agreed on broader trade concessions as Ottawa seeks to reset relations with Beijing amid growing trade tensions with the…",
+          "url": "https://www.scmp.com/news/china/diplomacy/article/3374769/china-and-canada-agree-fresh-tariff-reliefs-thaw-continues-xi-carney-meeting",
+          "published_at": "2026-11-17T10:54:25Z",
+          "published_at_estimated": false,
+          "image_url": "https://cdn.i-scmp.com/sites/default/files/styles/1280x720/public/d8/images/canvas/2026/11/17/c89f6e22-9606-4126-8f0c-3dc8c4b5e394_afe7c58a.jpg?itok=xJejC-0v&v=1794912709"
+        },
+        {
+          "id": "4c3cb3393587",
+          "outlet_id": "bbc",
+          "headline": "Carney eyes 'other options' for embattled Canadian auto sector on China trip",
+          "snippet": "The PM has suggested Chinese automakers could replace American ones in Canada - but some say that would not be easy.",
+          "url": "https://www.bbc.co.uk/news/articles/cq98xlz09ye0o",
+          "published_at": "2026-11-17T15:17:49Z",
+          "published_at_estimated": false,
+          "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/dab7/live/371458b0-e299-11f1-8dda-8925a81c3da5.jpg"
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "Xi Jinping and Mark Carney met, with CGTN placing the meeting in Shenzhen.",
+          "sources": [
+            "88c2cec2e269",
+            "fded89819bdc",
+            "7c3a63c1f179",
+            "97891df8d9cd"
+          ]
+        },
+        {
+          "text": "China and Canada agreed on further tariff reductions or trade concessions.",
+          "sources": [
+            "416b547ba73f",
+            "7c3a63c1f179",
+            "97891df8d9cd"
+          ]
+        },
+        {
+          "text": "Canada's outreach to China is set against strained trade relations with the United States.",
+          "sources": [
+            "fded89819bdc",
+            "7c3a63c1f179",
+            "97891df8d9cd",
+            "4c3cb3393587"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "7c3a63c1f179",
+              "quote": "Carney and Xi Announce Canada-China Trade Pact",
+              "field": "headline"
+            },
+            {
+              "article_id": "7c3a63c1f179",
+              "quote": "contrast with the current Canada-U.S. relationship",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the agreement as a trade pact and contrasts cordial China-Canada relations with the current Canada-US relationship.",
+              "sources": [
+                "7c3a63c1f179"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "416b547ba73f",
+              "quote": "China, Canada agree to further reduce tariffs at APEC summit in Shenzhen",
+              "field": "headline"
+            },
+            {
+              "article_id": "4c3cb3393587",
+              "quote": "Carney eyes 'other options' for embattled Canadian auto sector",
+              "field": "headline"
+            },
+            {
+              "article_id": "4c3cb3393587",
+              "quote": "some say that would not be easy",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Places the tariff deal in the context of China hosting the APEC summit to showcase its vision for trade.",
+              "sources": [
+                "416b547ba73f"
+              ]
+            },
+            {
+              "text": "Focuses on the Canadian auto sector and Carney's suggestion that Chinese automakers could replace American ones, noting doubts.",
+              "sources": [
+                "4c3cb3393587"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "left",
+          "text": "Left coverage does not mention that the meeting took place at the APEC summit China is hosting in Shenzhen.",
+          "sources": [
+            "416b547ba73f"
+          ]
+        },
+        {
+          "lean": "left",
+          "text": "Left coverage does not mention the Canadian auto sector or the idea of Chinese automakers replacing American ones.",
+          "sources": [
+            "4c3cb3393587"
+          ]
+        }
+      ],
+      "contested_claims": [],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "7c3a63c1f179",
+              "quote": "Canada-China Trade Pact",
+              "field": "headline"
+            },
+            {
+              "article_id": "416b547ba73f",
+              "quote": "agree to further reduce tariffs at APEC summit",
+              "field": "headline"
+            },
+            {
+              "article_id": "4c3cb3393587",
+              "quote": "embattled Canadian auto sector",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Emphasises the trade agreement, the APEC setting, the contrast with Canada-US relations and the auto sector.",
+              "sources": [
+                "7c3a63c1f179",
+                "416b547ba73f",
+                "4c3cb3393587"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "88c2cec2e269",
+              "quote": "Chinese President Xi Jinping meets Canadian PM Mark Carney in Shenzhen",
+              "field": "headline"
+            },
+            {
+              "article_id": "fded89819bdc",
+              "quote": "‘greater predictability and stability’",
+              "field": "snippet"
+            },
+            {
+              "article_id": "97891df8d9cd",
+              "quote": "Xi and Carney continue thaw",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the leaders' meeting itself, calls for deeper ties and an ongoing thaw in relations.",
+              "sources": [
+                "88c2cec2e269",
+                "fded89819bdc",
+                "97891df8d9cd"
+              ]
+            },
+            {
+              "text": "Quotes Carney praising increased exchanges and greater stability in the relationship.",
+              "sources": [
+                "fded89819bdc"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "Chinese President Xi Jinping met Canadian Prime Minister Mark Carney in Shenzhen, where China is hosting the APEC summit. The two countries agreed to further reduce tariffs and broaden trade concessions as Canada seeks trade options beyond the United States.",
+        "sources": [
+          "88c2cec2e269",
+          "416b547ba73f",
+          "7c3a63c1f179",
+          "97891df8d9cd",
+          "fded89819bdc"
+        ]
+      },
+      "conclusion": {
+        "text": "Coverage agrees that Xi and Carney met and that China and Canada agreed further tariff relief, against a backdrop of strained Canada-US trade. West-bloc outlets stress the trade pact, APEC and the auto sector; East-bloc outlets stress the meeting and warming ties. No claims are contested.",
+        "sources": [
+          "88c2cec2e269",
+          "fded89819bdc",
+          "416b547ba73f",
+          "7c3a63c1f179",
+          "97891df8d9cd",
+          "4c3cb3393587"
+        ]
+      },
+      "validation": {
+        "kept": 24,
+        "dropped_by_reason": {}
+      }
+    },
+    {
+      "id": "a08e697f4eb1",
+      "title": "Investigation into cause of nationwide FAA ground stop focuses on router upgrade",
+      "rank": 6,
+      "outlet_count": 5,
+      "coverage": {
+        "lean": {
+          "left": 1,
+          "centre": 1,
+          "right": 1
+        },
+        "bloc": {
+          "west": 3,
+          "east": 2
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "e599f9b1da64",
+          "outlet_id": "cgtn",
+          "headline": "Over 75% at risk: US flight disruption exposes problems in ATC system",
+          "snippet": "The US is still recovering from a nationwide flight shutdown triggered by a communications failure in its air traffic control (ATC) network, raising concerns over the country's aging aviation…",
+          "url": "https://news.cgtn.com/news/2026-11-16/Over-75-at-risk-US-flight-disruption-exposes-problems-in-ATC-system-1S7hXEMkRnW/p.html",
+          "published_at": "2026-11-16T07:39:23Z",
+          "published_at_estimated": false,
+          "image_url": "https://news.cgtn.com/news/2026-11-16/Over-75-at-risk-US-flight-disruption-exposes-problems-in-ATC-system-1S7hXEMkRnW/img/9921e992bce5432585359a1f93009789/9921e992bce5432585359a1f93009789-750.jpeg"
+        },
+        {
+          "id": "b93abcb2380a",
+          "outlet_id": "axios",
+          "headline": "What we know about what caused the FAA's nationwide ground stop",
+          "snippet": "A newly installed router is at the center of the investigation into the Federal Aviation Administration's nationwide ground stop last Friday, which disrupted thousands of flights nationwide. Why it…",
+          "url": "https://www.axios.com/2026/11/16/faa-flights-ground-stop-router-cause-reasons",
+          "published_at": "2026-11-16T19:30:04Z",
+          "published_at_estimated": false,
+          "image_url": "https://images.axios.com/5SD_OLE82n9QKK_f3wPq4furxgk=/0x87:4866x2824/1366x768/2026/11/13/1794606672694.jpeg"
+        },
+        {
+          "id": "6261c373e8c3",
+          "outlet_id": "nypost",
+          "headline": "Duffy vows to modernize aging air traffic system after nationwide ground stop",
+          "snippet": "The FAA is working with contractor L3Harris at its Florida laboratory to determine what caused Friday's nationwide outage.",
+          "url": "https://nypost.com/2026/11/17/us-news/sean-duffy-vows-to-modernize-aging-air-traffic-system-after-nationwide-ground-stop/",
+          "published_at": "2026-11-17T08:02:58Z",
+          "published_at_estimated": false,
+          "image_url": "https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2Ftransportation-secretary-sean-duffy-speaking-148700567.jpg?w%3D682"
+        },
+        {
+          "id": "c4f214973c8f",
+          "outlet_id": "nbc",
+          "headline": "Nationwide System Outages Raise Questions on US Tech Security",
+          "snippet": "Teams from the FAA and FBI are in Florida analyzing the router at the center of the historic ground stop that led to 18,000 flight cancellations. Meanwhile, Transportation Secretary Sean Duffy is…",
+          "url": "https://www.today.com/video/widespread-banking-and-air-travel-tech-outages-raise-concerns-273635397620",
+          "published_at": "2026-11-17T12:20:09Z",
+          "published_at_estimated": false,
+          "image_url": "https://media-cldnry.s-nbcnews.com/image/upload/t_fit_1500w/mpx/2704722219/2026_11/1794918002759_tdy_news_7a_gosk_krebs_tech_outages_261117_S3_1920x1080-1tbye3.jpg"
+        },
+        {
+          "id": "87f83584d6f6",
+          "outlet_id": "aljazeera",
+          "headline": "US senators demand FAA pause upgrades linked to nationwide ground stop",
+          "snippet": "Thousands of routers used in communications systems are slated to be replaced, raising the risk of more problems.",
+          "url": "https://www.aljazeera.com/news/2026/11/17/us-senators-demand-faa-pause-upgrades-linked-to-nationwide-ground-stop",
+          "published_at": "2026-11-17T14:57:33Z",
+          "published_at_estimated": false,
+          "image_url": null
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "A nationwide ground stop or flight shutdown disrupted US air travel.",
+          "sources": [
+            "e599f9b1da64",
+            "b93abcb2380a",
+            "6261c373e8c3",
+            "c4f214973c8f",
+            "87f83584d6f6"
+          ]
+        },
+        {
+          "text": "A router is at the centre of the investigation into the ground stop.",
+          "sources": [
+            "b93abcb2380a",
+            "c4f214973c8f"
+          ]
+        },
+        {
+          "text": "The analysis of the cause is taking place in Florida.",
+          "sources": [
+            "6261c373e8c3",
+            "c4f214973c8f"
+          ]
+        },
+        {
+          "text": "Thousands of flights were disrupted or cancelled.",
+          "sources": [
+            "b93abcb2380a",
+            "c4f214973c8f"
+          ]
+        },
+        {
+          "text": "The US air traffic system is described as ageing.",
+          "sources": [
+            "e599f9b1da64",
+            "6261c373e8c3"
+          ]
+        },
+        {
+          "text": "Transportation Secretary Sean Duffy features in coverage of the response.",
+          "sources": [
+            "6261c373e8c3",
+            "c4f214973c8f"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "c4f214973c8f",
+              "quote": "Nationwide System Outages Raise Questions on US Tech Security",
+              "field": "headline"
+            },
+            {
+              "article_id": "c4f214973c8f",
+              "quote": "historic ground stop that led to 18,000 flight cancellations",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with questions about US technology security and notes FBI involvement alongside the FAA.",
+              "sources": [
+                "c4f214973c8f"
+              ]
+            },
+            {
+              "text": "Gives a specific figure of 18,000 flight cancellations.",
+              "sources": [
+                "c4f214973c8f"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "b93abcb2380a",
+              "quote": "What we know about what caused the FAA's nationwide ground stop",
+              "field": "headline"
+            },
+            {
+              "article_id": "b93abcb2380a",
+              "quote": "A newly installed router is at the center of the investigation",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Presents an explainer on the cause, focusing on a newly installed router.",
+              "sources": [
+                "b93abcb2380a"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "right",
+          "headline_quotes": [
+            {
+              "article_id": "6261c373e8c3",
+              "quote": "Duffy vows to modernize aging air traffic system",
+              "field": "headline"
+            },
+            {
+              "article_id": "6261c373e8c3",
+              "quote": "working with contractor L3Harris at its Florida laboratory",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with Duffy's pledge to modernise the air traffic system and names contractor L3Harris.",
+              "sources": [
+                "6261c373e8c3"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "right",
+          "text": "Right-leaning coverage does not mention the router at the centre of the investigation.",
+          "sources": [
+            "b93abcb2380a",
+            "c4f214973c8f"
+          ]
+        },
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not mention FBI involvement in analysing the router.",
+          "sources": [
+            "c4f214973c8f"
+          ]
+        },
+        {
+          "lean": "right",
+          "text": "Right-leaning coverage does not mention FBI involvement in the investigation.",
+          "sources": [
+            "c4f214973c8f"
+          ]
+        }
+      ],
+      "contested_claims": [],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "b93abcb2380a",
+              "quote": "A newly installed router is at the center of the investigation",
+              "field": "snippet"
+            },
+            {
+              "article_id": "6261c373e8c3",
+              "quote": "Duffy vows to modernize aging air traffic system",
+              "field": "headline"
+            },
+            {
+              "article_id": "c4f214973c8f",
+              "quote": "Raise Questions on US Tech Security",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Focuses on the investigation into the cause, the router, and the official response.",
+              "sources": [
+                "b93abcb2380a",
+                "6261c373e8c3",
+                "c4f214973c8f"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "e599f9b1da64",
+              "quote": "Over 75% at risk: US flight disruption exposes problems in ATC system",
+              "field": "headline"
+            },
+            {
+              "article_id": "87f83584d6f6",
+              "quote": "US senators demand FAA pause upgrades linked to nationwide ground stop",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Emphasises systemic problems and concerns over the ageing US aviation system.",
+              "sources": [
+                "e599f9b1da64"
+              ]
+            },
+            {
+              "text": "Reports senators demanding a pause in upgrades and notes thousands of routers are slated for replacement.",
+              "sources": [
+                "87f83584d6f6"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "A nationwide FAA ground stop on Friday, triggered by a communications failure, disrupted thousands of flights; NBC News reports 18,000 cancellations. The investigation centres on a newly installed router, with FAA teams working in Florida, including with contractor L3Harris.",
+        "sources": [
+          "b93abcb2380a",
+          "c4f214973c8f",
+          "6261c373e8c3",
+          "e599f9b1da64",
+          "87f83584d6f6"
+        ]
+      },
+      "conclusion": {
+        "text": "Coverage agrees that a nationwide ground stop disrupted thousands of flights and that a router is central to the investigation. Left coverage leads with tech security and the FBI, centre with the router, right with Duffy's modernisation pledge; East outlets stress systemic risk and calls to pause upgrades. No claims are directly contested.",
+        "sources": [
+          "b93abcb2380a",
+          "c4f214973c8f",
+          "6261c373e8c3",
+          "e599f9b1da64",
+          "87f83584d6f6"
+        ]
+      },
+      "validation": {
+        "kept": 29,
+        "dropped_by_reason": {}
+      }
+    },
+    {
+      "id": "bb0fbfcf39e0",
+      "title": "Record Ukrainian drone attack on Russia hits the Crimean bridge",
+      "rank": 7,
+      "outlet_count": 5,
+      "coverage": {
+        "lean": {
+          "left": 2,
+          "centre": 0,
+          "right": 1
+        },
+        "bloc": {
+          "west": 3,
+          "east": 2
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "4d73bf6bbc57",
+          "outlet_id": "cgtn",
+          "headline": "Crimean Bridge attacked as Russia reports massive drone strikes",
+          "snippet": "The Crimean Bridge came under attack with traffic restrictions expected to remain in place until around midday on Monday, Russian media reported.",
+          "url": "https://news.cgtn.com/news/2026-11-16/news-1S7hKwQqaPe/p.html",
+          "published_at": "2026-11-16T06:21:19Z",
+          "published_at_estimated": false,
+          "image_url": "https://news.cgtn.com/news/2026-11-16/news-1S7hKwQqaPe/img/bf73210f472f4308a4bc1c579f9965a2/bf73210f472f4308a4bc1c579f9965a2-1920.png"
+        },
+        {
+          "id": "396807ebb5b7",
+          "outlet_id": "moscowtimes",
+          "headline": "Ukraine Hits Crimean Bridge Amid Record Overnight Drone Attack",
+          "snippet": "Russia’s Defense Ministry said it intercepted 1,336 Ukrainian drones over Russian regions and Crimea overnight.",
+          "url": "https://www.themoscowtimes.com/2026/11/16/ukraine-hits-crimean-bridge-amid-record-overnight-drone-attack-a94265",
+          "published_at": "2026-11-16T09:16:00Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "8fcab23c7fa3",
+          "outlet_id": "huffpost",
+          "headline": "Russia Says Its Air Defenses Intercept Over 1,300 Ukrainian Drones In Massive Aerial Attack",
+          "snippet": "Ukraine has scaled up its long-range aerial assaults on Russia, as well as illegally annexed Crimea, the Black and the Azov seas.",
+          "url": "https://www.huffpost.com/entry/ukraine-aerial-attack-russia_n_6afad305e4b0e2644ec89b52",
+          "published_at": "2026-11-16T09:59:29Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "ce27efde34bf",
+          "outlet_id": "mirror",
+          "headline": "Ukraine fires 1,300 drones at Russia hours after Putin 'lifts ban on killing Zelensky'",
+          "snippet": "Ukraine has launched what is believed to be one of the biggest strikes since Putin's forces invaded - as Zelensky says 55% of Russia's oil refining capacity has been disabled",
+          "url": "https://www.mirror.co.uk/news/world-news/ukraine-fires-1300-drones-russia-37881048",
+          "published_at": "2026-11-16T11:12:33Z",
+          "published_at_estimated": false,
+          "image_url": "https://i2-prod.mirror.co.uk/incoming/article37881226.ece/ALTERNATES/s615/0_Russia-Ukraine-Crimea-Explainer-25114532927305.jpg"
+        },
+        {
+          "id": "1d83dfbac8bd",
+          "outlet_id": "fox",
+          "headline": "Ukraine hits Putin's prized bridge in record drone blitz as Kremlin tells lawmakers to prepare for 'victory'",
+          "snippet": "Ukraine struck Vladimir Putin's prized Crimea bridge in what Russia called the war's largest drone attack, setting industrial facilities ablaze.",
+          "url": "https://www.foxnews.com/world/ukraine-hits-putins-prized-bridge-record-drone-blitz-kremlin-tells-lawmakers-prepare-victory",
+          "published_at": "2026-11-16T18:15:50Z",
+          "published_at_estimated": false,
+          "image_url": "https://static.foxnews.com/foxnews.com/content/uploads/2026/11/ukraine-russia-crisis-fire.gif"
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "The Crimean Bridge was attacked or struck during the Ukrainian drone assault.",
+          "sources": [
+            "4d73bf6bbc57",
+            "396807ebb5b7",
+            "1d83dfbac8bd"
+          ]
+        },
+        {
+          "text": "The attack involved more than 1,300 Ukrainian drones, with Russia saying it intercepted 1,336.",
+          "sources": [
+            "396807ebb5b7",
+            "8fcab23c7fa3",
+            "ce27efde34bf"
+          ]
+        },
+        {
+          "text": "The attack is described as massive, record or among the biggest of the war.",
+          "sources": [
+            "4d73bf6bbc57",
+            "396807ebb5b7",
+            "8fcab23c7fa3",
+            "ce27efde34bf",
+            "1d83dfbac8bd"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "8fcab23c7fa3",
+              "quote": "Russia Says Its Air Defenses Intercept Over 1,300 Ukrainian Drones",
+              "field": "headline"
+            },
+            {
+              "article_id": "8fcab23c7fa3",
+              "quote": "illegally annexed Crimea",
+              "field": "snippet"
+            },
+            {
+              "article_id": "ce27efde34bf",
+              "quote": "hours after Putin 'lifts ban on killing Zelensky'",
+              "field": "headline"
+            },
+            {
+              "article_id": "ce27efde34bf",
+              "quote": "55% of Russia's oil refining capacity has been disabled",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the drone count and Russia's interception claim.",
+              "sources": [
+                "8fcab23c7fa3",
+                "ce27efde34bf"
+              ]
+            },
+            {
+              "text": "Places the attack in the context of Ukraine scaling up long-range strikes and describes Crimea as illegally annexed.",
+              "sources": [
+                "8fcab23c7fa3"
+              ]
+            },
+            {
+              "text": "Links the timing to Putin reportedly lifting a ban on killing Zelensky and cites Zelensky's refinery capacity claim.",
+              "sources": [
+                "ce27efde34bf"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "right",
+          "headline_quotes": [
+            {
+              "article_id": "1d83dfbac8bd",
+              "quote": "Ukraine hits Putin's prized bridge in record drone blitz",
+              "field": "headline"
+            },
+            {
+              "article_id": "1d83dfbac8bd",
+              "quote": "Kremlin tells lawmakers to prepare for 'victory'",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the strike on the Crimean bridge, describing it as Putin's prized bridge.",
+              "sources": [
+                "1d83dfbac8bd"
+              ]
+            },
+            {
+              "text": "Reports industrial facilities set ablaze and the Kremlin telling lawmakers to prepare for victory.",
+              "sources": [
+                "1d83dfbac8bd"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "left",
+          "text": "Left-leaning coverage does not mention the Crimean Bridge being hit.",
+          "sources": [
+            "1d83dfbac8bd"
+          ]
+        },
+        {
+          "lean": "right",
+          "text": "Right-leaning coverage does not give the number of drones or Russia's interception figure.",
+          "sources": [
+            "8fcab23c7fa3",
+            "ce27efde34bf"
+          ]
+        },
+        {
+          "lean": "right",
+          "text": "Right-leaning coverage does not mention Zelensky's claim that 55% of Russia's oil refining capacity has been disabled.",
+          "sources": [
+            "ce27efde34bf"
+          ]
+        }
+      ],
+      "contested_claims": [],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "1d83dfbac8bd",
+              "quote": "record drone blitz",
+              "field": "headline"
+            },
+            {
+              "article_id": "ce27efde34bf",
+              "quote": "Ukraine fires 1,300 drones at Russia",
+              "field": "headline"
+            },
+            {
+              "article_id": "8fcab23c7fa3",
+              "quote": "Massive Aerial Attack",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Foregrounds the scale of the attack and Ukraine scaling up long-range strikes.",
+              "sources": [
+                "8fcab23c7fa3",
+                "ce27efde34bf",
+                "1d83dfbac8bd"
+              ]
+            },
+            {
+              "text": "Adds political context: Putin reportedly lifting a ban on killing Zelensky and the Kremlin's 'victory' message.",
+              "sources": [
+                "ce27efde34bf",
+                "1d83dfbac8bd"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "4d73bf6bbc57",
+              "quote": "Crimean Bridge attacked as Russia reports massive drone strikes",
+              "field": "headline"
+            },
+            {
+              "article_id": "396807ebb5b7",
+              "quote": "Ukraine Hits Crimean Bridge Amid Record Overnight Drone Attack",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the attack on the Crimean Bridge and resulting traffic restrictions.",
+              "sources": [
+                "4d73bf6bbc57",
+                "396807ebb5b7"
+              ]
+            },
+            {
+              "text": "Cites Russia's Defence Ministry figure of 1,336 drones intercepted.",
+              "sources": [
+                "396807ebb5b7"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "Ukraine launched what Russia described as a massive, record drone attack overnight, and the Crimean Bridge was hit. Russia's Defence Ministry said it intercepted 1,336 Ukrainian drones over Russian regions and Crimea. Traffic restrictions on the bridge were expected until around midday on Monday.",
+        "sources": [
+          "4d73bf6bbc57",
+          "396807ebb5b7",
+          "8fcab23c7fa3",
+          "ce27efde34bf",
+          "1d83dfbac8bd"
+        ]
+      },
+      "conclusion": {
+        "text": "All coverage agrees a massive Ukrainian drone attack took place, with Russia citing over 1,300 drones intercepted. East-bloc and right-leaning outlets lead with the Crimean Bridge strike, while left-leaning outlets lead with the drone count and political context. No outlet disputes another's facts.",
+        "sources": [
+          "4d73bf6bbc57",
+          "396807ebb5b7",
+          "8fcab23c7fa3",
+          "ce27efde34bf",
+          "1d83dfbac8bd"
+        ]
+      },
+      "validation": {
+        "kept": 28,
+        "dropped_by_reason": {}
+      }
+    },
+    {
+      "id": "a73baa656cf6",
+      "title": "Third US aircraft carrier, USS Theodore Roosevelt, arrives in the Middle East",
+      "rank": 8,
+      "outlet_count": 5,
+      "coverage": {
+        "lean": {
+          "left": 2,
+          "centre": 1,
+          "right": 0
+        },
+        "bloc": {
+          "west": 3,
+          "east": 2
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "0862bd4fb70d",
+          "outlet_id": "mirror",
+          "headline": "Major escalation as USS Theodore Roosevelt arrives in Middle East after new Iran strikes",
+          "snippet": "The US Navy has sent the USS Theodore Roosevelt into the Middle East - meaing there is now the biggest US warship presence in the region since the Second Gulf War",
+          "url": "https://www.mirror.co.uk/news/world-news/us-carrier-iran-trump-tehran-37882126",
+          "published_at": "2026-11-16T13:45:45Z",
+          "published_at_estimated": false,
+          "image_url": "https://i2-prod.mirror.co.uk/incoming/article37882084.ece/ALTERNATES/s615/2_US-IRAN-ISRAEL-WAR.jpg"
+        },
+        {
+          "id": "9b11650e897e",
+          "outlet_id": "thehindu",
+          "headline": "Third American aircraft carrier arrives in West Asia as Trump keeps options open in Iran war",
+          "snippet": "The USS Theodore Roosevelt has arrived in the Middle East, once again bringing the total number of U.S. aircraft carriers in the West Asia to three, an unusually high number",
+          "url": "https://www.thehindu.com/news/international/third-american-aircraft-carrier-arrives-in-west-asia-as-trump-keeps-options-open-in-iran-war/article71709128.ece",
+          "published_at": "2026-11-16T17:00:24Z",
+          "published_at_estimated": false,
+          "image_url": "https://th-i.thgim.com/public/incoming/3ws3um/article71709213.ece/alternates/LANDSCAPE_1200/AP10_19_2026_000358B.jpg"
+        },
+        {
+          "id": "af3b4a5b77ba",
+          "outlet_id": "guardian",
+          "headline": "Third US aircraft carrier brings thousands more troops to Middle East",
+          "snippet": "The US president oscillates between strike threats on Iran and insisting the war ‘militarily is effectively over’ A third US aircraft carrier has arrived in the Middle East, US Central Command said…",
+          "url": "https://www.theguardian.com/us-news/2026/nov/16/aircraft-middle-east-trump-military",
+          "published_at": "2026-11-16T21:13:02Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.guim.co.uk/img/media/f8920d7c62e46771a24c52857d1e30a2b7a5ef2d/494_0_4935_3948/master/4935.jpg?width=460&quality=85&auto=format&fit=max&s=2d0c34355dbe4f7be6d324b2e01943f6"
+        },
+        {
+          "id": "847b6f8d4ff1",
+          "outlet_id": "cgtn",
+          "headline": "3rd US aircraft carrier arrives in Middle East amid Iran tensions",
+          "snippet": "The USS Theodore Roosevelt aircraft carrier has arrived in the Middle East, bringing the number of US carrier strike groups in the region to three amid continued tensions with Iran, a US official…",
+          "url": "https://news.cgtn.com/news/2026-11-17/3rd-US-aircraft-carrier-arrives-in-Middle-East-amid-Iran-tensions-1S8xGcYFjUI/p.html",
+          "published_at": "2026-11-17T01:03:08Z",
+          "published_at_estimated": false,
+          "image_url": "https://news.cgtn.com/news/2026-11-17/3rd-US-aircraft-carrier-arrives-in-Middle-East-amid-Iran-tensions-1S8xGcYFjUI/img/f6299ee42c5e4e49a68632594d6471cd/f6299ee42c5e4e49a68632594d6471cd-750.png"
+        },
+        {
+          "id": "c2fac232745d",
+          "outlet_id": "france24",
+          "headline": "Third US aircraft carrier arrives in the Middle East as Iran targets Bahrain",
+          "snippet": "A third American aircraft carrier has arrived in the Middle East, US Central Command said in a social media post Monday, making a dramatic show of military might as President Donald Trump keeps his…",
+          "url": "https://www.france24.com/en/video/20261117-third-us-aircraft-carrier-arrives-in-the-middle-east-as-iran-targets-bahrain",
+          "published_at": "2026-11-17T10:46:27Z",
+          "published_at_estimated": false,
+          "image_url": "https://s.france24.com/media/display/9752e8aa-e270-11f1-b650-5f54d898a954/w:1024/p:16x9/EN-20261117-103832-104029-CS.jpg"
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "The USS Theodore Roosevelt aircraft carrier has arrived in the Middle East.",
+          "sources": [
+            "0862bd4fb70d",
+            "9b11650e897e",
+            "847b6f8d4ff1",
+            "af3b4a5b77ba",
+            "c2fac232745d"
+          ]
+        },
+        {
+          "text": "Its arrival brings the number of US aircraft carriers in the region to three.",
+          "sources": [
+            "9b11650e897e",
+            "af3b4a5b77ba",
+            "847b6f8d4ff1",
+            "c2fac232745d"
+          ]
+        },
+        {
+          "text": "US Central Command announced the carrier's arrival.",
+          "sources": [
+            "af3b4a5b77ba",
+            "c2fac232745d"
+          ]
+        },
+        {
+          "text": "The deployment takes place against the backdrop of conflict or tensions with Iran.",
+          "sources": [
+            "0862bd4fb70d",
+            "9b11650e897e",
+            "af3b4a5b77ba",
+            "847b6f8d4ff1",
+            "c2fac232745d"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "0862bd4fb70d",
+              "quote": "Major escalation",
+              "field": "headline"
+            },
+            {
+              "article_id": "0862bd4fb70d",
+              "quote": "the biggest US warship presence in the region since the Second Gulf War",
+              "field": "snippet"
+            },
+            {
+              "article_id": "af3b4a5b77ba",
+              "quote": "brings thousands more troops to Middle East",
+              "field": "headline"
+            },
+            {
+              "article_id": "af3b4a5b77ba",
+              "quote": "oscillates between strike threats on Iran",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Describes the arrival as a major escalation following new Iran strikes, with the largest US warship presence since the Second Gulf War.",
+              "sources": [
+                "0862bd4fb70d"
+              ]
+            },
+            {
+              "text": "Leads with additional troops and the president's alternation between strike threats and saying the war is effectively over.",
+              "sources": [
+                "af3b4a5b77ba"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "c2fac232745d",
+              "quote": "as Iran targets Bahrain",
+              "field": "headline"
+            },
+            {
+              "article_id": "c2fac232745d",
+              "quote": "making a dramatic show of military might",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Pairs the carrier's arrival with Iran targeting Bahrain and describes it as a show of military might.",
+              "sources": [
+                "c2fac232745d"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "left",
+          "text": "Left-leaning coverage does not mention Iran targeting Bahrain.",
+          "sources": [
+            "c2fac232745d"
+          ]
+        },
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not mention thousands more troops arriving with the carrier.",
+          "sources": [
+            "af3b4a5b77ba"
+          ]
+        }
+      ],
+      "contested_claims": [],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "0862bd4fb70d",
+              "quote": "Major escalation",
+              "field": "headline"
+            },
+            {
+              "article_id": "af3b4a5b77ba",
+              "quote": "thousands more troops",
+              "field": "headline"
+            },
+            {
+              "article_id": "c2fac232745d",
+              "quote": "as Iran targets Bahrain",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Foregrounds escalation, troop numbers and Iranian action against Bahrain alongside the arrival.",
+              "sources": [
+                "0862bd4fb70d",
+                "af3b4a5b77ba",
+                "c2fac232745d"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "9b11650e897e",
+              "quote": "as Trump keeps options open in Iran war",
+              "field": "headline"
+            },
+            {
+              "article_id": "9b11650e897e",
+              "quote": "an unusually high number",
+              "field": "snippet"
+            },
+            {
+              "article_id": "847b6f8d4ff1",
+              "quote": "amid Iran tensions",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the carrier count of three, described as unusually high, with the region referred to as West Asia by one outlet.",
+              "sources": [
+                "9b11650e897e",
+                "847b6f8d4ff1"
+              ]
+            },
+            {
+              "text": "Attributes the arrival to a US official and places it amid continued tensions with Iran.",
+              "sources": [
+                "847b6f8d4ff1"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "The USS Theodore Roosevelt has arrived in the Middle East, making it the third US aircraft carrier in the region. US Central Command announced the arrival, which comes amid tensions and a war with Iran, with President Trump keeping his options open.",
+        "sources": [
+          "0862bd4fb70d",
+          "9b11650e897e",
+          "af3b4a5b77ba",
+          "847b6f8d4ff1",
+          "c2fac232745d"
+        ]
+      },
+      "conclusion": null,
+      "validation": {
+        "kept": 25,
+        "dropped_by_reason": {
+          "untrusted_text": 1
+        }
+      }
+    },
+    {
+      "id": "505880fd2af8",
+      "title": "Five EU states plan a return hub in Rwanda for rejected asylum seekers",
+      "rank": 9,
+      "outlet_count": 5,
+      "coverage": {
+        "lean": {
+          "left": 2,
+          "centre": 1,
+          "right": 0
+        },
+        "bloc": {
+          "west": 3,
+          "east": 2
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "a28aa3ba68b8",
+          "outlet_id": "nyt",
+          "headline": "Five European Countries Plan to Deport Migrants to Rwanda",
+          "snippet": "Germany, Austria, the Netherlands, Greece and Denmark are seeking to establish a hub for rejected asylum seekers. Here’s what to know about their effort.",
+          "url": "https://www.nytimes.com/2026/11/16/world/europe/deport-rwanda-asylum-migration.html",
+          "published_at": "2026-11-16T17:36:21Z",
+          "published_at_estimated": false,
+          "image_url": "https://static01.nyt.com/images/2026/12/15/world/15Int-Europe-Rwanda-aaa/15Int-Europe-Rwanda-aaa-mediumSquareAt3X.jpg"
+        },
+        {
+          "id": "c9788a77284a",
+          "outlet_id": "guardian",
+          "headline": "Five EU states announce plans for immigration ‘return hubs’ in Rwanda",
+          "snippet": "Germany, Austria, Netherlands, Denmark and Greece likely to face challenges to policy criticised as ‘grave moral failing’ Five EU member states have announced plans to set up an offshore centre in…",
+          "url": "https://www.theguardian.com/world/2026/nov/16/eu-states-immigration-return-hubs-rwanda",
+          "published_at": "2026-11-17T01:10:59Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.guim.co.uk/img/media/d668e44ea9f6f3fb2d88cfee76bb772cccada10f/456_0_4053_3243/master/4053.jpg?width=460&quality=85&auto=format&fit=max&s=e70785d27b57bfefe996e788ea89d2b0"
+        },
+        {
+          "id": "ae493c4a6a2d",
+          "outlet_id": "japantimes",
+          "headline": "Germany, Denmark, Austria, Greece and the Netherlands plan Rwanda migrant hub",
+          "snippet": "The move came despite protests from human rights groups and a warning from the United Nations refugee agency UNHCR.",
+          "url": "https://www.japantimes.co.jp/news/2026/11/17/world/politics/european-nations-rwanda-hub-migrants/",
+          "published_at": "2026-11-17T03:26:00Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.japantimes.co.jp/japantimes/uploads/images/2026/11/17/thumbs/400x400/574478.jpg"
+        },
+        {
+          "id": "53d11cc88081",
+          "outlet_id": "koreaherald",
+          "headline": "Five European nations plan Rwanda hub",
+          "snippet": "VIENNA (AFP) -- Germany, Denmark, Austria, Greece and the Netherlands on Monday unveiled a plan to establish a migrant deportation center in Rwanda -- the first such facility outside the European…",
+          "url": "https://www.koreaherald.com/article/10939921",
+          "published_at": "2026-11-17T05:35:16Z",
+          "published_at_estimated": false,
+          "image_url": "https://wimg.heraldcorp.com/news/cms/2026/11/17/rcv.YNA.20261117.PRU20261117024301009_T1.jpg"
+        },
+        {
+          "id": "c378a5c225cd",
+          "outlet_id": "france24",
+          "headline": "5 European countries aim to send rejected asylum seekers to Rwanda",
+          "snippet": "A group of European countries announced Monday that they aim to set up a “return hub” in Rwanda where rejected asylum seekers could be sent from next year, a move that they hope will also deter more…",
+          "url": "https://www.france24.com/en/video/20261117-5-european-countries-aim-to-send-rejected-asylum-seekers-to-rwanda",
+          "published_at": "2026-11-17T10:41:53Z",
+          "published_at_estimated": false,
+          "image_url": "https://s.france24.com/media/display/c03fe188-e26f-11f1-b5ff-5f54d898a954/w:1024/p:16x9/EN-20261117-103334-103526-CS.jpg"
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "Five European countries, namely Germany, Austria, the Netherlands, Greece and Denmark, plan to establish a hub in Rwanda for migrants or rejected asylum seekers.",
+          "sources": [
+            "a28aa3ba68b8",
+            "c9788a77284a",
+            "ae493c4a6a2d",
+            "53d11cc88081",
+            "c378a5c225cd"
+          ]
+        },
+        {
+          "text": "The plan was announced on Monday.",
+          "sources": [
+            "53d11cc88081",
+            "c378a5c225cd"
+          ]
+        },
+        {
+          "text": "The facility is described as a centre for deportation or return of rejected asylum seekers.",
+          "sources": [
+            "a28aa3ba68b8",
+            "c9788a77284a",
+            "53d11cc88081",
+            "c378a5c225cd"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "a28aa3ba68b8",
+              "quote": "Five European Countries Plan to Deport Migrants to Rwanda",
+              "field": "headline"
+            },
+            {
+              "article_id": "c9788a77284a",
+              "quote": "policy criticised as ‘grave moral failing’",
+              "field": "snippet"
+            },
+            {
+              "article_id": "c9788a77284a",
+              "quote": "likely to face challenges",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with deportation of migrants and notes that the policy is likely to face challenges and has been criticised as a 'grave moral failing'.",
+              "sources": [
+                "a28aa3ba68b8",
+                "c9788a77284a"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "c378a5c225cd",
+              "quote": "where rejected asylum seekers could be sent from next year",
+              "field": "snippet"
+            },
+            {
+              "article_id": "c378a5c225cd",
+              "quote": "a move that they hope will also deter more",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Emphasises the governments' timeline of next year and their stated hope that the hub will act as a deterrent.",
+              "sources": [
+                "c378a5c225cd"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not mention criticism of the policy or that it is likely to face challenges.",
+          "sources": [
+            "c9788a77284a"
+          ]
+        },
+        {
+          "lean": "left",
+          "text": "Left coverage does not mention the aim to start sending rejected asylum seekers from next year or the hoped-for deterrent effect.",
+          "sources": [
+            "c378a5c225cd"
+          ]
+        }
+      ],
+      "contested_claims": [],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "a28aa3ba68b8",
+              "quote": "Plan to Deport Migrants to Rwanda",
+              "field": "headline"
+            },
+            {
+              "article_id": "c9788a77284a",
+              "quote": "immigration ‘return hubs’ in Rwanda",
+              "field": "headline"
+            },
+            {
+              "article_id": "c378a5c225cd",
+              "quote": "a move that they hope will also deter more",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "West-bloc coverage covers the countries' stated aims, including timing and deterrence, alongside criticism and expected challenges.",
+              "sources": [
+                "a28aa3ba68b8",
+                "c9788a77284a",
+                "c378a5c225cd"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "ae493c4a6a2d",
+              "quote": "despite protests from human rights groups and a warning from the United Nations refugee agency UNHCR",
+              "field": "snippet"
+            },
+            {
+              "article_id": "53d11cc88081",
+              "quote": "the first such facility outside the European",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "East-bloc coverage highlights protests by human rights groups, a UNHCR warning, and that the centre would be the first such facility outside the European bloc.",
+              "sources": [
+                "ae493c4a6a2d",
+                "53d11cc88081"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "Germany, Austria, the Netherlands, Greece and Denmark have announced plans to set up a hub in Rwanda for rejected asylum seekers. France 24 reports they aim to start sending people from next year. Human rights groups and the UN refugee agency UNHCR have objected.",
+        "sources": [
+          "a28aa3ba68b8",
+          "c9788a77284a",
+          "ae493c4a6a2d",
+          "53d11cc88081",
+          "c378a5c225cd"
+        ]
+      },
+      "conclusion": null,
+      "validation": {
+        "kept": 20,
+        "dropped_by_reason": {
+          "untrusted_text": 1
+        }
+      }
+    },
+    {
+      "id": "d9e20fff73c0",
+      "title": "US tightens AI chip export rules for Southeast Asian data centres",
+      "rank": 10,
+      "outlet_count": 5,
+      "coverage": {
+        "lean": {
+          "left": 1,
+          "centre": 1,
+          "right": 0
+        },
+        "bloc": {
+          "west": 2,
+          "east": 3
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "1c9fe3effb6e",
+          "outlet_id": "nbc",
+          "headline": "U.S. closes loophole that let Chinese companies use top AI chips in foreign data centers",
+          "snippet": "The Commerce Department further restricted the sale of American AI chips, addressing concerns about how Chinese companies might evade U.S. export restrictions.",
+          "url": "https://www.nbcnews.com/tech/tech-news/us-closes-loophole-let-chinese-companies-use-top-ai-chips-rcna609634",
+          "published_at": "2026-11-16T18:44:17Z",
+          "published_at_estimated": false,
+          "image_url": "https://media-cldnry.s-nbcnews.com/image/upload/t_fit_1500w/rockcms/2026-11/261116-lutnick-commerce-sjr-1130-36641f.jpg"
+        },
+        {
+          "id": "f89dd63c7c8a",
+          "outlet_id": "japantimes",
+          "headline": "Asia data center hotbed hit by U.S. chip curbs as Trump visits",
+          "snippet": "Operators in Southeast Asia will need a U.S. government license to purchase advanced AI chips from Nvidia and other American manufacturers.",
+          "url": "https://www.japantimes.co.jp/business/2026/11/17/tech/asia-data-center-chip-trump/",
+          "published_at": "2026-11-17T06:13:00Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.japantimes.co.jp/japantimes/uploads/images/2026/11/17/thumbs/400x400/574513.jpg"
+        },
+        {
+          "id": "409abf094cac",
+          "outlet_id": "thehindu",
+          "headline": "Singapore seeks ‘trusted access’ to AI chips after new US curbs",
+          "snippet": "Singapore is finding itself at the centre of the controversy as cloud computing firm Megaspeed, suspected of helping Chinese firms get around US export controls, is based there",
+          "url": "https://www.thehindu.com/sci-tech/technology/singapore-seeks-trusted-access-to-ai-chips-after-new-us-curbs/article71710285.ece",
+          "published_at": "2026-11-17T07:49:27Z",
+          "published_at_estimated": false,
+          "image_url": "https://th-i.thgim.com/public/incoming/sawgox/article70560172.ece/alternates/LANDSCAPE_1200/2026-01-24T054406Z_1699215627_RC29VIA2DT7G_RTRMADP_3_NVIDIA-CHINA-JENSEN-HUANG.JPG"
+        },
+        {
+          "id": "b904263c3c10",
+          "outlet_id": "thehindu",
+          "headline": "U.S. blocks China’s remote access to AI chips after Nvidia scandal; China slams move",
+          "snippet": "Nvidia’s provision of chips to companies running data centres in Southeast Asia has come under the spotlight amid questions surrounding founder Jensen Huang’s relationship with Alice Huang, the CEO…",
+          "url": "https://www.thehindu.com/news/international/us-blocks-chinas-remote-access-to-ai-chips-after-nvidia-scandal-china-slams-move/article71711869.ece",
+          "published_at": "2026-11-17T13:31:09Z",
+          "published_at_estimated": false,
+          "image_url": "https://th-i.thgim.com/public/incoming/rb94e2/article71711937.ece/alternates/LANDSCAPE_1200/iStock-2258598400.jpg"
+        },
+        {
+          "id": "8f7dae415673",
+          "outlet_id": "bbc",
+          "headline": "How new US chip restrictions on South East Asia will hit China",
+          "snippet": "The new rules restrict chip exports and also access to their computing power, which China relies on heavily.",
+          "url": "https://www.bbc.co.uk/news/articles/cwq6e2qgvmlgo",
+          "published_at": "2026-11-17T14:25:45Z",
+          "published_at_estimated": false,
+          "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/bfea/live/8fbafe20-e225-11f1-ae7e-97d0d3a43181.jpg"
+        },
+        {
+          "id": "117cefdd8653",
+          "outlet_id": "toi",
+          "headline": "China-US tech tensions flare ahead of Trump-Xi talks over new chip export curbs",
+          "snippet": "",
+          "url": "https://timesofindia.indiatimes.com/world/china/china-us-tech-tensions-flare-ahead-of-trump-xi-talks-over-new-chip-export-curbs/articleshow/135930003.cms",
+          "published_at": "2026-11-17T14:46:19Z",
+          "published_at_estimated": false,
+          "image_url": "https://static.toiimg.com/photo/msid-135930089,imgsize-67812.cms"
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "The US has introduced new restrictions on exports of advanced AI chips.",
+          "sources": [
+            "1c9fe3effb6e",
+            "f89dd63c7c8a",
+            "409abf094cac",
+            "b904263c3c10",
+            "8f7dae415673",
+            "117cefdd8653"
+          ]
+        },
+        {
+          "text": "The rules affect data centres in Southeast Asia.",
+          "sources": [
+            "f89dd63c7c8a",
+            "409abf094cac",
+            "b904263c3c10",
+            "8f7dae415673"
+          ]
+        },
+        {
+          "text": "The measures target Chinese companies' use of or access to US AI chips via facilities abroad.",
+          "sources": [
+            "1c9fe3effb6e",
+            "409abf094cac",
+            "b904263c3c10",
+            "8f7dae415673"
+          ]
+        },
+        {
+          "text": "The rules cover access to chips' computing power, not only physical sales.",
+          "sources": [
+            "1c9fe3effb6e",
+            "b904263c3c10",
+            "8f7dae415673"
+          ]
+        },
+        {
+          "text": "The curbs come as Trump visits the region and ahead of Trump-Xi talks.",
+          "sources": [
+            "f89dd63c7c8a",
+            "117cefdd8653"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "1c9fe3effb6e",
+              "quote": "U.S. closes loophole that let Chinese companies use top AI chips in foreign data centers",
+              "field": "headline"
+            },
+            {
+              "article_id": "1c9fe3effb6e",
+              "quote": "how Chinese companies might evade U.S. export restrictions",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the closing of a loophole and attributes the action to the Commerce Department, citing concerns about evasion of export controls.",
+              "sources": [
+                "1c9fe3effb6e"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "8f7dae415673",
+              "quote": "How new US chip restrictions on South East Asia will hit China",
+              "field": "headline"
+            },
+            {
+              "article_id": "8f7dae415673",
+              "quote": "which China relies on heavily",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Foregrounds the impact on China, noting the rules also restrict access to computing power that China relies on heavily.",
+              "sources": [
+                "8f7dae415673"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "left",
+          "text": "Left coverage does not mention Southeast Asia specifically, referring only to foreign data centres.",
+          "sources": [
+            "8f7dae415673"
+          ]
+        },
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not mention concerns about Chinese companies evading US export restrictions.",
+          "sources": [
+            "1c9fe3effb6e"
+          ]
+        }
+      ],
+      "contested_claims": [],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "1c9fe3effb6e",
+              "quote": "U.S. closes loophole",
+              "field": "headline"
+            },
+            {
+              "article_id": "8f7dae415673",
+              "quote": "will hit China",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Emphasises the closing of an evasion route and the expected impact on China.",
+              "sources": [
+                "1c9fe3effb6e",
+                "8f7dae415673"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "f89dd63c7c8a",
+              "quote": "Asia data center hotbed hit by U.S. chip curbs as Trump visits",
+              "field": "headline"
+            },
+            {
+              "article_id": "409abf094cac",
+              "quote": "Singapore seeks ‘trusted access’ to AI chips after new US curbs",
+              "field": "headline"
+            },
+            {
+              "article_id": "b904263c3c10",
+              "quote": "China slams move",
+              "field": "headline"
+            },
+            {
+              "article_id": "117cefdd8653",
+              "quote": "China-US tech tensions flare ahead of Trump-Xi talks",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Foregrounds the effect on Southeast Asian operators, who will need a US licence to buy advanced AI chips.",
+              "sources": [
+                "f89dd63c7c8a"
+              ]
+            },
+            {
+              "text": "Highlights Singapore's position, including its request for 'trusted access' and the Singapore-based firm Megaspeed, suspected of helping Chinese firms evade controls.",
+              "sources": [
+                "409abf094cac"
+              ]
+            },
+            {
+              "text": "Links the move to scrutiny of Nvidia and questions about Jensen Huang's relationship with Alice Huang.",
+              "sources": [
+                "b904263c3c10"
+              ]
+            },
+            {
+              "text": "Reports China's criticism and rising US-China tech tensions ahead of Trump-Xi talks.",
+              "sources": [
+                "b904263c3c10",
+                "117cefdd8653"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "The US has further restricted the sale of American AI chips, aiming at how Chinese companies might evade export controls through data centres abroad. Operators in Southeast Asia will need a US government licence to buy advanced AI chips, and the rules also restrict access to the chips' computing power. China has criticised the move.",
+        "sources": [
+          "1c9fe3effb6e",
+          "f89dd63c7c8a",
+          "8f7dae415673",
+          "b904263c3c10",
+          "409abf094cac",
+          "117cefdd8653"
+        ]
+      },
+      "conclusion": {
+        "text": "All coverage agrees the US has tightened AI chip export rules aimed at Chinese access via data centres abroad. Western outlets lead with closing a loophole and the impact on China, while Eastern outlets foreground Southeast Asian operators, Singapore, Nvidia scrutiny and China's criticism. No outlets contradict one another.",
+        "sources": [
+          "1c9fe3effb6e",
+          "8f7dae415673",
+          "f89dd63c7c8a",
+          "409abf094cac",
+          "b904263c3c10",
+          "117cefdd8653"
+        ]
+      },
+      "validation": {
+        "kept": 26,
+        "dropped_by_reason": {}
+      }
+    }
+  ]
+}
