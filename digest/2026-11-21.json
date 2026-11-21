@@ -1,0 +1,4342 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-11-21T14:28:58.541683Z",
+  "date": "2026-11-21",
+  "meta": {
+    "model": "claude-opus-5-5",
+    "cost_usd": 0.662912,
+    "outlets_polled": 29,
+    "articles_collected": 605,
+    "warnings": [
+      "1 feed(s) failed during collect"
+    ],
+    "validation": {
+      "kept": 342,
+      "dropped_by_reason": {}
+    }
+  },
+  "outlets": [
+    {
+      "id": "guardian",
+      "name": "The Guardian",
+      "lean": "left",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United Kingdom",
+      "home_url": "https://www.theguardian.com/",
+      "rating_basis": "AllSides media bias rating (Lean Left), checked Oct 2026"
+    },
+    {
+      "id": "independent",
+      "name": "The Independent",
+      "lean": "left",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United Kingdom",
+      "home_url": "https://www.independent.co.uk/",
+      "rating_basis": "AllSides media bias rating (Lean Left), checked Oct 2026"
+    },
+    {
+      "id": "mirror",
+      "name": "Daily Mirror",
+      "lean": "left",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United Kingdom",
+      "home_url": "https://www.mirror.co.uk/",
+      "rating_basis": "Ad Fontes Media bias rating (Skews Left), checked Oct 2026"
+    },
+    {
+      "id": "bbc",
+      "name": "BBC News",
+      "lean": "centre",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "public-service",
+      "country": "United Kingdom",
+      "home_url": "https://www.bbc.co.uk/news",
+      "rating_basis": "AllSides media bias rating (Center), checked Oct 2026"
+    },
+    {
+      "id": "sky",
+      "name": "Sky News",
+      "lean": "centre",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United Kingdom",
+      "home_url": "https://news.sky.com/",
+      "rating_basis": "Ad Fontes Media bias rating (Middle), checked Oct 2026"
+    },
+    {
+      "id": "telegraph",
+      "name": "The Telegraph",
+      "lean": "right",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United Kingdom",
+      "home_url": "https://www.telegraph.co.uk/",
+      "rating_basis": "AllSides media bias rating (Lean Right), checked Oct 2026"
+    },
+    {
+      "id": "dailymail",
+      "name": "Daily Mail",
+      "lean": "right",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United Kingdom",
+      "home_url": "https://www.dailymail.co.uk/",
+      "rating_basis": "AllSides media bias rating (Right), checked Oct 2026"
+    },
+    {
+      "id": "thesun",
+      "name": "The Sun",
+      "lean": "right",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United Kingdom",
+      "home_url": "https://www.thesun.co.uk/",
+      "rating_basis": "AllSides media bias rating (Right), checked Oct 2026"
+    },
+    {
+      "id": "nyt",
+      "name": "The New York Times",
+      "lean": "left",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United States",
+      "home_url": "https://www.nytimes.com/",
+      "rating_basis": "AllSides media bias rating (Lean Left), checked Oct 2026"
+    },
+    {
+      "id": "nbc",
+      "name": "NBC News",
+      "lean": "left",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United States",
+      "home_url": "https://www.nbcnews.com/",
+      "rating_basis": "AllSides media bias rating (Lean Left), checked Oct 2026"
+    },
+    {
+      "id": "huffpost",
+      "name": "HuffPost",
+      "lean": "left",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United States",
+      "home_url": "https://www.huffpost.com/",
+      "rating_basis": "AllSides media bias rating (Left), checked Oct 2026"
+    },
+    {
+      "id": "npr",
+      "name": "NPR",
+      "lean": "centre",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "public-service",
+      "country": "United States",
+      "home_url": "https://www.npr.org/",
+      "rating_basis": "Ad Fontes Media bias rating (Middle / Skews Left), checked Oct 2026"
+    },
+    {
+      "id": "axios",
+      "name": "Axios",
+      "lean": "centre",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United States",
+      "home_url": "https://www.axios.com/",
+      "rating_basis": "AllSides media bias rating (Center), checked Oct 2026"
+    },
+    {
+      "id": "fox",
+      "name": "Fox News",
+      "lean": "right",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United States",
+      "home_url": "https://www.foxnews.com/",
+      "rating_basis": "AllSides media bias rating (Right), checked Oct 2026"
+    },
+    {
+      "id": "nypost",
+      "name": "New York Post",
+      "lean": "right",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United States",
+      "home_url": "https://nypost.com/",
+      "rating_basis": "AllSides media bias rating (Lean Right), checked Oct 2026"
+    },
+    {
+      "id": "examiner",
+      "name": "Washington Examiner",
+      "lean": "right",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United States",
+      "home_url": "https://www.washingtonexaminer.com/",
+      "rating_basis": "AllSides media bias rating (Lean Right), checked Oct 2026"
+    },
+    {
+      "id": "france24",
+      "name": "France 24",
+      "lean": "centre",
+      "region": "europe",
+      "bloc": "west",
+      "ownership": "public-service",
+      "country": "France",
+      "home_url": "https://www.france24.com/en/",
+      "rating_basis": "Ad Fontes Media bias rating (Middle), checked Oct 2026"
+    },
+    {
+      "id": "dw",
+      "name": "DW (Deutsche Welle)",
+      "lean": "centre",
+      "region": "europe",
+      "bloc": "west",
+      "ownership": "public-service",
+      "country": "Germany",
+      "home_url": "https://www.dw.com/en/",
+      "rating_basis": "AllSides media bias rating (Center), checked Oct 2026"
+    },
+    {
+      "id": "aljazeera",
+      "name": "Al Jazeera English",
+      "lean": null,
+      "region": "middle_east",
+      "bloc": "east",
+      "ownership": "state-funded",
+      "country": "Qatar",
+      "home_url": "https://www.aljazeera.com/",
+      "rating_basis": "Funded by the State of Qatar; no left/right tag applied"
+    },
+    {
+      "id": "thenational",
+      "name": "The National (UAE)",
+      "lean": null,
+      "region": "middle_east",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "United Arab Emirates",
+      "home_url": "https://www.thenationalnews.com/",
+      "rating_basis": "Owned by International Media Investments (Abu Dhabi); no left/right tag applied"
+    },
+    {
+      "id": "timesofisrael",
+      "name": "The Times of Israel",
+      "lean": null,
+      "region": "middle_east",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "Israel",
+      "home_url": "https://www.timesofisrael.com/",
+      "rating_basis": "Privately owned; no left/right tag applied"
+    },
+    {
+      "id": "cgtn",
+      "name": "CGTN",
+      "lean": null,
+      "region": "asia",
+      "bloc": "east",
+      "ownership": "state-controlled",
+      "country": "China",
+      "home_url": "https://www.cgtn.com/",
+      "rating_basis": "China Global Television Network, part of state broadcaster China Media Group"
+    },
+    {
+      "id": "ecns",
+      "name": "ECNS (China News Service)",
+      "lean": null,
+      "region": "asia",
+      "bloc": "east",
+      "ownership": "state-controlled",
+      "country": "China",
+      "home_url": "https://www.ecns.cn/",
+      "rating_basis": "English service of China News Service, a state news agency"
+    },
+    {
+      "id": "scmp",
+      "name": "South China Morning Post",
+      "lean": null,
+      "region": "asia",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "Hong Kong",
+      "home_url": "https://www.scmp.com/",
+      "rating_basis": "Owned by Alibaba Group; no left/right tag applied"
+    },
+    {
+      "id": "toi",
+      "name": "The Times of India",
+      "lean": null,
+      "region": "asia",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "India",
+      "home_url": "https://timesofindia.indiatimes.com/",
+      "rating_basis": "Privately owned (Bennett, Coleman & Co.); no left/right tag applied"
+    },
+    {
+      "id": "thehindu",
+      "name": "The Hindu",
+      "lean": null,
+      "region": "asia",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "India",
+      "home_url": "https://www.thehindu.com/",
+      "rating_basis": "Privately owned (The Hindu Group); no left/right tag applied"
+    },
+    {
+      "id": "moscowtimes",
+      "name": "The Moscow Times",
+      "lean": null,
+      "region": "europe",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "Russia",
+      "home_url": "https://www.themoscowtimes.com/",
+      "rating_basis": "Independent, Amsterdam-based since 2022; designated \"undesirable\" by Russia; no left/right tag applied"
+    },
+    {
+      "id": "japantimes",
+      "name": "The Japan Times",
+      "lean": null,
+      "region": "asia",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "Japan",
+      "home_url": "https://www.japantimes.co.jp/",
+      "rating_basis": "Privately owned (News2u Holdings); no left/right tag applied"
+    },
+    {
+      "id": "koreaherald",
+      "name": "The Korea Herald",
+      "lean": null,
+      "region": "asia",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "South Korea",
+      "home_url": "https://www.koreaherald.com/",
+      "rating_basis": "Privately owned (Herald Corporation); no left/right tag applied"
+    }
+  ],
+  "stories": [
+    {
+      "id": "f41b843a68c3",
+      "title": "Tech sell-off hits global markets as Anthropic shares fall after IPO",
+      "rank": 1,
+      "outlet_count": 11,
+      "coverage": {
+        "lean": {
+          "left": 2,
+          "centre": 4,
+          "right": 1
+        },
+        "bloc": {
+          "west": 7,
+          "east": 4
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "4553ef20c7bd",
+          "outlet_id": "koreaherald",
+          "headline": "Seoul shares plunge over 5% as Anthropic debut fails to ease AI concerns",
+          "snippet": "Seoul shares plunged more than 5 percent Friday, led by losses in technology stocks, as Anthropic's strong market debut failed to ease concerns over heavy investments by big tech firms in artificial…",
+          "url": "https://www.koreaherald.com/article/10944264",
+          "published_at": "2026-11-20T06:58:09Z",
+          "published_at_estimated": false,
+          "image_url": "https://wimg.heraldcorp.com/news/cms/2026/11/20/news-p.v1.20261120.29d60ccadbb945beb339d9ebcbfd7ce9_T1.jpg"
+        },
+        {
+          "id": "7a6a91ef5226",
+          "outlet_id": "axios",
+          "headline": "Anthropic is public, now comes the hard part",
+          "snippet": "Data: FactSet; Chart: Matt Phillips/Axios With its IPO done and dusted, Anthropic's shareholders will be watching its progress toward becoming a business that doesn't need constant capital infusions…",
+          "url": "https://www.axios.com/2026/11/20/anthropic-public-shareholders",
+          "published_at": "2026-11-20T12:10:08Z",
+          "published_at_estimated": false,
+          "image_url": "https://datawrapper.dwcdn.net/1YUgj/fallback.png"
+        },
+        {
+          "id": "9c09168b4372",
+          "outlet_id": "sky",
+          "headline": "Anthropic among big fallers in global stock market rout",
+          "snippet": "Shares in Anthropic have fallen by more than 10% at Friday's open on Wall Street, just a day after their record-breaking Nasdaq debut, as part of a global stock market rout.",
+          "url": "https://news.sky.com/story/anthropic-among-big-fallers-in-global-stock-market-rout-13614361",
+          "published_at": "2026-11-20T13:39:00Z",
+          "published_at_estimated": false,
+          "image_url": "https://e3.365dm.com/26/11/1920x1080/skynews-anthropic-nasdaq_7410960.jpg?20261119214359"
+        },
+        {
+          "id": "7e99dcdff961",
+          "outlet_id": "nbc",
+          "headline": "Wall Street meltdown: Tech stocks drop sharply as AI hype cools",
+          "snippet": "A bruising stock market sell-off continued despite a record-setting IPO by Anthropic, dashing hopes it would revive sentiment on the AI trade.",
+          "url": "https://www.nbcnews.com/business/markets/anthropic-shares-markets-selloff-nasdaq-rcna610394",
+          "published_at": "2026-11-20T14:20:57Z",
+          "published_at_estimated": false,
+          "image_url": "https://media-cldnry.s-nbcnews.com/image/upload/t_fit_1500w/rockcms/2026-11/261120-new-york-stock-exchange-ew-513p-abd1ef.jpg"
+        },
+        {
+          "id": "dee7ea7e928b",
+          "outlet_id": "thenational",
+          "headline": "Nasdaq slumps more than 5% as fear gripping AI trade spreads across markets",
+          "snippet": "The US tech sell-off rapidly accelerated on Friday as fears over the AI sector spread across all major indexes, with newly public Anthropic plummeting more than 9 per cent. Worries that Wall…",
+          "url": "https://www.thenationalnews.com/business/markets/2026/11/20/tech-sell-off/",
+          "published_at": "2026-11-20T17:24:43Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.thenationalnews.com/resizer/v2/DWE2BOCCZMW4WE4O7CGX4GTXVE.jpg?auth=1ee3153a93d3239d39987a53f5b960eb8686af90f95dc176fcf885ff80e6b92b&smart=true&width=4000&height=2668"
+        },
+        {
+          "id": "fbd6f5d3d1c1",
+          "outlet_id": "telegraph",
+          "headline": "Anthropic plunges as Wall Street suffers AI sell-off",
+          "snippet": "",
+          "url": "https://www.telegraph.co.uk/business/2026/11/20/ai-tech-sell-off-anthropic-claude-nasdaq-ftse-100-markets/",
+          "published_at": "2026-11-20T21:07:18Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.telegraph.co.uk/content/dam/business/2026/11/20/TELEMMGLPICT000512259073_17951754298490_trans_NvBQzQNjv4BqqVzuuqpFlyLIwiB6NTmJwWyaKjL1CatlwZEbgNRqSgg.jpeg"
+        },
+        {
+          "id": "b19353a519e6",
+          "outlet_id": "guardian",
+          "headline": "Nasdaq erases all 2026 gains as AI sell-off dampens Anthropic’s second day of trading",
+          "snippet": "The Nasdaq lost trillions in value, with the AI startup’s IPO failing to buoy it as investors question huge sums being poured into AI buildout Who are Anthropic’s seven co-founders, now worth…",
+          "url": "https://www.theguardian.com/business/2026/nov/20/global-stock-markets-slump-anthropic-ipo-ai-sell-off",
+          "published_at": "2026-11-20T21:38:17Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.guim.co.uk/img/media/578833ee207aab76c1b6a542f17226703dbd735b/686_0_5336_4269/master/5336.jpg?width=460&quality=85&auto=format&fit=max&s=99a5dcf1ca97b243a47521fe8adb05b8"
+        },
+        {
+          "id": "8116a4fe2ad2",
+          "outlet_id": "bbc",
+          "headline": "Tech stock sell-off drags markets down as Anthropic shares slide",
+          "snippet": "Pressures weighed on US markets, with the S&P 500 and the Dow Jones Industrial Average pushed into correction territory.",
+          "url": "https://www.bbc.co.uk/news/articles/c6808ym10vzgo",
+          "published_at": "2026-11-20T22:42:47Z",
+          "published_at_estimated": false,
+          "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/03d5/live/7b6fe9b0-e4ed-11f1-8781-bf15c9202663.jpg"
+        },
+        {
+          "id": "d2dca4c6eaf3",
+          "outlet_id": "japantimes",
+          "headline": "Anthropic’s post-debut stumble delivers reality check for AI trade",
+          "snippet": "A dramatic unraveling of the AI trade showed that even a blockbuster listing could not shake the gloom hanging over the sector.",
+          "url": "https://www.japantimes.co.jp/business/2026/11/21/markets/anthropic-ai-stocks/",
+          "published_at": "2026-11-21T04:19:00Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.japantimes.co.jp/japantimes/uploads/images/2026/11/21/thumbs/400x400/575302.jpg"
+        },
+        {
+          "id": "d164e82c0128",
+          "outlet_id": "thenational",
+          "headline": "Anthropic's post-IPO slide shows hype not enough to ease AI investor fears",
+          "snippet": "The glitz of Anthropic's stock market debut faded quickly on Friday after a massive sell-off in artificial intelligence shares sent a signal that even history's biggest IPO could not temper investor…",
+          "url": "https://www.thenationalnews.com/business/markets/2026/11/21/anthropics-post-ipo-slide-shows-hype-not-enough-to-ease-ai-investor-fears/",
+          "published_at": "2026-11-21T06:51:04Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.thenationalnews.com/resizer/v2/H7S5QFT2Z4AGZ3OS2FWWA5ODWY.jpg?auth=4f01347b9e3699402c9b35eea5769c5a291c81b68dfd6c64e45c4eead93acb4f&smart=true&width=6920&height=4616"
+        },
+        {
+          "id": "e7e4112153c4",
+          "outlet_id": "koreaherald",
+          "headline": "Samsung, SK hynix tumble as analysts split on chip outlook",
+          "snippet": "Samsung Electronics and SK hynix shares plunged Friday amid a Wall Street tech sell-off and growing concerns over an AI bubble, fueling a debate over the semiconductor outlook. Samsung fell 7.01…",
+          "url": "https://www.koreaherald.com/article/10944729",
+          "published_at": "2026-11-21T07:48:43Z",
+          "published_at_estimated": false,
+          "image_url": "https://wimg.heraldcorp.com/news/cms/2026/11/21/news-p.v1.20261121.2bb6633f386f470baa2a2399808b5f0d_T1.jpg"
+        },
+        {
+          "id": "28eb732c13fd",
+          "outlet_id": "timesofisrael",
+          "headline": "Tech stocks plummet worldwide as Anthropic IPO fails to calm AI jitters",
+          "snippet": "Concerns over Nvidia continue; shares in Claude creator sink below $89 after briefly rocketing from an initial offering price of $83 to over $110",
+          "url": "https://www.timesofisrael.com/tech-stocks-plummet-worldwide-as-anthropic-ipo-fails-to-calm-ai-jitters/",
+          "published_at": "2026-11-21T08:42:19Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "307d78c6c2d8",
+          "outlet_id": "npr",
+          "headline": "The AI boom had a really bad week — and it's raising loud alarms",
+          "snippet": "AI stocks — and the broader markets — got pummeled this week, raising major concerns about the financial system and the wider economy. Here's what to know.",
+          "url": "https://www.npr.org/2026/11/21/nx-s1-6048729/ai-stock-markets-anthropic-nvidia",
+          "published_at": "2026-11-21T10:00:00Z",
+          "published_at_estimated": false,
+          "image_url": null
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "Anthropic's shares fell on Friday, shortly after its stock market debut.",
+          "sources": [
+            "9c09168b4372",
+            "dee7ea7e928b",
+            "fbd6f5d3d1c1",
+            "b19353a519e6",
+            "8116a4fe2ad2",
+            "d2dca4c6eaf3",
+            "d164e82c0128",
+            "28eb732c13fd"
+          ]
+        },
+        {
+          "text": "Anthropic's listing is described as record-setting, blockbuster or the biggest IPO in history.",
+          "sources": [
+            "9c09168b4372",
+            "7e99dcdff961",
+            "d2dca4c6eaf3",
+            "d164e82c0128"
+          ]
+        },
+        {
+          "text": "The IPO failed to lift market sentiment or ease concerns about the AI sector.",
+          "sources": [
+            "4553ef20c7bd",
+            "7e99dcdff961",
+            "b19353a519e6",
+            "d2dca4c6eaf3",
+            "d164e82c0128",
+            "28eb732c13fd"
+          ]
+        },
+        {
+          "text": "The fall came as part of a broad tech and AI stock sell-off across markets.",
+          "sources": [
+            "9c09168b4372",
+            "7e99dcdff961",
+            "dee7ea7e928b",
+            "fbd6f5d3d1c1",
+            "b19353a519e6",
+            "8116a4fe2ad2",
+            "28eb732c13fd",
+            "307d78c6c2d8",
+            "4553ef20c7bd",
+            "e7e4112153c4"
+          ]
+        },
+        {
+          "text": "Investors are concerned about the large sums big tech firms are putting into AI.",
+          "sources": [
+            "4553ef20c7bd",
+            "b19353a519e6"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "7e99dcdff961",
+              "quote": "Wall Street meltdown",
+              "field": "headline"
+            },
+            {
+              "article_id": "7e99dcdff961",
+              "quote": "AI hype cools",
+              "field": "headline"
+            },
+            {
+              "article_id": "b19353a519e6",
+              "quote": "Nasdaq erases all 2026 gains",
+              "field": "headline"
+            },
+            {
+              "article_id": "b19353a519e6",
+              "quote": "investors question huge sums being poured into AI buildout",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the sell-off continuing despite the record IPO, which dashed hopes of reviving the AI trade.",
+              "sources": [
+                "7e99dcdff961",
+                "b19353a519e6"
+              ]
+            },
+            {
+              "text": "Emphasises the Nasdaq losing trillions in value and erasing its 2026 gains.",
+              "sources": [
+                "b19353a519e6"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "7a6a91ef5226",
+              "quote": "Anthropic is public, now comes the hard part",
+              "field": "headline"
+            },
+            {
+              "article_id": "9c09168b4372",
+              "quote": "global stock market rout",
+              "field": "headline"
+            },
+            {
+              "article_id": "8116a4fe2ad2",
+              "quote": "pushed into correction territory",
+              "field": "snippet"
+            },
+            {
+              "article_id": "307d78c6c2d8",
+              "quote": "raising loud alarms",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Reports Anthropic shares falling more than 10% at Friday's open on Wall Street.",
+              "sources": [
+                "9c09168b4372"
+              ]
+            },
+            {
+              "text": "Notes the S&P 500 and Dow Jones were pushed into correction territory.",
+              "sources": [
+                "8116a4fe2ad2"
+              ]
+            },
+            {
+              "text": "Raises concerns about the financial system and the wider economy.",
+              "sources": [
+                "307d78c6c2d8"
+              ]
+            },
+            {
+              "text": "Focuses on whether Anthropic can become a business that does not need constant capital infusions.",
+              "sources": [
+                "7a6a91ef5226"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "right",
+          "headline_quotes": [
+            {
+              "article_id": "fbd6f5d3d1c1",
+              "quote": "Anthropic plunges as Wall Street suffers AI sell-off",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with Anthropic's share fall alongside a Wall Street AI sell-off.",
+              "sources": [
+                "fbd6f5d3d1c1"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "right",
+          "text": "Right coverage does not mention that the IPO was record-setting or that it failed to revive sentiment.",
+          "sources": [
+            "9c09168b4372",
+            "7e99dcdff961",
+            "b19353a519e6"
+          ]
+        },
+        {
+          "lean": "right",
+          "text": "Right coverage does not mention specific index moves such as the Nasdaq's losses or the S&P 500 and Dow entering correction.",
+          "sources": [
+            "b19353a519e6",
+            "8116a4fe2ad2"
+          ]
+        }
+      ],
+      "contested_claims": [],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "7e99dcdff961",
+              "quote": "Wall Street meltdown",
+              "field": "headline"
+            },
+            {
+              "article_id": "9c09168b4372",
+              "quote": "global stock market rout",
+              "field": "headline"
+            },
+            {
+              "article_id": "8116a4fe2ad2",
+              "quote": "pushed into correction territory",
+              "field": "snippet"
+            },
+            {
+              "article_id": "7a6a91ef5226",
+              "quote": "now comes the hard part",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Focuses on Wall Street and US indices, including the Nasdaq, S&P 500 and Dow.",
+              "sources": [
+                "7e99dcdff961",
+                "b19353a519e6",
+                "8116a4fe2ad2",
+                "fbd6f5d3d1c1"
+              ]
+            },
+            {
+              "text": "Raises questions about Anthropic's business outlook and wider economic risks.",
+              "sources": [
+                "7a6a91ef5226",
+                "307d78c6c2d8"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "4553ef20c7bd",
+              "quote": "Seoul shares plunge over 5%",
+              "field": "headline"
+            },
+            {
+              "article_id": "d2dca4c6eaf3",
+              "quote": "reality check for AI trade",
+              "field": "headline"
+            },
+            {
+              "article_id": "d164e82c0128",
+              "quote": "hype not enough to ease AI investor fears",
+              "field": "headline"
+            },
+            {
+              "article_id": "e7e4112153c4",
+              "quote": "growing concerns over an AI bubble",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Reports Asian market losses, including Seoul shares and chipmakers Samsung Electronics and SK hynix.",
+              "sources": [
+                "4553ef20c7bd",
+                "e7e4112153c4"
+              ]
+            },
+            {
+              "text": "Gives price detail: Anthropic rose from an $83 offer price to over $110 before sinking below $89.",
+              "sources": [
+                "28eb732c13fd"
+              ]
+            },
+            {
+              "text": "Mentions continuing concerns over Nvidia and an AI bubble.",
+              "sources": [
+                "28eb732c13fd",
+                "e7e4112153c4"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "Anthropic shares fell on Friday, a day after a record-setting Nasdaq debut, amid a global tech and AI stock sell-off. The Nasdaq slumped more than 5% and Seoul shares plunged over 5%, as the listing failed to ease concerns over heavy AI investment.",
+        "sources": [
+          "9c09168b4372",
+          "7e99dcdff961",
+          "dee7ea7e928b",
+          "4553ef20c7bd",
+          "b19353a519e6",
+          "fbd6f5d3d1c1",
+          "8116a4fe2ad2",
+          "28eb732c13fd"
+        ]
+      },
+      "conclusion": {
+        "text": "All sides report Anthropic's post-debut fall within a wider AI sell-off that the record IPO failed to calm. Western outlets focus on Wall Street indices and Anthropic's business outlook, while Eastern outlets add Asian market and chipmaker losses and offer-price detail. No direct contradictions appear.",
+        "sources": [
+          "9c09168b4372",
+          "7e99dcdff961",
+          "b19353a519e6",
+          "8116a4fe2ad2",
+          "7a6a91ef5226",
+          "4553ef20c7bd",
+          "e7e4112153c4",
+          "28eb732c13fd",
+          "d164e82c0128"
+        ]
+      },
+      "validation": {
+        "kept": 38,
+        "dropped_by_reason": {}
+      }
+    },
+    {
+      "id": "4aedc2abe9f7",
+      "title": "Russian missiles and drone land in Poland, Warsaw calls it a provocation",
+      "rank": 2,
+      "outlet_count": 10,
+      "coverage": {
+        "lean": {
+          "left": 3,
+          "centre": 1,
+          "right": 3
+        },
+        "bloc": {
+          "west": 7,
+          "east": 3
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "7604f50380d5",
+          "outlet_id": "mirror",
+          "headline": "Russian missile explodes in NATO territory - as Poland PM warns ‘it’s not an accident’",
+          "snippet": "Poland's PM has blamed Russia for three objects falling into the NATO territory overnight, calling the incident an 'intentional provocation'",
+          "url": "https://www.mirror.co.uk/news/world-news/russia-poland-ukraine-missile-nato-37897245",
+          "published_at": "2026-11-20T07:22:24Z",
+          "published_at_estimated": false,
+          "image_url": "https://i2-prod.dailystar.co.uk/incoming/article37898651.ece/ALTERNATES/s615/1_Unidentified-flying-object-falls-in-southeastern-Poland-Rudnik-Nad-Sanem-20-Nov-2026.jpg"
+        },
+        {
+          "id": "6303a66b2ac1",
+          "outlet_id": "moscowtimes",
+          "headline": "Poland Condemns Russian 'Provocation' After 3 Airspace Violations",
+          "snippet": "The latest incident comes after European countries warned against any attempt to decide a peace in Ukraine over their heads.",
+          "url": "https://www.themoscowtimes.com/2026/11/20/poland-condemns-russian-provocation-after-3-airspace-violations-a94331",
+          "published_at": "2026-11-20T12:25:00Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "68fa0e3596c1",
+          "outlet_id": "huffpost",
+          "headline": "Poland Condemns Russian 'Provocation' After Three Airspace Violations",
+          "snippet": "Poland condemns Russian 'provocation' after three airspace violations.",
+          "url": "https://www.huffpost.com/entry/poland-condemns-russian-provocation-after-three-airspace-violations_n_6b004317e4b0976dc4a2f08e",
+          "published_at": "2026-11-20T13:00:08Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "66ff58041f8e",
+          "outlet_id": "fox",
+          "headline": "Putin launches Ukraine barrage hours after Trump meeting amid alleged Russian missile breach of NATO airspace",
+          "snippet": "Hours after Vladimir Putin joined Donald Trump and Xi Jinping in China, Russia fired more than 400 drones and 110 missiles at Ukraine, killing at least eight.",
+          "url": "https://www.foxnews.com/world/putin-launches-ukraine-barrage-hours-after-trump-meeting-amid-alleged-russian-missile-breach-nato-airspace",
+          "published_at": "2026-11-20T15:13:39Z",
+          "published_at_estimated": false,
+          "image_url": "https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2026/11/931/523/Russian_Attack_Kyiv_Nov_2026.jpg?ve=1&tl=1"
+        },
+        {
+          "id": "8259cffd08de",
+          "outlet_id": "mirror",
+          "headline": "UK lashes out at Putin for reckless attack on Poland - as the Mirror reports on military exercise just 30 miles away",
+          "snippet": "The drama of Putin's latest act of recklessness - witnessed on the ground by the Mirror - followed this week’s Shenzen summit, in which President Trump fawned over despots Putin and China’s Xi Jinping",
+          "url": "https://www.mirror.co.uk/news/world-news/putin-attack-poland-uk-streeting-37900572",
+          "published_at": "2026-11-20T17:42:05Z",
+          "published_at_estimated": false,
+          "image_url": "https://i2-prod.mirror.co.uk/incoming/article37900626.ece/ALTERNATES/s615/0_AGP_MDM_20112026_KOALICJKA_009JPG.jpg"
+        },
+        {
+          "id": "811de2040a6a",
+          "outlet_id": "nyt",
+          "headline": "‘Russian Objects’ Crashed in Poland, Officials Say. Here’s What We Can See.",
+          "snippet": "There were no injuries or damage from three incidents that the Polish authorities called a likely “provocation” from Russia during military exercises by Ukraine’s allies.",
+          "url": "https://www.nytimes.com/2026/11/20/world/europe/poland-russia-airspace-missile.html",
+          "published_at": "2026-11-20T20:31:00Z",
+          "published_at_estimated": false,
+          "image_url": "https://static01.nyt.com/images/2026/11/20/world/europe/20vid-poland-airspace-cover-image/20vid-poland-airspace-cover-image-mediumSquareAt3X.jpg"
+        },
+        {
+          "id": "45056758f8bf",
+          "outlet_id": "scmp",
+          "headline": "Russian missiles land in Poland, as Europe holds military drills nearby",
+          "snippet": "Two Russian missiles and a suspected drone came down in Poland on Friday in what its prime minister said was likely to be a provocation timed to coincide with European military exercises in his…",
+          "url": "https://www.scmp.com/news/world/russia-central-asia/article/3375302/russian-missiles-land-poland-europe-holds-military-drills-nearby",
+          "published_at": "2026-11-20T23:43:44Z",
+          "published_at_estimated": false,
+          "image_url": "https://cdn.i-scmp.com/sites/default/files/styles/1280x720/public/d8/images/canvas/2026/11/21/66884aa7-2b7c-4999-a3ce-4110cc3cf4ab_b5c8aaa1.jpg?itok=OWWRIKOI&v=1795218209"
+        },
+        {
+          "id": "055bfb7c78f6",
+          "outlet_id": "france24",
+          "headline": "Russian projectiles hit Poland as NATO tensions rise",
+          "snippet": "Three Russian projectiles came down in Poland on Friday, prompting NATO to condemn what it called a grave violation of Polish airspace. A suspected jet-powered drone and a missile struck separate…",
+          "url": "https://www.france24.com/en/russian-projectiles-hit-poland-as-nato-tensions-rise",
+          "published_at": "2026-11-21T09:47:05Z",
+          "published_at_estimated": false,
+          "image_url": "https://s.france24.com/media/display/e70ff4a2-e58e-11f1-ba7b-6b451f569414/w:1024/p:16x9/EN-20261121-100222-100408-CS.jpg"
+        },
+        {
+          "id": "d223288047d2",
+          "outlet_id": "aljazeera",
+          "headline": "Russian missiles hit Poland: What happened, and could NATO respond?",
+          "snippet": "Warsaw accuses Moscow of intentional provocation, but bar for triggering NATO's collective defence clause remains high.",
+          "url": "https://www.aljazeera.com/news/2026/11/21/russian-missiles-hit-poland-what-happened-and-could-nato-respond",
+          "published_at": "2026-11-21T11:02:49Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "225354981a89",
+          "outlet_id": "thesun",
+          "headline": "Article 5 must be triggered over ‘deliberate’ Poland missile strike – Vlad won’t stop without force, ex-Nato chief says",
+          "snippet": "ARTICLE 5 should be invoked after Russian missiles hit Poland in a \"deliberate provocation\", a former Nato chief has warned. Two cruise missiles and a jet-powered drone crashed into Nato territory…",
+          "url": "https://www.thesun.co.uk/news/41084964/ex-nato-chief-poland-strike-must-trigger-article/",
+          "published_at": "2026-11-21T11:46:00Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.thesun.co.uk/wp-content%2Fuploads%2F2026%2F11%2F2016-sir-richard-launching-explosive-236156394.jpg?quality%3D90%26"
+        },
+        {
+          "id": "952f900e0db7",
+          "outlet_id": "dailymail",
+          "headline": "Missiles hit Poland hours after Trump defended Putin, saying his 'friend' had 'been landing a couple of little missiles' in the country 'by mistake'",
+          "snippet": "Russian cruise missiles hit Poland today, hours after Donald Trump defended Vladimir Putin by saying the Russian president had landed 'a couple of little missiles, by mistake'.",
+          "url": "https://www.dailymail.com/news/article-16309085/Missiles-hit-Poland-Trump-defended-Putin-landing-couple-little-missiles-country-mistake.html",
+          "published_at": "2026-11-21T12:23:21Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.dailymail.com/1s/2026/11/20/13/112631077-0-image-m-14_1795183100434.jpg"
+        },
+        {
+          "id": "950124209dbf",
+          "outlet_id": "france24",
+          "headline": "Russia tests NATO’s eastern defences",
+          "snippet": "Two Russian missiles and a suspected drone came down in Poland on Friday in what Prime Minister Donald Tusk said was likely an \"intentional provocation\" timed to coincide with European military…",
+          "url": "https://www.france24.com/en/russia-tests-nato-s-eastern-defences",
+          "published_at": "2026-11-21T12:50:35Z",
+          "published_at_estimated": false,
+          "image_url": "https://s.france24.com/media/display/3cf13c10-e5a7-11f1-ab89-ebb478925cf0/w:1024/p:16x9/EN-20261121-130402-131505-CS.jpg"
+        },
+        {
+          "id": "626c1da501ef",
+          "outlet_id": "dailymail",
+          "headline": "Putin's recklessness could spark World War Three, warns defence intelligence chief after Russian missiles hit near British soldiers",
+          "snippet": "The remarks by the UK's Chief of Defence Intelligence followed Russian missiles and drones striking Poland close to where British troops are carrying out drills (pictured).",
+          "url": "https://www.dailymail.com/news/article-16311151/Putins-War-defence-intelligence-chief-Russian-British-soldiers.html",
+          "published_at": "2026-11-21T13:52:06Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.dailymail.com/1s/2026/11/21/12/112649203-0-image-m-45_1795265169794.jpg"
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "Russian projectiles, described as missiles and a drone, came down in Poland.",
+          "sources": [
+            "7604f50380d5",
+            "811de2040a6a",
+            "45056758f8bf",
+            "055bfb7c78f6",
+            "950124209dbf",
+            "225354981a89",
+            "952f900e0db7",
+            "626c1da501ef",
+            "d223288047d2"
+          ]
+        },
+        {
+          "text": "There were three objects or incidents in total.",
+          "sources": [
+            "7604f50380d5",
+            "6303a66b2ac1",
+            "68fa0e3596c1",
+            "811de2040a6a",
+            "055bfb7c78f6"
+          ]
+        },
+        {
+          "text": "The objects are described as two missiles and a drone.",
+          "sources": [
+            "45056758f8bf",
+            "950124209dbf",
+            "225354981a89"
+          ]
+        },
+        {
+          "text": "Polish authorities or Poland's prime minister described the incident as a provocation by Russia.",
+          "sources": [
+            "7604f50380d5",
+            "6303a66b2ac1",
+            "68fa0e3596c1",
+            "811de2040a6a",
+            "45056758f8bf",
+            "950124209dbf",
+            "d223288047d2"
+          ]
+        },
+        {
+          "text": "The incident happened while military exercises by Ukraine's allies were taking place in or near Poland.",
+          "sources": [
+            "811de2040a6a",
+            "45056758f8bf",
+            "950124209dbf",
+            "8259cffd08de",
+            "626c1da501ef"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "7604f50380d5",
+              "quote": "it’s not an accident",
+              "field": "headline"
+            },
+            {
+              "article_id": "8259cffd08de",
+              "quote": "UK lashes out at Putin for reckless attack on Poland",
+              "field": "headline"
+            },
+            {
+              "article_id": "8259cffd08de",
+              "quote": "Trump fawned over despots",
+              "field": "snippet"
+            },
+            {
+              "article_id": "811de2040a6a",
+              "quote": "There were no injuries or damage",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the Polish prime minister blaming Russia and calling the incident intentional.",
+              "sources": [
+                "7604f50380d5",
+                "68fa0e3596c1"
+              ]
+            },
+            {
+              "text": "Highlights UK criticism of Putin and links the incident to a summit in which Trump met Putin and Xi.",
+              "sources": [
+                "8259cffd08de"
+              ]
+            },
+            {
+              "text": "Reports that there were no injuries or damage.",
+              "sources": [
+                "811de2040a6a"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "950124209dbf",
+              "quote": "Russia tests NATO’s eastern defences",
+              "field": "headline"
+            },
+            {
+              "article_id": "055bfb7c78f6",
+              "quote": "grave violation of Polish airspace",
+              "field": "snippet"
+            },
+            {
+              "article_id": "055bfb7c78f6",
+              "quote": "NATO tensions rise",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Emphasises NATO's condemnation of the airspace violation and rising NATO tensions.",
+              "sources": [
+                "055bfb7c78f6",
+                "950124209dbf"
+              ]
+            },
+            {
+              "text": "Reports Donald Tusk saying it was likely an intentional provocation timed with European military exercises.",
+              "sources": [
+                "950124209dbf"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "right",
+          "headline_quotes": [
+            {
+              "article_id": "66ff58041f8e",
+              "quote": "Putin launches Ukraine barrage hours after Trump meeting",
+              "field": "headline"
+            },
+            {
+              "article_id": "225354981a89",
+              "quote": "Article 5 must be triggered",
+              "field": "headline"
+            },
+            {
+              "article_id": "952f900e0db7",
+              "quote": "hours after Trump defended Putin",
+              "field": "headline"
+            },
+            {
+              "article_id": "626c1da501ef",
+              "quote": "Putin's recklessness could spark World War Three",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Links the incident to Trump's recent dealings with Putin, including Trump saying missiles had landed in Poland by mistake.",
+              "sources": [
+                "66ff58041f8e",
+                "952f900e0db7"
+              ]
+            },
+            {
+              "text": "Reports a former Nato chief calling for Article 5 to be invoked.",
+              "sources": [
+                "225354981a89"
+              ]
+            },
+            {
+              "text": "Highlights a UK defence intelligence chief's warning and the proximity of British troops on drills.",
+              "sources": [
+                "626c1da501ef"
+              ]
+            },
+            {
+              "text": "Reports a Russian barrage of more than 400 drones and 110 missiles on Ukraine killing at least eight.",
+              "sources": [
+                "66ff58041f8e"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "left",
+          "text": "Left-leaning coverage does not mention NATO condemning the incident as a grave violation of Polish airspace.",
+          "sources": [
+            "055bfb7c78f6"
+          ]
+        },
+        {
+          "lean": "left",
+          "text": "Left-leaning coverage does not mention calls to invoke NATO's Article 5.",
+          "sources": [
+            "225354981a89"
+          ]
+        },
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not mention Trump or his recent meeting with Putin.",
+          "sources": [
+            "8259cffd08de",
+            "66ff58041f8e",
+            "952f900e0db7"
+          ]
+        },
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not mention reactions from UK officials.",
+          "sources": [
+            "8259cffd08de",
+            "626c1da501ef"
+          ]
+        },
+        {
+          "lean": "right",
+          "text": "Right-leaning coverage does not mention Polish authorities or the prime minister calling the incident a provocation.",
+          "sources": [
+            "7604f50380d5",
+            "68fa0e3596c1",
+            "811de2040a6a",
+            "950124209dbf"
+          ]
+        },
+        {
+          "lean": "right",
+          "text": "Right-leaning coverage does not mention NATO's condemnation of the airspace violation.",
+          "sources": [
+            "055bfb7c78f6"
+          ]
+        }
+      ],
+      "contested_claims": [
+        {
+          "claim": "Russian missiles landing in Poland are intentional rather than accidental.",
+          "asserted_by": [
+            "7604f50380d5",
+            "950124209dbf"
+          ],
+          "disputed_by": [
+            "952f900e0db7"
+          ]
+        }
+      ],
+      "opinion": [
+        {
+          "text": "An explainer assesses that the bar for triggering NATO's collective defence clause remains high.",
+          "sources": [
+            "d223288047d2"
+          ]
+        }
+      ],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "7604f50380d5",
+              "quote": "Russian missile explodes in NATO territory",
+              "field": "headline"
+            },
+            {
+              "article_id": "055bfb7c78f6",
+              "quote": "Russian projectiles hit Poland as NATO tensions rise",
+              "field": "headline"
+            },
+            {
+              "article_id": "225354981a89",
+              "quote": "Article 5 must be triggered",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Emphasises the incident as a breach of NATO territory and the possible NATO response, including Article 5 calls.",
+              "sources": [
+                "7604f50380d5",
+                "055bfb7c78f6",
+                "225354981a89"
+              ]
+            },
+            {
+              "text": "Links the incident to Trump's recent meeting with Putin and UK warnings.",
+              "sources": [
+                "66ff58041f8e",
+                "952f900e0db7",
+                "8259cffd08de",
+                "626c1da501ef"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "6303a66b2ac1",
+              "quote": "Poland Condemns Russian 'Provocation'",
+              "field": "headline"
+            },
+            {
+              "article_id": "45056758f8bf",
+              "quote": "as Europe holds military drills nearby",
+              "field": "headline"
+            },
+            {
+              "article_id": "d223288047d2",
+              "quote": "bar for triggering NATO's collective defence clause remains high",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Places the incident after European warnings against deciding a Ukraine peace over their heads.",
+              "sources": [
+                "6303a66b2ac1"
+              ]
+            },
+            {
+              "text": "Emphasises timing with European military drills nearby.",
+              "sources": [
+                "45056758f8bf"
+              ]
+            },
+            {
+              "text": "Examines whether NATO could respond, noting a high bar for collective defence.",
+              "sources": [
+                "d223288047d2"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "Two Russian missiles and a suspected drone came down in Poland while European military exercises were under way nearby. Poland's prime minister called it a likely intentional provocation, NATO condemned a grave violation of Polish airspace, and one report said there were no injuries or damage.",
+        "sources": [
+          "45056758f8bf",
+          "950124209dbf",
+          "055bfb7c78f6",
+          "7604f50380d5",
+          "811de2040a6a",
+          "225354981a89",
+          "626c1da501ef"
+        ]
+      },
+      "conclusion": {
+        "text": "Coverage agrees Russian missiles and a drone came down in Poland and that Warsaw called it a provocation. Right-leaning outlets link it to Trump and Article 5 calls, centre to NATO's condemnation, East-bloc outlets to drills and Ukraine peace talks. Whether the strikes were intentional is contested between Tusk's remarks and Trump's reported 'by mistake' comment.",
+        "sources": [
+          "7604f50380d5",
+          "45056758f8bf",
+          "6303a66b2ac1",
+          "055bfb7c78f6",
+          "950124209dbf",
+          "225354981a89",
+          "952f900e0db7",
+          "66ff58041f8e"
+        ]
+      },
+      "validation": {
+        "kept": 46,
+        "dropped_by_reason": {}
+      }
+    },
+    {
+      "id": "fc085a390bc9",
+      "title": "Xi, Putin and Trump hold first China-Russia-US summit in Shenzhen",
+      "rank": 3,
+      "outlet_count": 10,
+      "coverage": {
+        "lean": {
+          "left": 1,
+          "centre": 0,
+          "right": 1
+        },
+        "bloc": {
+          "west": 2,
+          "east": 8
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "540b8b2f2c15",
+          "outlet_id": "koreaherald",
+          "headline": "Lee stresses need for Seoul to take lead on peninsular affairs after Trump-Xi-Putin meeting",
+          "snippet": "President Lee Jae Myung on Friday stressed a need for South Korea to chart its own path on Korean Peninsula issues. His remarks, made a day after he returned from his trip to the Philippines and…",
+          "url": "https://www.koreaherald.com/article/10944351",
+          "published_at": "2026-11-20T08:04:48Z",
+          "published_at_estimated": false,
+          "image_url": "https://wimg.heraldcorp.com/news/cms/2026/11/20/rcv.YNA.20261120.PYH2026112011080001300_T1.jpg"
+        },
+        {
+          "id": "966062255f45",
+          "outlet_id": "cgtn",
+          "headline": "China-Russia-US summit sets landmark strategic stability",
+          "snippet": "",
+          "url": "https://news.cgtn.com/news/2026-11-20/China-Russia-US-summit-sets-landmark-strategic-stability-1Se1WCdicr6/p.html",
+          "published_at": "2026-11-20T08:40:33Z",
+          "published_at_estimated": false,
+          "image_url": "https://video.cgtn.com/news/2026-11-20/China-Russia-US-summit-sets-landmark-strategic-stability-1Se1WCdicr6/video/wu_1k7rumo2fall1aeh18s61j41o8da/wu_1k7rumo2fall1aeh18s61j41o8da-1280.png"
+        },
+        {
+          "id": "f9233147346d",
+          "outlet_id": "ecns",
+          "headline": "China-Russia-U.S. summit positive, constructive, fruitful: Xi",
+          "snippet": "",
+          "url": "https://www.ecns.cn/china/2026-11-20/detail-ihfneuqn7428711.shtml",
+          "published_at": "2026-11-20T09:24:23Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "5eeb0d5792e7",
+          "outlet_id": "cgtn",
+          "headline": "China-Russia-US summit: Injecting stability into a turbulent world",
+          "snippet": "This step forward, driven by China, confirms a long-held judgment of Beijing: in a multipolar world, dialogue rather than division is the sustainable option, and a viable path to meet the…",
+          "url": "https://news.cgtn.com/news/2026-11-20/China-Russia-US-summit-Injecting-stability-into-a-turbulent-world-1Se6ZGk47kI/p.html",
+          "published_at": "2026-11-20T09:36:51Z",
+          "published_at_estimated": false,
+          "image_url": "https://news.cgtn.com/news/2026-11-20/China-Russia-US-summit-Injecting-stability-into-a-turbulent-world-1Se6ZGk47kI/img/fa5f036c715c4a22be9d37804a3a19a9/fa5f036c715c4a22be9d37804a3a19a9-1920.png"
+        },
+        {
+          "id": "3269f64d8841",
+          "outlet_id": "cgtn",
+          "headline": "Xi Jinping's key remarks at China-Russia-US summit in Shenzhen",
+          "snippet": "In a historic first, Chinese President Xi Jinping held a China-Russia-US summit with Russian President Vladimir Putin and US President Donald Trump in Shenzhen, southern China's Guangdong Province.",
+          "url": "https://news.cgtn.com/news/2026-11-20/Xi-Jinping-s-key-remarks-at-China-Russia-US-summit-in-Shenzhen-1SdYyGnufJu/p.html",
+          "published_at": "2026-11-20T10:22:05Z",
+          "published_at_estimated": false,
+          "image_url": "https://news.cgtn.com/news/2026-11-20/Xi-Jinping-s-key-remarks-at-China-Russia-US-summit-in-Shenzhen-1SdYyGnufJu/img/489645a853484bfdb258c3e508e3a877/489645a853484bfdb258c3e508e3a877-1920.jpeg"
+        },
+        {
+          "id": "73fd7d765578",
+          "outlet_id": "nyt",
+          "headline": "Putin Exits Summit With Symbolic Win, Saying He and Trump Share ‘Values’",
+          "snippet": "Standing alongside the U.S. and Chinese leaders, President Vladimir V. Putin secured a symbolic triumph in his long quest to restore Russia’s place as a global power.",
+          "url": "https://www.nytimes.com/2026/11/20/world/europe/putin-trump-xi-summit-apec.html",
+          "published_at": "2026-11-20T13:56:56Z",
+          "published_at_estimated": false,
+          "image_url": "https://static01.nyt.com/images/2026/11/20/multimedia/20int-russia-putin-assess-1-qhzj/20int-russia-putin-assess-1-qhzj-mediumSquareAt3X.jpg"
+        },
+        {
+          "id": "7513468b58dc",
+          "outlet_id": "moscowtimes",
+          "headline": "Russian Stocks Fall After No Breakthrough at Putin-Trump-Xi Summit",
+          "snippet": "The benchmark ruble-denominated MOEX index dropped below 2,400 points in morning trading for the first time since mid-October.",
+          "url": "https://www.themoscowtimes.com/2026/11/20/russian-stocks-fall-after-no-breakthrough-at-putin-trump-xi-summit-a94334",
+          "published_at": "2026-11-20T14:20:46Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "81a3afd117ca",
+          "outlet_id": "cgtn",
+          "headline": "Poll: Nearly 90% hope for lasting peace among China, Russia, US",
+          "snippet": "Recently, Chinese President Xi Jinping held a trilateral meeting with Russian President Vladimir Putin and US President Donald Trump in Shenzhen, drawing widespread international attention. A survey…",
+          "url": "https://news.cgtn.com/news/2026-11-20/Poll-Nearly-90-hope-for-lasting-peace-among-China-Russia-US-1SemZcXPqVO/p.html",
+          "published_at": "2026-11-20T14:27:55Z",
+          "published_at_estimated": false,
+          "image_url": "https://news.cgtn.com/news/2026-11-20/Poll-Nearly-90-hope-for-lasting-peace-among-China-Russia-US-1SemZcXPqVO/img/101d527b64b843ed9999b33bc49c373a/101d527b64b843ed9999b33bc49c373a-750.png"
+        },
+        {
+          "id": "b997603a2682",
+          "outlet_id": "ecns",
+          "headline": "China-Russia-U.S. summit a landmark to go down in history: Chinese FM",
+          "snippet": "The China-Russia-U.S. summit was the first-ever face-to-face meeting between the heads of state of the three countries and is of great significance with a far-reaching impact, Chinese Foreign…",
+          "url": "https://www.ecns.cn/cns-wire/2026-11-21/detail-ihfneuqn7429669.shtml",
+          "published_at": "2026-11-20T17:08:31Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "67e8a32922ea",
+          "outlet_id": "nyt",
+          "headline": "At APEC Summit, U.S., China and Russia Vow to Increase Oil Supply Amid Global Energy Transition",
+          "snippet": "The United States, China and Russia agreed to boost the supply of refined petroleum products, as oil prices spike because of the Iran war.",
+          "url": "https://www.nytimes.com/2026/11/19/world/asia/russia-china-united-states-oil-joint-statement.html",
+          "published_at": "2026-11-20T17:45:55Z",
+          "published_at_estimated": false,
+          "image_url": "https://static01.nyt.com/images/2026/11/19/multimedia/19trump-summits-petroleum-topart-wcmf/19trump-summits-petroleum-topart-wcmf-mediumSquareAt3X.jpg"
+        },
+        {
+          "id": "bba31a8a92c2",
+          "outlet_id": "thenational",
+          "headline": "Trump invokes Yalta talks as he outlines vision for US, Russia and China nuclear co-operation",
+          "snippet": "US President Donald Trump on Friday evoked the 1945 Yalta Conference, a pivotal meeting that helped shape the postwar order and the emerging Cold War, to describe this week's first trilateral summit…",
+          "url": "https://www.thenationalnews.com/news/us/2026/11/20/trump-yalta-china-russia/",
+          "published_at": "2026-11-20T19:33:41Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.thenationalnews.com/resizer/v2/UWPLVWTIVIPYJVJQMLPJ5YELBE.jpg?auth=0045570d6091076485b25fbe54695628e890376464b07c3e5b381aee7698f887&smart=true&width=4341&height=2895"
+        },
+        {
+          "id": "a4c271d1fa4a",
+          "outlet_id": "nyt",
+          "headline": "Trump Flaunts Camaraderie With Xi and Putin but Has Little to Show for It",
+          "snippet": "President Trump called Russia’s leader his “friend” and marveled at China’s warm welcome for his first-ever trilateral summit. But there were no breakthroughs on nuclear control, the war in Ukraine…",
+          "url": "https://www.nytimes.com/2026/11/19/world/asia/trump-xi-putin.html",
+          "published_at": "2026-11-20T22:34:05Z",
+          "published_at_estimated": false,
+          "image_url": "https://static01.nyt.com/images/2026/11/19/multimedia/19trump-summits-ledeall-01-cvbz/19trump-summits-ledeall-01-cvbz-mediumSquareAt3X.jpg"
+        },
+        {
+          "id": "5c0a3b5a8063",
+          "outlet_id": "japantimes",
+          "headline": "Japan wary of U.S., Russia and China holding regular summits",
+          "snippet": "Japan is eager to maintain the existing international order, including by strengthening the rule of law.",
+          "url": "https://www.japantimes.co.jp/news/2026/11/21/japan/us-china-russia-summits-japan-wary/",
+          "published_at": "2026-11-21T00:04:00Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.japantimes.co.jp/japantimes/uploads/images/2026/11/21/thumbs/400x400/575289.jpg"
+        },
+        {
+          "id": "ddf8a8e45375",
+          "outlet_id": "thesun",
+          "headline": "China has Putin ‘in its pocket’ and is building disturbing new world order, warns Farage",
+          "snippet": "CHINA has Vladimir Putin “in its pocket” and is building a disturbing new world order, Nigel Farage has warned. The Reform leader said Beijing’s Xi Jinping would come out on top of this week’s…",
+          "url": "https://www.thesun.co.uk/news/41088918/nigel-farage-warns-china-putin/",
+          "published_at": "2026-11-21T00:06:54Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.thesun.co.uk/wp-content%2Fuploads%2F2026%2F11%2Fnewspress-collage-6623mq5bw-1795215243978.jpg?quality%3D90%26"
+        },
+        {
+          "id": "217b28c313e2",
+          "outlet_id": "koreaherald",
+          "headline": "Trump says &apos;confronting dangers on Korean Peninsula&apos; discussed at 3-way summit with Xi, Putin",
+          "snippet": "US President Donald Trump said Friday that \"confronting dangers\" on the Korean Peninsula was discussed when he held three-way summit talks with Chinese President Xi Jinping and Russian President…",
+          "url": "https://www.koreaherald.com/article/10944597",
+          "published_at": "2026-11-21T01:41:40Z",
+          "published_at_estimated": false,
+          "image_url": "https://wimg.heraldcorp.com/news/cms/2026/11/21/news-p.v1.20261119.2b51c1f0415f447ba66fdacc8729d84d_T1.jpg"
+        },
+        {
+          "id": "2060bc1e0fb7",
+          "outlet_id": "scmp",
+          "headline": "China’s top intelligence agency touts ‘common international security’ after summit",
+          "snippet": "China’s top intelligence agency has warned that no nation can achieve “absolute security” at the expense of others, underscoring Beijing’s messaging on security just a day after Thursday’s…",
+          "url": "https://www.scmp.com/news/china/politics/article/3375207/chinas-top-intelligence-agency-touts-common-international-security-after-summit",
+          "published_at": "2026-11-21T02:00:08Z",
+          "published_at_estimated": false,
+          "image_url": "https://cdn.i-scmp.com/sites/default/files/styles/1280x720/public/d8/images/canvas/2026/11/20/5f69c835-7e34-4010-a340-ae601a24c75e_a806bd9c.jpg?itok=IPC8HiOb&v=1795174468"
+        },
+        {
+          "id": "f0d8ef8ce8b5",
+          "outlet_id": "cgtn",
+          "headline": "Experts: China-Russia-US summit paves way for global stability",
+          "snippet": "In the southern Chinese city of Shenzhen, cameras captured a historic moment as the leaders of China, Russia and the United States walked side by side.",
+          "url": "https://news.cgtn.com/news/2026-11-21/Experts-China-Russia-US-summit-paves-way-for-global-stability-1Sf5kcXbdD2/p.html",
+          "published_at": "2026-11-21T02:42:10Z",
+          "published_at_estimated": false,
+          "image_url": "https://news.cgtn.com/news/2026-11-21/Experts-China-Russia-US-summit-paves-way-for-global-stability-1Sf5kcXbdD2/img/760eb19bd55c402e82ac28371e615e87/760eb19bd55c402e82ac28371e615e87-750.png"
+        },
+        {
+          "id": "4750dedcae10",
+          "outlet_id": "thehindu",
+          "headline": "Three to tango: On Trump, Xi, Putin trilateral summit",
+          "snippet": "U.S., China, Russia must draw up a roadmap for talks on nuclear weapons",
+          "url": "https://www.thehindu.com/opinion/editorial/three-to-tango-on-trump-xi-putin-trilateral-summit/article71725845.ece",
+          "published_at": "2026-11-21T02:47:55Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "dae0caf7c1be",
+          "outlet_id": "scmp",
+          "headline": "Hong Kong commerce chief ‘cautiously optimistic’ after China-US-Russia peace declaration",
+          "snippet": "The China-US-Russia joint peace declaration at the Apec summit sent a positive message about the global and local economies, but Hong Kong should remain “cautiously optimistic” as problems cannot be…",
+          "url": "https://www.scmp.com/news/hong-kong/hong-kong-economy/article/3375308/hong-kong-commerce-chief-cautiously-optimistic-after-china-us-russia-peace-declaration",
+          "published_at": "2026-11-21T03:55:19Z",
+          "published_at_estimated": false,
+          "image_url": "https://cdn.i-scmp.com/sites/default/files/styles/1280x720/public/d8/images/canvas/2026/11/21/3b40b74f-6cae-496d-99d3-03f0d49c646c_aa7275a5.jpg?itok=g-DSVhyq&v=1795233305"
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "The summit was the first trilateral meeting between the leaders of China, Russia and the United States.",
+          "sources": [
+            "3269f64d8841",
+            "b997603a2682",
+            "bba31a8a92c2",
+            "a4c271d1fa4a"
+          ]
+        },
+        {
+          "text": "The summit was held in Shenzhen, China, hosted by Xi Jinping.",
+          "sources": [
+            "3269f64d8841",
+            "81a3afd117ca",
+            "f0d8ef8ce8b5"
+          ]
+        },
+        {
+          "text": "The meeting took place in connection with the APEC summit.",
+          "sources": [
+            "67e8a32922ea",
+            "dae0caf7c1be"
+          ]
+        },
+        {
+          "text": "Nuclear issues were part of the summit discussion.",
+          "sources": [
+            "bba31a8a92c2",
+            "a4c271d1fa4a"
+          ]
+        },
+        {
+          "text": "The summit produced no breakthrough on major issues.",
+          "sources": [
+            "a4c271d1fa4a",
+            "7513468b58dc"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "73fd7d765578",
+              "quote": "Putin Exits Summit With Symbolic Win",
+              "field": "headline"
+            },
+            {
+              "article_id": "a4c271d1fa4a",
+              "quote": "Has Little to Show for It",
+              "field": "headline"
+            },
+            {
+              "article_id": "67e8a32922ea",
+              "quote": "Vow to Increase Oil Supply",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with Putin gaining a symbolic triumph in restoring Russia's place as a global power.",
+              "sources": [
+                "73fd7d765578"
+              ]
+            },
+            {
+              "text": "Emphasises Trump's camaraderie with Xi and Putin alongside no breakthroughs on nuclear control or Ukraine.",
+              "sources": [
+                "a4c271d1fa4a"
+              ]
+            },
+            {
+              "text": "Reports the agreement to boost refined petroleum supply as oil prices spike because of the Iran war.",
+              "sources": [
+                "67e8a32922ea"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "right",
+          "headline_quotes": [
+            {
+              "article_id": "ddf8a8e45375",
+              "quote": "is building disturbing new world order",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with Nigel Farage's warning that China has Putin in its pocket and that Xi would come out on top of the summit.",
+              "sources": [
+                "ddf8a8e45375"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "right",
+          "text": "Right-leaning coverage does not mention the agreement to boost refined petroleum supply.",
+          "sources": [
+            "67e8a32922ea"
+          ]
+        },
+        {
+          "lean": "right",
+          "text": "Right-leaning coverage does not mention the lack of breakthroughs on nuclear control or Ukraine.",
+          "sources": [
+            "a4c271d1fa4a"
+          ]
+        }
+      ],
+      "contested_claims": [
+        {
+          "claim": "The summit was fruitful and set a landmark for strategic stability.",
+          "asserted_by": [
+            "966062255f45",
+            "f9233147346d",
+            "b997603a2682"
+          ],
+          "disputed_by": [
+            "a4c271d1fa4a",
+            "7513468b58dc"
+          ]
+        }
+      ],
+      "opinion": [
+        {
+          "text": "The Hindu's commentary argues the US, China and Russia must draw up a roadmap for talks on nuclear weapons.",
+          "sources": [
+            "4750dedcae10"
+          ]
+        },
+        {
+          "text": "Experts cited by CGTN say the summit paves the way for global stability.",
+          "sources": [
+            "f0d8ef8ce8b5"
+          ]
+        },
+        {
+          "text": "A CGTN piece says the summit, driven by China, confirms Beijing's judgment that dialogue rather than division is the sustainable option.",
+          "sources": [
+            "5eeb0d5792e7"
+          ]
+        }
+      ],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "a4c271d1fa4a",
+              "quote": "Has Little to Show for It",
+              "field": "headline"
+            },
+            {
+              "article_id": "73fd7d765578",
+              "quote": "Putin Exits Summit With Symbolic Win",
+              "field": "headline"
+            },
+            {
+              "article_id": "ddf8a8e45375",
+              "quote": "is building disturbing new world order",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Emphasises limited concrete results and the symbolic gains for Putin.",
+              "sources": [
+                "a4c271d1fa4a",
+                "73fd7d765578"
+              ]
+            },
+            {
+              "text": "Carries a warning that China is building a new world order with Putin in its pocket.",
+              "sources": [
+                "ddf8a8e45375"
+              ]
+            },
+            {
+              "text": "Reports the oil supply agreement amid the Iran war.",
+              "sources": [
+                "67e8a32922ea"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "966062255f45",
+              "quote": "sets landmark strategic stability",
+              "field": "headline"
+            },
+            {
+              "article_id": "f9233147346d",
+              "quote": "positive, constructive, fruitful",
+              "field": "headline"
+            },
+            {
+              "article_id": "7513468b58dc",
+              "quote": "Russian Stocks Fall After No Breakthrough",
+              "field": "headline"
+            },
+            {
+              "article_id": "5c0a3b5a8063",
+              "quote": "Japan wary of U.S., Russia and China holding regular summits",
+              "field": "headline"
+            },
+            {
+              "article_id": "bba31a8a92c2",
+              "quote": "Trump invokes Yalta talks",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Chinese state outlets describe the summit as historic, fruitful and a source of global stability.",
+              "sources": [
+                "966062255f45",
+                "f9233147346d",
+                "5eeb0d5792e7",
+                "3269f64d8841",
+                "b997603a2682",
+                "f0d8ef8ce8b5",
+                "81a3afd117ca"
+              ]
+            },
+            {
+              "text": "Reports Russian stocks falling after the summit produced no breakthrough.",
+              "sources": [
+                "7513468b58dc"
+              ]
+            },
+            {
+              "text": "Highlights regional reactions from South Korea and Japan, including Seoul taking the lead on peninsula affairs and Japanese wariness of regular summits.",
+              "sources": [
+                "540b8b2f2c15",
+                "217b28c313e2",
+                "5c0a3b5a8063"
+              ]
+            },
+            {
+              "text": "Reports Trump comparing the summit to Yalta while outlining nuclear co-operation.",
+              "sources": [
+                "bba31a8a92c2"
+              ]
+            },
+            {
+              "text": "Covers Chinese security messaging and Hong Kong's cautious optimism after the joint peace declaration.",
+              "sources": [
+                "2060bc1e0fb7",
+                "dae0caf7c1be"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "Chinese President Xi Jinping hosted Russian President Vladimir Putin and US President Donald Trump in Shenzhen for the first-ever China-Russia-US summit. The three agreed to boost refined petroleum supply and issued a joint peace declaration, but some reports say there were no breakthroughs on nuclear control or the war in Ukraine.",
+        "sources": [
+          "3269f64d8841",
+          "b997603a2682",
+          "67e8a32922ea",
+          "dae0caf7c1be",
+          "a4c271d1fa4a",
+          "7513468b58dc"
+        ]
+      },
+      "conclusion": {
+        "text": "Coverage agrees the Shenzhen summit was the first meeting of the three leaders. Chinese state outlets describe it as fruitful and a landmark for stability, while The New York Times and The Moscow Times report no breakthroughs and The Sun leads with Farage's warning about China. Other Asian outlets add regional concerns from Seoul and Tokyo.",
+        "sources": [
+          "3269f64d8841",
+          "b997603a2682",
+          "a4c271d1fa4a",
+          "966062255f45",
+          "f9233147346d",
+          "7513468b58dc",
+          "ddf8a8e45375",
+          "540b8b2f2c15",
+          "5c0a3b5a8063"
+        ]
+      },
+      "validation": {
+        "kept": 37,
+        "dropped_by_reason": {}
+      }
+    },
+    {
+      "id": "26853c34720d",
+      "title": "UK and EU sign post-Brexit reset agreements at Brussels summit",
+      "rank": 4,
+      "outlet_count": 8,
+      "coverage": {
+        "lean": {
+          "left": 2,
+          "centre": 3,
+          "right": 2
+        },
+        "bloc": {
+          "west": 7,
+          "east": 1
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "b8dfc42f9eb1",
+          "outlet_id": "dw",
+          "headline": "EU and UK strike 'landmark deal' to strengthen ties after Brexit",
+          "snippet": "The European Union and the United Kingdom have agreed on \"landmark\" deals on youth mobility and trade. Leaders on both sides praised the agreement as they seek to rebuild ties.",
+          "url": "https://www.dw.com/en/eu-and-uk-strike-landmark-deal-to-strengthen-ties-after-brexit/a-80001076?maca=en-rss-en-world-4025-xml-mrss",
+          "published_at": "2026-11-20T14:30:00Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "f877e1c7e0f1",
+          "outlet_id": "nyt",
+          "headline": "Britain Announces Brexit Reset Deal at E.U. Summit: What to Know",
+          "snippet": "Prime Minister Andy Burnham and European leaders said they had agreed to remove some of the barriers created when Britain left the European Union.",
+          "url": "https://www.nytimes.com/2026/11/20/world/europe/uk-eu-summit-brexit.html",
+          "published_at": "2026-11-20T16:50:16Z",
+          "published_at_estimated": false,
+          "image_url": "https://static01.nyt.com/images/2026/11/20/multimedia/20int-eu-uk-summit-wtk-wzjf/20int-eu-uk-summit-wtk-wzjf-mediumSquareAt3X.jpg"
+        },
+        {
+          "id": "5e5f2d358cd1",
+          "outlet_id": "thehindu",
+          "headline": "U.K., EU move closer together with deals on food, carbon permits and youth mobility",
+          "snippet": "British Prime Minister Andy Burnham, who travelled to Brussels for the Summit, said this was the “limit” of what the two sides would converge during this Parliament (U.K.), i.e., until 2029",
+          "url": "https://www.thehindu.com/news/international/uk-european-union-summit-meeting-on-november-20-2026/article71723782.ece",
+          "published_at": "2026-11-20T17:02:00Z",
+          "published_at_estimated": false,
+          "image_url": "https://th-i.thgim.com/public/incoming/m2yy3g/article71723789.ece/alternates/LANDSCAPE_1200/EU_Britain_64231.jpg"
+        },
+        {
+          "id": "0ca772ccc763",
+          "outlet_id": "nyt",
+          "headline": "Britain and Brussels Have Begun a Brexit Rollback. How Far Will It Go?",
+          "snippet": "The United Kingdom is removing barriers with the European Union a decade after it voted to leave. Global turmoil, and the disruptive policies of President Trump, helped push them back together.",
+          "url": "https://www.nytimes.com/2026/11/20/world/europe/britain-and-brussels-have-begun-a-brexit-rollback-how-far-will-it-go.html",
+          "published_at": "2026-11-20T20:22:14Z",
+          "published_at_estimated": false,
+          "image_url": "https://static01.nyt.com/images/2026/11/20/multimedia/20int-eu-uk-assess-photo1-hwjg/20int-eu-uk-assess-photo1-hwjg-mediumSquareAt3X.jpg"
+        },
+        {
+          "id": "683da391d6fc",
+          "outlet_id": "bbc",
+          "headline": "What the new UK-EU deal could mean for future post-Brexit relations",
+          "snippet": "The BBC's political and Europe editors analyse the new agreements between the UK and EU.",
+          "url": "https://www.bbc.co.uk/news/videos/c90k6gl3lyxeo",
+          "published_at": "2026-11-20T21:43:22Z",
+          "published_at_estimated": false,
+          "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/ff0d/live/4b4a48f0-e52b-11f1-99b6-a35a62fa4264.jpg"
+        },
+        {
+          "id": "449a18e11595",
+          "outlet_id": "dailymail",
+          "headline": "MICHAEL GOVE: Burnham's EU surrender is an error of historic dimensions - and a blatant finger-flick to British voters",
+          "snippet": "The 'deal' the PM concluded with the European Union yesterday takes Britain backwards - back to more migration from the EU, back to seeing Brussels expand its reach into all our lives.",
+          "url": "https://www.dailymail.com/debate/article-16310251/MICHAEL-GOVE-Burnhams-EU-surrender-error-British-voters.html",
+          "published_at": "2026-11-21T09:37:55Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.dailymail.com/1s/2026/11/20/21/112643393-0-image-a-75_1795210213115.jpg"
+        },
+        {
+          "id": "4e2eac0390df",
+          "outlet_id": "bbc",
+          "headline": "Deal with EU not dependent on tuition fees agreement, Miliband says",
+          "snippet": "Brussels sources had previously suggested the bloc might not apply the wider deal until fees were lowered for EU students in Britain.",
+          "url": "https://www.bbc.co.uk/news/articles/cm9w9p4geke8o",
+          "published_at": "2026-11-21T09:40:55Z",
+          "published_at_estimated": false,
+          "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/d218/live/12a1fc40-e531-11f1-a67d-39d55c7178b0.jpg"
+        },
+        {
+          "id": "da935f68cce4",
+          "outlet_id": "france24",
+          "headline": "EU, UK reach reset deal after Brexit",
+          "snippet": "The UK and the EU signed three agreements on Friday at a summit in Brussels, marking a new effort to reset post-Brexit relations. The deals aim to reduce red tape for food exports, link emissions…",
+          "url": "https://www.france24.com/en/eu-uk-reach-reset-deal-after-brexit",
+          "published_at": "2026-11-21T09:43:42Z",
+          "published_at_estimated": false,
+          "image_url": "https://s.france24.com/media/display/b9dec5f4-e58d-11f1-9664-ebb478925cf0/w:1024/p:16x9/EN-20261121-091304-091457-CS.jpg"
+        },
+        {
+          "id": "e45a9576b970",
+          "outlet_id": "guardian",
+          "headline": "Rejoining EU ‘on the table’ as UK makes deals on trade and young people",
+          "snippet": "All options open in future talks, says Ed Miliband, while prime minister hails ‘a good day for Britain and Europe’ The UK rejoining the EU could be on the table in informal discussions between Andy…",
+          "url": "https://www.theguardian.com/politics/2026/nov/21/rejoining-eu-uk-trade-youth-deals-ed-miliband",
+          "published_at": "2026-11-21T11:33:01Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.guim.co.uk/img/media/a8ef665b3433b55dbebb6fb4abe465f1500c8ca9/367_0_2860_2288/master/2860.jpg?width=460&quality=85&auto=format&fit=max&s=dd2d2d99662bb4d148661e963d8f5111"
+        },
+        {
+          "id": "b2cb30baad7b",
+          "outlet_id": "thesun",
+          "headline": "Do you think Andy Burnham’s ‘EU reset’ is betraying British voters? VOTE NOW",
+          "snippet": "EUROPEAN Union leaders have secured a deal for 300,000 “youths” aged 31 or under to live in the UK and insisted they receive a £450million university fees discount. Prime Minister Andy Burnham…",
+          "url": "https://www.thesun.co.uk/news/41091947/andy-burnham-eu-reset-betraying-voters/",
+          "published_at": "2026-11-21T13:14:27Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.thesun.co.uk/wp-content%2Fuploads%2F2026%2F11%2Fcrop-41088812.jpg?quality%3D90%26"
+        },
+        {
+          "id": "88318bf801a5",
+          "outlet_id": "dailymail",
+          "headline": "Ed Miliband confirms Labour could tear up Brexit and rejoin Europe - and says Andy Burnham's new EU deal will come into force whether or not £500m fees row is resolved",
+          "snippet": "The Foreign Secretary signalled the UK could rejoin the EU despite the historic Brexit vote a decade ago as he said 'all options were on the table'.",
+          "url": "https://www.dailymail.com/news/article-16311057/Ed-Miliband-Labour-Brexit-Europe-Burnham-500m-fees.html",
+          "published_at": "2026-11-21T14:20:00Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.dailymail.com/1s/2026/11/21/10/112648265-0-image-m-13_1795256015886.jpg"
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "The UK and the EU reached agreements at a summit in Brussels aimed at rebuilding ties after Brexit.",
+          "sources": [
+            "b8dfc42f9eb1",
+            "f877e1c7e0f1",
+            "5e5f2d358cd1",
+            "da935f68cce4",
+            "e45a9576b970"
+          ]
+        },
+        {
+          "text": "The agreements include a youth mobility arrangement.",
+          "sources": [
+            "b8dfc42f9eb1",
+            "5e5f2d358cd1",
+            "e45a9576b970",
+            "b2cb30baad7b"
+          ]
+        },
+        {
+          "text": "The agreements cover trade, including reducing red tape for food exports.",
+          "sources": [
+            "b8dfc42f9eb1",
+            "5e5f2d358cd1",
+            "da935f68cce4",
+            "e45a9576b970"
+          ]
+        },
+        {
+          "text": "The agreements include a link on emissions or carbon permits.",
+          "sources": [
+            "5e5f2d358cd1",
+            "da935f68cce4"
+          ]
+        },
+        {
+          "text": "Prime Minister Andy Burnham concluded the deal for the UK.",
+          "sources": [
+            "f877e1c7e0f1",
+            "5e5f2d358cd1",
+            "e45a9576b970",
+            "b2cb30baad7b",
+            "449a18e11595"
+          ]
+        },
+        {
+          "text": "Ed Miliband said the deal will apply whether or not a dispute over university fees for EU students is resolved.",
+          "sources": [
+            "4e2eac0390df",
+            "88318bf801a5"
+          ]
+        },
+        {
+          "text": "Ed Miliband said all options, including the UK rejoining the EU, were on the table.",
+          "sources": [
+            "e45a9576b970",
+            "88318bf801a5"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "f877e1c7e0f1",
+              "quote": "agreed to remove some of the barriers created when Britain left the European Union",
+              "field": "snippet"
+            },
+            {
+              "article_id": "0ca772ccc763",
+              "quote": "Britain and Brussels Have Begun a Brexit Rollback",
+              "field": "headline"
+            },
+            {
+              "article_id": "e45a9576b970",
+              "quote": "Rejoining EU ‘on the table’",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the removal of barriers created by Brexit.",
+              "sources": [
+                "f877e1c7e0f1",
+                "0ca772ccc763"
+              ]
+            },
+            {
+              "text": "Attributes the rapprochement to global turmoil and the policies of President Trump.",
+              "sources": [
+                "0ca772ccc763"
+              ]
+            },
+            {
+              "text": "Foregrounds Miliband's remark that rejoining is on the table and the PM calling it a good day for Britain and Europe.",
+              "sources": [
+                "e45a9576b970"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "b8dfc42f9eb1",
+              "quote": "EU and UK strike 'landmark deal' to strengthen ties after Brexit",
+              "field": "headline"
+            },
+            {
+              "article_id": "da935f68cce4",
+              "quote": "EU, UK reach reset deal after Brexit",
+              "field": "headline"
+            },
+            {
+              "article_id": "4e2eac0390df",
+              "quote": "Deal with EU not dependent on tuition fees agreement, Miliband says",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Emphasises the content of the agreements, such as youth mobility, food exports and emissions, and leaders' praise for them.",
+              "sources": [
+                "b8dfc42f9eb1",
+                "da935f68cce4"
+              ]
+            },
+            {
+              "text": "Reports Brussels sources suggesting the EU might not apply the deal until fees for EU students were lowered.",
+              "sources": [
+                "4e2eac0390df"
+              ]
+            },
+            {
+              "text": "Offers analysis of what the deal could mean for future relations.",
+              "sources": [
+                "683da391d6fc"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "right",
+          "headline_quotes": [
+            {
+              "article_id": "449a18e11595",
+              "quote": "Burnham's EU surrender is an error of historic dimensions",
+              "field": "headline"
+            },
+            {
+              "article_id": "b2cb30baad7b",
+              "quote": "Do you think Andy Burnham’s ‘EU reset’ is betraying British voters?",
+              "field": "headline"
+            },
+            {
+              "article_id": "88318bf801a5",
+              "quote": "Ed Miliband confirms Labour could tear up Brexit and rejoin Europe",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Describes the deal as a surrender that brings more EU migration and expands Brussels' reach.",
+              "sources": [
+                "449a18e11595"
+              ]
+            },
+            {
+              "text": "Foregrounds the figure of 300,000 young people able to live in the UK and an EU demand for a university fees discount.",
+              "sources": [
+                "b2cb30baad7b"
+              ]
+            },
+            {
+              "text": "Leads with Miliband's comments on possibly rejoining the EU despite the Brexit vote, and the fees row.",
+              "sources": [
+                "88318bf801a5"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "left",
+          "text": "Left coverage does not mention the dispute over university tuition fees for EU students.",
+          "sources": [
+            "4e2eac0390df",
+            "b2cb30baad7b",
+            "88318bf801a5"
+          ]
+        },
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not mention Miliband's remark that rejoining the EU is on the table.",
+          "sources": [
+            "e45a9576b970",
+            "88318bf801a5"
+          ]
+        },
+        {
+          "lean": "right",
+          "text": "Right coverage does not mention the food export and emissions elements of the agreements.",
+          "sources": [
+            "da935f68cce4"
+          ]
+        }
+      ],
+      "contested_claims": [
+        {
+          "claim": "The size of the university fees discount sought by the EU is about £450 million.",
+          "asserted_by": [
+            "b2cb30baad7b"
+          ],
+          "disputed_by": [
+            "88318bf801a5"
+          ]
+        }
+      ],
+      "opinion": [
+        {
+          "text": "Michael Gove argues the deal is an error of historic dimensions that takes Britain backwards towards more EU migration.",
+          "sources": [
+            "449a18e11595"
+          ]
+        },
+        {
+          "text": "BBC political and Europe editors analyse what the agreements could mean for future relations.",
+          "sources": [
+            "683da391d6fc"
+          ]
+        }
+      ],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "b8dfc42f9eb1",
+              "quote": "strike 'landmark deal'",
+              "field": "headline"
+            },
+            {
+              "article_id": "e45a9576b970",
+              "quote": "Rejoining EU ‘on the table’",
+              "field": "headline"
+            },
+            {
+              "article_id": "449a18e11595",
+              "quote": "Burnham's EU surrender",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Western coverage ranges from praise for a landmark deal to describing it as a surrender.",
+              "sources": [
+                "b8dfc42f9eb1",
+                "449a18e11595"
+              ]
+            },
+            {
+              "text": "Foregrounds Miliband's remarks on rejoining and the tuition fees row.",
+              "sources": [
+                "e45a9576b970",
+                "88318bf801a5",
+                "4e2eac0390df",
+                "b2cb30baad7b"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "5e5f2d358cd1",
+              "quote": "U.K., EU move closer together with deals on food, carbon permits and youth mobility",
+              "field": "headline"
+            },
+            {
+              "article_id": "5e5f2d358cd1",
+              "quote": "this was the “limit” of what the two sides would converge during this Parliament",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Lists the deals on food, carbon permits and youth mobility.",
+              "sources": [
+                "5e5f2d358cd1"
+              ]
+            },
+            {
+              "text": "Foregrounds Burnham's statement that this was the limit of convergence until 2029.",
+              "sources": [
+                "5e5f2d358cd1"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "The UK and the EU signed three agreements at a Brussels summit on Friday to reset post-Brexit relations, covering youth mobility, food trade and emissions. Prime Minister Andy Burnham hailed the deal, while Ed Miliband said rejoining the EU was among options on the table and that the deal does not depend on a tuition fees agreement.",
+        "sources": [
+          "da935f68cce4",
+          "b8dfc42f9eb1",
+          "5e5f2d358cd1",
+          "e45a9576b970",
+          "f877e1c7e0f1",
+          "4e2eac0390df",
+          "88318bf801a5"
+        ]
+      },
+      "conclusion": {
+        "text": "All sides report the UK and EU agreeing post-Brexit reset deals in Brussels. Left and centre outlets lead with barrier removal and praise, right outlets call it a surrender and focus on migration and fees, and The Hindu foregrounds Burnham's limit on convergence until 2029. The fees discount is put at £450m by one outlet and £500m by another.",
+        "sources": [
+          "b8dfc42f9eb1",
+          "f877e1c7e0f1",
+          "da935f68cce4",
+          "449a18e11595",
+          "b2cb30baad7b",
+          "5e5f2d358cd1",
+          "88318bf801a5"
+        ]
+      },
+      "validation": {
+        "kept": 42,
+        "dropped_by_reason": {}
+      }
+    },
+    {
+      "id": "ec642b6e704a",
+      "title": "Denmark accuses Russia of plot to kill US-Ukrainian rapper, expels attaché",
+      "rank": 5,
+      "outlet_count": 8,
+      "coverage": {
+        "lean": {
+          "left": 4,
+          "centre": 3,
+          "right": 0
+        },
+        "bloc": {
+          "west": 7,
+          "east": 1
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "dd31d0388ced",
+          "outlet_id": "mirror",
+          "headline": "Denmark accuses Russia of plotting to kill American-Ukrainian rapper before his own concert",
+          "snippet": "Danish authorities have thwarted an alleged Russian plot to kill US-Ukrainian rapper Kyivstoner before a concert in Denmark, the Danish prime minister's office has said",
+          "url": "https://www.mirror.co.uk/news/world-news/denmark-russia-plot-kill-rapper-37901013",
+          "published_at": "2026-11-20T20:39:27Z",
+          "published_at_estimated": false,
+          "image_url": "https://i2-prod.mirror.co.uk/incoming/article37901043.ece/ALTERNATES/s615/0_Denmark-accuses-Russian-intelligence-of-plotting-to-kill-American-Ukrainian-on-its-soil.jpg"
+        },
+        {
+          "id": "8310c8750074",
+          "outlet_id": "nyt",
+          "headline": "Denmark Expels Russian Diplomat After Accusing Moscow of Planning a Hit",
+          "snippet": "Danish officials say Russian intelligence services recruited members of a violent gang to try to assassinate a Ukrainian rapper at a concert outside Copenhagen.",
+          "url": "https://www.nytimes.com/2026/11/20/world/europe/denmark-russia-ukraine-rapper-assassination.html",
+          "published_at": "2026-11-20T22:15:57Z",
+          "published_at_estimated": false,
+          "image_url": "https://static01.nyt.com/images/2026/11/20/multimedia/20int-denmark-ukraine-rapper-photo-pqwv/20int-denmark-ukraine-rapper-photo-pqwv-mediumSquareAt3X.jpg"
+        },
+        {
+          "id": "cee00d476a07",
+          "outlet_id": "sky",
+          "headline": "Denmark says it thwarted 'Russian plot' to kill US-Ukrainian rapper",
+          "snippet": "Police thwarted a Russian plot to kill a US-Ukrainian rapper who was performing in Denmark, according to authorities.",
+          "url": "https://news.sky.com/story/denmark-says-it-thwarted-russian-plot-to-kill-us-ukrainian-rapper-kyivstoner-13614604",
+          "published_at": "2026-11-21T05:15:00Z",
+          "published_at_estimated": false,
+          "image_url": "https://e3.365dm.com/26/11/1920x1080/skynews-rasmus-kieffer-kristensen_7412023.jpg?20261121053937"
+        },
+        {
+          "id": "748a23ba68be",
+          "outlet_id": "moscowtimes",
+          "headline": "Von der Leyen Condemns Russian Plot to Assassinate U.S.-Ukrainian in Denmark",
+          "snippet": "\"This was an attack on EU soil. And it is unacceptable,\" she said.",
+          "url": "https://www.themoscowtimes.com/2026/11/21/von-der-leyen-condemns-russian-plot-to-assassinate-us-ukrainian-in-denmark-a94339",
+          "published_at": "2026-11-21T09:15:19Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "8429216db022",
+          "outlet_id": "france24",
+          "headline": "Denmark accuses Russia of assassination plot, expels diplomat",
+          "snippet": "Denmark has accused Moscow of being behind a failed assassination attempt targeting a Ukrainian-American rapper in Copenhagen, further escalating tensions between Europe and Russia. In response…",
+          "url": "https://www.france24.com/en/denmark-accuses-russia-of-assassination-plot-expels-diplomat",
+          "published_at": "2026-11-21T09:51:01Z",
+          "published_at_estimated": false,
+          "image_url": "https://s.france24.com/media/display/1f0ff8e8-e58f-11f1-b96d-1bac47ab2f5d/w:1024/p:16x9/EN-20261121-100430-100556-CS.jpg"
+        },
+        {
+          "id": "1b41f53043a1",
+          "outlet_id": "nbc",
+          "headline": "Denmark accuses Russia of plotting to kill Ukrainian American rapper on its soil",
+          "snippet": "COPENHAGEN, Denmark — Authorities thwarted the attempted killing of a Ukrainian American citizen on Danish soil in a plot allegedly orchestrated by Russian intelligence services, the Danish prime…",
+          "url": "https://www.nbcnews.com/world/europe/denmark-accuses-russia-plotting-kill-ukrainian-american-rapper-soil-rcna610542",
+          "published_at": "2026-11-21T10:15:12Z",
+          "published_at_estimated": false,
+          "image_url": "https://media-cldnry.s-nbcnews.com/image/upload/t_fit_1500w/rockcms/2026-11/261121-denmark-nd-a842f4.jpg"
+        },
+        {
+          "id": "9ea5b0bec37d",
+          "outlet_id": "bbc",
+          "headline": "Denmark accuses Russia of plotting to assassinate US-Ukrainian rapper",
+          "snippet": "The Russian embassy in Denmark has denied the allegation, which has led to Russia's defence attaché being expelled.",
+          "url": "https://www.bbc.co.uk/news/articles/cmde1lj4yjxno",
+          "published_at": "2026-11-21T10:26:36Z",
+          "published_at_estimated": false,
+          "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/9834/live/684cb9a0-e527-11f1-b32f-b1f1a32fbf0e.jpg"
+        },
+        {
+          "id": "c84efa83cfba",
+          "outlet_id": "france24",
+          "headline": "'Unacceptable': EU chief condemns alleged Russian plot to kill US-Ukrainian citizen",
+          "snippet": "European Commission President Ursula von der Leyen condemned an alleged Russian intelligence plot to assassinate a US-Ukrainian citizen in Denmark, vowing full solidarity with Copenhagen.",
+          "url": "https://www.france24.com/en/europe/20261121-unacceptable-eu-chief-condemns-alleged-russian-plot-to-kill-us-ukrainian-citizen",
+          "published_at": "2026-11-21T10:32:36Z",
+          "published_at_estimated": false,
+          "image_url": "https://s.france24.com/media/display/09933754-e590-11f1-bdd0-e56ab3dc0809/w:1024/p:16x9/2026-11-20T132245Z-1935520672-RC2OROAXK61L-RTRMADP-3-EU-BRITAIN-SUMMIT.jpg"
+        },
+        {
+          "id": "5b425078342c",
+          "outlet_id": "guardian",
+          "headline": "Denmark to expel Russian diplomat over alleged plot to kill US-Ukrainian rapper",
+          "snippet": "Moscow intelligence thought to be behind plan to kill musician Kyivstoner before concert in Denmark Denmark’s foreign minister has said Russia’s defence attache in Copenhagen would be expelled after…",
+          "url": "https://www.theguardian.com/world/2026/nov/20/denmark-russian-diplomat-us-ukrainian-rapper-attempted-killing",
+          "published_at": "2026-11-21T14:03:50Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.guim.co.uk/img/media/5a7dd431910379766554a57f1bae363afdb4ad03/516_0_4178_3342/master/4178.jpg?width=460&quality=85&auto=format&fit=max&s=0e9e91cc5f4276db49ac09bd954867d5"
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "Denmark accuses Russia of plotting to kill a US-Ukrainian rapper or citizen in Denmark.",
+          "sources": [
+            "dd31d0388ced",
+            "8310c8750074",
+            "cee00d476a07",
+            "8429216db022",
+            "1b41f53043a1",
+            "9ea5b0bec37d",
+            "5b425078342c",
+            "748a23ba68be",
+            "c84efa83cfba"
+          ]
+        },
+        {
+          "text": "Danish authorities say the plot was thwarted or failed.",
+          "sources": [
+            "dd31d0388ced",
+            "cee00d476a07",
+            "1b41f53043a1",
+            "8429216db022"
+          ]
+        },
+        {
+          "text": "A Russian diplomat, described as Russia's defence attaché, is being expelled from Denmark.",
+          "sources": [
+            "8310c8750074",
+            "8429216db022",
+            "9ea5b0bec37d",
+            "5b425078342c"
+          ]
+        },
+        {
+          "text": "The plot is attributed to Russian intelligence services.",
+          "sources": [
+            "8310c8750074",
+            "1b41f53043a1",
+            "5b425078342c",
+            "c84efa83cfba"
+          ]
+        },
+        {
+          "text": "The intended target was a rapper due to perform at a concert in Denmark.",
+          "sources": [
+            "dd31d0388ced",
+            "8310c8750074",
+            "cee00d476a07",
+            "5b425078342c"
+          ]
+        },
+        {
+          "text": "European Commission President Ursula von der Leyen condemned the plot as unacceptable.",
+          "sources": [
+            "748a23ba68be",
+            "c84efa83cfba"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "8310c8750074",
+              "quote": "Accusing Moscow of Planning a Hit",
+              "field": "headline"
+            },
+            {
+              "article_id": "8310c8750074",
+              "quote": "recruited members of a violent gang",
+              "field": "snippet"
+            },
+            {
+              "article_id": "5b425078342c",
+              "quote": "Moscow intelligence thought to be behind plan",
+              "field": "snippet"
+            },
+            {
+              "article_id": "dd31d0388ced",
+              "quote": "plotting to kill American-Ukrainian rapper before his own concert",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the attribution of the plot to Russian intelligence services.",
+              "sources": [
+                "8310c8750074",
+                "1b41f53043a1",
+                "5b425078342c"
+              ]
+            },
+            {
+              "text": "Names the rapper as Kyivstoner and places the plot before his concert.",
+              "sources": [
+                "dd31d0388ced",
+                "5b425078342c"
+              ]
+            },
+            {
+              "text": "Reports that Russian intelligence recruited members of a violent gang for the attempt.",
+              "sources": [
+                "8310c8750074"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "cee00d476a07",
+              "quote": "Denmark says it thwarted 'Russian plot'",
+              "field": "headline"
+            },
+            {
+              "article_id": "9ea5b0bec37d",
+              "quote": "The Russian embassy in Denmark has denied the allegation",
+              "field": "snippet"
+            },
+            {
+              "article_id": "c84efa83cfba",
+              "quote": "'Unacceptable': EU chief condemns alleged Russian plot",
+              "field": "headline"
+            },
+            {
+              "article_id": "8429216db022",
+              "quote": "further escalating tensions between Europe and Russia",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Includes the Russian embassy's denial of the allegation.",
+              "sources": [
+                "9ea5b0bec37d"
+              ]
+            },
+            {
+              "text": "Foregrounds the EU reaction and von der Leyen's pledge of solidarity with Copenhagen.",
+              "sources": [
+                "c84efa83cfba"
+              ]
+            },
+            {
+              "text": "Places the accusation in the context of rising tensions between Europe and Russia.",
+              "sources": [
+                "8429216db022"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "left",
+          "text": "Left-leaning coverage does not mention the Russian embassy's denial of the allegation.",
+          "sources": [
+            "9ea5b0bec37d"
+          ]
+        },
+        {
+          "lean": "left",
+          "text": "Left-leaning coverage does not mention von der Leyen's condemnation of the plot.",
+          "sources": [
+            "c84efa83cfba"
+          ]
+        },
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not name the rapper as Kyivstoner.",
+          "sources": [
+            "dd31d0388ced",
+            "5b425078342c"
+          ]
+        },
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not mention the reported recruitment of gang members.",
+          "sources": [
+            "8310c8750074"
+          ]
+        }
+      ],
+      "contested_claims": [
+        {
+          "claim": "The concert where the attack was planned was outside Copenhagen rather than in the city.",
+          "asserted_by": [
+            "8310c8750074"
+          ],
+          "disputed_by": [
+            "8429216db022"
+          ]
+        }
+      ],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "8429216db022",
+              "quote": "Denmark accuses Russia of assassination plot, expels diplomat",
+              "field": "headline"
+            },
+            {
+              "article_id": "9ea5b0bec37d",
+              "quote": "The Russian embassy in Denmark has denied the allegation",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with Denmark's accusation and the expulsion of Russia's defence attaché.",
+              "sources": [
+                "8310c8750074",
+                "8429216db022",
+                "9ea5b0bec37d",
+                "5b425078342c"
+              ]
+            },
+            {
+              "text": "Reports Danish authorities' account that the plot was thwarted.",
+              "sources": [
+                "dd31d0388ced",
+                "cee00d476a07",
+                "1b41f53043a1"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "748a23ba68be",
+              "quote": "Von der Leyen Condemns Russian Plot to Assassinate U.S.-Ukrainian in Denmark",
+              "field": "headline"
+            },
+            {
+              "article_id": "748a23ba68be",
+              "quote": "\"This was an attack on EU soil. And it is unacceptable,\"",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with von der Leyen's condemnation, describing the plot as an attack on EU soil.",
+              "sources": [
+                "748a23ba68be"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "Danish authorities say they thwarted a plot, which they attribute to Russian intelligence, to kill US-Ukrainian rapper Kyivstoner before a concert in Denmark. Russia's defence attaché is being expelled. The Russian embassy denied the allegation, and EU chief Ursula von der Leyen condemned the plot as unacceptable.",
+        "sources": [
+          "dd31d0388ced",
+          "8310c8750074",
+          "cee00d476a07",
+          "1b41f53043a1",
+          "9ea5b0bec37d",
+          "5b425078342c",
+          "8429216db022",
+          "748a23ba68be",
+          "c84efa83cfba"
+        ]
+      },
+      "conclusion": {
+        "text": "All coverage reports Denmark accusing Russia of plotting to kill a US-Ukrainian rapper. Left-leaning outlets emphasise Russian intelligence and the rapper's identity; centre outlets add the Russian denial and EU reaction, which the East-bloc outlet leads with. Accounts differ on whether the concert was in or outside Copenhagen.",
+        "sources": [
+          "dd31d0388ced",
+          "8310c8750074",
+          "1b41f53043a1",
+          "5b425078342c",
+          "9ea5b0bec37d",
+          "c84efa83cfba",
+          "748a23ba68be",
+          "8429216db022"
+        ]
+      },
+      "validation": {
+        "kept": 34,
+        "dropped_by_reason": {}
+      }
+    },
+    {
+      "id": "814b3dd1dfd4",
+      "title": "Hackers breach FBI crime database and US Agriculture Department",
+      "rank": 6,
+      "outlet_count": 7,
+      "coverage": {
+        "lean": {
+          "left": 2,
+          "centre": 2,
+          "right": 1
+        },
+        "bloc": {
+          "west": 5,
+          "east": 2
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "8cd0267dd4b0",
+          "outlet_id": "nbc",
+          "headline": "FBI investigating potential breach of its crime database",
+          "snippet": "The FBI is investigating an apparent breach of its National Crime Information Center, two people briefed on the matter told NBC News Friday.",
+          "url": "https://www.nbcnews.com/politics/justice-department/fbi-investigating-potential-breach-crime-database-rcna610536",
+          "published_at": "2026-11-21T04:19:51Z",
+          "published_at_estimated": false,
+          "image_url": "https://media-cldnry.s-nbcnews.com/image/upload/t_fit_1500w/rockcms/2026-11/261120-fbi-hq-vsb-2248-faa843.jpg"
+        },
+        {
+          "id": "946b69daff73",
+          "outlet_id": "nypost",
+          "headline": "Hackers reportedly breach FBI crime database — the 2nd time the bureau was targeted in months",
+          "snippet": "The hackers breached the FBI’s National Crime Information Center (NCIC) database, CNN reported on Friday, citing multiple sources familiar with the investigation.",
+          "url": "https://nypost.com/2026/11/20/us-news/hackers-reportedly-breach-fbi-crime-database-the-2nd-time-the-bureau-was-targeted-in-months/",
+          "published_at": "2026-11-21T04:43:44Z",
+          "published_at_estimated": false,
+          "image_url": "https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2Fpersonnel-load-computer-car-search-149599195.jpg?w%3D1024"
+        },
+        {
+          "id": "a18bb3523f3d",
+          "outlet_id": "france24",
+          "headline": "US Agriculture Department and FBI hit by cyberattacks, media report",
+          "snippet": "Hackers breached systerms at the US Agriculture Department and the FBI, US media reported, amid a recent wave of major technology disruptions across the country.",
+          "url": "https://www.france24.com/en/americas/20261121-us-agriculture-department-fbi-hit-by-cyberattacks-media-report",
+          "published_at": "2026-11-21T07:01:04Z",
+          "published_at_estimated": false,
+          "image_url": "https://s.france24.com/media/display/c8b6415c-e578-11f1-81f3-6b451f569414/w:1024/p:16x9/AP24318480363864.jpg"
+        },
+        {
+          "id": "97a83eacbf50",
+          "outlet_id": "thehindu",
+          "headline": "FBI, U.S. Agriculture Department breached by hackers, reports say",
+          "snippet": "The newly uncovered breaches at the FBI and USDA were described as hacks, which are different from outages like the ones that afflicted Microsoft Outlook and the Federal Aviation Administration",
+          "url": "https://www.thehindu.com/news/international/fbis-criminal-information-database-hacked-reports-say/article71727198.ece",
+          "published_at": "2026-11-21T07:03:49Z",
+          "published_at_estimated": false,
+          "image_url": "https://th-i.thgim.com/public/incoming/e5kfo3/article71727206.ece/alternates/LANDSCAPE_1200/FBI_Sexual_Harassment_Settlement_75369.jpg"
+        },
+        {
+          "id": "a9e27d611c7f",
+          "outlet_id": "japantimes",
+          "headline": "U.S. Agriculture Department and FBI breached by hackers, reports say",
+          "snippet": "The reports come as concerns deepened over the recent spate of tech outages at key American institutions.",
+          "url": "https://www.japantimes.co.jp/news/2026/11/21/world/crime-legal/us-fbi-usda-cyberattacks/",
+          "published_at": "2026-11-21T08:13:00Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.japantimes.co.jp/japantimes/uploads/images/2026/11/21/thumbs/400x400/575308.jpg"
+        },
+        {
+          "id": "adfaaca8950a",
+          "outlet_id": "bbc",
+          "headline": "FBI reportedly investigating apparent hack of its criminal database",
+          "snippet": "The National Crime Information Center database is used by federal and local law enforcement to share information.",
+          "url": "https://www.bbc.co.uk/news/articles/cvze7de86pk3o",
+          "published_at": "2026-11-21T09:34:20Z",
+          "published_at_estimated": false,
+          "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/3fd7/live/9009b220-e58d-11f1-99a1-253766e7ad8b.jpg"
+        },
+        {
+          "id": "aa1577409bdf",
+          "outlet_id": "guardian",
+          "headline": "USDA, FBI breached by hackers amid spate of tech outages – reports",
+          "snippet": "Latest intrusions targeted farmer-payment system at the USDA and the FBI’s National Crime Information Center Hackers breached the US Department of Agriculture (USDA) and the FBI, national media…",
+          "url": "https://www.theguardian.com/us-news/2026/nov/21/usda-fbi-outages-cyber-attack",
+          "published_at": "2026-11-21T14:09:02Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.guim.co.uk/img/media/b150fbf305d621454311041d7c8c8c7d201d7d70/500_0_5000_4000/master/5000.jpg?width=460&quality=85&auto=format&fit=max&s=11985d12fbbc134bcb10b67dfc2b04c0"
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "The FBI's National Crime Information Center database was breached or apparently breached.",
+          "sources": [
+            "8cd0267dd4b0",
+            "946b69daff73",
+            "adfaaca8950a",
+            "aa1577409bdf"
+          ]
+        },
+        {
+          "text": "Hackers also breached the US Department of Agriculture.",
+          "sources": [
+            "a18bb3523f3d",
+            "97a83eacbf50",
+            "a9e27d611c7f",
+            "aa1577409bdf"
+          ]
+        },
+        {
+          "text": "The breaches are reported on the basis of US media reports or unnamed sources.",
+          "sources": [
+            "8cd0267dd4b0",
+            "946b69daff73",
+            "a18bb3523f3d",
+            "97a83eacbf50",
+            "a9e27d611c7f",
+            "adfaaca8950a",
+            "aa1577409bdf"
+          ]
+        },
+        {
+          "text": "The breaches come amid a recent wave of technology outages or disruptions in the US.",
+          "sources": [
+            "a18bb3523f3d",
+            "97a83eacbf50",
+            "a9e27d611c7f",
+            "aa1577409bdf"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "8cd0267dd4b0",
+              "quote": "FBI investigating potential breach of its crime database",
+              "field": "headline"
+            },
+            {
+              "article_id": "aa1577409bdf",
+              "quote": "USDA, FBI breached by hackers amid spate of tech outages",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the FBI's investigation, citing two people briefed on the matter.",
+              "sources": [
+                "8cd0267dd4b0"
+              ]
+            },
+            {
+              "text": "Specifies that the intrusions targeted a farmer-payment system at the USDA.",
+              "sources": [
+                "aa1577409bdf"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "a18bb3523f3d",
+              "quote": "US Agriculture Department and FBI hit by cyberattacks, media report",
+              "field": "headline"
+            },
+            {
+              "article_id": "adfaaca8950a",
+              "quote": "FBI reportedly investigating apparent hack of its criminal database",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Places the hacks within a recent wave of major technology disruptions across the US.",
+              "sources": [
+                "a18bb3523f3d"
+              ]
+            },
+            {
+              "text": "Explains that the NCIC database is used by federal and local law enforcement to share information.",
+              "sources": [
+                "adfaaca8950a"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "right",
+          "headline_quotes": [
+            {
+              "article_id": "946b69daff73",
+              "quote": "the 2nd time the bureau was targeted in months",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with this being the second time in months the FBI has been targeted.",
+              "sources": [
+                "946b69daff73"
+              ]
+            },
+            {
+              "text": "Attributes the report to CNN, citing multiple sources familiar with the investigation.",
+              "sources": [
+                "946b69daff73"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "right",
+          "text": "Does not mention the breach of the US Department of Agriculture.",
+          "sources": [
+            "a18bb3523f3d",
+            "aa1577409bdf"
+          ]
+        },
+        {
+          "lean": "right",
+          "text": "Does not mention the recent spate of technology outages in the US.",
+          "sources": [
+            "a18bb3523f3d",
+            "aa1577409bdf"
+          ]
+        },
+        {
+          "lean": "left",
+          "text": "Does not mention that the FBI had been targeted previously in recent months.",
+          "sources": [
+            "946b69daff73"
+          ]
+        },
+        {
+          "lean": "centre",
+          "text": "Does not mention that the FBI had been targeted previously in recent months.",
+          "sources": [
+            "946b69daff73"
+          ]
+        }
+      ],
+      "contested_claims": [],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "8cd0267dd4b0",
+              "quote": "FBI investigating potential breach of its crime database",
+              "field": "headline"
+            },
+            {
+              "article_id": "946b69daff73",
+              "quote": "the 2nd time the bureau was targeted in months",
+              "field": "headline"
+            },
+            {
+              "article_id": "a18bb3523f3d",
+              "quote": "US Agriculture Department and FBI hit by cyberattacks",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Focuses on the FBI's National Crime Information Center and the bureau's investigation.",
+              "sources": [
+                "8cd0267dd4b0",
+                "946b69daff73",
+                "adfaaca8950a",
+                "aa1577409bdf"
+              ]
+            },
+            {
+              "text": "Notes the wave of technology disruptions as context.",
+              "sources": [
+                "a18bb3523f3d",
+                "aa1577409bdf"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "97a83eacbf50",
+              "quote": "FBI, U.S. Agriculture Department breached by hackers, reports say",
+              "field": "headline"
+            },
+            {
+              "article_id": "97a83eacbf50",
+              "quote": "described as hacks, which are different from outages",
+              "field": "snippet"
+            },
+            {
+              "article_id": "a9e27d611c7f",
+              "quote": "concerns deepened over the recent spate of tech outages at key American institutions",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Distinguishes the hacks from outages such as those affecting Microsoft Outlook and the Federal Aviation Administration.",
+              "sources": [
+                "97a83eacbf50"
+              ]
+            },
+            {
+              "text": "Places the reports within deepening concerns over tech outages at key American institutions.",
+              "sources": [
+                "a9e27d611c7f"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "Hackers breached the FBI's National Crime Information Center database and systems at the US Department of Agriculture, according to US media reports. The FBI is investigating the apparent breach. The reports come amid a recent spate of technology outages at major US institutions.",
+        "sources": [
+          "8cd0267dd4b0",
+          "946b69daff73",
+          "a18bb3523f3d",
+          "97a83eacbf50",
+          "a9e27d611c7f",
+          "adfaaca8950a",
+          "aa1577409bdf"
+        ]
+      },
+      "conclusion": {
+        "text": "All sides report, citing US media or sources, that hackers breached the FBI's crime database and the USDA amid recent US tech outages. Left and centre outlets add investigation and system details, the right outlet stresses prior targeting of the FBI, and East outlets separate hacks from outages. No claims are contested.",
+        "sources": [
+          "8cd0267dd4b0",
+          "946b69daff73",
+          "a18bb3523f3d",
+          "97a83eacbf50",
+          "a9e27d611c7f",
+          "adfaaca8950a",
+          "aa1577409bdf"
+        ]
+      },
+      "validation": {
+        "kept": 31,
+        "dropped_by_reason": {}
+      }
+    },
+    {
+      "id": "d28cb04740e6",
+      "title": "Anthropic mathematician claims AI-assisted proof of Riemann hypothesis",
+      "rank": 7,
+      "outlet_count": 7,
+      "coverage": {
+        "lean": {
+          "left": 0,
+          "centre": 3,
+          "right": 1
+        },
+        "bloc": {
+          "west": 4,
+          "east": 3
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "97ea2de0f3a0",
+          "outlet_id": "thehindu",
+          "headline": "Anthropic researcher says Claude solved maths’ greatest riddle",
+          "snippet": "First proposed by German mathematician Bernhard Riemann in 1859, the hypothesis concerns the distribution of prime numbers and is widely regarded as the most important open question in pure…",
+          "url": "https://www.thehindu.com/sci-tech/technology/anthropic-researcher-says-claude-solved-maths-greatest-riddle/article71725942.ece",
+          "published_at": "2026-11-20T18:35:22Z",
+          "published_at_estimated": false,
+          "image_url": "https://th-i.thgim.com/public/incoming/d9fw45/article71725961.ece/alternates/LANDSCAPE_1200/2026-11-10T184736Z_1618194784_RC2UNLANRGUU_RTRMADP_3_ANTHROPIC-CLAUDE-GOOGLE.JPG"
+        },
+        {
+          "id": "5399682c6dd4",
+          "outlet_id": "bbc",
+          "headline": "In a year of AI solving maths problems, an Anthropic worker says he may have cracked the biggest",
+          "snippet": "A mathematician at Anthropic says he used an AI to prove the famed Riemann hypothesis, though verification will take some time.",
+          "url": "https://www.bbc.co.uk/news/articles/c6pqr2g7w059o",
+          "published_at": "2026-11-20T23:08:57Z",
+          "published_at_estimated": false,
+          "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/78a0/live/a0688a80-e531-11f1-99b6-a35a62fa4264.jpg"
+        },
+        {
+          "id": "0fbd0b3940a2",
+          "outlet_id": "japantimes",
+          "headline": "Anthropic researcher says Claude solved math’s greatest riddle",
+          "snippet": "The firm's chatbot may have helped prove the Riemann Hypothesis, a problem that has eluded mathematicians for more than 160 years.",
+          "url": "https://www.japantimes.co.jp/news/2026/11/21/world/science-health/ai-anthropic-claude-riemann-hypothesis/",
+          "published_at": "2026-11-21T07:46:00Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.japantimes.co.jp/japantimes/uploads/images/2026/11/21/thumbs/400x400/575307.jpg"
+        },
+        {
+          "id": "3e7defe37bd8",
+          "outlet_id": "thesun",
+          "headline": "World’s most famous unsolved maths riddle Riemann Hypothesis ‘solved’ by Anthropic’s AI chatbot after 167 years",
+          "snippet": "THE world's most famous unsolved maths riddle Riemann Hypothesis has reportedly been solved by Anthropic's AI chatbot. A researcher claims he and the company's Claude chatbot cracked the equation…",
+          "url": "https://www.thesun.co.uk/news/41090011/riemann-hypothesis-solved-anthropics-ai/",
+          "published_at": "2026-11-21T09:22:48Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.thesun.co.uk/wp-content%2Fuploads%2F2026%2F11%2Fcrop-41090181.jpg?quality%3D90%26"
+        },
+        {
+          "id": "08d6e6ef8f50",
+          "outlet_id": "dw",
+          "headline": "Anthropic researcher uses AI to solve math's greatest riddle",
+          "snippet": "The proposed breakthrough could reshape mathematical research, but still needs independent verification. It's the latest in a string of cases where AI has outpaced humans in solving famous maths…",
+          "url": "https://www.dw.com/en/anthropic-researcher-uses-ai-to-solve-math-s-greatest-riddle/a-80008428?maca=en-rss-en-world-4025-xml-mrss",
+          "published_at": "2026-11-21T10:29:00Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "3e635be8672f",
+          "outlet_id": "npr",
+          "headline": "Anthropic worker claims to have solved a Holy Grail of math problems with the help of AI",
+          "snippet": "A mathematician who works for artificial intelligence giant Anthropic claims he has solved a Holy Grail of math problems with the help of the company's AI tool Claude. It marks the second time in…",
+          "url": "https://www.npr.org/2026/11/21/g-s1-154922/anthropic-worker-claims-to-have-solved-a-holy-grail-of-math-problems-with-the-help-of-ai",
+          "published_at": "2026-11-21T12:30:16Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "4f6ff58dd426",
+          "outlet_id": "aljazeera",
+          "headline": "Riemann hypothesis: Has the world’s most famous maths problem been cracked?",
+          "snippet": "Mathematicians say the claimed proof, made with Claude, could be historic, but it may take weeks to understand it.",
+          "url": "https://www.aljazeera.com/news/2026/11/21/riemann-hypothesis-has-the-worlds-most-famous-maths-problem-been-cracked",
+          "published_at": "2026-11-21T12:49:20Z",
+          "published_at_estimated": false,
+          "image_url": null
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "A mathematician or researcher at Anthropic claims to have proved the Riemann hypothesis with the help of AI.",
+          "sources": [
+            "97ea2de0f3a0",
+            "5399682c6dd4",
+            "0fbd0b3940a2",
+            "3e7defe37bd8",
+            "08d6e6ef8f50",
+            "3e635be8672f",
+            "4f6ff58dd426"
+          ]
+        },
+        {
+          "text": "The AI involved is Anthropic's chatbot Claude.",
+          "sources": [
+            "97ea2de0f3a0",
+            "0fbd0b3940a2",
+            "3e7defe37bd8",
+            "3e635be8672f",
+            "4f6ff58dd426"
+          ]
+        },
+        {
+          "text": "The problem has gone unsolved for more than 160 years, having been proposed in 1859.",
+          "sources": [
+            "97ea2de0f3a0",
+            "0fbd0b3940a2",
+            "3e7defe37bd8"
+          ]
+        },
+        {
+          "text": "The claimed proof has not yet been verified, and checking or understanding it will take time.",
+          "sources": [
+            "5399682c6dd4",
+            "08d6e6ef8f50",
+            "4f6ff58dd426"
+          ]
+        },
+        {
+          "text": "The claim follows other recent cases of AI solving famous maths problems.",
+          "sources": [
+            "5399682c6dd4",
+            "08d6e6ef8f50",
+            "3e635be8672f"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "5399682c6dd4",
+              "quote": "he may have cracked the biggest",
+              "field": "headline"
+            },
+            {
+              "article_id": "08d6e6ef8f50",
+              "quote": "still needs independent verification",
+              "field": "snippet"
+            },
+            {
+              "article_id": "3e635be8672f",
+              "quote": "claims to have solved a Holy Grail of math problems",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the claim being attributed to the researcher and with the need for verification.",
+              "sources": [
+                "5399682c6dd4",
+                "08d6e6ef8f50",
+                "3e635be8672f"
+              ]
+            },
+            {
+              "text": "Places the claim within a series of AI successes on famous maths problems.",
+              "sources": [
+                "5399682c6dd4",
+                "08d6e6ef8f50",
+                "3e635be8672f"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "right",
+          "headline_quotes": [
+            {
+              "article_id": "3e7defe37bd8",
+              "quote": "‘solved’ by Anthropic’s AI chatbot after 167 years",
+              "field": "headline"
+            },
+            {
+              "article_id": "3e7defe37bd8",
+              "quote": "has reportedly been solved",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Emphasises the problem's fame and its 167-year history, describing it as the world's most famous unsolved maths riddle.",
+              "sources": [
+                "3e7defe37bd8"
+              ]
+            },
+            {
+              "text": "Attributes the solution to Anthropic's chatbot, with 'solved' in quotation marks and described as reported.",
+              "sources": [
+                "3e7defe37bd8"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "right",
+          "text": "Right-leaning coverage does not mention that the proof still needs independent verification.",
+          "sources": [
+            "5399682c6dd4",
+            "08d6e6ef8f50"
+          ]
+        },
+        {
+          "lean": "right",
+          "text": "Right-leaning coverage does not mention earlier cases of AI solving famous maths problems.",
+          "sources": [
+            "5399682c6dd4",
+            "08d6e6ef8f50",
+            "3e635be8672f"
+          ]
+        }
+      ],
+      "contested_claims": [],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "5399682c6dd4",
+              "quote": "verification will take some time",
+              "field": "snippet"
+            },
+            {
+              "article_id": "08d6e6ef8f50",
+              "quote": "The proposed breakthrough could reshape mathematical research",
+              "field": "snippet"
+            },
+            {
+              "article_id": "3e7defe37bd8",
+              "quote": "World’s most famous unsolved maths riddle",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Emphasises verification still pending and the potential effect on mathematical research.",
+              "sources": [
+                "5399682c6dd4",
+                "08d6e6ef8f50"
+              ]
+            },
+            {
+              "text": "Frames the claim as part of a trend of AI solving maths problems.",
+              "sources": [
+                "5399682c6dd4",
+                "08d6e6ef8f50",
+                "3e635be8672f"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "97ea2de0f3a0",
+              "quote": "Claude solved maths’ greatest riddle",
+              "field": "headline"
+            },
+            {
+              "article_id": "4f6ff58dd426",
+              "quote": "Has the world’s most famous maths problem been cracked?",
+              "field": "headline"
+            },
+            {
+              "article_id": "4f6ff58dd426",
+              "quote": "it may take weeks to understand it",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Provides background on the hypothesis: proposed by Bernhard Riemann in 1859, concerning prime numbers, unsolved for over 160 years.",
+              "sources": [
+                "97ea2de0f3a0",
+                "0fbd0b3940a2"
+              ]
+            },
+            {
+              "text": "Reports mathematicians saying the claimed proof could be historic but may take weeks to understand.",
+              "sources": [
+                "4f6ff58dd426"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "A mathematician at Anthropic says he used the company's AI chatbot Claude to prove the Riemann hypothesis, a problem proposed in 1859 about the distribution of prime numbers. Several outlets note the claimed proof still needs independent verification, which may take weeks.",
+        "sources": [
+          "97ea2de0f3a0",
+          "5399682c6dd4",
+          "0fbd0b3940a2",
+          "3e7defe37bd8",
+          "08d6e6ef8f50",
+          "3e635be8672f",
+          "4f6ff58dd426"
+        ]
+      },
+      "conclusion": {
+        "text": "All outlets report an Anthropic mathematician's claim to have proved the Riemann hypothesis with AI. Centre and some East outlets stress that verification is pending, while the right-leaning Sun leads with the problem's 167-year history and puts 'solved' in quotation marks. No outlets contradict one another on the facts.",
+        "sources": [
+          "97ea2de0f3a0",
+          "5399682c6dd4",
+          "0fbd0b3940a2",
+          "3e7defe37bd8",
+          "08d6e6ef8f50",
+          "3e635be8672f",
+          "4f6ff58dd426"
+        ]
+      },
+      "validation": {
+        "kept": 28,
+        "dropped_by_reason": {}
+      }
+    },
+    {
+      "id": "32c2c31a759d",
+      "title": "Drones strike Russian cargo ship in Gulf of Finland",
+      "rank": 8,
+      "outlet_count": 6,
+      "coverage": {
+        "lean": {
+          "left": 0,
+          "centre": 1,
+          "right": 2
+        },
+        "bloc": {
+          "west": 3,
+          "east": 3
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "de67e7feec6d",
+          "outlet_id": "moscowtimes",
+          "headline": "Russia Says Cargo Vessel Struck by Drones in Gulf of Finland",
+          "snippet": "Finland said that the damaged vessel was on fire and had drifted from international waters into its territorial waters.",
+          "url": "https://www.themoscowtimes.com/2026/11/21/russia-says-cargo-vessel-struck-by-drones-in-gulf-of-finland-a94342",
+          "published_at": "2026-11-21T11:50:07Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "e133c6437b19",
+          "outlet_id": "thesun",
+          "headline": "Russian ship ‘carrying war supplies’ engulfed in flames after drone blitz near Finland as Zelensky blasts ‘killer’ Putin",
+          "snippet": "A RUSSIAN ship reportedly carrying military supplies was engulfed in flames after a mystery drone blitz near Finland - after Zelensky branded Putin a \"killer\". The cargo vessel was struck by two…",
+          "url": "https://www.thesun.co.uk/news/41091000/russian-ship-ablaze-drone-strike-finland/",
+          "published_at": "2026-11-21T12:10:21Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.thesun.co.uk/wp-content%2Fuploads%2F2026%2F11%2Fnewspress-collage-ajyw3dckf-1795262961978.jpg?quality%3D90%26"
+        },
+        {
+          "id": "2a28880e790a",
+          "outlet_id": "france24",
+          "headline": "Drone attack sets Russian cargo ship ablaze in Gulf of Finland",
+          "snippet": "A Russian cargo ship caught fire after a drone strike in international waters in the Gulf of Finland on Saturday, Finnish authorities said. Helsinki alerted NATO and imposed temporary restrictions…",
+          "url": "https://www.france24.com/en/europe/20261121-drone-attack-sets-russian-cargo-ship-ablaze-in-gulf-of-finland",
+          "published_at": "2026-11-21T12:35:54Z",
+          "published_at_estimated": false,
+          "image_url": "https://s.france24.com/media/display/d14e7d92-e5a1-11f1-ada4-e56ab3dc0809/w:1024/p:16x9/Cargo-Finland.jpg"
+        },
+        {
+          "id": "19dc60266a13",
+          "outlet_id": "aljazeera",
+          "headline": "Russia says Kaliningrad-bound ship struck by drones in Gulf of Finland",
+          "snippet": "Two drones attack a cargo ship close to Russia's maritime border, causing damage and crew evacuation.",
+          "url": "https://www.aljazeera.com/news/2026/11/21/russia-says-kaliningrad-bound-ship-struck-by-drones-in-gulf-of-finland",
+          "published_at": "2026-11-21T12:45:24Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "3909b1640227",
+          "outlet_id": "thehindu",
+          "headline": "Finland detects drone attack on Russian cargo ship in Baltic",
+          "snippet": "The Finnish Defence Ministry did not specify who was behind the drone strike, but Prime Minister Petteri Orpo said in a message “War is spilling over into our immediate vicinity... Ukraine has the…",
+          "url": "https://www.thehindu.com/news/international/finland-detects-drone-attack-on-russian-cargo-ship-in-baltic/article71728516.ece",
+          "published_at": "2026-11-21T13:56:11Z",
+          "published_at_estimated": false,
+          "image_url": "https://th-i.thgim.com/public/incoming/i5kwff/article71728519.ece/alternates/LANDSCAPE_1200/2026-11-21T121758Z_39228957_RC2BSOAQS763_RTRMADP_3_UKRAINE-CRISIS-RUSSIA-VESSEL.JPG"
+        },
+        {
+          "id": "eaae22cadef4",
+          "outlet_id": "dailymail",
+          "headline": "Russian cargo ship 'carrying military supplies' is hit by drones in Gulf of Finland as it drifts towards Nato waters",
+          "snippet": "The ship (pictured) had been attacked by two drones in international waters about three nautical miles from Russia's border, authorities said.",
+          "url": "https://www.dailymail.com/news/article-16311227/Russian-ship-military-supplies-drones-Gulf-Finland-Nato.html",
+          "published_at": "2026-11-21T14:15:39Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.dailymail.com/1s/2026/11/21/13/112649747-0-image-m-13_1795269297935.jpg"
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "A Russian cargo ship was hit by drones in the Gulf of Finland.",
+          "sources": [
+            "de67e7feec6d",
+            "e133c6437b19",
+            "2a28880e790a",
+            "19dc60266a13",
+            "3909b1640227",
+            "eaae22cadef4"
+          ]
+        },
+        {
+          "text": "The ship caught fire after the strike.",
+          "sources": [
+            "de67e7feec6d",
+            "e133c6437b19",
+            "2a28880e790a"
+          ]
+        },
+        {
+          "text": "Two drones were involved in the attack.",
+          "sources": [
+            "e133c6437b19",
+            "19dc60266a13",
+            "eaae22cadef4"
+          ]
+        },
+        {
+          "text": "The attack took place in international waters close to Russia's maritime border.",
+          "sources": [
+            "2a28880e790a",
+            "eaae22cadef4",
+            "19dc60266a13",
+            "de67e7feec6d"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "2a28880e790a",
+              "quote": "Drone attack sets Russian cargo ship ablaze in Gulf of Finland",
+              "field": "headline"
+            },
+            {
+              "article_id": "2a28880e790a",
+              "quote": "Helsinki alerted NATO and imposed temporary restrictions",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the fire and attributes the account to Finnish authorities.",
+              "sources": [
+                "2a28880e790a"
+              ]
+            },
+            {
+              "text": "Notes that Finland alerted NATO and imposed temporary restrictions.",
+              "sources": [
+                "2a28880e790a"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "right",
+          "headline_quotes": [
+            {
+              "article_id": "e133c6437b19",
+              "quote": "Russian ship ‘carrying war supplies’ engulfed in flames after drone blitz near Finland",
+              "field": "headline"
+            },
+            {
+              "article_id": "e133c6437b19",
+              "quote": "Zelensky blasts ‘killer’ Putin",
+              "field": "headline"
+            },
+            {
+              "article_id": "eaae22cadef4",
+              "quote": "as it drifts towards Nato waters",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Foregrounds reports that the ship was carrying military supplies.",
+              "sources": [
+                "e133c6437b19",
+                "eaae22cadef4"
+              ]
+            },
+            {
+              "text": "Links the strike to Zelensky calling Putin a \"killer\".",
+              "sources": [
+                "e133c6437b19"
+              ]
+            },
+            {
+              "text": "Highlights the ship drifting towards Nato waters.",
+              "sources": [
+                "eaae22cadef4"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not mention reports that the ship was carrying military supplies.",
+          "sources": [
+            "e133c6437b19",
+            "eaae22cadef4"
+          ]
+        },
+        {
+          "lean": "right",
+          "text": "Right-leaning coverage does not mention Finland alerting NATO or imposing temporary restrictions.",
+          "sources": [
+            "2a28880e790a"
+          ]
+        }
+      ],
+      "contested_claims": [],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "e133c6437b19",
+              "quote": "mystery drone blitz near Finland",
+              "field": "snippet"
+            },
+            {
+              "article_id": "eaae22cadef4",
+              "quote": "'carrying military supplies'",
+              "field": "headline"
+            },
+            {
+              "article_id": "2a28880e790a",
+              "quote": "Finnish authorities said",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Foregrounds the reported military cargo and the ship's movement towards Nato waters.",
+              "sources": [
+                "e133c6437b19",
+                "eaae22cadef4"
+              ]
+            },
+            {
+              "text": "Notes Finland's alert to NATO and Zelensky's remarks about Putin.",
+              "sources": [
+                "2a28880e790a",
+                "e133c6437b19"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "de67e7feec6d",
+              "quote": "Russia Says Cargo Vessel Struck by Drones in Gulf of Finland",
+              "field": "headline"
+            },
+            {
+              "article_id": "19dc60266a13",
+              "quote": "Russia says Kaliningrad-bound ship struck by drones",
+              "field": "headline"
+            },
+            {
+              "article_id": "3909b1640227",
+              "quote": "War is spilling over into our immediate vicinity",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with Russia's account of the strike.",
+              "sources": [
+                "de67e7feec6d",
+                "19dc60266a13"
+              ]
+            },
+            {
+              "text": "Reports the ship was Kaliningrad-bound and that the crew was evacuated.",
+              "sources": [
+                "19dc60266a13"
+              ]
+            },
+            {
+              "text": "Notes Finland did not name the attacker and quotes Prime Minister Petteri Orpo on war spilling over.",
+              "sources": [
+                "3909b1640227"
+              ]
+            },
+            {
+              "text": "Reports Finland's statement that the ship drifted into Finnish territorial waters.",
+              "sources": [
+                "de67e7feec6d"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "A Russian cargo ship was struck by drones in the Gulf of Finland and caught fire, according to Russian and Finnish accounts. Reports say two drones hit it in international waters near Russia's maritime border. Finland's Defence Ministry did not say who was behind the strike.",
+        "sources": [
+          "de67e7feec6d",
+          "e133c6437b19",
+          "2a28880e790a",
+          "19dc60266a13",
+          "3909b1640227",
+          "eaae22cadef4"
+        ]
+      },
+      "conclusion": {
+        "text": "All coverage agrees a Russian cargo ship was struck by drones in the Gulf of Finland, with several noting fire and two drones. Right-leaning outlets lead with reported military supplies, the centre outlet with Finland alerting NATO, and Eastern outlets with Russia's account, the Kaliningrad destination and Orpo's remarks. No outlet names who carried out the strike.",
+        "sources": [
+          "de67e7feec6d",
+          "e133c6437b19",
+          "2a28880e790a",
+          "19dc60266a13",
+          "3909b1640227",
+          "eaae22cadef4"
+        ]
+      },
+      "validation": {
+        "kept": 30,
+        "dropped_by_reason": {}
+      }
+    },
+    {
+      "id": "cd963a7e53bd",
+      "title": "Cost-of-living and youth protests across France and Europe",
+      "rank": 9,
+      "outlet_count": 5,
+      "coverage": {
+        "lean": {
+          "left": 1,
+          "centre": 2,
+          "right": 2
+        },
+        "bloc": {
+          "west": 5,
+          "east": 0
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": "west"
+      },
+      "articles": [
+        {
+          "id": "8eadffd8dc48",
+          "outlet_id": "nyt",
+          "headline": "Gen Z Is Driving Global Political Change, Aiding Far Left and Far Right",
+          "snippet": "Protests across Europe are the latest example of global youth anger that has driven demonstrations and election upsets.",
+          "url": "https://www.nytimes.com/2026/11/20/world/europe/youth-protests-far-right-left.html",
+          "published_at": "2026-11-20T14:17:02Z",
+          "published_at_estimated": false,
+          "image_url": "https://static01.nyt.com/images/2026/11/20/multimedia/20Europe-youth-01-zvtl/20Europe-youth-01-zvtl-mediumSquareAt3X.jpg"
+        },
+        {
+          "id": "7cd1334b6926",
+          "outlet_id": "bbc",
+          "headline": "Cost of living protests sweep across Europe",
+          "snippet": "Thousands marched across European cities on Friday to protest against the cost of living and other issues.",
+          "url": "https://www.bbc.co.uk/news/videos/c6dx12ppeqn4o",
+          "published_at": "2026-11-20T16:45:34Z",
+          "published_at_estimated": false,
+          "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/ddea/live/8dcffdf0-e50d-11f1-99a1-253766e7ad8b.jpg"
+        },
+        {
+          "id": "87d0943ae746",
+          "outlet_id": "france24",
+          "headline": "Live: Demonstrators rally across France for sixth consecutive Saturday of protests",
+          "snippet": "France faces a sixth consecutive Saturday of protests, with demonstrators taking to the streets to rally over the rising cost of living and the government's handling of weeks of social unrest ahead…",
+          "url": "https://www.france24.com/en/france/20261121-live-france-braces-for-fresh-protests-as-social-unrest-enters-sixth-week",
+          "published_at": "2026-11-21T08:29:53Z",
+          "published_at_estimated": false,
+          "image_url": "https://s.france24.com/media/display/9682c2f0-e5aa-11f1-8719-ebb478925cf0/w:1024/p:16x9/2026-11-21T122156Z-506982537-RC2CSOATMIMV-RTRMADP-3-FRANCE-PROTEST.jpg"
+        },
+        {
+          "id": "fd937f828fc3",
+          "outlet_id": "dailymail",
+          "headline": "Youth Strike protesters attempted to bring a France-style 'day of action' to London: ROBERT HARDMAN reveals how it actually went",
+          "snippet": "Angry scenes played out in London on Friday as protesters attempted to bring a France-style 'day of action' to Britain.The Mail's Robert Hardman was on scene to witness the chaos.",
+          "url": "https://www.dailymail.com/news/article-16310579/Video-Youth-Strike-protesters-attempted-bring-France-style-student-revolution-London-heres-actually-went.html",
+          "published_at": "2026-11-21T09:58:23Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.dailymail.com/1s/2026/11/21/01/112645877-0-image-m-27_1795223622410.jpg"
+        },
+        {
+          "id": "8d10618a87a9",
+          "outlet_id": "france24",
+          "headline": "Thousands protest overs prices, education, military spending in France and Europe",
+          "snippet": "France is bracing for a sixth consecutive Saturday of protests, with demonstrators expected to rally over the rising cost of living and the government's handling of weeks of social unrest ahead of…",
+          "url": "https://www.france24.com/en/thousands-protest-overs-prices-education-military-spending-in-france-and-europe",
+          "published_at": "2026-11-21T12:48:46Z",
+          "published_at_estimated": false,
+          "image_url": "https://s.france24.com/media/display/c489cff2-e5a7-11f1-bb16-ebb478925cf0/w:1024/p:16x9/EN-20261121-131728-132120-CS.jpg"
+        },
+        {
+          "id": "c96a9f3664e1",
+          "outlet_id": "fox",
+          "headline": "ASRA Q. NOMANI: Communist, hard-left groups mount global youth strike to bring 'socialist revolution'",
+          "snippet": "An analysis finds 114 communist, Marxist and socialist groups powered the \"International Youth Strike\" across 24 countries, with red flags in the streets.",
+          "url": "https://www.foxnews.com/world/asra-q-nomani-communist-left-wing-extremist-groups-organize-youth-strike-realize-socialist-revolution",
+          "published_at": "2026-11-21T13:33:39Z",
+          "published_at_estimated": false,
+          "image_url": "https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2026/11/931/523/students-protest-milan-general-strike.jpg?ve=1&tl=1"
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "Protests took place across multiple European countries.",
+          "sources": [
+            "8eadffd8dc48",
+            "7cd1334b6926",
+            "8d10618a87a9",
+            "c96a9f3664e1"
+          ]
+        },
+        {
+          "text": "France faced a sixth consecutive Saturday of protests.",
+          "sources": [
+            "87d0943ae746",
+            "8d10618a87a9"
+          ]
+        },
+        {
+          "text": "The rising cost of living was a central grievance of the protesters.",
+          "sources": [
+            "7cd1334b6926",
+            "87d0943ae746",
+            "8d10618a87a9"
+          ]
+        },
+        {
+          "text": "Young people were prominent in the protests, described as a youth strike or youth anger.",
+          "sources": [
+            "8eadffd8dc48",
+            "fd937f828fc3",
+            "c96a9f3664e1"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "8eadffd8dc48",
+              "quote": "Gen Z Is Driving Global Political Change, Aiding Far Left and Far Right",
+              "field": "headline"
+            },
+            {
+              "article_id": "8eadffd8dc48",
+              "quote": "global youth anger that has driven demonstrations and election upsets",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Places the European protests within a wider pattern of global youth anger linked to demonstrations and election upsets.",
+              "sources": [
+                "8eadffd8dc48"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "7cd1334b6926",
+              "quote": "Cost of living protests sweep across Europe",
+              "field": "headline"
+            },
+            {
+              "article_id": "87d0943ae746",
+              "quote": "sixth consecutive Saturday of protests",
+              "field": "headline"
+            },
+            {
+              "article_id": "8d10618a87a9",
+              "quote": "Thousands protest overs prices, education, military spending",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the cost of living and other grievances, including education and military spending.",
+              "sources": [
+                "7cd1334b6926",
+                "8d10618a87a9"
+              ]
+            },
+            {
+              "text": "Highlights the French government's handling of weeks of social unrest.",
+              "sources": [
+                "87d0943ae746",
+                "8d10618a87a9"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "right",
+          "headline_quotes": [
+            {
+              "article_id": "c96a9f3664e1",
+              "quote": "Communist, hard-left groups mount global youth strike to bring 'socialist revolution'",
+              "field": "headline"
+            },
+            {
+              "article_id": "fd937f828fc3",
+              "quote": "Angry scenes played out in London on Friday",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Foregrounds the political affiliations of organisers, citing 114 communist, Marxist and socialist groups across 24 countries.",
+              "sources": [
+                "c96a9f3664e1"
+              ]
+            },
+            {
+              "text": "Focuses on the London 'day of action', describing angry scenes and chaos.",
+              "sources": [
+                "fd937f828fc3"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "left",
+          "text": "Left coverage does not mention the cost of living as a grievance driving the protests.",
+          "sources": [
+            "7cd1334b6926",
+            "87d0943ae746",
+            "8d10618a87a9"
+          ]
+        },
+        {
+          "lean": "right",
+          "text": "Right coverage does not mention the cost of living as a grievance driving the protests.",
+          "sources": [
+            "7cd1334b6926",
+            "87d0943ae746",
+            "8d10618a87a9"
+          ]
+        },
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not mention the youth or Gen Z character of the protests.",
+          "sources": [
+            "8eadffd8dc48",
+            "fd937f828fc3",
+            "c96a9f3664e1"
+          ]
+        }
+      ],
+      "contested_claims": [],
+      "opinion": [
+        {
+          "text": "Asra Q. Nomani's piece describes the youth strike as mounted by communist and hard-left groups seeking 'socialist revolution'.",
+          "sources": [
+            "c96a9f3664e1"
+          ]
+        },
+        {
+          "text": "Robert Hardman's on-scene account of the London day of action describes the scenes as chaos.",
+          "sources": [
+            "fd937f828fc3"
+          ]
+        }
+      ],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "7cd1334b6926",
+              "quote": "Cost of living protests sweep across Europe",
+              "field": "headline"
+            },
+            {
+              "article_id": "8eadffd8dc48",
+              "quote": "Gen Z Is Driving Global Political Change",
+              "field": "headline"
+            },
+            {
+              "article_id": "c96a9f3664e1",
+              "quote": "Communist, hard-left groups mount global youth strike",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Coverage variously emphasises cost-of-living grievances, youth-driven political change and the role of left-wing organising groups.",
+              "sources": [
+                "7cd1334b6926",
+                "8eadffd8dc48",
+                "c96a9f3664e1"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "Thousands marched across European cities on Friday against the cost of living and other issues, while France faced a sixth consecutive Saturday of protests. In London, youth strike protesters attempted to bring a France-style 'day of action' to Britain.",
+        "sources": [
+          "7cd1334b6926",
+          "87d0943ae746",
+          "8d10618a87a9",
+          "fd937f828fc3",
+          "8eadffd8dc48"
+        ]
+      },
+      "conclusion": {
+        "text": "All sides report protests across Europe, with France facing a sixth Saturday of unrest. Centre outlets lead with cost of living, the left frames a global Gen Z wave, and the right stresses communist organising groups and chaos in London. Centre coverage omits the youth angle; left and right omit cost of living.",
+        "sources": [
+          "7cd1334b6926",
+          "87d0943ae746",
+          "8d10618a87a9",
+          "8eadffd8dc48",
+          "c96a9f3664e1",
+          "fd937f828fc3"
+        ]
+      },
+      "validation": {
+        "kept": 27,
+        "dropped_by_reason": {}
+      }
+    },
+    {
+      "id": "52dc11853a9f",
+      "title": "Man convicted of starting deadly 2025 Palisades fire in Los Angeles",
+      "rank": 10,
+      "outlet_count": 5,
+      "coverage": {
+        "lean": {
+          "left": 1,
+          "centre": 3,
+          "right": 1
+        },
+        "bloc": {
+          "west": 5,
+          "east": 0
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": "west"
+      },
+      "articles": [
+        {
+          "id": "7e4bb16239fb",
+          "outlet_id": "nbc",
+          "headline": "Man found guilty of starting deadly Palisades Fire in Los Angeles",
+          "snippet": "LOS ANGELES — Almost five months after a first trial ended in a mistrial, a jury found a man guilty of starting what would become the devastating 2025 Palisades Fire in Los Angeles that displaced…",
+          "url": "https://www.nbcnews.com/news/us-news/pacific-palisades-fire-retrial-jonathan-rinderknecht-rcna610336",
+          "published_at": "2026-11-20T22:51:54Z",
+          "published_at_estimated": false,
+          "image_url": "https://media-cldnry.s-nbcnews.com/image/upload/t_fit_1500w/rockcms/2026-11/261119-pacific-palisades-vsb-1934-56c4e2.jpg"
+        },
+        {
+          "id": "198d55db8037",
+          "outlet_id": "examiner",
+          "headline": "Palisades Fire arsonist found guilty on all counts in deadly blaze that killed 12",
+          "snippet": "The California man accused of starting the Palisades Fire in January 2025 was found guilty on all counts by a federal jury on Friday after his mistrial in June. Jonathan Rinderknecht, 30, faced two…",
+          "url": "https://www.washingtonexaminer.com/news/crime/4810846/palisades-fire-arsonist-guilty-all-counts-california/",
+          "published_at": "2026-11-21T01:20:40Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.washingtonexaminer.com/wp-content/uploads/2026/11/AP26324834912819.jpg?w=1024"
+        },
+        {
+          "id": "540c2de3c501",
+          "outlet_id": "bbc",
+          "headline": "Man convicted of starting Palisades fire in Los Angeles",
+          "snippet": "The 30-year-old LA resident was convicted of arson leading to wildfires that killed 12 people and destroyed more than 6,800 buildings.",
+          "url": "https://www.bbc.co.uk/news/articles/c64gn0gy8rj3o",
+          "published_at": "2026-11-21T04:34:00Z",
+          "published_at_estimated": false,
+          "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/8053/live/b01bb4f0-e556-11f1-ad51-c3505e495cd9.jpg"
+        },
+        {
+          "id": "df125d0bef1d",
+          "outlet_id": "dw",
+          "headline": "Man convicted of arson over deadly 2025 Palisades fire in Los Angeles",
+          "snippet": "A 30-year-old man has been convicted of causing one of the most destructive wildfires in the history of Los Angeles. The verdict came after the case was retried.",
+          "url": "https://www.dw.com/en/man-convicted-of-arson-over-deadly-2025-palisades-fire-in-los-angeles/a-80007933?maca=en-rss-en-world-4025-xml-mrss",
+          "published_at": "2026-11-21T07:10:00Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "bfbc8d4f3a1d",
+          "outlet_id": "npr",
+          "headline": "Federal jury convicts man of starting the deadly 2025 Palisades Fire in Los Angeles",
+          "snippet": "Prosecutors argued the defendant, 30-year-old Jonathan Rinderknecht, had been \"mad at everything\" in the days leading up to the January 2025 fire, which killed 12 people.",
+          "url": "https://www.npr.org/2026/11/21/nx-s1-6049625/palisades-fire-conviction",
+          "published_at": "2026-11-21T13:58:33Z",
+          "published_at_estimated": false,
+          "image_url": null
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "A jury found a man guilty of starting the deadly Palisades Fire in Los Angeles.",
+          "sources": [
+            "7e4bb16239fb",
+            "198d55db8037",
+            "540c2de3c501",
+            "df125d0bef1d",
+            "bfbc8d4f3a1d"
+          ]
+        },
+        {
+          "text": "The conviction came after an earlier trial ended in a mistrial and the case was retried.",
+          "sources": [
+            "7e4bb16239fb",
+            "198d55db8037",
+            "df125d0bef1d"
+          ]
+        },
+        {
+          "text": "The convicted man is 30 years old.",
+          "sources": [
+            "198d55db8037",
+            "540c2de3c501",
+            "df125d0bef1d",
+            "bfbc8d4f3a1d"
+          ]
+        },
+        {
+          "text": "The fire killed 12 people.",
+          "sources": [
+            "198d55db8037",
+            "540c2de3c501",
+            "bfbc8d4f3a1d"
+          ]
+        },
+        {
+          "text": "The defendant is named as Jonathan Rinderknecht, and the verdict was delivered by a federal jury.",
+          "sources": [
+            "198d55db8037",
+            "bfbc8d4f3a1d"
+          ]
+        },
+        {
+          "text": "The fire started in January 2025.",
+          "sources": [
+            "198d55db8037",
+            "bfbc8d4f3a1d"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "7e4bb16239fb",
+              "quote": "Almost five months after a first trial ended in a mistrial",
+              "field": "snippet"
+            },
+            {
+              "article_id": "7e4bb16239fb",
+              "quote": "the devastating 2025 Palisades Fire in Los Angeles that displaced",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the time since the first trial ended in a mistrial.",
+              "sources": [
+                "7e4bb16239fb"
+              ]
+            },
+            {
+              "text": "Describes the fire as devastating and refers to displacement.",
+              "sources": [
+                "7e4bb16239fb"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "540c2de3c501",
+              "quote": "destroyed more than 6,800 buildings",
+              "field": "snippet"
+            },
+            {
+              "article_id": "df125d0bef1d",
+              "quote": "one of the most destructive wildfires in the history of Los Angeles",
+              "field": "snippet"
+            },
+            {
+              "article_id": "bfbc8d4f3a1d",
+              "quote": "had been \"mad at everything\"",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Emphasises the scale of destruction, citing deaths and more than 6,800 buildings destroyed.",
+              "sources": [
+                "540c2de3c501",
+                "df125d0bef1d"
+              ]
+            },
+            {
+              "text": "Reports the prosecution's argument that the defendant had been \"mad at everything\" before the fire.",
+              "sources": [
+                "bfbc8d4f3a1d"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "right",
+          "headline_quotes": [
+            {
+              "article_id": "198d55db8037",
+              "quote": "Palisades Fire arsonist found guilty on all counts",
+              "field": "headline"
+            },
+            {
+              "article_id": "198d55db8037",
+              "quote": "deadly blaze that killed 12",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the man described as an arsonist being found guilty on all counts by a federal jury.",
+              "sources": [
+                "198d55db8037"
+              ]
+            },
+            {
+              "text": "Names the defendant and notes the earlier mistrial in June.",
+              "sources": [
+                "198d55db8037"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "left",
+          "text": "Does not mention the death toll of 12.",
+          "sources": [
+            "198d55db8037",
+            "540c2de3c501",
+            "bfbc8d4f3a1d"
+          ]
+        },
+        {
+          "lean": "left",
+          "text": "Does not name the defendant.",
+          "sources": [
+            "198d55db8037",
+            "bfbc8d4f3a1d"
+          ]
+        },
+        {
+          "lean": "right",
+          "text": "Does not mention the number of buildings destroyed.",
+          "sources": [
+            "540c2de3c501"
+          ]
+        }
+      ],
+      "contested_claims": [],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "198d55db8037",
+              "quote": "found guilty on all counts",
+              "field": "headline"
+            },
+            {
+              "article_id": "bfbc8d4f3a1d",
+              "quote": "Federal jury convicts man of starting the deadly 2025 Palisades Fire",
+              "field": "headline"
+            },
+            {
+              "article_id": "540c2de3c501",
+              "quote": "killed 12 people and destroyed more than 6,800 buildings",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the conviction following a retrial after a mistrial.",
+              "sources": [
+                "7e4bb16239fb",
+                "198d55db8037",
+                "df125d0bef1d"
+              ]
+            },
+            {
+              "text": "Emphasises the fire's deadliness and destructiveness.",
+              "sources": [
+                "198d55db8037",
+                "540c2de3c501",
+                "df125d0bef1d",
+                "bfbc8d4f3a1d"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "A jury convicted a 30-year-old man of starting the 2025 Palisades Fire in Los Angeles, a verdict that followed an earlier mistrial. The fire killed 12 people. Two reports name him as Jonathan Rinderknecht and say the jury was federal.",
+        "sources": [
+          "7e4bb16239fb",
+          "198d55db8037",
+          "540c2de3c501",
+          "df125d0bef1d",
+          "bfbc8d4f3a1d"
+        ]
+      },
+      "conclusion": {
+        "text": "All outlets report that a jury convicted a man of starting the deadly 2025 Palisades Fire, several noting an earlier mistrial. The right-leaning report leads with guilt on all counts, centre outlets stress destruction and the prosecution's motive argument, and the left-leaning report leads with the mistrial. No claims are contested.",
+        "sources": [
+          "7e4bb16239fb",
+          "198d55db8037",
+          "540c2de3c501",
+          "df125d0bef1d",
+          "bfbc8d4f3a1d"
+        ]
+      },
+      "validation": {
+        "kept": 29,
+        "dropped_by_reason": {}
+      }
+    }
+  ]
+}
