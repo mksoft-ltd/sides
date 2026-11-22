@@ -1,0 +1,3925 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-11-22T14:22:57.862200Z",
+  "date": "2026-11-22",
+  "meta": {
+    "model": "claude-opus-5-5",
+    "cost_usd": 0.55766,
+    "outlets_polled": 29,
+    "articles_collected": 535,
+    "warnings": [
+      "1 feed(s) failed during collect",
+      "1 feed item(s) dropped at collect (link_off_domain=1)"
+    ],
+    "validation": {
+      "kept": 291,
+      "dropped_by_reason": {
+        "untrusted_text": 2,
+        "title_ungrounded": 1
+      }
+    }
+  },
+  "outlets": [
+    {
+      "id": "guardian",
+      "name": "The Guardian",
+      "lean": "left",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United Kingdom",
+      "home_url": "https://www.theguardian.com/",
+      "rating_basis": "AllSides media bias rating (Lean Left), checked Oct 2026"
+    },
+    {
+      "id": "independent",
+      "name": "The Independent",
+      "lean": "left",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United Kingdom",
+      "home_url": "https://www.independent.co.uk/",
+      "rating_basis": "AllSides media bias rating (Lean Left), checked Oct 2026"
+    },
+    {
+      "id": "mirror",
+      "name": "Daily Mirror",
+      "lean": "left",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United Kingdom",
+      "home_url": "https://www.mirror.co.uk/",
+      "rating_basis": "Ad Fontes Media bias rating (Skews Left), checked Oct 2026"
+    },
+    {
+      "id": "bbc",
+      "name": "BBC News",
+      "lean": "centre",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "public-service",
+      "country": "United Kingdom",
+      "home_url": "https://www.bbc.co.uk/news",
+      "rating_basis": "AllSides media bias rating (Center), checked Oct 2026"
+    },
+    {
+      "id": "sky",
+      "name": "Sky News",
+      "lean": "centre",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United Kingdom",
+      "home_url": "https://news.sky.com/",
+      "rating_basis": "Ad Fontes Media bias rating (Middle), checked Oct 2026"
+    },
+    {
+      "id": "telegraph",
+      "name": "The Telegraph",
+      "lean": "right",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United Kingdom",
+      "home_url": "https://www.telegraph.co.uk/",
+      "rating_basis": "AllSides media bias rating (Lean Right), checked Oct 2026"
+    },
+    {
+      "id": "dailymail",
+      "name": "Daily Mail",
+      "lean": "right",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United Kingdom",
+      "home_url": "https://www.dailymail.co.uk/",
+      "rating_basis": "AllSides media bias rating (Right), checked Oct 2026"
+    },
+    {
+      "id": "thesun",
+      "name": "The Sun",
+      "lean": "right",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United Kingdom",
+      "home_url": "https://www.thesun.co.uk/",
+      "rating_basis": "AllSides media bias rating (Right), checked Oct 2026"
+    },
+    {
+      "id": "nyt",
+      "name": "The New York Times",
+      "lean": "left",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United States",
+      "home_url": "https://www.nytimes.com/",
+      "rating_basis": "AllSides media bias rating (Lean Left), checked Oct 2026"
+    },
+    {
+      "id": "nbc",
+      "name": "NBC News",
+      "lean": "left",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United States",
+      "home_url": "https://www.nbcnews.com/",
+      "rating_basis": "AllSides media bias rating (Lean Left), checked Oct 2026"
+    },
+    {
+      "id": "huffpost",
+      "name": "HuffPost",
+      "lean": "left",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United States",
+      "home_url": "https://www.huffpost.com/",
+      "rating_basis": "AllSides media bias rating (Left), checked Oct 2026"
+    },
+    {
+      "id": "npr",
+      "name": "NPR",
+      "lean": "centre",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "public-service",
+      "country": "United States",
+      "home_url": "https://www.npr.org/",
+      "rating_basis": "Ad Fontes Media bias rating (Middle / Skews Left), checked Oct 2026"
+    },
+    {
+      "id": "axios",
+      "name": "Axios",
+      "lean": "centre",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United States",
+      "home_url": "https://www.axios.com/",
+      "rating_basis": "AllSides media bias rating (Center), checked Oct 2026"
+    },
+    {
+      "id": "fox",
+      "name": "Fox News",
+      "lean": "right",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United States",
+      "home_url": "https://www.foxnews.com/",
+      "rating_basis": "AllSides media bias rating (Right), checked Oct 2026"
+    },
+    {
+      "id": "nypost",
+      "name": "New York Post",
+      "lean": "right",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United States",
+      "home_url": "https://nypost.com/",
+      "rating_basis": "AllSides media bias rating (Lean Right), checked Oct 2026"
+    },
+    {
+      "id": "examiner",
+      "name": "Washington Examiner",
+      "lean": "right",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United States",
+      "home_url": "https://www.washingtonexaminer.com/",
+      "rating_basis": "AllSides media bias rating (Lean Right), checked Oct 2026"
+    },
+    {
+      "id": "france24",
+      "name": "France 24",
+      "lean": "centre",
+      "region": "europe",
+      "bloc": "west",
+      "ownership": "public-service",
+      "country": "France",
+      "home_url": "https://www.france24.com/en/",
+      "rating_basis": "Ad Fontes Media bias rating (Middle), checked Oct 2026"
+    },
+    {
+      "id": "dw",
+      "name": "DW (Deutsche Welle)",
+      "lean": "centre",
+      "region": "europe",
+      "bloc": "west",
+      "ownership": "public-service",
+      "country": "Germany",
+      "home_url": "https://www.dw.com/en/",
+      "rating_basis": "AllSides media bias rating (Center), checked Oct 2026"
+    },
+    {
+      "id": "aljazeera",
+      "name": "Al Jazeera English",
+      "lean": null,
+      "region": "middle_east",
+      "bloc": "east",
+      "ownership": "state-funded",
+      "country": "Qatar",
+      "home_url": "https://www.aljazeera.com/",
+      "rating_basis": "Funded by the State of Qatar; no left/right tag applied"
+    },
+    {
+      "id": "thenational",
+      "name": "The National (UAE)",
+      "lean": null,
+      "region": "middle_east",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "United Arab Emirates",
+      "home_url": "https://www.thenationalnews.com/",
+      "rating_basis": "Owned by International Media Investments (Abu Dhabi); no left/right tag applied"
+    },
+    {
+      "id": "timesofisrael",
+      "name": "The Times of Israel",
+      "lean": null,
+      "region": "middle_east",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "Israel",
+      "home_url": "https://www.timesofisrael.com/",
+      "rating_basis": "Privately owned; no left/right tag applied"
+    },
+    {
+      "id": "cgtn",
+      "name": "CGTN",
+      "lean": null,
+      "region": "asia",
+      "bloc": "east",
+      "ownership": "state-controlled",
+      "country": "China",
+      "home_url": "https://www.cgtn.com/",
+      "rating_basis": "China Global Television Network, part of state broadcaster China Media Group"
+    },
+    {
+      "id": "ecns",
+      "name": "ECNS (China News Service)",
+      "lean": null,
+      "region": "asia",
+      "bloc": "east",
+      "ownership": "state-controlled",
+      "country": "China",
+      "home_url": "https://www.ecns.cn/",
+      "rating_basis": "English service of China News Service, a state news agency"
+    },
+    {
+      "id": "scmp",
+      "name": "South China Morning Post",
+      "lean": null,
+      "region": "asia",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "Hong Kong",
+      "home_url": "https://www.scmp.com/",
+      "rating_basis": "Owned by Alibaba Group; no left/right tag applied"
+    },
+    {
+      "id": "toi",
+      "name": "The Times of India",
+      "lean": null,
+      "region": "asia",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "India",
+      "home_url": "https://timesofindia.indiatimes.com/",
+      "rating_basis": "Privately owned (Bennett, Coleman & Co.); no left/right tag applied"
+    },
+    {
+      "id": "thehindu",
+      "name": "The Hindu",
+      "lean": null,
+      "region": "asia",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "India",
+      "home_url": "https://www.thehindu.com/",
+      "rating_basis": "Privately owned (The Hindu Group); no left/right tag applied"
+    },
+    {
+      "id": "moscowtimes",
+      "name": "The Moscow Times",
+      "lean": null,
+      "region": "europe",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "Russia",
+      "home_url": "https://www.themoscowtimes.com/",
+      "rating_basis": "Independent, Amsterdam-based since 2022; designated \"undesirable\" by Russia; no left/right tag applied"
+    },
+    {
+      "id": "japantimes",
+      "name": "The Japan Times",
+      "lean": null,
+      "region": "asia",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "Japan",
+      "home_url": "https://www.japantimes.co.jp/",
+      "rating_basis": "Privately owned (News2u Holdings); no left/right tag applied"
+    },
+    {
+      "id": "koreaherald",
+      "name": "The Korea Herald",
+      "lean": null,
+      "region": "asia",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "South Korea",
+      "home_url": "https://www.koreaherald.com/",
+      "rating_basis": "Privately owned (Herald Corporation); no left/right tag applied"
+    }
+  ],
+  "stories": [
+    {
+      "id": "7ef89a613331",
+      "title": "COP31 climate talks in Turkey end without agreement over fossil fuel language",
+      "rank": 1,
+      "outlet_count": 11,
+      "coverage": {
+        "lean": {
+          "left": 4,
+          "centre": 1,
+          "right": 1
+        },
+        "bloc": {
+          "west": 6,
+          "east": 5
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "955bf4d87092",
+          "outlet_id": "thenational",
+          "headline": "Cop31 climate talks overrun in dispute over final deal",
+          "snippet": "Climate talks at the Cop31 summit in the Turkish city of Antalya ran into overtime on Saturday as countries’ negotiators wrestled over its final communique and its language on financing and fossil…",
+          "url": "https://www.thenationalnews.com/news/mena/2026/11/21/cop31-climate-talks-overrun-in-dispute-over-final-deal/",
+          "published_at": "2026-11-21T11:48:57Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.thenationalnews.com/resizer/v2/6LXY6WUGE32Q2QNKGOJYFCRRXE.jpg?auth=83d167bd61a4d41ac70b37c8f7b2c8f5137e208f29780ebe63078e6ed34da127&smart=true&width=3203&height=2135"
+        },
+        {
+          "id": "37e7b1e91a99",
+          "outlet_id": "france24",
+          "headline": "COP31: Deep divisions persist over energy, finance and science",
+          "snippet": "COP31 climate talks in Turkey have gone into overtime, with deep divisions over fossil fuels, climate finance and global warming targets delaying an agreement. A revised draft dropped all mention of…",
+          "url": "https://www.france24.com/en/cop31-deep-divisions-persist-over-energy-finance-and-science",
+          "published_at": "2026-11-21T17:26:47Z",
+          "published_at_estimated": false,
+          "image_url": "https://s.france24.com/media/display/2e281d9c-e5d0-11f1-9a79-6b451f569414/w:1024/p:16x9/EN-20261121-171141-171326-CS.jpg"
+        },
+        {
+          "id": "97dfe1a62c63",
+          "outlet_id": "france24",
+          "headline": "'Worst Ever' COP Summit?",
+          "snippet": "Is this the worst COP summit on record? With limited political leadership, no official US delegation and mounting frustration over bureaucratic delays, questions are being raised about the…",
+          "url": "https://www.france24.com/en/tv-shows/spotlight/20261121-worst-ever-cop-summit",
+          "published_at": "2026-11-21T20:08:48Z",
+          "published_at_estimated": false,
+          "image_url": "https://s.france24.com/media/display/755b0a80-e5e4-11f1-b9dd-ebb478925cf0/w:1024/p:16x9/d69ebdaa-0cf1-490b-a08a-17f4fcb9b566.jpg"
+        },
+        {
+          "id": "727a97f54b79",
+          "outlet_id": "cgtn",
+          "headline": "COP31 closing session ends, outcome document expected over weekend",
+          "snippet": "",
+          "url": "https://news.cgtn.com/news/2026-11-22/COP31-closing-session-ends-outcome-document-expected-over-weekend-1SgQGdQrFGE/p.html",
+          "published_at": "2026-11-22T00:59:34Z",
+          "published_at_estimated": false,
+          "image_url": "https://news.cgtn.com/news/2026-11-22/COP31-closing-session-ends-outcome-document-expected-over-weekend-1SgQGdQrFGE/img/ddbe48acf672495092e67e3b093be76b/ddbe48acf672495092e67e3b093be76b-1920.png"
+        },
+        {
+          "id": "be470f9ef841",
+          "outlet_id": "koreaherald",
+          "headline": "Fossil fuel dispute threatens to scupper climate deal",
+          "snippet": "ANTALYA, Turkey (AFP) -- Global climate talks dragged into a second day of overtime Sunday as a standoff over fossil fuels threatened to derail a final deal at the UN COP31 summit in Turkey. Nations…",
+          "url": "https://www.koreaherald.com/article/10945059",
+          "published_at": "2026-11-22T03:56:13Z",
+          "published_at_estimated": false,
+          "image_url": "https://wimg.heraldcorp.com/news/cms/2026/11/22/rcv.YNA.20261121.PAP20261121151301009_T1.jpg"
+        },
+        {
+          "id": "305ee32ed896",
+          "outlet_id": "japantimes",
+          "headline": "COP31 climate talks break down as European Union and others reject deal",
+          "snippet": "Though a blow to efforts to ratchet up international action, the failure to agree on a declaration does not wipe out previous summit obligations.",
+          "url": "https://www.japantimes.co.jp/environment/2026/11/22/climate-change/cop31-climate-talks/",
+          "published_at": "2026-11-22T05:47:00Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.japantimes.co.jp/japantimes/uploads/images/2026/11/22/thumbs/400x400/575336.jpg"
+        },
+        {
+          "id": "efc92708c79a",
+          "outlet_id": "thehindu",
+          "headline": "COP31: Turkiye's final draft doesn't mention the words ‘fossil fuels’ that cause global warming",
+          "snippet": "COP31 President Murat Kurum gave negotiators only about three hours to make objections or ask for changes before the wording goes before the conference plenary",
+          "url": "https://www.thehindu.com/news/international/cop31-turkiyes-final-draft-doesnt-mention-the-words-fossil-fuels-that-cause-global-warming/article71730648.ece",
+          "published_at": "2026-11-22T06:51:27Z",
+          "published_at_estimated": false,
+          "image_url": "https://th-i.thgim.com/public/incoming/olqbso/article71730664.ece/alternates/LANDSCAPE_1200/Climate_COP31_Turkey_57147.jpg"
+        },
+        {
+          "id": "84cecb93176b",
+          "outlet_id": "koreaherald",
+          "headline": "Confusion at climate talks as final deal offered doesn&apos;t mention fossil fuels",
+          "snippet": "Turkey (AP) — Several nations and blocs, including the European Union, the Marshall Islands and Panama, objected to a draft of the final agreement at United Nations climate talks because it failed…",
+          "url": "https://www.koreaherald.com/article/10945295",
+          "published_at": "2026-11-22T12:14:13Z",
+          "published_at_estimated": false,
+          "image_url": "https://wimg.heraldcorp.com/news/cms/2026/11/22/news-p.v1.20261122.2eef28ccdc364677bc879f499b52d4ad_T1.jpg"
+        },
+        {
+          "id": "f3f68b77e06c",
+          "outlet_id": "france24",
+          "headline": "🔴 COP31 ends without deal as EU rejects text for omitting mention of fossil fuels",
+          "snippet": "",
+          "url": "https://www.france24.com/en/environment/20261121-latest-cop31-deal-sidesteps-fossil-fuels-amid-growing-divisions",
+          "published_at": "2026-11-22T12:22:33Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "e92f470829d7",
+          "outlet_id": "thehindu",
+          "headline": "EU will ‘not endorse’ climate deal, throwing COP31 outcome into doubt",
+          "snippet": "Ireland’s Climate and Energy Minister Darragh O’Brien said the EU would not back an Antalya Pact that “does not even mention fossil fuels”, as the UN climate talks ran into record extra time",
+          "url": "https://www.thehindu.com/news/international/eu-will-not-endorse-climate-deal-throwing-cop31-outcome-into-doubt/article71731355.ece",
+          "published_at": "2026-11-22T12:45:24Z",
+          "published_at_estimated": false,
+          "image_url": "https://th-i.thgim.com/public/incoming/kr5asi/article71731399.ece/alternates/LANDSCAPE_1200/Climate_COP31_Turkey__8_29.jpg"
+        },
+        {
+          "id": "063e50496821",
+          "outlet_id": "guardian",
+          "headline": "Cop31 climate talks break down as key deal rejected",
+          "snippet": "EU, UK and some of developing world object to main text that ‘failed to meet the moment’ after two weeks of fierce negotiations • Cop31 live blog: longest climate summit ever faces collapse The EU…",
+          "url": "https://www.theguardian.com/environment/2026/nov/22/cop31-climate-talks-set-to-end-in-deep-division-as-key-deal-rejected",
+          "published_at": "2026-11-22T12:54:41Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.guim.co.uk/img/media/2e9444383cb19d7aedfac136aec519fef28f1ce2/526_182_3885_3108/master/3885.jpg?width=460&quality=85&auto=format&fit=max&s=8c3680620e181d9da0ab684ddf96f4fd"
+        },
+        {
+          "id": "f4e32974d741",
+          "outlet_id": "nbc",
+          "headline": "COP31 climate talks break down after angry dispute over fossil fuels",
+          "snippet": "U.N. climate action talks in Turkey broke down Sunday after the European Union and other nations rejected an agreement intended to set out countries’ commitments to tackling climate change, in a row…",
+          "url": "https://www.nbcnews.com/science/climate-change/cop31-climate-talks-break-angry-dispute-fossil-fuels-rcna610656",
+          "published_at": "2026-11-22T13:20:21Z",
+          "published_at_estimated": false,
+          "image_url": "https://media-cldnry.s-nbcnews.com/image/upload/t_fit_1500w/rockcms/2026-11/261122-cop31-nd-d8fbfb.jpg"
+        },
+        {
+          "id": "c32a290d9ea2",
+          "outlet_id": "mirror",
+          "headline": "COP31 UN climate talks collapse as EU and others reject deal",
+          "snippet": "COP31 president Murat Kurum says there will be no new draft agreement proposed by officials in Turkey after the final text was rejected",
+          "url": "https://www.mirror.co.uk/news/world-news/cop31-un-climate-talks-collapse-37903679",
+          "published_at": "2026-11-22T13:42:18Z",
+          "published_at_estimated": false,
+          "image_url": "https://i2-prod.mirror.co.uk/incoming/article37903707.ece/ALTERNATES/s615/1_Climate-COP31-Turkey-26326370690341.jpg"
+        },
+        {
+          "id": "5272d6b9323e",
+          "outlet_id": "nyt",
+          "headline": "U.N. Climate Talks Collapse in a Bitter Clash Over Fossil Fuels",
+          "snippet": "European and vulnerable nations rejected a proposed agreement after Saudi Arabia and other oil producers blocked any mention of phasing out coal, oil and gas.",
+          "url": "https://www.nytimes.com/2026/11/22/climate/cop31-climate-summit-ends-climate.html",
+          "published_at": "2026-11-22T14:02:58Z",
+          "published_at_estimated": false,
+          "image_url": "https://static01.nyt.com/images/2026/11/22/multimedia/22cli-cop-final2-bpvk/22cli-cop-final2-bpvk-mediumSquareAt3X.jpg"
+        },
+        {
+          "id": "5c4613cb9d32",
+          "outlet_id": "dailymail",
+          "headline": "COP31 talks collapse as EU rejects 'greenwashing' UN climate deal amid row with Saudi Arabia and Russia over fossil fuels",
+          "snippet": "A fourth deal was drafted this morning by co-hosts Turkey and Australia in the hope of bridging the divide between nations.",
+          "url": "https://www.dailymail.com/news/article-16312977/COP31-brink-collapse-EU-rejects-climate-deal-amid-row-Saudi-Arabia-fossil-fuels.html",
+          "published_at": "2026-11-22T14:03:30Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.dailymail.com/1s/2026/11/22/11/112660547-0-image-m-15_1795345747380.jpg"
+        },
+        {
+          "id": "8e4f55502f4c",
+          "outlet_id": "thenational",
+          "headline": "Climate talks collapse without deal at Cop31 in Turkey",
+          "snippet": "Climate talks in Turkey collapsed without a deal on Sunday as the countries of the world failed to unite on reducing fossil fuel use or putting up money for a greener planet. The Cop31 summit ran…",
+          "url": "https://www.thenationalnews.com/news/mena/2026/11/22/climate-talks-collapse-without-deal-at-cop31-in-turkey/",
+          "published_at": "2026-11-22T14:04:55Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.thenationalnews.com/resizer/v2/6CTC6Q43JNRQAA56K2PVI7274E.jpg?auth=af8a4494d6213acb50be7b462c528188767b43a93e1c0a13b84944ef40c50ead&smart=true&width=8256&height=5504"
+        },
+        {
+          "id": "00b1ea019a17",
+          "outlet_id": "thehindu",
+          "headline": "COP31 fails to agree on climate deal in chaotic finale",
+          "snippet": "‘I understand that there is no agreement on this text. For that reason, these decisions have not been adopted,’ COP31 President Murat Kurum told the closing session",
+          "url": "https://www.thehindu.com/news/international/cop31-fails-to-agree-on-climate-deal-in-chaotic-finale/article71731651.ece",
+          "published_at": "2026-11-22T14:10:55Z",
+          "published_at_estimated": false,
+          "image_url": "https://th-i.thgim.com/public/incoming/4u6khj/article71731706.ece/alternates/LANDSCAPE_1200/2026-11-22T101523Z_325050495_RC2YSOAHDI23_RTRMADP_3_CLIMATE-COP31.JPG"
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "The COP31 talks in Turkey ended or collapsed without an agreed deal.",
+          "sources": [
+            "f3f68b77e06c",
+            "063e50496821",
+            "f4e32974d741",
+            "c32a290d9ea2",
+            "5272d6b9323e",
+            "5c4613cb9d32",
+            "8e4f55502f4c",
+            "00b1ea019a17",
+            "305ee32ed896"
+          ]
+        },
+        {
+          "text": "The European Union rejected or refused to endorse the proposed final text.",
+          "sources": [
+            "f3f68b77e06c",
+            "063e50496821",
+            "f4e32974d741",
+            "c32a290d9ea2",
+            "5c4613cb9d32",
+            "305ee32ed896",
+            "e92f470829d7",
+            "84cecb93176b"
+          ]
+        },
+        {
+          "text": "The draft final text did not mention fossil fuels.",
+          "sources": [
+            "f3f68b77e06c",
+            "efc92708c79a",
+            "84cecb93176b",
+            "e92f470829d7"
+          ]
+        },
+        {
+          "text": "The talks ran into overtime beyond their scheduled end.",
+          "sources": [
+            "955bf4d87092",
+            "37e7b1e91a99",
+            "be470f9ef841",
+            "e92f470829d7",
+            "063e50496821"
+          ]
+        },
+        {
+          "text": "Other nations besides the EU also objected to the text.",
+          "sources": [
+            "063e50496821",
+            "f4e32974d741",
+            "c32a290d9ea2",
+            "5272d6b9323e",
+            "84cecb93176b"
+          ]
+        },
+        {
+          "text": "Disagreements also covered climate finance, not only fossil fuels.",
+          "sources": [
+            "955bf4d87092",
+            "37e7b1e91a99",
+            "8e4f55502f4c"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "5272d6b9323e",
+              "quote": "U.N. Climate Talks Collapse in a Bitter Clash Over Fossil Fuels",
+              "field": "headline"
+            },
+            {
+              "article_id": "f4e32974d741",
+              "quote": "angry dispute over fossil fuels",
+              "field": "headline"
+            },
+            {
+              "article_id": "063e50496821",
+              "quote": "‘failed to meet the moment’",
+              "field": "snippet"
+            },
+            {
+              "article_id": "c32a290d9ea2",
+              "quote": "COP31 UN climate talks collapse as EU and others reject deal",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Attributes the blocking of any mention of phasing out coal, oil and gas to Saudi Arabia and other oil producers.",
+              "sources": [
+                "5272d6b9323e"
+              ]
+            },
+            {
+              "text": "Names the UK, developing countries and vulnerable nations among those rejecting the text.",
+              "sources": [
+                "063e50496821",
+                "5272d6b9323e"
+              ]
+            },
+            {
+              "text": "Reports Kurum saying no new draft agreement would be proposed.",
+              "sources": [
+                "c32a290d9ea2"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "37e7b1e91a99",
+              "quote": "Deep divisions persist over energy, finance and science",
+              "field": "headline"
+            },
+            {
+              "article_id": "97dfe1a62c63",
+              "quote": "'Worst Ever' COP Summit?",
+              "field": "headline"
+            },
+            {
+              "article_id": "f3f68b77e06c",
+              "quote": "EU rejects text for omitting mention of fossil fuels",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with divisions over fossil fuels, climate finance and global warming targets.",
+              "sources": [
+                "37e7b1e91a99"
+              ]
+            },
+            {
+              "text": "Raises whether this was the worst COP summit, citing limited leadership, no official US delegation and bureaucratic delays.",
+              "sources": [
+                "97dfe1a62c63"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "right",
+          "headline_quotes": [
+            {
+              "article_id": "5c4613cb9d32",
+              "quote": "EU rejects 'greenwashing' UN climate deal",
+              "field": "headline"
+            },
+            {
+              "article_id": "5c4613cb9d32",
+              "quote": "row with Saudi Arabia and Russia over fossil fuels",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Frames the dispute as a row with Saudi Arabia and Russia and quotes the 'greenwashing' description of the deal.",
+              "sources": [
+                "5c4613cb9d32"
+              ]
+            },
+            {
+              "text": "Reports a fourth draft by co-hosts Turkey and Australia meant to bridge the divide.",
+              "sources": [
+                "5c4613cb9d32"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "right",
+          "text": "Does not mention that nations other than the EU also rejected the text.",
+          "sources": [
+            "063e50496821",
+            "f4e32974d741",
+            "c32a290d9ea2",
+            "5272d6b9323e"
+          ]
+        },
+        {
+          "lean": "centre",
+          "text": "Does not mention Saudi Arabia or other oil producers in connection with the fossil fuel dispute.",
+          "sources": [
+            "5272d6b9323e",
+            "5c4613cb9d32"
+          ]
+        },
+        {
+          "lean": "left",
+          "text": "Does not mention disagreements over climate finance.",
+          "sources": [
+            "37e7b1e91a99"
+          ]
+        }
+      ],
+      "contested_claims": [],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "5272d6b9323e",
+              "quote": "Bitter Clash Over Fossil Fuels",
+              "field": "headline"
+            },
+            {
+              "article_id": "063e50496821",
+              "quote": "Cop31 climate talks break down as key deal rejected",
+              "field": "headline"
+            },
+            {
+              "article_id": "5c4613cb9d32",
+              "quote": "'greenwashing' UN climate deal",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Names Saudi Arabia and other oil producers, and Russia, as parties in the fossil fuel dispute.",
+              "sources": [
+                "5272d6b9323e",
+                "5c4613cb9d32"
+              ]
+            },
+            {
+              "text": "Notes the absence of an official US delegation.",
+              "sources": [
+                "97dfe1a62c63"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "be470f9ef841",
+              "quote": "Fossil fuel dispute threatens to scupper climate deal",
+              "field": "headline"
+            },
+            {
+              "article_id": "efc92708c79a",
+              "quote": "Turkiye's final draft doesn't mention the words ‘fossil fuels’ that cause global warming",
+              "field": "headline"
+            },
+            {
+              "article_id": "00b1ea019a17",
+              "quote": "COP31 fails to agree on climate deal in chaotic finale",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Reports Kurum gave negotiators about three hours to object or seek changes before the plenary.",
+              "sources": [
+                "efc92708c79a"
+              ]
+            },
+            {
+              "text": "Quotes Ireland's minister Darragh O'Brien saying the EU would not back a pact that does not mention fossil fuels.",
+              "sources": [
+                "e92f470829d7"
+              ]
+            },
+            {
+              "text": "Notes the failure does not wipe out obligations from previous summits.",
+              "sources": [
+                "305ee32ed896"
+              ]
+            },
+            {
+              "text": "Names the Marshall Islands and Panama among objecting nations.",
+              "sources": [
+                "84cecb93176b"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "The COP31 climate summit in Antalya, Turkey, ran into overtime and collapsed on Sunday without a deal. The EU and other nations rejected a final text that did not mention fossil fuels, and COP31 President Murat Kurum told the closing session the decisions had not been adopted.",
+        "sources": [
+          "955bf4d87092",
+          "be470f9ef841",
+          "f3f68b77e06c",
+          "063e50496821",
+          "f4e32974d741",
+          "c32a290d9ea2",
+          "5272d6b9323e",
+          "5c4613cb9d32",
+          "8e4f55502f4c",
+          "00b1ea019a17",
+          "84cecb93176b",
+          "e92f470829d7",
+          "efc92708c79a"
+        ]
+      },
+      "conclusion": {
+        "text": "Coverage across leans and blocs agrees the talks overran and collapsed after the EU and others rejected a text omitting fossil fuels. Left and right outlets name Saudi Arabia and oil producers, centre stresses wider divisions and summit quality, and East-bloc outlets detail procedure and official statements; no direct contradictions appear.",
+        "sources": [
+          "f3f68b77e06c",
+          "063e50496821",
+          "5272d6b9323e",
+          "5c4613cb9d32",
+          "37e7b1e91a99",
+          "97dfe1a62c63",
+          "efc92708c79a",
+          "00b1ea019a17",
+          "e92f470829d7",
+          "305ee32ed896"
+        ]
+      },
+      "validation": {
+        "kept": 39,
+        "dropped_by_reason": {}
+      }
+    },
+    {
+      "id": "1f7ffd1f3c12",
+      "title": "Mexico captures cartel leader Fausto Isidro Meza Flores amid deadly violence",
+      "rank": 2,
+      "outlet_count": 11,
+      "coverage": {
+        "lean": {
+          "left": 4,
+          "centre": 3,
+          "right": 2
+        },
+        "bloc": {
+          "west": 9,
+          "east": 2
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "6703165aab80",
+          "outlet_id": "fox",
+          "headline": "FBI Ten Most Wanted cartel leader 'Chapo Isidro' captured by Mexico's 'elite military forces' after US help",
+          "snippet": "FBI Ten Most Wanted fugitive Fausto Isidro Meza-Flores, who goes by the alias \"Chapo Isidro,\" was captured in Guasave, Mexico, sparking a gun battle.",
+          "url": "https://www.foxnews.com/world/fbi-ten-most-wanted-cartel-leader-chapo-isidro-captured-mexicos-elite-military-forces-us-help",
+          "published_at": "2026-11-21T13:17:33Z",
+          "published_at_estimated": false,
+          "image_url": "https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2026/11/931/523/Fausto-Isidro-Meza-Flores.jpg?ve=1&tl=1"
+        },
+        {
+          "id": "8735071ec5a9",
+          "outlet_id": "sky",
+          "headline": "At least 11 dead after suspected cartel leader 'El Chapo Isidro' captured in Mexico",
+          "snippet": "An outburst of violence has killed at least 11 people after Mexican authorities captured suspected cartel leader Fausto Isidro Meza Flores, known as El Chapo Isidro.",
+          "url": "https://news.sky.com/story/suspected-cartel-leader-el-chapo-isidro-from-fbi-most-wanted-list-captured-in-mexico-13614689",
+          "published_at": "2026-11-21T13:34:00Z",
+          "published_at_estimated": false,
+          "image_url": "https://e3.365dm.com/26/11/1920x1080/skynews-fausto-isidro-meza-flores_7413068.jpg?20261122010847"
+        },
+        {
+          "id": "65ab779477e3",
+          "outlet_id": "huffpost",
+          "headline": "Mexico Detains Top Cartel Boss 'El Chapo Isidro,' One Of FBI's 10 Most Wanted Fugitives",
+          "snippet": "Authorities in the U.S. and Mexico celebrated the arrest as a security win. Trump has pressured Mexico’s government to go after criminal groups.",
+          "url": "https://www.huffpost.com/entry/mexico-cartel-violence-el-chapo-isidro-detained_n_6b01a1c8e4b0edd18edf2781",
+          "published_at": "2026-11-21T13:58:16Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "58c179664e8f",
+          "outlet_id": "examiner",
+          "headline": "Mexico captures cartel leader listed as one of top 10 most wanted in US",
+          "snippet": "Mexico’s military captured a cartel leader on the FBI’s top 10 most wanted list during an overnight operation in Sinaloa, where a firefight broke out. Fausto Isidro Meza Flores, also known as “El…",
+          "url": "https://www.washingtonexaminer.com/news/crime/4811249/mexico-capture-cartel-leader-top-10-wanted/",
+          "published_at": "2026-11-21T17:46:23Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.washingtonexaminer.com/wp-content/uploads/2026/11/AP26325506754293.jpg?w=1024"
+        },
+        {
+          "id": "e7c994062a67",
+          "outlet_id": "guardian",
+          "headline": "Alleged Mexican drug cartel boss ‘El Chapo Isidro’ arrested in special forces raid",
+          "snippet": "Fausto Isidro Meza Flores was one of FBI’s most wanted fugitives and evaded capture for more than a decade The Mexican military captured one of the FBI’s 10 most wanted fugitives during a special…",
+          "url": "https://www.theguardian.com/world/2026/nov/21/alleged-mexican-drug-cartel-boss-el-chapo-isidro-meza-flores-arrested",
+          "published_at": "2026-11-21T17:46:55Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.guim.co.uk/img/media/109833a4d1387ede241180856c6e37007aa8a6a3/264_354_897_717/master/897.jpg?width=460&quality=85&auto=format&fit=max&s=f51ba1e59f75562a8748fb22a6a31ced"
+        },
+        {
+          "id": "fbfb1e67ee76",
+          "outlet_id": "npr",
+          "headline": "Cartel leader captured in northern Mexico in a bloody firefight that left 11 dead",
+          "snippet": "Fausto Isidro Meza Flores, better known as \"El Chapo Isidro,\" was one of the FBI's most wanted fugitives. His arrest in northwest Mexico on Saturday has sparked violence in the region.",
+          "url": "https://www.npr.org/2026/11/21/nx-s1-6049672/cartel-boss-el-chapo-isidro-detained",
+          "published_at": "2026-11-21T18:08:55Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "ed23b03bd713",
+          "outlet_id": "thehindu",
+          "headline": "11 killed in burst of violence in northern Mexico after capture of cartel leader Meza Flores",
+          "snippet": "Flores climbed the cartel ranks to lead the Beltrán-Leyva cartel and later became the leader of his own group, the Meza-Flores Transnational Criminal Organisation",
+          "url": "https://www.thehindu.com/news/international/11-killed-in-burst-of-violence-in-northern-mexico-after-capture-of-cartel-leader-meza-flores/article71729468.ece",
+          "published_at": "2026-11-21T20:49:00Z",
+          "published_at_estimated": false,
+          "image_url": "https://th-i.thgim.com/public/incoming/qonacv/article71729469.ece/alternates/LANDSCAPE_1200/2026-11-21T180941Z_1794048376_RC2ASOAVVQPP_RTRMADP_3_MEXICO-CHAPOISIDRO.JPG"
+        },
+        {
+          "id": "37177142e57f",
+          "outlet_id": "nyt",
+          "headline": "Top Drug Kingpin Is Captured by Mexican Army as Gunfire Erupts",
+          "snippet": "The arrest of Fausto Isidro Meza Flores, who is known as El Chapo Isidro and was one of the F.B.I.’s 10 most wanted, was a victory for the Mexican government.",
+          "url": "https://www.nytimes.com/2026/11/21/world/americas/mexico-el-chapo-isidro-captured-drugs.html",
+          "published_at": "2026-11-21T21:12:24Z",
+          "published_at_estimated": false,
+          "image_url": "https://static01.nyt.com/images/2026/11/22/multimedia/22int-cartel-ticktock-photo2-gblm/22int-cartel-ticktock-photo2-gblm-mediumSquareAt3X.jpg"
+        },
+        {
+          "id": "573bd97c2d21",
+          "outlet_id": "bbc",
+          "headline": "Mexican drug lord on FBI's 10 most wanted list arrested in shoot-out",
+          "snippet": "Fausto Isidro \"Chapo Idisro\" Meza Flores, who is accused of drug trafficking and torture, is detained after gun fight with authorities.",
+          "url": "https://www.bbc.co.uk/news/articles/ckz749ey0r75o",
+          "published_at": "2026-11-22T01:25:03Z",
+          "published_at_estimated": false,
+          "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/5701/live/7ac9e270-e5ad-11f1-99a1-253766e7ad8b.jpg"
+        },
+        {
+          "id": "9dbc828e4f3a",
+          "outlet_id": "nyt",
+          "headline": "Drones, Texts and Diversions: How Mexico Captured a Most Wanted Man",
+          "snippet": "U.S. and Mexican authorities shared intelligence for weeks to track Fausto Isidro Meza Flores, a drug cartel leader that a U.S. official called the most dangerous man in Mexico.",
+          "url": "https://www.nytimes.com/2026/11/21/world/americas/mexico-captures-drug-kingpin.html",
+          "published_at": "2026-11-22T01:56:16Z",
+          "published_at_estimated": false,
+          "image_url": "https://static01.nyt.com/images/2026/11/22/multimedia/22int-cartel-ticktock-photo1-bpwm/22int-cartel-ticktock-photo1-bpwm-mediumSquareAt3X.jpg"
+        },
+        {
+          "id": "82943b88a907",
+          "outlet_id": "koreaherald",
+          "headline": "Cartel leader captured in northern Mexico in a bloody firefight that left 11 dead",
+          "snippet": "Heavy gunfire, helicopters and burning trucks marked Mexico's Sinaloa state Saturday after authorities captured cartel boss Fausto Isidro Meza Flores, known as “El Chapo Isidro,” in an operation…",
+          "url": "https://www.koreaherald.com/article/10945061",
+          "published_at": "2026-11-22T03:59:10Z",
+          "published_at_estimated": false,
+          "image_url": "https://wimg.heraldcorp.com/news/cms/2026/11/22/rcv.YNA.20261122.PAP20261122046901009_T1.jpg"
+        },
+        {
+          "id": "b3ba4e733afa",
+          "outlet_id": "mirror",
+          "headline": "Drug kingpin on FBI’s most wanted list snared in explosive gun battle after 10-year manhunt",
+          "snippet": "The capture of the alleged drug lord came after explosive exchanges of gunfire that have killed at least 11 people and sent fans running for their lives from a baseball game",
+          "url": "https://www.mirror.co.uk/news/world-news/cartel-kingpin-caught-mexico-us-37903023",
+          "published_at": "2026-11-22T06:23:25Z",
+          "published_at_estimated": false,
+          "image_url": "https://i2-prod.mirror.co.uk/incoming/article37903025.ece/ALTERNATES/s615/2_Screenshot-2026-11-22-at-51409pm.png"
+        },
+        {
+          "id": "86f7569493e4",
+          "outlet_id": "nyt",
+          "headline": "Who Is the Mexican Drug Kingpin Known as El Chapo Isidro?",
+          "snippet": "The kingpin, Fausto Isidro Meza Flores, was captured in a violent operation in Mexico. He was one of the F.B.I.’s 10 most wanted fugitives.",
+          "url": "https://www.nytimes.com/2026/11/21/world/americas/mexico-el-chapo-isidro-drug-kingpin.html",
+          "published_at": "2026-11-22T10:16:39Z",
+          "published_at_estimated": false,
+          "image_url": "https://static01.nyt.com/images/2026/11/21/multimedia/21int-cartel-arrest-zqtf/21int-cartel-arrest-zqtf-mediumSquareAt3X.jpg"
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "Fausto Isidro Meza Flores, known as \"El Chapo Isidro\", was captured in Mexico.",
+          "sources": [
+            "6703165aab80",
+            "8735071ec5a9",
+            "65ab779477e3",
+            "58c179664e8f",
+            "e7c994062a67",
+            "fbfb1e67ee76",
+            "ed23b03bd713",
+            "37177142e57f",
+            "573bd97c2d21",
+            "9dbc828e4f3a",
+            "82943b88a907",
+            "b3ba4e733afa",
+            "86f7569493e4"
+          ]
+        },
+        {
+          "text": "He was on the FBI's most wanted list, described by most as its top 10 most wanted fugitives.",
+          "sources": [
+            "6703165aab80",
+            "65ab779477e3",
+            "58c179664e8f",
+            "e7c994062a67",
+            "fbfb1e67ee76",
+            "37177142e57f",
+            "573bd97c2d21",
+            "9dbc828e4f3a",
+            "b3ba4e733afa",
+            "86f7569493e4"
+          ]
+        },
+        {
+          "text": "The capture involved a gun battle or firefight.",
+          "sources": [
+            "6703165aab80",
+            "58c179664e8f",
+            "fbfb1e67ee76",
+            "37177142e57f",
+            "573bd97c2d21",
+            "82943b88a907",
+            "b3ba4e733afa"
+          ]
+        },
+        {
+          "text": "At least 11 people were killed in the violence surrounding the arrest.",
+          "sources": [
+            "8735071ec5a9",
+            "fbfb1e67ee76",
+            "ed23b03bd713",
+            "82943b88a907",
+            "b3ba4e733afa"
+          ]
+        },
+        {
+          "text": "The Mexican military carried out the capture.",
+          "sources": [
+            "6703165aab80",
+            "58c179664e8f",
+            "e7c994062a67",
+            "37177142e57f"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "37177142e57f",
+              "quote": "was a victory for the Mexican government",
+              "field": "snippet"
+            },
+            {
+              "article_id": "65ab779477e3",
+              "quote": "celebrated the arrest as a security win",
+              "field": "snippet"
+            },
+            {
+              "article_id": "9dbc828e4f3a",
+              "quote": "the most dangerous man in Mexico",
+              "field": "snippet"
+            },
+            {
+              "article_id": "b3ba4e733afa",
+              "quote": "sent fans running for their lives from a baseball game",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Describes the arrest as a victory or security win for the Mexican government.",
+              "sources": [
+                "65ab779477e3",
+                "37177142e57f"
+              ]
+            },
+            {
+              "text": "Notes Trump's pressure on Mexico to pursue criminal groups and weeks of shared US-Mexican intelligence.",
+              "sources": [
+                "65ab779477e3",
+                "9dbc828e4f3a"
+              ]
+            },
+            {
+              "text": "Emphasises that he evaded capture for more than a decade.",
+              "sources": [
+                "e7c994062a67",
+                "b3ba4e733afa"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "8735071ec5a9",
+              "quote": "At least 11 dead",
+              "field": "headline"
+            },
+            {
+              "article_id": "fbfb1e67ee76",
+              "quote": "a bloody firefight that left 11 dead",
+              "field": "headline"
+            },
+            {
+              "article_id": "573bd97c2d21",
+              "quote": "accused of drug trafficking and torture",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the death toll and violence following the arrest.",
+              "sources": [
+                "8735071ec5a9",
+                "fbfb1e67ee76"
+              ]
+            },
+            {
+              "text": "Reports the accusations of drug trafficking and torture against him.",
+              "sources": [
+                "573bd97c2d21"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "right",
+          "headline_quotes": [
+            {
+              "article_id": "6703165aab80",
+              "quote": "FBI Ten Most Wanted cartel leader",
+              "field": "headline"
+            },
+            {
+              "article_id": "6703165aab80",
+              "quote": "after US help",
+              "field": "headline"
+            },
+            {
+              "article_id": "58c179664e8f",
+              "quote": "during an overnight operation in Sinaloa",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Foregrounds his FBI most wanted status and US help in the capture.",
+              "sources": [
+                "6703165aab80"
+              ]
+            },
+            {
+              "text": "Describes an overnight military operation in which a firefight broke out.",
+              "sources": [
+                "58c179664e8f",
+                "6703165aab80"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "right",
+          "text": "Right-leaning coverage does not mention the death toll of at least 11 people.",
+          "sources": [
+            "8735071ec5a9",
+            "fbfb1e67ee76",
+            "b3ba4e733afa"
+          ]
+        },
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not mention US help or intelligence sharing in the capture.",
+          "sources": [
+            "6703165aab80",
+            "9dbc828e4f3a"
+          ]
+        }
+      ],
+      "contested_claims": [],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "6703165aab80",
+              "quote": "after US help",
+              "field": "headline"
+            },
+            {
+              "article_id": "37177142e57f",
+              "quote": "was a victory for the Mexican government",
+              "field": "snippet"
+            },
+            {
+              "article_id": "8735071ec5a9",
+              "quote": "At least 11 dead",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Foregrounds his place on the FBI's 10 most wanted list.",
+              "sources": [
+                "6703165aab80",
+                "65ab779477e3",
+                "58c179664e8f",
+                "e7c994062a67",
+                "37177142e57f",
+                "573bd97c2d21",
+                "86f7569493e4"
+              ]
+            },
+            {
+              "text": "Notes US involvement, including intelligence sharing and pressure from Trump.",
+              "sources": [
+                "6703165aab80",
+                "65ab779477e3",
+                "9dbc828e4f3a"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "ed23b03bd713",
+              "quote": "11 killed in burst of violence in northern Mexico",
+              "field": "headline"
+            },
+            {
+              "article_id": "82943b88a907",
+              "quote": "Heavy gunfire, helicopters and burning trucks",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the violence and the 11 deaths after the capture.",
+              "sources": [
+                "ed23b03bd713",
+                "82943b88a907"
+              ]
+            },
+            {
+              "text": "Describes his rise to lead the Beltrán-Leyva cartel and then his own criminal organisation.",
+              "sources": [
+                "ed23b03bd713"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "Mexico's military captured Fausto Isidro Meza Flores, known as \"El Chapo Isidro\", one of the FBI's 10 most wanted fugitives, in an operation in Sinaloa. The arrest set off gunfire and violence that killed at least 11 people.",
+        "sources": [
+          "6703165aab80",
+          "58c179664e8f",
+          "e7c994062a67",
+          "37177142e57f",
+          "8735071ec5a9",
+          "fbfb1e67ee76",
+          "ed23b03bd713",
+          "82943b88a907",
+          "b3ba4e733afa",
+          "573bd97c2d21",
+          "86f7569493e4",
+          "65ab779477e3"
+        ]
+      },
+      "conclusion": {
+        "text": "All sides report the capture of \"El Chapo Isidro\" amid deadly gunfire, with at least 11 killed. Left and right outlets note US help or pressure, centre and East outlets lead with the death toll, and no claims are contradicted between sides.",
+        "sources": [
+          "6703165aab80",
+          "65ab779477e3",
+          "9dbc828e4f3a",
+          "8735071ec5a9",
+          "fbfb1e67ee76",
+          "ed23b03bd713",
+          "82943b88a907",
+          "b3ba4e733afa"
+        ]
+      },
+      "validation": {
+        "kept": 35,
+        "dropped_by_reason": {}
+      }
+    },
+    {
+      "id": "b7846703ce49",
+      "title": "Fire at Indonesian confectionery factory in Banten kills several, dozens missing",
+      "rank": 3,
+      "outlet_count": 10,
+      "coverage": {
+        "lean": {
+          "left": 1,
+          "centre": 3,
+          "right": 2
+        },
+        "bloc": {
+          "west": 6,
+          "east": 4
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "afefeee1e167",
+          "outlet_id": "thehindu",
+          "headline": "Fire at Indonesian candy factory leaves 3 dead, dozens unaccounted for",
+          "snippet": "The blaze broke out at the PT Fonusa Agung Mulia factory in Serang district, in Banten province, which borders Jakarta",
+          "url": "https://www.thehindu.com/news/international/rescuers-say-many-missing-after-indonesia-factory-fire/article71730558.ece",
+          "published_at": "2026-11-22T04:45:19Z",
+          "published_at_estimated": false,
+          "image_url": "https://th-i.thgim.com/public/incoming/c7swfu/article71730642.ece/alternates/LANDSCAPE_1200/2026-11-22T032001Z_634750884_RC20SOAG2MWB_RTRMADP_3_INDONESIA-FIRE.JPG"
+        },
+        {
+          "id": "7ca9b24f52ed",
+          "outlet_id": "dw",
+          "headline": "Dozens missing as deadly fire hits Indonesian candy factory",
+          "snippet": "A fire at a confectionery factory in Indonesia's Banten province has killed at least three people. Dozens are also unaccounted for after the blaze, which destroyed large parts of the facility.",
+          "url": "https://www.dw.com/en/dozens-missing-as-deadly-fire-hits-indonesian-candy-factory/a-80012342?maca=en-rss-en-world-4025-xml-mrss",
+          "published_at": "2026-11-22T06:14:00Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "bd5569004b82",
+          "outlet_id": "guardian",
+          "headline": "Fire at confectionery factory in Indonesia leaves at least three dead and dozens missing",
+          "snippet": "Relatives of the missing victims flocked to the factory’s entrance, seeking updates about their loved ones A fire at a confectionery factory west of Jakarta has killed three people with 36 remaining…",
+          "url": "https://www.theguardian.com/world/2026/nov/22/fire-confectionary-factory-indonesia-jakarta",
+          "published_at": "2026-11-22T07:11:17Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.guim.co.uk/img/media/e0ed3952c817519e338f7b090e77d68893b48948/485_0_4287_3430/master/4287.jpg?width=460&quality=85&auto=format&fit=max&s=b4c859e303ccdeb98fd87bee018f0203"
+        },
+        {
+          "id": "e7e50bbd06e2",
+          "outlet_id": "aljazeera",
+          "headline": "Indonesia factory fire kills three, 36 missing",
+          "snippet": "At least 15 people rescued, including 4 taken to hospital, as authorities say cause of the fire is under investigation.",
+          "url": "https://www.aljazeera.com/news/2026/11/22/indonesia-factory-fire-kills-three-36-missing",
+          "published_at": "2026-11-22T07:46:35Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "5e80ea18861b",
+          "outlet_id": "thesun",
+          "headline": "Three dead & 50 missing after horror blaze rips through sweet factory as roof collapses & rescuers search for survivors",
+          "snippet": "AT least three people have been killed and 50 others are missing after a massive fire ripped through through a sweet factory. Rescue teams are scrambling to search for survivors after the terrifying…",
+          "url": "https://www.thesun.co.uk/news/41104868/sweet-factory-blaze-rescuers-search-survivors/",
+          "published_at": "2026-11-22T08:06:50Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.thesun.co.uk/wp-content%2Fuploads%2F2026%2F11%2Fdrone-view-shows-flames-engulf-1124802021.jpg?quality%3D90%26"
+        },
+        {
+          "id": "c10d3bed987a",
+          "outlet_id": "scmp",
+          "headline": "Search for Indonesia factory fire missing to resume on Monday",
+          "snippet": "Indonesian ⁠police removed 24 body bags from ⁠a factory destroyed by fire in Java on Sunday as firefighters battled remaining hotspots a day after the blaze tore through the building and a search…",
+          "url": "https://www.scmp.com/news/asia/southeast-asia/article/3375375/indonesia-searches-50-recovers-7-body-bags-after-factory-fire",
+          "published_at": "2026-11-22T09:45:40Z",
+          "published_at_estimated": false,
+          "image_url": "https://cdn.i-scmp.com/sites/default/files/styles/1280x720/public/d8/images/canvas/2026/11/22/bcc6d8ff-71bf-41db-8867-dfefb7cd3891_db138a2a.jpg?itok=iClPYZ1K&v=1795340727"
+        },
+        {
+          "id": "dab5535e2a6c",
+          "outlet_id": "toi",
+          "headline": "Factory Fire: Seven bodies recovered; about 50 workers remain unaccounted for",
+          "snippet": "A massive fire erupted at a candy factory in Cikande, Indonesia, resulting in the recovery of seven body bags. Authorities reported that around 50 workers remain unaccounted for as rescue efforts…",
+          "url": "https://timesofindia.indiatimes.com/world/rest-of-world/indonesia-factory-fire-7-body-bags-recovered-around-50-workers-remain-missing/articleshow/136071416.cms",
+          "published_at": "2026-11-22T10:11:30Z",
+          "published_at_estimated": false,
+          "image_url": "https://static.toiimg.com/photo/msid-136071825,imgsize-214486.cms"
+        },
+        {
+          "id": "b39f009c02c0",
+          "outlet_id": "france24",
+          "headline": "Indonesia factory hit by deadly blaze: Three killed and 36 missing",
+          "snippet": "At least three people have been killed and dozens are missing after a fire broke out at a factory in Indonesia producing sweets and snack products. Fifteen people were rescued alive from the plant…",
+          "url": "https://www.france24.com/en/indonesia-factory-hit-by-deadly-blaze-three-killed-and-36-missing",
+          "published_at": "2026-11-22T12:11:00Z",
+          "published_at_estimated": false,
+          "image_url": "https://s.france24.com/media/display/f94de65e-e66c-11f1-93f4-1bac47ab2f5d/w:1024/p:16x9/EN-20261122-120836-121007-CS.jpg"
+        },
+        {
+          "id": "62472447d748",
+          "outlet_id": "fox",
+          "headline": "Indonesia candy factory fire leaves multiple dead, dozens missing",
+          "snippet": "A massive fire tore through PT Fonusa Agung Mulia's candy factory in Indonesia's Banten, killing at least three with up to 50 workers missing.",
+          "url": "https://www.foxnews.com/world/indonesia-candy-factory-fire-leaves-multiple-dead-dozens-missing",
+          "published_at": "2026-11-22T13:18:44Z",
+          "published_at_estimated": false,
+          "image_url": "https://static.foxnews.com/foxnews.com/content/uploads/2026/11/indonesia-candy-factory-fire.gif"
+        },
+        {
+          "id": "e52ccdd89580",
+          "outlet_id": "bbc",
+          "headline": "Three killed and dozens missing after fire at Indonesian factory",
+          "snippet": "At least three people were killed and many more feared dead after a fire at a confectionary factory.",
+          "url": "https://www.bbc.co.uk/news/articles/cw8dvg5pgm0eo",
+          "published_at": "2026-11-22T14:05:20Z",
+          "published_at_estimated": false,
+          "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/0675/live/85d2f2e0-e62c-11f1-b2ea-350d14ed1ad7.jpg"
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "At least three people were killed in the fire.",
+          "sources": [
+            "afefeee1e167",
+            "7ca9b24f52ed",
+            "bd5569004b82",
+            "e7e50bbd06e2",
+            "5e80ea18861b",
+            "b39f009c02c0",
+            "62472447d748",
+            "e52ccdd89580"
+          ]
+        },
+        {
+          "text": "Dozens of people are missing or unaccounted for after the blaze.",
+          "sources": [
+            "afefeee1e167",
+            "7ca9b24f52ed",
+            "bd5569004b82",
+            "e7e50bbd06e2",
+            "5e80ea18861b",
+            "b39f009c02c0",
+            "62472447d748",
+            "e52ccdd89580",
+            "dab5535e2a6c"
+          ]
+        },
+        {
+          "text": "The factory produced candy, sweets or confectionery.",
+          "sources": [
+            "afefeee1e167",
+            "7ca9b24f52ed",
+            "bd5569004b82",
+            "5e80ea18861b",
+            "b39f009c02c0",
+            "62472447d748",
+            "e52ccdd89580",
+            "dab5535e2a6c"
+          ]
+        },
+        {
+          "text": "The factory is in Banten province, west of Jakarta.",
+          "sources": [
+            "afefeee1e167",
+            "7ca9b24f52ed",
+            "bd5569004b82",
+            "62472447d748"
+          ]
+        },
+        {
+          "text": "The factory belongs to PT Fonusa Agung Mulia.",
+          "sources": [
+            "afefeee1e167",
+            "62472447d748"
+          ]
+        },
+        {
+          "text": "At least 15 people were rescued alive.",
+          "sources": [
+            "e7e50bbd06e2",
+            "b39f009c02c0"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "bd5569004b82",
+              "quote": "Relatives of the missing victims flocked to the factory’s entrance",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with relatives of the missing gathering at the factory entrance seeking updates.",
+              "sources": [
+                "bd5569004b82"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "7ca9b24f52ed",
+              "quote": "Dozens missing as deadly fire hits Indonesian candy factory",
+              "field": "headline"
+            },
+            {
+              "article_id": "e52ccdd89580",
+              "quote": "many more feared dead",
+              "field": "snippet"
+            },
+            {
+              "article_id": "b39f009c02c0",
+              "quote": "Fifteen people were rescued alive from the plant",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Emphasises the scale of damage, with the blaze destroying large parts of the facility.",
+              "sources": [
+                "7ca9b24f52ed"
+              ]
+            },
+            {
+              "text": "Notes that many more are feared dead and that 15 people were rescued.",
+              "sources": [
+                "e52ccdd89580",
+                "b39f009c02c0"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "right",
+          "headline_quotes": [
+            {
+              "article_id": "5e80ea18861b",
+              "quote": "horror blaze rips through sweet factory as roof collapses",
+              "field": "headline"
+            },
+            {
+              "article_id": "62472447d748",
+              "quote": "up to 50 workers missing",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with a figure of up to 50 missing and describes the roof collapsing.",
+              "sources": [
+                "5e80ea18861b",
+                "62472447d748"
+              ]
+            },
+            {
+              "text": "Foregrounds rescue teams searching for survivors.",
+              "sources": [
+                "5e80ea18861b"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "left",
+          "text": "Does not mention the number of people rescued alive.",
+          "sources": [
+            "b39f009c02c0"
+          ]
+        },
+        {
+          "lean": "right",
+          "text": "Does not mention the number of people rescued alive.",
+          "sources": [
+            "b39f009c02c0"
+          ]
+        },
+        {
+          "lean": "left",
+          "text": "Does not name the company that owns the factory.",
+          "sources": [
+            "62472447d748"
+          ]
+        },
+        {
+          "lean": "centre",
+          "text": "Does not mention the figure of about 50 missing.",
+          "sources": [
+            "5e80ea18861b",
+            "62472447d748"
+          ]
+        }
+      ],
+      "contested_claims": [
+        {
+          "claim": "The number of missing is 36.",
+          "asserted_by": [
+            "bd5569004b82",
+            "e7e50bbd06e2",
+            "b39f009c02c0"
+          ],
+          "disputed_by": [
+            "5e80ea18861b",
+            "dab5535e2a6c",
+            "62472447d748"
+          ]
+        },
+        {
+          "claim": "Seven body bags were recovered from the factory.",
+          "asserted_by": [
+            "dab5535e2a6c"
+          ],
+          "disputed_by": [
+            "c10d3bed987a"
+          ]
+        }
+      ],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "7ca9b24f52ed",
+              "quote": "Dozens missing as deadly fire hits Indonesian candy factory",
+              "field": "headline"
+            },
+            {
+              "article_id": "5e80ea18861b",
+              "quote": "Three dead & 50 missing",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with a death toll of at least three and dozens missing.",
+              "sources": [
+                "7ca9b24f52ed",
+                "bd5569004b82",
+                "5e80ea18861b",
+                "b39f009c02c0",
+                "62472447d748",
+                "e52ccdd89580"
+              ]
+            },
+            {
+              "text": "Notes relatives gathering at the factory and the roof collapsing.",
+              "sources": [
+                "bd5569004b82",
+                "5e80ea18861b"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "c10d3bed987a",
+              "quote": "police removed 24 body bags",
+              "field": "snippet"
+            },
+            {
+              "article_id": "dab5535e2a6c",
+              "quote": "Seven bodies recovered",
+              "field": "headline"
+            },
+            {
+              "article_id": "e7e50bbd06e2",
+              "quote": "cause of the fire is under investigation",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Reports body bags recovered from the site and the search for the missing resuming on Monday.",
+              "sources": [
+                "c10d3bed987a",
+                "dab5535e2a6c"
+              ]
+            },
+            {
+              "text": "Notes rescues and that the cause is under investigation.",
+              "sources": [
+                "e7e50bbd06e2"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "A fire at a confectionery factory in Indonesia's Banten province, west of Jakarta, killed at least three people and left dozens missing, with reported missing figures of 36 or about 50. At least 15 people were rescued, and authorities say the cause is under investigation.",
+        "sources": [
+          "afefeee1e167",
+          "7ca9b24f52ed",
+          "bd5569004b82",
+          "e7e50bbd06e2",
+          "5e80ea18861b",
+          "b39f009c02c0",
+          "62472447d748",
+          "e52ccdd89580",
+          "dab5535e2a6c"
+        ]
+      },
+      "conclusion": {
+        "text": "Coverage agrees that at least three died and dozens are missing after a fire at a confectionery factory in Banten. Left coverage leads with relatives, right with the 50-missing figure and roof collapse, East-bloc outlets with body recovery. Missing figures (36 or about 50) and body-bag counts (seven or 24) differ.",
+        "sources": [
+          "afefeee1e167",
+          "7ca9b24f52ed",
+          "bd5569004b82",
+          "e7e50bbd06e2",
+          "5e80ea18861b",
+          "b39f009c02c0",
+          "62472447d748",
+          "e52ccdd89580",
+          "c10d3bed987a",
+          "dab5535e2a6c"
+        ]
+      },
+      "validation": {
+        "kept": 34,
+        "dropped_by_reason": {}
+      }
+    },
+    {
+      "id": "0d26c6eff87f",
+      "title": "Drone-struck Russian cargo ship burns in Gulf of Finland",
+      "rank": 4,
+      "outlet_count": 10,
+      "coverage": {
+        "lean": {
+          "left": 0,
+          "centre": 3,
+          "right": 2
+        },
+        "bloc": {
+          "west": 5,
+          "east": 5
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "2fbe75c38a5b",
+          "outlet_id": "cgtn",
+          "headline": "Russian cargo ship on fire in Gulf of Finland, border guard says",
+          "snippet": "",
+          "url": "https://news.cgtn.com/news/2026-11-21/news-1SfVsM5rxQI/p.html",
+          "published_at": "2026-11-21T11:17:54Z",
+          "published_at_estimated": false,
+          "image_url": "https://news.cgtn.com/resource/default/img/breaking.png"
+        },
+        {
+          "id": "de67e7feec6d",
+          "outlet_id": "moscowtimes",
+          "headline": "Russia Says Cargo Vessel Struck by Drones in Gulf of Finland",
+          "snippet": "Finland said that the damaged vessel was on fire and had drifted from international waters into its territorial waters.",
+          "url": "https://www.themoscowtimes.com/2026/11/21/russia-says-cargo-vessel-struck-by-drones-in-gulf-of-finland-a94342",
+          "published_at": "2026-11-21T11:50:00Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "3909b1640227",
+          "outlet_id": "thehindu",
+          "headline": "Finland detects drone attack on Russian cargo ship in Baltic",
+          "snippet": "The Finnish Defence Ministry did not specify who was behind the drone strike, but Prime Minister Petteri Orpo said in a message “War is spilling over into our immediate vicinity... Ukraine has the…",
+          "url": "https://www.thehindu.com/news/international/finland-detects-drone-attack-on-russian-cargo-ship-in-baltic/article71728516.ece",
+          "published_at": "2026-11-21T13:56:11Z",
+          "published_at_estimated": false,
+          "image_url": "https://th-i.thgim.com/public/incoming/i5kwff/article71728519.ece/alternates/LANDSCAPE_1200/2026-11-21T121758Z_39228957_RC2BSOAQS763_RTRMADP_3_UKRAINE-CRISIS-RUSSIA-VESSEL.JPG"
+        },
+        {
+          "id": "d01b2608b7ae",
+          "outlet_id": "thehindu",
+          "headline": "Cargo ship bound for Russia's Kaliningrad hit by drones, Finland tightens security",
+          "snippet": "Finland's Defence Ministry said the military had reintroduced temporary aviation and maritime restrictions in the eastern Gulf of Finland as a precaution to protect civilians and enable authorities…",
+          "url": "https://www.thehindu.com/news/international/cargo-ship-bound-for-russias-kaliningrad-hit-by-drones-finland-tightens-security/article71729285.ece",
+          "published_at": "2026-11-21T16:51:03Z",
+          "published_at_estimated": false,
+          "image_url": "https://th-i.thgim.com/public/incoming/ldpog9/article71729312.ece/alternates/LANDSCAPE_1200/2026-11-21T160708Z_1736225898_RC2DSOAQBVC2_RTRMADP_3_UKRAINE-CRISIS-RUSSIA-VESSEL.JPG"
+        },
+        {
+          "id": "3e7ad32a1007",
+          "outlet_id": "dw",
+          "headline": "Russian helicopter suspected of violating Finnish airspace",
+          "snippet": "Finland's Defense Ministry thinks the incursion is linked to a drone strike earlier Saturday on a Russian cargo ship, which is on a US sanctions list.",
+          "url": "https://www.dw.com/en/russian-helicopter-suspected-of-violating-finnish-airspace/a-80010133?maca=en-rss-en-world-4025-xml-mrss",
+          "published_at": "2026-11-21T17:08:00Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "7ee88ef01dcf",
+          "outlet_id": "france24",
+          "headline": "Drone attack sets Russian cargo ship ablaze in Gulf of Finland",
+          "snippet": "A Russian cargo ship caught fire after ​being hit by drones in the Baltic Sea on Saturday and drifted into Finnish waters. Reporting from Kyiv, FRANCE 24's Gulliver Cragg notes that the ship is…",
+          "url": "https://www.france24.com/en/drone-attack-sets-russian-cargo-ship-ablaze-in-gulf-of-finland",
+          "published_at": "2026-11-21T18:02:23Z",
+          "published_at_estimated": false,
+          "image_url": "https://s.france24.com/media/display/8752a08e-e5d2-11f1-bad2-e56ab3dc0809/w:1024/p:16x9/EN-20261121-180424-180619-CS.jpg"
+        },
+        {
+          "id": "5eb8b8506fcd",
+          "outlet_id": "koreaherald",
+          "headline": "Russian cargo ship catches fire in Baltic",
+          "snippet": "A Ukrainian drone hit a Russian cargo ship which caught fire on the eastern Baltic Sea, as Finland's prime minister said Kyiv had the right to hit back against its \"aggressor.\" Hours later, a…",
+          "url": "https://www.koreaherald.com/article/10945066",
+          "published_at": "2026-11-22T04:23:00Z",
+          "published_at_estimated": false,
+          "image_url": "https://wimg.heraldcorp.com/news/cms/2026/11/22/rcv.YNA.20261122.PRU20261122052701009_T1.jpg"
+        },
+        {
+          "id": "ed69931275e7",
+          "outlet_id": "moscowtimes",
+          "headline": "Russian Cargo Ship Still on Fire off Finland After Attack",
+          "snippet": "A fire onboard a Russian cargo ship struck by drones continued to burn through the night, even as efforts were made to douse the flames.",
+          "url": "https://www.themoscowtimes.com/2026/11/22/russian-cargo-ship-still-on-fire-off-finland-after-attack-a94343",
+          "published_at": "2026-11-22T09:23:25Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "9ff109b20ec5",
+          "outlet_id": "aljazeera",
+          "headline": "Russian cargo ship still on fire off Finland after drone attack",
+          "snippet": "The ship, bound for Russia's Kaliningrad, was damaged in international waters before drifting into Finnish territory.",
+          "url": "https://www.aljazeera.com/news/2026/11/22/russian-cargo-ship-still-on-fire-off-finland-after-drone-attack",
+          "published_at": "2026-11-22T10:39:50Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "21c38465fc18",
+          "outlet_id": "aljazeera",
+          "headline": "Russian ship attacked by drone in Baltic Sea off Finland",
+          "snippet": "",
+          "url": "https://www.aljazeera.com/video/newsfeed/2026/11/22/russian-ship-attacked-by-drone-in-baltic-sea-off-finland",
+          "published_at": "2026-11-22T11:15:27Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "337d531706a2",
+          "outlet_id": "bbc",
+          "headline": "Russia-bound ship still on fire after attack in Gulf of Finland",
+          "snippet": "Finnish defence forces say that Ukraine was likely behind the drone attack on the vessel.",
+          "url": "https://www.bbc.co.uk/news/articles/cj752ddve27ko",
+          "published_at": "2026-11-22T11:25:14Z",
+          "published_at_estimated": false,
+          "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/d6f9/live/a55b16b0-e66d-11f1-9e24-791c5321ff0f.jpg"
+        },
+        {
+          "id": "1105fcc843dd",
+          "outlet_id": "thesun",
+          "headline": "Sanctioned Russian ‘military’ ship STILL burning on Nato’s doorstep after ‘Ukrainian’ drone blitz as war ‘spills over’",
+          "snippet": "A SANCTIONED Russian ship was still burning in Finnish waters on Sunday after being struck by a drone on Nato's doorstep. The Sparta II - a cargo vessel linked to the Russian military - was blitzed…",
+          "url": "https://www.thesun.co.uk/news/41106099/russian-warship-burning-natos-doorstep-drone-blitz/",
+          "published_at": "2026-11-22T12:43:53Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.thesun.co.uk/wp-content%2Fuploads%2F2026%2F11%2Ffinnish-border-guards-handout-photo-1124890587.jpg?quality%3D90%26"
+        },
+        {
+          "id": "f2fa87d87929",
+          "outlet_id": "dailymail",
+          "headline": "Russian cargo ship 'carrying military supplies' still on fire after being hit by drones in the Baltic sea - as Finland suggests Ukraine is behind attack",
+          "snippet": "The region's governor said air defences reacted to a 'suspicious object' coming from the direction of Lithuania, but provided no evidence.",
+          "url": "https://www.dailymail.com/news/article-16312901/Air-raid-sirens-Kaliningrad-fears-Ukrainian-drone-attack-Russia-Kaliningrad.html",
+          "published_at": "2026-11-22T13:15:42Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.dailymail.com/1s/2026/11/22/09/112660197-0-image-m-18_1795339249438.jpg"
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "A Russian cargo ship was struck by drones in the Gulf of Finland or Baltic Sea and caught fire.",
+          "sources": [
+            "2fbe75c38a5b",
+            "de67e7feec6d",
+            "3909b1640227",
+            "7ee88ef01dcf",
+            "5eb8b8506fcd",
+            "ed69931275e7",
+            "9ff109b20ec5",
+            "21c38465fc18",
+            "337d531706a2",
+            "1105fcc843dd",
+            "f2fa87d87929"
+          ]
+        },
+        {
+          "text": "The ship drifted from international waters into Finnish waters.",
+          "sources": [
+            "de67e7feec6d",
+            "7ee88ef01dcf",
+            "9ff109b20ec5"
+          ]
+        },
+        {
+          "text": "The ship was still on fire the day after the strike.",
+          "sources": [
+            "ed69931275e7",
+            "9ff109b20ec5",
+            "337d531706a2",
+            "1105fcc843dd",
+            "f2fa87d87929"
+          ]
+        },
+        {
+          "text": "The ship was bound for Russia, with Kaliningrad named as its destination.",
+          "sources": [
+            "d01b2608b7ae",
+            "9ff109b20ec5",
+            "337d531706a2"
+          ]
+        },
+        {
+          "text": "Finnish sources linked the attack to Ukraine, either directly or through the prime minister's remarks on Kyiv's right to hit back.",
+          "sources": [
+            "337d531706a2",
+            "f2fa87d87929",
+            "5eb8b8506fcd",
+            "3909b1640227"
+          ]
+        },
+        {
+          "text": "The vessel is on a sanctions list.",
+          "sources": [
+            "3e7ad32a1007",
+            "1105fcc843dd"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "3e7ad32a1007",
+              "quote": "Russian helicopter suspected of violating Finnish airspace",
+              "field": "headline"
+            },
+            {
+              "article_id": "7ee88ef01dcf",
+              "quote": "Drone attack sets Russian cargo ship ablaze in Gulf of Finland",
+              "field": "headline"
+            },
+            {
+              "article_id": "337d531706a2",
+              "quote": "Ukraine was likely behind the drone attack on the vessel",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads on a suspected Russian helicopter incursion into Finnish airspace, which Finland's Defence Ministry links to the strike.",
+              "sources": [
+                "3e7ad32a1007"
+              ]
+            },
+            {
+              "text": "Reports Finnish defence forces' view that Ukraine was likely behind the attack.",
+              "sources": [
+                "337d531706a2"
+              ]
+            },
+            {
+              "text": "Notes the ship is on a US sanctions list.",
+              "sources": [
+                "3e7ad32a1007"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "right",
+          "headline_quotes": [
+            {
+              "article_id": "1105fcc843dd",
+              "quote": "Sanctioned Russian ‘military’ ship STILL burning on Nato’s doorstep",
+              "field": "headline"
+            },
+            {
+              "article_id": "f2fa87d87929",
+              "quote": "Russian cargo ship 'carrying military supplies' still on fire",
+              "field": "headline"
+            },
+            {
+              "article_id": "f2fa87d87929",
+              "quote": "as Finland suggests Ukraine is behind attack",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Foregrounds the ship's alleged military links, naming it the Sparta II and describing it as carrying military supplies.",
+              "sources": [
+                "1105fcc843dd",
+                "f2fa87d87929"
+              ]
+            },
+            {
+              "text": "Places the incident on Nato's doorstep and repeats the phrase that war 'spills over'.",
+              "sources": [
+                "1105fcc843dd"
+              ]
+            },
+            {
+              "text": "Reports a regional governor's claim that air defences reacted to a suspicious object from the direction of Lithuania, noting no evidence was provided.",
+              "sources": [
+                "f2fa87d87929"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not mention claims that the ship was linked to the Russian military or carrying military supplies.",
+          "sources": [
+            "1105fcc843dd",
+            "f2fa87d87929"
+          ]
+        },
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not mention the remark that the war is spilling over.",
+          "sources": [
+            "1105fcc843dd"
+          ]
+        },
+        {
+          "lean": "right",
+          "text": "Right coverage does not mention the suspected Russian helicopter violation of Finnish airspace.",
+          "sources": [
+            "3e7ad32a1007"
+          ]
+        }
+      ],
+      "contested_claims": [],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "1105fcc843dd",
+              "quote": "Sanctioned Russian ‘military’ ship STILL burning on Nato’s doorstep",
+              "field": "headline"
+            },
+            {
+              "article_id": "3e7ad32a1007",
+              "quote": "Russian helicopter suspected of violating Finnish airspace",
+              "field": "headline"
+            },
+            {
+              "article_id": "337d531706a2",
+              "quote": "Russia-bound ship still on fire after attack in Gulf of Finland",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Emphasises the ship's sanctioned status and alleged military links.",
+              "sources": [
+                "3e7ad32a1007",
+                "1105fcc843dd",
+                "f2fa87d87929"
+              ]
+            },
+            {
+              "text": "Reports Finnish assessments that Ukraine was likely responsible.",
+              "sources": [
+                "337d531706a2",
+                "f2fa87d87929"
+              ]
+            },
+            {
+              "text": "Reports a suspected Russian helicopter airspace violation linked to the strike.",
+              "sources": [
+                "3e7ad32a1007"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "2fbe75c38a5b",
+              "quote": "Russian cargo ship on fire in Gulf of Finland, border guard says",
+              "field": "headline"
+            },
+            {
+              "article_id": "d01b2608b7ae",
+              "quote": "Finland tightens security",
+              "field": "headline"
+            },
+            {
+              "article_id": "3909b1640227",
+              "quote": "War is spilling over into our immediate vicinity",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with official statements from Finland and Russia on the fire and drone strike.",
+              "sources": [
+                "2fbe75c38a5b",
+                "de67e7feec6d",
+                "3909b1640227"
+              ]
+            },
+            {
+              "text": "Reports Finland reintroducing temporary aviation and maritime restrictions in the eastern Gulf of Finland.",
+              "sources": [
+                "d01b2608b7ae"
+              ]
+            },
+            {
+              "text": "Quotes Prime Minister Orpo on the war spilling over and Kyiv's right to hit back against its aggressor.",
+              "sources": [
+                "3909b1640227",
+                "5eb8b8506fcd"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "A Russian cargo ship bound for Kaliningrad was hit by drones in the Gulf of Finland, caught fire and drifted from international waters into Finnish waters. It was still burning the next day. Finnish defence forces said Ukraine was likely behind the attack, and Finland reintroduced temporary aviation and maritime restrictions.",
+        "sources": [
+          "de67e7feec6d",
+          "d01b2608b7ae",
+          "9ff109b20ec5",
+          "7ee88ef01dcf",
+          "ed69931275e7",
+          "337d531706a2",
+          "f2fa87d87929"
+        ]
+      },
+      "conclusion": {
+        "text": "Outlets agree a drone-struck Russian cargo ship burned and drifted into Finnish waters, with Finland pointing towards Ukraine. Right-leaning outlets stress alleged military links and Nato's doorstep; centre outlets add a suspected airspace violation; East-bloc outlets lead with official statements and Finnish restrictions. No direct contradictions appear.",
+        "sources": [
+          "de67e7feec6d",
+          "9ff109b20ec5",
+          "337d531706a2",
+          "1105fcc843dd",
+          "f2fa87d87929",
+          "3e7ad32a1007",
+          "2fbe75c38a5b",
+          "d01b2608b7ae"
+        ]
+      },
+      "validation": {
+        "kept": 35,
+        "dropped_by_reason": {}
+      }
+    },
+    {
+      "id": "36f22f01ca91",
+      "title": "South Korea's education minister resigns over AI exam cheating scandal",
+      "rank": 5,
+      "outlet_count": 8,
+      "coverage": {
+        "lean": {
+          "left": 2,
+          "centre": 2,
+          "right": 0
+        },
+        "bloc": {
+          "west": 4,
+          "east": 4
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "ec11b72e7148",
+          "outlet_id": "koreaherald",
+          "headline": "Education minister steps down amid Suneung-related controversies",
+          "snippet": "Education Minister Choi Kyo-jin offered his resignation on Sunday, saying he will take responsibility for the confusion sparked by last-minute changes to prevent artificial intelligence-related…",
+          "url": "https://www.koreaherald.com/article/10945089",
+          "published_at": "2026-11-22T04:59:33Z",
+          "published_at_estimated": false,
+          "image_url": "https://wimg.heraldcorp.com/news/cms/2026/11/22/news-p.v1.20261122.858c60dc18064f7f917047593cbaf10a_T1.jpg"
+        },
+        {
+          "id": "9c5e7acaf750",
+          "outlet_id": "japantimes",
+          "headline": "South Korea education chief resigns amid AI cheating scandal",
+          "snippet": "The top scorer in a national tax accountant exam confessed to using AI for his near-perfect score, just days before the country's college entrance exam.",
+          "url": "https://www.japantimes.co.jp/news/2026/11/22/asia-pacific/politics/south-korea-education-minister-resigns/",
+          "published_at": "2026-11-22T05:19:00Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.japantimes.co.jp/japantimes/uploads/images/2026/11/22/thumbs/400x400/575389.jpg"
+        },
+        {
+          "id": "7e1a2eb4fa4e",
+          "outlet_id": "scmp",
+          "headline": "South Korea’s education minister quits amid backlash over anti-cheating exam checks",
+          "snippet": "South Korea’s education minister resigned on Sunday over an artificial intelligence-assisted cheating scandal that erupted ahead of the country’s major college entrance exam this week. The country…",
+          "url": "https://www.scmp.com/news/asia/east-asia/article/3375362/south-koreas-education-minister-quits-amid-backlash-over-anti-cheating-exam-checks",
+          "published_at": "2026-11-22T06:36:57Z",
+          "published_at_estimated": false,
+          "image_url": "https://cdn.i-scmp.com/sites/default/files/styles/1280x720/public/d8/images/canvas/2026/11/22/98e06e28-620a-41ec-b5d7-a38d33e6d7ac_f575bba3.jpg?itok=Q3J9yFX9&v=1795329403"
+        },
+        {
+          "id": "23c4da6f4a51",
+          "outlet_id": "thehindu",
+          "headline": "South Korea Education Minister resigns amid AI cheating scandal",
+          "snippet": "The country has been gripped by fears of AI-assisted exam cheating since last Sunday (November 15, 2026), when the top scorer in a national tax accountant exam confessed to using a miniature camera…",
+          "url": "https://www.thehindu.com/news/international/south-korea-education-minister-resigns-amid-ai-cheating-scandal/article71730601.ece",
+          "published_at": "2026-11-22T07:13:03Z",
+          "published_at_estimated": false,
+          "image_url": "https://th-i.thgim.com/public/incoming/32b5c5/article71730623.ece/alternates/LANDSCAPE_1200/South_Korea_Exam_Cheating__56_3.jpg"
+        },
+        {
+          "id": "a6462ca3f9d1",
+          "outlet_id": "nyt",
+          "headline": "South Korea’s Education Minister Resigns Over Anti-A.I. Cheating Rules",
+          "snippet": "Two days before South Korea’s college entrance exam, new measures were announced, including loud phone alerts and eyeglass inspections. Public backlash came fast.",
+          "url": "https://www.nytimes.com/2026/11/22/world/asia/korea-csat-exam-ai-cheating.html",
+          "published_at": "2026-11-22T08:35:05Z",
+          "published_at_estimated": false,
+          "image_url": "https://static01.nyt.com/images/2026/11/22/multimedia/22skorea-exam-wfpv/22skorea-exam-wfpv-mediumSquareAt3X.jpg"
+        },
+        {
+          "id": "b968f25f891f",
+          "outlet_id": "bbc",
+          "headline": "South Korea education minister resigns over exam cheating scandal",
+          "snippet": "Choi Kyo-jin admits last-minute measures to stop AI-assisted cheating during the college entrance exam caused chaos.",
+          "url": "https://www.bbc.co.uk/news/articles/cw3dgk29d37no",
+          "published_at": "2026-11-22T09:20:45Z",
+          "published_at_estimated": false,
+          "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/dc28/live/9c42c760-e66a-11f1-99b6-a35a62fa4264.jpg"
+        },
+        {
+          "id": "82c67ad6ceee",
+          "outlet_id": "france24",
+          "headline": "South Korea: AI cheating sparks exam security chaos",
+          "snippet": "South Korea’s education minister resigned on Sunday following a major cheating scandal that erupted just ahead of the country’s university entrance exams. The controversy centred on the top scorer…",
+          "url": "https://www.france24.com/en/south-korea-ai-cheating-sparks-exam-security-chaos",
+          "published_at": "2026-11-22T10:05:28Z",
+          "published_at_estimated": false,
+          "image_url": "https://s.france24.com/media/display/a42888e6-e658-11f1-af0b-e56ab3dc0809/w:1024/p:16x9/EN-20261122-100808-100945-CS.jpg"
+        },
+        {
+          "id": "f048b1ac4b65",
+          "outlet_id": "guardian",
+          "headline": "South Korean minister quits after AI cheating scandal engulfs university exams",
+          "snippet": "Choi Kyo-jin says he ‘failed to prepare adequately’ for entrance exams following last-minute scramble to tighten measures South Korea’s education minister has resigned after an AI-assisted cheating…",
+          "url": "https://www.theguardian.com/world/2026/nov/22/south-korea-education-minister-resigns-after-ai-cheating-scandal-engulfs-university-exams",
+          "published_at": "2026-11-22T12:12:08Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.guim.co.uk/img/media/3d9052371f434580f71c25a962110e47f2e6a076/605_0_6228_4986/master/6228.jpg?width=460&quality=85&auto=format&fit=max&s=487148910404a1260629cd6617c05c2c"
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "South Korea's education minister has resigned.",
+          "sources": [
+            "ec11b72e7148",
+            "9c5e7acaf750",
+            "7e1a2eb4fa4e",
+            "23c4da6f4a51",
+            "a6462ca3f9d1",
+            "b968f25f891f",
+            "82c67ad6ceee",
+            "f048b1ac4b65"
+          ]
+        },
+        {
+          "text": "The minister is named as Choi Kyo-jin.",
+          "sources": [
+            "ec11b72e7148",
+            "b968f25f891f",
+            "f048b1ac4b65"
+          ]
+        },
+        {
+          "text": "The resignation came on Sunday.",
+          "sources": [
+            "ec11b72e7148",
+            "7e1a2eb4fa4e",
+            "82c67ad6ceee"
+          ]
+        },
+        {
+          "text": "The resignation followed last-minute measures to prevent AI-assisted cheating in the college entrance exam.",
+          "sources": [
+            "ec11b72e7148",
+            "a6462ca3f9d1",
+            "b968f25f891f",
+            "f048b1ac4b65"
+          ]
+        },
+        {
+          "text": "The cheating scandal erupted just ahead of the country's college or university entrance exam.",
+          "sources": [
+            "9c5e7acaf750",
+            "7e1a2eb4fa4e",
+            "23c4da6f4a51",
+            "82c67ad6ceee"
+          ]
+        },
+        {
+          "text": "The top scorer in a national tax accountant exam confessed to using AI.",
+          "sources": [
+            "9c5e7acaf750",
+            "23c4da6f4a51"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "a6462ca3f9d1",
+              "quote": "Resigns Over Anti-A.I. Cheating Rules",
+              "field": "headline"
+            },
+            {
+              "article_id": "a6462ca3f9d1",
+              "quote": "Public backlash came fast.",
+              "field": "snippet"
+            },
+            {
+              "article_id": "f048b1ac4b65",
+              "quote": "he ‘failed to prepare adequately’",
+              "field": "snippet"
+            },
+            {
+              "article_id": "f048b1ac4b65",
+              "quote": "AI cheating scandal engulfs university exams",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the anti-cheating rules themselves, naming loud phone alerts and eyeglass inspections, and the quick public backlash.",
+              "sources": [
+                "a6462ca3f9d1"
+              ]
+            },
+            {
+              "text": "Foregrounds the minister's own admission that he failed to prepare adequately amid a last-minute scramble.",
+              "sources": [
+                "f048b1ac4b65"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "b968f25f891f",
+              "quote": "caused chaos",
+              "field": "snippet"
+            },
+            {
+              "article_id": "82c67ad6ceee",
+              "quote": "AI cheating sparks exam security chaos",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Describes the outcome of the last-minute measures as chaos, attributing that admission to the minister.",
+              "sources": [
+                "b968f25f891f",
+                "82c67ad6ceee"
+              ]
+            },
+            {
+              "text": "Notes that the controversy centred on a top scorer.",
+              "sources": [
+                "82c67ad6ceee"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not mention the specific measures, such as loud phone alerts and eyeglass inspections.",
+          "sources": [
+            "a6462ca3f9d1"
+          ]
+        }
+      ],
+      "contested_claims": [],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "b968f25f891f",
+              "quote": "last-minute measures to stop AI-assisted cheating",
+              "field": "snippet"
+            },
+            {
+              "article_id": "82c67ad6ceee",
+              "quote": "exam security chaos",
+              "field": "headline"
+            },
+            {
+              "article_id": "a6462ca3f9d1",
+              "quote": "loud phone alerts and eyeglass inspections",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Emphasises the last-minute anti-cheating measures and the chaos or backlash they caused.",
+              "sources": [
+                "a6462ca3f9d1",
+                "b968f25f891f",
+                "82c67ad6ceee",
+                "f048b1ac4b65"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "9c5e7acaf750",
+              "quote": "confessed to using AI for his near-perfect score",
+              "field": "snippet"
+            },
+            {
+              "article_id": "23c4da6f4a51",
+              "quote": "confessed to using a miniature camera",
+              "field": "snippet"
+            },
+            {
+              "article_id": "ec11b72e7148",
+              "quote": "take responsibility for the confusion",
+              "field": "snippet"
+            },
+            {
+              "article_id": "7e1a2eb4fa4e",
+              "quote": "backlash over anti-cheating exam checks",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Foregrounds the tax accountant exam top scorer's confession, including use of a miniature camera.",
+              "sources": [
+                "9c5e7acaf750",
+                "23c4da6f4a51"
+              ]
+            },
+            {
+              "text": "Highlights the minister taking responsibility for confusion from last-minute changes and backlash over exam checks.",
+              "sources": [
+                "ec11b72e7148",
+                "7e1a2eb4fa4e"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "South Korea's education minister, Choi Kyo-jin, resigned on Sunday over an AI-assisted cheating scandal that erupted just before the national college entrance exam. He took responsibility for the confusion caused by last-minute measures to prevent AI cheating, which drew public backlash.",
+        "sources": [
+          "ec11b72e7148",
+          "9c5e7acaf750",
+          "7e1a2eb4fa4e",
+          "23c4da6f4a51",
+          "a6462ca3f9d1",
+          "b968f25f891f",
+          "82c67ad6ceee",
+          "f048b1ac4b65"
+        ]
+      },
+      "conclusion": null,
+      "validation": {
+        "kept": 28,
+        "dropped_by_reason": {
+          "untrusted_text": 1
+        }
+      }
+    },
+    {
+      "id": "c842c7400659",
+      "title": "Russian missile strike on Kryvyi Rih, Zelensky's hometown, kills two",
+      "rank": 6,
+      "outlet_count": 5,
+      "coverage": {
+        "lean": {
+          "left": 1,
+          "centre": 2,
+          "right": 1
+        },
+        "bloc": {
+          "west": 4,
+          "east": 1
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "e95d3464c17a",
+          "outlet_id": "mirror",
+          "headline": "Zelensky brands Putin a 'killer' as Russian double-tap missile attack kills two",
+          "snippet": "A seven-year-old boy and a young paramedic were killed in strikes on Zelensky's hometown, as the Ukrainian president condemned Putin and challenge Trump's friendly approach to him",
+          "url": "https://www.mirror.co.uk/news/world-news/zelensky-brands-putin-killer-russian-37901996",
+          "published_at": "2026-11-21T13:38:36Z",
+          "published_at_estimated": false,
+          "image_url": "https://i2-prod.mirror.co.uk/incoming/article37901963.ece/ALTERNATES/s615/0_UKRAINE-RUSSIA-CONFLICT-WAR.jpg"
+        },
+        {
+          "id": "56a44f7f34c3",
+          "outlet_id": "dw",
+          "headline": "Russia strikes Zelenskyy's hometown, killing 2",
+          "snippet": "The attacks follow Russian President Vladimir Putin's vow of a \"painful\" response to Ukraine's attacks this week on the Kerch Bridge, linking Russian-occupied Crimea.",
+          "url": "https://www.dw.com/en/russia-strikes-zelenskyy-s-hometown-killing-2/a-80009458?maca=en-rss-en-world-4025-xml-mrss",
+          "published_at": "2026-11-21T14:44:00Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "8d585ddfbffa",
+          "outlet_id": "thehindu",
+          "headline": "Ballistic missile attack on Zelenskyy's hometown kills 2",
+          "snippet": "The attack added to uncertainty about the prospects for ongoing talks brokered by Washington; It also came hours after two Russian missiles and a suspected drone came down in Poland",
+          "url": "https://www.thehindu.com/news/international/ballistic-missile-attack-on-zelenskyys-hometown-kills-2/article71729235.ece",
+          "published_at": "2026-11-21T16:38:21Z",
+          "published_at_estimated": false,
+          "image_url": "https://th-i.thgim.com/public/incoming/g1e932/article71729256.ece/alternates/LANDSCAPE_1200/2026-11-21T105032Z_271557673_RC2ASOAJ9RKM_RTRMADP_3_UKRAINE-CRISIS-ATTACK-KYIV.JPG"
+        },
+        {
+          "id": "7814f194c090",
+          "outlet_id": "fox",
+          "headline": "Zelenskyy says Russia strikes hometown, criticizes Putin-Trump meeting",
+          "snippet": "Zelenskyy says a Russian strike on his hometown of Kryvyi Rih killed two people, including 7-year-old Tykhon, and wounded 58 others in a civilian area.",
+          "url": "https://www.foxnews.com/world/zelenskyy-says-russia-strikes-hometown-criticizes-putin-trump-meeting",
+          "published_at": "2026-11-21T19:25:55Z",
+          "published_at_estimated": false,
+          "image_url": "https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2025/08/931/523/volodymyr-zelenskyy-national-referendum.jpg?ve=1&tl=1"
+        },
+        {
+          "id": "23ec85775395",
+          "outlet_id": "france24",
+          "headline": "Russia launches ballistic missile attack on Zelensky's hometown in central Ukraine",
+          "snippet": "A Russian ballistic missile attack on President Volodymyr Zelensky’s hometown in central Ukraine on Saturday killed two people and wounded dozens. Hours later, Zelensky reiterated his country's…",
+          "url": "https://www.france24.com/en/russia-launches-ballistic-missile-attack-on-zelensky-s-hometown-in-central-ukraine",
+          "published_at": "2026-11-21T19:55:07Z",
+          "published_at_estimated": false,
+          "image_url": "https://s.france24.com/media/display/a1864982-e5d3-11f1-8806-1bac47ab2f5d/w:1024/p:16x9/EN-20261121-180653-181143-CS-01.jpg"
+        },
+        {
+          "id": "6baf9c16a11b",
+          "outlet_id": "france24",
+          "headline": "Russia attacks Zelensky's hometown, Ukraine reaffirms wish to join NATO",
+          "snippet": "A Russian ballistic missile attack on President Volodymyr Zelensky’s hometown in central Ukraine on Saturday killed two people and wounded dozens. Hours later, Zelensky reiterated his country's…",
+          "url": "https://www.france24.com/en/europe/20261121-russia-attacks-zelensky-s-hometown-ukraine-reaffirms-wish-to-join-nato",
+          "published_at": "2026-11-21T19:56:39Z",
+          "published_at_estimated": false,
+          "image_url": "https://s.france24.com/media/display/700b9322-e5d7-11f1-9865-13439ca2fe89/w:1024/p:16x9/AP26325430245749.jpg"
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "A Russian strike on Zelensky's hometown killed two people.",
+          "sources": [
+            "e95d3464c17a",
+            "56a44f7f34c3",
+            "8d585ddfbffa",
+            "7814f194c090",
+            "23ec85775395",
+            "6baf9c16a11b"
+          ]
+        },
+        {
+          "text": "The attack was carried out with ballistic missiles.",
+          "sources": [
+            "8d585ddfbffa",
+            "23ec85775395",
+            "6baf9c16a11b"
+          ]
+        },
+        {
+          "text": "A seven-year-old boy was among those killed.",
+          "sources": [
+            "e95d3464c17a",
+            "7814f194c090"
+          ]
+        },
+        {
+          "text": "Dozens of people were wounded; one report puts the figure at 58.",
+          "sources": [
+            "7814f194c090",
+            "23ec85775395",
+            "6baf9c16a11b"
+          ]
+        },
+        {
+          "text": "Zelensky criticised Putin and Trump's dealings with him after the strike.",
+          "sources": [
+            "e95d3464c17a",
+            "7814f194c090"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "e95d3464c17a",
+              "quote": "Zelensky brands Putin a 'killer'",
+              "field": "headline"
+            },
+            {
+              "article_id": "e95d3464c17a",
+              "quote": "Russian double-tap missile attack kills two",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with Zelensky calling Putin a 'killer' and describes the attack as a double-tap strike.",
+              "sources": [
+                "e95d3464c17a"
+              ]
+            },
+            {
+              "text": "Names the victims as a seven-year-old boy and a young paramedic, and notes Zelensky's challenge to Trump's friendly approach to Putin.",
+              "sources": [
+                "e95d3464c17a"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "56a44f7f34c3",
+              "quote": "Putin's vow of a \"painful\" response",
+              "field": "snippet"
+            },
+            {
+              "article_id": "6baf9c16a11b",
+              "quote": "Ukraine reaffirms wish to join NATO",
+              "field": "headline"
+            },
+            {
+              "article_id": "23ec85775395",
+              "quote": "Russia launches ballistic missile attack on Zelensky's hometown in central Ukraine",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Links the strikes to Putin's vow of a painful response to Ukraine's attacks on the Kerch Bridge.",
+              "sources": [
+                "56a44f7f34c3"
+              ]
+            },
+            {
+              "text": "Reports that Zelensky reiterated Ukraine's wish to join NATO hours after the attack.",
+              "sources": [
+                "6baf9c16a11b"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "right",
+          "headline_quotes": [
+            {
+              "article_id": "7814f194c090",
+              "quote": "criticizes Putin-Trump meeting",
+              "field": "headline"
+            },
+            {
+              "article_id": "7814f194c090",
+              "quote": "wounded 58 others in a civilian area",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Attributes the casualty details to Zelensky, naming the boy killed as Tykhon and stating the area hit was civilian.",
+              "sources": [
+                "7814f194c090"
+              ]
+            },
+            {
+              "text": "Leads with Zelensky's criticism of a Putin-Trump meeting.",
+              "sources": [
+                "7814f194c090"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not mention that a child was among those killed.",
+          "sources": [
+            "e95d3464c17a",
+            "7814f194c090"
+          ]
+        },
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not mention Zelensky's criticism of Trump's approach to Putin.",
+          "sources": [
+            "e95d3464c17a",
+            "7814f194c090"
+          ]
+        },
+        {
+          "lean": "left",
+          "text": "Left coverage does not mention the number of people wounded.",
+          "sources": [
+            "7814f194c090",
+            "23ec85775395",
+            "6baf9c16a11b"
+          ]
+        },
+        {
+          "lean": "left",
+          "text": "Left coverage does not mention Putin's vow of a painful response to Ukraine's attacks on the Kerch Bridge.",
+          "sources": [
+            "56a44f7f34c3"
+          ]
+        },
+        {
+          "lean": "right",
+          "text": "Right coverage does not mention Putin's vow of a painful response to Ukraine's attacks on the Kerch Bridge.",
+          "sources": [
+            "56a44f7f34c3"
+          ]
+        }
+      ],
+      "contested_claims": [],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "e95d3464c17a",
+              "quote": "Zelensky brands Putin a 'killer'",
+              "field": "headline"
+            },
+            {
+              "article_id": "7814f194c090",
+              "quote": "criticizes Putin-Trump meeting",
+              "field": "headline"
+            },
+            {
+              "article_id": "56a44f7f34c3",
+              "quote": "Russia strikes Zelenskyy's hometown, killing 2",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Foregrounds Zelensky's reaction, including his criticism of Putin and of Trump's dealings with him, and his reaffirmation of NATO membership aims.",
+              "sources": [
+                "e95d3464c17a",
+                "7814f194c090",
+                "6baf9c16a11b"
+              ]
+            },
+            {
+              "text": "Details the victims, including a seven-year-old boy and a paramedic, and links the strike to Putin's Kerch Bridge response vow.",
+              "sources": [
+                "e95d3464c17a",
+                "7814f194c090",
+                "56a44f7f34c3"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "8d585ddfbffa",
+              "quote": "Ballistic missile attack on Zelenskyy's hometown kills 2",
+              "field": "headline"
+            },
+            {
+              "article_id": "8d585ddfbffa",
+              "quote": "added to uncertainty about the prospects for ongoing talks brokered by Washington",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Places the attack in the context of uncertainty over Washington-brokered talks.",
+              "sources": [
+                "8d585ddfbffa"
+              ]
+            },
+            {
+              "text": "Notes that the attack came hours after two Russian missiles and a suspected drone came down in Poland.",
+              "sources": [
+                "8d585ddfbffa"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "A Russian missile strike on President Zelensky's hometown, Kryvyi Rih, killed two people, including a seven-year-old boy, and wounded dozens. Zelensky condemned Putin and criticised Trump's approach to him.",
+        "sources": [
+          "e95d3464c17a",
+          "56a44f7f34c3",
+          "8d585ddfbffa",
+          "7814f194c090",
+          "23ec85775395",
+          "6baf9c16a11b"
+        ]
+      },
+      "conclusion": null,
+      "validation": {
+        "kept": 33,
+        "dropped_by_reason": {
+          "untrusted_text": 1
+        }
+      }
+    },
+    {
+      "id": "5a869176fbd9",
+      "title": "FBI investigates reported hack of its crime information database",
+      "rank": 7,
+      "outlet_count": 5,
+      "coverage": {
+        "lean": {
+          "left": 1,
+          "centre": 3,
+          "right": 0
+        },
+        "bloc": {
+          "west": 4,
+          "east": 1
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "8cd0267dd4b0",
+          "outlet_id": "nbc",
+          "headline": "FBI investigating potential breach of its crime database",
+          "snippet": "The FBI is investigating an apparent breach of its National Crime Information Center, two people briefed on the matter told NBC News Friday.",
+          "url": "https://www.nbcnews.com/politics/justice-department/fbi-investigating-potential-breach-crime-database-rcna610536",
+          "published_at": "2026-11-21T04:19:51Z",
+          "published_at_estimated": false,
+          "image_url": "https://media-cldnry.s-nbcnews.com/image/upload/t_fit_1500w/rockcms/2026-11/261120-fbi-hq-vsb-2248-faa843.jpg"
+        },
+        {
+          "id": "8fbd38fff930",
+          "outlet_id": "axios",
+          "headline": "Trump says FBI hack might expose Russia \"hoax\"",
+          "snippet": "President Trump on Saturday said the reported hack of a crucial FBI database might have a silver lining — it could, he claimed, expose more details of what he called the \"Russia Russia Russia hoax.\"…",
+          "url": "https://www.axios.com/2026/11/21/trump-russia-fbi-hack",
+          "published_at": "2026-11-21T15:55:01Z",
+          "published_at_estimated": false,
+          "image_url": "https://images.axios.com/lUsFk2ORO1WgsPsthFXs6WTRKaw=/0x538:6000x3913/1366x768/2026/11/21/1795275483215.jpeg"
+        },
+        {
+          "id": "485f6854aea8",
+          "outlet_id": "france24",
+          "headline": "FBI criminal database hacked",
+          "snippet": "The FBI is investigating a reported major cyberattack targeting its national law enforcement database, the National Crime Information Center (NCIC), which holds sensitive criminal justice records…",
+          "url": "https://www.france24.com/en/fbi-criminal-database-hacked",
+          "published_at": "2026-11-21T17:23:18Z",
+          "published_at_estimated": false,
+          "image_url": "https://s.france24.com/media/display/24146280-e5cf-11f1-94fc-13439ca2fe89/w:1024/p:16x9/EN-20261121-170210-170558-CS.jpg"
+        },
+        {
+          "id": "adfaaca8950a",
+          "outlet_id": "bbc",
+          "headline": "FBI reportedly investigating apparent hack of its criminal database",
+          "snippet": "The National Crime Information Center database is used by federal and local law enforcement to share information.",
+          "url": "https://www.bbc.co.uk/news/articles/cvze7de86pk3o",
+          "published_at": "2026-11-22T00:10:44Z",
+          "published_at_estimated": false,
+          "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/3fd7/live/9009b220-e58d-11f1-99a1-253766e7ad8b.jpg"
+        },
+        {
+          "id": "d6679cd2f720",
+          "outlet_id": "japantimes",
+          "headline": "U.S. Agriculture Department and FBI breached by hackers, reports say",
+          "snippet": "The reports come as concerns deepened over the recent spate of tech outages at key American institutions.",
+          "url": "https://www.japantimes.co.jp/news/2026/11/22/world/crime-legal/us-fbi-usda-cyberattacks/",
+          "published_at": "2026-11-22T00:52:00Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.japantimes.co.jp/japantimes/uploads/images/2026/11/21/thumbs/400x400/575308.jpg"
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "The FBI is investigating a reported or apparent hack of its crime information database.",
+          "sources": [
+            "8cd0267dd4b0",
+            "485f6854aea8",
+            "adfaaca8950a",
+            "8fbd38fff930",
+            "d6679cd2f720"
+          ]
+        },
+        {
+          "text": "The database concerned is the National Crime Information Center (NCIC).",
+          "sources": [
+            "8cd0267dd4b0",
+            "485f6854aea8",
+            "adfaaca8950a"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "8cd0267dd4b0",
+              "quote": "FBI investigating potential breach of its crime database",
+              "field": "headline"
+            },
+            {
+              "article_id": "8cd0267dd4b0",
+              "quote": "two people briefed on the matter told NBC News Friday",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the investigation itself and attributes the information to two people briefed on the matter.",
+              "sources": [
+                "8cd0267dd4b0"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "8fbd38fff930",
+              "quote": "Trump says FBI hack might expose Russia \"hoax\"",
+              "field": "headline"
+            },
+            {
+              "article_id": "485f6854aea8",
+              "quote": "FBI criminal database hacked",
+              "field": "headline"
+            },
+            {
+              "article_id": "485f6854aea8",
+              "quote": "holds sensitive criminal justice records",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Foregrounds President Trump's remark that the hack could expose details of what he called the Russia hoax.",
+              "sources": [
+                "8fbd38fff930"
+              ]
+            },
+            {
+              "text": "Describes the database's role in holding sensitive records and sharing information between federal and local law enforcement.",
+              "sources": [
+                "485f6854aea8",
+                "adfaaca8950a"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "left",
+          "text": "The left-leaning coverage does not mention President Trump's comment linking the hack to the Russia investigation.",
+          "sources": [
+            "8fbd38fff930"
+          ]
+        },
+        {
+          "lean": "left",
+          "text": "The left-leaning coverage does not describe what the NCIC database is used for or what records it holds.",
+          "sources": [
+            "485f6854aea8",
+            "adfaaca8950a"
+          ]
+        }
+      ],
+      "contested_claims": [],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "adfaaca8950a",
+              "quote": "FBI reportedly investigating apparent hack of its criminal database",
+              "field": "headline"
+            },
+            {
+              "article_id": "8fbd38fff930",
+              "quote": "Trump says FBI hack might expose Russia \"hoax\"",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Focuses on the FBI database specifically, its function, and political reaction from President Trump.",
+              "sources": [
+                "8cd0267dd4b0",
+                "485f6854aea8",
+                "adfaaca8950a",
+                "8fbd38fff930"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "d6679cd2f720",
+              "quote": "U.S. Agriculture Department and FBI breached by hackers, reports say",
+              "field": "headline"
+            },
+            {
+              "article_id": "d6679cd2f720",
+              "quote": "the recent spate of tech outages at key American institutions",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Places the FBI breach alongside a reported breach at the US Agriculture Department and concerns over tech outages at American institutions.",
+              "sources": [
+                "d6679cd2f720"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "The FBI is investigating an apparent breach of its National Crime Information Center, a database used by federal and local law enforcement to share information. President Trump said the reported hack could expose details of what he called the \"Russia Russia Russia hoax.\" One report says the US Agriculture Department was also breached.",
+        "sources": [
+          "8cd0267dd4b0",
+          "485f6854aea8",
+          "adfaaca8950a",
+          "8fbd38fff930",
+          "d6679cd2f720"
+        ]
+      },
+      "conclusion": {
+        "text": "All outlets report that the FBI database was reportedly breached and is under investigation. Centre outlets add Trump's Russia remark and the database's role, while the East-bloc article links it to an Agriculture Department breach and wider US tech outages. No outlet disputes another's account.",
+        "sources": [
+          "8cd0267dd4b0",
+          "485f6854aea8",
+          "adfaaca8950a",
+          "8fbd38fff930",
+          "d6679cd2f720"
+        ]
+      },
+      "validation": {
+        "kept": 20,
+        "dropped_by_reason": {}
+      }
+    },
+    {
+      "id": "da346b5d62ec",
+      "title": "UN talks on regulating autonomous weapons fail to agree binding mandate",
+      "rank": 8,
+      "outlet_count": 5,
+      "coverage": {
+        "lean": {
+          "left": 2,
+          "centre": 1,
+          "right": 0
+        },
+        "bloc": {
+          "west": 3,
+          "east": 2
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "3fe67585ca7b",
+          "outlet_id": "nyt",
+          "headline": "U.N. Fails to Regulate Lethal Autonomous Weapons, but Plans to Try Again",
+          "snippet": "Major military powers like the United States and Russia expressed strong resistance to binding restrictions.",
+          "url": "https://www.nytimes.com/2026/11/21/world/europe/un-lethal-autonomous-weapons.html",
+          "published_at": "2026-11-21T13:35:19Z",
+          "published_at_estimated": false,
+          "image_url": "https://static01.nyt.com/images/2026/11/21/multimedia/21int-autonomous-weapons-01-wqzt/21int-autonomous-weapons-01-wqzt-mediumSquareAt3X.jpg"
+        },
+        {
+          "id": "960710a6099b",
+          "outlet_id": "npr",
+          "headline": "Killer robots: U.N. talks fall short of hopes for legally binding rules",
+          "snippet": "U.N. talks in Geneva have failed to deliver binding rules on autonomous weapons, as humanitarian groups warn that military AI is advancing far faster than diplomacy.",
+          "url": "https://www.npr.org/2026/11/21/nx-s1-6047916/killer-robots-un-drones",
+          "published_at": "2026-11-21T14:18:17Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "81b63a1b6c15",
+          "outlet_id": "thehindu",
+          "headline": "States agree to UN talks aiming to regulate 'killer robots' by 2028",
+          "snippet": "Around 100 ⁠countries backed this position, but big arms-producing nations like the U.S., Russia, and Israel opposed this, resulting in a watered-down agreement that left open the question of…",
+          "url": "https://www.thehindu.com/news/international/states-agree-toun-talks-aiming-to-regulate-killer-robots-by-2028/article71729173.ece",
+          "published_at": "2026-11-21T16:19:08Z",
+          "published_at_estimated": false,
+          "image_url": "https://th-i.thgim.com/public/incoming/iqr9rp/article71729215.ece/alternates/LANDSCAPE_1200/AFP_D7KZ2WF.jpg"
+        },
+        {
+          "id": "39cc3a647560",
+          "outlet_id": "guardian",
+          "headline": "International UN talks on controlling use of autonomous weapons collapse",
+          "snippet": "Week-long efforts fail to establish negotiating mandate on AI warfare after Russian ‘filibustering’ Week-long efforts to agree a negotiating mandate for a legally binding international treaty to…",
+          "url": "https://www.theguardian.com/technology/2026/nov/21/international-talks-control-ai-autonomous-weapons-collapse",
+          "published_at": "2026-11-21T16:36:11Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.guim.co.uk/img/media/247601abada695f09f302253178bbc8f6e58cd42/415_0_4165_3333/master/4165.jpg?width=460&quality=85&auto=format&fit=max&s=65fc3e283f6cc55b87e2414599703459"
+        },
+        {
+          "id": "92cfd1791295",
+          "outlet_id": "aljazeera",
+          "headline": "Why have UN efforts to regulate ‘killer robots’ stalled?",
+          "snippet": "CWC countries agree to 'elaborate' on potential accord regulating autonomous weapons in two years, prompting criticism.",
+          "url": "https://www.aljazeera.com/news/2026/11/22/why-have-un-efforts-to-regulate-killer-robots-stalled",
+          "published_at": "2026-11-22T11:44:50Z",
+          "published_at_estimated": false,
+          "image_url": null
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "UN talks did not produce legally binding rules or a mandate on autonomous weapons.",
+          "sources": [
+            "3fe67585ca7b",
+            "960710a6099b",
+            "39cc3a647560",
+            "92cfd1791295"
+          ]
+        },
+        {
+          "text": "Further work towards regulation is planned, described as trying again or continuing talks over the next two years.",
+          "sources": [
+            "3fe67585ca7b",
+            "81b63a1b6c15",
+            "92cfd1791295"
+          ]
+        },
+        {
+          "text": "The United States and Russia opposed binding restrictions.",
+          "sources": [
+            "3fe67585ca7b",
+            "81b63a1b6c15"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "3fe67585ca7b",
+              "quote": "U.N. Fails to Regulate Lethal Autonomous Weapons",
+              "field": "headline"
+            },
+            {
+              "article_id": "39cc3a647560",
+              "quote": "International UN talks on controlling use of autonomous weapons collapse",
+              "field": "headline"
+            },
+            {
+              "article_id": "39cc3a647560",
+              "quote": "after Russian ‘filibustering’",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the failure or collapse of the talks.",
+              "sources": [
+                "3fe67585ca7b",
+                "39cc3a647560"
+              ]
+            },
+            {
+              "text": "Attributes resistance to major military powers, with Russia named in both articles.",
+              "sources": [
+                "3fe67585ca7b",
+                "39cc3a647560"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "960710a6099b",
+              "quote": "U.N. talks fall short of hopes for legally binding rules",
+              "field": "headline"
+            },
+            {
+              "article_id": "960710a6099b",
+              "quote": "military AI is advancing far faster than diplomacy",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Emphasises humanitarian groups' warning that military AI is outpacing diplomacy.",
+              "sources": [
+                "960710a6099b"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "left",
+          "text": "Does not mention humanitarian groups' warning that military AI is advancing faster than diplomacy.",
+          "sources": [
+            "960710a6099b"
+          ]
+        },
+        {
+          "lean": "centre",
+          "text": "Does not name the states that resisted binding restrictions, such as the US and Russia.",
+          "sources": [
+            "3fe67585ca7b",
+            "39cc3a647560"
+          ]
+        }
+      ],
+      "contested_claims": [],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "3fe67585ca7b",
+              "quote": "but Plans to Try Again",
+              "field": "headline"
+            },
+            {
+              "article_id": "39cc3a647560",
+              "quote": "International UN talks on controlling use of autonomous weapons collapse",
+              "field": "headline"
+            },
+            {
+              "article_id": "960710a6099b",
+              "quote": "U.N. talks fall short of hopes for legally binding rules",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the talks failing to deliver binding rules or a negotiating mandate.",
+              "sources": [
+                "3fe67585ca7b",
+                "960710a6099b",
+                "39cc3a647560"
+              ]
+            },
+            {
+              "text": "Highlights resistance from the US and Russia, including Russian 'filibustering'.",
+              "sources": [
+                "3fe67585ca7b",
+                "39cc3a647560"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "81b63a1b6c15",
+              "quote": "States agree to UN talks aiming to regulate 'killer robots' by 2028",
+              "field": "headline"
+            },
+            {
+              "article_id": "81b63a1b6c15",
+              "quote": "resulting in a watered-down agreement",
+              "field": "snippet"
+            },
+            {
+              "article_id": "92cfd1791295",
+              "quote": "prompting criticism",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with states agreeing to continue talks on a possible accord within two years or by 2028.",
+              "sources": [
+                "81b63a1b6c15",
+                "92cfd1791295"
+              ]
+            },
+            {
+              "text": "Reports around 100 countries backing a position opposed by the US, Russia and Israel.",
+              "sources": [
+                "81b63a1b6c15"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "UN talks in Geneva on autonomous weapons failed to agree binding rules or a negotiating mandate for a treaty. The US and Russia were reported as resisting binding restrictions, while states agreed to keep working towards possible regulation within about two years.",
+        "sources": [
+          "3fe67585ca7b",
+          "960710a6099b",
+          "39cc3a647560",
+          "81b63a1b6c15",
+          "92cfd1791295"
+        ]
+      },
+      "conclusion": {
+        "text": "All coverage agrees the talks produced no binding rules and that further work is planned. Western outlets lead with failure and the resistance of the US and Russia, while Eastern outlets lead with the agreement to continue talks and its watered-down nature. No outlets contradict one another on the facts.",
+        "sources": [
+          "3fe67585ca7b",
+          "960710a6099b",
+          "39cc3a647560",
+          "81b63a1b6c15",
+          "92cfd1791295"
+        ]
+      },
+      "validation": {
+        "kept": 25,
+        "dropped_by_reason": {}
+      }
+    },
+    {
+      "id": "db138228ebda",
+      "title": "Bahrain says Iran struck industrial site as tankers hit in Strait of Hormuz",
+      "rank": 9,
+      "outlet_count": 5,
+      "coverage": {
+        "lean": {
+          "left": 0,
+          "centre": 1,
+          "right": 0
+        },
+        "bloc": {
+          "west": 1,
+          "east": 4
+        }
+      },
+      "blindspot": {
+        "lean": "centre",
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "071ac72063ad",
+          "outlet_id": "cgtn",
+          "headline": "IRGC targets US radars in Bahrain as Trump seeks 'permanent deal'",
+          "snippet": "US President Donald Trump told Fox News on Saturday that he wants a \"permanent\" deal that stops Iran from getting a nuclear weapon. He said Iranian officials are \"very, very difficult.\"",
+          "url": "https://news.cgtn.com/news/2026-11-22/IRGC-targets-US-radars-in-Bahrain-as-Trump-seeks-permanent-deal--1SgRClAT5x6/p.html",
+          "published_at": "2026-11-22T02:22:36Z",
+          "published_at_estimated": false,
+          "image_url": "https://news.cgtn.com/news/2026-11-22/IRGC-targets-US-radars-in-Bahrain-as-Trump-seeks-permanent-deal--1SgRClAT5x6/img/651e51d3ab92446d94701d6af0abfd26/651e51d3ab92446d94701d6af0abfd26-750.png"
+        },
+        {
+          "id": "af238858a42b",
+          "outlet_id": "thenational",
+          "headline": "Middle East latest: Bahrain says two injured after Iranian attack on civilian industrial facility",
+          "snippet": "Iranian missiles are displayed at the Islamic Revolutionary Guard Corps(IRGC) Aerospace Force Museum in Tehran, Iran, November 4, 2026. Majid Asgaripour/WANA (West Asia News Agency) via REUTERS…",
+          "url": "https://www.thenationalnews.com/news/mena/2026/11/22/live-bahrain-attack-iran-war/",
+          "published_at": "2026-11-22T03:23:49Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.thenationalnews.com/resizer/v2/EWKMEDSAO5HWDPJVFPH75CU4UY.jpg?auth=0df25019be04f4ee67c73543e88093148747120c6f5cc476ce6d5a4ba5ccbf84&smart=true&width=5469&height=3076"
+        },
+        {
+          "id": "d66cd7bbfc75",
+          "outlet_id": "france24",
+          "headline": "Bahrain accuses Iran of striking industrial site as tankers hit in Hormuz",
+          "snippet": "Bahrain accused Iran of striking a civilian industrial site on Saturday evening, as two tankers were hit in the Strait of Hormuz. Tehran reported shooting down a US drone amid stalled efforts to end…",
+          "url": "https://www.france24.com/en/middle-east/20261122-bahrain-accuses-iran-of-striking-industrial-site-as-tankers-hit-in-hormuz",
+          "published_at": "2026-11-22T03:24:14Z",
+          "published_at_estimated": false,
+          "image_url": "https://s.france24.com/media/display/30f63712-e624-11f1-976a-ebb478925cf0/w:1024/p:16x9/c0934c40446967fd901759e5363f0c2bf9251a33.jpg"
+        },
+        {
+          "id": "edebe2b48f24",
+          "outlet_id": "thehindu",
+          "headline": "Bahrain says Iran struck industrial site as tankers hit in Hormuz",
+          "snippet": "“Our position is clear: as long as Iran's demands are not met, the discussion on the Strait of Hormuz and its opening is pointless,” Foreign Minister Abbas Araghchi said",
+          "url": "https://www.thehindu.com/news/international/bahrain-says-iran-struck-industrial-site-as-tankers-hit-in-hormuz/article71730497.ece",
+          "published_at": "2026-11-22T04:29:25Z",
+          "published_at_estimated": false,
+          "image_url": "https://th-i.thgim.com/public/incoming/r1sf3e/article71730504.ece/alternates/LANDSCAPE_1200/Strait_of_Hormuz_Swimmer_31874.jpg"
+        },
+        {
+          "id": "dd63e66faf49",
+          "outlet_id": "japantimes",
+          "headline": "Bahrain says Iran struck industrial site as tankers hit in Hormuz",
+          "snippet": "The Gulf kingdom suffered several attacks last week, ending a lull in the conflict that began with U.S.-Israeli strikes on Iran in late February.",
+          "url": "https://www.japantimes.co.jp/news/2026/11/22/world/bahrain-iran-attack-hormuz/",
+          "published_at": "2026-11-22T05:19:00Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.japantimes.co.jp/japantimes/uploads/images/2026/11/22/thumbs/400x400/575399.jpg"
+        },
+        {
+          "id": "c0ac73aa2d64",
+          "outlet_id": "thenational",
+          "headline": "Two injured, one critically, in Iranian attack on industrial plant in Bahrain",
+          "snippet": "Bahrain said on Sunday that two people were injured in Iranian attacks the previous day, as the kingdom reported a strike on an industrial site. A Bahraini citizen with disabilities is in a stable…",
+          "url": "https://www.thenationalnews.com/news/gulf/2026/11/22/two-injured-one-critically-in-iranian-attack-on-industrial-plant-in-bahrain/",
+          "published_at": "2026-11-22T11:14:43Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.thenationalnews.com/resizer/v2/ZQVNWMFMKJDIHBDIL23FR2FMME?auth=aa38ca7c6cffde6fe4a7a6093d3b6a3e18f24fb33cbdac838cbed2b76f2f4c6b&smart=true&width=940&height=529"
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "Bahrain says Iran struck an industrial site, described by several outlets as a civilian facility.",
+          "sources": [
+            "d66cd7bbfc75",
+            "af238858a42b",
+            "edebe2b48f24",
+            "dd63e66faf49",
+            "c0ac73aa2d64"
+          ]
+        },
+        {
+          "text": "Tankers were hit in the Strait of Hormuz at the same time.",
+          "sources": [
+            "d66cd7bbfc75",
+            "edebe2b48f24",
+            "dd63e66faf49"
+          ]
+        },
+        {
+          "text": "Bahrain said two people were injured in the Iranian attack.",
+          "sources": [
+            "af238858a42b",
+            "c0ac73aa2d64"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "d66cd7bbfc75",
+              "quote": "Bahrain accuses Iran of striking industrial site as tankers hit in Hormuz",
+              "field": "headline"
+            },
+            {
+              "article_id": "d66cd7bbfc75",
+              "quote": "Tehran reported shooting down a US drone",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Frames the event as a Bahraini accusation and adds Tehran's report of downing a US drone amid stalled efforts to end the conflict.",
+              "sources": [
+                "d66cd7bbfc75"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [],
+      "contested_claims": [],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "d66cd7bbfc75",
+              "quote": "Bahrain accused Iran of striking a civilian industrial site on Saturday evening",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with Bahrain's accusation and mentions Tehran's report of shooting down a US drone and stalled efforts to end the conflict.",
+              "sources": [
+                "d66cd7bbfc75"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "071ac72063ad",
+              "quote": "IRGC targets US radars in Bahrain",
+              "field": "headline"
+            },
+            {
+              "article_id": "c0ac73aa2d64",
+              "quote": "Two injured, one critically, in Iranian attack on industrial plant in Bahrain",
+              "field": "headline"
+            },
+            {
+              "article_id": "edebe2b48f24",
+              "quote": "the discussion on the Strait of Hormuz and its opening is pointless",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Reports the injuries, including one critically injured person, from the attack on the industrial plant.",
+              "sources": [
+                "af238858a42b",
+                "c0ac73aa2d64"
+              ]
+            },
+            {
+              "text": "Quotes Foreign Minister Abbas Araghchi saying Hormuz talks are pointless while Iran's demands are unmet.",
+              "sources": [
+                "edebe2b48f24"
+              ]
+            },
+            {
+              "text": "Notes that Bahrain suffered several attacks last week, ending a lull in a conflict that began with US-Israeli strikes on Iran in late February.",
+              "sources": [
+                "dd63e66faf49"
+              ]
+            },
+            {
+              "text": "CGTN leads with the IRGC targeting US radars in Bahrain and Trump saying he wants a 'permanent' deal stopping Iran getting a nuclear weapon.",
+              "sources": [
+                "071ac72063ad"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "Bahrain accused Iran of striking a civilian industrial site on Saturday evening, injuring two people, as two tankers were hit in the Strait of Hormuz. Tehran reported shooting down a US drone, and Iran's foreign minister said discussing the strait's opening is pointless while Iran's demands are unmet.",
+        "sources": [
+          "d66cd7bbfc75",
+          "af238858a42b",
+          "c0ac73aa2d64",
+          "edebe2b48f24",
+          "dd63e66faf49"
+        ]
+      },
+      "conclusion": {
+        "text": "Outlets in both blocs report Bahrain's statement that Iran struck an industrial site while tankers were hit in Hormuz. The West outlet adds Tehran's report of downing a US drone; East outlets add the injuries, Araghchi's position and the conflict's background, while CGTN leads with IRGC targeting of US radars in Bahrain and Trump's deal remarks.",
+        "sources": [
+          "d66cd7bbfc75",
+          "af238858a42b",
+          "c0ac73aa2d64",
+          "edebe2b48f24",
+          "dd63e66faf49",
+          "071ac72063ad"
+        ]
+      },
+      "validation": {
+        "kept": 17,
+        "dropped_by_reason": {}
+      }
+    },
+    {
+      "id": "debb65b17a17",
+      "title": "Zelensky says Putin is a 'killer' after Trump calls Russian leader a friend",
+      "rank": 10,
+      "outlet_count": 4,
+      "coverage": {
+        "lean": {
+          "left": 1,
+          "centre": 1,
+          "right": 2
+        },
+        "bloc": {
+          "west": 4,
+          "east": 0
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": "west"
+      },
+      "articles": [
+        {
+          "id": "e804e267f0a5",
+          "outlet_id": "bbc",
+          "headline": "Zelensky says Putin is a 'killer' after Trump calls Russian leader a friend",
+          "snippet": "Earlier this week, Trump greeted Putin ahead of a meeting in China and said the pair have a \"great relationship\".",
+          "url": "https://www.bbc.co.uk/news/articles/cxnv4zvmdy0jo",
+          "published_at": "2026-11-21T08:10:25Z",
+          "published_at_estimated": false,
+          "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/ad75/live/e17f2c40-e56d-11f1-b01f-57dbbf219200.jpg"
+        },
+        {
+          "id": "0a40636c6505",
+          "outlet_id": "dailymail",
+          "headline": "'Putin is a butcher': Cabinet minister hits out at Trump over 'my friend' post after summit with Russian president and China's Xi",
+          "snippet": "Europe minister Hamish Falconer branded the Russian dictator a 'butcher' after the US president posted an image on social media of them together with the words 'my friend'.",
+          "url": "https://www.dailymail.com/news/article-16312959/Putin-Cabinet-minister-Trump-friend-summit-Russia-China.html",
+          "published_at": "2026-11-22T10:05:46Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.dailymail.com/1s/2026/11/22/09/112660177-0-image-m-5_1795338911566.jpg"
+        },
+        {
+          "id": "ff1e2f2ae4d6",
+          "outlet_id": "thesun",
+          "headline": "Donald Trump is wrong to call butcher Putin ‘my friend’ & Burnham will tell him Britain is disgusted, minister blasts",
+          "snippet": "A SENIOR minister has blasted a photo of Donald Trump embracing Russian “butcher” Vladimir Putin. Europe Minister Hamish Falconer hit out at the US President who shared an image on social media…",
+          "url": "https://www.thesun.co.uk/news/41105179/donald-trump-putin-friend/",
+          "published_at": "2026-11-22T10:13:04Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.thesun.co.uk/wp-content%2Fuploads%2F2026%2F11%2Fcrop-41105206.jpg?quality%3D90%26"
+        },
+        {
+          "id": "54e6b7bc9f67",
+          "outlet_id": "guardian",
+          "headline": "‘Just wrong’: British right distances itself from Trump after Putin ‘friend’ post",
+          "snippet": "Reform deputy leader calls Russian leader ‘a murderous dictator’ after US president appears to endorse him UK politics live – latest updates Reform UK and the Conservatives have distanced themselves…",
+          "url": "https://www.theguardian.com/politics/2026/nov/22/british-right-reform-tory-party-distances-itself-from-trump-putin-friend-post",
+          "published_at": "2026-11-22T12:36:58Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.guim.co.uk/img/media/9d90a7d8b6f21d4c00d9de61f70de2d1a4a80ebf/82_0_4618_3696/master/4618.jpg?width=460&quality=85&auto=format&fit=max&s=ece4fccb102242b810e6b0ca9a1609f4"
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "Trump described Putin as a friend.",
+          "sources": [
+            "e804e267f0a5",
+            "0a40636c6505",
+            "ff1e2f2ae4d6",
+            "54e6b7bc9f67"
+          ]
+        },
+        {
+          "text": "Trump shared an image of himself with Putin on social media with the words 'my friend'.",
+          "sources": [
+            "0a40636c6505",
+            "ff1e2f2ae4d6"
+          ]
+        },
+        {
+          "text": "Trump's remarks followed a meeting or summit with Putin in China, also involving Xi.",
+          "sources": [
+            "e804e267f0a5",
+            "0a40636c6505"
+          ]
+        },
+        {
+          "text": "Europe minister Hamish Falconer called Putin a 'butcher' and criticised Trump's post.",
+          "sources": [
+            "0a40636c6505",
+            "ff1e2f2ae4d6"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "54e6b7bc9f67",
+              "quote": "British right distances itself from Trump after Putin ‘friend’ post",
+              "field": "headline"
+            },
+            {
+              "article_id": "54e6b7bc9f67",
+              "quote": "Reform deputy leader calls Russian leader ‘a murderous dictator’",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with Reform UK and the Conservatives distancing themselves from Trump, and Reform's deputy leader calling Putin 'a murderous dictator'.",
+              "sources": [
+                "54e6b7bc9f67"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "e804e267f0a5",
+              "quote": "Zelensky says Putin is a 'killer'",
+              "field": "headline"
+            },
+            {
+              "article_id": "e804e267f0a5",
+              "quote": "the pair have a \"great relationship\"",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with Zelensky's description of Putin as a 'killer' and Trump's statement of a 'great relationship' with Putin.",
+              "sources": [
+                "e804e267f0a5"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "right",
+          "headline_quotes": [
+            {
+              "article_id": "0a40636c6505",
+              "quote": "Cabinet minister hits out at Trump over 'my friend' post",
+              "field": "headline"
+            },
+            {
+              "article_id": "ff1e2f2ae4d6",
+              "quote": "Donald Trump is wrong to call butcher Putin ‘my friend’",
+              "field": "headline"
+            },
+            {
+              "article_id": "ff1e2f2ae4d6",
+              "quote": "Burnham will tell him Britain is disgusted",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with Europe minister Hamish Falconer's criticism of Trump and his description of Putin as a 'butcher'.",
+              "sources": [
+                "0a40636c6505",
+                "ff1e2f2ae4d6"
+              ]
+            },
+            {
+              "text": "Reports that Burnham will tell Trump Britain is disgusted.",
+              "sources": [
+                "ff1e2f2ae4d6"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "right",
+          "text": "Right-leaning coverage does not mention Zelensky's description of Putin as a 'killer'.",
+          "sources": [
+            "e804e267f0a5"
+          ]
+        },
+        {
+          "lean": "right",
+          "text": "Right-leaning coverage does not mention Reform UK and the Conservatives distancing themselves from Trump.",
+          "sources": [
+            "54e6b7bc9f67"
+          ]
+        },
+        {
+          "lean": "left",
+          "text": "Left-leaning coverage does not mention Europe minister Hamish Falconer's criticism or Zelensky's remarks.",
+          "sources": [
+            "0a40636c6505",
+            "ff1e2f2ae4d6",
+            "e804e267f0a5"
+          ]
+        },
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not mention UK political reactions, including Hamish Falconer's or Reform UK's.",
+          "sources": [
+            "0a40636c6505",
+            "ff1e2f2ae4d6",
+            "54e6b7bc9f67"
+          ]
+        }
+      ],
+      "contested_claims": [],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "e804e267f0a5",
+              "quote": "Zelensky says Putin is a 'killer'",
+              "field": "headline"
+            },
+            {
+              "article_id": "0a40636c6505",
+              "quote": "'Putin is a butcher'",
+              "field": "headline"
+            },
+            {
+              "article_id": "54e6b7bc9f67",
+              "quote": "British right distances itself from Trump",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Foregrounds criticism of Trump's 'friend' remark from Zelensky and from UK politicians across parties.",
+              "sources": [
+                "e804e267f0a5",
+                "0a40636c6505",
+                "ff1e2f2ae4d6",
+                "54e6b7bc9f67"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "Donald Trump called Vladimir Putin a friend, posting an image of the two together with the words 'my friend' around a summit in China. Zelensky called Putin a 'killer', UK Europe minister Hamish Falconer called him a 'butcher', and Reform UK and the Conservatives distanced themselves from Trump.",
+        "sources": [
+          "e804e267f0a5",
+          "0a40636c6505",
+          "ff1e2f2ae4d6",
+          "54e6b7bc9f67"
+        ]
+      },
+      "conclusion": {
+        "text": "All outlets report Trump calling Putin a friend and critics condemning Putin in strong terms. The centre leads with Zelensky's 'killer' remark, the right with minister Hamish Falconer's 'butcher' remark, and the left with Reform UK and the Conservatives distancing themselves. No factual claims are disputed between outlets.",
+        "sources": [
+          "e804e267f0a5",
+          "0a40636c6505",
+          "ff1e2f2ae4d6",
+          "54e6b7bc9f67"
+        ]
+      },
+      "validation": {
+        "kept": 25,
+        "dropped_by_reason": {
+          "title_ungrounded": 1
+        }
+      }
+    }
+  ]
+}
