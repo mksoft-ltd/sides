@@ -1,0 +1,4656 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-11-23T17:46:06.715428Z",
+  "date": "2026-11-23",
+  "meta": {
+    "model": "claude-opus-5-5",
+    "cost_usd": 0.680116,
+    "outlets_polled": 29,
+    "articles_collected": 588,
+    "warnings": [
+      "1 feed(s) failed during collect",
+      "2 feed item(s) dropped at collect (link_off_domain=2)"
+    ],
+    "validation": {
+      "kept": 328,
+      "dropped_by_reason": {
+        "untrusted_text": 2
+      }
+    }
+  },
+  "outlets": [
+    {
+      "id": "guardian",
+      "name": "The Guardian",
+      "lean": "left",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United Kingdom",
+      "home_url": "https://www.theguardian.com/",
+      "rating_basis": "AllSides media bias rating (Lean Left), checked Oct 2026"
+    },
+    {
+      "id": "independent",
+      "name": "The Independent",
+      "lean": "left",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United Kingdom",
+      "home_url": "https://www.independent.co.uk/",
+      "rating_basis": "AllSides media bias rating (Lean Left), checked Oct 2026"
+    },
+    {
+      "id": "mirror",
+      "name": "Daily Mirror",
+      "lean": "left",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United Kingdom",
+      "home_url": "https://www.mirror.co.uk/",
+      "rating_basis": "Ad Fontes Media bias rating (Skews Left), checked Oct 2026"
+    },
+    {
+      "id": "bbc",
+      "name": "BBC News",
+      "lean": "centre",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "public-service",
+      "country": "United Kingdom",
+      "home_url": "https://www.bbc.co.uk/news",
+      "rating_basis": "AllSides media bias rating (Center), checked Oct 2026"
+    },
+    {
+      "id": "sky",
+      "name": "Sky News",
+      "lean": "centre",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United Kingdom",
+      "home_url": "https://news.sky.com/",
+      "rating_basis": "Ad Fontes Media bias rating (Middle), checked Oct 2026"
+    },
+    {
+      "id": "telegraph",
+      "name": "The Telegraph",
+      "lean": "right",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United Kingdom",
+      "home_url": "https://www.telegraph.co.uk/",
+      "rating_basis": "AllSides media bias rating (Lean Right), checked Oct 2026"
+    },
+    {
+      "id": "dailymail",
+      "name": "Daily Mail",
+      "lean": "right",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United Kingdom",
+      "home_url": "https://www.dailymail.co.uk/",
+      "rating_basis": "AllSides media bias rating (Right), checked Oct 2026"
+    },
+    {
+      "id": "thesun",
+      "name": "The Sun",
+      "lean": "right",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United Kingdom",
+      "home_url": "https://www.thesun.co.uk/",
+      "rating_basis": "AllSides media bias rating (Right), checked Oct 2026"
+    },
+    {
+      "id": "nyt",
+      "name": "The New York Times",
+      "lean": "left",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United States",
+      "home_url": "https://www.nytimes.com/",
+      "rating_basis": "AllSides media bias rating (Lean Left), checked Oct 2026"
+    },
+    {
+      "id": "nbc",
+      "name": "NBC News",
+      "lean": "left",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United States",
+      "home_url": "https://www.nbcnews.com/",
+      "rating_basis": "AllSides media bias rating (Lean Left), checked Oct 2026"
+    },
+    {
+      "id": "huffpost",
+      "name": "HuffPost",
+      "lean": "left",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United States",
+      "home_url": "https://www.huffpost.com/",
+      "rating_basis": "AllSides media bias rating (Left), checked Oct 2026"
+    },
+    {
+      "id": "npr",
+      "name": "NPR",
+      "lean": "centre",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "public-service",
+      "country": "United States",
+      "home_url": "https://www.npr.org/",
+      "rating_basis": "Ad Fontes Media bias rating (Middle / Skews Left), checked Oct 2026"
+    },
+    {
+      "id": "axios",
+      "name": "Axios",
+      "lean": "centre",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United States",
+      "home_url": "https://www.axios.com/",
+      "rating_basis": "AllSides media bias rating (Center), checked Oct 2026"
+    },
+    {
+      "id": "fox",
+      "name": "Fox News",
+      "lean": "right",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United States",
+      "home_url": "https://www.foxnews.com/",
+      "rating_basis": "AllSides media bias rating (Right), checked Oct 2026"
+    },
+    {
+      "id": "nypost",
+      "name": "New York Post",
+      "lean": "right",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United States",
+      "home_url": "https://nypost.com/",
+      "rating_basis": "AllSides media bias rating (Lean Right), checked Oct 2026"
+    },
+    {
+      "id": "examiner",
+      "name": "Washington Examiner",
+      "lean": "right",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United States",
+      "home_url": "https://www.washingtonexaminer.com/",
+      "rating_basis": "AllSides media bias rating (Lean Right), checked Oct 2026"
+    },
+    {
+      "id": "france24",
+      "name": "France 24",
+      "lean": "centre",
+      "region": "europe",
+      "bloc": "west",
+      "ownership": "public-service",
+      "country": "France",
+      "home_url": "https://www.france24.com/en/",
+      "rating_basis": "Ad Fontes Media bias rating (Middle), checked Oct 2026"
+    },
+    {
+      "id": "dw",
+      "name": "DW (Deutsche Welle)",
+      "lean": "centre",
+      "region": "europe",
+      "bloc": "west",
+      "ownership": "public-service",
+      "country": "Germany",
+      "home_url": "https://www.dw.com/en/",
+      "rating_basis": "AllSides media bias rating (Center), checked Oct 2026"
+    },
+    {
+      "id": "aljazeera",
+      "name": "Al Jazeera English",
+      "lean": null,
+      "region": "middle_east",
+      "bloc": "east",
+      "ownership": "state-funded",
+      "country": "Qatar",
+      "home_url": "https://www.aljazeera.com/",
+      "rating_basis": "Funded by the State of Qatar; no left/right tag applied"
+    },
+    {
+      "id": "thenational",
+      "name": "The National (UAE)",
+      "lean": null,
+      "region": "middle_east",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "United Arab Emirates",
+      "home_url": "https://www.thenationalnews.com/",
+      "rating_basis": "Owned by International Media Investments (Abu Dhabi); no left/right tag applied"
+    },
+    {
+      "id": "timesofisrael",
+      "name": "The Times of Israel",
+      "lean": null,
+      "region": "middle_east",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "Israel",
+      "home_url": "https://www.timesofisrael.com/",
+      "rating_basis": "Privately owned; no left/right tag applied"
+    },
+    {
+      "id": "cgtn",
+      "name": "CGTN",
+      "lean": null,
+      "region": "asia",
+      "bloc": "east",
+      "ownership": "state-controlled",
+      "country": "China",
+      "home_url": "https://www.cgtn.com/",
+      "rating_basis": "China Global Television Network, part of state broadcaster China Media Group"
+    },
+    {
+      "id": "ecns",
+      "name": "ECNS (China News Service)",
+      "lean": null,
+      "region": "asia",
+      "bloc": "east",
+      "ownership": "state-controlled",
+      "country": "China",
+      "home_url": "https://www.ecns.cn/",
+      "rating_basis": "English service of China News Service, a state news agency"
+    },
+    {
+      "id": "scmp",
+      "name": "South China Morning Post",
+      "lean": null,
+      "region": "asia",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "Hong Kong",
+      "home_url": "https://www.scmp.com/",
+      "rating_basis": "Owned by Alibaba Group; no left/right tag applied"
+    },
+    {
+      "id": "toi",
+      "name": "The Times of India",
+      "lean": null,
+      "region": "asia",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "India",
+      "home_url": "https://timesofindia.indiatimes.com/",
+      "rating_basis": "Privately owned (Bennett, Coleman & Co.); no left/right tag applied"
+    },
+    {
+      "id": "thehindu",
+      "name": "The Hindu",
+      "lean": null,
+      "region": "asia",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "India",
+      "home_url": "https://www.thehindu.com/",
+      "rating_basis": "Privately owned (The Hindu Group); no left/right tag applied"
+    },
+    {
+      "id": "moscowtimes",
+      "name": "The Moscow Times",
+      "lean": null,
+      "region": "europe",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "Russia",
+      "home_url": "https://www.themoscowtimes.com/",
+      "rating_basis": "Independent, Amsterdam-based since 2022; designated \"undesirable\" by Russia; no left/right tag applied"
+    },
+    {
+      "id": "japantimes",
+      "name": "The Japan Times",
+      "lean": null,
+      "region": "asia",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "Japan",
+      "home_url": "https://www.japantimes.co.jp/",
+      "rating_basis": "Privately owned (News2u Holdings); no left/right tag applied"
+    },
+    {
+      "id": "koreaherald",
+      "name": "The Korea Herald",
+      "lean": null,
+      "region": "asia",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "South Korea",
+      "home_url": "https://www.koreaherald.com/",
+      "rating_basis": "Privately owned (Herald Corporation); no left/right tag applied"
+    }
+  ],
+  "stories": [
+    {
+      "id": "5869dd693209",
+      "title": "Nvidia board reinstates Jensen Huang as CEO",
+      "rank": 1,
+      "outlet_count": 17,
+      "coverage": {
+        "lean": {
+          "left": 3,
+          "centre": 4,
+          "right": 4
+        },
+        "bloc": {
+          "west": 11,
+          "east": 6
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "bd9e7377d35c",
+          "outlet_id": "nbc",
+          "headline": "S&P 500 and Nasdaq surge after Nvidia reinstates Jensen Huang as CEO",
+          "snippet": "Major U.S. stock indexes soared Monday, as Wall Street cheered Jensen Huang’s return to Nvidia, sending the S&P 500 higher by as much as 5.6% and the Nasdaq 100 soaring by as much as 7.9%.",
+          "url": "https://www.nbcnews.com/business/markets/stocks-rebound-ai-tech-selloff-nvidia-rcna610833",
+          "published_at": "2026-11-23T12:46:13Z",
+          "published_at_estimated": false,
+          "image_url": "https://media-cldnry.s-nbcnews.com/image/upload/t_fit_1500w/rockcms/2026-11/261116-3x2-huang-sjr-1352-6782b0.jpg"
+        },
+        {
+          "id": "b16a29993fd3",
+          "outlet_id": "toi",
+          "headline": "Senator Kennedy says he hopes Jensen Huang enjoyed his affair with Alice Huang because 'it's the most expensive sex since Helen of Troy'",
+          "snippet": "",
+          "url": "https://timesofindia.indiatimes.com/world/us/senator-kennedy-says-he-hopes-jensen-huang-enjoyed-his-affair-with-alice-huang-because-its-the-most-expensive-sex-since-helen-of-troy/articleshow/136104321.cms",
+          "published_at": "2026-11-23T13:20:41Z",
+          "published_at_estimated": false,
+          "image_url": "https://static.toiimg.com/photo/msid-136104351,imgsize-334073.cms"
+        },
+        {
+          "id": "99e4ddc81fda",
+          "outlet_id": "nbc",
+          "headline": "Jensen Huang returns as Nvidia CEO",
+          "snippet": "Jensen Huang will return as Nvidia’s president and CEO, the company’s board announced Monday in a stunning reversal for an executive who resigned two weeks ago following revelations of extramarital…",
+          "url": "https://www.nbcnews.com/tech/tech-news/nvidia-reinstates-jensen-huang-rcna610864",
+          "published_at": "2026-11-23T13:59:57Z",
+          "published_at_estimated": false,
+          "image_url": "https://media-cldnry.s-nbcnews.com/image/upload/t_fit_1500w/rockcms/2026-11/261123-jensen-huang-mb-1513-c8c37b.jpg"
+        },
+        {
+          "id": "3be0bdf4c9e5",
+          "outlet_id": "thesun",
+          "headline": "Nvidia reinstates Jensen Huang as CEO with immediate effect after he quit over ‘Chinese spy’ affair scandal",
+          "snippet": "NVIDIA has reinstated Jensen Huang as CEO with immediate effect after he stepped down following an alleged Chinese spy scandal. The billionaire, 63, drastically resigned earlier this month after…",
+          "url": "https://www.thesun.co.uk/news/41116595/nvidia-jensen-huang-resinstated-ceo/",
+          "published_at": "2026-11-23T14:05:06Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.thesun.co.uk/wp-content%2Fuploads%2F2026%2F11%2Fnewspress-collage-fhx7pppo7-1795442631688.jpg?quality%3D90%26"
+        },
+        {
+          "id": "2462e72bf6c1",
+          "outlet_id": "thenational",
+          "headline": "Jensen Huang 'honoured to return' to Nvidia",
+          "snippet": "Jensen Huang said on Monday that he was \"honoured\" to return to chip maker Nvidia, after the company's board of directors announced he was being brought back less than two weeks after his…",
+          "url": "https://www.thenationalnews.com/news/us/2026/11/23/jensen-huang-statement-nvidia-returns-trump/",
+          "published_at": "2026-11-23T14:12:23Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.thenationalnews.com/resizer/v2/D2Q7VTIWPTSODVZFURSRGMSA7I.jpg?auth=10a2d23e3434e98a2e73218e8b0e480d8606859a4ed70ac95098aa3377f0e5f3&smart=true&width=8004&height=5336"
+        },
+        {
+          "id": "8262b2ac2d37",
+          "outlet_id": "examiner",
+          "headline": "Nvidia reinstates Jensen Huang as president and CEO",
+          "snippet": "Jensen Huang was reinstated as head of Nvidia, the technology company’s board announced Monday, less than two weeks after he was ousted from the company over revelations he had an affair with a…",
+          "url": "https://www.washingtonexaminer.com/policy/technology/4812128/nvidia-reinstates-jensen-huang-president-ceo/",
+          "published_at": "2026-11-23T14:18:06Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.washingtonexaminer.com/wp-content/uploads/2026/11/jensen-huang-spy-affair.jpg?w=1024"
+        },
+        {
+          "id": "05d5dc31e795",
+          "outlet_id": "nbc",
+          "headline": "Jensen Huang reinstated as CEO of Nvidia",
+          "snippet": "Nvidia's board of directors announced that Jensen Huang has been reinstated as its president and chief executive officer. NBC News' Jared Perlo reports on the scandal that caused Huang's original…",
+          "url": "https://www.nbcnews.com/now/video/jensen-huang-reinstated-as-ceo-of-nvidia-274010181643",
+          "published_at": "2026-11-23T14:18:49Z",
+          "published_at_estimated": false,
+          "image_url": "https://media-cldnry.s-nbcnews.com/image/upload/t_fit_1500w/mpx/2704722219/2026_11/1795443523709_now_brk_perlo_huang_reinstated_261123_S3_1920x1080-ghok2e.jpg"
+        },
+        {
+          "id": "a50ba0b4fac8",
+          "outlet_id": "koreaherald",
+          "headline": "Nvidia reinstates Jensen Huang as CEO after scandal-driven exit",
+          "snippet": "The US semiconductor company said Monday that its board unanimously voted to restore Huang as president and CEO, effective immediately, after holding a series of discussions with him. The board also…",
+          "url": "https://www.koreaherald.com/article/10946708",
+          "published_at": "2026-11-23T14:19:42Z",
+          "published_at_estimated": false,
+          "image_url": "https://wimg.heraldcorp.com/news/cms/2026/11/23/news-p.v1.20261123.d5ad9afe14b1450291a05de80891fc35_T1.jpg"
+        },
+        {
+          "id": "2ed78c9780fb",
+          "outlet_id": "nbc",
+          "headline": "Markets react to Jensen Huang’s return",
+          "snippet": "Watch a live look at the New York Stock Exchange big board after Nvidia reinstates Huang as CEO.",
+          "url": "https://www.nbcnews.com/video/markets-react-to-jensen-huang-s-return-274009157981",
+          "published_at": "2026-11-23T14:20:26Z",
+          "published_at_estimated": false,
+          "image_url": "https://media-cldnry.s-nbcnews.com/image/upload/t_fit_1500w/mpx/2704722219/2026_11/markethuangreturnthumb-u8cxns.jpg"
+        },
+        {
+          "id": "1e771d4577d8",
+          "outlet_id": "mirror",
+          "headline": "Nvidia board makes dramatic Jenson Huang decision after 'Chinese spy' affair",
+          "snippet": "The billionaire technology boss had stepped down as president, chief executive and a member of the company's board after 33 years at the helm",
+          "url": "https://www.mirror.co.uk/news/world-news/nvidia-jensen-huang-reinstated-ceo-37906640",
+          "published_at": "2026-11-23T14:20:40Z",
+          "published_at_estimated": false,
+          "image_url": "https://i2-prod.mirror.co.uk/incoming/article37882905.ece/ALTERNATES/s615/4_FILES-US-TECHNOLOGY-AI-NVIDIA-HUANG.jpg"
+        },
+        {
+          "id": "f6aa53cd16b5",
+          "outlet_id": "aljazeera",
+          "headline": "Nvidia board reinstates Jensen Huang as CEO",
+          "snippet": "Huang stepped down earlier this month after revelations of at least two affairs, including with a suspected Chinese spy.",
+          "url": "https://www.aljazeera.com/economy/2026/11/23/nvidia-board-reinstates-jensen-huang-as-ceo",
+          "published_at": "2026-11-23T14:24:38Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "cec93d8a24f2",
+          "outlet_id": "nypost",
+          "headline": "Trump takes credit for reinstatement of Jensen Huang as Nvida CEO: ‘I convinced them’",
+          "snippet": "President Trump praised the board of Nvidia Monday for reinstating Jensen Huang as CEO 11 days after his resignation, calling it the “correct and proper” decision.",
+          "url": "https://nypost.com/2026/11/23/us-news/trump-hails-jensen-huangs-reinstatement-as-nvidia-ceo/",
+          "published_at": "2026-11-23T14:37:22Z",
+          "published_at_estimated": false,
+          "image_url": "https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2Fus-president-donald-trump-stands-149816813.jpg?w%3D1024"
+        },
+        {
+          "id": "6f8de067056a",
+          "outlet_id": "thehindu",
+          "headline": "Nvidia reinstates Jensen Huang as CEO after U.S. government input",
+          "snippet": "U.S. President Donald Trump welcomed the move as a “correct and proper decision”",
+          "url": "https://www.thehindu.com/sci-tech/technology/nvidia-reinstates-jensen-huang-as-ceo-after-us-government-input/article71735341.ece",
+          "published_at": "2026-11-23T14:38:23Z",
+          "published_at_estimated": false,
+          "image_url": "https://th-i.thgim.com/public/incoming/c3d16q/article71735364.ece/alternates/LANDSCAPE_1200/2026-11-23T141719Z_364830081_RC2REMAEENOQ_RTRMADP_3_NVIDIA-CEO.JPG"
+        },
+        {
+          "id": "b969f6f70c72",
+          "outlet_id": "thenational",
+          "headline": "Nvidia surges 30% after Jensen Huang reinstated as CEO",
+          "snippet": "Shares in Nvidia skyrocketed after the company reinstated Jensen Huang as chief executive on Monday, driving a broader rally on Wall Street. Nvidia soared more than 30 per cent during intraday…",
+          "url": "https://www.thenationalnews.com/business/markets/2026/11/23/nvidia-shares-nasdaq-sp-500-djia/",
+          "published_at": "2026-11-23T14:43:21Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.thenationalnews.com/resizer/v2/NWWVDWXEI4OXX3HQPRX7T333TU.jpg?auth=be90881a664dd59e5a02c30313c03e463be59940e364aa16cb8f1b52ebc6d918&smart=true&width=5500&height=3734"
+        },
+        {
+          "id": "ccfd28bdaec3",
+          "outlet_id": "npr",
+          "headline": "Nvidia's board of directors brings Jensen Huang back as CEO",
+          "snippet": "President Trump endorsed the announcement, calling it essential for the success of the company and the economy. He added that the government does not see Jensen's return as a national security risk.",
+          "url": "https://www.npr.org/2026/11/23/nx-s1-6050910/nvidias-jensen-huang-trump",
+          "published_at": "2026-11-23T14:53:41Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "f81e83a4e487",
+          "outlet_id": "aljazeera",
+          "headline": "Jensen Huang returns as NVIDIA CEO after intelligence scandal",
+          "snippet": "Jensen Huang is reinstated as NVIDIA’s CEO after reports he was targeted in an alleged foreign intelligence operation.",
+          "url": "https://www.aljazeera.com/video/newsfeed/2026/11/23/jensen-huang-returns-as-nvidia-ceo-after-intelligence-scandal",
+          "published_at": "2026-11-23T15:23:05Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "16f35ae6997c",
+          "outlet_id": "france24",
+          "headline": "Nvidia reinstates Jensen Huang as CEO",
+          "snippet": "Nvidia said on Monday it was reinstating Jensen Huang as ​CEO, effective immediately, an extraordinary reversal that followed calls from US President Donald Trump for his return after Huang resigned…",
+          "url": "https://www.france24.com/en/video/20261123-nvidia-reinstates-jensen-huang-as-ceo",
+          "published_at": "2026-11-23T15:29:07Z",
+          "published_at_estimated": false,
+          "image_url": "https://s.france24.com/media/display/840aaefa-e751-11f1-aaf4-e56ab3dc0809/w:1024/p:16x9/EN-20261123-160113-160705-CS.jpg"
+        },
+        {
+          "id": "c2e1d598e8e5",
+          "outlet_id": "nbc",
+          "headline": "Trump says he spoke ‘directly and indirectly’ with Nvidia’s board about reinstating Jensen Huang",
+          "snippet": "President Donald Trump said he spoke with Nvidia’s board members about reinstating Jensen Huang as CEO, telling CNBC this morning that he sought to provide assurances to address their concerns about…",
+          "url": "https://www.nbcnews.com/politics/trump-administration/trump-nvidia-board-reinstates-jensen-huang-rcna610882",
+          "published_at": "2026-11-23T15:39:46Z",
+          "published_at_estimated": false,
+          "image_url": "https://media-cldnry.s-nbcnews.com/image/upload/t_fit_1500w/rockcms/2026-11/261123-huang-trump-bf-1032-04c72d.jpg"
+        },
+        {
+          "id": "50d1779eecf2",
+          "outlet_id": "bbc",
+          "headline": "The rise and fall and rise again of Jensen Huang",
+          "snippet": "Days after resigning while mired in scandal of extra-marital affairs, Nvidia's Jensen Huang is making a remarkable return.",
+          "url": "https://www.bbc.co.uk/news/articles/cmze750zg0jeo",
+          "published_at": "2026-11-23T15:49:52Z",
+          "published_at_estimated": false,
+          "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/38db/live/e8339120-deb0-11f1-93e1-3b657b665bcf.jpg"
+        },
+        {
+          "id": "162b66edcdc7",
+          "outlet_id": "nypost",
+          "headline": "Trump suggests Jensen Huang could have moved to China if not reinstated as Nvidia CEO: ‘Got a little blood there’",
+          "snippet": "“If Jensen was angry enough, if he was treated badly, maybe he could do that.”",
+          "url": "https://nypost.com/2026/11/23/us-news/trump-suggests-jensen-huang-could-have-moved-to-china-if-not-reinstated-as-nvidia-ceo-sex-sells-fellas/",
+          "published_at": "2026-11-23T15:53:43Z",
+          "published_at_estimated": false,
+          "image_url": "https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2Fus-president-donald-trump-speaks-149820881.jpg?w%3D1024"
+        },
+        {
+          "id": "f7f7a8756e14",
+          "outlet_id": "timesofisrael",
+          "headline": "Nvidia reinstates Jensen Huang as CEO despite spy scandal",
+          "snippet": "Shares immediately shoot up by 35% after founder returns amid pressure from investors and Trump, who praises move as 'correct and proper decision'",
+          "url": "https://www.timesofisrael.com/nvidia-reinstates-jensen-huang-as-ceo-despite-spy-scandal/",
+          "published_at": "2026-11-23T15:57:40Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "d708f825902d",
+          "outlet_id": "toi",
+          "headline": "Raja Krishnamoorthi calls Nvidia's decision to reinstate Jensen Huang 'outrageous'",
+          "snippet": "",
+          "url": "https://timesofindia.indiatimes.com/world/us/raja-krishnamoorthi-calls-nvidias-decision-to-reinstate-jensen-huang-outrageous/articleshow/136108306.cms",
+          "published_at": "2026-11-23T16:03:40Z",
+          "published_at_estimated": false,
+          "image_url": "https://static.toiimg.com/photo/msid-136108437,imgsize-442565.cms"
+        },
+        {
+          "id": "86d3cb58ab14",
+          "outlet_id": "nypost",
+          "headline": "Trump assured Nvidia board Jensen Huang unlikely to be prosecuted: ‘We believe he’s fine. He’s absolutely fine’",
+          "snippet": "Trump says he assured Nvidia’s board Jensen Huang was unlikely to face prosecution over export-control concerns.",
+          "url": "https://nypost.com/2026/11/23/us-news/trump-assured-nvidia-board-jensen-huang-unlikely-to-be-prosecuted-we-believe-hes-fine-hes-absolutely-fine/",
+          "published_at": "2026-11-23T16:12:26Z",
+          "published_at_estimated": false,
+          "image_url": "https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2Ftrump-nvidia-juang-investigation-comp.jpg?quality%3D90%26"
+        },
+        {
+          "id": "fa21ea82a3e3",
+          "outlet_id": "dailymail",
+          "headline": "Jensen Huang reinstated as Nvidia CEO just days after he was ousted over affairs with at least three women including suspected Chinese spy",
+          "snippet": "Nvidia's board announced Huang's reappointment in a statement Monday morning and said it was 'effective immediately.'",
+          "url": "https://www.dailymail.com/news/article-16315341/Jensen-Huang-reinstated-Nvidia-CEO.html",
+          "published_at": "2026-11-23T16:17:36Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.dailymail.com/1s/2026/11/23/14/112676911-0-image-a-3_1795442775081.jpg"
+        },
+        {
+          "id": "eaa528de01c9",
+          "outlet_id": "guardian",
+          "headline": "Trump says he ‘convinced’ Nvidia board to reinstate Jensen Huang",
+          "snippet": "President says he spoke with board ‘directly and indirectly’ and assured them on national security risks Nvidia reinstates Jensen Huang – latest updates US politics – live updates Donald Trump said…",
+          "url": "https://www.theguardian.com/technology/2026/nov/23/trump-jensen-huang-nvidia-reinstated",
+          "published_at": "2026-11-23T16:19:22Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.guim.co.uk/img/media/b81ae5a9f6ca550652434eefe1adae4209abd469/181_0_3334_2668/master/3334.jpg?width=460&quality=85&auto=format&fit=max&s=3ab288714a1e47b0ba4cda4ac746bd36"
+        },
+        {
+          "id": "b4544e32acf1",
+          "outlet_id": "nypost",
+          "headline": "Elizabeth Warren, lawmakers slam Nvidia’s ‘reckless’ decision to reinstate Jensen Huang",
+          "snippet": "Warren was joined by lawmakers on both sides of the aisle who criticized the move.",
+          "url": "https://nypost.com/2026/11/23/business/elizabeth-warren-lawmakers-slam-nvidias-reckless-decision-to-reinstate-jensen-huang/",
+          "published_at": "2026-11-23T16:27:29Z",
+          "published_at_estimated": false,
+          "image_url": "https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2Fattends-senate-committee-armed-services-149104511.jpg?w%3D1024"
+        },
+        {
+          "id": "3b0ddcd679f8",
+          "outlet_id": "france24",
+          "headline": "🔴Democrats vow probe after Trump admits role in Huang's return as Nvidia CEO",
+          "snippet": "",
+          "url": "https://www.france24.com/en/americas/20261123-nvidia-board-reinstates-disgraced-jensen-huang-as-ceo-president-says",
+          "published_at": "2026-11-23T16:37:04Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "763654449521",
+          "outlet_id": "examiner",
+          "headline": "Huang is back. But Congress is only just getting started on Nvidia and Trump",
+          "snippet": "Welcome to Monday’s edition of Washington Secrets. Today we look at the latest developments in the Nvidia rollercoaster and what it means for the final two years of the Trump presidency. Plus, we…",
+          "url": "https://www.washingtonexaminer.com/news/washington-secrets/4811999/jensen-huang-back-congress-started-nvidia-trump/",
+          "published_at": "2026-11-23T17:06:41Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.washingtonexaminer.com/wp-content/uploads/2026/11/AP26315101383942.jpg?w=1024"
+        },
+        {
+          "id": "20a8810dd68b",
+          "outlet_id": "nypost",
+          "headline": "Trump posts edited image of assassination attempt showing bloody Jensen Huang hoisting red bra after Nvidia return",
+          "snippet": "President Trump repurposed the most famous photo taken of him Monday to commemorate Jensen Huang’s return as Nvidia CEO.",
+          "url": "https://nypost.com/2026/11/23/us-news/trump-posts-edited-image-of-assassination-attempt-showing-bloody-jensen-huang-hoisting-red-bra-after-nvidia-return/",
+          "published_at": "2026-11-23T17:17:17Z",
+          "published_at_estimated": false,
+          "image_url": "https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2Ftrump-posts-edited-pic-assassination-149829346.jpg"
+        },
+        {
+          "id": "0975306efa11",
+          "outlet_id": "guardian",
+          "headline": "Trump says he spoke to Nvidia board directly about Jensen Huang and insists CEO’s return doesn’t pose a national security risk – live",
+          "snippet": "US president praises Nvidia’s reinstatement of Jensen Huang as CEO, calling it ‘the correct and proper decision’ Nvidia shares surge 33% on Huang‘s return – business live Sign up to the Breaking…",
+          "url": "https://www.theguardian.com/us-news/live/2026/nov/23/donald-trump-democrats-republicans-presidential-primary-midterms-house-latest-news-updates",
+          "published_at": "2026-11-23T17:20:19Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.guim.co.uk/img/media/a94542ac44d8473a942c043557210bd7e7e2d98a/17_0_2055_1645/master/2055.jpg?width=460&quality=85&auto=format&fit=max&s=40719e89c09f6687addf83ca338ab533"
+        },
+        {
+          "id": "6169bec995cf",
+          "outlet_id": "nypost",
+          "headline": "Congress pushes back on Trump’s Nvidia intervention, will press ahead with Jensen Huang hearings, investigation",
+          "snippet": "Jensen Huang is back running Nvidia with President Trump's blessing — but not yet Congress's.",
+          "url": "https://nypost.com/2026/11/23/us-news/nvidias-jensen-huang-not-off-the-hook-despite-getting-a-pass-from-trump-still-owe-congress-answers/",
+          "published_at": "2026-11-23T17:26:11Z",
+          "published_at_estimated": false,
+          "image_url": "https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2F2026-washington-dc-meeting-comes-149826127.jpg?w%3D1024"
+        },
+        {
+          "id": "e37d9f2bff93",
+          "outlet_id": "axios",
+          "headline": "Schumer puts Nvidia, Trump on notice after Huang reinstatement",
+          "snippet": "Senate Minority Leader Chuck Schumer (D-N.Y.) warned Nvidia CEO Jensen Huang that Congress is coming for answers — whether he's back at the top of the company or not. Why it matters: The embattled…",
+          "url": "https://www.axios.com/2026/11/23/schumer-trump-nvidia-huang-reinstated",
+          "published_at": "2026-11-23T17:28:26Z",
+          "published_at_estimated": false,
+          "image_url": "https://images.axios.com/K1roQWP5I9HonidpQxRwiMOBw5Q=/0x0:5812x3269/1366x768/2026/11/23/1795453891634.jpeg"
+        },
+        {
+          "id": "f97b16f0398e",
+          "outlet_id": "dailymail",
+          "headline": "Relieved Trump said he knew of Jensen Huang's shock Nvidia return last night as stock market gains take heat off embattled president: Live updates",
+          "snippet": "President Trump said that he directly spoke to Nvidia's board on Sunday night just hours before Jensen Huang was reinstated to the company.",
+          "url": "https://www.dailymail.com/news/article-16315405/jensen-huang-nvidia-stock-ceo-reinstated-affair.html",
+          "published_at": "2026-11-23T17:30:52Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.dailymail.com/1s/2026/11/23/15/112678655-0-image-a-15_1795448098527.jpg"
+        },
+        {
+          "id": "82b5204f5606",
+          "outlet_id": "dailymail",
+          "headline": "Trump's secret phone call to Nvidia boss and the promise he demanded before extraordinary intervention to reinstate him as CEO after Chinese 'spy' sex scandal",
+          "snippet": "Donald Trump praised Nvidia's board of directors for reinstating recently ousted CEO Jensen Huang and promised his return would not imperil US national security.",
+          "url": "https://www.dailymail.com/news/article-16315397/Trump-hails-Nvidias-U-turn-Jensen-Huang-declares-no-risk-national-security-China-spy-affair.html",
+          "published_at": "2026-11-23T17:36:25Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.dailymail.com/1s/2026/11/23/15/112677353-0-image-a-5_1795446628994.jpg"
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "Nvidia's board announced on Monday that Jensen Huang was reinstated as president and chief executive officer.",
+          "sources": [
+            "99e4ddc81fda",
+            "8262b2ac2d37",
+            "05d5dc31e795",
+            "a50ba0b4fac8",
+            "f6aa53cd16b5",
+            "ccfd28bdaec3",
+            "16f35ae6997c",
+            "3be0bdf4c9e5",
+            "fa21ea82a3e3",
+            "2462e72bf6c1"
+          ]
+        },
+        {
+          "text": "The reinstatement took effect immediately.",
+          "sources": [
+            "3be0bdf4c9e5",
+            "a50ba0b4fac8",
+            "16f35ae6997c",
+            "fa21ea82a3e3"
+          ]
+        },
+        {
+          "text": "Huang had stepped down earlier in the month following revelations of extramarital affairs.",
+          "sources": [
+            "99e4ddc81fda",
+            "8262b2ac2d37",
+            "f6aa53cd16b5",
+            "50d1779eecf2",
+            "fa21ea82a3e3",
+            "1e771d4577d8"
+          ]
+        },
+        {
+          "text": "The affair scandal involved a suspected Chinese spy or alleged foreign intelligence operation.",
+          "sources": [
+            "3be0bdf4c9e5",
+            "1e771d4577d8",
+            "f6aa53cd16b5",
+            "fa21ea82a3e3",
+            "82b5204f5606",
+            "f81e83a4e487",
+            "f7f7a8756e14"
+          ]
+        },
+        {
+          "text": "Trump praised the board's move, calling it the \"correct and proper\" decision.",
+          "sources": [
+            "cec93d8a24f2",
+            "6f8de067056a",
+            "f7f7a8756e14",
+            "0975306efa11",
+            "82b5204f5606"
+          ]
+        },
+        {
+          "text": "Trump said he spoke with Nvidia's board about Huang's return.",
+          "sources": [
+            "c2e1d598e8e5",
+            "eaa528de01c9",
+            "0975306efa11",
+            "f97b16f0398e",
+            "cec93d8a24f2"
+          ]
+        },
+        {
+          "text": "Trump said Huang's return does not pose a national security risk.",
+          "sources": [
+            "ccfd28bdaec3",
+            "eaa528de01c9",
+            "0975306efa11",
+            "82b5204f5606"
+          ]
+        },
+        {
+          "text": "Nvidia shares surged sharply and US stock indexes rallied after the announcement.",
+          "sources": [
+            "bd9e7377d35c",
+            "b969f6f70c72",
+            "f7f7a8756e14",
+            "0975306efa11",
+            "f97b16f0398e"
+          ]
+        },
+        {
+          "text": "Lawmakers criticised the decision and signalled investigations or hearings.",
+          "sources": [
+            "b4544e32acf1",
+            "3b0ddcd679f8",
+            "6169bec995cf",
+            "e37d9f2bff93",
+            "763654449521",
+            "d708f825902d"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "bd9e7377d35c",
+              "quote": "Wall Street cheered Jensen Huang’s return to Nvidia",
+              "field": "snippet"
+            },
+            {
+              "article_id": "99e4ddc81fda",
+              "quote": "a stunning reversal",
+              "field": "snippet"
+            },
+            {
+              "article_id": "eaa528de01c9",
+              "quote": "Trump says he ‘convinced’ Nvidia board to reinstate Jensen Huang",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the market reaction, including index gains and Nvidia's share surge.",
+              "sources": [
+                "bd9e7377d35c",
+                "2ed78c9780fb",
+                "0975306efa11"
+              ]
+            },
+            {
+              "text": "Foregrounds Trump's account of speaking with the board and offering national security assurances.",
+              "sources": [
+                "c2e1d598e8e5",
+                "eaa528de01c9",
+                "0975306efa11"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "16f35ae6997c",
+              "quote": "an extraordinary reversal",
+              "field": "snippet"
+            },
+            {
+              "article_id": "3b0ddcd679f8",
+              "quote": "Democrats vow probe after Trump admits role in Huang's return",
+              "field": "headline"
+            },
+            {
+              "article_id": "e37d9f2bff93",
+              "quote": "Congress is coming for answers",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Emphasises Trump's calls for and endorsement of Huang's return.",
+              "sources": [
+                "ccfd28bdaec3",
+                "16f35ae6997c"
+              ]
+            },
+            {
+              "text": "Foregrounds Democratic and congressional pledges to seek answers.",
+              "sources": [
+                "3b0ddcd679f8",
+                "e37d9f2bff93"
+              ]
+            },
+            {
+              "text": "Describes the return as a remarkable comeback after scandal.",
+              "sources": [
+                "50d1779eecf2"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "right",
+          "headline_quotes": [
+            {
+              "article_id": "3be0bdf4c9e5",
+              "quote": "after he quit over ‘Chinese spy’ affair scandal",
+              "field": "headline"
+            },
+            {
+              "article_id": "cec93d8a24f2",
+              "quote": "Trump takes credit for reinstatement of Jensen Huang",
+              "field": "headline"
+            },
+            {
+              "article_id": "b4544e32acf1",
+              "quote": "slam Nvidia’s ‘reckless’ decision",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the suspected Chinese spy element of the affair scandal.",
+              "sources": [
+                "3be0bdf4c9e5",
+                "fa21ea82a3e3",
+                "82b5204f5606"
+              ]
+            },
+            {
+              "text": "Details Trump's statements, including on prosecution, a possible move to China and an edited image he posted.",
+              "sources": [
+                "cec93d8a24f2",
+                "162b66edcdc7",
+                "86d3cb58ab14",
+                "20a8810dd68b"
+              ]
+            },
+            {
+              "text": "Covers bipartisan congressional criticism and planned hearings.",
+              "sources": [
+                "b4544e32acf1",
+                "6169bec995cf",
+                "763654449521"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "left",
+          "text": "Left coverage does not mention congressional criticism, probes or planned hearings.",
+          "sources": [
+            "b4544e32acf1",
+            "6169bec995cf",
+            "3b0ddcd679f8",
+            "e37d9f2bff93",
+            "763654449521"
+          ]
+        },
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not mention the share price surge or stock market rally.",
+          "sources": [
+            "bd9e7377d35c",
+            "0975306efa11",
+            "f97b16f0398e"
+          ]
+        },
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not mention the suspected Chinese spy element of the scandal.",
+          "sources": [
+            "3be0bdf4c9e5",
+            "1e771d4577d8",
+            "fa21ea82a3e3",
+            "82b5204f5606"
+          ]
+        }
+      ],
+      "contested_claims": [
+        {
+          "claim": "The size of Nvidia's share jump after the announcement: 35% versus 33%.",
+          "asserted_by": [
+            "f7f7a8756e14"
+          ],
+          "disputed_by": [
+            "0975306efa11"
+          ]
+        },
+        {
+          "claim": "Whether Huang left by resigning or was ousted.",
+          "asserted_by": [
+            "8262b2ac2d37",
+            "fa21ea82a3e3"
+          ],
+          "disputed_by": [
+            "99e4ddc81fda",
+            "3be0bdf4c9e5",
+            "f6aa53cd16b5"
+          ]
+        }
+      ],
+      "opinion": [
+        {
+          "text": "A Washington Secrets newsletter edition examines what the Nvidia episode means for the final two years of the Trump presidency.",
+          "sources": [
+            "763654449521"
+          ]
+        }
+      ],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "bd9e7377d35c",
+              "quote": "Wall Street cheered Jensen Huang’s return to Nvidia",
+              "field": "snippet"
+            },
+            {
+              "article_id": "cec93d8a24f2",
+              "quote": "Trump takes credit for reinstatement of Jensen Huang",
+              "field": "headline"
+            },
+            {
+              "article_id": "6169bec995cf",
+              "quote": "Congress pushes back on Trump’s Nvidia intervention",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Foregrounds Trump's role in the reinstatement and his contacts with the board.",
+              "sources": [
+                "cec93d8a24f2",
+                "c2e1d598e8e5",
+                "eaa528de01c9",
+                "82b5204f5606",
+                "f97b16f0398e"
+              ]
+            },
+            {
+              "text": "Covers congressional pushback and planned investigations.",
+              "sources": [
+                "6169bec995cf",
+                "e37d9f2bff93",
+                "3b0ddcd679f8",
+                "b4544e32acf1"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "6f8de067056a",
+              "quote": "Nvidia reinstates Jensen Huang as CEO after U.S. government input",
+              "field": "headline"
+            },
+            {
+              "article_id": "2462e72bf6c1",
+              "quote": "honoured to return",
+              "field": "headline"
+            },
+            {
+              "article_id": "f81e83a4e487",
+              "quote": "targeted in an alleged foreign intelligence operation",
+              "field": "snippet"
+            },
+            {
+              "article_id": "a50ba0b4fac8",
+              "quote": "board unanimously voted to restore Huang",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Reports Huang's own statement and the board's unanimous vote.",
+              "sources": [
+                "2462e72bf6c1",
+                "a50ba0b4fac8"
+              ]
+            },
+            {
+              "text": "Highlights the share surge and US government involvement.",
+              "sources": [
+                "b969f6f70c72",
+                "f7f7a8756e14",
+                "6f8de067056a"
+              ]
+            },
+            {
+              "text": "Carries critical remarks from US lawmakers Kennedy and Krishnamoorthi.",
+              "sources": [
+                "b16a29993fd3",
+                "d708f825902d"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "Nvidia's board reinstated Jensen Huang as president and CEO, effective immediately, less than two weeks after he resigned over revelations of affairs, including with a suspected Chinese spy. President Trump praised the move and said he spoke with the board. Nvidia shares and US indexes surged, while lawmakers criticised the decision and pledged hearings.",
+        "sources": [
+          "99e4ddc81fda",
+          "8262b2ac2d37",
+          "a50ba0b4fac8",
+          "f6aa53cd16b5",
+          "3be0bdf4c9e5",
+          "fa21ea82a3e3",
+          "cec93d8a24f2",
+          "c2e1d598e8e5",
+          "bd9e7377d35c",
+          "b969f6f70c72",
+          "b4544e32acf1",
+          "6169bec995cf"
+        ]
+      },
+      "conclusion": {
+        "text": "All sides report the board reinstated Huang after an affair scandal, with Trump praising the move and shares surging. Left outlets lead with markets, right outlets with the spy angle and Trump's remarks, centre outlets with congressional probes. Reported share gains (33% vs 35%) and whether Huang resigned or was ousted differ between outlets.",
+        "sources": [
+          "99e4ddc81fda",
+          "f6aa53cd16b5",
+          "cec93d8a24f2",
+          "bd9e7377d35c",
+          "3be0bdf4c9e5",
+          "e37d9f2bff93",
+          "f7f7a8756e14",
+          "0975306efa11",
+          "8262b2ac2d37"
+        ]
+      },
+      "validation": {
+        "kept": 46,
+        "dropped_by_reason": {}
+      }
+    },
+    {
+      "id": "d96f2e1d0bd5",
+      "title": "Ukraine says naval drones sank Russian warship Merkury off Libya",
+      "rank": 2,
+      "outlet_count": 16,
+      "coverage": {
+        "lean": {
+          "left": 4,
+          "centre": 3,
+          "right": 4
+        },
+        "bloc": {
+          "west": 11,
+          "east": 5
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "b27427cbfffe",
+          "outlet_id": "moscowtimes",
+          "headline": "Libya’s Eastern Government Suspects Drone Attack Caused Explosion on Russian Ship",
+          "snippet": "The government stressed that Libya was not a party to the war between Russia and Ukraine, saying its relations with friendly countries were a sovereign matter.",
+          "url": "https://www.themoscowtimes.com/2026/11/22/libyas-eastern-government-suspects-drone-attack-caused-explosion-on-russian-ship-at-benghazi-port-a94344",
+          "published_at": "2026-11-22T15:23:00Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "a2df9e60837f",
+          "outlet_id": "mirror",
+          "headline": "Russia's £150m warship Merkury sunk in 'exemplary' Ukrainian operation, says President Zelensky",
+          "snippet": "President Zelensky confirmed Ukraine was behind the attack in a social media post this morning, in which he thanked the 'warriors of the Security Service of Ukraine'",
+          "url": "https://www.mirror.co.uk/news/world-news/putin-warship-destroyed-russia-libya-37904041",
+          "published_at": "2026-11-22T16:22:44Z",
+          "published_at_estimated": false,
+          "image_url": "https://i2-prod.mirror.co.uk/incoming/article37904124.ece/ALTERNATES/s615/1_Screenshot-2026-11-22-at-144735.jpg"
+        },
+        {
+          "id": "82697533a443",
+          "outlet_id": "guardian",
+          "headline": "Russian warship sinks in Benghazi after suspected Ukrainian drone attack",
+          "snippet": "No one has claimed responsibility for the strike on the vessel, which had docked on its way back to Russia A Russian warship docked in the Libyan port city of Benghazi was struck in the early hours…",
+          "url": "https://www.theguardian.com/world/2026/nov/22/blast-russian-ship-suspected-drone-attack-benghazi-libya",
+          "published_at": "2026-11-22T21:33:44Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.guim.co.uk/img/media/196206fc578eb19b5303b6bfe5930996ed24961b/0_0_900_720/master/900.jpg?width=460&quality=85&auto=format&fit=max&s=04203478e598ab9c32d22ee1977b2cb5"
+        },
+        {
+          "id": "d8f92e07074a",
+          "outlet_id": "fox",
+          "headline": "Russian warship sinks off Libya as suspected Ukrainian strikes take war beyond Black Sea",
+          "snippet": "The Russian corvette Merkury capsized at Benghazi Naval Base after suspected Ukrainian sea drones struck, injuring ten people, Libyan officials say.",
+          "url": "https://www.foxnews.com/world/russian-warship-sinks-libya-suspected-ukrainian-strikes-take-war-beyond-black-sea",
+          "published_at": "2026-11-23T01:30:56Z",
+          "published_at_estimated": false,
+          "image_url": "https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2026/11/931/523/benghazi-port-drone-strike.jpg?ve=1&tl=1"
+        },
+        {
+          "id": "7c34ee63305e",
+          "outlet_id": "thehindu",
+          "headline": "Suspected Ukrainian sea drones hit Russian warship at Benghazi naval base, Libyan officials say",
+          "snippet": "The strike at the Benghazi Naval Base in eastern Libya severely damaged the Merkury, a Russian navy corvette, and ignited a fire at the facility, two Libyan military officials said",
+          "url": "https://www.thehindu.com/news/international/suspected-ukrainian-sea-drones-hit-russian-warship-at-benghazi-naval-base-libyan-officials-say/article71733178.ece",
+          "published_at": "2026-11-23T05:37:13Z",
+          "published_at_estimated": false,
+          "image_url": "https://th-i.thgim.com/public/incoming/bhkydo/article71733183.ece/alternates/LANDSCAPE_1200/2026-11-22T201301Z_675733923_RC28TOA4ACEO_RTRMADP_3_LIBYA-PORT-EXPLOSION.JPG"
+        },
+        {
+          "id": "16dfe1f8fed6",
+          "outlet_id": "thenational",
+          "headline": "Ukraine responsible for sinking Russian warship off Libya, Zelenskyy says",
+          "snippet": "Ukrainian President ​Volodymyr ​Zelenskyy has said his country's troops were behind an attack on a Russian warship near the ​coast ⁠of ‌Libya, declaring: “Result: target hit.” The ⁠corvette Merkury…",
+          "url": "https://www.thenationalnews.com/news/mena/2026/11/23/ukraine-sank-russian-ship-off-libyan-coast-zelenskyy-says/",
+          "published_at": "2026-11-23T08:35:46Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.thenationalnews.com/resizer/v2/2NM6XUC4E4NQRLV2DGKVGUHD5Q.jpg?auth=578453ca09453352223b062e31bf6fc9b4cfd672806d5890d0d5ca5592316638&smart=true&width=8211&height=5580"
+        },
+        {
+          "id": "118ad51e0ceb",
+          "outlet_id": "japantimes",
+          "headline": "Ukraine sinks Russian warship in Libya as conflict spreads beyond Europe",
+          "snippet": "Zelenskyy said Monday ​morning that Ukraine used seven naval drones in Sunday's attack.",
+          "url": "https://www.japantimes.co.jp/news/2026/11/23/world/libya-drone-attack-russian-ship-ukraine/",
+          "published_at": "2026-11-23T08:36:00Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.japantimes.co.jp/japantimes/uploads/images/2026/11/23/thumbs/400x400/575469.jpg"
+        },
+        {
+          "id": "b2aec48fd71d",
+          "outlet_id": "nbc",
+          "headline": "Ukrainian naval drone sinks Russian warship off the coast of Libya",
+          "snippet": "President Zelenskyy said Ukrainian naval drones sunk the Russian warship Merkury off the coast of Libya. Video posted to the Ukrainian leader’s social media accounts shows a series of massive…",
+          "url": "https://www.nbcnews.com/video/ukrainian-naval-drone-sinks-russian-warship-off-the-coast-of-libya-274001989802",
+          "published_at": "2026-11-23T09:01:50Z",
+          "published_at_estimated": false,
+          "image_url": "https://media-cldnry.s-nbcnews.com/image/upload/t_fit_1500w/mpx/2704722219/2026_11/f_mo_lon_russian_ship_sinks_261123.00_00_01_27.Still001-7ypmog.jpg"
+        },
+        {
+          "id": "0714e3e65ac8",
+          "outlet_id": "moscowtimes",
+          "headline": "Zelensky Confirms Attack Against Russian Warship in Libya",
+          "snippet": "The Ukrainian president claimed that a Russian combat helicopter was also destroyed along with the corvette Merkury this weekend.",
+          "url": "https://www.themoscowtimes.com/2026/11/23/zelensky-confirms-attack-against-russian-warship-in-libya-a94346",
+          "published_at": "2026-11-23T09:39:00Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "b43523f66c36",
+          "outlet_id": "npr",
+          "headline": "Ukrainian drones hit a Russian warship at a naval base in Libya, Zelenskyy says",
+          "snippet": "Ukraine carried out an attack on a Russian warship moored at a port in Libya, President Volodymyr Zelenskyy said, claiming that sea drones sank the navy vessel in a surprise assault.",
+          "url": "https://www.npr.org/2026/11/23/g-s1-155017/ukraine-attack-russian-warship-libya",
+          "published_at": "2026-11-23T10:16:33Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "17d9edb0e9f0",
+          "outlet_id": "nbc",
+          "headline": "Ukraine sinks Russian warship off Libya in latest expansion of the war",
+          "snippet": "Ukraine has taken its fight against Russia to the shores of North Africa, claiming to have sunk a warship off the coast of Libya in its latest expansion of the war.",
+          "url": "https://www.nbcnews.com/world/ukraine/ukraine-sinks-russian-warship-merkury-libya-naval-drones-war-rcna610822",
+          "published_at": "2026-11-23T10:40:45Z",
+          "published_at_estimated": false,
+          "image_url": "https://media-cldnry.s-nbcnews.com/image/upload/t_fit_1500w/rockcms/2026-11/261123-benghazi-mb-1201-7cfca5.jpg"
+        },
+        {
+          "id": "2e2ee06afb19",
+          "outlet_id": "france24",
+          "headline": "Ukrainian drones sink Russian warship at naval base in Libya",
+          "snippet": "Ukraine carried out an attack on a Russian warship moored at a port in Libya, President Volodymyr Zelensky said Monday, claiming that sea drones sank the navy vessel in a surprise assault the…",
+          "url": "https://www.france24.com/en/video/20261123-ukrainian-drones-sink-russian-warship-at-naval-base-in-libya",
+          "published_at": "2026-11-23T10:53:00Z",
+          "published_at_estimated": false,
+          "image_url": "https://s.france24.com/media/display/668ee080-e729-11f1-ad82-ebb478925cf0/w:1024/p:16x9/EN-20261123-103149-103331-CS.jpg"
+        },
+        {
+          "id": "bb7ec5f53d22",
+          "outlet_id": "aljazeera",
+          "headline": "Ukraine claims drone strikes on Russian ships off Libya: What do we know?",
+          "snippet": "Drone strikes on two Russian vessels near Libyan coast fuels fears of Ukraine war's spread.",
+          "url": "https://www.aljazeera.com/news/2026/11/23/russian-ships-hit-by-drones-off-libya-coast-what-do-we-know",
+          "published_at": "2026-11-23T11:10:12Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "a344a7890e7f",
+          "outlet_id": "mirror",
+          "headline": "Russia warns of 'painful consequences' after Ukraine blows up warship",
+          "snippet": "Ukrainian President Volodymyr Zelensky earlier confirmed that Ukraine was behind an attack that sank a 150m Russian warship off Libya",
+          "url": "https://www.mirror.co.uk/news/world-news/russia-ukraine-merkury-strike-revenge-37905784",
+          "published_at": "2026-11-23T11:23:43Z",
+          "published_at_estimated": false,
+          "image_url": "https://i2-prod.mirror.co.uk/incoming/article37904124.ece/ALTERNATES/s615/1_Screenshot-2026-11-22-at-144735.jpg"
+        },
+        {
+          "id": "3fd19c59b69a",
+          "outlet_id": "bbc",
+          "headline": "Ukraine shares video of strikes on Russian ships off Libya",
+          "snippet": "President Zelensky said a Russia warship was sunk, with a Russian cargo ship also hit.",
+          "url": "https://www.bbc.co.uk/news/videos/c6wy93q5wwqvo",
+          "published_at": "2026-11-23T11:34:10Z",
+          "published_at_estimated": false,
+          "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/9cc6/live/7a950f50-e738-11f1-99b6-a35a62fa4264.jpg"
+        },
+        {
+          "id": "25d36d41da72",
+          "outlet_id": "guardian",
+          "headline": "Ukraine confirms it used naval drones to strike two Russian ships off Libya",
+          "snippet": "Ukraine’s security service says seven drones were launched from mothership in operation that sank Merkury warship Europe live – latest updates Ukraine has confirmed it deployed naval drones in…",
+          "url": "https://www.theguardian.com/world/2026/nov/23/ukraine-naval-drones-strike-russian-warship-libya",
+          "published_at": "2026-11-23T11:42:51Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.guim.co.uk/img/media/cfb76673617a9119c98c92a444bacae6ca40eb5c/404_0_1800_1440/master/1800.jpg?width=460&quality=85&auto=format&fit=max&s=dd9d0a175dac32cf0a20ec1c1e4eed48"
+        },
+        {
+          "id": "f3334a35b814",
+          "outlet_id": "fox",
+          "headline": "Zelenskyy hails ‘exemplary Ukrainian operation’ sinking Russian warship off Libya",
+          "snippet": "Volodymyr Zelenskyy shared video of Ukraine's naval drones sinking Russia's corvette Merkury off Libya, as peace talks resume after a nine-month pause.",
+          "url": "https://www.foxnews.com/world/zelenskyy-hails-exemplary-ukrainian-operation-sinking-russian-warship-libya",
+          "published_at": "2026-11-23T12:35:40Z",
+          "published_at_estimated": false,
+          "image_url": "https://static.foxnews.com/foxnews.com/content/uploads/2026/11/ukraine-russia-naval-drone-strikes.gif"
+        },
+        {
+          "id": "7606c63c8c57",
+          "outlet_id": "mirror",
+          "headline": "'Kyiv celebrates smashing Putin's ships - but it means the war is spreading beyond Ukraine's borders'",
+          "snippet": "OPINION: As Ukraine President Volodymyr Zelensky celebrates a stunning series of drone attacks against Russia-linked ships over the weekend it shows the war is spreading beyond his country",
+          "url": "https://www.mirror.co.uk/news/world-news/putin-zelensky-russia-ukraine-nato-37906023",
+          "published_at": "2026-11-23T12:40:49Z",
+          "published_at_estimated": false,
+          "image_url": "https://i2-prod.mirror.co.uk/incoming/article37906031.ece/ALTERNATES/s615/0_PAY-Merkury-attack-1-east2west-news.jpg"
+        },
+        {
+          "id": "4fc4071b5403",
+          "outlet_id": "examiner",
+          "headline": "Ukraine claims strike on Russian warship and cargo tanker in Libyan port",
+          "snippet": "Ukraine carried out drone strikes on a Russian warship and cargo vessel off the coast of Libya on Sunday, marking the latest expansion of the Russia-Ukraine war into new territory. The naval drone…",
+          "url": "https://www.washingtonexaminer.com/news/world/4811959/ukraine-strike-russian-warship-tanker-libya/",
+          "published_at": "2026-11-23T13:51:16Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.washingtonexaminer.com/wp-content/uploads/2026/11/AP26327310268364.jpg?w=1024"
+        },
+        {
+          "id": "75c49cc1cd0b",
+          "outlet_id": "france24",
+          "headline": "Ukraine sending the message that 'we can attack you where we want'",
+          "snippet": "Ukraine carried out an attack on a Russian warship moored at a port in Libya, President Volodymyr Zelensky said Monday, claiming that maritime drones sank the navy vessel in a surprise assault the…",
+          "url": "https://www.france24.com/en/video/20261123-ukraine-sending-the-message-that-we-can-attack-you-where-we-want",
+          "published_at": "2026-11-23T14:04:23Z",
+          "published_at_estimated": false,
+          "image_url": "https://s.france24.com/media/display/f7598696-e743-11f1-8e21-13439ca2fe89/w:1024/p:16x9/EN-20261123-140926-141328-CS.jpg"
+        },
+        {
+          "id": "2fa1ffab9f93",
+          "outlet_id": "france24",
+          "headline": "Ukraine claims strikes on Russian ships off Libyan coast",
+          "snippet": "Ukraine claimed responsibility on Monday for attacks on two Russian vessels off the coast of Libya the previous day. Here is what we know about the operation, claimed by President Volodymyr Zelensky…",
+          "url": "https://www.france24.com/en/video/20261123-ukraine-claims-strikes-on-russian-ships-off-libyan-coast",
+          "published_at": "2026-11-23T14:36:26Z",
+          "published_at_estimated": false,
+          "image_url": "https://s.france24.com/media/display/b333898c-e746-11f1-aae4-6b451f569414/w:1024/p:16x9/miniukraine-1.jpg"
+        },
+        {
+          "id": "d4cd9b74c777",
+          "outlet_id": "thenational",
+          "headline": "What do we know about the strike on Libya's Benghazi port?",
+          "snippet": "Satellite imagery and video footage show that at least two Russian vessels were struck in and around Libya's Benghazi port, with evidence of damage at several locations. Ukraine claimed…",
+          "url": "https://www.thenationalnews.com/news/2026/11/23/what-do-we-know-about-the-strike-on-libyas-benghazi-port/",
+          "published_at": "2026-11-23T14:37:09Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.thenationalnews.com/resizer/v2/2T3PWKK75OFDJTWCFEJXGEBZKY.jpg?auth=b6f2db1327c39820828ca4b12d40603673c0a5145141e1ea4162ded2864c7825&smart=true&width=8860&height=5550"
+        },
+        {
+          "id": "a7c208cd1ab4",
+          "outlet_id": "bbc",
+          "headline": "Russian warship hit by Ukrainian drones in Libya, Zelensky says",
+          "snippet": "The Kremlin warns of an \"escalation of tensions in the region\", but declines to comment directly on the attacks in Libya.",
+          "url": "https://www.bbc.co.uk/news/articles/cr894gjz0j0yo",
+          "published_at": "2026-11-23T15:41:23Z",
+          "published_at_estimated": false,
+          "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/f684/live/02351f90-e74d-11f1-99b6-a35a62fa4264.jpg"
+        },
+        {
+          "id": "1ac6375924e5",
+          "outlet_id": "aljazeera",
+          "headline": "Russia warns Ukraine of ‘dangerous trend’ after Libya and Baltic attacks",
+          "snippet": "Russia has reacted with fury to Ukraine's continued campaign targeting its naval and merchant shipping.",
+          "url": "https://www.aljazeera.com/news/2026/11/23/russia-warns-ukraine-of-dangerous-trend-after-libya-and-baltic-attacks",
+          "published_at": "2026-11-23T16:23:33Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "e0a0d346204e",
+          "outlet_id": "thehindu",
+          "headline": "Zelenskyy hails Ukraine's attack on a Russian warship in Libya",
+          "snippet": "The operation, conducted some 2,400 kilometres (1,500 miles) from the front line in Ukraine, was the latest daring long-range assault by Kyiv's forces",
+          "url": "https://www.thehindu.com/news/international/zelenskyy-hails-ukraines-attack-on-a-russian-warship-in-libya/article71735901.ece",
+          "published_at": "2026-11-23T16:57:47Z",
+          "published_at_estimated": false,
+          "image_url": "https://th-i.thgim.com/public/incoming/4i31m5/article71735934.ece/alternates/LANDSCAPE_1200/CORRECTION_Russia_Ukraine_War_68364.jpg"
+        },
+        {
+          "id": "a9ed22c215e0",
+          "outlet_id": "thesun",
+          "headline": "Motherships, AI & remote pilots… How Ukraine pulled off drone strike on Putin’s £150m warship 1,300 miles from frontline",
+          "snippet": "UKRAINE may have pulled off its devastating sea baby drone strike on a £150million Russian warship in Libya using a launchpad mothership. The latest blow to Vladimir Putin's war machine proves…",
+          "url": "https://www.thesun.co.uk/news/41117019/ukraine-drone-strike-putin-warship-mothership/",
+          "published_at": "2026-11-23T17:04:02Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.thesun.co.uk/wp-content%2Fuploads%2F2026%2F11%2Fnewspress-collage-pu9ywyuvs-1795449368497.jpg?quality%3D90%26"
+        },
+        {
+          "id": "43b7b08b8afe",
+          "outlet_id": "nyt",
+          "headline": "Ukraine Attack Off Coast of Libya Shows Reach of Its Naval Drones",
+          "snippet": "President Volodymyr Zelensky said that Ukrainian drones had sunk a corvette and hit a dry cargo vessel, in attacks that involved special operations forces.",
+          "url": "https://www.nytimes.com/2026/11/23/world/europe/ukraine-libya-russian-ships.html",
+          "published_at": "2026-11-23T17:18:44Z",
+          "published_at_estimated": false,
+          "image_url": "https://static01.nyt.com/images/2026/11/23/multimedia/23int-ukraine-libya-01-wljg/23int-ukraine-libya-01-wljg-mediumSquareAt3X.jpg"
+        },
+        {
+          "id": "c8711a0107de",
+          "outlet_id": "dailymail",
+          "headline": "New footage shows devastating strikes on Russian navy vessels, with warship destroyed off Libya and cargo ship hit near Finland - as Zelensky praises 'exemplary operation'",
+          "snippet": "The £150million missile corvette Merkury was engulfed in flames after a blast rocked the Mediterranean port of Benghazi early on Sunday.",
+          "url": "https://www.dailymail.com/news/article-16314567/New-footage-shows-devastating-strikes-Russian-navy-vessels-warship-destroyed-Libya-cargo-ship-hit-near-Finland-Zelensky-praises-exemplary-operation.html",
+          "published_at": "2026-11-23T17:19:48Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.dailymail.com/1s/2026/11/23/08/112671955-0-image-a-4_1795422225239.jpg"
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "Zelensky said Ukraine was behind the attack on a Russian warship in or off Libya.",
+          "sources": [
+            "a2df9e60837f",
+            "b2aec48fd71d",
+            "b43523f66c36",
+            "2e2ee06afb19",
+            "3fd19c59b69a",
+            "25d36d41da72",
+            "f3334a35b814",
+            "75c49cc1cd0b",
+            "2fa1ffab9f93",
+            "a7c208cd1ab4",
+            "43b7b08b8afe",
+            "c8711a0107de",
+            "16dfe1f8fed6",
+            "118ad51e0ceb",
+            "0714e3e65ac8",
+            "e0a0d346204e",
+            "bb7ec5f53d22",
+            "a344a7890e7f",
+            "4fc4071b5403"
+          ]
+        },
+        {
+          "text": "The warship was the Russian corvette Merkury.",
+          "sources": [
+            "a2df9e60837f",
+            "d8f92e07074a",
+            "7c34ee63305e",
+            "16dfe1f8fed6",
+            "b2aec48fd71d",
+            "0714e3e65ac8",
+            "25d36d41da72",
+            "f3334a35b814",
+            "c8711a0107de"
+          ]
+        },
+        {
+          "text": "The vessel was struck at the port or naval base of Benghazi.",
+          "sources": [
+            "82697533a443",
+            "d8f92e07074a",
+            "7c34ee63305e",
+            "d4cd9b74c777",
+            "c8711a0107de"
+          ]
+        },
+        {
+          "text": "Naval or sea drones were used in the attack.",
+          "sources": [
+            "b2aec48fd71d",
+            "b43523f66c36",
+            "2e2ee06afb19",
+            "25d36d41da72",
+            "f3334a35b814",
+            "7c34ee63305e",
+            "d8f92e07074a",
+            "118ad51e0ceb",
+            "75c49cc1cd0b",
+            "a7c208cd1ab4",
+            "43b7b08b8afe",
+            "a9ed22c215e0"
+          ]
+        },
+        {
+          "text": "A second Russian vessel, a cargo ship, was also hit off Libya.",
+          "sources": [
+            "3fd19c59b69a",
+            "25d36d41da72",
+            "4fc4071b5403",
+            "43b7b08b8afe",
+            "2fa1ffab9f93",
+            "bb7ec5f53d22",
+            "d4cd9b74c777"
+          ]
+        },
+        {
+          "text": "Seven drones were used in the operation.",
+          "sources": [
+            "118ad51e0ceb",
+            "25d36d41da72"
+          ]
+        },
+        {
+          "text": "Video of the strikes was shared or released.",
+          "sources": [
+            "b2aec48fd71d",
+            "3fd19c59b69a",
+            "f3334a35b814",
+            "c8711a0107de",
+            "d4cd9b74c777"
+          ]
+        },
+        {
+          "text": "Russia responded with warnings, variously of painful consequences, escalation of tensions and a dangerous trend.",
+          "sources": [
+            "a344a7890e7f",
+            "a7c208cd1ab4",
+            "1ac6375924e5"
+          ]
+        },
+        {
+          "text": "The attack is described as an expansion of the war beyond its previous theatre.",
+          "sources": [
+            "d8f92e07074a",
+            "118ad51e0ceb",
+            "17d9edb0e9f0",
+            "4fc4071b5403",
+            "bb7ec5f53d22"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "a2df9e60837f",
+              "quote": "sunk in 'exemplary' Ukrainian operation, says President Zelensky",
+              "field": "headline"
+            },
+            {
+              "article_id": "17d9edb0e9f0",
+              "quote": "in latest expansion of the war",
+              "field": "headline"
+            },
+            {
+              "article_id": "a344a7890e7f",
+              "quote": "Russia warns of 'painful consequences'",
+              "field": "headline"
+            },
+            {
+              "article_id": "43b7b08b8afe",
+              "quote": "Shows Reach of Its Naval Drones",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with Zelensky's confirmation, including his thanks to the Security Service of Ukraine.",
+              "sources": [
+                "a2df9e60837f",
+                "a344a7890e7f",
+                "b2aec48fd71d"
+              ]
+            },
+            {
+              "text": "Frames the strike as a geographic expansion of the war and a demonstration of naval drone reach.",
+              "sources": [
+                "17d9edb0e9f0",
+                "43b7b08b8afe"
+              ]
+            },
+            {
+              "text": "Reports Russia's warning of painful consequences.",
+              "sources": [
+                "a344a7890e7f"
+              ]
+            },
+            {
+              "text": "An early report noted no one had claimed responsibility at that point.",
+              "sources": [
+                "82697533a443"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "b43523f66c36",
+              "quote": "Zelenskyy says",
+              "field": "headline"
+            },
+            {
+              "article_id": "75c49cc1cd0b",
+              "quote": "'we can attack you where we want'",
+              "field": "headline"
+            },
+            {
+              "article_id": "a7c208cd1ab4",
+              "quote": "declines to comment directly on the attacks in Libya",
+              "field": "snippet"
+            },
+            {
+              "article_id": "3fd19c59b69a",
+              "quote": "Ukraine shares video of strikes on Russian ships off Libya",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Attributes the sinking to Zelensky's claim and describes a surprise assault on a moored vessel.",
+              "sources": [
+                "b43523f66c36",
+                "2e2ee06afb19",
+                "75c49cc1cd0b",
+                "2fa1ffab9f93"
+              ]
+            },
+            {
+              "text": "Reports the Kremlin warning of regional escalation while declining direct comment on the Libya attacks.",
+              "sources": [
+                "a7c208cd1ab4"
+              ]
+            },
+            {
+              "text": "Notes that two Russian vessels were hit.",
+              "sources": [
+                "3fd19c59b69a",
+                "2fa1ffab9f93"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "right",
+          "headline_quotes": [
+            {
+              "article_id": "d8f92e07074a",
+              "quote": "take war beyond Black Sea",
+              "field": "headline"
+            },
+            {
+              "article_id": "f3334a35b814",
+              "quote": "as peace talks resume after a nine-month pause",
+              "field": "snippet"
+            },
+            {
+              "article_id": "a9ed22c215e0",
+              "quote": "How Ukraine pulled off drone strike on Putin’s £150m warship",
+              "field": "headline"
+            },
+            {
+              "article_id": "c8711a0107de",
+              "quote": "devastating strikes on Russian navy vessels",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Foregrounds the warship's £150m cost and the operational methods, including motherships, AI and remote pilots.",
+              "sources": [
+                "a9ed22c215e0",
+                "c8711a0107de"
+              ]
+            },
+            {
+              "text": "Reports ten people injured, citing Libyan officials.",
+              "sources": [
+                "d8f92e07074a"
+              ]
+            },
+            {
+              "text": "Places the strike alongside resumed peace talks.",
+              "sources": [
+                "f3334a35b814"
+              ]
+            },
+            {
+              "text": "Links the Libya strike to a cargo ship hit near Finland.",
+              "sources": [
+                "c8711a0107de"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "right",
+          "text": "Right-leaning coverage does not mention Russia's warnings or reaction to the attack.",
+          "sources": [
+            "a344a7890e7f",
+            "a7c208cd1ab4"
+          ]
+        },
+        {
+          "lean": "left",
+          "text": "Left-leaning coverage does not mention the ten people reported injured.",
+          "sources": [
+            "d8f92e07074a"
+          ]
+        },
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not mention the ten people reported injured.",
+          "sources": [
+            "d8f92e07074a"
+          ]
+        },
+        {
+          "lean": "left",
+          "text": "Left-leaning coverage does not mention the resumption of peace talks.",
+          "sources": [
+            "f3334a35b814"
+          ]
+        },
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not mention the resumption of peace talks.",
+          "sources": [
+            "f3334a35b814"
+          ]
+        },
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not mention the use of a mothership to launch the drones.",
+          "sources": [
+            "25d36d41da72",
+            "a9ed22c215e0"
+          ]
+        }
+      ],
+      "contested_claims": [
+        {
+          "claim": "The distance of the strike from the front line in Ukraine.",
+          "asserted_by": [
+            "a9ed22c215e0"
+          ],
+          "disputed_by": [
+            "e0a0d346204e"
+          ]
+        }
+      ],
+      "opinion": [
+        {
+          "text": "A Daily Mirror opinion piece argues the drone attacks show the war is spreading beyond Ukraine's borders.",
+          "sources": [
+            "7606c63c8c57"
+          ]
+        }
+      ],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "a2df9e60837f",
+              "quote": "sunk in 'exemplary' Ukrainian operation",
+              "field": "headline"
+            },
+            {
+              "article_id": "d8f92e07074a",
+              "quote": "take war beyond Black Sea",
+              "field": "headline"
+            },
+            {
+              "article_id": "43b7b08b8afe",
+              "quote": "Shows Reach of Its Naval Drones",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with Zelensky's claim and the shared video of the strikes.",
+              "sources": [
+                "a2df9e60837f",
+                "b2aec48fd71d",
+                "3fd19c59b69a",
+                "f3334a35b814"
+              ]
+            },
+            {
+              "text": "Details operational methods, cost and the reach of Ukraine's naval drones.",
+              "sources": [
+                "a9ed22c215e0",
+                "43b7b08b8afe",
+                "25d36d41da72"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "b27427cbfffe",
+              "quote": "Libya was not a party to the war between Russia and Ukraine",
+              "field": "snippet"
+            },
+            {
+              "article_id": "bb7ec5f53d22",
+              "quote": "fuels fears of Ukraine war's spread",
+              "field": "snippet"
+            },
+            {
+              "article_id": "1ac6375924e5",
+              "quote": "Russia has reacted with fury",
+              "field": "snippet"
+            },
+            {
+              "article_id": "0714e3e65ac8",
+              "quote": "a Russian combat helicopter was also destroyed",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Reports the Libyan eastern government's position that Libya is not a party to the war, and cites Libyan officials.",
+              "sources": [
+                "b27427cbfffe",
+                "7c34ee63305e"
+              ]
+            },
+            {
+              "text": "Reports Zelensky's claim that a Russian combat helicopter was also destroyed.",
+              "sources": [
+                "0714e3e65ac8"
+              ]
+            },
+            {
+              "text": "Cites satellite imagery and footage showing at least two vessels struck.",
+              "sources": [
+                "d4cd9b74c777"
+              ]
+            },
+            {
+              "text": "Emphasises fears of the war spreading and Russia's angry reaction.",
+              "sources": [
+                "bb7ec5f53d22",
+                "118ad51e0ceb",
+                "1ac6375924e5"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [
+        {
+          "topic": "Distance of the strike from the front line.",
+          "west": {
+            "text": "The strike took place 1,300 miles from the frontline.",
+            "sources": [
+              "a9ed22c215e0"
+            ]
+          },
+          "east": {
+            "text": "The operation was conducted some 2,400 kilometres (1,500 miles) from the front line.",
+            "sources": [
+              "e0a0d346204e"
+            ]
+          }
+        }
+      ],
+      "summary": {
+        "text": "Ukrainian President Zelensky said Ukrainian naval drones struck and sank the Russian corvette Merkury at Benghazi, Libya, with a Russian cargo vessel also hit. Libyan officials reported damage and a fire at the naval base. Russia warned of consequences and escalation.",
+        "sources": [
+          "a2df9e60837f",
+          "d8f92e07074a",
+          "7c34ee63305e",
+          "25d36d41da72",
+          "3fd19c59b69a",
+          "43b7b08b8afe",
+          "a344a7890e7f",
+          "a7c208cd1ab4",
+          "1ac6375924e5",
+          "b2aec48fd71d"
+        ]
+      },
+      "conclusion": {
+        "text": "All sides report Zelensky's claim that Ukrainian naval drones sank the corvette Merkury at Benghazi, with a cargo ship also hit. Left and centre include Russia's warnings; right stresses cost, methods and injuries; East outlets add Libya's neutrality stance. The distance from the front line is given as 1,300 or 1,500 miles.",
+        "sources": [
+          "a2df9e60837f",
+          "3fd19c59b69a",
+          "a344a7890e7f",
+          "a7c208cd1ab4",
+          "a9ed22c215e0",
+          "d8f92e07074a",
+          "b27427cbfffe",
+          "e0a0d346204e",
+          "25d36d41da72"
+        ]
+      },
+      "validation": {
+        "kept": 56,
+        "dropped_by_reason": {}
+      }
+    },
+    {
+      "id": "397bdf7fd1b6",
+      "title": "COP31 climate talks in Antalya collapse without a deal",
+      "rank": 3,
+      "outlet_count": 13,
+      "coverage": {
+        "lean": {
+          "left": 4,
+          "centre": 4,
+          "right": 0
+        },
+        "bloc": {
+          "west": 8,
+          "east": 5
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "e92f470829d7",
+          "outlet_id": "thehindu",
+          "headline": "EU will ‘not endorse’ climate deal, throwing COP31 outcome into doubt",
+          "snippet": "Ireland’s Climate and Energy Minister Darragh O’Brien said the EU would not back an Antalya Pact that “does not even mention fossil fuels”, as the UN climate talks ran into record extra time",
+          "url": "https://www.thehindu.com/news/international/eu-will-not-endorse-climate-deal-throwing-cop31-outcome-into-doubt/article71731355.ece",
+          "published_at": "2026-11-22T12:45:24Z",
+          "published_at_estimated": false,
+          "image_url": "https://th-i.thgim.com/public/incoming/kr5asi/article71731399.ece/alternates/LANDSCAPE_1200/Climate_COP31_Turkey__8_29.jpg"
+        },
+        {
+          "id": "c32a290d9ea2",
+          "outlet_id": "mirror",
+          "headline": "COP31 UN climate talks collapse as EU and others reject deal",
+          "snippet": "COP31 president Murat Kurum says there will be no new draft agreement proposed by officials in Turkey after the final text was rejected",
+          "url": "https://www.mirror.co.uk/news/world-news/cop31-un-climate-talks-collapse-37903679",
+          "published_at": "2026-11-22T13:42:18Z",
+          "published_at_estimated": false,
+          "image_url": "https://i2-prod.mirror.co.uk/incoming/article37903707.ece/ALTERNATES/s615/1_Climate-COP31-Turkey-26326370690341.jpg"
+        },
+        {
+          "id": "20a9280b81d9",
+          "outlet_id": "cgtn",
+          "headline": "COP31 fails to reach consensus on Antalya Pact",
+          "snippet": "",
+          "url": "https://news.cgtn.com/news/2026-11-22/COP31-fails-to-reach-consensus-on-Antalya-Pact-1ShNqP9QQg0/p.html",
+          "published_at": "2026-11-22T14:49:38Z",
+          "published_at_estimated": false,
+          "image_url": "https://news.cgtn.com/news/2026-11-22/COP31-fails-to-reach-consensus-on-Antalya-Pact-1ShNqP9QQg0/img/b7086d3b5da14306aa455f57d697a820/b7086d3b5da14306aa455f57d697a820-750.png"
+        },
+        {
+          "id": "9565125dfbbe",
+          "outlet_id": "huffpost",
+          "headline": "UN Climate Talks Break Down Over Bitter Disagreements On Fossil Fuels",
+          "snippet": "United Nations climate talks in Turkey have failed to reach an overarching agreement due to disagreements over mentioning fossil fuels.",
+          "url": "https://www.huffpost.com/entry/ap-climate-cop31-turkey-united-nations_n_6b032066e4b0213d862812b0",
+          "published_at": "2026-11-22T17:08:08Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "fe2ea034c362",
+          "outlet_id": "mirror",
+          "headline": "'COP31 deal failure is a betrayal of future generations while the world is on fire'",
+          "snippet": "\"The UK must keep fighting for a meaningful agreement because history will judge those who put protecting profits ahead of protecting the planet\"",
+          "url": "https://www.mirror.co.uk/news/world-news/cop31-deal-climate-change-news-37904145",
+          "published_at": "2026-11-23T00:08:50Z",
+          "published_at_estimated": false,
+          "image_url": "https://i2-prod.mirror.co.uk/incoming/article31557070.ece/ALTERNATES/s615/118_the-mirror-says-6.jpg"
+        },
+        {
+          "id": "5272d6b9323e",
+          "outlet_id": "nyt",
+          "headline": "COP31 Talks Collapse in Turkey in a Clash Over Fossil Fuels",
+          "snippet": "European and vulnerable nations rejected a proposed agreement after Saudi Arabia and other oil producers blocked any mention of phasing out coal, oil and gas.",
+          "url": "https://www.nytimes.com/2026/11/22/climate/cop31-climate-summit-ends-climate.html",
+          "published_at": "2026-11-23T02:01:42Z",
+          "published_at_estimated": false,
+          "image_url": "https://static01.nyt.com/images/2026/11/22/multimedia/22cli-cop31-final3-fmcb/22cli-cop31-final3-fmcb-mediumSquareAt3X-v2.jpg"
+        },
+        {
+          "id": "22a06e0a9bf3",
+          "outlet_id": "japantimes",
+          "headline": "Saudi Arabia’s influence loomed large over failed COP31 deal",
+          "snippet": "\"This COP, I believe, was hijacked by some oil states,\" Ireland's climate minister, Darragh O'Brien, said on behalf of the European Union.",
+          "url": "https://www.japantimes.co.jp/environment/2026/11/23/climate-change/saudi-arabia-influence-cop31/",
+          "published_at": "2026-11-23T03:42:00Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.japantimes.co.jp/japantimes/uploads/images/2026/11/23/thumbs/400x400/575497.jpg"
+        },
+        {
+          "id": "fb7627270061",
+          "outlet_id": "bbc",
+          "headline": "What's next after no deal at COP31 climate talks?",
+          "snippet": "The talks have been the longest-running in the summit's history, with negotiations breaking down two days after they had been due to end.",
+          "url": "https://www.bbc.co.uk/news/videos/cr1ewge81q4qo",
+          "published_at": "2026-11-23T05:34:39Z",
+          "published_at_estimated": false,
+          "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/4edf/live/0b9a5c60-e70e-11f1-a094-5fdc692f3e33.jpg"
+        },
+        {
+          "id": "ad8f86ded2cd",
+          "outlet_id": "japantimes",
+          "headline": "COP flop triggers backlash in Australia as Pacific nations express despair",
+          "snippet": "For the first time since the 2009 meeting in Copenhagen, the COP climate conference could not reach a final agreement from its talks.",
+          "url": "https://www.japantimes.co.jp/news/2026/11/23/asia-pacific/politics/cop-backlash-australia-pacific-nations/",
+          "published_at": "2026-11-23T06:12:00Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.japantimes.co.jp/japantimes/uploads/images/2026/11/23/thumbs/400x400/575568.jpg"
+        },
+        {
+          "id": "1a16b135d88b",
+          "outlet_id": "bbc",
+          "headline": "Five takeaways from the failed climate talks COP31",
+          "snippet": "The COP31 summit in Antalya was the longest-running climate talks in UN history.",
+          "url": "https://www.bbc.co.uk/news/articles/cm75237wlp3lo",
+          "published_at": "2026-11-23T06:33:50Z",
+          "published_at_estimated": false,
+          "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/55f7/live/e38ff1a0-e71f-11f1-99b6-a35a62fa4264.jpg"
+        },
+        {
+          "id": "5bca6fb76a05",
+          "outlet_id": "thehindu",
+          "headline": "How did the COP31 climate agreement fall apart – and what happens now?",
+          "snippet": "In a year of unprecedented climate disasters, a supercharged El Niño and as the world heads inevitably past 1.5 °C of warming, the EU and other nations said that the international process did not…",
+          "url": "https://www.thehindu.com/news/international/how-did-the-cop31-climate-agreement-fall-apart-and-what-happensnow/article71733595.ece",
+          "published_at": "2026-11-23T07:43:05Z",
+          "published_at_estimated": false,
+          "image_url": "https://th-i.thgim.com/public/incoming/6y2lpq/article71733604.ece/alternates/LANDSCAPE_1200/22th-KOSHY-COP-G34GR85KP.3.jpg.jpg"
+        },
+        {
+          "id": "c19da5221dc9",
+          "outlet_id": "thehindu",
+          "headline": "COP31 talks fail as EU, others reject any climate deal without language on a fossil fuel phase-out",
+          "snippet": "EU, Panama among about 130 parties that refuse to accept COP President’s consensus cover text, alleges that it “greenwashes” fossil fuels; India, China, Saudi Arabia are on the other side of the…",
+          "url": "https://www.thehindu.com/sci-tech/energy-and-environment/cop31-fails-to-agree-on-climate-deal-in-chaotic-finale/article71731651.ece",
+          "published_at": "2026-11-23T07:46:58Z",
+          "published_at_estimated": false,
+          "image_url": "https://th-i.thgim.com/public/incoming/4u6khj/article71731706.ece/alternates/LANDSCAPE_1200/2026-11-22T101523Z_325050495_RC2YSOAHDI23_RTRMADP_3_CLIMATE-COP31.JPG"
+        },
+        {
+          "id": "e9370dc8a660",
+          "outlet_id": "axios",
+          "headline": "UN climate meltdown raises new doubts about talks",
+          "snippet": "The collapse of UN climate talks without an overarching deal is deepening doubts about the effectiveness of these summits — and bringing fresh calls for a shakeup. Why it matters: Warming is on pace…",
+          "url": "https://www.axios.com/2026/11/23/un-climate-talks-meltdown-aftermath",
+          "published_at": "2026-11-23T10:15:07Z",
+          "published_at_estimated": false,
+          "image_url": "https://images.axios.com/fEAmtorTkTPf-SZ3erGBDJQjz5I=/1366x768/smart/2025/01/30/215339-1738274019905.jpg"
+        },
+        {
+          "id": "ef404505155f",
+          "outlet_id": "aljazeera",
+          "headline": "COP31: What next after UN climate talks collapse",
+          "snippet": "UN member states fail to agree on how to fast-track action to reverse global warming in a blow to climate agenda.",
+          "url": "https://www.aljazeera.com/news/2026/11/23/cop31-what-next-after-un-climate-talks-collapse",
+          "published_at": "2026-11-23T11:19:08Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "d7a6d057fd1b",
+          "outlet_id": "dw",
+          "headline": "Uganda minister at COP31: 'We need a just transition'",
+          "snippet": "Funding from wealthy countries to help deal with the impacts of climate change hasn't materialized, says Uganda's environment minister. The East African country is hoping oil and carbon credits will…",
+          "url": "https://www.dw.com/en/uganda-minister-at-cop31-we-need-a-just-transition/a-79997209?maca=en-rss-en-world-4025-xml-mrss",
+          "published_at": "2026-11-23T13:18:00Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "fccbe9a253b6",
+          "outlet_id": "aljazeera",
+          "headline": "COP31 has failed. The climate system is working as designed",
+          "snippet": "The failure exposes a diplomacy that protects fossil-fuel power while leaving vulnerable countries to pay the price.",
+          "url": "https://www.aljazeera.com/opinions/2026/11/23/cop31-has-failed-the-climate-system-is-working-as-designed",
+          "published_at": "2026-11-23T13:36:00Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "c14726c44776",
+          "outlet_id": "thenational",
+          "headline": "Cop31 failure will not stop move away from fossil fuels, climate analysts say",
+          "snippet": "The collapse of talks at the UN's Cop31 summit will not stop international action against climate change, according to analysts, who expect economic and technological forces to continue to drive the…",
+          "url": "https://www.thenationalnews.com/news/uae/2026/11/23/cop31-talks-failure-will-not-stop-move-away-from-fossil-fuels-climate-analysts-say/",
+          "published_at": "2026-11-23T15:12:17Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.thenationalnews.com/resizer/v2/ZP6GW4LQ6VB2FE2S435PSKNBNU?auth=98b299f7100e3ed1f735a95100079f2d9257cd1f11ffe77c3109ae80adb2b70b&smart=true&width=4418&height=2485"
+        },
+        {
+          "id": "bd7f9f5aec7a",
+          "outlet_id": "france24",
+          "headline": "Behind COP31 failure: A showdown over fossil fuel interests",
+          "snippet": "Several countries and environmental groups expressed fury at the collapse of the COP31 climate conference in Antalya, Turkey on Sunday, amid a dramatic failure to thrash out an agreement, two days…",
+          "url": "https://www.france24.com/en/tv-shows/down-to-earth/20261123-behind-cop31-failure-a-showdown-over-fossil-fuel-interests",
+          "published_at": "2026-11-23T15:40:01Z",
+          "published_at_estimated": false,
+          "image_url": "https://s.france24.com/media/display/1ad85f0e-e751-11f1-9135-e56ab3dc0809/w:1024/p:16x9/202611200168WD-CLIMATE-COP31PROTEST-O.jpg"
+        },
+        {
+          "id": "90f137a143a9",
+          "outlet_id": "nyt",
+          "headline": "COP31 Climate Talks Broke Down. Now What?",
+          "snippet": "With big diplomatic efforts faltering, smaller pacts, local leaders and booming clean energy take center stage.",
+          "url": "https://www.nytimes.com/2026/11/23/climate/cop31-collapse-what-next.html",
+          "published_at": "2026-11-23T16:18:49Z",
+          "published_at_estimated": false,
+          "image_url": "https://static01.nyt.com/images/2026/11/23/multimedia/23CLI-COP31-WHAT-NOW-1-fpgh/23CLI-COP31-WHAT-NOW-1-fpgh-mediumSquareAt3X-v2.jpg"
+        },
+        {
+          "id": "9f5fcd797f0a",
+          "outlet_id": "aljazeera",
+          "headline": "Why did COP31 climate talks collapse without a deal?",
+          "snippet": "The longest UN climate summit in history collapsed without a final deal in Turkiye, the first such failure in 17 years.",
+          "url": "https://www.aljazeera.com/video/newsfeed/2026/11/23/why-did-cop31-climate-talks-collapse-without-a-deal",
+          "published_at": "2026-11-23T16:38:30Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "27fbcec5f690",
+          "outlet_id": "guardian",
+          "headline": "Cop31 collapses: why did climate talks fall apart? - The Latest",
+          "snippet": "Countries at the Cop31 climate summit failed to reach a keystone agreement for the first time in 17 years. The talks, co-chaired by Turkey and Australia, were intended to produce a pact that would…",
+          "url": "https://www.theguardian.com/news/audio/2026/nov/23/cop31-collapses-why-did-climate-talks-fall-apart-the-latest",
+          "published_at": "2026-11-23T17:19:55Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.guim.co.uk/img/media/bfd5ba75d2fef1972b3c75b1a735ae9b05d31036/156_27_6787_5429/master/6787.jpg?width=460&quality=85&auto=format&fit=max&s=91e29fa752fee2b7a6fc4d26f608ad09"
+        },
+        {
+          "id": "e9d308a17023",
+          "outlet_id": "bbc",
+          "headline": "What failure of COP31 reveals about a divided world",
+          "snippet": "Interests of oil-producing countries, a US boycott and a dispute over finance may have torpedoed climate talks.",
+          "url": "https://www.bbc.co.uk/news/articles/cky970n83rvjo",
+          "published_at": "2026-11-23T17:24:25Z",
+          "published_at_estimated": false,
+          "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/9c7d/live/76349960-e74e-11f1-88dc-f746e0cde621.jpg"
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "The COP31 climate talks in Turkey ended without a final or overarching agreement.",
+          "sources": [
+            "c32a290d9ea2",
+            "20a9280b81d9",
+            "9565125dfbbe",
+            "5272d6b9323e",
+            "fb7627270061",
+            "1a16b135d88b",
+            "ad8f86ded2cd",
+            "c19da5221dc9",
+            "e9370dc8a660",
+            "ef404505155f",
+            "bd7f9f5aec7a",
+            "9f5fcd797f0a",
+            "27fbcec5f690",
+            "e9d308a17023",
+            "90f137a143a9"
+          ]
+        },
+        {
+          "text": "Disagreement over fossil fuels, including whether the text mentioned phasing them out, was central to the breakdown.",
+          "sources": [
+            "9565125dfbbe",
+            "5272d6b9323e",
+            "c19da5221dc9",
+            "e92f470829d7",
+            "bd7f9f5aec7a"
+          ]
+        },
+        {
+          "text": "The EU and other parties rejected the proposed agreement.",
+          "sources": [
+            "c32a290d9ea2",
+            "5272d6b9323e",
+            "c19da5221dc9",
+            "e92f470829d7"
+          ]
+        },
+        {
+          "text": "The summit was the longest-running in the history of UN climate talks, breaking down two days after it was due to end.",
+          "sources": [
+            "fb7627270061",
+            "1a16b135d88b",
+            "9f5fcd797f0a",
+            "bd7f9f5aec7a",
+            "e92f470829d7"
+          ]
+        },
+        {
+          "text": "It was the first time in 17 years, or since Copenhagen in 2009, that a COP failed to reach a final agreement.",
+          "sources": [
+            "ad8f86ded2cd",
+            "9f5fcd797f0a",
+            "27fbcec5f690"
+          ]
+        },
+        {
+          "text": "Saudi Arabia and other oil-producing states are named as playing a role in the outcome.",
+          "sources": [
+            "5272d6b9323e",
+            "22a06e0a9bf3",
+            "c19da5221dc9",
+            "e9d308a17023"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "c32a290d9ea2",
+              "quote": "collapse as EU and others reject deal",
+              "field": "headline"
+            },
+            {
+              "article_id": "9565125dfbbe",
+              "quote": "Break Down Over Bitter Disagreements On Fossil Fuels",
+              "field": "headline"
+            },
+            {
+              "article_id": "5272d6b9323e",
+              "quote": "Saudi Arabia and other oil producers blocked any mention of phasing out coal, oil and gas",
+              "field": "snippet"
+            },
+            {
+              "article_id": "fe2ea034c362",
+              "quote": "is a betrayal of future generations",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the fossil-fuel clash and attributes the blocking of phase-out language to Saudi Arabia and other oil producers.",
+              "sources": [
+                "9565125dfbbe",
+                "5272d6b9323e"
+              ]
+            },
+            {
+              "text": "Reports that the COP31 president said no new draft agreement would be proposed.",
+              "sources": [
+                "c32a290d9ea2"
+              ]
+            },
+            {
+              "text": "Looks ahead to smaller pacts, local leaders and clean energy as diplomatic efforts falter.",
+              "sources": [
+                "90f137a143a9"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "1a16b135d88b",
+              "quote": "Five takeaways from the failed climate talks COP31",
+              "field": "headline"
+            },
+            {
+              "article_id": "e9370dc8a660",
+              "quote": "UN climate meltdown raises new doubts about talks",
+              "field": "headline"
+            },
+            {
+              "article_id": "bd7f9f5aec7a",
+              "quote": "A showdown over fossil fuel interests",
+              "field": "headline"
+            },
+            {
+              "article_id": "e9d308a17023",
+              "quote": "a US boycott and a dispute over finance",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Emphasises the record length of the talks and what comes next.",
+              "sources": [
+                "fb7627270061",
+                "1a16b135d88b"
+              ]
+            },
+            {
+              "text": "Highlights doubts about the effectiveness of UN climate summits and calls for a shakeup.",
+              "sources": [
+                "e9370dc8a660"
+              ]
+            },
+            {
+              "text": "Points to oil-producer interests, a US boycott and a finance dispute as possible causes.",
+              "sources": [
+                "e9d308a17023",
+                "bd7f9f5aec7a"
+              ]
+            },
+            {
+              "text": "Carries a Ugandan minister's view that climate funding from wealthy countries has not materialised.",
+              "sources": [
+                "d7a6d057fd1b"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "left",
+          "text": "Left coverage does not mention a US boycott or a dispute over climate finance.",
+          "sources": [
+            "e9d308a17023",
+            "d7a6d057fd1b"
+          ]
+        },
+        {
+          "lean": "left",
+          "text": "Left coverage does not mention that the talks were the longest-running in UN climate summit history.",
+          "sources": [
+            "fb7627270061",
+            "1a16b135d88b"
+          ]
+        },
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not mention the EU rejecting the proposed agreement.",
+          "sources": [
+            "c32a290d9ea2",
+            "5272d6b9323e"
+          ]
+        }
+      ],
+      "contested_claims": [],
+      "opinion": [
+        {
+          "text": "A Daily Mirror piece calls the deal failure a betrayal of future generations and urges the UK to keep fighting for an agreement.",
+          "sources": [
+            "fe2ea034c362"
+          ]
+        },
+        {
+          "text": "An Al Jazeera piece argues the failure exposes a diplomacy that protects fossil-fuel power while vulnerable countries pay the price.",
+          "sources": [
+            "fccbe9a253b6"
+          ]
+        }
+      ],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "5272d6b9323e",
+              "quote": "COP31 Talks Collapse in Turkey in a Clash Over Fossil Fuels",
+              "field": "headline"
+            },
+            {
+              "article_id": "fb7627270061",
+              "quote": "What's next after no deal at COP31 climate talks?",
+              "field": "headline"
+            },
+            {
+              "article_id": "e9370dc8a660",
+              "quote": "raises new doubts about talks",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the fossil-fuel clash and what follows the collapse.",
+              "sources": [
+                "5272d6b9323e",
+                "9565125dfbbe",
+                "fb7627270061",
+                "90f137a143a9",
+                "27fbcec5f690"
+              ]
+            },
+            {
+              "text": "Raises questions about the summit format, a US boycott and finance disputes.",
+              "sources": [
+                "e9370dc8a660",
+                "e9d308a17023",
+                "d7a6d057fd1b"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "22a06e0a9bf3",
+              "quote": "Saudi Arabia’s influence loomed large over failed COP31 deal",
+              "field": "headline"
+            },
+            {
+              "article_id": "22a06e0a9bf3",
+              "quote": "hijacked by some oil states",
+              "field": "snippet"
+            },
+            {
+              "article_id": "ad8f86ded2cd",
+              "quote": "COP flop triggers backlash in Australia as Pacific nations express despair",
+              "field": "headline"
+            },
+            {
+              "article_id": "c14726c44776",
+              "quote": "will not stop move away from fossil fuels",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Quotes Ireland's climate minister, speaking for the EU, on the text omitting fossil fuels and on oil states hijacking the COP.",
+              "sources": [
+                "e92f470829d7",
+                "22a06e0a9bf3"
+              ]
+            },
+            {
+              "text": "Names India, China and Saudi Arabia on the other side from the roughly 130 parties rejecting the text.",
+              "sources": [
+                "c19da5221dc9"
+              ]
+            },
+            {
+              "text": "Reports reactions in Australia and the Pacific, and analysts expecting the shift from fossil fuels to continue.",
+              "sources": [
+                "ad8f86ded2cd",
+                "c14726c44776"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "UN climate talks at COP31 in Antalya, Turkey, ended without an overarching agreement after the EU and other parties rejected a final text over its treatment of fossil fuels. The talks were described as the longest in the summit's history, and the collapse as the first such failure in 17 years.",
+        "sources": [
+          "c32a290d9ea2",
+          "9565125dfbbe",
+          "5272d6b9323e",
+          "c19da5221dc9",
+          "e92f470829d7",
+          "fb7627270061",
+          "1a16b135d88b",
+          "9f5fcd797f0a",
+          "27fbcec5f690",
+          "ad8f86ded2cd"
+        ]
+      },
+      "conclusion": {
+        "text": "All sides report that COP31 ended without a deal amid a fossil-fuel dispute. Left outlets lead with Saudi and oil-producer blocking, centre outlets add a US boycott, finance and doubts about the summit format, and East outlets foreground the EU minister's oil-states accusation and Pacific reaction. No incompatible claims appear between leans or blocs.",
+        "sources": [
+          "5272d6b9323e",
+          "9565125dfbbe",
+          "e9d308a17023",
+          "e9370dc8a660",
+          "22a06e0a9bf3",
+          "ad8f86ded2cd",
+          "20a9280b81d9",
+          "ef404505155f"
+        ]
+      },
+      "validation": {
+        "kept": 40,
+        "dropped_by_reason": {}
+      }
+    },
+    {
+      "id": "e2d7d3f53862",
+      "title": "Deadly fire at candy factory in Indonesia's Banten leaves dozens missing",
+      "rank": 4,
+      "outlet_count": 11,
+      "coverage": {
+        "lean": {
+          "left": 3,
+          "centre": 3,
+          "right": 1
+        },
+        "bloc": {
+          "west": 7,
+          "east": 4
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "0f8d14223f3e",
+          "outlet_id": "dw",
+          "headline": "Dozens missing as deadly fire tears through Indonesian candy factory",
+          "snippet": "At least 24 people were killed in a devastating fire at a confectionery factory on Java. Officials said many more people remain unaccounted for, prompting fears of a much larger tragedy.",
+          "url": "https://www.dw.com/en/dozens-missing-as-deadly-fire-tears-through-indonesian-candy-factory/a-80012342?maca=en-rss-en-world-4025-xml-mrss",
+          "published_at": "2026-11-22T06:14:00Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "0f8e7b9d6480",
+          "outlet_id": "cgtn",
+          "headline": "Indonesia candy factory fire not fully extinguished, about 50 missing",
+          "snippet": "Indonesian police said Sunday that a fire that broke out at a candy factory in Banten province on Saturday night had not been fully extinguished, with seven body bags recovered and about 50 people…",
+          "url": "https://news.cgtn.com/news/2026-11-22/news-1ShqqiAfYhG/p.html",
+          "published_at": "2026-11-22T08:58:45Z",
+          "published_at_estimated": false,
+          "image_url": "https://news.cgtn.com/news/2026-11-22/news-1ShqqiAfYhG/img/053c092034b644bf81aebf231468bb16/053c092034b644bf81aebf231468bb16-1920.png"
+        },
+        {
+          "id": "62472447d748",
+          "outlet_id": "fox",
+          "headline": "Indonesia candy factory fire leaves multiple dead, dozens missing",
+          "snippet": "A massive fire tore through PT Fonusa Agung Mulia's candy factory in Indonesia's Banten, killing at least three with up to 50 workers missing.",
+          "url": "https://www.foxnews.com/world/indonesia-candy-factory-fire-leaves-multiple-dead-dozens-missing",
+          "published_at": "2026-11-22T13:18:44Z",
+          "published_at_estimated": false,
+          "image_url": "https://static.foxnews.com/foxnews.com/content/uploads/2026/11/indonesia-candy-factory-fire.gif"
+        },
+        {
+          "id": "e52ccdd89580",
+          "outlet_id": "bbc",
+          "headline": "Three killed and dozens missing after fire at Indonesian factory",
+          "snippet": "At least three people were killed and many more feared dead after a fire at a confectionary factory.",
+          "url": "https://www.bbc.co.uk/news/articles/cw8dvg5pgm0eo",
+          "published_at": "2026-11-22T14:05:20Z",
+          "published_at_estimated": false,
+          "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/0675/live/85d2f2e0-e62c-11f1-b2ea-350d14ed1ad7.jpg"
+        },
+        {
+          "id": "bd5569004b82",
+          "outlet_id": "guardian",
+          "headline": "At least 24 killed and dozens missing in confectionery factory fire in Indonesia",
+          "snippet": "Rescuers brave unstable structures in search for missing as DNA needed to identify victims Indonesia has confirmed the deaths of 24 people in a fire that tore ⁠through a factory, as rescuers braved…",
+          "url": "https://www.theguardian.com/world/2026/nov/22/fire-confectionary-factory-indonesia-jakarta",
+          "published_at": "2026-11-23T05:45:12Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.guim.co.uk/img/media/47cbe1be874ceb93fbcf458afaae7d1de459017b/308_0_3265_2613/master/3265.jpg?width=460&quality=85&auto=format&fit=max&s=ad1dc1da6cf7d9491e9aa964013c23b1"
+        },
+        {
+          "id": "75b861f4cfe3",
+          "outlet_id": "thehindu",
+          "headline": "Indonesia says 24 killed in factory blaze as rescuers search for dozens missing",
+          "snippet": "Authorities ⁠were still investigating the cause of the fire, which broke out on Saturday (November 21, 2026) evening, in one building of the ‌PT Fonusa Agung Mulia confectionery factory in Cikande…",
+          "url": "https://www.thehindu.com/news/international/indonesia-banten-factory-fire-death-toll-people-missing/article71733448.ece",
+          "published_at": "2026-11-23T06:31:51Z",
+          "published_at_estimated": false,
+          "image_url": "https://th-i.thgim.com/public/incoming/zg1be3/article71733460.ece/alternates/LANDSCAPE_1200/Indonesia_Factory_Fire_11369.jpg"
+        },
+        {
+          "id": "f84989f6337c",
+          "outlet_id": "mirror",
+          "headline": "Multiple dead as fire rips through Indonesian sweets factory - desperate search for survivors",
+          "snippet": "Firefighters battled the horror blaze at the PT Fonusa Agung Mulia factory for about 14 hours before rescue workers were seen carrying out body bags",
+          "url": "https://www.mirror.co.uk/news/world-news/indonesia-sweets-factory-fire-jakarta-37904900",
+          "published_at": "2026-11-23T07:43:35Z",
+          "published_at_estimated": false,
+          "image_url": "https://i2-prod.mirror.co.uk/incoming/article37904907.ece/ALTERNATES/s615/0_Indonesia-Banten-Province-Candy-Factory-Fire-22-Nov-2026.jpg"
+        },
+        {
+          "id": "cc2d7531e4c7",
+          "outlet_id": "sky",
+          "headline": "Deadly fire at confectionery factory kills 24 as rescuers search for dozens still missing",
+          "snippet": "A deadly fire that tore through a confectionery factory in Indonesia has claimed the lives of 24 people, with about 30 others still missing.",
+          "url": "https://news.sky.com/story/deadly-fire-at-confectionery-factory-in-indonesia-kills-24-as-rescuers-search-for-dozens-still-missing-13615577",
+          "published_at": "2026-11-23T10:52:00Z",
+          "published_at_estimated": false,
+          "image_url": "https://e3.365dm.com/26/11/1920x1080/skynews-serang-indonesia_7414286.jpg?20261123105702"
+        },
+        {
+          "id": "50500820ad90",
+          "outlet_id": "aljazeera",
+          "headline": "Search continues for dozens missing after Indonesia candy factory fire",
+          "snippet": "Rescuers are searching for around 30 missing workers after a candy factory fire killed at least 24 people in Banten.",
+          "url": "https://www.aljazeera.com/video/newsfeed/2026/11/23/search-continues-for-dozens-missing-after-indonesia-candy-factory-fire",
+          "published_at": "2026-11-23T12:23:19Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "0863ba03bc1d",
+          "outlet_id": "scmp",
+          "headline": "Indonesia says 24 killed in factory fire, rescuers search for dozens missing",
+          "snippet": "Indonesia confirmed on ⁠Monday the deaths of 24 ⁠people in a fire that tore ⁠through a factory at the weekend, as rescuers braved unstable structures in the burned wreckage in the search for about…",
+          "url": "https://www.scmp.com/news/asia/southeast-asia/article/3375508/indonesia-says-24-killed-factory-fire-rescuers-search-dozens-missing",
+          "published_at": "2026-11-23T12:52:00Z",
+          "published_at_estimated": false,
+          "image_url": "https://cdn.i-scmp.com/sites/default/files/styles/1280x720/public/d8/images/canvas/2026/11/23/a3f98f8e-97ef-4d35-b1dd-0c62b43952eb_3465cf3a.jpg?itok=1hqSbTto&v=1795438307"
+        },
+        {
+          "id": "5d68d930248f",
+          "outlet_id": "nyt",
+          "headline": "Deadly Fire Rips Through Candy Factory in Indonesia",
+          "snippet": "Hundreds of people were at the compound when a blaze broke out on Saturday and then raged for hours.",
+          "url": "https://www.nytimes.com/2026/11/23/world/asia/indonesia-factory-fire.html",
+          "published_at": "2026-11-23T14:03:09Z",
+          "published_at_estimated": false,
+          "image_url": "https://static01.nyt.com/images/2026/11/23/multimedia/23int-indonesia-fire-02-gqcm/23int-indonesia-fire-02-gqcm-mediumSquareAt3X.jpg"
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "A deadly fire struck a candy or confectionery factory in Indonesia.",
+          "sources": [
+            "0f8d14223f3e",
+            "0f8e7b9d6480",
+            "62472447d748",
+            "e52ccdd89580",
+            "bd5569004b82",
+            "75b861f4cfe3",
+            "f84989f6337c",
+            "cc2d7531e4c7",
+            "50500820ad90",
+            "0863ba03bc1d",
+            "5d68d930248f"
+          ]
+        },
+        {
+          "text": "At least 24 people were confirmed killed in the fire.",
+          "sources": [
+            "0f8d14223f3e",
+            "bd5569004b82",
+            "75b861f4cfe3",
+            "cc2d7531e4c7",
+            "50500820ad90",
+            "0863ba03bc1d"
+          ]
+        },
+        {
+          "text": "Dozens of people remained missing as rescuers searched for them.",
+          "sources": [
+            "0f8d14223f3e",
+            "0f8e7b9d6480",
+            "62472447d748",
+            "e52ccdd89580",
+            "bd5569004b82",
+            "75b861f4cfe3",
+            "cc2d7531e4c7",
+            "50500820ad90",
+            "0863ba03bc1d"
+          ]
+        },
+        {
+          "text": "The factory belongs to PT Fonusa Agung Mulia.",
+          "sources": [
+            "62472447d748",
+            "75b861f4cfe3",
+            "f84989f6337c"
+          ]
+        },
+        {
+          "text": "The fire broke out on Saturday and burned for many hours.",
+          "sources": [
+            "0f8e7b9d6480",
+            "75b861f4cfe3",
+            "f84989f6337c",
+            "5d68d930248f"
+          ]
+        },
+        {
+          "text": "Rescuers braved unstable structures in the search for the missing.",
+          "sources": [
+            "bd5569004b82",
+            "0863ba03bc1d"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "bd5569004b82",
+              "quote": "DNA needed to identify victims",
+              "field": "snippet"
+            },
+            {
+              "article_id": "f84989f6337c",
+              "quote": "desperate search for survivors",
+              "field": "headline"
+            },
+            {
+              "article_id": "5d68d930248f",
+              "quote": "Hundreds of people were at the compound",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the rescue effort and the difficulty of identifying victims.",
+              "sources": [
+                "bd5569004b82",
+                "f84989f6337c"
+              ]
+            },
+            {
+              "text": "Emphasises how long the blaze burned and how many people were at the site.",
+              "sources": [
+                "f84989f6337c",
+                "5d68d930248f"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "0f8d14223f3e",
+              "quote": "prompting fears of a much larger tragedy",
+              "field": "snippet"
+            },
+            {
+              "article_id": "e52ccdd89580",
+              "quote": "many more feared dead",
+              "field": "snippet"
+            },
+            {
+              "article_id": "cc2d7531e4c7",
+              "quote": "with about 30 others still missing",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the death toll and fears that more of the missing are dead.",
+              "sources": [
+                "0f8d14223f3e",
+                "e52ccdd89580",
+                "cc2d7531e4c7"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "right",
+          "headline_quotes": [
+            {
+              "article_id": "62472447d748",
+              "quote": "A massive fire tore through PT Fonusa Agung Mulia's candy factory",
+              "field": "snippet"
+            },
+            {
+              "article_id": "62472447d748",
+              "quote": "up to 50 workers missing",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Names the factory owner and reports at least three dead with up to 50 workers missing.",
+              "sources": [
+                "62472447d748"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "right",
+          "text": "Right-leaning coverage does not mention the confirmed toll of 24 dead.",
+          "sources": [
+            "0f8d14223f3e",
+            "bd5569004b82",
+            "cc2d7531e4c7"
+          ]
+        },
+        {
+          "lean": "left",
+          "text": "Left-leaning coverage does not name Banten as the location of the factory.",
+          "sources": [
+            "62472447d748"
+          ]
+        },
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not name the factory owner, PT Fonusa Agung Mulia.",
+          "sources": [
+            "62472447d748",
+            "f84989f6337c"
+          ]
+        }
+      ],
+      "contested_claims": [
+        {
+          "claim": "About 50 people were missing after the fire.",
+          "asserted_by": [
+            "0f8e7b9d6480",
+            "62472447d748"
+          ],
+          "disputed_by": [
+            "cc2d7531e4c7",
+            "50500820ad90"
+          ]
+        }
+      ],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "0f8d14223f3e",
+              "quote": "Dozens missing as deadly fire tears through Indonesian candy factory",
+              "field": "headline"
+            },
+            {
+              "article_id": "f84989f6337c",
+              "quote": "rescue workers were seen carrying out body bags",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Foregrounds the scale of the blaze, the death toll and the search for survivors.",
+              "sources": [
+                "0f8d14223f3e",
+                "e52ccdd89580",
+                "bd5569004b82",
+                "f84989f6337c",
+                "cc2d7531e4c7",
+                "5d68d930248f",
+                "62472447d748"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "0f8e7b9d6480",
+              "quote": "not fully extinguished, about 50 missing",
+              "field": "headline"
+            },
+            {
+              "article_id": "75b861f4cfe3",
+              "quote": "still investigating the cause of the fire",
+              "field": "snippet"
+            },
+            {
+              "article_id": "0863ba03bc1d",
+              "quote": "rescuers braved unstable structures in the burned wreckage",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with official statements from Indonesian police and authorities on the toll and the search.",
+              "sources": [
+                "0f8e7b9d6480",
+                "75b861f4cfe3",
+                "0863ba03bc1d"
+              ]
+            },
+            {
+              "text": "Notes the fire was not fully extinguished and its cause was still under investigation.",
+              "sources": [
+                "0f8e7b9d6480",
+                "75b861f4cfe3"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "A fire that broke out on Saturday evening at the PT Fonusa Agung Mulia confectionery factory in Indonesia's Banten province killed at least 24 people, Indonesian authorities said. Rescuers searched burned wreckage for dozens of people still missing, given as about 30 or about 50.",
+        "sources": [
+          "75b861f4cfe3",
+          "62472447d748",
+          "0f8e7b9d6480",
+          "50500820ad90",
+          "0863ba03bc1d",
+          "bd5569004b82",
+          "cc2d7531e4c7",
+          "0f8d14223f3e"
+        ]
+      },
+      "conclusion": {
+        "text": "All sides report a deadly factory fire in Indonesia with dozens missing, and most cite 24 confirmed dead, while earlier reports gave at least three. Left coverage leads with rescue and identification, centre with fears of more deaths, right with the owner's name, and East outlets with official statements. Figures for the missing differ, about 50 versus about 30.",
+        "sources": [
+          "0f8d14223f3e",
+          "bd5569004b82",
+          "cc2d7531e4c7",
+          "e52ccdd89580",
+          "62472447d748",
+          "f84989f6337c",
+          "0f8e7b9d6480",
+          "75b861f4cfe3",
+          "50500820ad90",
+          "0863ba03bc1d"
+        ]
+      },
+      "validation": {
+        "kept": 32,
+        "dropped_by_reason": {}
+      }
+    },
+    {
+      "id": "4e488d19e6a7",
+      "title": "Don Toliver concert in Manchester evacuated after unknown substance released",
+      "rank": 5,
+      "outlet_count": 7,
+      "coverage": {
+        "lean": {
+          "left": 2,
+          "centre": 2,
+          "right": 2
+        },
+        "bloc": {
+          "west": 6,
+          "east": 1
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "0c5c04739d72",
+          "outlet_id": "scmp",
+          "headline": "Thousands evacuated from UK concert after ‘unknown substance’ released",
+          "snippet": "Thousands of concertgoers were evacuated from the UK’s largest indoor arena after the release of an “unknown substance” as several people reported suffering side effects, police said on Monday. Some…",
+          "url": "https://www.scmp.com/news/world/europe/article/3375481/thousands-evacuated-uk-concert-after-unknown-substance-released",
+          "published_at": "2026-11-23T09:19:15Z",
+          "published_at_estimated": false,
+          "image_url": "https://cdn.i-scmp.com/sites/default/files/styles/1280x720/public/d8/images/canvas/2026/11/23/10899173-9141-481c-9edd-809a99712ee7_b63dcb1b.jpg?itok=A6Lq38yi&v=1795425540"
+        },
+        {
+          "id": "17e56cd0086a",
+          "outlet_id": "nbc",
+          "headline": "Crowd evacuated from American rapper Don Toliver’s concert after ‘unknown substance’ released",
+          "snippet": "MANCHESTER, England — Thousands of people attending a concert of American rapper Don Toliver were evacuated from a major British arena Sunday evening, police said, after an “unknown substance” was…",
+          "url": "https://www.nbcnews.com/world/united-kingdom/don-toliver-concert-evacuated-coop-live-unknown-substance-released-rcna610820",
+          "published_at": "2026-11-23T10:37:03Z",
+          "published_at_estimated": false,
+          "image_url": "https://media-cldnry.s-nbcnews.com/image/upload/t_fit_1500w/rockcms/2026-11/261123-manchester-3-rs-42dd6c.jpg"
+        },
+        {
+          "id": "256d696dfebb",
+          "outlet_id": "nbc",
+          "headline": "Concert Evacuated After Unknown Substance Released Into Crowd",
+          "snippet": "More than 12,000 concert attendees were evacuated from Manchester’s Co-op Live arena Sunday night after an unknown substance, initially suspected to be tear gas, was released into the crowd of a Don…",
+          "url": "https://www.today.com/video/concert-evacuated-after-unknown-substance-released-into-crowd-274008133595",
+          "published_at": "2026-11-23T13:15:05Z",
+          "published_at_estimated": false,
+          "image_url": "https://media-cldnry.s-nbcnews.com/image/upload/t_fit_1500w/mpx/2704722219/2026_11/1795439701143_tdy_news_8a_uk_concert_evacuated_261123_S3_1920x1080-nfrlpo.jpg"
+        },
+        {
+          "id": "c3704e39b385",
+          "outlet_id": "thesun",
+          "headline": "Woman hospitalised & 88 others treated after ‘tear gas released in crowd’ during Don Toliver gig – as rapper speaks out",
+          "snippet": "A WOMAN was rushed to hospital and 88 others were treated after suspected tear gas was released into a crowd during a Don Toliver concert. Thousands of fans were evacuated from Manchester's Co-op…",
+          "url": "https://www.thesun.co.uk/news/41116984/don-toliver-speaks-manchester-gig-chaos/",
+          "published_at": "2026-11-23T14:39:45Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.thesun.co.uk/wp-content%2Fuploads%2F2026%2F11%2Fcrop-41111272.jpg?quality%3D90%26"
+        },
+        {
+          "id": "8bfe2d4dacce",
+          "outlet_id": "france24",
+          "headline": "12,000 evacuated from Don Toliver concert after unknown substance sickens fans",
+          "snippet": "More than 12,000 fans were evacuated from a concert by American rapper Don Toliver and over 80 were treated by medics after an unknown irritant was released in the crowd, authorities in the English…",
+          "url": "https://www.france24.com/en/video/20261123-12-000-evacuated-from-don-toliver-concert-after-unknown-substance-sickens-fans",
+          "published_at": "2026-11-23T15:46:48Z",
+          "published_at_estimated": false,
+          "image_url": "https://s.france24.com/media/display/1342f74c-e754-11f1-9e59-1bac47ab2f5d/w:1024/p:16x9/minimanchester.jpg"
+        },
+        {
+          "id": "92ebdc8d3017",
+          "outlet_id": "sky",
+          "headline": "Rapper releases statement after 'unknown substance' sparks concert evacuation",
+          "snippet": "Rapper Don Toliver has postponed his O2 Arena gig this evening after an \"unknown substance\" sparked a mass evacuation at his concert in Manchester.",
+          "url": "https://news.sky.com/story/concertgoers-describe-distressing-scenes-as-manchesters-co-op-live-evacuated-due-to-major-incident-13615479",
+          "published_at": "2026-11-23T17:00:00Z",
+          "published_at_estimated": false,
+          "image_url": "https://e3.365dm.com/26/11/1920x1080/skynews-manchester-arena-police_7414125.jpg?20261123072232"
+        },
+        {
+          "id": "b9e2ef788aa1",
+          "outlet_id": "nyt",
+          "headline": "Don Toliver Concert in Manchester Is Evacuated Over ‘Unknown Substance’",
+          "snippet": "The American rapper was performing in Manchester on Sunday when people in the crowd began experiencing effects from the substance, prompting an emergency response.",
+          "url": "https://www.nytimes.com/2026/11/23/world/europe/manchester-don-toliver-concert-evacuation-uk.html",
+          "published_at": "2026-11-23T17:16:44Z",
+          "published_at_estimated": false,
+          "image_url": "https://static01.nyt.com/images/2026/11/23/multimedia/23xp-manchester-01-tfcg/23xp-manchester-01-tfcg-mediumSquareAt3X.jpg"
+        },
+        {
+          "id": "10bfcb4724aa",
+          "outlet_id": "dailymail",
+          "headline": "US rapper Don Toliver postpones O2 gig after 'unknown substance' released into crowd during Co-op Live arena performance",
+          "snippet": "The rapper was ushered off stage on Sunday night as thousands of fans were evacuated from the music venue Co-op Live in Manchester.",
+          "url": "https://www.dailymail.com/news/article-16315415/Don-Tolivers-gig-O2-rescheduled.html",
+          "published_at": "2026-11-23T17:35:51Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.dailymail.com/1s/2026/11/23/14/112667473-0-Mr_Toliver_pictured_in_June_He_is_midway_through_a_lengthy_tour_-a-9_1795445218735.jpg"
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "Thousands of concertgoers were evacuated after an unknown substance was released.",
+          "sources": [
+            "0c5c04739d72",
+            "17e56cd0086a",
+            "256d696dfebb",
+            "c3704e39b385",
+            "8bfe2d4dacce",
+            "92ebdc8d3017",
+            "b9e2ef788aa1",
+            "10bfcb4724aa"
+          ]
+        },
+        {
+          "text": "The concert was by American rapper Don Toliver in Manchester.",
+          "sources": [
+            "17e56cd0086a",
+            "256d696dfebb",
+            "c3704e39b385",
+            "8bfe2d4dacce",
+            "92ebdc8d3017",
+            "b9e2ef788aa1",
+            "10bfcb4724aa"
+          ]
+        },
+        {
+          "text": "The venue was the Co-op Live arena.",
+          "sources": [
+            "256d696dfebb",
+            "c3704e39b385",
+            "10bfcb4724aa"
+          ]
+        },
+        {
+          "text": "The incident happened on Sunday evening or night.",
+          "sources": [
+            "17e56cd0086a",
+            "256d696dfebb",
+            "b9e2ef788aa1",
+            "10bfcb4724aa"
+          ]
+        },
+        {
+          "text": "More than 12,000 attendees were evacuated.",
+          "sources": [
+            "256d696dfebb",
+            "8bfe2d4dacce"
+          ]
+        },
+        {
+          "text": "People in the crowd experienced effects from the substance.",
+          "sources": [
+            "0c5c04739d72",
+            "8bfe2d4dacce",
+            "b9e2ef788aa1"
+          ]
+        },
+        {
+          "text": "More than 80 people were treated; one report gives 88 treated plus a woman taken to hospital.",
+          "sources": [
+            "c3704e39b385",
+            "8bfe2d4dacce"
+          ]
+        },
+        {
+          "text": "The substance was suspected to be tear gas.",
+          "sources": [
+            "256d696dfebb",
+            "c3704e39b385"
+          ]
+        },
+        {
+          "text": "Don Toliver postponed a gig at the O2 Arena and issued a statement.",
+          "sources": [
+            "92ebdc8d3017",
+            "10bfcb4724aa",
+            "c3704e39b385"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "17e56cd0086a",
+              "quote": "Crowd evacuated from American rapper Don Toliver’s concert",
+              "field": "headline"
+            },
+            {
+              "article_id": "256d696dfebb",
+              "quote": "initially suspected to be tear gas",
+              "field": "snippet"
+            },
+            {
+              "article_id": "b9e2ef788aa1",
+              "quote": "prompting an emergency response",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the evacuation itself and the unidentified nature of the substance.",
+              "sources": [
+                "17e56cd0086a",
+                "256d696dfebb",
+                "b9e2ef788aa1"
+              ]
+            },
+            {
+              "text": "Notes the emergency response and the initial tear gas suspicion.",
+              "sources": [
+                "256d696dfebb",
+                "b9e2ef788aa1"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "8bfe2d4dacce",
+              "quote": "12,000 evacuated from Don Toliver concert after unknown substance sickens fans",
+              "field": "headline"
+            },
+            {
+              "article_id": "92ebdc8d3017",
+              "quote": "Rapper releases statement",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Foregrounds the scale of the evacuation and the number treated by medics.",
+              "sources": [
+                "8bfe2d4dacce"
+              ]
+            },
+            {
+              "text": "Leads with the rapper's statement and the postponement of his O2 Arena gig.",
+              "sources": [
+                "92ebdc8d3017"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "right",
+          "headline_quotes": [
+            {
+              "article_id": "c3704e39b385",
+              "quote": "Woman hospitalised & 88 others treated",
+              "field": "headline"
+            },
+            {
+              "article_id": "c3704e39b385",
+              "quote": "‘tear gas released in crowd’",
+              "field": "headline"
+            },
+            {
+              "article_id": "10bfcb4724aa",
+              "quote": "US rapper Don Toliver postpones O2 gig",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with casualties, including a woman taken to hospital, and suspected tear gas.",
+              "sources": [
+                "c3704e39b385"
+              ]
+            },
+            {
+              "text": "Foregrounds the postponed O2 gig and the rapper being ushered off stage.",
+              "sources": [
+                "10bfcb4724aa"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "left",
+          "text": "Left coverage does not mention the postponement of the O2 Arena gig.",
+          "sources": [
+            "92ebdc8d3017",
+            "10bfcb4724aa"
+          ]
+        },
+        {
+          "lean": "left",
+          "text": "Left coverage does not mention how many people were treated.",
+          "sources": [
+            "c3704e39b385",
+            "8bfe2d4dacce"
+          ]
+        },
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not mention the suspicion that the substance was tear gas.",
+          "sources": [
+            "256d696dfebb",
+            "c3704e39b385"
+          ]
+        },
+        {
+          "lean": "right",
+          "text": "Right coverage does not give the figure of more than 12,000 evacuated.",
+          "sources": [
+            "256d696dfebb",
+            "8bfe2d4dacce"
+          ]
+        }
+      ],
+      "contested_claims": [],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "17e56cd0086a",
+              "quote": "American rapper Don Toliver’s concert",
+              "field": "headline"
+            },
+            {
+              "article_id": "c3704e39b385",
+              "quote": "Woman hospitalised & 88 others treated",
+              "field": "headline"
+            },
+            {
+              "article_id": "10bfcb4724aa",
+              "quote": "postpones O2 gig",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Names the artist and venue, and reports casualties, suspected tear gas and the postponed gig.",
+              "sources": [
+                "17e56cd0086a",
+                "256d696dfebb",
+                "c3704e39b385",
+                "8bfe2d4dacce",
+                "92ebdc8d3017",
+                "10bfcb4724aa"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "0c5c04739d72",
+              "quote": "Thousands evacuated from UK concert",
+              "field": "headline"
+            },
+            {
+              "article_id": "0c5c04739d72",
+              "quote": "the UK’s largest indoor arena",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Describes the venue as the UK's largest indoor arena and cites police on people reporting side effects.",
+              "sources": [
+                "0c5c04739d72"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "Thousands of people were evacuated from American rapper Don Toliver's concert at Manchester's Co-op Live arena on Sunday after an unknown substance was released into the crowd. Some reports put the crowd at more than 12,000 and say over 80 people were treated. The rapper later postponed a gig at the O2 Arena.",
+        "sources": [
+          "0c5c04739d72",
+          "17e56cd0086a",
+          "256d696dfebb",
+          "c3704e39b385",
+          "8bfe2d4dacce",
+          "92ebdc8d3017",
+          "b9e2ef788aa1",
+          "10bfcb4724aa"
+        ]
+      },
+      "conclusion": null,
+      "validation": {
+        "kept": 35,
+        "dropped_by_reason": {
+          "untrusted_text": 1
+        }
+      }
+    },
+    {
+      "id": "cd71d29c6c72",
+      "title": "ICE arrests father and daughter at Seattle airport, prompting governor's criticism",
+      "rank": 6,
+      "outlet_count": 5,
+      "coverage": {
+        "lean": {
+          "left": 1,
+          "centre": 1,
+          "right": 0
+        },
+        "bloc": {
+          "west": 2,
+          "east": 3
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "81fc8cdaf218",
+          "outlet_id": "cgtn",
+          "headline": "Washington governor calls ICE 'out of control' after airport arrests",
+          "snippet": "",
+          "url": "https://news.cgtn.com/news/2026-11-22/Washington-governor-calls-ICE-out-of-control-after-airport-arrests-1ShwxAQ3xzq/p.html",
+          "published_at": "2026-11-22T13:35:56Z",
+          "published_at_estimated": false,
+          "image_url": "https://news.cgtn.com/news/2026-11-22/Washington-governor-calls-ICE-out-of-control-after-airport-arrests-1ShwxAQ3xzq/img/e9fb7bd3fd64482282c14e0eba1d00bc/e9fb7bd3fd64482282c14e0eba1d00bc-1920.png"
+        },
+        {
+          "id": "9832757456a9",
+          "outlet_id": "thehindu",
+          "headline": "Father, daughter detained by ICE at Seattle airport were travelling to family baptism, says lawyer",
+          "snippet": "Other passengers boarding the Alaska Airlines flight used their cellphones to film the father and daughter being detained by the officers, who were wearing unmarked jackets and khaki pants",
+          "url": "https://www.thehindu.com/news/international/father-daughter-detained-by-ice-at-seattle-airport-were-travelling-to-family-baptism-says-lawyer/article71733166.ece",
+          "published_at": "2026-11-23T00:07:05Z",
+          "published_at_estimated": false,
+          "image_url": "https://th-i.thgim.com/public/incoming/glvtsp/article71733169.ece/alternates/LANDSCAPE_1200/2026-11-22T055541Z_1391251710_RC2SSOA55U5R_RTRMADP_3_USA-IMMIGRATION-SEATTLE.JPG"
+        },
+        {
+          "id": "e2a37f199450",
+          "outlet_id": "france24",
+          "headline": "'Out of control': ICE agents make arrests at Seattle airport in 'horrific' scene",
+          "snippet": "The governor of Washington state called US federal immigration agents \"out of control\" after they arrested two people at Seattle's main airport on Saturday. ICE officers have conducted raids across…",
+          "url": "https://www.france24.com/en/video/20261123-out-of-control-ice-agents-make-arrests-at-seattle-airport-in-horrific-scene",
+          "published_at": "2026-11-23T12:11:43Z",
+          "published_at_estimated": false,
+          "image_url": "https://s.france24.com/media/display/c806d7ae-e734-11f1-a6ea-e56ab3dc0809/w:1024/p:16x9/miniice.jpg"
+        },
+        {
+          "id": "bff5f8d6d61f",
+          "outlet_id": "nbc",
+          "headline": "ICE Officers Arrest 2 Passenger Boarding Flight, Sparking Outrage",
+          "snippet": "Distressing video shows two passengers, a father and his adult daughter, being arrested while boarding a flight in Seattle over the weekend, with the masked agents forcibly removing them from the…",
+          "url": "https://www.today.com/video/video-shows-distressing-ice-arrests-of-father-and-daughter-274005061831",
+          "published_at": "2026-11-23T12:31:09Z",
+          "published_at_estimated": false,
+          "image_url": "https://media-cldnry.s-nbcnews.com/image/upload/t_fit_1500w/mpx/2704722219/2026_11/1795437064852_tdy_news_7a_dana_ice_arrest_261123_S3_1920x1080-5qgylx.jpg"
+        },
+        {
+          "id": "640c6f7bbd33",
+          "outlet_id": "toi",
+          "headline": "Who is Sofia Hernandez Mejia, the woman who allegedly hurled hot coffee on ICE officers to resist arrest at Seattle Airport? Indian-origin friend says 'she's someone I look up to'",
+          "snippet": "",
+          "url": "https://timesofindia.indiatimes.com/world/us/who-is-sofia-hernandez-mejia-the-woman-who-allegedly-hurled-hot-coffee-on-ice-officers-to-resist-arrest-at-seattle-airport-indian-origin-friend-says-shes-someone-i-look-up-to/articleshow/136107043.cms",
+          "published_at": "2026-11-23T15:10:03Z",
+          "published_at_estimated": false,
+          "image_url": "https://static.toiimg.com/photo/msid-136107292,imgsize-41524.cms"
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "ICE officers made arrests at Seattle's airport.",
+          "sources": [
+            "81fc8cdaf218",
+            "9832757456a9",
+            "e2a37f199450",
+            "bff5f8d6d61f",
+            "640c6f7bbd33"
+          ]
+        },
+        {
+          "text": "The two people arrested were a father and his daughter.",
+          "sources": [
+            "9832757456a9",
+            "bff5f8d6d61f"
+          ]
+        },
+        {
+          "text": "Washington's governor called ICE \"out of control\" after the arrests.",
+          "sources": [
+            "81fc8cdaf218",
+            "e2a37f199450"
+          ]
+        },
+        {
+          "text": "The arrests took place as passengers were boarding a flight and were captured on video.",
+          "sources": [
+            "9832757456a9",
+            "bff5f8d6d61f"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "bff5f8d6d61f",
+              "quote": "Sparking Outrage",
+              "field": "headline"
+            },
+            {
+              "article_id": "bff5f8d6d61f",
+              "quote": "Distressing video shows two passengers",
+              "field": "snippet"
+            },
+            {
+              "article_id": "bff5f8d6d61f",
+              "quote": "masked agents forcibly removing them",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the video of the arrests and the outrage it caused.",
+              "sources": [
+                "bff5f8d6d61f"
+              ]
+            },
+            {
+              "text": "Describes the agents as masked and as removing the pair forcibly.",
+              "sources": [
+                "bff5f8d6d61f"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "e2a37f199450",
+              "quote": "'Out of control'",
+              "field": "headline"
+            },
+            {
+              "article_id": "e2a37f199450",
+              "quote": "in 'horrific' scene",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the governor's description of the agents as \"out of control\".",
+              "sources": [
+                "e2a37f199450"
+              ]
+            },
+            {
+              "text": "Places the airport arrests alongside ICE raids conducted elsewhere.",
+              "sources": [
+                "e2a37f199450"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "left",
+          "text": "Left-leaning coverage does not mention the Washington governor's criticism of ICE.",
+          "sources": [
+            "e2a37f199450"
+          ]
+        },
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not mention that the two people arrested were a father and his adult daughter, or the video of the arrests.",
+          "sources": [
+            "bff5f8d6d61f"
+          ]
+        }
+      ],
+      "contested_claims": [],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "e2a37f199450",
+              "quote": "in 'horrific' scene",
+              "field": "headline"
+            },
+            {
+              "article_id": "bff5f8d6d61f",
+              "quote": "Sparking Outrage",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Foregrounds the reaction to the arrests: the governor's criticism, outrage and a \"horrific\" scene.",
+              "sources": [
+                "e2a37f199450",
+                "bff5f8d6d61f"
+              ]
+            },
+            {
+              "text": "Describes the agents as masked and as forcibly removing the passengers.",
+              "sources": [
+                "bff5f8d6d61f"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "81fc8cdaf218",
+              "quote": "Washington governor calls ICE 'out of control'",
+              "field": "headline"
+            },
+            {
+              "article_id": "9832757456a9",
+              "quote": "were travelling to family baptism, says lawyer",
+              "field": "headline"
+            },
+            {
+              "article_id": "640c6f7bbd33",
+              "quote": "allegedly hurled hot coffee on ICE officers to resist arrest",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Reports a lawyer's statement that the pair were travelling to a family baptism.",
+              "sources": [
+                "9832757456a9"
+              ]
+            },
+            {
+              "text": "Describes the officers as wearing unmarked jackets and khaki pants.",
+              "sources": [
+                "9832757456a9"
+              ]
+            },
+            {
+              "text": "Names the woman as Sofia Hernandez Mejia, reports an allegation she threw hot coffee on officers, and quotes a friend's praise of her.",
+              "sources": [
+                "640c6f7bbd33"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "ICE officers arrested two passengers, a father and his adult daughter, as they boarded a flight at Seattle's airport on Saturday. Other passengers filmed the arrests, and Washington's governor called the federal immigration agents \"out of control\".",
+        "sources": [
+          "81fc8cdaf218",
+          "9832757456a9",
+          "e2a37f199450",
+          "bff5f8d6d61f"
+        ]
+      },
+      "conclusion": {
+        "text": "Coverage agrees ICE arrested a father and daughter at Seattle's airport and that the governor called ICE \"out of control\". Western outlets lead with the video, masked agents and outrage; Eastern outlets add a lawyer's account of a baptism trip and an allegation that the woman threw coffee at officers. No outlet disputes another's account.",
+        "sources": [
+          "81fc8cdaf218",
+          "9832757456a9",
+          "e2a37f199450",
+          "bff5f8d6d61f",
+          "640c6f7bbd33"
+        ]
+      },
+      "validation": {
+        "kept": 27,
+        "dropped_by_reason": {}
+      }
+    },
+    {
+      "id": "345198f6846d",
+      "title": "Israeli leaders condemn settler attacks on West Bank villages as terrorism",
+      "rank": 7,
+      "outlet_count": 5,
+      "coverage": {
+        "lean": {
+          "left": 3,
+          "centre": 0,
+          "right": 0
+        },
+        "bloc": {
+          "west": 3,
+          "east": 2
+        }
+      },
+      "blindspot": {
+        "lean": "left",
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "2011c2ad372e",
+          "outlet_id": "guardian",
+          "headline": "Netanyahu rival condemns ‘Jewish terrorism’ after settler attacks on Palestinian villages",
+          "snippet": "Dozens of militant Israeli settlers raided communities on Saturday night, setting fire to vehicles and several homes Arson attacks by militant Israeli settlers on Palestinian villages in the…",
+          "url": "https://www.theguardian.com/world/2026/nov/22/netanyahu-rival-condemns-settler-arson-attacks-palestinian-villages-west-bank",
+          "published_at": "2026-11-22T15:22:38Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.guim.co.uk/img/media/efe4dd70505bfcec6b5ab71dc65a3481bf1215d9/1004_0_6827_5464/master/6827.jpg?width=460&quality=85&auto=format&fit=max&s=c59f4ac1bf8f79ac9d862c6ad4acd806"
+        },
+        {
+          "id": "2ec9a743f601",
+          "outlet_id": "huffpost",
+          "headline": "Israel's Eisenkot Condemns Settler Attacks In West Bank As 'Jewish Terrorism'",
+          "snippet": "The Israeli militant settlers’ attacks on Palestinian villages come as the opposition leader is asked to form a government.",
+          "url": "https://www.huffpost.com/entry/israel-eisenkot-condemns-settler-attacks-west-bank-terrorism_n_6b0321dee4b0edd18edf52c4",
+          "published_at": "2026-11-22T17:24:08Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "faf7c6847d05",
+          "outlet_id": "thehindu",
+          "headline": "Israel’s Eisenkot condemns arson attacks by Jewish settlers in West Bank",
+          "snippet": "Gadi Eisenkot called the attacks ‘Jewish terrorism’, saying that ‘extremist groups that set ⁠fire to vehicles and homes are undermining regional stability, putting lives at risk and doing grave…",
+          "url": "https://www.thehindu.com/news/international/israels-eisenkot-condemns-arson-attacks-by-jewish-settlers-in-west-bank/article71732544.ece",
+          "published_at": "2026-11-22T22:02:28Z",
+          "published_at_estimated": false,
+          "image_url": "https://th-i.thgim.com/public/incoming/qxpda3/article71732548.ece/alternates/LANDSCAPE_1200/2026-11-17T132413Z_1399649141_RC2OPOA2Q1HS_RTRMADP_3_ISRAEL-POLITICS.JPG"
+        },
+        {
+          "id": "f7d6e627c7bf",
+          "outlet_id": "timesofisrael",
+          "headline": "Herzog says settler violence ‘an assault on God himself’; Bennett blasts ‘Jewish terror’",
+          "snippet": "Israeli leaders differ over how to curb extremist attacks on Palestinians; Katz insists police must take responsibility, as IDF official warns of regional fallout",
+          "url": "https://www.timesofisrael.com/herzog-says-settler-violence-an-assault-on-god-himself-bennett-blasts-jewish-terror/",
+          "published_at": "2026-11-23T14:08:13Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "ad7c311c8101",
+          "outlet_id": "nyt",
+          "headline": "Israeli Political Leaders Denounce ‘Jewish Terrorism’ After West Bank Attacks",
+          "snippet": "Extremist settlers carried out a spate of violent raids in Palestinian villages over the weekend, spurring opponents of the Netanyahu government to demand a forceful response.",
+          "url": "https://www.nytimes.com/2026/11/22/world/middleeast/israeli-political-leaders-decry-jewish-terrorism-after-west-bank-attacks.html",
+          "published_at": "2026-11-23T17:15:17Z",
+          "published_at_estimated": false,
+          "image_url": "https://static01.nyt.com/images/2026/11/22/multimedia/22int-westbank-settler-violence01-photo-vqmk/22int-westbank-settler-violence01-photo-vqmk-mediumSquareAt3X.jpg"
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "Israeli settlers carried out attacks on Palestinian villages in the West Bank.",
+          "sources": [
+            "2011c2ad372e",
+            "2ec9a743f601",
+            "faf7c6847d05",
+            "f7d6e627c7bf",
+            "ad7c311c8101"
+          ]
+        },
+        {
+          "text": "Israeli political figures described the attacks as Jewish terrorism or Jewish terror.",
+          "sources": [
+            "2011c2ad372e",
+            "2ec9a743f601",
+            "faf7c6847d05",
+            "f7d6e627c7bf",
+            "ad7c311c8101"
+          ]
+        },
+        {
+          "text": "Gadi Eisenkot condemned the attacks as ‘Jewish terrorism’.",
+          "sources": [
+            "2ec9a743f601",
+            "faf7c6847d05"
+          ]
+        },
+        {
+          "text": "The attackers set fire to vehicles and homes.",
+          "sources": [
+            "2011c2ad372e",
+            "faf7c6847d05"
+          ]
+        },
+        {
+          "text": "The attacks took place over the weekend.",
+          "sources": [
+            "2011c2ad372e",
+            "ad7c311c8101"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "2011c2ad372e",
+              "quote": "Netanyahu rival condemns ‘Jewish terrorism’",
+              "field": "headline"
+            },
+            {
+              "article_id": "2ec9a743f601",
+              "quote": "as the opposition leader is asked to form a government",
+              "field": "snippet"
+            },
+            {
+              "article_id": "ad7c311c8101",
+              "quote": "spurring opponents of the Netanyahu government to demand a forceful response",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with condemnation coming from political opponents of Netanyahu and his government.",
+              "sources": [
+                "2011c2ad372e",
+                "2ec9a743f601",
+                "ad7c311c8101"
+              ]
+            },
+            {
+              "text": "Places the attacks in the context of the opposition leader being asked to form a government.",
+              "sources": [
+                "2ec9a743f601"
+              ]
+            },
+            {
+              "text": "Describes the settlers as militant or extremist and the raids as a spate of violent attacks.",
+              "sources": [
+                "2011c2ad372e",
+                "ad7c311c8101"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [],
+      "contested_claims": [],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "2011c2ad372e",
+              "quote": "Netanyahu rival condemns ‘Jewish terrorism’",
+              "field": "headline"
+            },
+            {
+              "article_id": "ad7c311c8101",
+              "quote": "Israeli Political Leaders Denounce ‘Jewish Terrorism’ After West Bank Attacks",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Foregrounds condemnation by Netanyahu's rivals and opponents and their demand for a forceful response.",
+              "sources": [
+                "2011c2ad372e",
+                "2ec9a743f601",
+                "ad7c311c8101"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "faf7c6847d05",
+              "quote": "undermining regional stability, putting lives at risk",
+              "field": "snippet"
+            },
+            {
+              "article_id": "f7d6e627c7bf",
+              "quote": "an assault on God himself",
+              "field": "headline"
+            },
+            {
+              "article_id": "f7d6e627c7bf",
+              "quote": "Israeli leaders differ over how to curb extremist attacks on Palestinians",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Highlights warnings that the attacks threaten regional stability, including an IDF official warning of regional fallout.",
+              "sources": [
+                "faf7c6847d05",
+                "f7d6e627c7bf"
+              ]
+            },
+            {
+              "text": "Reports a range of leaders' responses, including Herzog, Bennett and Katz, and their differences over how to curb the attacks.",
+              "sources": [
+                "f7d6e627c7bf"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "Militant Israeli settlers raided Palestinian villages in the West Bank over the weekend, setting fire to vehicles and homes. Israeli political figures, including Gadi Eisenkot and Naftali Bennett, condemned the attacks as ‘Jewish terrorism’.",
+        "sources": [
+          "2011c2ad372e",
+          "2ec9a743f601",
+          "faf7c6847d05",
+          "f7d6e627c7bf",
+          "ad7c311c8101"
+        ]
+      },
+      "conclusion": {
+        "text": "All outlets report settler attacks on Palestinian villages and their condemnation by Israeli leaders as Jewish terrorism. Western left-leaning outlets frame it around Netanyahu's opponents and coalition politics, while Eastern outlets foreground regional stability and differences among leaders over a response. No contradictions appear.",
+        "sources": [
+          "2011c2ad372e",
+          "2ec9a743f601",
+          "ad7c311c8101",
+          "faf7c6847d05",
+          "f7d6e627c7bf"
+        ]
+      },
+      "validation": {
+        "kept": 21,
+        "dropped_by_reason": {}
+      }
+    },
+    {
+      "id": "566678478275",
+      "title": "DNC announces 12 debates and rules for 2028 presidential primary",
+      "rank": 8,
+      "outlet_count": 4,
+      "coverage": {
+        "lean": {
+          "left": 2,
+          "centre": 1,
+          "right": 1
+        },
+        "bloc": {
+          "west": 4,
+          "east": 0
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": "west"
+      },
+      "articles": [
+        {
+          "id": "a322bb630722",
+          "outlet_id": "axios",
+          "headline": "DNC limits 2028 primary candidates' ties to big-money groups",
+          "snippet": "Democratic National Committee chair Ken Martin is moving to restrict candidates' ties to super PACs and dark-money groups in the party's 2028 presidential primary, a shift that could shake up the…",
+          "url": "https://www.axios.com/2026/11/23/dnc-super-pacs-limits-2028-primary",
+          "published_at": "2026-11-23T10:00:11Z",
+          "published_at_estimated": false,
+          "image_url": "https://images.axios.com/-YG-_ZYjmk_WFclEFymL37DRuN4=/0x0:1920x1080/1366x768/2026/11/22/1795373825969.jpg"
+        },
+        {
+          "id": "30b0cb4c8d13",
+          "outlet_id": "nbc",
+          "headline": "Democratic National Committee sets broad rules for the party’s 2028 presidential debates",
+          "snippet": "The Democratic National Committee will hold 12 debates next year and in 2028 for candidates seeking the party’s presidential nomination, the party announced, as it sets rules of the road for what’s…",
+          "url": "https://www.nbcnews.com/politics/2028-election/democratic-national-committee-sets-broad-rules-partys-2028-presidentia-rcna610439",
+          "published_at": "2026-11-23T10:00:40Z",
+          "published_at_estimated": false,
+          "image_url": "https://media-cldnry.s-nbcnews.com/image/upload/t_fit_1500w/rockcms/2026-11/261120-2020-DNC-debate-bf-1328-c422e9.jpg"
+        },
+        {
+          "id": "4e2d5c836bdd",
+          "outlet_id": "nypost",
+          "headline": "Democrats announce plan for 12 debates in 2028 primary",
+          "snippet": "Call it the dreary dozen.",
+          "url": "https://nypost.com/2026/11/23/us-news/democrats-announce-plan-for-12-debates-in-2028-primary/",
+          "published_at": "2026-11-23T13:39:02Z",
+          "published_at_estimated": false,
+          "image_url": "https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2Fcrop-42057498.jpg?quality%3D90%26strip%3Dall"
+        },
+        {
+          "id": "a2607b7f626c",
+          "outlet_id": "guardian",
+          "headline": "Democrats to hold a dozen 2028 presidential primary debates starting in June",
+          "snippet": "DNC unveils plans to hold 12 primary debates over 10 months, allowing up to 20 candidates to participate The Democratic National Committee (DNC) unveiled on Monday its plans to hold a dozen 2028…",
+          "url": "https://www.theguardian.com/us-news/2026/nov/23/dnc-democrats-presidential-primary-debates",
+          "published_at": "2026-11-23T17:07:55Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.guim.co.uk/img/media/5a444acc6109dc445787853c686acd301112ee14/1945_890_3917_3134/master/3917.jpg?width=460&quality=85&auto=format&fit=max&s=d2a2530417409c7e3121fd9bc8481848"
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "The Democratic National Committee plans to hold 12 debates in the 2028 presidential primary.",
+          "sources": [
+            "30b0cb4c8d13",
+            "4e2d5c836bdd",
+            "a2607b7f626c"
+          ]
+        },
+        {
+          "text": "The DNC is setting rules for the party's 2028 presidential primary contest.",
+          "sources": [
+            "30b0cb4c8d13",
+            "a322bb630722",
+            "a2607b7f626c"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "30b0cb4c8d13",
+              "quote": "sets broad rules for the party’s 2028 presidential debates",
+              "field": "headline"
+            },
+            {
+              "article_id": "a2607b7f626c",
+              "quote": "allowing up to 20 candidates to participate",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the debate schedule and its logistics: 12 debates over 10 months starting in June, next year and in 2028.",
+              "sources": [
+                "30b0cb4c8d13",
+                "a2607b7f626c"
+              ]
+            },
+            {
+              "text": "Notes that up to 20 candidates may participate in the debates.",
+              "sources": [
+                "a2607b7f626c"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "a322bb630722",
+              "quote": "DNC limits 2028 primary candidates' ties to big-money groups",
+              "field": "headline"
+            },
+            {
+              "article_id": "a322bb630722",
+              "quote": "restrict candidates' ties to super PACs and dark-money groups",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with DNC chair Ken Martin's move to restrict candidates' ties to super PACs and dark-money groups, describing it as a shift that could shake up the race.",
+              "sources": [
+                "a322bb630722"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "right",
+          "headline_quotes": [
+            {
+              "article_id": "4e2d5c836bdd",
+              "quote": "Call it the dreary dozen.",
+              "field": "snippet"
+            },
+            {
+              "article_id": "4e2d5c836bdd",
+              "quote": "Democrats announce plan for 12 debates in 2028 primary",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Reports the 12-debate plan and describes it as \"the dreary dozen\".",
+              "sources": [
+                "4e2d5c836bdd"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "left",
+          "text": "Left coverage does not mention the DNC's move to restrict candidates' ties to super PACs and dark-money groups.",
+          "sources": [
+            "a322bb630722"
+          ]
+        },
+        {
+          "lean": "right",
+          "text": "Right coverage does not mention the DNC's move to restrict candidates' ties to super PACs and dark-money groups.",
+          "sources": [
+            "a322bb630722"
+          ]
+        },
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not mention the plan to hold 12 primary debates.",
+          "sources": [
+            "30b0cb4c8d13",
+            "4e2d5c836bdd",
+            "a2607b7f626c"
+          ]
+        }
+      ],
+      "contested_claims": [],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "a2607b7f626c",
+              "quote": "Democrats to hold a dozen 2028 presidential primary debates starting in June",
+              "field": "headline"
+            },
+            {
+              "article_id": "a322bb630722",
+              "quote": "DNC limits 2028 primary candidates' ties to big-money groups",
+              "field": "headline"
+            },
+            {
+              "article_id": "4e2d5c836bdd",
+              "quote": "Call it the dreary dozen.",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Most coverage leads with the 12-debate schedule, while one outlet leads with limits on ties to super PACs and dark-money groups.",
+              "sources": [
+                "30b0cb4c8d13",
+                "4e2d5c836bdd",
+                "a2607b7f626c",
+                "a322bb630722"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "The Democratic National Committee announced it will hold 12 debates next year and in 2028 for candidates seeking its presidential nomination, starting in June over 10 months and allowing up to 20 candidates. DNC chair Ken Martin is also moving to restrict candidates' ties to super PACs and dark-money groups.",
+        "sources": [
+          "30b0cb4c8d13",
+          "4e2d5c836bdd",
+          "a2607b7f626c",
+          "a322bb630722"
+        ]
+      },
+      "conclusion": {
+        "text": "Coverage agrees the DNC is setting rules for its 2028 primary, with three outlets reporting 12 debates. Left outlets focus on debate logistics, the centre outlet on limits to super PAC and dark-money ties, and the right outlet calls the plan \"the dreary dozen\". No outlet disputes another's facts.",
+        "sources": [
+          "30b0cb4c8d13",
+          "a2607b7f626c",
+          "a322bb630722",
+          "4e2d5c836bdd"
+        ]
+      },
+      "validation": {
+        "kept": 21,
+        "dropped_by_reason": {}
+      }
+    },
+    {
+      "id": "0d0a765fc4ac",
+      "title": "South Korea's education minister resigns over AI exam cheating measures",
+      "rank": 9,
+      "outlet_count": 4,
+      "coverage": {
+        "lean": {
+          "left": 2,
+          "centre": 1,
+          "right": 0
+        },
+        "bloc": {
+          "west": 3,
+          "east": 1
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "a6462ca3f9d1",
+          "outlet_id": "nyt",
+          "headline": "South Korea’s Education Minister Resigns Over Anti-A.I. Cheating Rules",
+          "snippet": "Two days before South Korea’s college entrance exam, new measures were announced, including loud phone alerts and eyeglass inspections. Public backlash came fast.",
+          "url": "https://www.nytimes.com/2026/11/22/world/asia/korea-csat-exam-ai-cheating.html",
+          "published_at": "2026-11-22T08:35:05Z",
+          "published_at_estimated": false,
+          "image_url": "https://static01.nyt.com/images/2026/11/22/multimedia/22skorea-exam-wfpv/22skorea-exam-wfpv-mediumSquareAt3X.jpg"
+        },
+        {
+          "id": "b968f25f891f",
+          "outlet_id": "bbc",
+          "headline": "South Korea education minister resigns over exam cheating scandal",
+          "snippet": "Choi Kyo-jin admits last-minute measures to stop AI-assisted cheating during the college entrance exam caused chaos.",
+          "url": "https://www.bbc.co.uk/news/articles/cw3dgk29d37no",
+          "published_at": "2026-11-22T09:20:45Z",
+          "published_at_estimated": false,
+          "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/dc28/live/9c42c760-e66a-11f1-99b6-a35a62fa4264.jpg"
+        },
+        {
+          "id": "f048b1ac4b65",
+          "outlet_id": "guardian",
+          "headline": "South Korean minister quits after AI cheating scandal engulfs university exams",
+          "snippet": "Choi Kyo-jin says he ‘failed to prepare adequately’ for entrance exams following last-minute scramble to tighten measures South Korea’s education minister has resigned after an AI-assisted cheating…",
+          "url": "https://www.theguardian.com/world/2026/nov/22/south-korea-education-minister-resigns-after-ai-cheating-scandal-engulfs-university-exams",
+          "published_at": "2026-11-22T12:12:07Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.guim.co.uk/img/media/3d9052371f434580f71c25a962110e47f2e6a076/605_0_6228_4986/master/6228.jpg?width=460&quality=85&auto=format&fit=max&s=487148910404a1260629cd6617c05c2c"
+        },
+        {
+          "id": "37a796fab017",
+          "outlet_id": "scmp",
+          "headline": "South Korea’s education chief has gone. Its AI exam headache has not",
+          "snippet": "South Korea’s education minister resigned on Sunday days after the country’s national university entrance exam took place, in a move analysts see as an attempt to contain the fallout from a row over…",
+          "url": "https://www.scmp.com/week-asia/politics/article/3375480/south-koreas-education-chief-has-gone-its-ai-exam-headache-has-not",
+          "published_at": "2026-11-23T09:29:42Z",
+          "published_at_estimated": false,
+          "image_url": "https://cdn.i-scmp.com/sites/default/files/styles/1280x720/public/d8/images/canvas/2026/11/23/b73594ed-60f6-4009-8632-06128712491f_a5167525.jpg?itok=nUmbm2m3&v=1795425224"
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "South Korea's education minister has resigned.",
+          "sources": [
+            "a6462ca3f9d1",
+            "b968f25f891f",
+            "f048b1ac4b65",
+            "37a796fab017"
+          ]
+        },
+        {
+          "text": "The resignation is linked to AI-related cheating and the national university entrance exam.",
+          "sources": [
+            "a6462ca3f9d1",
+            "b968f25f891f",
+            "f048b1ac4b65",
+            "37a796fab017"
+          ]
+        },
+        {
+          "text": "The minister is Choi Kyo-jin.",
+          "sources": [
+            "b968f25f891f",
+            "f048b1ac4b65"
+          ]
+        },
+        {
+          "text": "The anti-cheating measures were introduced at the last minute before the exam.",
+          "sources": [
+            "a6462ca3f9d1",
+            "b968f25f891f",
+            "f048b1ac4b65"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "a6462ca3f9d1",
+              "quote": "including loud phone alerts and eyeglass inspections",
+              "field": "snippet"
+            },
+            {
+              "article_id": "a6462ca3f9d1",
+              "quote": "Public backlash came fast.",
+              "field": "snippet"
+            },
+            {
+              "article_id": "f048b1ac4b65",
+              "quote": "AI cheating scandal engulfs university exams",
+              "field": "headline"
+            },
+            {
+              "article_id": "f048b1ac4b65",
+              "quote": "‘failed to prepare adequately’",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Details the specific measures announced two days before the exam and the swift public backlash.",
+              "sources": [
+                "a6462ca3f9d1"
+              ]
+            },
+            {
+              "text": "Leads with Choi's admission that he failed to prepare adequately amid a last-minute scramble.",
+              "sources": [
+                "f048b1ac4b65"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "b968f25f891f",
+              "quote": "resigns over exam cheating scandal",
+              "field": "headline"
+            },
+            {
+              "article_id": "b968f25f891f",
+              "quote": "caused chaos",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Foregrounds Choi's admission that the last-minute measures caused chaos during the exam.",
+              "sources": [
+                "b968f25f891f"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not mention the specific measures, such as loud phone alerts and eyeglass inspections, or the public backlash.",
+          "sources": [
+            "a6462ca3f9d1"
+          ]
+        }
+      ],
+      "contested_claims": [],
+      "opinion": [
+        {
+          "text": "Analysts cited by the South China Morning Post see the resignation as an attempt to contain the fallout from the row.",
+          "sources": [
+            "37a796fab017"
+          ]
+        },
+        {
+          "text": "The South China Morning Post headline frames the AI exam problem as persisting after the minister's departure.",
+          "sources": [
+            "37a796fab017"
+          ]
+        }
+      ],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "a6462ca3f9d1",
+              "quote": "Resigns Over Anti-A.I. Cheating Rules",
+              "field": "headline"
+            },
+            {
+              "article_id": "b968f25f891f",
+              "quote": "caused chaos",
+              "field": "snippet"
+            },
+            {
+              "article_id": "f048b1ac4b65",
+              "quote": "last-minute scramble to tighten measures",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Focuses on the last-minute anti-cheating measures, the resulting disruption and the minister's admission of failure.",
+              "sources": [
+                "a6462ca3f9d1",
+                "b968f25f891f",
+                "f048b1ac4b65"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "37a796fab017",
+              "quote": "Its AI exam headache has not",
+              "field": "headline"
+            },
+            {
+              "article_id": "37a796fab017",
+              "quote": "an attempt to contain the fallout",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Emphasises that the underlying AI exam problem remains and reports analysts' view of the resignation as damage containment.",
+              "sources": [
+                "37a796fab017"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "South Korea's education minister, Choi Kyo-jin, has resigned after last-minute measures to stop AI-assisted cheating in the national college entrance exam. The measures, including loud phone alerts and eyeglass inspections, drew a public backlash, and Choi admitted they caused chaos.",
+        "sources": [
+          "a6462ca3f9d1",
+          "b968f25f891f",
+          "f048b1ac4b65",
+          "37a796fab017"
+        ]
+      },
+      "conclusion": null,
+      "validation": {
+        "kept": 24,
+        "dropped_by_reason": {
+          "untrusted_text": 1
+        }
+      }
+    },
+    {
+      "id": "4b76d3ffac1c",
+      "title": "Russian strike on apartment building in Dymer, Kyiv region, kills residents",
+      "rank": 10,
+      "outlet_count": 4,
+      "coverage": {
+        "lean": {
+          "left": 1,
+          "centre": 1,
+          "right": 0
+        },
+        "bloc": {
+          "west": 2,
+          "east": 2
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "dae2c8282e5e",
+          "outlet_id": "moscowtimes",
+          "headline": "At Least 4 Killed in Russian Drone Attacks on Kyiv Region, Officials Say",
+          "snippet": "At least four people were killed in Russian drone attacks on Ukraine's Kyiv region on Sunday, President Volodymyr Zelensky and local officials said.",
+          "url": "https://www.themoscowtimes.com/2026/11/22/at-least-4-killed-in-russian-drone-attacks-on-kyiv-region-officials-say-a94345",
+          "published_at": "2026-11-22T16:07:14Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "0ec20c9cbc8e",
+          "outlet_id": "thehindu",
+          "headline": "Russian attack near Ukraine’s capital strikes apartment building, killing two and wounding four others",
+          "snippet": "Rescuers evacuated nine people, including a child, from the destroyed five-storey building in Dymer, while 11 were believed to be trapped under the rubble",
+          "url": "https://www.thehindu.com/news/international/a-russian-attack-destroyed-an-apartment-building-in-dymer-near-kyiv-killing-two-as-kaliningrad-sounded-a-rare-air-alert/article71731042.ece",
+          "published_at": "2026-11-22T17:30:27Z",
+          "published_at_estimated": false,
+          "image_url": "https://th-i.thgim.com/public/incoming/aquemx/article71731081.ece/alternates/LANDSCAPE_1200/Russia_Ukraine_War_44754.jpg"
+        },
+        {
+          "id": "6ba19d1ea60d",
+          "outlet_id": "bbc",
+          "headline": "'Danger seems greater all the time': Ukrainians search for missing after Russian strikes",
+          "snippet": "The BBC's Sarah Rainsford reports from the scene of a collapsed residential building in Ukraine's Kyiv region.",
+          "url": "https://www.bbc.co.uk/news/videos/cre3dvd1k9y1o",
+          "published_at": "2026-11-22T22:37:43Z",
+          "published_at_estimated": false,
+          "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/f57f/live/25f17b40-e69e-11f1-9d9b-5dad4444a651.jpg"
+        },
+        {
+          "id": "ad07390a9e0b",
+          "outlet_id": "bbc",
+          "headline": "Boy, 7, pulled alive from rubble hours after Russian strike on Ukraine, rescuers say",
+          "snippet": "Eleven people are dead in the attack on Dymer, with rescue efforts ongoing to find those still missing from the residential building.",
+          "url": "https://www.bbc.co.uk/news/articles/cqdr15l32d3go",
+          "published_at": "2026-11-23T05:33:17Z",
+          "published_at_estimated": false,
+          "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/cce0/live/b754c730-e6bd-11f1-a023-d502158f79f8.jpg"
+        },
+        {
+          "id": "1f93481a9355",
+          "outlet_id": "thehindu",
+          "headline": "Ukraine says Russian strikes kill 15 in Kyiv region",
+          "snippet": "Moscow has been pummelling Ukraine with nightly aerial barrages as the war-torn country braces for another winter, as the full-scale invasion grinds through its fifth year",
+          "url": "https://www.thehindu.com/news/international/ukraine-says-russian-strikes-kill-several-in-kyiv-region/article71733677.ece",
+          "published_at": "2026-11-23T06:32:17Z",
+          "published_at_estimated": false,
+          "image_url": "https://th-i.thgim.com/public/incoming/lg4y51/article71733682.ece/alternates/LANDSCAPE_1200/2026-11-23T055724Z_1498102462_RC2HTOAQ6SYC_RTRMADP_3_UKRAINE-CRISIS-ATTACK-KYIV-REGION.JPG"
+        },
+        {
+          "id": "e4e1593c5b3d",
+          "outlet_id": "mirror",
+          "headline": "Fifteen killed in Russian revenge attack as Ukraine blasts four Russian ships",
+          "snippet": "A seven-year-old boy was rescued after spending 14 hours trapped beneath the rubble, as families are still desperately waiting for news of missing loved ones. The attack follows on from a series of…",
+          "url": "https://www.mirror.co.uk/news/world-news/russian-ukraine-kyiv-strikes-deaths-37905316",
+          "published_at": "2026-11-23T09:59:57Z",
+          "published_at_estimated": false,
+          "image_url": "https://i2-prod.mirror.co.uk/incoming/article37905321.ece/ALTERNATES/s615/0_Russia-Ukraine-War-26327295960866.jpg"
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "Russian strikes hit Ukraine's Kyiv region, killing people.",
+          "sources": [
+            "dae2c8282e5e",
+            "0ec20c9cbc8e",
+            "6ba19d1ea60d",
+            "ad07390a9e0b",
+            "1f93481a9355",
+            "e4e1593c5b3d"
+          ]
+        },
+        {
+          "text": "A residential building in Dymer was struck and collapsed or was destroyed.",
+          "sources": [
+            "0ec20c9cbc8e",
+            "6ba19d1ea60d",
+            "ad07390a9e0b"
+          ]
+        },
+        {
+          "text": "A seven-year-old boy was rescued alive from the rubble hours after the strike.",
+          "sources": [
+            "ad07390a9e0b",
+            "e4e1593c5b3d"
+          ]
+        },
+        {
+          "text": "Search efforts continued for people still missing or trapped under the rubble.",
+          "sources": [
+            "0ec20c9cbc8e",
+            "6ba19d1ea60d",
+            "ad07390a9e0b",
+            "e4e1593c5b3d"
+          ]
+        },
+        {
+          "text": "Later reports put the death toll at 15.",
+          "sources": [
+            "1f93481a9355",
+            "e4e1593c5b3d"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "e4e1593c5b3d",
+              "quote": "Fifteen killed in Russian revenge attack as Ukraine blasts four Russian ships",
+              "field": "headline"
+            },
+            {
+              "article_id": "e4e1593c5b3d",
+              "quote": "families are still desperately waiting for news of missing loved ones",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Describes the strike as a Russian revenge attack and links it to Ukraine hitting four Russian ships.",
+              "sources": [
+                "e4e1593c5b3d"
+              ]
+            },
+            {
+              "text": "Foregrounds the boy trapped for 14 hours and families awaiting news of the missing.",
+              "sources": [
+                "e4e1593c5b3d"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "6ba19d1ea60d",
+              "quote": "'Danger seems greater all the time': Ukrainians search for missing after Russian strikes",
+              "field": "headline"
+            },
+            {
+              "article_id": "ad07390a9e0b",
+              "quote": "Boy, 7, pulled alive from rubble hours after Russian strike on Ukraine, rescuers say",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with on-the-scene reporting from the collapsed building and residents' sense of danger.",
+              "sources": [
+                "6ba19d1ea60d"
+              ]
+            },
+            {
+              "text": "Foregrounds the rescue of the boy and gives a toll of eleven dead with the search ongoing.",
+              "sources": [
+                "ad07390a9e0b"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not mention Ukraine striking four Russian ships or describe the attack as revenge.",
+          "sources": [
+            "e4e1593c5b3d"
+          ]
+        },
+        {
+          "lean": "left",
+          "text": "Left coverage does not name Dymer as the location of the struck building.",
+          "sources": [
+            "ad07390a9e0b",
+            "0ec20c9cbc8e"
+          ]
+        }
+      ],
+      "contested_claims": [],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "6ba19d1ea60d",
+              "quote": "Ukrainians search for missing after Russian strikes",
+              "field": "headline"
+            },
+            {
+              "article_id": "e4e1593c5b3d",
+              "quote": "Russian revenge attack",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Foregrounds the human side: the search for the missing, the rescued boy and waiting families.",
+              "sources": [
+                "6ba19d1ea60d",
+                "ad07390a9e0b",
+                "e4e1593c5b3d"
+              ]
+            },
+            {
+              "text": "One article links the strike to Ukraine hitting four Russian ships.",
+              "sources": [
+                "e4e1593c5b3d"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "dae2c8282e5e",
+              "quote": "At Least 4 Killed in Russian Drone Attacks on Kyiv Region, Officials Say",
+              "field": "headline"
+            },
+            {
+              "article_id": "1f93481a9355",
+              "quote": "Moscow has been pummelling Ukraine with nightly aerial barrages",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Attributes casualty figures to Zelensky, Ukrainian officials or Ukraine.",
+              "sources": [
+                "dae2c8282e5e",
+                "1f93481a9355"
+              ]
+            },
+            {
+              "text": "Details the rescue: nine evacuated, including a child, and 11 believed trapped.",
+              "sources": [
+                "0ec20c9cbc8e"
+              ]
+            },
+            {
+              "text": "Places the strike within nightly barrages ahead of winter and the invasion's fifth year.",
+              "sources": [
+                "1f93481a9355"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "Russian strikes on Ukraine's Kyiv region hit a five-storey residential building in Dymer, with reported death tolls rising from at least two or four to 15 over successive reports. A seven-year-old boy was pulled alive from the rubble as rescuers searched for the missing.",
+        "sources": [
+          "dae2c8282e5e",
+          "0ec20c9cbc8e",
+          "6ba19d1ea60d",
+          "ad07390a9e0b",
+          "1f93481a9355",
+          "e4e1593c5b3d"
+        ]
+      },
+      "conclusion": {
+        "text": "All coverage reports deadly Russian strikes on the Kyiv region, with tolls rising across reports to 15. Western outlets foreground the rescue and the missing, with the left linking the attack to Ukraine's strike on Russian ships; Eastern outlets attribute figures to Ukrainian officials and add war context. No contradictions appear between blocs.",
+        "sources": [
+          "dae2c8282e5e",
+          "0ec20c9cbc8e",
+          "6ba19d1ea60d",
+          "ad07390a9e0b",
+          "1f93481a9355",
+          "e4e1593c5b3d"
+        ]
+      },
+      "validation": {
+        "kept": 26,
+        "dropped_by_reason": {}
+      }
+    }
+  ]
+}
