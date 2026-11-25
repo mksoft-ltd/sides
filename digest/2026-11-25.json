@@ -1,0 +1,4301 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-11-25T17:01:00.965981Z",
+  "date": "2026-11-25",
+  "meta": {
+    "model": "claude-opus-5-5",
+    "cost_usd": 0.714456,
+    "outlets_polled": 29,
+    "articles_collected": 707,
+    "warnings": [
+      "1 feed item(s) dropped at collect (link_off_domain=1)"
+    ],
+    "validation": {
+      "kept": 310,
+      "dropped_by_reason": {
+        "title_ungrounded": 1,
+        "contested_same_outlet": 1,
+        "untrusted_text": 1
+      }
+    }
+  },
+  "outlets": [
+    {
+      "id": "guardian",
+      "name": "The Guardian",
+      "lean": "left",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United Kingdom",
+      "home_url": "https://www.theguardian.com/",
+      "rating_basis": "AllSides media bias rating (Lean Left), checked Oct 2026"
+    },
+    {
+      "id": "independent",
+      "name": "The Independent",
+      "lean": "left",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United Kingdom",
+      "home_url": "https://www.independent.co.uk/",
+      "rating_basis": "AllSides media bias rating (Lean Left), checked Oct 2026"
+    },
+    {
+      "id": "mirror",
+      "name": "Daily Mirror",
+      "lean": "left",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United Kingdom",
+      "home_url": "https://www.mirror.co.uk/",
+      "rating_basis": "Ad Fontes Media bias rating (Skews Left), checked Oct 2026"
+    },
+    {
+      "id": "bbc",
+      "name": "BBC News",
+      "lean": "centre",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "public-service",
+      "country": "United Kingdom",
+      "home_url": "https://www.bbc.co.uk/news",
+      "rating_basis": "AllSides media bias rating (Center), checked Oct 2026"
+    },
+    {
+      "id": "sky",
+      "name": "Sky News",
+      "lean": "centre",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United Kingdom",
+      "home_url": "https://news.sky.com/",
+      "rating_basis": "Ad Fontes Media bias rating (Middle), checked Oct 2026"
+    },
+    {
+      "id": "telegraph",
+      "name": "The Telegraph",
+      "lean": "right",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United Kingdom",
+      "home_url": "https://www.telegraph.co.uk/",
+      "rating_basis": "AllSides media bias rating (Lean Right), checked Oct 2026"
+    },
+    {
+      "id": "dailymail",
+      "name": "Daily Mail",
+      "lean": "right",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United Kingdom",
+      "home_url": "https://www.dailymail.co.uk/",
+      "rating_basis": "AllSides media bias rating (Right), checked Oct 2026"
+    },
+    {
+      "id": "thesun",
+      "name": "The Sun",
+      "lean": "right",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United Kingdom",
+      "home_url": "https://www.thesun.co.uk/",
+      "rating_basis": "AllSides media bias rating (Right), checked Oct 2026"
+    },
+    {
+      "id": "nyt",
+      "name": "The New York Times",
+      "lean": "left",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United States",
+      "home_url": "https://www.nytimes.com/",
+      "rating_basis": "AllSides media bias rating (Lean Left), checked Oct 2026"
+    },
+    {
+      "id": "nbc",
+      "name": "NBC News",
+      "lean": "left",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United States",
+      "home_url": "https://www.nbcnews.com/",
+      "rating_basis": "AllSides media bias rating (Lean Left), checked Oct 2026"
+    },
+    {
+      "id": "huffpost",
+      "name": "HuffPost",
+      "lean": "left",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United States",
+      "home_url": "https://www.huffpost.com/",
+      "rating_basis": "AllSides media bias rating (Left), checked Oct 2026"
+    },
+    {
+      "id": "npr",
+      "name": "NPR",
+      "lean": "centre",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "public-service",
+      "country": "United States",
+      "home_url": "https://www.npr.org/",
+      "rating_basis": "Ad Fontes Media bias rating (Middle / Skews Left), checked Oct 2026"
+    },
+    {
+      "id": "axios",
+      "name": "Axios",
+      "lean": "centre",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United States",
+      "home_url": "https://www.axios.com/",
+      "rating_basis": "AllSides media bias rating (Center), checked Oct 2026"
+    },
+    {
+      "id": "fox",
+      "name": "Fox News",
+      "lean": "right",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United States",
+      "home_url": "https://www.foxnews.com/",
+      "rating_basis": "AllSides media bias rating (Right), checked Oct 2026"
+    },
+    {
+      "id": "nypost",
+      "name": "New York Post",
+      "lean": "right",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United States",
+      "home_url": "https://nypost.com/",
+      "rating_basis": "AllSides media bias rating (Lean Right), checked Oct 2026"
+    },
+    {
+      "id": "examiner",
+      "name": "Washington Examiner",
+      "lean": "right",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United States",
+      "home_url": "https://www.washingtonexaminer.com/",
+      "rating_basis": "AllSides media bias rating (Lean Right), checked Oct 2026"
+    },
+    {
+      "id": "france24",
+      "name": "France 24",
+      "lean": "centre",
+      "region": "europe",
+      "bloc": "west",
+      "ownership": "public-service",
+      "country": "France",
+      "home_url": "https://www.france24.com/en/",
+      "rating_basis": "Ad Fontes Media bias rating (Middle), checked Oct 2026"
+    },
+    {
+      "id": "dw",
+      "name": "DW (Deutsche Welle)",
+      "lean": "centre",
+      "region": "europe",
+      "bloc": "west",
+      "ownership": "public-service",
+      "country": "Germany",
+      "home_url": "https://www.dw.com/en/",
+      "rating_basis": "AllSides media bias rating (Center), checked Oct 2026"
+    },
+    {
+      "id": "aljazeera",
+      "name": "Al Jazeera English",
+      "lean": null,
+      "region": "middle_east",
+      "bloc": "east",
+      "ownership": "state-funded",
+      "country": "Qatar",
+      "home_url": "https://www.aljazeera.com/",
+      "rating_basis": "Funded by the State of Qatar; no left/right tag applied"
+    },
+    {
+      "id": "thenational",
+      "name": "The National (UAE)",
+      "lean": null,
+      "region": "middle_east",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "United Arab Emirates",
+      "home_url": "https://www.thenationalnews.com/",
+      "rating_basis": "Owned by International Media Investments (Abu Dhabi); no left/right tag applied"
+    },
+    {
+      "id": "timesofisrael",
+      "name": "The Times of Israel",
+      "lean": null,
+      "region": "middle_east",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "Israel",
+      "home_url": "https://www.timesofisrael.com/",
+      "rating_basis": "Privately owned; no left/right tag applied"
+    },
+    {
+      "id": "cgtn",
+      "name": "CGTN",
+      "lean": null,
+      "region": "asia",
+      "bloc": "east",
+      "ownership": "state-controlled",
+      "country": "China",
+      "home_url": "https://www.cgtn.com/",
+      "rating_basis": "China Global Television Network, part of state broadcaster China Media Group"
+    },
+    {
+      "id": "ecns",
+      "name": "ECNS (China News Service)",
+      "lean": null,
+      "region": "asia",
+      "bloc": "east",
+      "ownership": "state-controlled",
+      "country": "China",
+      "home_url": "https://www.ecns.cn/",
+      "rating_basis": "English service of China News Service, a state news agency"
+    },
+    {
+      "id": "scmp",
+      "name": "South China Morning Post",
+      "lean": null,
+      "region": "asia",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "Hong Kong",
+      "home_url": "https://www.scmp.com/",
+      "rating_basis": "Owned by Alibaba Group; no left/right tag applied"
+    },
+    {
+      "id": "toi",
+      "name": "The Times of India",
+      "lean": null,
+      "region": "asia",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "India",
+      "home_url": "https://timesofindia.indiatimes.com/",
+      "rating_basis": "Privately owned (Bennett, Coleman & Co.); no left/right tag applied"
+    },
+    {
+      "id": "thehindu",
+      "name": "The Hindu",
+      "lean": null,
+      "region": "asia",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "India",
+      "home_url": "https://www.thehindu.com/",
+      "rating_basis": "Privately owned (The Hindu Group); no left/right tag applied"
+    },
+    {
+      "id": "moscowtimes",
+      "name": "The Moscow Times",
+      "lean": null,
+      "region": "europe",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "Russia",
+      "home_url": "https://www.themoscowtimes.com/",
+      "rating_basis": "Independent, Amsterdam-based since 2022; designated \"undesirable\" by Russia; no left/right tag applied"
+    },
+    {
+      "id": "japantimes",
+      "name": "The Japan Times",
+      "lean": null,
+      "region": "asia",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "Japan",
+      "home_url": "https://www.japantimes.co.jp/",
+      "rating_basis": "Privately owned (News2u Holdings); no left/right tag applied"
+    },
+    {
+      "id": "koreaherald",
+      "name": "The Korea Herald",
+      "lean": null,
+      "region": "asia",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "South Korea",
+      "home_url": "https://www.koreaherald.com/",
+      "rating_basis": "Privately owned (Herald Corporation); no left/right tag applied"
+    }
+  ],
+  "stories": [
+    {
+      "id": "bd0e61580f3b",
+      "title": "AI slide continues: Market relief over Jensen Huang's return to Nvidia fades fast",
+      "rank": 1,
+      "outlet_count": 12,
+      "coverage": {
+        "lean": {
+          "left": 3,
+          "centre": 4,
+          "right": 0
+        },
+        "bloc": {
+          "west": 7,
+          "east": 5
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "91b38beaf962",
+          "outlet_id": "nyt",
+          "headline": "The Return of Jensen Huang",
+          "snippet": "The Nvidia C.E.O. is back, President Trump is celebrating and markets are rallying.",
+          "url": "https://www.nytimes.com/2026/11/23/world/jensen-huang-return-nvidia-ukraine.html",
+          "published_at": "2026-11-24T05:44:38Z",
+          "published_at_estimated": false,
+          "image_url": "https://static01.nyt.com/images/2026/11/24/multimedia/24int-theworld-nl-top-fkgc/24int-theworld-nl-top-fkgc-mediumSquareAt3X.jpg"
+        },
+        {
+          "id": "3440994b7899",
+          "outlet_id": "axios",
+          "headline": "Nvidia's one-man board: How Trump inherited Jensen Huang's scandal",
+          "snippet": "A euphoric Wall Street erupted Monday as President Trump personally secured Jensen Huang's return to Nvidia, trading on the end of a scandal that — in reality — has only just begun. Why it matters…",
+          "url": "https://www.axios.com/2026/11/24/nvidias-one-man-board-how-trump-inherited-jensen-huangs-scandal",
+          "published_at": "2026-11-24T10:10:06Z",
+          "published_at_estimated": false,
+          "image_url": "https://images.axios.com/SbxHy0p2FLnMMGnxLb3LKxQlaaM=/0x0:1920x1080/1366x768/2026/11/23/1795461182497.jpeg"
+        },
+        {
+          "id": "db88d5fd921d",
+          "outlet_id": "nyt",
+          "headline": "For China, Jensen Huang’s Return to Nvidia Is a Mixed Blessing",
+          "snippet": "Beijing may welcome the return of the leading U.S. advocate for A.I. chip sales to China. But the saga could reinforce a Chinese push for self-reliance, analysts say.",
+          "url": "https://www.nytimes.com/2026/11/24/world/asia/jensen-huang-nvidia-china.html",
+          "published_at": "2026-11-24T11:55:30Z",
+          "published_at_estimated": false,
+          "image_url": "https://static01.nyt.com/images/2026/11/24/multimedia/24int-china-chips-analysis-01-zjqb/24int-china-chips-analysis-01-zjqb-mediumSquareAt3X.jpg"
+        },
+        {
+          "id": "a2d6d1db7ffa",
+          "outlet_id": "guardian",
+          "headline": "The Nvidia case is just the latest episode of Trump disregarding intelligence",
+          "snippet": "Trump’s reaction to sensitive information that contradicts his worldview mirrors his conduct towards war with Iran Donald Trump’s unwillingness to heed warnings of suspected Chinese penetration of…",
+          "url": "https://www.theguardian.com/technology/2026/nov/24/nvidia-trump-huang-intelligence",
+          "published_at": "2026-11-24T14:00:48Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.guim.co.uk/img/media/515210e29bb0c7d2077263b355c6ce39f3b006d5/243_0_3321_2656/master/3321.jpg?width=460&quality=85&auto=format&fit=max&s=012ec474910d8da9752f1256c3e3fd6c"
+        },
+        {
+          "id": "7a54d9fb75a7",
+          "outlet_id": "ecns",
+          "headline": "Nvidia shares jump 33.1% at the open after Jensen Huang returns as CEO",
+          "snippet": "Nvidia shares opened at $167.04 on Monday, up about 33.1% from the previous close of $125.53, after the company reinstated Jensen Huang as its president and CEO.",
+          "url": "https://www.ecns.cn/cns-wire/2026-11-24/detail-ihfnkzcu9653735.shtml",
+          "published_at": "2026-11-24T16:36:09Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "ad88ea2f3289",
+          "outlet_id": "nyt",
+          "headline": "Trump’s Nvidia Push Shows Companies’ Importance in Global Economic War",
+          "snippet": "Presidents before him have bailed out companies in times of national crisis. Mr. Trump went further: He staked the fortunes of the United States on those of a favored chief executive.",
+          "url": "https://www.nytimes.com/2026/11/24/business/economy/trump-nvidia-national-security-us-economics.html",
+          "published_at": "2026-11-24T19:54:59Z",
+          "published_at_estimated": false,
+          "image_url": "https://static01.nyt.com/images/2026/11/24/multimedia/24Biz-nvidia-Trump-01-vqpj/24Biz-nvidia-Trump-01-vqpj-mediumSquareAt3X.jpg"
+        },
+        {
+          "id": "596dfb8003c0",
+          "outlet_id": "nyt",
+          "headline": "Stock Markets Slip as Nvidia and A.I. Stocks Erase Some of Monday’s Rally",
+          "snippet": "Shares have veered wildly for days, pushed and pulled by the drama at Nvidia and the rise and fall of Anthropic’s stock after its blockbuster public offering.",
+          "url": "https://www.nytimes.com/2026/11/24/business/stocks-sp500-huang-nvidia.html",
+          "published_at": "2026-11-24T21:12:54Z",
+          "published_at_estimated": false,
+          "image_url": "https://static01.nyt.com/images/2026/11/24/multimedia/24biz-markets-zjwk/24biz-markets-zjwk-mediumSquareAt3X.jpg"
+        },
+        {
+          "id": "a4cfdaf42575",
+          "outlet_id": "cgtn",
+          "headline": "US lawmakers question Trump’s involvement in Nvidia CEO’s return",
+          "snippet": "Democratic and Republican lawmakers have raised concerns over national security, government interference in corporate decision-making and potential conflicts of interest.",
+          "url": "https://newsus.cgtn.com/news/2026-11-25/US-lawmakers-question-Trump-s-involvement-in-Nvidia-CEO-s-return-1SlFdrhwxlS/p.html",
+          "published_at": "2026-11-24T22:16:42Z",
+          "published_at_estimated": false,
+          "image_url": "https://newsus.cgtn.com/news/2026-11-25/US-lawmakers-question-Trump-s-involvement-in-Nvidia-CEO-s-return-1SlFdrhwxlS/img/93f5144b719540c4838a81907746ecdb/93f5144b719540c4838a81907746ecdb-1280.jpeg"
+        },
+        {
+          "id": "63b3054dbdfc",
+          "outlet_id": "bbc",
+          "headline": "Trump's rescue of Nvidia's Huang brings political risks",
+          "snippet": "The US president's intercession to reinstate CEO Jensen Huang has inextricably linked their fates.",
+          "url": "https://www.bbc.co.uk/news/articles/ckj05m2zdyryo",
+          "published_at": "2026-11-25T01:03:05Z",
+          "published_at_estimated": false,
+          "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/c9b4/live/d081e3d0-e8a4-11f1-99b6-a35a62fa4264.jpg"
+        },
+        {
+          "id": "14255c76494c",
+          "outlet_id": "nbc",
+          "headline": "Trump says pardon is always an option for Huang, and that invoking the Fifth isn’t necessary",
+          "snippet": "The president’s assertion that Huang does not pose a national security threat has sparked bipartisan backlash on Capitol Hill, where the Nvidia CEO is set to testify next week.",
+          "url": "https://www.nbcnews.com/politics/donald-trump/pardon-always-option-nvidia-jensen-huang-pleading-fifth-not-necessary-rcna611219",
+          "published_at": "2026-11-25T02:19:55Z",
+          "published_at_estimated": false,
+          "image_url": "https://media-cldnry.s-nbcnews.com/image/upload/t_fit_1500w/rockcms/2026-11/261116-trump-huang-sjr-1359-e33ddb.jpg"
+        },
+        {
+          "id": "278ac00319e1",
+          "outlet_id": "bbc",
+          "headline": "US attorney general dodges questions about Nvidia investigation",
+          "snippet": "Nvidia's share price have fallen 7% as lawmakers demand answers about President Donald Trump's involvement in Huang's reinstatement.",
+          "url": "https://www.bbc.co.uk/news/articles/crpdw1qx7jgxo",
+          "published_at": "2026-11-25T03:44:07Z",
+          "published_at_estimated": false,
+          "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/067a/live/dc6baca0-e839-11f1-a094-5fdc692f3e33.png"
+        },
+        {
+          "id": "1ef8fb3dc248",
+          "outlet_id": "nbc",
+          "headline": "Jensen Huang apologizes to Nvidia staff, saying he went ‘too far’ and is in therapy",
+          "snippet": "Nvidia CEO Jensen Huang made a triumphant return to the semiconductor giant in an all-hands meeting Tuesday morning, apologizing to staff for his conduct during his previous stint at the company’s…",
+          "url": "https://www.nbcnews.com/business/business-news/jensen-huang-says-s-thankful-second-chance-nvidia-employee-meeting-rcna611235",
+          "published_at": "2026-11-25T04:11:13Z",
+          "published_at_estimated": false,
+          "image_url": "https://media-cldnry.s-nbcnews.com/image/upload/t_fit_1500w/rockcms/2026-11/261225-jensen-huang-rs-115e31.jpg"
+        },
+        {
+          "id": "93581e5d7470",
+          "outlet_id": "nyt",
+          "headline": "National Security vs. the Stock Market",
+          "snippet": "President Trump swept aside concerns about possible espionage when he lobbied Nvidia’s board to reinstate Jensen Huang as chief executive.",
+          "url": "https://www.nytimes.com/2026/11/24/world/nvidia-trump-stocks-china-books.html",
+          "published_at": "2026-11-25T05:45:35Z",
+          "published_at_estimated": false,
+          "image_url": "https://static01.nyt.com/images/2026/11/25/multimedia/25int-theworld-nvidia-trump-01-alt-fphm-promo/25int-theworld-nvidia-trump-01-alt-fphm-promo-mediumSquareAt3X.jpg"
+        },
+        {
+          "id": "0397a5cf3664",
+          "outlet_id": "thehindu",
+          "headline": "Nvidia's Jensen Huang says he is in therapy as comeback rally fades",
+          "snippet": "Jensen Huang told staff it was \"not acceptable\" that he had broken a code of conduct he had helped write, and dismissed suggestions that he was back because U.S. President Donald Trump had pressured…",
+          "url": "https://www.thehindu.com/news/international/nvidias-jensen-huang-says-he-is-in-therapy-as-comeback-rally-fades/article71740890.ece",
+          "published_at": "2026-11-25T07:38:43Z",
+          "published_at_estimated": false,
+          "image_url": "https://th-i.thgim.com/public/incoming/5byumo/article71740904.ece/alternates/LANDSCAPE_1200/2026-11-24T221933Z_687132274_RC279IA88NC8_RTRMADP_3_NVIDIA-CEO-CONGRESS.JPG"
+        },
+        {
+          "id": "8ee01794fcf0",
+          "outlet_id": "npr",
+          "headline": "Republican wants FBI and CIA answers before questioning Nvidia chief",
+          "snippet": "\"The public is rightly concerned,\" says the Republican lawmaker, who wants to know what the FBI and CIA knew about potential national security threats and whether Jensen Huang was warned.",
+          "url": "https://www.npr.org/2026/11/25/nx-s1-6052417/nvidia-jensen-huang-reaction-republicans-congress-investigation",
+          "published_at": "2026-11-25T11:50:05Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "609ab1926cdc",
+          "outlet_id": "aljazeera",
+          "headline": "‘Second home’: Why Israel is celebrating Jensen Huang’s return to Nvidia",
+          "snippet": "Israel's tech sector and economy have strong ties to chip giant Nvidia, which invests billions of dollars.",
+          "url": "https://www.aljazeera.com/features/2026/11/25/second-home-why-israel-is-celebrating-jensen-huangs-return-to-nvidia",
+          "published_at": "2026-11-25T13:04:17Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "fb0d40b9e9cf",
+          "outlet_id": "toi",
+          "headline": "AI slide continues: Market relief over Jensen Huang's return to Nvidia fades fast",
+          "snippet": "On Wednesday, European stock markets presented a mixed bag, with Germany's DAX facing a slight decline while France's CAC 40 enjoyed a rise. Meanwhile, Asian markets suffered notable drops…",
+          "url": "https://timesofindia.indiatimes.com/business/international-business/ai-slide-continues-market-relief-over-jensen-huangs-return-to-nvidia-fades-fast/articleshow/136162791.cms",
+          "published_at": "2026-11-25T14:12:48Z",
+          "published_at_estimated": false,
+          "image_url": "https://static.toiimg.com/photo/msid-136164374,imgsize-91024.cms"
+        },
+        {
+          "id": "d5caa25c9f5a",
+          "outlet_id": "nbc",
+          "headline": "Market sell-off picks up steam, as Jensen Huang’s Nvidia return fails to calm AI fears",
+          "snippet": "U.S. stocks fell sharply Wednesday, led by companies linked to the AI boom.",
+          "url": "https://www.nbcnews.com/business/markets/market-sell-underway-gains-huangs-nvidia-move-stall-rcna611268",
+          "published_at": "2026-11-25T15:24:30Z",
+          "published_at_estimated": false,
+          "image_url": "https://media-cldnry.s-nbcnews.com/image/upload/t_fit_1500w/rockcms/2026-11/261125-nasdaq-mn-0940-5e48f9.jpg"
+        },
+        {
+          "id": "39ee07cd5043",
+          "outlet_id": "france24",
+          "headline": "Huang's return fails to dispel doubts as Nvidia shares drop",
+          "snippet": "A rally sparked by Jensen Huang's return as Nvidia's chief executive faded on Tuesday, with the company's shares falling as doubts persisted over the probes he faces and the fate of the AI…",
+          "url": "https://www.france24.com/en/video/20261125-huang-s-return-fails-to-dispel-doubts-as-nvidia-shares-drop",
+          "published_at": "2026-11-25T16:24:17Z",
+          "published_at_estimated": false,
+          "image_url": "https://s.france24.com/media/display/aa6eb26e-e8e4-11f1-913c-c131ae9bfe9c/w:1024/p:16x9/EN-20261125-160748-160913-CS.jpg"
+        },
+        {
+          "id": "24f5b164b784",
+          "outlet_id": "guardian",
+          "headline": "Trump says pardon for Nvidia boss Huang ‘always an option’ after accusations of breaking export laws – US politics live",
+          "snippet": "The US president urged the tech leader to ‘tell the truth’ in upcoming testimony in a Senate hearing Sign up for the Breaking News US email to get newsletter alerts in your inbox US trade…",
+          "url": "https://www.theguardian.com/us-news/live/2026/nov/25/donald-trump-jensen-huang-nvidia-pardon-senate-hearing-iowa-abdul-el-sayed-latest-news-updates",
+          "published_at": "2026-11-25T16:40:50Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.guim.co.uk/img/media/b81ae5a9f6ca550652434eefe1adae4209abd469/181_0_3334_2668/master/3334.jpg?width=460&quality=85&auto=format&fit=max&s=3ab288714a1e47b0ba4cda4ac746bd36"
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "Jensen Huang has returned as Nvidia's chief executive.",
+          "sources": [
+            "91b38beaf962",
+            "3440994b7899",
+            "7a54d9fb75a7",
+            "63b3054dbdfc",
+            "1ef8fb3dc248",
+            "93581e5d7470",
+            "0397a5cf3664",
+            "39ee07cd5043",
+            "fb0d40b9e9cf",
+            "d5caa25c9f5a",
+            "db88d5fd921d",
+            "609ab1926cdc"
+          ]
+        },
+        {
+          "text": "President Trump was personally involved in securing Huang's reinstatement.",
+          "sources": [
+            "3440994b7899",
+            "63b3054dbdfc",
+            "93581e5d7470",
+            "ad88ea2f3289",
+            "a4cfdaf42575",
+            "278ac00319e1"
+          ]
+        },
+        {
+          "text": "Markets rallied on Huang's return, but the rally faded as Nvidia and other AI-linked stocks fell.",
+          "sources": [
+            "91b38beaf962",
+            "7a54d9fb75a7",
+            "596dfb8003c0",
+            "278ac00319e1",
+            "0397a5cf3664",
+            "fb0d40b9e9cf",
+            "d5caa25c9f5a",
+            "39ee07cd5043"
+          ]
+        },
+        {
+          "text": "Lawmakers have raised concerns, including over national security, about Trump's role in the reinstatement.",
+          "sources": [
+            "a4cfdaf42575",
+            "14255c76494c",
+            "278ac00319e1",
+            "8ee01794fcf0"
+          ]
+        },
+        {
+          "text": "Huang told Nvidia staff he is in therapy and apologised for his past conduct.",
+          "sources": [
+            "1ef8fb3dc248",
+            "0397a5cf3664"
+          ]
+        },
+        {
+          "text": "Huang is due to testify before lawmakers.",
+          "sources": [
+            "14255c76494c",
+            "24f5b164b784",
+            "8ee01794fcf0"
+          ]
+        },
+        {
+          "text": "Trump said a pardon for Huang is always an option.",
+          "sources": [
+            "14255c76494c",
+            "24f5b164b784"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "93581e5d7470",
+              "quote": "National Security vs. the Stock Market",
+              "field": "headline"
+            },
+            {
+              "article_id": "a2d6d1db7ffa",
+              "quote": "Trump disregarding intelligence",
+              "field": "headline"
+            },
+            {
+              "article_id": "14255c76494c",
+              "quote": "Trump says pardon is always an option for Huang",
+              "field": "headline"
+            },
+            {
+              "article_id": "ad88ea2f3289",
+              "quote": "He staked the fortunes of the United States on those of a favored chief executive.",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with Trump's role weighed against national security concerns, including possible espionage and warnings of Chinese penetration.",
+              "sources": [
+                "93581e5d7470",
+                "a2d6d1db7ffa",
+                "ad88ea2f3289"
+              ]
+            },
+            {
+              "text": "Reports Trump's remarks that a pardon is an option and that Huang is not a national security threat.",
+              "sources": [
+                "14255c76494c",
+                "24f5b164b784"
+              ]
+            },
+            {
+              "text": "Covers Huang's apology to staff and the market sell-off in AI stocks.",
+              "sources": [
+                "1ef8fb3dc248",
+                "d5caa25c9f5a",
+                "596dfb8003c0"
+              ]
+            },
+            {
+              "text": "Examines what Huang's return means for China.",
+              "sources": [
+                "db88d5fd921d"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "3440994b7899",
+              "quote": "How Trump inherited Jensen Huang's scandal",
+              "field": "headline"
+            },
+            {
+              "article_id": "63b3054dbdfc",
+              "quote": "Trump's rescue of Nvidia's Huang brings political risks",
+              "field": "headline"
+            },
+            {
+              "article_id": "278ac00319e1",
+              "quote": "US attorney general dodges questions about Nvidia investigation",
+              "field": "headline"
+            },
+            {
+              "article_id": "39ee07cd5043",
+              "quote": "Huang's return fails to dispel doubts as Nvidia shares drop",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Emphasises the political risk to Trump of linking himself to Huang.",
+              "sources": [
+                "3440994b7899",
+                "63b3054dbdfc"
+              ]
+            },
+            {
+              "text": "Foregrounds lawmakers' demands for answers, including from the FBI and CIA, and the attorney general's response.",
+              "sources": [
+                "278ac00319e1",
+                "8ee01794fcf0"
+              ]
+            },
+            {
+              "text": "Links the fall in Nvidia shares to doubts over the probes Huang faces.",
+              "sources": [
+                "39ee07cd5043",
+                "278ac00319e1"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not mention Trump's remark that a pardon for Huang is always an option.",
+          "sources": [
+            "14255c76494c",
+            "24f5b164b784"
+          ]
+        },
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not mention Huang's apology to staff or that he is in therapy.",
+          "sources": [
+            "1ef8fb3dc248"
+          ]
+        },
+        {
+          "lean": "left",
+          "text": "Left coverage does not mention the US attorney general dodging questions about the Nvidia investigation.",
+          "sources": [
+            "278ac00319e1"
+          ]
+        }
+      ],
+      "contested_claims": [
+        {
+          "claim": "Huang is back at Nvidia because of Trump's intervention with the board.",
+          "asserted_by": [
+            "3440994b7899",
+            "93581e5d7470",
+            "63b3054dbdfc"
+          ],
+          "disputed_by": [
+            "0397a5cf3664"
+          ]
+        },
+        {
+          "claim": "Huang does not pose a national security threat, as Trump asserts.",
+          "asserted_by": [
+            "14255c76494c"
+          ],
+          "disputed_by": [
+            "a2d6d1db7ffa",
+            "93581e5d7470"
+          ]
+        }
+      ],
+      "opinion": [
+        {
+          "text": "Analysts say the saga could reinforce a Chinese push for self-reliance even if Beijing welcomes Huang's return.",
+          "sources": [
+            "db88d5fd921d"
+          ]
+        }
+      ],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "91b38beaf962",
+              "quote": "President Trump is celebrating and markets are rallying",
+              "field": "snippet"
+            },
+            {
+              "article_id": "93581e5d7470",
+              "quote": "National Security vs. the Stock Market",
+              "field": "headline"
+            },
+            {
+              "article_id": "63b3054dbdfc",
+              "quote": "brings political risks",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Focuses on Trump's role, national security concerns and the political consequences of the reinstatement.",
+              "sources": [
+                "93581e5d7470",
+                "63b3054dbdfc",
+                "3440994b7899",
+                "a2d6d1db7ffa",
+                "ad88ea2f3289"
+              ]
+            },
+            {
+              "text": "Covers congressional scrutiny, Huang's upcoming testimony and Trump's pardon remarks.",
+              "sources": [
+                "8ee01794fcf0",
+                "278ac00319e1",
+                "14255c76494c",
+                "24f5b164b784"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "7a54d9fb75a7",
+              "quote": "Nvidia shares jump 33.1% at the open",
+              "field": "headline"
+            },
+            {
+              "article_id": "a4cfdaf42575",
+              "quote": "US lawmakers question Trump’s involvement",
+              "field": "headline"
+            },
+            {
+              "article_id": "609ab1926cdc",
+              "quote": "Why Israel is celebrating Jensen Huang’s return to Nvidia",
+              "field": "headline"
+            },
+            {
+              "article_id": "fb0d40b9e9cf",
+              "quote": "Market relief over Jensen Huang's return to Nvidia fades fast",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with share price figures and the fading of the rally across global markets.",
+              "sources": [
+                "7a54d9fb75a7",
+                "fb0d40b9e9cf",
+                "0397a5cf3664"
+              ]
+            },
+            {
+              "text": "Reports bipartisan concerns over national security, interference and conflicts of interest.",
+              "sources": [
+                "a4cfdaf42575"
+              ]
+            },
+            {
+              "text": "Covers Israel's ties to Nvidia and Huang's denial that Trump pressured his return.",
+              "sources": [
+                "609ab1926cdc",
+                "0397a5cf3664"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "Jensen Huang has been reinstated as Nvidia's chief executive after President Trump intervened with the company's board. Nvidia shares jumped about 33% at the open, then fell back as AI-linked stocks slid. Lawmakers from both parties have raised national security and interference concerns, and Huang is due to testify.",
+        "sources": [
+          "3440994b7899",
+          "93581e5d7470",
+          "63b3054dbdfc",
+          "7a54d9fb75a7",
+          "278ac00319e1",
+          "d5caa25c9f5a",
+          "fb0d40b9e9cf",
+          "39ee07cd5043",
+          "a4cfdaf42575",
+          "14255c76494c",
+          "24f5b164b784",
+          "8ee01794fcf0"
+        ]
+      },
+      "conclusion": {
+        "text": "All sides report Huang's reinstatement, Trump's involvement and a rally that faded. Left outlets lead with national security and Trump's pardon remarks, centre outlets with political risk and lawmakers' questions, East outlets with market figures and foreign angles. Whether Trump's pressure brought Huang back, which Huang dismissed, remains contested.",
+        "sources": [
+          "3440994b7899",
+          "7a54d9fb75a7",
+          "fb0d40b9e9cf",
+          "93581e5d7470",
+          "14255c76494c",
+          "63b3054dbdfc",
+          "278ac00319e1",
+          "609ab1926cdc",
+          "0397a5cf3664"
+        ]
+      },
+      "validation": {
+        "kept": 42,
+        "dropped_by_reason": {
+          "title_ungrounded": 1
+        }
+      }
+    },
+    {
+      "id": "dcd3267e6f8b",
+      "title": "Trump administration proposes new tariffs on 14 economies including China and EU",
+      "rank": 2,
+      "outlet_count": 10,
+      "coverage": {
+        "lean": {
+          "left": 2,
+          "centre": 2,
+          "right": 1
+        },
+        "bloc": {
+          "west": 5,
+          "east": 5
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "15f8fd3ec125",
+          "outlet_id": "scmp",
+          "headline": "US-China trade war stuck in limbo as Trump nears new tariffs",
+          "snippet": "The United States is reportedly readying new tariffs on China and 15 other trading partners following a months-long inquiry into state support and excess industrial capacity. Results from the US…",
+          "url": "https://www.scmp.com/plus/economy/china-economy/article/3375755/us-china-trade-war-stuck-limbo-trump-nears-new-tariffs",
+          "published_at": "2026-11-25T09:33:59Z",
+          "published_at_estimated": false,
+          "image_url": "https://cdn.i-scmp.com/sites/default/files/styles/1280x720/public/d8/images/canvas/2026/11/25/f13eecbc-718f-4e71-95db-a1d7618470be_216963cb.jpg?itok=DNyKc70Q&v=1795599235"
+        },
+        {
+          "id": "f4e79ced95e6",
+          "outlet_id": "thehindu",
+          "headline": "U.S. set to slap tariffs on China, EU and others after probe on excess industrial capacity: report",
+          "snippet": "India was also named among 16 ⁠major U.S. trading partners; Together, the duties are meant to ​rebuild Trump’s global “Liberation Day” tariffs that were struck down by the U.S. Supreme Court in…",
+          "url": "https://www.thehindu.com/news/international/trump-administration-set-to-unveil-new-tariffs-after-probeon-excess-factory-capacity-sources/article71740905.ece",
+          "published_at": "2026-11-25T10:09:32Z",
+          "published_at_estimated": false,
+          "image_url": "https://th-i.thgim.com/public/incoming/gfxfcq/article71740912.ece/alternates/LANDSCAPE_1200/2026-09-21T132213Z_2125814534_RC22NNAEAZ0G_RTRMADP_3_USA-CHINA-BESSENT.JPG"
+        },
+        {
+          "id": "54b40e0f777d",
+          "outlet_id": "scmp",
+          "headline": "Could potential US tariffs put the US-China trade truce at risk?",
+          "snippet": "The United States could be paving the way for fresh tariffs on imports from 16 economies, including China and the European Union, as it prepares to release the findings of a months-long…",
+          "url": "https://www.scmp.com/economy/global-economy/article/3375790/could-potential-us-tariffs-put-us-china-trade-truce-risk",
+          "published_at": "2026-11-25T13:39:44Z",
+          "published_at_estimated": false,
+          "image_url": "https://cdn.i-scmp.com/sites/default/files/styles/1280x720/public/d8/images/canvas/2026/11/25/95e588ee-1c67-4b1b-a341-d9709f2a05da_b254bae0.jpg?itok=QGdq7Zw3&v=1795609857"
+        },
+        {
+          "id": "1e4c9f80397e",
+          "outlet_id": "axios",
+          "headline": "Trump prepares new round of tariffs on China, other U.S. trading partners",
+          "snippet": "The Trump administration proposed a new round of tariffs targeting China, the European Union and 12 other economies over policies it says have created excess industrial capacity. Why it matters…",
+          "url": "https://www.axios.com/2026/11/25/trump-tariffs-china",
+          "published_at": "2026-11-25T13:41:15Z",
+          "published_at_estimated": false,
+          "image_url": "https://images.axios.com/1ZuRnzR3tCG2mjV1g3VJ0evjh4s=/0x0:4100x2306/1366x768/2026/11/25/1795607699819.jpeg"
+        },
+        {
+          "id": "b2e3cc8b600b",
+          "outlet_id": "nbc",
+          "headline": "Trump proposes a new wave of tariffs on China, E.U. and other trade partners",
+          "snippet": "",
+          "url": "https://www.nbcnews.com/business/economy/trump-country-specific-tariffs-excess-capacity-rcna611087",
+          "published_at": "2026-11-25T13:48:59Z",
+          "published_at_estimated": false,
+          "image_url": "https://media-cldnry.s-nbcnews.com/image/upload/t_fit_1500w/rockcms/2026-11/261105-trump-xi-rs-5b9856.jpg"
+        },
+        {
+          "id": "b35b0ff164f6",
+          "outlet_id": "scmp",
+          "headline": "US proposes new tariffs on China a week after Trump-Xi summit",
+          "snippet": "The United States has proposed additional tariffs on 14 economies, including China, just a week after Chinese President Xi Jinping’s meeting with his US counterpart Donald Trump in the southern…",
+          "url": "https://www.scmp.com/news/china/diplomacy/article/3375801/us-proposes-new-20-tariffs-china-week-after-trump-xi-summit",
+          "published_at": "2026-11-25T14:03:18Z",
+          "published_at_estimated": false,
+          "image_url": "https://cdn.i-scmp.com/sites/default/files/styles/1280x720/public/d8/images/canvas/2026/11/25/f00a66a1-2910-4aaf-bc7e-28c3b6db4147_c43db1ca.jpg?itok=F2RpUFsX&v=1795615398"
+        },
+        {
+          "id": "01cb4896d3af",
+          "outlet_id": "koreaherald",
+          "headline": "Korea to retain 15% tariff cap under new US tariff proposal",
+          "snippet": "The Trump administration on Wednesday proposed new tariffs under Section 301 of the Trade Act of 1974 on 14 trading partners over industrial overcapacity, while maintaining the 15 percent tariff…",
+          "url": "https://www.koreaherald.com/article/10949511",
+          "published_at": "2026-11-25T14:08:57Z",
+          "published_at_estimated": false,
+          "image_url": "https://wimg.heraldcorp.com/news/cms/2026/11/25/news-p.v1.20261125.b3e6840e30c54b278d22691eef2e7388_T1.jpg"
+        },
+        {
+          "id": "c33937841959",
+          "outlet_id": "mirror",
+          "headline": "Brutal US tariff hikes proposed for EU countries and 12 others - full list",
+          "snippet": "The taxes are intended to replace revenues lost after the Supreme Court ruled in February that Trump could not declare an economic emergency to impose across-the-board tariffs",
+          "url": "https://www.mirror.co.uk/news/world-news/us-tariff-hikes-eu-china-37914478",
+          "published_at": "2026-11-25T14:09:49Z",
+          "published_at_estimated": false,
+          "image_url": "https://i2-prod.mirror.co.uk/incoming/article37914502.ece/ALTERNATES/s615/0_Trump-Tariffs-Congress-26316747050166.jpg"
+        },
+        {
+          "id": "c659d758b6cc",
+          "outlet_id": "france24",
+          "headline": "Trump announces new tariffs on EU, China despite US midterms defeat",
+          "snippet": "President Donald Trump's administration on Wednesday reignited global trade tensions by proposing new tariffs on some of the largest US trading partners, including the EU, Japan and Taiwan. China…",
+          "url": "https://www.france24.com/en/americas/20261125-trump-announces-new-tariffs-eu-china-despite-us-midterms-defeat",
+          "published_at": "2026-11-25T14:38:47Z",
+          "published_at_estimated": false,
+          "image_url": "https://s.france24.com/media/display/799ca916-e47f-11f1-a351-1bac47ab2f5d/w:1024/p:16x9/2026-11-19T200647Z-677358732-RC2LKOAOVK5M-RTRMADP-3-USA-TRUMP-NEW-YORK-TIMES.jpg"
+        },
+        {
+          "id": "f14c7e173fd9",
+          "outlet_id": "thenational",
+          "headline": "US proposes tariffs on trade partners including China, India and EU",
+          "snippet": "US President Donald Trump's administration pressed on with its tariff agenda on Wednesday, proposing new duties on many of its largest trading partners. China, India and the EU countries were among…",
+          "url": "https://www.thenationalnews.com/news/us/2026/11/25/us-proposes-tariffs-on-trade-partners-including-china-india-and-eu/",
+          "published_at": "2026-11-25T14:41:33Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.thenationalnews.com/resizer/v2/4OHAI2IE576IFCEW24HMHTPU2U.jpg?auth=022be65847d54489b2372d9a05ea18ea710e5e17a24c7b73a78ca5d5ab407ed4&smart=true&width=7535&height=5026"
+        },
+        {
+          "id": "231ffaf37c54",
+          "outlet_id": "aljazeera",
+          "headline": "Trump announces new trade tariffs: Which countries are affected?",
+          "snippet": "The US is planning tariffs on 14 economies it accuses of using subsidies to help their industries overproduce.",
+          "url": "https://www.aljazeera.com/news/2026/11/25/trump-announces-new-trade-tariffs-which-countries-will-they-target",
+          "published_at": "2026-11-25T14:54:44Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "e84c48ce20b0",
+          "outlet_id": "nbc",
+          "headline": "Trump proposes new tariffs on China, the European Union and other trade partners",
+          "snippet": "The trump administration is proposing a new round of tariffs on multiple countries, including China, European Union members and other U.S. trade partners. NBC News' Brian Cheung reports on the…",
+          "url": "https://www.nbcnews.com/video/trump-proposes-new-tariffs-on-china-the-european-union-and-other-trade-partners-274166853924",
+          "published_at": "2026-11-25T15:26:14Z",
+          "published_at_estimated": false,
+          "image_url": "https://media-cldnry.s-nbcnews.com/image/upload/t_fit_1500w/mpx/2704722219/2026_11/1795620369255_now_current_cheung_tariffs_proposed_261125_S3_1920x1080-k5w2q3.jpg"
+        },
+        {
+          "id": "051af8fb7198",
+          "outlet_id": "examiner",
+          "headline": "Trump administration announces new tariffs on 14 countries, including China and Japan",
+          "snippet": "The Trump administration put forth a new plan to impose tariffs on imports from 14 U.S. trade partners, including China, the European Union, Japan, and Taiwan, escalating a global trade war. Chinese…",
+          "url": "https://www.washingtonexaminer.com/news/white-house/4814966/new-trump-administration-tariffs-china-eu/",
+          "published_at": "2026-11-25T16:03:30Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.washingtonexaminer.com/wp-content/uploads/2026/10/AP26297752040739-e1792882137871.jpg?w=957"
+        },
+        {
+          "id": "d009c6d2a257",
+          "outlet_id": "france24",
+          "headline": "US unveils proposed tariffs on major partners, including EU and China",
+          "snippet": "The United States on Wednesday unveiled proposed tariffs on 14 economies including the European Union and China, after a months-long probe into alleged excess production – the latest move by US…",
+          "url": "https://www.france24.com/en/video/20261125-us-unveils-proposed-tariffs-on-major-partners-including-eu-and-china",
+          "published_at": "2026-11-25T16:21:55Z",
+          "published_at_estimated": false,
+          "image_url": "https://s.france24.com/media/display/6511a2f8-e8e4-11f1-b921-81da3ab2acbb/w:1024/p:16x9/EN-20261125-160230-160715-CS.jpg"
+        },
+        {
+          "id": "ed8f54230627",
+          "outlet_id": "thehindu",
+          "headline": "U.S. announces new 25% tariffs on India, second-highest among 14 countries against whom action was taken",
+          "snippet": "The order by the U.S. Trade Representative also opens the door for a lower 17% tariff if India and the U.S. sign a trade deal",
+          "url": "https://www.thehindu.com/news/international/donald-trump-tariffs-us-midterm-elections/article71743081.ece",
+          "published_at": "2026-11-25T16:25:41Z",
+          "published_at_estimated": false,
+          "image_url": "https://th-i.thgim.com/public/incoming/x6kns7/article71743744.ece/alternates/LANDSCAPE_1200/2026-11-25T135439Z_732317319_RC21VOATCSR3_RTRMADP_3_USA-TRUMP-TARIFFS.JPG"
+        },
+        {
+          "id": "fc5bbe29cbaf",
+          "outlet_id": "thehindu",
+          "headline": "Trump’s tariff plan explained: Which countries could be hit and why?",
+          "snippet": "The Trump administration is preparing a fresh tariff offensive targeting major trading partners including China, India and the European Union. Here’s what the investigation is about and what it…",
+          "url": "https://www.thehindu.com/videos/trumps-tariff-plan-explained-which-countries-could-be-hit-and-why/article71743829.ece",
+          "published_at": "2026-11-25T16:35:24Z",
+          "published_at_estimated": false,
+          "image_url": "https://th-i.thgim.com/public/incoming/4ynssi/article71743802.ece/alternates/LANDSCAPE_1200/WhatsApp%20Image%202026-11-25%20at%205.31.07%20PM.jpeg"
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "The Trump administration proposed new tariffs on 14 trading partners.",
+          "sources": [
+            "1e4c9f80397e",
+            "c33937841959",
+            "051af8fb7198",
+            "d009c6d2a257",
+            "b35b0ff164f6",
+            "01cb4896d3af",
+            "231ffaf37c54",
+            "ed8f54230627"
+          ]
+        },
+        {
+          "text": "China and the European Union are among those targeted.",
+          "sources": [
+            "1e4c9f80397e",
+            "b2e3cc8b600b",
+            "e84c48ce20b0",
+            "c659d758b6cc",
+            "051af8fb7198",
+            "d009c6d2a257",
+            "f14c7e173fd9",
+            "fc5bbe29cbaf",
+            "f4e79ced95e6",
+            "54b40e0f777d",
+            "b35b0ff164f6"
+          ]
+        },
+        {
+          "text": "The tariffs follow a months-long inquiry into excess industrial capacity or subsidised overproduction.",
+          "sources": [
+            "1e4c9f80397e",
+            "d009c6d2a257",
+            "01cb4896d3af",
+            "231ffaf37c54",
+            "15f8fd3ec125",
+            "f4e79ced95e6",
+            "54b40e0f777d"
+          ]
+        },
+        {
+          "text": "The duties are intended to replace tariffs struck down by the US Supreme Court.",
+          "sources": [
+            "c33937841959",
+            "f4e79ced95e6"
+          ]
+        },
+        {
+          "text": "Japan and Taiwan are among the targeted partners.",
+          "sources": [
+            "c659d758b6cc",
+            "051af8fb7198"
+          ]
+        },
+        {
+          "text": "India is among the targeted partners.",
+          "sources": [
+            "f4e79ced95e6",
+            "f14c7e173fd9",
+            "ed8f54230627",
+            "fc5bbe29cbaf"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "c33937841959",
+              "quote": "Brutal US tariff hikes proposed for EU countries and 12 others",
+              "field": "headline"
+            },
+            {
+              "article_id": "b2e3cc8b600b",
+              "quote": "a new wave of tariffs",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the severity of the tariffs and a full list of affected countries.",
+              "sources": [
+                "c33937841959"
+              ]
+            },
+            {
+              "text": "Ties the tariffs to replacing revenue lost after the Supreme Court ruling in February.",
+              "sources": [
+                "c33937841959"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "1e4c9f80397e",
+              "quote": "over policies it says have created excess industrial capacity",
+              "field": "snippet"
+            },
+            {
+              "article_id": "c659d758b6cc",
+              "quote": "despite US midterms defeat",
+              "field": "headline"
+            },
+            {
+              "article_id": "c659d758b6cc",
+              "quote": "reignited global trade tensions",
+              "field": "snippet"
+            },
+            {
+              "article_id": "d009c6d2a257",
+              "quote": "after a months-long probe into alleged excess production",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Attributes the overcapacity rationale to the administration and describes the production as alleged.",
+              "sources": [
+                "1e4c9f80397e",
+                "d009c6d2a257"
+              ]
+            },
+            {
+              "text": "Places the proposal in the context of a US midterms defeat and renewed global trade tensions.",
+              "sources": [
+                "c659d758b6cc"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "right",
+          "headline_quotes": [
+            {
+              "article_id": "051af8fb7198",
+              "quote": "escalating a global trade war",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Describes the plan as escalating a global trade war and lists China, the EU, Japan and Taiwan.",
+              "sources": [
+                "051af8fb7198"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "left",
+          "text": "Left coverage does not mention the excess industrial capacity probe behind the tariffs.",
+          "sources": [
+            "1e4c9f80397e",
+            "d009c6d2a257"
+          ]
+        },
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not mention that the tariffs are meant to replace those struck down by the Supreme Court.",
+          "sources": [
+            "c33937841959"
+          ]
+        },
+        {
+          "lean": "right",
+          "text": "Right coverage does not mention the excess industrial capacity probe behind the tariffs.",
+          "sources": [
+            "1e4c9f80397e",
+            "d009c6d2a257"
+          ]
+        },
+        {
+          "lean": "right",
+          "text": "Right coverage does not mention the Supreme Court ruling against the earlier tariffs.",
+          "sources": [
+            "c33937841959"
+          ]
+        }
+      ],
+      "contested_claims": [],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "051af8fb7198",
+              "quote": "escalating a global trade war",
+              "field": "snippet"
+            },
+            {
+              "article_id": "c659d758b6cc",
+              "quote": "despite US midterms defeat",
+              "field": "headline"
+            },
+            {
+              "article_id": "c33937841959",
+              "quote": "Brutal US tariff hikes",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Foregrounds escalation of trade tensions and the domestic political context of the midterms.",
+              "sources": [
+                "051af8fb7198",
+                "c659d758b6cc"
+              ]
+            },
+            {
+              "text": "Links the tariffs to lost revenue after the Supreme Court ruling.",
+              "sources": [
+                "c33937841959"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "54b40e0f777d",
+              "quote": "Could potential US tariffs put the US-China trade truce at risk?",
+              "field": "headline"
+            },
+            {
+              "article_id": "b35b0ff164f6",
+              "quote": "US proposes new tariffs on China a week after Trump-Xi summit",
+              "field": "headline"
+            },
+            {
+              "article_id": "01cb4896d3af",
+              "quote": "Korea to retain 15% tariff cap under new US tariff proposal",
+              "field": "headline"
+            },
+            {
+              "article_id": "ed8f54230627",
+              "quote": "second-highest among 14 countries against whom action was taken",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Focuses on the US-China trade truce and the timing a week after the Trump-Xi summit.",
+              "sources": [
+                "54b40e0f777d",
+                "b35b0ff164f6",
+                "15f8fd3ec125"
+              ]
+            },
+            {
+              "text": "Highlights country-specific effects: Korea keeps a 15% cap; India faces 25%, or 17% with a trade deal.",
+              "sources": [
+                "01cb4896d3af",
+                "ed8f54230627"
+              ]
+            },
+            {
+              "text": "Notes the tariffs are proposed under Section 301 of the Trade Act of 1974.",
+              "sources": [
+                "01cb4896d3af"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "The Trump administration on Wednesday proposed new tariffs on 14 economies, including China and the European Union, after a months-long probe into excess industrial capacity. Some reports say the duties are meant to replace tariffs struck down by the US Supreme Court.",
+        "sources": [
+          "1e4c9f80397e",
+          "d009c6d2a257",
+          "051af8fb7198",
+          "b35b0ff164f6",
+          "01cb4896d3af",
+          "231ffaf37c54",
+          "ed8f54230627",
+          "c33937841959",
+          "f4e79ced95e6"
+        ]
+      },
+      "conclusion": {
+        "text": "All sides report a US proposal of new tariffs on China, the EU and other partners over excess capacity. Western outlets stress trade-war escalation, the midterms and lost revenue, while Eastern outlets focus on the US-China truce and national tariff rates. Some Eastern reports give 16 economies rather than 14.",
+        "sources": [
+          "1e4c9f80397e",
+          "d009c6d2a257",
+          "051af8fb7198",
+          "c659d758b6cc",
+          "c33937841959",
+          "54b40e0f777d",
+          "01cb4896d3af",
+          "ed8f54230627",
+          "15f8fd3ec125",
+          "f4e79ced95e6",
+          "b35b0ff164f6"
+        ]
+      },
+      "validation": {
+        "kept": 36,
+        "dropped_by_reason": {
+          "contested_same_outlet": 1
+        }
+      }
+    },
+    {
+      "id": "9adcff1d8924",
+      "title": "US Army detonates unstable lead azide stockpile at Iowa ammunition plant",
+      "rank": 3,
+      "outlet_count": 10,
+      "coverage": {
+        "lean": {
+          "left": 3,
+          "centre": 3,
+          "right": 2
+        },
+        "bloc": {
+          "west": 8,
+          "east": 2
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "9218bf7bbf82",
+          "outlet_id": "npr",
+          "headline": "Army detonates nearly five tons of lead-based explosives in Iowa",
+          "snippet": "The controlled detonation of more than 60 barrels — roughly five tons — of unstable lead azide at the Iowa Army Ammunition Plant in Middletown, Iowa is complete.",
+          "url": "https://www.npr.org/2026/11/25/nx-s1-6052338/army-detonation-lead-explosives-iowa",
+          "published_at": "2026-11-25T09:41:05Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "d0adb1007ccd",
+          "outlet_id": "nbc",
+          "headline": "Army detonates cache of lead explosives, with toxic plume expected to spread across Iowa",
+          "snippet": "The Army detonated a stockpile of unstable lead azide explosives in Iowa on Wednesday morning. The toxic dust plume is expected to travel for miles.",
+          "url": "https://www.nbcnews.com/news/us-news/iowa-lead-azide-explosion-dust-army-rcna611182",
+          "published_at": "2026-11-25T11:31:21Z",
+          "published_at_estimated": false,
+          "image_url": "https://media-cldnry.s-nbcnews.com/image/upload/t_fit_1500w/rockcms/2026-11/261125-iowa-ammunition-plant-mn-1030-0d6e15.jpg"
+        },
+        {
+          "id": "b8d20bffe772",
+          "outlet_id": "nypost",
+          "headline": "US Army to detonate a 5-ton stockpile of lead azide in Iowa — what to know",
+          "snippet": "The U.S. Army is planning to detonate 5 tons of degraded and dangerous lead azide in southeastern Iowa in what military officials say is an unprecedented effort to prevent an uncontrolled explosion.",
+          "url": "https://nypost.com/2026/11/25/us-news/us-army-to-detonate-a-5-ton-stockpile-of-lead-azide-in-iowa-what-to-know/",
+          "published_at": "2026-11-25T12:39:24Z",
+          "published_at_estimated": false,
+          "image_url": "https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2Fphoto-provided-u-s-army-149317819_c99269.jpg?w%3D1024"
+        },
+        {
+          "id": "5c816ffb1b68",
+          "outlet_id": "france24",
+          "headline": "US army to detonate stockpile of unstable bomb-making chemicals in Iowa",
+          "snippet": "The US military will on Wednesday detonate some 10,000 pounds of unstable and degraded explosive material in Iowa, where local residents were urged to evacuate amid concerns over possible toxic lead…",
+          "url": "https://www.france24.com/en/video/20261125-us-army-to-detonate-stockpile-of-unstable-bomb-making-chemicals-in-iowa",
+          "published_at": "2026-11-25T13:16:49Z",
+          "published_at_estimated": false,
+          "image_url": "https://s.france24.com/media/display/3eb0ab90-e8c1-11f1-bc6d-c131ae9bfe9c/w:1024/p:16x9/EN-20261125-110343-110536-CS.jpg"
+        },
+        {
+          "id": "acf8734ad5ce",
+          "outlet_id": "independent",
+          "headline": "NASA chief shreds Marjorie Taylor Greene after she denies Moon landing",
+          "snippet": "Former MAGA congresswoman rebuked by space agency’s administrator after “irresponsible” warning of ‘Chernobyl event’ when Army detonates degraded lead azide in Iowa",
+          "url": "https://www.independent.co.uk/news/world/americas/us-politics/nasa-marjorie-taylor-greene-moon-landing-b3091397.html",
+          "published_at": "2026-11-25T13:57:39Z",
+          "published_at_estimated": false,
+          "image_url": "https://static.independent.co.uk/2026/06/30/13/03/GettyImages-51098550.jpg?width=1200&auto=webp&crop=3%3A2"
+        },
+        {
+          "id": "0699119cf56f",
+          "outlet_id": "aljazeera",
+          "headline": "US Army detonates toxic lead explosives in Iowa amid health concerns",
+          "snippet": "The US Army destroys nearly 4,500kg of lead azide amid fears of toxic fallout affecting residents, farms and livestock.",
+          "url": "https://www.aljazeera.com/news/2026/11/25/us-army-detonates-toxic-lead-stockpile-in-iowa-amid-backlash",
+          "published_at": "2026-11-25T15:14:08Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "8e6c65cd7131",
+          "outlet_id": "independent",
+          "headline": "Watch: Moment almost 10,000lbs of lead azide blown up by US Army in Iowa",
+          "snippet": "A huge cloud of smoke rose into the air after the US Army detonated nearly 10,000 pounds (4,500 kg) of degraded lead azide in Iowa on Wednesday (November 25).",
+          "url": "https://www.independent.co.uk/tv/news/iowa-lead-azide-explosion-video-b3091547.html",
+          "published_at": "2026-11-25T15:19:28Z",
+          "published_at_estimated": false,
+          "image_url": "https://static.independent.co.uk/2026/11/25/15/2026-11-25T151612Z_54619447_RC23VOAK1U09_RTRMADP_3_IOWA-ARMY-DETONATION.JPG?width=1200&auto=webp&trim=0%2C0%2C1%2C0"
+        },
+        {
+          "id": "db088c36deff",
+          "outlet_id": "independent",
+          "headline": "What is lead azide? 5 tons of bomb materials detonated in Iowa despite health concerns",
+          "snippet": "Extremely sensitive to shock, heat, impact, and friction, the chemical may explode when dry",
+          "url": "https://www.independent.co.uk/news/world/americas/what-is-lead-azide-us-army-detonation-b3091558.html",
+          "published_at": "2026-11-25T15:30:37Z",
+          "published_at_estimated": false,
+          "image_url": "https://static.independent.co.uk/2026/11/25/15/2026-11-25T152000Z_1113860993_RC23VOA25D25_RTRMADP_3_IOWA-ARMY-DETONATION.JPG?width=1200&auto=webp&trim=0%2C1%2C0%2C1"
+        },
+        {
+          "id": "923d11c9a5e6",
+          "outlet_id": "nbc",
+          "headline": "Plume of smoke rises into the air at Iowa detonation site",
+          "snippet": "The detonation of an Army stockpile of unstable lead azide explosives in Iowa has raised fears of a potential toxic cloud that could travel hundreds of miles southwest and into northeastern…",
+          "url": "https://www.nbcnews.com/video/plume-of-smoke-rises-into-the-air-at-iowa-detonation-site-274168901975",
+          "published_at": "2026-11-25T15:35:59Z",
+          "published_at_estimated": false,
+          "image_url": "https://media-cldnry.s-nbcnews.com/image/upload/t_fit_1500w/mpx/2704722219/2026_11/1795620953242_now_current_sbr_iowa_toxic_cloud_261125_S3_1920x1080-kzki6u.jpg"
+        },
+        {
+          "id": "cfbf18f810dc",
+          "outlet_id": "independent",
+          "headline": "US Army explodes 5 tons of lead in Iowa with blast felt for miles and residents waiting for environmental impacts",
+          "snippet": "Officials indicated the blast had been a success, with Donald Trump stating that it exceeded expectations",
+          "url": "https://www.independent.co.uk/news/world/americas/us-politics/iowa-explosion-army-evacuation-safe-b3091493.html",
+          "published_at": "2026-11-25T15:38:37Z",
+          "published_at_estimated": false,
+          "image_url": "https://static.independent.co.uk/2026/11/25/15/2026-11-25T153211Z_1522438814_RC23VOA1K5LS_RTRMADP_3_IOWA-ARMY-DETONATION.JPG?width=1200&auto=webp&trim=0%2C1%2C0%2C0"
+        },
+        {
+          "id": "c17b491a147f",
+          "outlet_id": "dailymail",
+          "headline": "Marjorie Taylor Greene slams Trump over 'dirty bomb in Iowa' as Army prepares to detonate 10,000 pounds of explosives sparking toxic fallout fears",
+          "snippet": "Marjorie Taylor Greene said Americans should 'lock up' Donald Trump and Pete Hegseth over the Army's planned detonation of bomb-making chemicals.",
+          "url": "https://www.dailymail.com/news/article-16320229/Marjorie-Taylor-Greene-jail-Trump-Hegseth-Iowa-bomb.html",
+          "published_at": "2026-11-25T15:42:16Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.dailymail.com/1s/2026/11/25/06/112713851-0-image-m-12_1795586798734.jpg"
+        },
+        {
+          "id": "7a6e9b96eaa2",
+          "outlet_id": "scmp",
+          "headline": "US Army carries out controlled blast of unstable lead azide in Iowa town",
+          "snippet": "The US Army detonated nearly 5 tonnes of toxic explosives at an ammunition plant in a tiny Iowa town on Wednesday, media reports said, after officials warned the material was too unstable to move…",
+          "url": "https://www.scmp.com/news/world/united-states-canada/article/3375808/us-army-carries-out-controlled-blast-unstable-lead-azide-iowa-town",
+          "published_at": "2026-11-25T15:48:57Z",
+          "published_at_estimated": false,
+          "image_url": "https://cdn.i-scmp.com/sites/default/files/styles/1280x720/public/d8/images/canvas/2026/11/25/4e9cf59a-9450-46f0-a974-c981628c3c06_e9b29720.jpg?itok=LSqDoKp-&v=1795621733"
+        },
+        {
+          "id": "8a48d22da8df",
+          "outlet_id": "france24",
+          "headline": "US Army detonates lead explosives in Iowa despite contamination fears",
+          "snippet": "The US Army on Wednesday blew up 5 tons of lead-based explosives at an ammunition plant in Iowa despite community backlash over fears of environmental contamination. The detonation was postponed…",
+          "url": "https://www.france24.com/en/americas/20261125-us-army-detonates-lead-explosives-iowa-despite-community-backlash",
+          "published_at": "2026-11-25T16:08:10Z",
+          "published_at_estimated": false,
+          "image_url": "https://s.france24.com/media/display/d87f18b0-e8e4-11f1-9b78-1991d4929b54/w:1024/p:16x9/063-2306835116.jpg"
+        },
+        {
+          "id": "4321c69c5f19",
+          "outlet_id": "france24",
+          "headline": "Iowa: Toxic dust fears as US Army blows up 10,000 pounds of explosives",
+          "snippet": "An enormous explosion rang out across rural Iowa Tuesday as the US military carried out the controlled detonation of some 10,000 pounds of lead azide. US officials say the material, which was once…",
+          "url": "https://www.france24.com/en/video/20261125-iowa-toxic-dust-fears-as-us-army-blows-up-10-000-pounds-of-explosives",
+          "published_at": "2026-11-25T16:14:40Z",
+          "published_at_estimated": false,
+          "image_url": "https://s.france24.com/media/display/16b2359e-e8eb-11f1-8c75-95e072ff0a91/w:1024/p:16x9/Iowa-thumbnail.jpg"
+        },
+        {
+          "id": "21a44fb7a413",
+          "outlet_id": "axios",
+          "headline": "Army detonates Iowa explosives amid toxic lead fears",
+          "snippet": "The Army detonated 68 drums of unstable lead azide on an Iowa plant Wednesday after multiple delays, a court challenge and presidential intervention. The big picture: Elected officials slammed the…",
+          "url": "https://www.axios.com/2026/11/25/iowa-army-lead-detonation",
+          "published_at": "2026-11-25T16:16:41Z",
+          "published_at_estimated": false,
+          "image_url": "https://images.axios.com/YfagGyyx7ynLEUEeBmXLGayzPzE=/0x0:4399x2474/1366x768/2026/11/24/1795554200626.jpeg"
+        },
+        {
+          "id": "a660f04bfa80",
+          "outlet_id": "aljazeera",
+          "headline": "US Army detonates nearly five tonnes of toxic explosives in Iowa",
+          "snippet": "The US Army has carried out a controlled blast of nearly five tonnes of deteriorating lead azide at a military plant.",
+          "url": "https://www.aljazeera.com/video/newsfeed/2026/11/25/us-army-detonates-nearly-five-tonnes-of-toxic-explosives-in-iowa",
+          "published_at": "2026-11-25T16:22:04Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "b07c92b02097",
+          "outlet_id": "guardian",
+          "headline": "US army calls Iowa lead detonation a ‘huge success’ and says threat of spontaneous explosions has been ‘eliminated’ – live",
+          "snippet": "Army detonates 68 barrels containing nearly 9,500lbs of lead azide despite public concern about potential health and environmental effects Smoke seen from a mile away as army detonates bomb-making…",
+          "url": "https://www.theguardian.com/us-news/live/2026/nov/25/iowa-lead-azide-detonation-army-explosion-bomb-live-updates",
+          "published_at": "2026-11-25T16:30:08Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.guim.co.uk/img/media/0fcf154781a9c5157d16068123164b527040fcc0/367_0_1833_1466/master/1833.jpg?width=460&quality=85&auto=format&fit=max&s=9527a1b53f5ab1a7e515cfe74054dead"
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "The US Army detonated roughly five tons (nearly 10,000lbs, or about 4,500kg) of degraded, unstable lead azide in Iowa.",
+          "sources": [
+            "9218bf7bbf82",
+            "d0adb1007ccd",
+            "8e6c65cd7131",
+            "db088c36deff",
+            "cfbf18f810dc",
+            "0699119cf56f",
+            "a660f04bfa80",
+            "7a6e9b96eaa2",
+            "8a48d22da8df",
+            "4321c69c5f19",
+            "21a44fb7a413",
+            "b07c92b02097"
+          ]
+        },
+        {
+          "text": "Before the blast, the Army planned to detonate about 5 tons or 10,000 pounds of the material.",
+          "sources": [
+            "b8d20bffe772",
+            "5c816ffb1b68",
+            "c17b491a147f"
+          ]
+        },
+        {
+          "text": "The material was held in more than 60 barrels or drums, given as 68 by two outlets.",
+          "sources": [
+            "9218bf7bbf82",
+            "21a44fb7a413",
+            "b07c92b02097"
+          ]
+        },
+        {
+          "text": "The detonation took place at an ammunition plant.",
+          "sources": [
+            "9218bf7bbf82",
+            "7a6e9b96eaa2",
+            "8a48d22da8df",
+            "21a44fb7a413",
+            "a660f04bfa80"
+          ]
+        },
+        {
+          "text": "The blast went ahead amid fears of toxic lead fallout or environmental contamination.",
+          "sources": [
+            "d0adb1007ccd",
+            "5c816ffb1b68",
+            "0699119cf56f",
+            "db088c36deff",
+            "923d11c9a5e6",
+            "8a48d22da8df",
+            "4321c69c5f19",
+            "21a44fb7a413",
+            "b07c92b02097",
+            "c17b491a147f"
+          ]
+        },
+        {
+          "text": "Marjorie Taylor Greene publicly attacked the detonation.",
+          "sources": [
+            "acf8734ad5ce",
+            "c17b491a147f"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "d0adb1007ccd",
+              "quote": "toxic plume expected to spread across Iowa",
+              "field": "headline"
+            },
+            {
+              "article_id": "b07c92b02097",
+              "quote": "US army calls Iowa lead detonation a ‘huge success’",
+              "field": "headline"
+            },
+            {
+              "article_id": "acf8734ad5ce",
+              "quote": "NASA chief shreds Marjorie Taylor Greene after she denies Moon landing",
+              "field": "headline"
+            },
+            {
+              "article_id": "cfbf18f810dc",
+              "quote": "residents waiting for environmental impacts",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the spread of a toxic plume, which NBC says could travel hundreds of miles.",
+              "sources": [
+                "d0adb1007ccd",
+                "923d11c9a5e6"
+              ]
+            },
+            {
+              "text": "Reports official claims of success, including the Army saying the threat was eliminated and Trump saying the blast exceeded expectations.",
+              "sources": [
+                "b07c92b02097",
+                "cfbf18f810dc"
+              ]
+            },
+            {
+              "text": "Covers the NASA administrator rebuking Marjorie Taylor Greene over her 'Chernobyl event' warning.",
+              "sources": [
+                "acf8734ad5ce"
+              ]
+            },
+            {
+              "text": "Explains how sensitive lead azide is to shock, heat, impact and friction, and shows footage of the smoke cloud.",
+              "sources": [
+                "db088c36deff",
+                "8e6c65cd7131"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "9218bf7bbf82",
+              "quote": "The controlled detonation of more than 60 barrels",
+              "field": "snippet"
+            },
+            {
+              "article_id": "5c816ffb1b68",
+              "quote": "local residents were urged to evacuate",
+              "field": "snippet"
+            },
+            {
+              "article_id": "8a48d22da8df",
+              "quote": "despite community backlash over fears of environmental contamination",
+              "field": "snippet"
+            },
+            {
+              "article_id": "21a44fb7a413",
+              "quote": "after multiple delays, a court challenge and presidential intervention",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the detonation as controlled and complete.",
+              "sources": [
+                "9218bf7bbf82",
+                "4321c69c5f19"
+              ]
+            },
+            {
+              "text": "Foregrounds community backlash, contamination fears and calls for residents to evacuate.",
+              "sources": [
+                "5c816ffb1b68",
+                "8a48d22da8df",
+                "4321c69c5f19"
+              ]
+            },
+            {
+              "text": "Notes the delays, a court challenge, presidential intervention and criticism from elected officials.",
+              "sources": [
+                "21a44fb7a413",
+                "8a48d22da8df"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "right",
+          "headline_quotes": [
+            {
+              "article_id": "b8d20bffe772",
+              "quote": "an unprecedented effort to prevent an uncontrolled explosion",
+              "field": "snippet"
+            },
+            {
+              "article_id": "c17b491a147f",
+              "quote": "Marjorie Taylor Greene slams Trump over 'dirty bomb in Iowa'",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Cites military officials describing the detonation as an unprecedented effort to prevent an uncontrolled explosion.",
+              "sources": [
+                "b8d20bffe772"
+              ]
+            },
+            {
+              "text": "Foregrounds Marjorie Taylor Greene calling for Trump and Pete Hegseth to be locked up over the planned detonation.",
+              "sources": [
+                "c17b491a147f"
+              ]
+            },
+            {
+              "text": "Reports the detonation as planned rather than completed.",
+              "sources": [
+                "b8d20bffe772",
+                "c17b491a147f"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "right",
+          "text": "Right-leaning coverage does not report that the detonation took place or that officials called it a success.",
+          "sources": [
+            "b07c92b02097",
+            "cfbf18f810dc",
+            "9218bf7bbf82",
+            "21a44fb7a413"
+          ]
+        },
+        {
+          "lean": "right",
+          "text": "Right-leaning coverage does not mention the delays or the court challenge.",
+          "sources": [
+            "21a44fb7a413",
+            "8a48d22da8df"
+          ]
+        },
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not mention Marjorie Taylor Greene's criticism of the detonation.",
+          "sources": [
+            "acf8734ad5ce",
+            "c17b491a147f"
+          ]
+        },
+        {
+          "lean": "left",
+          "text": "Left-leaning coverage does not mention the court challenge or that residents were urged to evacuate.",
+          "sources": [
+            "21a44fb7a413",
+            "5c816ffb1b68"
+          ]
+        }
+      ],
+      "contested_claims": [
+        {
+          "claim": "The detonation took place on Tuesday.",
+          "asserted_by": [
+            "4321c69c5f19"
+          ],
+          "disputed_by": [
+            "d0adb1007ccd",
+            "8e6c65cd7131",
+            "21a44fb7a413",
+            "7a6e9b96eaa2"
+          ]
+        }
+      ],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "d0adb1007ccd",
+              "quote": "toxic plume expected to spread across Iowa",
+              "field": "headline"
+            },
+            {
+              "article_id": "b07c92b02097",
+              "quote": "threat of spontaneous explosions has been ‘eliminated’",
+              "field": "headline"
+            },
+            {
+              "article_id": "c17b491a147f",
+              "quote": "Marjorie Taylor Greene slams Trump over 'dirty bomb in Iowa'",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Covers domestic political reaction, including Marjorie Taylor Greene, Trump, a court challenge and elected officials.",
+              "sources": [
+                "c17b491a147f",
+                "acf8734ad5ce",
+                "cfbf18f810dc",
+                "21a44fb7a413"
+              ]
+            },
+            {
+              "text": "Reports official claims of success alongside fears of a toxic plume.",
+              "sources": [
+                "b07c92b02097",
+                "cfbf18f810dc",
+                "d0adb1007ccd",
+                "923d11c9a5e6"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "0699119cf56f",
+              "quote": "fears of toxic fallout affecting residents, farms and livestock",
+              "field": "snippet"
+            },
+            {
+              "article_id": "7a6e9b96eaa2",
+              "quote": "officials warned the material was too unstable to move",
+              "field": "snippet"
+            },
+            {
+              "article_id": "a660f04bfa80",
+              "quote": "a controlled blast of nearly five tonnes of deteriorating lead azide",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Emphasises health fears for residents, farms and livestock.",
+              "sources": [
+                "0699119cf56f"
+              ]
+            },
+            {
+              "text": "Reports officials' explanation that the material was too unstable to move, and attributes the details to media reports.",
+              "sources": [
+                "7a6e9b96eaa2"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "The US Army carried out a controlled detonation of roughly five tons (about 10,000lbs, or 4,500kg) of unstable, degraded lead azide at an ammunition plant in Iowa. The blast went ahead despite fears of toxic lead fallout. Officials called it a success, and Marjorie Taylor Greene criticised it.",
+        "sources": [
+          "9218bf7bbf82",
+          "8e6c65cd7131",
+          "0699119cf56f",
+          "a660f04bfa80",
+          "7a6e9b96eaa2",
+          "8a48d22da8df",
+          "4321c69c5f19",
+          "b07c92b02097",
+          "cfbf18f810dc",
+          "c17b491a147f",
+          "acf8734ad5ce",
+          "d0adb1007ccd"
+        ]
+      },
+      "conclusion": {
+        "text": "All sides report the detonation of about five tons of unstable lead azide in Iowa amid toxic-fallout fears. Left outlets add official success claims and Greene, centre outlets the delays and court challenge, right outlets the planned blast and Greene, and Eastern outlets the risks to farms. One outlet dates the blast to Tuesday, while others say Wednesday.",
+        "sources": [
+          "9218bf7bbf82",
+          "0699119cf56f",
+          "7a6e9b96eaa2",
+          "b07c92b02097",
+          "acf8734ad5ce",
+          "21a44fb7a413",
+          "b8d20bffe772",
+          "c17b491a147f",
+          "4321c69c5f19",
+          "d0adb1007ccd"
+        ]
+      },
+      "validation": {
+        "kept": 43,
+        "dropped_by_reason": {}
+      }
+    },
+    {
+      "id": "598b72758886",
+      "title": "Two men charged over break-in at William and Kate's Norfolk home",
+      "rank": 4,
+      "outlet_count": 6,
+      "coverage": {
+        "lean": {
+          "left": 3,
+          "centre": 1,
+          "right": 1
+        },
+        "bloc": {
+          "west": 5,
+          "east": 1
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "c503e3f0c067",
+          "outlet_id": "huffpost",
+          "headline": "2 Men Arrested Over Suspected Burglary At UK Royal Family’s Sandringham Estate",
+          "snippet": "The arrests follow a reported break-in at the country residence of Prince William and Princess Catherine on Monday night.",
+          "url": "https://www.huffpost.com/entry/sandringham-estate-break-in-robbery-prince-william-royals_n_6b058da9e4b0da866ee3db9d",
+          "published_at": "2026-11-24T13:25:32Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "46cd5ccf3b61",
+          "outlet_id": "nyt",
+          "headline": "Prince William and Kate’s Country Home Is Broken Into; 2 Men Arrested",
+          "snippet": "The men were arrested near Anmer Hall, the couple’s country retreat in Norfolk, on Monday night.",
+          "url": "https://www.nytimes.com/2026/11/24/world/europe/prince-william-kate-home-break-in-anmer-hall-uk.html",
+          "published_at": "2026-11-24T16:31:07Z",
+          "published_at_estimated": false,
+          "image_url": "https://static01.nyt.com/images/2026/11/24/world/24int-UK-ROYALS-BREAK-IN-bbbb/24int-UK-ROYALS-BREAK-IN-bbbb-mediumSquareAt3X.jpg"
+        },
+        {
+          "id": "021d697d0ce1",
+          "outlet_id": "sky",
+          "headline": "Two men appear in court accused of stealing cufflinks and a clock from William and Kate's home",
+          "snippet": "Two men have appeared in court accused of stealing cufflinks and a clock from the Norfolk home of the Prince and Princess of Wales.",
+          "url": "https://news.sky.com/story/two-men-charged-over-suspected-burglary-at-william-and-kates-norfolk-home-13616311",
+          "published_at": "2026-11-25T09:42:00Z",
+          "published_at_estimated": false,
+          "image_url": "https://e3.365dm.com/26/11/1920x1080/skynews-anmer-hall-sandringham_7415198.jpg?20261124113720"
+        },
+        {
+          "id": "d1305a6047bb",
+          "outlet_id": "nbc",
+          "headline": "2 men charged with burglary after break-in at Prince William and Princess Kate’s country home",
+          "snippet": "Two men have been charged in connection with a burglary at the Sandringham estate, police said, after a reported break-in at the home of Prince William and Kate.",
+          "url": "https://www.nbcnews.com/world/united-kingdom/prince-william-princess-kate-break-in-sandringham-estate-charges-rcna611159",
+          "published_at": "2026-11-25T10:04:51Z",
+          "published_at_estimated": false,
+          "image_url": "https://media-cldnry.s-nbcnews.com/image/upload/t_fit_1500w/rockcms/2026-11/261125-royal-burglars-mb-1635-222ab8.jpg"
+        },
+        {
+          "id": "146d4f2957d3",
+          "outlet_id": "nbc",
+          "headline": "New Details Emerge on Break-In at William and Kate’s Home",
+          "snippet": "Two men have been charged with burglary and trespassing after a rare and massive security breach at Prince William and Kate Middleton’s Sandringham estate. The couple and their three children were…",
+          "url": "https://www.today.com/video/new-details-emerge-on-break-in-at-william-and-kate-s-home-274155589878",
+          "published_at": "2026-11-25T12:45:58Z",
+          "published_at_estimated": false,
+          "image_url": "https://media-cldnry.s-nbcnews.com/image/upload/t_fit_1500w/mpx/2704722219/2026_11/1795610752888_tdy_news_7a_hamamdjian_royal_break_in_261125_S3_1920x1080-49v2ox.jpg"
+        },
+        {
+          "id": "8c08250c104f",
+          "outlet_id": "thehindu",
+          "headline": "UK police charge two men over a break-in at Prince William and Princess Catherine’s country home",
+          "snippet": "Anmer Hall, a 10-bedroom house on the Sandringham estate, was a wedding present to the couple from the late Queen Elizabeth II",
+          "url": "https://www.thehindu.com/news/international/uk-police-charge-two-men-over-a-break-in-at-prince-william-and-princess-catherines-country-home/article71742079.ece",
+          "published_at": "2026-11-25T13:17:35Z",
+          "published_at_estimated": false,
+          "image_url": "https://th-i.thgim.com/public/incoming/nip3cn/article71742153.ece/alternates/LANDSCAPE_1200/PTI11_17_2026_000184A.jpg"
+        },
+        {
+          "id": "dbda54a6c79e",
+          "outlet_id": "nyt",
+          "headline": "2 Men Charged After Break-In at Prince William and Kate’s Country Home",
+          "snippet": "Prosecutors said the two men, who appeared in court on Wednesday, had climbed a drainpipe to break into the royals’ country retreat in Norfolk.",
+          "url": "https://www.nytimes.com/2026/11/25/world/europe/prince-william-kate-home-break-in-charged.html",
+          "published_at": "2026-11-25T14:37:26Z",
+          "published_at_estimated": false,
+          "image_url": "https://static01.nyt.com/images/2026/11/25/multimedia/25int-uk-royals-break-in-mfgl/25int-uk-royals-break-in-mfgl-mediumSquareAt3X.jpg"
+        },
+        {
+          "id": "1f983b604f5b",
+          "outlet_id": "examiner",
+          "headline": "Two men charged with burglary and trespassing on British royal estate",
+          "snippet": "Two men were charged with burglary and trespassing on the British royal family’s estate after a reported break-in at Prince William and Princess Kate’s country home this week. British police…",
+          "url": "https://www.washingtonexaminer.com/news/crime/4814961/two-men-charged-burglary-trespassing-british-royal-estate/",
+          "published_at": "2026-11-25T15:32:16Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.washingtonexaminer.com/wp-content/uploads/2026/11/AP26293427753389.jpg?w=1024"
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "Two men were charged or accused over a break-in at the country home of Prince William and Kate.",
+          "sources": [
+            "d1305a6047bb",
+            "146d4f2957d3",
+            "8c08250c104f",
+            "dbda54a6c79e",
+            "1f983b604f5b",
+            "021d697d0ce1"
+          ]
+        },
+        {
+          "text": "The two men were first arrested, with the break-in and arrests reported on Monday night.",
+          "sources": [
+            "c503e3f0c067",
+            "46cd5ccf3b61"
+          ]
+        },
+        {
+          "text": "The charges include burglary, and two reports also cite trespassing.",
+          "sources": [
+            "d1305a6047bb",
+            "146d4f2957d3",
+            "1f983b604f5b"
+          ]
+        },
+        {
+          "text": "The home is on the Sandringham estate in Norfolk and is named as Anmer Hall.",
+          "sources": [
+            "c503e3f0c067",
+            "d1305a6047bb",
+            "146d4f2957d3",
+            "8c08250c104f",
+            "46cd5ccf3b61",
+            "021d697d0ce1",
+            "dbda54a6c79e"
+          ]
+        },
+        {
+          "text": "The two men appeared in court.",
+          "sources": [
+            "021d697d0ce1",
+            "dbda54a6c79e"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "46cd5ccf3b61",
+              "quote": "Prince William and Kate’s Country Home Is Broken Into; 2 Men Arrested",
+              "field": "headline"
+            },
+            {
+              "article_id": "146d4f2957d3",
+              "quote": "a rare and massive security breach",
+              "field": "snippet"
+            },
+            {
+              "article_id": "dbda54a6c79e",
+              "quote": "had climbed a drainpipe to break into the royals’ country retreat",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the arrests and charges, and describes the incident as a rare and massive security breach.",
+              "sources": [
+                "c503e3f0c067",
+                "46cd5ccf3b61",
+                "d1305a6047bb",
+                "146d4f2957d3"
+              ]
+            },
+            {
+              "text": "Reports the prosecutors' account that the men climbed a drainpipe to enter the house.",
+              "sources": [
+                "dbda54a6c79e"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "021d697d0ce1",
+              "quote": "accused of stealing cufflinks and a clock",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the court appearance and the items allegedly stolen, cufflinks and a clock.",
+              "sources": [
+                "021d697d0ce1"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "right",
+          "headline_quotes": [
+            {
+              "article_id": "1f983b604f5b",
+              "quote": "Two men charged with burglary and trespassing on British royal estate",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the burglary and trespassing charges on the British royal family's estate.",
+              "sources": [
+                "1f983b604f5b"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "right",
+          "text": "Right-leaning coverage does not mention the men's court appearance.",
+          "sources": [
+            "021d697d0ce1",
+            "dbda54a6c79e"
+          ]
+        },
+        {
+          "lean": "left",
+          "text": "Left-leaning coverage does not mention the items allegedly stolen, cufflinks and a clock.",
+          "sources": [
+            "021d697d0ce1"
+          ]
+        },
+        {
+          "lean": "right",
+          "text": "Right-leaning coverage does not mention the items allegedly stolen, cufflinks and a clock.",
+          "sources": [
+            "021d697d0ce1"
+          ]
+        }
+      ],
+      "contested_claims": [],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "021d697d0ce1",
+              "quote": "Two men appear in court",
+              "field": "headline"
+            },
+            {
+              "article_id": "146d4f2957d3",
+              "quote": "a rare and massive security breach",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Focuses on the arrests, charges, court appearance, alleged stolen items and method of entry.",
+              "sources": [
+                "c503e3f0c067",
+                "46cd5ccf3b61",
+                "021d697d0ce1",
+                "d1305a6047bb",
+                "146d4f2957d3",
+                "dbda54a6c79e",
+                "1f983b604f5b"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "8c08250c104f",
+              "quote": "UK police charge two men over a break-in",
+              "field": "headline"
+            },
+            {
+              "article_id": "8c08250c104f",
+              "quote": "was a wedding present to the couple from the late Queen Elizabeth II",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Adds background on Anmer Hall as a 10-bedroom house given to the couple as a wedding present by the late Queen Elizabeth II.",
+              "sources": [
+                "8c08250c104f"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "Two men were arrested and then charged with burglary and trespassing after a reported break-in at the Norfolk country home of Prince William and Kate on the Sandringham estate. They appeared in court accused of stealing cufflinks and a clock, and prosecutors said they climbed a drainpipe to get in.",
+        "sources": [
+          "c503e3f0c067",
+          "46cd5ccf3b61",
+          "d1305a6047bb",
+          "146d4f2957d3",
+          "1f983b604f5b",
+          "021d697d0ce1",
+          "dbda54a6c79e",
+          "8c08250c104f"
+        ]
+      },
+      "conclusion": {
+        "text": "Coverage agrees that two men were charged over a break-in at William and Kate's Sandringham estate home in Norfolk. Left-leaning outlets stress the arrests and security breach, the centre outlet the stolen cufflinks and clock, the right outlet the charges, and the East outlet the house's history; no claims are disputed.",
+        "sources": [
+          "c503e3f0c067",
+          "46cd5ccf3b61",
+          "d1305a6047bb",
+          "146d4f2957d3",
+          "dbda54a6c79e",
+          "021d697d0ce1",
+          "1f983b604f5b",
+          "8c08250c104f"
+        ]
+      },
+      "validation": {
+        "kept": 25,
+        "dropped_by_reason": {}
+      }
+    },
+    {
+      "id": "f02ab4a70aa5",
+      "title": "China launches Shenzhou-24 carrying first Pakistani astronaut to Tiangong",
+      "rank": 5,
+      "outlet_count": 6,
+      "coverage": {
+        "lean": {
+          "left": 1,
+          "centre": 2,
+          "right": 0
+        },
+        "bloc": {
+          "west": 3,
+          "east": 3
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "4e2f73c549a4",
+          "outlet_id": "cgtn",
+          "headline": "China, Pakistan to conduct cooperative space station experiments",
+          "snippet": "",
+          "url": "https://news.cgtn.com/news/2026-11-24/China-Pakistan-to-conduct-cooperative-space-station-experiments-1SkkaMDlZnO/p.html",
+          "published_at": "2026-11-24T05:39:11Z",
+          "published_at_estimated": false,
+          "image_url": "https://news.cgtn.com/news/2026-11-24/China-Pakistan-to-conduct-cooperative-space-station-experiments-1SkkaMDlZnO/img/cd4730d48e2840a4a1312a063f2ea5ed/cd4730d48e2840a4a1312a063f2ea5ed-750.png"
+        },
+        {
+          "id": "c726bbb50195",
+          "outlet_id": "cgtn",
+          "headline": "Shenzhou-24 mission to conduct over 90 space experiments, tests",
+          "snippet": "",
+          "url": "https://news.cgtn.com/news/2026-11-24/Shenzhou-24-mission-to-conduct-over-90-space-experiments-tests-1SkXDJgksAo/p.html",
+          "published_at": "2026-11-24T12:32:18Z",
+          "published_at_estimated": false,
+          "image_url": "https://news.cgtn.com/news/2026-11-24/Shenzhou-24-mission-to-conduct-over-90-space-experiments-tests-1SkXDJgksAo/img/5a75b4823f854e8eb85b97dd21e1bb46/5a75b4823f854e8eb85b97dd21e1bb46-1920.png"
+        },
+        {
+          "id": "294f1d4211a1",
+          "outlet_id": "cgtn",
+          "headline": "Astronauts board Shenzhou-24, take off in about 2 hours",
+          "snippet": "",
+          "url": "https://newsus.cgtn.com/news/2026-11-25/Astronauts-board-Shenzhou-24-take-off-in-about-2-hours-1SlEJYGuV2M/p.html",
+          "published_at": "2026-11-24T22:10:36Z",
+          "published_at_estimated": false,
+          "image_url": "https://newsus.cgtn.com/news/2026-11-25/Astronauts-board-Shenzhou-24-take-off-in-about-2-hours-1SlEJYGuV2M/img/cd3878c335b843b3bade5c8a75923398/cd3878c335b843b3bade5c8a75923398-1280.jpeg"
+        },
+        {
+          "id": "c2fd7f7bdd08",
+          "outlet_id": "bbc",
+          "headline": "Moment Chinese space mission lifts off with first Pakistan astronaut aboard",
+          "snippet": "China launched its Shenzhou-24 space mission to bring three astronauts to its Tiangong space station.",
+          "url": "https://www.bbc.co.uk/news/videos/cmz74l0yzzvyo",
+          "published_at": "2026-11-25T03:28:37Z",
+          "published_at_estimated": false,
+          "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/4b78/live/6330c460-e889-11f1-a094-5fdc692f3e33.jpg"
+        },
+        {
+          "id": "137d44bfc0d4",
+          "outlet_id": "thehindu",
+          "headline": "China launches crewed spaceship carrying first Pakistani astronaut to its space station",
+          "snippet": "Using a Long March-2F rocket, the spacecraft took ‌off at 8:18 a.m. (0018 GMT) ‌from ⁠the Jiuquan Satellite Launch Centre ⁠in northwest China",
+          "url": "https://www.thehindu.com/sci-tech/science/chinas-shenzhou-24-space-flight-takes-off-with-pakistani-national-as-first-foreign-astronaut/article71740891.ece",
+          "published_at": "2026-11-25T06:11:02Z",
+          "published_at_estimated": false,
+          "image_url": "https://th-i.thgim.com/public/incoming/8pqbj7/article71740892.ece/alternates/LANDSCAPE_1200/China_Space_1_23_.jpg"
+        },
+        {
+          "id": "396b7b1f91a8",
+          "outlet_id": "ecns",
+          "headline": "Shenzhou-24 crewed spacecraft launches successfully",
+          "snippet": "The Long March-2F Y24 rocket carrying the Shenzhou-24 crewed spacecraft lifted off from the Jiuquan Satellite Launch Center at 8:18 a.m. (Beijing time) on Nov. 25, the China Manned Space Agency…",
+          "url": "https://www.ecns.cn/cns-wire/2026-11-25/detail-ihfnkzcu9654475.shtml",
+          "published_at": "2026-11-25T10:19:57Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "0a2f9e5a8999",
+          "outlet_id": "ecns",
+          "headline": "China Space Station to host four China-Pakistan joint experiments for first time",
+          "snippet": "Four China-Pakistan joint scientific experiments will be conducted aboard China's space station for the first time during the mission after China's Shenzhou-24 crewed spacecraft was successfully…",
+          "url": "https://www.ecns.cn/news/sci-tech/2026-11-25/detail-ihfnkzcu9654774.shtml",
+          "published_at": "2026-11-25T13:40:57Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "46a4a0491f5b",
+          "outlet_id": "france24",
+          "headline": "'Historic' space mission: China launches Shenzhou 24 spacecraft carrying Pakistani astronaut",
+          "snippet": "China on Wednesday launched the Shenzhou 24 spacecraft with three astronauts — two Chinese and a Pakistani — sending the first foreign crew member to its space station. It successfully separated…",
+          "url": "https://www.france24.com/en/video/20261125-historic-space-mission-china-launches-shenzhou-24-spacecraft-carrying-pakistani-astronaut",
+          "published_at": "2026-11-25T14:06:08Z",
+          "published_at_estimated": false,
+          "image_url": "https://s.france24.com/media/display/449a6020-e8d8-11f1-a096-95e072ff0a91/w:1024/p:16x9/EN-20261125-141831-142012-CS.jpg"
+        },
+        {
+          "id": "e95fd5485e71",
+          "outlet_id": "guardian",
+          "headline": "China sends first foreign astronaut to ISS rival as it globalises space operations",
+          "snippet": "Muhammad Zeeshan Ali – the first Pakistani to reach orbit – greeted with Chinese ‘space handshake’ at Tiangong station China has flown the first foreign astronaut to its Tiangong space station…",
+          "url": "https://www.theguardian.com/science/2026/nov/25/china-sends-first-pakistani-astronaut-into-space",
+          "published_at": "2026-11-25T14:18:29Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.guim.co.uk/img/media/04f173935b2839f52dc33177838a3752879697b5/537_46_4868_3895/master/4868.jpg?width=460&quality=85&auto=format&fit=max&s=d4685bb4e14ccf811196df1b2882b606"
+        },
+        {
+          "id": "cf6089fd4840",
+          "outlet_id": "ecns",
+          "headline": "China-Pakistan space mission marks new milestone in bilateral ties: FM spokesperson",
+          "snippet": "\"The joint mission of the Pakistani astronaut and the Chinese crew to Tiangong space station will be yet another important milestone in the all-weather strategic cooperative partnership,\" Chinese…",
+          "url": "https://www.ecns.cn/news/politics/2026-11-25/detail-ihfnkzcu9654934.shtml",
+          "published_at": "2026-11-25T15:42:20Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "49b0710d64bf",
+          "outlet_id": "ecns",
+          "headline": "Chinese astronaut to attempt one-year stay in orbit",
+          "snippet": "China's Shenzhou-24 spaceship lifted off Wednesday from the Jiuquan Satellite Launch Center, with one Chinese astronaut set to stay in orbit for a year, a first for China.",
+          "url": "https://www.ecns.cn/cns-wire/2026-11-25/detail-ihfnkzcu9655086.shtml",
+          "published_at": "2026-11-25T17:39:56Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "0d0b7b880304",
+          "outlet_id": "ecns",
+          "headline": "Different cultures, a shared dream: Chinese astronaut on historic joint space mission",
+          "snippet": "After six months of training together, Chinese and Pakistani astronauts have learned to work across language and cultural barriers and anticipate each other's actions, Chinese astronaut Wu Yi said…",
+          "url": "https://www.ecns.cn/cns-wire/2026-11-25/detail-ihfnkzcu9655195.shtml",
+          "published_at": "2026-11-25T18:10:11Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "43fb7b77cf96",
+          "outlet_id": "ecns",
+          "headline": "China successfully launches Shenzhou-24 spaceship to Tiangong space station",
+          "snippet": "China launched the Shenzhou-24 crewed spaceship on Wednesday, sending three astronauts, including a Pakistani payload specialist, to its orbiting Tiangong space station.",
+          "url": "https://www.ecns.cn/photo/2026-11-25/detail-ihfnkzcu9655242.shtml",
+          "published_at": "2026-11-25T18:18:39Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "6b22c4a38257",
+          "outlet_id": "ecns",
+          "headline": "Xi says joint space exploration by Chinese, Pakistani astronauts vivid embodiment of deep-rooted friendship",
+          "snippet": "Chinese President Xi Jinping said on Wednesday that the joint space exploration by astronauts from China and Pakistan is a vivid embodiment of the deep-rooted friendship between the two countries.",
+          "url": "https://www.ecns.cn/news/sci-tech/2026-11-25/detail-ihfnkzcu9655691.shtml",
+          "published_at": "2026-11-25T20:10:57Z",
+          "published_at_estimated": false,
+          "image_url": null
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "China launched Shenzhou-24 carrying the first Pakistani astronaut to its Tiangong space station.",
+          "sources": [
+            "c2fd7f7bdd08",
+            "137d44bfc0d4",
+            "46a4a0491f5b",
+            "e95fd5485e71",
+            "43fb7b77cf96"
+          ]
+        },
+        {
+          "text": "The mission carries three astronauts, two Chinese and one Pakistani.",
+          "sources": [
+            "c2fd7f7bdd08",
+            "46a4a0491f5b",
+            "43fb7b77cf96"
+          ]
+        },
+        {
+          "text": "The Long March-2F rocket lifted off from the Jiuquan Satellite Launch Centre at 8:18 a.m. Beijing time.",
+          "sources": [
+            "137d44bfc0d4",
+            "396b7b1f91a8"
+          ]
+        },
+        {
+          "text": "The Pakistani astronaut is the first foreign crew member to fly to China's space station.",
+          "sources": [
+            "46a4a0491f5b",
+            "e95fd5485e71"
+          ]
+        },
+        {
+          "text": "China and Pakistan are to conduct joint experiments aboard the space station.",
+          "sources": [
+            "4e2f73c549a4",
+            "0a2f9e5a8999"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "e95fd5485e71",
+              "quote": "China sends first foreign astronaut to ISS rival as it globalises space operations",
+              "field": "headline"
+            },
+            {
+              "article_id": "e95fd5485e71",
+              "quote": "greeted with Chinese ‘space handshake’ at Tiangong station",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Presents Tiangong as a rival to the ISS and the mission as part of China globalising its space operations.",
+              "sources": [
+                "e95fd5485e71"
+              ]
+            },
+            {
+              "text": "Names the astronaut, Muhammad Zeeshan Ali, as the first Pakistani to reach orbit.",
+              "sources": [
+                "e95fd5485e71"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "46a4a0491f5b",
+              "quote": "'Historic' space mission",
+              "field": "headline"
+            },
+            {
+              "article_id": "c2fd7f7bdd08",
+              "quote": "Moment Chinese space mission lifts off with first Pakistan astronaut aboard",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the launch moment and the presence of the first Pakistani astronaut.",
+              "sources": [
+                "c2fd7f7bdd08",
+                "46a4a0491f5b"
+              ]
+            },
+            {
+              "text": "Describes the crew as three astronauts, two Chinese and one Pakistani, and notes successful separation.",
+              "sources": [
+                "46a4a0491f5b"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "left",
+          "text": "Left coverage does not mention that the mission carries three astronauts.",
+          "sources": [
+            "c2fd7f7bdd08",
+            "46a4a0491f5b"
+          ]
+        },
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not name the Pakistani astronaut.",
+          "sources": [
+            "e95fd5485e71"
+          ]
+        }
+      ],
+      "contested_claims": [],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "e95fd5485e71",
+              "quote": "ISS rival",
+              "field": "headline"
+            },
+            {
+              "article_id": "46a4a0491f5b",
+              "quote": "'Historic' space mission",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Focuses on the launch and the first foreign astronaut, with one outlet framing Tiangong as an ISS rival.",
+              "sources": [
+                "c2fd7f7bdd08",
+                "46a4a0491f5b",
+                "e95fd5485e71"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "cf6089fd4840",
+              "quote": "China-Pakistan space mission marks new milestone in bilateral ties",
+              "field": "headline"
+            },
+            {
+              "article_id": "6b22c4a38257",
+              "quote": "vivid embodiment of deep-rooted friendship",
+              "field": "headline"
+            },
+            {
+              "article_id": "c726bbb50195",
+              "quote": "Shenzhou-24 mission to conduct over 90 space experiments, tests",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Emphasises China-Pakistan friendship and bilateral ties, citing President Xi Jinping and the foreign ministry spokesperson.",
+              "sources": [
+                "cf6089fd4840",
+                "6b22c4a38257"
+              ]
+            },
+            {
+              "text": "Highlights the scientific programme, including over 90 experiments and four joint China-Pakistan experiments.",
+              "sources": [
+                "c726bbb50195",
+                "0a2f9e5a8999",
+                "4e2f73c549a4"
+              ]
+            },
+            {
+              "text": "Reports that one Chinese astronaut will attempt a one-year stay in orbit, a first for China.",
+              "sources": [
+                "49b0710d64bf"
+              ]
+            },
+            {
+              "text": "Features joint training across language and cultural barriers, as described by Chinese astronaut Wu Yi.",
+              "sources": [
+                "0d0b7b880304"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "China launched the Shenzhou-24 crewed spacecraft on Wednesday from the Jiuquan Satellite Launch Centre on a Long March-2F rocket. It carried three astronauts, two Chinese and one Pakistani, to its Tiangong space station, making the Pakistani the station's first foreign crew member.",
+        "sources": [
+          "c2fd7f7bdd08",
+          "137d44bfc0d4",
+          "396b7b1f91a8",
+          "46a4a0491f5b",
+          "e95fd5485e71",
+          "43fb7b77cf96",
+          "49b0710d64bf"
+        ]
+      },
+      "conclusion": {
+        "text": "All coverage agrees China launched Shenzhou-24 carrying the first Pakistani astronaut to Tiangong. Western outlets frame it as historic, one as an ISS rival. Eastern outlets stress bilateral friendship, joint experiments and a one-year stay. No claims are contested or contradicted.",
+        "sources": [
+          "c2fd7f7bdd08",
+          "46a4a0491f5b",
+          "e95fd5485e71",
+          "137d44bfc0d4",
+          "43fb7b77cf96",
+          "cf6089fd4840",
+          "6b22c4a38257",
+          "0a2f9e5a8999",
+          "49b0710d64bf"
+        ]
+      },
+      "validation": {
+        "kept": 27,
+        "dropped_by_reason": {}
+      }
+    },
+    {
+      "id": "15874ba5c78a",
+      "title": "Kilmar Abrego Garcia leaves the US and arrives in Spain",
+      "rank": 6,
+      "outlet_count": 6,
+      "coverage": {
+        "lean": {
+          "left": 3,
+          "centre": 1,
+          "right": 0
+        },
+        "bloc": {
+          "west": 4,
+          "east": 2
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "a1ac2552f4e9",
+          "outlet_id": "guardian",
+          "headline": "Kilmar Ábrego García, man at center of Trump deportation battle, leaves US",
+          "snippet": "Salvadorian man, who was deported in March 2025 and returned to US after supreme court ruling, leaving of own volition for Spain Kilmar Ábrego García has left the United States of his own volition…",
+          "url": "https://www.theguardian.com/us-news/2026/nov/24/kilmar-abrego-garcia-leaves-us",
+          "published_at": "2026-11-24T23:50:31Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.guim.co.uk/img/media/15d0ddecd877f6d5df4f8e4c21bb5be5961696ea/1245_0_4004_3203/master/4004.jpg?width=460&quality=85&auto=format&fit=max&s=ba33faf0d11e4e7492fb14a1df424729"
+        },
+        {
+          "id": "6ec7315236bf",
+          "outlet_id": "nbc",
+          "headline": "Kilmar Abrego Garcia lands in Spain a ‘free man’ after deportation battle",
+          "snippet": "Kilmar Abrego Garcia has landed in Spain after leaving the United States at the end of a closely watched and controversial deportation battle that became a symbol for the Trump administration’s…",
+          "url": "https://www.nbcnews.com/news/us-news/kilmar-abrego-garcia-rcna611215",
+          "published_at": "2026-11-24T23:55:49Z",
+          "published_at_estimated": false,
+          "image_url": "https://media-cldnry.s-nbcnews.com/image/upload/t_fit_1500w/rockcms/2025-04/250404-el-salvador-Kilmar-Abrego-Garcia-mn-0930-d43e53.jpg"
+        },
+        {
+          "id": "eee801a0031f",
+          "outlet_id": "bbc",
+          "headline": "Kilmar Ábrego García arrives in Spain, ending Trump deportation battle",
+          "snippet": "His deportation to and return from El Salvador became a flashpoint in the debate the US president's immigration agenda.",
+          "url": "https://www.bbc.co.uk/news/articles/c6808pyy5dl9o",
+          "published_at": "2026-11-25T12:42:11Z",
+          "published_at_estimated": false,
+          "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/92f9/live/30ceb970-e8cd-11f1-a094-5fdc692f3e33.jpg"
+        },
+        {
+          "id": "f2528b9c822a",
+          "outlet_id": "toi",
+          "headline": "Who is Kilmar Abrego Garcia? Salvadoran man whose deportation sparked legal battle moves to Spain",
+          "snippet": "",
+          "url": "https://timesofindia.indiatimes.com/world/us/who-is-kilmar-abrego-garcia-salvadoran-man-whose-deportation-sparked-legal-battle-moves-to-spain/articleshow/136162987.cms",
+          "published_at": "2026-11-25T13:25:45Z",
+          "published_at_estimated": false,
+          "image_url": "https://static.toiimg.com/photo/msid-136163097,imgsize-1521081.cms"
+        },
+        {
+          "id": "efaa725122c8",
+          "outlet_id": "aljazeera",
+          "headline": "Kilmar Abrego Garcia, wrongfully deported from US, arrives in Spain",
+          "snippet": "The Salvadoran national's lawyer said in a statement that it was 'a temporary departure'.",
+          "url": "https://www.aljazeera.com/news/2026/11/25/kilmar-abrego-garcia-wrongfully-deported-from-us-arrives-in-spain",
+          "published_at": "2026-11-25T15:34:59Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "82a2057d3dae",
+          "outlet_id": "independent",
+          "headline": "A timeline of key events in Kilmar Ábrego García's fight with the Trump administration",
+          "snippet": "Kilmar Ábrego García has been a focal point in the debate over President Donald Trump’s immigration policies",
+          "url": "https://www.independent.co.uk/news/world/europe/el-salvador-tennessee-maryland-chris-van-hollen-trump-b3091611.html",
+          "published_at": "2026-11-25T16:04:44Z",
+          "published_at_estimated": false,
+          "image_url": "https://static.independent.co.uk/2026/11/25/00/Deportation_Error_Abrego_Garcia__9257.jpg?width=1200&auto=webp&crop=3%3A2"
+        },
+        {
+          "id": "50f9a3d81a47",
+          "outlet_id": "guardian",
+          "headline": "Kilmar Ábrego García, target of Trump’s immigration crackdown, lands in Spain after ‘leaving happy’",
+          "snippet": "Ábrego García chose to depart from US after previously being deported to El Salvador due to ‘administrative error’ Kilmar Ábrego García, the Salvadoran national whose mistaken deportation turned him…",
+          "url": "https://www.theguardian.com/us-news/2026/nov/25/kilmar-abrego-garcia-spain",
+          "published_at": "2026-11-25T16:16:25Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.guim.co.uk/img/media/546c0ebb54136f55c3f3a18f2bb47b1e31a9cb02/68_0_2390_1912/master/2390.jpg?width=460&quality=85&auto=format&fit=max&s=8ca59878d6648ac564faa4915913e702"
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "Ábrego García has left the United States and arrived in Spain.",
+          "sources": [
+            "a1ac2552f4e9",
+            "6ec7315236bf",
+            "eee801a0031f",
+            "f2528b9c822a",
+            "efaa725122c8",
+            "50f9a3d81a47"
+          ]
+        },
+        {
+          "text": "He is a Salvadoran national.",
+          "sources": [
+            "a1ac2552f4e9",
+            "f2528b9c822a",
+            "efaa725122c8",
+            "50f9a3d81a47"
+          ]
+        },
+        {
+          "text": "His case was a deportation or legal battle with the Trump administration.",
+          "sources": [
+            "a1ac2552f4e9",
+            "6ec7315236bf",
+            "eee801a0031f",
+            "f2528b9c822a",
+            "82a2057d3dae",
+            "50f9a3d81a47"
+          ]
+        },
+        {
+          "text": "He had previously been deported to El Salvador and later returned to the US.",
+          "sources": [
+            "a1ac2552f4e9",
+            "eee801a0031f",
+            "50f9a3d81a47"
+          ]
+        },
+        {
+          "text": "His deportation is described as wrongful or mistaken.",
+          "sources": [
+            "efaa725122c8",
+            "50f9a3d81a47"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "a1ac2552f4e9",
+              "quote": "man at center of Trump deportation battle",
+              "field": "headline"
+            },
+            {
+              "article_id": "6ec7315236bf",
+              "quote": "lands in Spain a ‘free man’",
+              "field": "headline"
+            },
+            {
+              "article_id": "50f9a3d81a47",
+              "quote": "target of Trump’s immigration crackdown",
+              "field": "headline"
+            },
+            {
+              "article_id": "82a2057d3dae",
+              "quote": "fight with the Trump administration",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with his departure being of his own choosing.",
+              "sources": [
+                "a1ac2552f4e9",
+                "50f9a3d81a47"
+              ]
+            },
+            {
+              "text": "Describes his case as a symbol or focal point of Trump's immigration policies.",
+              "sources": [
+                "6ec7315236bf",
+                "82a2057d3dae",
+                "50f9a3d81a47"
+              ]
+            },
+            {
+              "text": "Attributes his earlier deportation to an 'administrative error'.",
+              "sources": [
+                "50f9a3d81a47"
+              ]
+            },
+            {
+              "text": "Notes he returned to the US after a supreme court ruling.",
+              "sources": [
+                "a1ac2552f4e9"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "eee801a0031f",
+              "quote": "ending Trump deportation battle",
+              "field": "headline"
+            },
+            {
+              "article_id": "eee801a0031f",
+              "quote": "became a flashpoint in the debate the US president's immigration agenda",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Presents his arrival in Spain as the end of the deportation battle.",
+              "sources": [
+                "eee801a0031f"
+              ]
+            },
+            {
+              "text": "Describes his case as a flashpoint in the immigration debate.",
+              "sources": [
+                "eee801a0031f"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not mention that he left the US of his own volition.",
+          "sources": [
+            "a1ac2552f4e9",
+            "50f9a3d81a47"
+          ]
+        },
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not mention the supreme court ruling that returned him to the US.",
+          "sources": [
+            "a1ac2552f4e9"
+          ]
+        }
+      ],
+      "contested_claims": [],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "a1ac2552f4e9",
+              "quote": "leaving of own volition for Spain",
+              "field": "snippet"
+            },
+            {
+              "article_id": "eee801a0031f",
+              "quote": "ending Trump deportation battle",
+              "field": "headline"
+            },
+            {
+              "article_id": "6ec7315236bf",
+              "quote": "lands in Spain a ‘free man’",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Frames the story around his fight with the Trump administration and its immigration agenda.",
+              "sources": [
+                "a1ac2552f4e9",
+                "6ec7315236bf",
+                "eee801a0031f",
+                "82a2057d3dae",
+                "50f9a3d81a47"
+              ]
+            },
+            {
+              "text": "Emphasises that he chose to depart.",
+              "sources": [
+                "a1ac2552f4e9",
+                "50f9a3d81a47"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "efaa725122c8",
+              "quote": "wrongfully deported from US, arrives in Spain",
+              "field": "headline"
+            },
+            {
+              "article_id": "efaa725122c8",
+              "quote": "'a temporary departure'",
+              "field": "snippet"
+            },
+            {
+              "article_id": "f2528b9c822a",
+              "quote": "Who is Kilmar Abrego Garcia?",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Cites his lawyer's statement describing the move as a temporary departure.",
+              "sources": [
+                "efaa725122c8"
+              ]
+            },
+            {
+              "text": "Describes his deportation as wrongful.",
+              "sources": [
+                "efaa725122c8"
+              ]
+            },
+            {
+              "text": "Profiles who he is and the legal battle his deportation sparked.",
+              "sources": [
+                "f2528b9c822a"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "Kilmar Ábrego García, a Salvadoran man at the centre of a deportation battle with the Trump administration, has left the US and arrived in Spain. He was deported to El Salvador in March 2025 and returned to the US after a supreme court ruling.",
+        "sources": [
+          "a1ac2552f4e9",
+          "6ec7315236bf",
+          "eee801a0031f",
+          "f2528b9c822a",
+          "efaa725122c8",
+          "50f9a3d81a47"
+        ]
+      },
+      "conclusion": {
+        "text": "All outlets report that Ábrego García left the US for Spain after his deportation fight. Left-leaning outlets stress his voluntary departure and Trump's immigration crackdown, the centre frames it as ending the battle, and Al Jazeera cites his lawyer calling it temporary. No outlet disputes another.",
+        "sources": [
+          "a1ac2552f4e9",
+          "6ec7315236bf",
+          "eee801a0031f",
+          "f2528b9c822a",
+          "efaa725122c8",
+          "82a2057d3dae",
+          "50f9a3d81a47"
+        ]
+      },
+      "validation": {
+        "kept": 32,
+        "dropped_by_reason": {}
+      }
+    },
+    {
+      "id": "10bcc39bbcb8",
+      "title": "Leaked data suggest Russian war deaths far higher; Kremlin declines comment",
+      "rank": 7,
+      "outlet_count": 6,
+      "coverage": {
+        "lean": {
+          "left": 3,
+          "centre": 2,
+          "right": 0
+        },
+        "bloc": {
+          "west": 5,
+          "east": 1
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "20d8a9453637",
+          "outlet_id": "guardian",
+          "headline": "The Russian army’s secret death toll – podcast",
+          "snippet": "Vladimir Putin has always kept the number of soldiers killed in Ukraine a secret, but at one point 720 were dying in 24 hours. Pjotr Sauer reports. Send your comments and questions to…",
+          "url": "https://www.theguardian.com/news/audio/2026/nov/25/the-russian-armys-secret-death-toll-podcast",
+          "published_at": "2026-11-25T03:00:03Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.guim.co.uk/img/media/73eb1f79e1f589dbc01f5457078faa6090ee6ee2/17_0_3549_2838/master/3549.jpg?width=460&quality=85&auto=format&fit=max&s=08d8af5d41b19852a856ed55bffd6523"
+        },
+        {
+          "id": "176309a083eb",
+          "outlet_id": "bbc",
+          "headline": "Russia's own figures show it has lost nearly 500,000 people in Ukraine war",
+          "snippet": "Leaked data reveal how the full-scale invasion of Ukraine has fundamentally changed mortality patterns in Russia.",
+          "url": "https://www.bbc.co.uk/news/articles/cmx27g533zwyo",
+          "published_at": "2026-11-25T12:21:49Z",
+          "published_at_estimated": false,
+          "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/1e4e/live/dce0d700-e8c5-11f1-99b6-a35a62fa4264.jpg"
+        },
+        {
+          "id": "5d25755a0a2e",
+          "outlet_id": "nbc",
+          "headline": "More than 700,000 Russian soldiers have been killed in the Ukraine war, new estimate suggests",
+          "snippet": "More than 700,000 Russian soldiers have been killed in Ukraine, according to a new projection based on leaked official data, an estimate that sheds new light on the staggering cost of President…",
+          "url": "https://www.nbcnews.com/world/ukraine/russia-soldiers-killed-ukraine-war-new-estimate-suggests-700000-rcna611048",
+          "published_at": "2026-11-25T13:54:15Z",
+          "published_at_estimated": false,
+          "image_url": "https://media-cldnry.s-nbcnews.com/image/upload/t_fit_1500w/rockcms/2026-11/261124-russia-rs-9ac90c.jpg"
+        },
+        {
+          "id": "8858a72dc84c",
+          "outlet_id": "moscowtimes",
+          "headline": "Kremlin Dismisses Leaked Data on Russian Troop Losses",
+          "snippet": "Russia has not released an official military death toll since September 2022, when it acknowledged that nearly 6,000 soldiers had been killed.",
+          "url": "https://www.themoscowtimes.com/2026/11/25/kremlin-dismisses-leaked-data-on-russian-troop-losses-a812368",
+          "published_at": "2026-11-25T14:30:28Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "458d7a708580",
+          "outlet_id": "france24",
+          "headline": "Kremlin declines comment on reports 700,000 Russian soldiers killed in Ukraine war",
+          "snippet": "Kremlin spokesman Dmitry Peskov on Wednesday declined to comment on reports in Russian and international news outlets that around 700,000 Russian soldiers have been killed in the Ukraine war so far…",
+          "url": "https://www.france24.com/en/europe/20261125-kremlin-declines-comment-reports-700-000-russian-soldiers-killed-ukraine-war",
+          "published_at": "2026-11-25T15:14:07Z",
+          "published_at_estimated": false,
+          "image_url": "https://s.france24.com/media/display/537505cc-e8de-11f1-8609-29d00e23de9a/w:1024/p:16x9/AP26308532895133.jpg"
+        },
+        {
+          "id": "983336d3b685",
+          "outlet_id": "independent",
+          "headline": "The devastating scale of Putin’s war on Ukraine laid bare as leaked figures show 500,000 Russian soldiers dead",
+          "snippet": "Vladimir Putin still demands huge concessions from Ukraine, but leaked data from his main stats agency suggests the losses are only getting worse with time, writes James C. Reynolds",
+          "url": "https://www.independent.co.uk/news/world/europe/russia-ukraine-war-trump-putin-troops-death-toll-b3091347.html",
+          "published_at": "2026-11-25T15:40:56Z",
+          "published_at_estimated": false,
+          "image_url": "https://static.independent.co.uk/2025/09/24/11/21/GettyImages-2213589440.jpeg?width=1200&auto=webp&crop=3%3A2"
+        },
+        {
+          "id": "08ed2c3c7600",
+          "outlet_id": "france24",
+          "headline": "Russian casualties in Ukraine war: New reports suggest death toll as high as 700,000",
+          "snippet": "New analysis of leaked Russian government data suggests some 700,000 Russian soldiers have died in the war against Ukraine. Independent Russian media outlets have updated their estimates of Moscow's…",
+          "url": "https://www.france24.com/en/video/20261125-russian-casualties-in-ukraine-war-new-reports-suggest-death-toll-as-high-as-700-000",
+          "published_at": "2026-11-25T16:17:02Z",
+          "published_at_estimated": false,
+          "image_url": "https://s.france24.com/media/display/997db198-e8ea-11f1-9ee6-95e072ff0a91/w:1024/p:16x9/EN-20261125-120429-120550-CS.jpg"
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "Leaked Russian official or government data underpin new, much higher estimates of Russian deaths in the Ukraine war.",
+          "sources": [
+            "176309a083eb",
+            "5d25755a0a2e",
+            "983336d3b685",
+            "08ed2c3c7600",
+            "8858a72dc84c"
+          ]
+        },
+        {
+          "text": "Several reports put the number of Russian soldiers killed at around or more than 700,000.",
+          "sources": [
+            "5d25755a0a2e",
+            "458d7a708580",
+            "08ed2c3c7600"
+          ]
+        },
+        {
+          "text": "Russia has not made its military death toll public.",
+          "sources": [
+            "20d8a9453637",
+            "8858a72dc84c"
+          ]
+        },
+        {
+          "text": "The Kremlin did not accept or confirm the reported figures.",
+          "sources": [
+            "458d7a708580",
+            "8858a72dc84c"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "20d8a9453637",
+              "quote": "The Russian army’s secret death toll",
+              "field": "headline"
+            },
+            {
+              "article_id": "20d8a9453637",
+              "quote": "at one point 720 were dying in 24 hours",
+              "field": "snippet"
+            },
+            {
+              "article_id": "5d25755a0a2e",
+              "quote": "sheds new light on the staggering cost of President",
+              "field": "snippet"
+            },
+            {
+              "article_id": "983336d3b685",
+              "quote": "The devastating scale of Putin’s war on Ukraine laid bare",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Links the losses directly to Vladimir Putin and his secrecy over the toll.",
+              "sources": [
+                "20d8a9453637",
+                "5d25755a0a2e",
+                "983336d3b685"
+              ]
+            },
+            {
+              "text": "Says losses are getting worse over time while Putin still demands huge concessions from Ukraine.",
+              "sources": [
+                "983336d3b685"
+              ]
+            },
+            {
+              "text": "Reports a peak of 720 deaths in 24 hours.",
+              "sources": [
+                "20d8a9453637"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "176309a083eb",
+              "quote": "Russia's own figures show it has lost nearly 500,000 people",
+              "field": "headline"
+            },
+            {
+              "article_id": "176309a083eb",
+              "quote": "fundamentally changed mortality patterns in Russia",
+              "field": "snippet"
+            },
+            {
+              "article_id": "458d7a708580",
+              "quote": "Kremlin declines comment",
+              "field": "headline"
+            },
+            {
+              "article_id": "08ed2c3c7600",
+              "quote": "death toll as high as 700,000",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the figures themselves and their basis in Russian government data.",
+              "sources": [
+                "176309a083eb",
+                "08ed2c3c7600"
+              ]
+            },
+            {
+              "text": "Describes a change in Russia's overall mortality patterns.",
+              "sources": [
+                "176309a083eb"
+              ]
+            },
+            {
+              "text": "Reports Kremlin spokesman Dmitry Peskov declining to comment.",
+              "sources": [
+                "458d7a708580"
+              ]
+            },
+            {
+              "text": "Notes that independent Russian media outlets updated their estimates.",
+              "sources": [
+                "08ed2c3c7600"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "left",
+          "text": "Left-leaning coverage does not mention the Kremlin's response to the reports.",
+          "sources": [
+            "458d7a708580"
+          ]
+        },
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not mention a peak of 720 deaths in a single day.",
+          "sources": [
+            "20d8a9453637"
+          ]
+        }
+      ],
+      "contested_claims": [
+        {
+          "claim": "The leaked data indicate around 500,000 Russian deaths.",
+          "asserted_by": [
+            "176309a083eb",
+            "983336d3b685"
+          ],
+          "disputed_by": [
+            "5d25755a0a2e",
+            "458d7a708580",
+            "08ed2c3c7600"
+          ]
+        }
+      ],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "5d25755a0a2e",
+              "quote": "More than 700,000 Russian soldiers have been killed in the Ukraine war",
+              "field": "headline"
+            },
+            {
+              "article_id": "176309a083eb",
+              "quote": "Russia's own figures show it has lost nearly 500,000 people in Ukraine war",
+              "field": "headline"
+            },
+            {
+              "article_id": "458d7a708580",
+              "quote": "Kremlin declines comment",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the size of the estimated death toll drawn from leaked data.",
+              "sources": [
+                "176309a083eb",
+                "5d25755a0a2e",
+                "983336d3b685",
+                "08ed2c3c7600"
+              ]
+            },
+            {
+              "text": "Reports the Kremlin declining to comment.",
+              "sources": [
+                "458d7a708580"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "8858a72dc84c",
+              "quote": "Kremlin Dismisses Leaked Data on Russian Troop Losses",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the Kremlin's dismissal of the leaked data.",
+              "sources": [
+                "8858a72dc84c"
+              ]
+            },
+            {
+              "text": "Notes Russia's last official toll, from September 2022, of nearly 6,000 soldiers killed.",
+              "sources": [
+                "8858a72dc84c"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "Leaked Russian official data suggest far more Russian soldiers have died in the Ukraine war than Moscow has acknowledged, with reports citing nearly 500,000 or around 700,000 deaths. Kremlin spokesman Dmitry Peskov declined to comment. Russia last gave an official toll in September 2022, of nearly 6,000.",
+        "sources": [
+          "176309a083eb",
+          "5d25755a0a2e",
+          "983336d3b685",
+          "08ed2c3c7600",
+          "458d7a708580",
+          "8858a72dc84c"
+        ]
+      },
+      "conclusion": {
+        "text": "All outlets report leaked data pointing to far higher Russian losses than acknowledged. Left outlets tie the toll to Putin, centre outlets to the data and Kremlin silence, and the East outlet to the Kremlin's dismissal and the 2022 figure. Reports differ between about 500,000 and 700,000 deaths.",
+        "sources": [
+          "20d8a9453637",
+          "5d25755a0a2e",
+          "983336d3b685",
+          "176309a083eb",
+          "458d7a708580",
+          "08ed2c3c7600",
+          "8858a72dc84c"
+        ]
+      },
+      "validation": {
+        "kept": 32,
+        "dropped_by_reason": {}
+      }
+    },
+    {
+      "id": "120cf43a5f02",
+      "title": "Solomon Islands signs security treaty with Australia, ending China pact",
+      "rank": 8,
+      "outlet_count": 5,
+      "coverage": {
+        "lean": {
+          "left": 1,
+          "centre": 1,
+          "right": 0
+        },
+        "bloc": {
+          "west": 2,
+          "east": 3
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "a36b9b40e281",
+          "outlet_id": "bbc",
+          "headline": "Solomon Islands ends controversial security pact with China for Australian treaty",
+          "snippet": "Solomon Islands leader Matthew Wale said his country would no longer be a point of regional uncertainty.",
+          "url": "https://www.bbc.co.uk/news/articles/ckdd1z2gvlgno",
+          "published_at": "2026-11-25T03:15:12Z",
+          "published_at_estimated": false,
+          "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/33d1/live/b36a7310-e87d-11f1-98e2-c97dce6bef0d.jpg"
+        },
+        {
+          "id": "0603a22bde4d",
+          "outlet_id": "thehindu",
+          "headline": "Solomon Islands names Australia as its primary security partner in a new treaty that excludes China",
+          "snippet": "The new treaty confirms Australia's place as the Solomons' ‘primary security partner’ and states ‘there will be no foreign military or security base’ on the smaller nation 2,000 kilometres northeast…",
+          "url": "https://www.thehindu.com/news/international/solomon-islands-names-australia-as-its-primary-security-partner-in-a-new-treaty-that-excludes-china/article71741038.ece",
+          "published_at": "2026-11-25T04:15:07Z",
+          "published_at_estimated": false,
+          "image_url": "https://th-i.thgim.com/public/incoming/pbii9d/article71741054.ece/alternates/LANDSCAPE_1200/AP11_25_2026_000009B.jpg"
+        },
+        {
+          "id": "2ab098e64c9f",
+          "outlet_id": "japantimes",
+          "headline": "Australia edges China out of Pacific foothold in Solomon Islands",
+          "snippet": "A new treaty names Australia as the Solomons' \"primary security partner.\"",
+          "url": "https://www.japantimes.co.jp/news/2026/11/25/asia-pacific/politics/australia-solomon-islands-pact-china/",
+          "published_at": "2026-11-25T04:29:00Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.japantimes.co.jp/japantimes/uploads/images/2026/11/25/thumbs/400x400/575836.jpg"
+        },
+        {
+          "id": "9541c0d97fbd",
+          "outlet_id": "nyt",
+          "headline": "Solomon Islands Enters Security Treaty With Australia, in a Blow to China",
+          "snippet": "A 2022 Solomon Islands agreement with China had raised concerns it would enable Beijing to establish a military presence on the Pacific island. The new accord precludes such bases.",
+          "url": "https://www.nytimes.com/2026/11/24/world/asia/solomon-islands-security-treaty-australia-china.html",
+          "published_at": "2026-11-25T05:24:36Z",
+          "published_at_estimated": false,
+          "image_url": "https://static01.nyt.com/images/2026/11/25/multimedia/25int-Oz-Solomons-01-gzjw/25int-Oz-Solomons-01-gzjw-mediumSquareAt3X.jpg"
+        },
+        {
+          "id": "487db3aaa3de",
+          "outlet_id": "aljazeera",
+          "headline": "Solomon Islands signs security deal with Australia",
+          "snippet": "Solomon Islands will have to consult Canberra before making new security or infrastructure deals under new pact.",
+          "url": "https://www.aljazeera.com/news/2026/11/25/solomon-islands-signs-security-deal-with-australia",
+          "published_at": "2026-11-25T13:02:45Z",
+          "published_at_estimated": false,
+          "image_url": null
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "Solomon Islands has entered a security treaty with Australia.",
+          "sources": [
+            "a36b9b40e281",
+            "0603a22bde4d",
+            "2ab098e64c9f",
+            "9541c0d97fbd",
+            "487db3aaa3de"
+          ]
+        },
+        {
+          "text": "The new arrangement ends or excludes the Solomon Islands' security pact with China.",
+          "sources": [
+            "a36b9b40e281",
+            "0603a22bde4d",
+            "2ab098e64c9f",
+            "9541c0d97fbd"
+          ]
+        },
+        {
+          "text": "The treaty names Australia as the Solomons' primary security partner.",
+          "sources": [
+            "0603a22bde4d",
+            "2ab098e64c9f"
+          ]
+        },
+        {
+          "text": "The new accord rules out foreign military or security bases on the Solomon Islands.",
+          "sources": [
+            "0603a22bde4d",
+            "9541c0d97fbd"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "9541c0d97fbd",
+              "quote": "in a Blow to China",
+              "field": "headline"
+            },
+            {
+              "article_id": "9541c0d97fbd",
+              "quote": "The new accord precludes such bases.",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the treaty as a setback for China and recalls concerns that the 2022 China agreement could enable a Beijing military presence.",
+              "sources": [
+                "9541c0d97fbd"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "a36b9b40e281",
+              "quote": "ends controversial security pact with China",
+              "field": "headline"
+            },
+            {
+              "article_id": "a36b9b40e281",
+              "quote": "would no longer be a point of regional uncertainty",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the ending of the China pact and quotes Solomon Islands leader Matthew Wale on regional uncertainty.",
+              "sources": [
+                "a36b9b40e281"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "left",
+          "text": "Left coverage does not mention Solomon Islands leader Matthew Wale's statement that the country would no longer be a point of regional uncertainty.",
+          "sources": [
+            "a36b9b40e281"
+          ]
+        },
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not mention that the new accord rules out foreign military bases.",
+          "sources": [
+            "9541c0d97fbd"
+          ]
+        }
+      ],
+      "contested_claims": [],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "9541c0d97fbd",
+              "quote": "in a Blow to China",
+              "field": "headline"
+            },
+            {
+              "article_id": "a36b9b40e281",
+              "quote": "ends controversial security pact with China",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the end of the China pact and its consequences for Beijing.",
+              "sources": [
+                "a36b9b40e281",
+                "9541c0d97fbd"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "0603a22bde4d",
+              "quote": "‘primary security partner’",
+              "field": "snippet"
+            },
+            {
+              "article_id": "2ab098e64c9f",
+              "quote": "Australia edges China out of Pacific foothold",
+              "field": "headline"
+            },
+            {
+              "article_id": "487db3aaa3de",
+              "quote": "will have to consult Canberra before making new security or infrastructure deals",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Emphasises the treaty terms: Australia as primary security partner and no foreign military or security base.",
+              "sources": [
+                "0603a22bde4d",
+                "2ab098e64c9f"
+              ]
+            },
+            {
+              "text": "Notes the requirement for Solomon Islands to consult Canberra before new security or infrastructure deals.",
+              "sources": [
+                "487db3aaa3de"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "Solomon Islands has signed a security treaty with Australia that ends its 2022 security pact with China, names Australia its primary security partner and rules out foreign military bases. Under the pact it must consult Canberra before new security or infrastructure deals.",
+        "sources": [
+          "a36b9b40e281",
+          "0603a22bde4d",
+          "2ab098e64c9f",
+          "9541c0d97fbd",
+          "487db3aaa3de"
+        ]
+      },
+      "conclusion": {
+        "text": "All outlets report the Solomon Islands-Australia security treaty and most link it to ending the China pact. Western outlets lead with the effect on China, while Eastern outlets foreground treaty terms such as Australia's primary partner role and the duty to consult Canberra. No claims are contested between them.",
+        "sources": [
+          "a36b9b40e281",
+          "9541c0d97fbd",
+          "0603a22bde4d",
+          "2ab098e64c9f",
+          "487db3aaa3de"
+        ]
+      },
+      "validation": {
+        "kept": 22,
+        "dropped_by_reason": {}
+      }
+    },
+    {
+      "id": "48627910f95f",
+      "title": "Colombian forces free hostages after supermarket siege in Cartagena",
+      "rank": 9,
+      "outlet_count": 5,
+      "coverage": {
+        "lean": {
+          "left": 2,
+          "centre": 2,
+          "right": 0
+        },
+        "bloc": {
+          "west": 4,
+          "east": 1
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "73b21a63bdef",
+          "outlet_id": "guardian",
+          "headline": "Colombia’s president arrives at scene of supermarket hostage siege in tourist city",
+          "snippet": "Abelardo de la Espriella to take control of operation trying to free at least 20 hostages Colombia’s president has arrived at the scene of an hours-long standoff between security services and gunmen…",
+          "url": "https://www.theguardian.com/world/2026/nov/24/cartagena-colombia-hostages-supermarket",
+          "published_at": "2026-11-25T03:57:11Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.guim.co.uk/img/media/f8a8fb8355ddb1ecdb881d8269bc5511bc8d29a1/501_0_4354_3482/master/4354.jpg?width=460&quality=85&auto=format&fit=max&s=b06d71aa27d73add8c72c27bd1de596e"
+        },
+        {
+          "id": "541466f6fdb2",
+          "outlet_id": "mirror",
+          "headline": "Hostages rescued after armed men seized supermarket in Colombian tourist city",
+          "snippet": "At least 30 people were held hostage at an Exito supermarket in Cartagena, Colombia, following a failed attempt to rob an armoured truck, officials said.",
+          "url": "https://www.mirror.co.uk/news/world-news/colombia-cartagena-supermarket-hostage-gunmen-37912277",
+          "published_at": "2026-11-25T07:24:16Z",
+          "published_at_estimated": false,
+          "image_url": "https://i2-prod.mirror.co.uk/incoming/article37912273.ece/ALTERNATES/s615/0_Hostage-situation-triggers-security-operation-at-supermarket-in-Cartagena.jpg"
+        },
+        {
+          "id": "346f5b613d76",
+          "outlet_id": "france24",
+          "headline": "Colombian authorities rescue all hostages held at Cartagena supermarket",
+          "snippet": "Security forces rescued all the hostages held for nearly a day at a supermarket in the northern Colombian tourist city of Cartagena, President Abelardo de la Espriella said early Wednesday. The…",
+          "url": "https://www.france24.com/en/video/20261125-colombian-authorities-rescue-all-hostages-held-at-cartagena-supermarket",
+          "published_at": "2026-11-25T13:56:39Z",
+          "published_at_estimated": false,
+          "image_url": "https://s.france24.com/media/display/62e27074-e8d6-11f1-b5d1-29d00e23de9a/w:1024/p:16x9/EN-20261125-141204-141323-CS.jpg"
+        },
+        {
+          "id": "40d246713555",
+          "outlet_id": "guardian",
+          "headline": "All hostages rescued after Colombian security forces storm supermarket, says president",
+          "snippet": "Operation in which one hostage-taker was killed ends daylong siege in Cartagena shopping centre, where 30 people were initially held Colombian police have stormed a supermarket in one of the…",
+          "url": "https://www.theguardian.com/world/2026/nov/25/hostages-freed-colombia-security-forces-storm-cartagena-supermarket",
+          "published_at": "2026-11-25T13:56:55Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.guim.co.uk/img/media/a3585592d60a650e6033ad7e718f5e89458d216d/440_75_2600_2080/master/2600.jpg?width=460&quality=85&auto=format&fit=max&s=3ab7147460eb2aefc550914caf6f31c2"
+        },
+        {
+          "id": "c1ae0bb8a0df",
+          "outlet_id": "france24",
+          "headline": "Colombia: Security forces rescue hostages in supermarket siege",
+          "snippet": "Some 25 people being held hostage by gunmen in a supermarket in Cartagena, Colombia, were freed Tuesday after security forces stormed the building. One assailant was killed during the operation but…",
+          "url": "https://www.france24.com/en/video/20261125-colombia-security-forces-rescue-hostages-in-supermarket-siege",
+          "published_at": "2026-11-25T16:08:44Z",
+          "published_at_estimated": false,
+          "image_url": "https://s.france24.com/media/display/8c72547a-e8dd-11f1-8c16-95e072ff0a91/w:1024/p:16x9/Colombia-thumbnail.jpg"
+        },
+        {
+          "id": "ef206cdcffcd",
+          "outlet_id": "bbc",
+          "headline": "Colombian police storm supermarket to free 20 held hostage for 17 hours",
+          "snippet": "One gunman was killed in the operation to free around 20 shoppers and employees after a 17-hour hostage ordeal.",
+          "url": "https://www.bbc.co.uk/news/articles/ckp80mjr9emyo",
+          "published_at": "2026-11-25T16:20:14Z",
+          "published_at_estimated": false,
+          "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/997a/live/4f4b3940-e8c4-11f1-ac76-db9e97f93d67.jpg"
+        },
+        {
+          "id": "a47f8b6e32ca",
+          "outlet_id": "aljazeera",
+          "headline": "Colombian forces rescue all hostages after supermarket siege",
+          "snippet": "All hostages have been rescued by Colombian forces after a 17-hour siege in Cartagena supermarket.",
+          "url": "https://www.aljazeera.com/video/newsfeed/2026/11/25/colombian-forces-rescue-all-hostages-after-supermarket-siege",
+          "published_at": "2026-11-25T16:44:22Z",
+          "published_at_estimated": false,
+          "image_url": null
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "Hostages held by armed men at a supermarket in Cartagena, Colombia, were rescued by security forces.",
+          "sources": [
+            "541466f6fdb2",
+            "346f5b613d76",
+            "40d246713555",
+            "c1ae0bb8a0df",
+            "ef206cdcffcd",
+            "a47f8b6e32ca"
+          ]
+        },
+        {
+          "text": "Security forces stormed the supermarket to end the siege.",
+          "sources": [
+            "40d246713555",
+            "c1ae0bb8a0df",
+            "ef206cdcffcd"
+          ]
+        },
+        {
+          "text": "One gunman or hostage-taker was killed during the operation.",
+          "sources": [
+            "40d246713555",
+            "c1ae0bb8a0df",
+            "ef206cdcffcd"
+          ]
+        },
+        {
+          "text": "The siege lasted around a day; BBC and Al Jazeera put it at 17 hours.",
+          "sources": [
+            "346f5b613d76",
+            "40d246713555",
+            "ef206cdcffcd",
+            "a47f8b6e32ca"
+          ]
+        },
+        {
+          "text": "President Abelardo de la Espriella was involved, arriving at the scene and saying all hostages were rescued.",
+          "sources": [
+            "73b21a63bdef",
+            "346f5b613d76",
+            "40d246713555"
+          ]
+        },
+        {
+          "text": "Cartagena is described as a tourist city.",
+          "sources": [
+            "73b21a63bdef",
+            "541466f6fdb2",
+            "346f5b613d76"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "73b21a63bdef",
+              "quote": "president arrives at scene of supermarket hostage siege in tourist city",
+              "field": "headline"
+            },
+            {
+              "article_id": "541466f6fdb2",
+              "quote": "following a failed attempt to rob an armoured truck",
+              "field": "snippet"
+            },
+            {
+              "article_id": "40d246713555",
+              "quote": "All hostages rescued after Colombian security forces storm supermarket, says president",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the president's arrival to take control of the operation.",
+              "sources": [
+                "73b21a63bdef"
+              ]
+            },
+            {
+              "text": "Attributes the siege to a failed attempt to rob an armoured truck at an Exito supermarket.",
+              "sources": [
+                "541466f6fdb2"
+              ]
+            },
+            {
+              "text": "Reports 30 people initially held and one hostage-taker killed.",
+              "sources": [
+                "40d246713555"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "346f5b613d76",
+              "quote": "Colombian authorities rescue all hostages held at Cartagena supermarket",
+              "field": "headline"
+            },
+            {
+              "article_id": "ef206cdcffcd",
+              "quote": "Colombian police storm supermarket to free 20 held hostage for 17 hours",
+              "field": "headline"
+            },
+            {
+              "article_id": "c1ae0bb8a0df",
+              "quote": "Security forces rescue hostages in supermarket siege",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the rescue of all hostages, citing the president.",
+              "sources": [
+                "346f5b613d76"
+              ]
+            },
+            {
+              "text": "Emphasises the length of the ordeal and the storming of the building in which one gunman was killed.",
+              "sources": [
+                "c1ae0bb8a0df",
+                "ef206cdcffcd"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not mention the failed attempt to rob an armoured truck that preceded the siege.",
+          "sources": [
+            "541466f6fdb2"
+          ]
+        }
+      ],
+      "contested_claims": [
+        {
+          "claim": "About 30 people were held hostage.",
+          "asserted_by": [
+            "541466f6fdb2",
+            "40d246713555"
+          ],
+          "disputed_by": [
+            "c1ae0bb8a0df",
+            "ef206cdcffcd"
+          ]
+        }
+      ],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "ef206cdcffcd",
+              "quote": "Colombian police storm supermarket to free 20 held hostage for 17 hours",
+              "field": "headline"
+            },
+            {
+              "article_id": "73b21a63bdef",
+              "quote": "president arrives at scene of supermarket hostage siege in tourist city",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Covers the storming of the supermarket, the killing of one gunman and the president's role.",
+              "sources": [
+                "73b21a63bdef",
+                "346f5b613d76",
+                "40d246713555",
+                "c1ae0bb8a0df",
+                "ef206cdcffcd"
+              ]
+            },
+            {
+              "text": "Gives varying hostage figures from about 20 to 30.",
+              "sources": [
+                "73b21a63bdef",
+                "541466f6fdb2",
+                "40d246713555",
+                "c1ae0bb8a0df",
+                "ef206cdcffcd"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "a47f8b6e32ca",
+              "quote": "Colombian forces rescue all hostages after supermarket siege",
+              "field": "headline"
+            },
+            {
+              "article_id": "a47f8b6e32ca",
+              "quote": "after a 17-hour siege in Cartagena supermarket",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the rescue of all hostages after a 17-hour siege.",
+              "sources": [
+                "a47f8b6e32ca"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "Colombian security forces stormed a supermarket in the tourist city of Cartagena and freed the hostages held by gunmen, ending a siege that BBC and Al Jazeera put at 17 hours. One gunman was killed, and President Abelardo de la Espriella said all hostages were rescued. Reported hostage numbers range from about 20 to 30.",
+        "sources": [
+          "73b21a63bdef",
+          "541466f6fdb2",
+          "346f5b613d76",
+          "40d246713555",
+          "c1ae0bb8a0df",
+          "ef206cdcffcd",
+          "a47f8b6e32ca"
+        ]
+      },
+      "conclusion": null,
+      "validation": {
+        "kept": 27,
+        "dropped_by_reason": {
+          "untrusted_text": 1
+        }
+      }
+    },
+    {
+      "id": "7fd63a550c76",
+      "title": "Six family members killed in plane crash off Mississippi coast",
+      "rank": 10,
+      "outlet_count": 5,
+      "coverage": {
+        "lean": {
+          "left": 0,
+          "centre": 2,
+          "right": 2
+        },
+        "bloc": {
+          "west": 4,
+          "east": 1
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "58ba6eba2e1e",
+          "outlet_id": "thehindu",
+          "headline": "Crews search for six aboard a small plane that crashed into the Gulf of Mexico, Coast Guard says",
+          "snippet": "Responders found three life jackets, a life raft and the plane's cabin floating on the water, but they had not located the four adults and two boys, ages eight and 10, who were on board",
+          "url": "https://www.thehindu.com/news/international/crews-search-for-six-aboard-a-small-plane-that-crashed-into-the-gulf-of-mexico-coast-guard-says/article71741123.ece",
+          "published_at": "2026-11-25T05:02:16Z",
+          "published_at_estimated": false,
+          "image_url": "https://th-i.thgim.com/public/incoming/q5n38r/article71741149.ece/alternates/LANDSCAPE_1200/New_Orleans_Cruise_Ship_93463.jpg"
+        },
+        {
+          "id": "d035fb0a9d59",
+          "outlet_id": "sky",
+          "headline": "Two children among six dead in plane crash",
+          "snippet": "Divers have found the bodies of six people, including two children, after a plane crashed off the coast of Mississippi on Tuesday, according to the US Coast Guard.",
+          "url": "https://news.sky.com/story/divers-find-bodies-of-six-people-including-two-children-after-us-plane-crash-13616273",
+          "published_at": "2026-11-25T06:38:00Z",
+          "published_at_estimated": false,
+          "image_url": "https://e3.365dm.com/26/11/1920x1080/skynews-mississippi-us-plane-crash_7415949.jpg?20261125081644"
+        },
+        {
+          "id": "fcdc9c566e49",
+          "outlet_id": "bbc",
+          "headline": "Two children among six dead after plane crash off Mississippi coast",
+          "snippet": "Divers found the bodies of four adults and two boys, aged 8 and 10, in the fuselage, the US Coast Guard said.",
+          "url": "https://www.bbc.co.uk/news/articles/c6z74l1017zpo",
+          "published_at": "2026-11-25T07:08:22Z",
+          "published_at_estimated": false,
+          "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/cb6d/live/6e173110-e899-11f1-801d-b916df288324.jpg"
+        },
+        {
+          "id": "71f4b55d710c",
+          "outlet_id": "nypost",
+          "headline": "Six family members killed in Mississippi plane crash pictured and ID’d",
+          "snippet": "The six relatives identified after a Cessna crashed off Mississippi while flying from New Orleans to Florida.",
+          "url": "https://nypost.com/2026/11/25/us-news/6-passengers-who-died-when-plane-crashed-on-way-back-from-fishing-trip-in-mississippi-identified/",
+          "published_at": "2026-11-25T14:25:33Z",
+          "published_at_estimated": false,
+          "image_url": "https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2Fmississippi-plane-crash-victims-id-comp.jpg?quality%3D90%26"
+        },
+        {
+          "id": "fa33137d1c30",
+          "outlet_id": "dailymail",
+          "headline": "Six family members, including three children aged 10, 12 and 16, on way back from fishing trip are killed in horror Mississippi plane crash",
+          "snippet": "Brent Stokes, 42, Michael Knox, 40, Arlyn Knox, 40, Charles Holden Knox, 12, Truett Knox, 10, and Hunter Stokes, 16, were killed when a single-engine Cessna crashed near Horn Island.",
+          "url": "https://www.dailymail.com/news/article-16321183/stokes-knox-family-mississippi-plane-crash-horn-island.html",
+          "published_at": "2026-11-25T16:15:51Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.dailymail.com/1s/2026/11/25/16/112713785-0-image-m-56_1795622916359.jpg"
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "Six people were aboard a small plane that crashed off the Mississippi coast in the Gulf of Mexico.",
+          "sources": [
+            "58ba6eba2e1e",
+            "d035fb0a9d59",
+            "fcdc9c566e49",
+            "71f4b55d710c",
+            "fa33137d1c30"
+          ]
+        },
+        {
+          "text": "Children were among the six people on board.",
+          "sources": [
+            "58ba6eba2e1e",
+            "d035fb0a9d59",
+            "fcdc9c566e49",
+            "fa33137d1c30"
+          ]
+        },
+        {
+          "text": "The US Coast Guard is cited as the source of the information on the search and recovery.",
+          "sources": [
+            "58ba6eba2e1e",
+            "d035fb0a9d59",
+            "fcdc9c566e49"
+          ]
+        },
+        {
+          "text": "Divers found the bodies of six people.",
+          "sources": [
+            "d035fb0a9d59",
+            "fcdc9c566e49"
+          ]
+        },
+        {
+          "text": "The aircraft was a Cessna and the six victims were members of one family.",
+          "sources": [
+            "71f4b55d710c",
+            "fa33137d1c30"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "d035fb0a9d59",
+              "quote": "Two children among six dead in plane crash",
+              "field": "headline"
+            },
+            {
+              "article_id": "fcdc9c566e49",
+              "quote": "Divers found the bodies of four adults and two boys, aged 8 and 10, in the fuselage",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with two children being among the dead.",
+              "sources": [
+                "d035fb0a9d59",
+                "fcdc9c566e49"
+              ]
+            },
+            {
+              "text": "Attributes the recovery of the bodies by divers to the US Coast Guard.",
+              "sources": [
+                "d035fb0a9d59",
+                "fcdc9c566e49"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "right",
+          "headline_quotes": [
+            {
+              "article_id": "71f4b55d710c",
+              "quote": "Six family members killed in Mississippi plane crash pictured and ID’d",
+              "field": "headline"
+            },
+            {
+              "article_id": "fa33137d1c30",
+              "quote": "on way back from fishing trip are killed in horror Mississippi plane crash",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the victims being family members and identifies them by name and age.",
+              "sources": [
+                "71f4b55d710c",
+                "fa33137d1c30"
+              ]
+            },
+            {
+              "text": "Gives trip details: a flight from New Orleans to Florida, a return from a fishing trip, and a crash near Horn Island.",
+              "sources": [
+                "71f4b55d710c",
+                "fa33137d1c30"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not mention that the victims were members of one family or identify them.",
+          "sources": [
+            "71f4b55d710c",
+            "fa33137d1c30"
+          ]
+        },
+        {
+          "lean": "right",
+          "text": "Right-leaning coverage does not mention the US Coast Guard or divers recovering the bodies.",
+          "sources": [
+            "d035fb0a9d59",
+            "fcdc9c566e49"
+          ]
+        }
+      ],
+      "contested_claims": [
+        {
+          "claim": "Three children, aged 10, 12 and 16, were among the six killed.",
+          "asserted_by": [
+            "fa33137d1c30"
+          ],
+          "disputed_by": [
+            "fcdc9c566e49",
+            "58ba6eba2e1e",
+            "d035fb0a9d59"
+          ]
+        }
+      ],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "d035fb0a9d59",
+              "quote": "Two children among six dead in plane crash",
+              "field": "headline"
+            },
+            {
+              "article_id": "71f4b55d710c",
+              "quote": "Six family members killed in Mississippi plane crash",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Reports all six as dead, with bodies recovered by divers.",
+              "sources": [
+                "d035fb0a9d59",
+                "fcdc9c566e49",
+                "71f4b55d710c",
+                "fa33137d1c30"
+              ]
+            },
+            {
+              "text": "Identifies the victims as family members.",
+              "sources": [
+                "71f4b55d710c",
+                "fa33137d1c30"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "58ba6eba2e1e",
+              "quote": "Crews search for six aboard a small plane that crashed into the Gulf of Mexico",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Reports an ongoing search, with life jackets, a life raft and the plane's cabin found but the six people not yet located.",
+              "sources": [
+                "58ba6eba2e1e"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "A small plane carrying six people crashed off the Mississippi coast in the Gulf of Mexico, according to the US Coast Guard. Divers later found the bodies of all six, including children. The victims are reported to be family members who were aboard a Cessna.",
+        "sources": [
+          "58ba6eba2e1e",
+          "d035fb0a9d59",
+          "fcdc9c566e49",
+          "71f4b55d710c",
+          "fa33137d1c30"
+        ]
+      },
+      "conclusion": {
+        "text": "All outlets report six people aboard a plane that crashed off Mississippi, with children among them. Centre outlets lead with two children among the dead, right outlets with the family's identities. The Daily Mail's three children aged 10, 12 and 16 differs from the two boys aged 8 and 10 reported by the BBC and The Hindu.",
+        "sources": [
+          "58ba6eba2e1e",
+          "d035fb0a9d59",
+          "fcdc9c566e49",
+          "71f4b55d710c",
+          "fa33137d1c30"
+        ]
+      },
+      "validation": {
+        "kept": 24,
+        "dropped_by_reason": {}
+      }
+    }
+  ]
+}
