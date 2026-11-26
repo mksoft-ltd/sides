@@ -1,0 +1,3404 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-11-26T16:41:55.851961Z",
+  "date": "2026-11-26",
+  "meta": {
+    "model": "claude-opus-5-5",
+    "cost_usd": 0.623954,
+    "outlets_polled": 29,
+    "articles_collected": 707,
+    "warnings": [],
+    "validation": {
+      "kept": 259,
+      "dropped_by_reason": {
+        "contested_same_outlet": 1,
+        "untrusted_text": 2
+      }
+    }
+  },
+  "outlets": [
+    {
+      "id": "guardian",
+      "name": "The Guardian",
+      "lean": "left",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United Kingdom",
+      "home_url": "https://www.theguardian.com/",
+      "rating_basis": "AllSides media bias rating (Lean Left), checked Oct 2026"
+    },
+    {
+      "id": "independent",
+      "name": "The Independent",
+      "lean": "left",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United Kingdom",
+      "home_url": "https://www.independent.co.uk/",
+      "rating_basis": "AllSides media bias rating (Lean Left), checked Oct 2026"
+    },
+    {
+      "id": "mirror",
+      "name": "Daily Mirror",
+      "lean": "left",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United Kingdom",
+      "home_url": "https://www.mirror.co.uk/",
+      "rating_basis": "Ad Fontes Media bias rating (Skews Left), checked Oct 2026"
+    },
+    {
+      "id": "bbc",
+      "name": "BBC News",
+      "lean": "centre",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "public-service",
+      "country": "United Kingdom",
+      "home_url": "https://www.bbc.co.uk/news",
+      "rating_basis": "AllSides media bias rating (Center), checked Oct 2026"
+    },
+    {
+      "id": "sky",
+      "name": "Sky News",
+      "lean": "centre",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United Kingdom",
+      "home_url": "https://news.sky.com/",
+      "rating_basis": "Ad Fontes Media bias rating (Middle), checked Oct 2026"
+    },
+    {
+      "id": "telegraph",
+      "name": "The Telegraph",
+      "lean": "right",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United Kingdom",
+      "home_url": "https://www.telegraph.co.uk/",
+      "rating_basis": "AllSides media bias rating (Lean Right), checked Oct 2026"
+    },
+    {
+      "id": "dailymail",
+      "name": "Daily Mail",
+      "lean": "right",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United Kingdom",
+      "home_url": "https://www.dailymail.co.uk/",
+      "rating_basis": "AllSides media bias rating (Right), checked Oct 2026"
+    },
+    {
+      "id": "thesun",
+      "name": "The Sun",
+      "lean": "right",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United Kingdom",
+      "home_url": "https://www.thesun.co.uk/",
+      "rating_basis": "AllSides media bias rating (Right), checked Oct 2026"
+    },
+    {
+      "id": "nyt",
+      "name": "The New York Times",
+      "lean": "left",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United States",
+      "home_url": "https://www.nytimes.com/",
+      "rating_basis": "AllSides media bias rating (Lean Left), checked Oct 2026"
+    },
+    {
+      "id": "nbc",
+      "name": "NBC News",
+      "lean": "left",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United States",
+      "home_url": "https://www.nbcnews.com/",
+      "rating_basis": "AllSides media bias rating (Lean Left), checked Oct 2026"
+    },
+    {
+      "id": "huffpost",
+      "name": "HuffPost",
+      "lean": "left",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United States",
+      "home_url": "https://www.huffpost.com/",
+      "rating_basis": "AllSides media bias rating (Left), checked Oct 2026"
+    },
+    {
+      "id": "npr",
+      "name": "NPR",
+      "lean": "centre",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "public-service",
+      "country": "United States",
+      "home_url": "https://www.npr.org/",
+      "rating_basis": "Ad Fontes Media bias rating (Middle / Skews Left), checked Oct 2026"
+    },
+    {
+      "id": "axios",
+      "name": "Axios",
+      "lean": "centre",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United States",
+      "home_url": "https://www.axios.com/",
+      "rating_basis": "AllSides media bias rating (Center), checked Oct 2026"
+    },
+    {
+      "id": "fox",
+      "name": "Fox News",
+      "lean": "right",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United States",
+      "home_url": "https://www.foxnews.com/",
+      "rating_basis": "AllSides media bias rating (Right), checked Oct 2026"
+    },
+    {
+      "id": "nypost",
+      "name": "New York Post",
+      "lean": "right",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United States",
+      "home_url": "https://nypost.com/",
+      "rating_basis": "AllSides media bias rating (Lean Right), checked Oct 2026"
+    },
+    {
+      "id": "examiner",
+      "name": "Washington Examiner",
+      "lean": "right",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United States",
+      "home_url": "https://www.washingtonexaminer.com/",
+      "rating_basis": "AllSides media bias rating (Lean Right), checked Oct 2026"
+    },
+    {
+      "id": "france24",
+      "name": "France 24",
+      "lean": "centre",
+      "region": "europe",
+      "bloc": "west",
+      "ownership": "public-service",
+      "country": "France",
+      "home_url": "https://www.france24.com/en/",
+      "rating_basis": "Ad Fontes Media bias rating (Middle), checked Oct 2026"
+    },
+    {
+      "id": "dw",
+      "name": "DW (Deutsche Welle)",
+      "lean": "centre",
+      "region": "europe",
+      "bloc": "west",
+      "ownership": "public-service",
+      "country": "Germany",
+      "home_url": "https://www.dw.com/en/",
+      "rating_basis": "AllSides media bias rating (Center), checked Oct 2026"
+    },
+    {
+      "id": "aljazeera",
+      "name": "Al Jazeera English",
+      "lean": null,
+      "region": "middle_east",
+      "bloc": "east",
+      "ownership": "state-funded",
+      "country": "Qatar",
+      "home_url": "https://www.aljazeera.com/",
+      "rating_basis": "Funded by the State of Qatar; no left/right tag applied"
+    },
+    {
+      "id": "thenational",
+      "name": "The National (UAE)",
+      "lean": null,
+      "region": "middle_east",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "United Arab Emirates",
+      "home_url": "https://www.thenationalnews.com/",
+      "rating_basis": "Owned by International Media Investments (Abu Dhabi); no left/right tag applied"
+    },
+    {
+      "id": "timesofisrael",
+      "name": "The Times of Israel",
+      "lean": null,
+      "region": "middle_east",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "Israel",
+      "home_url": "https://www.timesofisrael.com/",
+      "rating_basis": "Privately owned; no left/right tag applied"
+    },
+    {
+      "id": "cgtn",
+      "name": "CGTN",
+      "lean": null,
+      "region": "asia",
+      "bloc": "east",
+      "ownership": "state-controlled",
+      "country": "China",
+      "home_url": "https://www.cgtn.com/",
+      "rating_basis": "China Global Television Network, part of state broadcaster China Media Group"
+    },
+    {
+      "id": "ecns",
+      "name": "ECNS (China News Service)",
+      "lean": null,
+      "region": "asia",
+      "bloc": "east",
+      "ownership": "state-controlled",
+      "country": "China",
+      "home_url": "https://www.ecns.cn/",
+      "rating_basis": "English service of China News Service, a state news agency"
+    },
+    {
+      "id": "scmp",
+      "name": "South China Morning Post",
+      "lean": null,
+      "region": "asia",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "Hong Kong",
+      "home_url": "https://www.scmp.com/",
+      "rating_basis": "Owned by Alibaba Group; no left/right tag applied"
+    },
+    {
+      "id": "toi",
+      "name": "The Times of India",
+      "lean": null,
+      "region": "asia",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "India",
+      "home_url": "https://timesofindia.indiatimes.com/",
+      "rating_basis": "Privately owned (Bennett, Coleman & Co.); no left/right tag applied"
+    },
+    {
+      "id": "thehindu",
+      "name": "The Hindu",
+      "lean": null,
+      "region": "asia",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "India",
+      "home_url": "https://www.thehindu.com/",
+      "rating_basis": "Privately owned (The Hindu Group); no left/right tag applied"
+    },
+    {
+      "id": "moscowtimes",
+      "name": "The Moscow Times",
+      "lean": null,
+      "region": "europe",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "Russia",
+      "home_url": "https://www.themoscowtimes.com/",
+      "rating_basis": "Independent, Amsterdam-based since 2022; designated \"undesirable\" by Russia; no left/right tag applied"
+    },
+    {
+      "id": "japantimes",
+      "name": "The Japan Times",
+      "lean": null,
+      "region": "asia",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "Japan",
+      "home_url": "https://www.japantimes.co.jp/",
+      "rating_basis": "Privately owned (News2u Holdings); no left/right tag applied"
+    },
+    {
+      "id": "koreaherald",
+      "name": "The Korea Herald",
+      "lean": null,
+      "region": "asia",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "South Korea",
+      "home_url": "https://www.koreaherald.com/",
+      "rating_basis": "Privately owned (Herald Corporation); no left/right tag applied"
+    }
+  ],
+  "stories": [
+    {
+      "id": "101f4c52528c",
+      "title": "Fuel tanker crash sparks deadly fire on Cairo ring road, killing at least 31",
+      "rank": 1,
+      "outlet_count": 12,
+      "coverage": {
+        "lean": {
+          "left": 4,
+          "centre": 2,
+          "right": 1
+        },
+        "bloc": {
+          "west": 7,
+          "east": 5
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "55f347c90532",
+          "outlet_id": "mirror",
+          "headline": "Cairo fire: At least 30 dead after fuel tanker overturns and sparks fireball on motorway",
+          "snippet": "Emergency services dashed to Cairo’s Ring Road in Egypt and were seen pulling people from burning vehicles following the devastating fire tonight",
+          "url": "https://www.mirror.co.uk/news/world-news/cairo-fire-egypt-crash-latest-37916003",
+          "published_at": "2026-11-25T20:12:21Z",
+          "published_at_estimated": false,
+          "image_url": "https://i2-prod.mirror.co.uk/incoming/article37916007.ece/ALTERNATES/s615/3_EGYPT-FIRE.jpg"
+        },
+        {
+          "id": "a088f37fe4ff",
+          "outlet_id": "nyt",
+          "headline": "Road Fire Near Cairo Kills Dozens After Petroleum-Laden Truck Crashes",
+          "snippet": "The blaze killed at least 31 and injured at least 21 near Giza, beside the Nile River, officials said.",
+          "url": "https://www.nytimes.com/2026/11/25/world/middleeast/road-fire-near-cairo-kills-dozens-after-petroleum-laden-truck-crashes.html",
+          "published_at": "2026-11-25T21:37:07Z",
+          "published_at_estimated": false,
+          "image_url": "https://static01.nyt.com/images/2026/11/25/multimedia/25int-egypt-fire-hjpk/25int-egypt-fire-hjpk-mediumSquareAt3X.jpg"
+        },
+        {
+          "id": "0c3215a57a2a",
+          "outlet_id": "guardian",
+          "headline": "At least 31 killed as fuel tanker crash ignites large fire on Cairo highway",
+          "snippet": "Blaze on ring road surrounding Egyptian capital injures at least 21 people and leaves cars and motorcycles charred A crash involving a fuel tanker ignited a huge fire on a highway surrounding Cairo…",
+          "url": "https://www.theguardian.com/world/2026/nov/25/people-killed-fuel-tanker-crash-ignites-large-fire-cairo-highway",
+          "published_at": "2026-11-26T00:39:10Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.guim.co.uk/img/media/6812ad2841dc33db22e057b035ee4c97d0e86530/187_212_1857_1486/master/1857.jpg?width=460&quality=85&auto=format&fit=max&s=af06ddaed8145a3f97f406bff949a2cf"
+        },
+        {
+          "id": "ba7e77db4025",
+          "outlet_id": "koreaherald",
+          "headline": "Fuel tanker crash ignites a massive fire on a highway surrounding Cairo, killing at least 31 people",
+          "snippet": "CAIRO (AP) — A crash involving a fuel tanker ignited a massive fire on a major highway surrounding Cairo on Wednesday, killing at least 31 people, Egyptian authorities said. The blaze on Ring Road…",
+          "url": "https://www.koreaherald.com/article/10950356",
+          "published_at": "2026-11-26T04:40:52Z",
+          "published_at_estimated": false,
+          "image_url": "https://wimg.heraldcorp.com/news/cms/2026/11/26/rcv.YNA.20261126.PUP20261126005601009_T1.jpg"
+        },
+        {
+          "id": "2562ceb7cf74",
+          "outlet_id": "thehindu",
+          "headline": "Fuel tanker crash ignites massive fire on highway surrounding Cairo, killing at least 31 people",
+          "snippet": "The blaze on Ring Road, a key artery that encircles the Egyptian capital, also injured at least 25 people and left more than two dozen cars and motorcycles charred, the Public Prosecutor’s office…",
+          "url": "https://www.thehindu.com/news/international/fuel-tanker-crash-ignites-massive-fire-on-highway-surrounding-cairo/article71744262.ece",
+          "published_at": "2026-11-26T06:26:42Z",
+          "published_at_estimated": false,
+          "image_url": "https://th-i.thgim.com/public/incoming/9rbidm/article71744263.ece/alternates/LANDSCAPE_1200/2026-11-25T214116Z_1731871822_RC29VOAKM2R4_RTRMADP_3_EGYPT-ACCIDENT-UGC.JPG"
+        },
+        {
+          "id": "f26a537f8605",
+          "outlet_id": "huffpost",
+          "headline": "At Least 31 Dead As Cairo Fuel Tanker Crash Triggers Deadly Inferno",
+          "snippet": "The blaze on a key artery that encircles the Egyptian capital also injured at least 21 people and left more than two dozen cars and motorcycles charred.",
+          "url": "https://www.huffpost.com/entry/cairo-egypt-highway-fire_n_6b07d770e4b084fa2e174a79",
+          "published_at": "2026-11-26T06:57:14Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "937f59036873",
+          "outlet_id": "bbc",
+          "headline": "Deadly fire erupts near Cairo killing dozens of people",
+          "snippet": "At least 31 people have died in a large fire on a busy highway in Cairo, after a fuel tanker overturned, says Egypt's health ministry.",
+          "url": "https://www.bbc.co.uk/news/videos/c52e8ndplvemo",
+          "published_at": "2026-11-26T09:09:49Z",
+          "published_at_estimated": false,
+          "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/52d5/live/d4056860-e96c-11f1-a094-5fdc692f3e33.jpg"
+        },
+        {
+          "id": "54d9b55642f6",
+          "outlet_id": "france24",
+          "headline": "Egypt: 31 people killed in Cairo after fuel truck overturns",
+          "snippet": "A fire broke out on a busy highway in Egypt’s capital, Cairo, on Wednesday, killing at least 31 people after a fuel truck reportedly overturned. The suspected driver was arrested on Thursday…",
+          "url": "https://www.france24.com/en/video/20261126-egypt-31-people-killed-in-cairo-after-fuel-truck-overturns",
+          "published_at": "2026-11-26T11:28:29Z",
+          "published_at_estimated": false,
+          "image_url": "https://s.france24.com/media/display/caddf70c-e98a-11f1-ad2a-77d069279b82/w:1024/p:16x9/EGYPT-Thumbnail.jpg"
+        },
+        {
+          "id": "befa408aca30",
+          "outlet_id": "bbc",
+          "headline": "Egyptian authorities arrest motorist over tanker crash that killed 31",
+          "snippet": "Officials say the man confessed to travelling at speed and clipping the fuel truck as he was overtaking traffic.",
+          "url": "https://www.bbc.co.uk/news/articles/c3gre90l0g45o",
+          "published_at": "2026-11-26T12:16:06Z",
+          "published_at_estimated": false,
+          "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/e387/live/8aafd3d0-e98f-11f1-9d1c-4dcc8fcde666.jpg"
+        },
+        {
+          "id": "9c1105a59a33",
+          "outlet_id": "thenational",
+          "headline": "Egypt mourns dozens killed in horrific tanker explosion",
+          "snippet": "The two men seen in what has instantly become an indelible image were frantically trying to warn motorists to stay away from a fuel tanker that had overturned on a busy road before it exploded…",
+          "url": "https://www.thenationalnews.com/news/mena/2026/11/26/egypt-mourns-dozens-of-deaths-in-horrific-road-accident/",
+          "published_at": "2026-11-26T12:27:57Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.thenationalnews.com/resizer/v2/HGEQ6LUO3W6QNTBSQLH4WG77IE.jpg?auth=64e94d85e34e5610e662cdb7997bbb22a55aff222e9edc81ad370fa1945a9e25&smart=true&width=5472&height=3648"
+        },
+        {
+          "id": "361fd6845f3f",
+          "outlet_id": "aljazeera",
+          "headline": "Eyewitnesses describe scenes of Egypt’s deadly vehicle fire",
+          "snippet": "",
+          "url": "https://www.aljazeera.com/video/newsfeed/2026/11/26/eyewitnesses-describe-scenes-of-egypts-deadly-vehicle-fire",
+          "published_at": "2026-11-26T12:34:10Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "60b84f4836ca",
+          "outlet_id": "fox",
+          "headline": "Egypt detains driver suspected of causing Cairo fuel tanker crash and inferno that left 31 dead",
+          "snippet": "The driver accused of sparking Cairo's deadly fuel tanker fire on the Ring Road is in custody as prosecutors detail the crash that led to the blaze.",
+          "url": "https://www.foxnews.com/world/egypt-detains-driver-suspected-causing-cairo-fuel-tanker-crash-inferno-left-31-dead",
+          "published_at": "2026-11-26T15:41:46Z",
+          "published_at_estimated": false,
+          "image_url": "https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2026/11/931/523/vehicle-fire-giza-egypt.jpg?ve=1&tl=1"
+        },
+        {
+          "id": "dc5ffae7895b",
+          "outlet_id": "ecns",
+          "headline": "31 killed, 25 injured in truck fire in Egypt's Giza",
+          "snippet": "31 people were killed and 25 others injured when a truck carrying petroleum products crashed and caught fire on Wednesday in Egypt's Giza governorate, near the capital Cairo, according to the…",
+          "url": "https://www.ecns.cn/photo/2026-11-26/detail-ihfnkzcu9656735.shtml",
+          "published_at": "2026-11-26T16:53:52Z",
+          "published_at_estimated": false,
+          "image_url": null
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "A crash involving a fuel tanker or petroleum truck set off a fire on a highway around Cairo.",
+          "sources": [
+            "55f347c90532",
+            "a088f37fe4ff",
+            "0c3215a57a2a",
+            "ba7e77db4025",
+            "2562ceb7cf74",
+            "f26a537f8605",
+            "937f59036873",
+            "54d9b55642f6",
+            "60b84f4836ca",
+            "dc5ffae7895b"
+          ]
+        },
+        {
+          "text": "At least 31 people were killed in the fire.",
+          "sources": [
+            "a088f37fe4ff",
+            "0c3215a57a2a",
+            "ba7e77db4025",
+            "2562ceb7cf74",
+            "f26a537f8605",
+            "937f59036873",
+            "54d9b55642f6",
+            "befa408aca30",
+            "60b84f4836ca",
+            "dc5ffae7895b"
+          ]
+        },
+        {
+          "text": "The fire was on the Ring Road, a major artery encircling the Egyptian capital.",
+          "sources": [
+            "55f347c90532",
+            "0c3215a57a2a",
+            "ba7e77db4025",
+            "2562ceb7cf74",
+            "f26a537f8605",
+            "60b84f4836ca"
+          ]
+        },
+        {
+          "text": "The tanker overturned before the fire or explosion.",
+          "sources": [
+            "55f347c90532",
+            "937f59036873",
+            "54d9b55642f6",
+            "9c1105a59a33"
+          ]
+        },
+        {
+          "text": "More than two dozen cars and motorcycles were left charred.",
+          "sources": [
+            "0c3215a57a2a",
+            "2562ceb7cf74",
+            "f26a537f8605"
+          ]
+        },
+        {
+          "text": "Egyptian authorities arrested or detained a driver suspected of causing the crash.",
+          "sources": [
+            "54d9b55642f6",
+            "befa408aca30",
+            "60b84f4836ca"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "55f347c90532",
+              "quote": "sparks fireball on motorway",
+              "field": "headline"
+            },
+            {
+              "article_id": "a088f37fe4ff",
+              "quote": "Petroleum-Laden Truck Crashes",
+              "field": "headline"
+            },
+            {
+              "article_id": "f26a537f8605",
+              "quote": "Triggers Deadly Inferno",
+              "field": "headline"
+            },
+            {
+              "article_id": "0c3215a57a2a",
+              "quote": "fuel tanker crash ignites large fire on Cairo highway",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the death toll and the scale of the fire.",
+              "sources": [
+                "55f347c90532",
+                "a088f37fe4ff",
+                "0c3215a57a2a",
+                "f26a537f8605"
+              ]
+            },
+            {
+              "text": "Reports at least 21 people injured and charred vehicles.",
+              "sources": [
+                "a088f37fe4ff",
+                "0c3215a57a2a",
+                "f26a537f8605"
+              ]
+            },
+            {
+              "text": "Describes emergency services pulling people from burning vehicles.",
+              "sources": [
+                "55f347c90532"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "937f59036873",
+              "quote": "Deadly fire erupts near Cairo killing dozens of people",
+              "field": "headline"
+            },
+            {
+              "article_id": "befa408aca30",
+              "quote": "Egyptian authorities arrest motorist over tanker crash that killed 31",
+              "field": "headline"
+            },
+            {
+              "article_id": "54d9b55642f6",
+              "quote": "after fuel truck overturns",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the arrest of a motorist who officials say confessed to speeding and clipping the fuel truck while overtaking.",
+              "sources": [
+                "befa408aca30",
+                "54d9b55642f6"
+              ]
+            },
+            {
+              "text": "Attributes the death toll to Egypt's health ministry.",
+              "sources": [
+                "937f59036873"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "right",
+          "headline_quotes": [
+            {
+              "article_id": "60b84f4836ca",
+              "quote": "Egypt detains driver suspected of causing Cairo fuel tanker crash",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the detention of the driver accused of causing the fire and prosecutors detailing the crash.",
+              "sources": [
+                "60b84f4836ca"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "left",
+          "text": "Left coverage does not mention the arrest or detention of a driver suspected of causing the crash.",
+          "sources": [
+            "54d9b55642f6",
+            "befa408aca30",
+            "60b84f4836ca"
+          ]
+        },
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not mention the number of people injured.",
+          "sources": [
+            "a088f37fe4ff",
+            "0c3215a57a2a",
+            "f26a537f8605"
+          ]
+        },
+        {
+          "lean": "right",
+          "text": "Right coverage does not mention the number of people injured.",
+          "sources": [
+            "a088f37fe4ff",
+            "0c3215a57a2a",
+            "f26a537f8605"
+          ]
+        }
+      ],
+      "contested_claims": [
+        {
+          "claim": "The number of injured is given as at least 21.",
+          "asserted_by": [
+            "a088f37fe4ff",
+            "0c3215a57a2a",
+            "f26a537f8605"
+          ],
+          "disputed_by": [
+            "2562ceb7cf74",
+            "dc5ffae7895b"
+          ]
+        }
+      ],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "60b84f4836ca",
+              "quote": "Egypt detains driver suspected of causing Cairo fuel tanker crash",
+              "field": "headline"
+            },
+            {
+              "article_id": "f26a537f8605",
+              "quote": "Triggers Deadly Inferno",
+              "field": "headline"
+            },
+            {
+              "article_id": "937f59036873",
+              "quote": "Deadly fire erupts near Cairo killing dozens of people",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Foregrounds the arrest of a suspected driver and his reported confession.",
+              "sources": [
+                "54d9b55642f6",
+                "befa408aca30",
+                "60b84f4836ca"
+              ]
+            },
+            {
+              "text": "Reports at least 21 injured and rescues from burning vehicles.",
+              "sources": [
+                "55f347c90532",
+                "a088f37fe4ff",
+                "0c3215a57a2a",
+                "f26a537f8605"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "9c1105a59a33",
+              "quote": "Egypt mourns dozens killed in horrific tanker explosion",
+              "field": "headline"
+            },
+            {
+              "article_id": "361fd6845f3f",
+              "quote": "Eyewitnesses describe scenes of Egypt’s deadly vehicle fire",
+              "field": "headline"
+            },
+            {
+              "article_id": "dc5ffae7895b",
+              "quote": "31 killed, 25 injured in truck fire in Egypt's Giza",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Foregrounds national mourning and an image of two men warning motorists away from the overturned tanker.",
+              "sources": [
+                "9c1105a59a33"
+              ]
+            },
+            {
+              "text": "Highlights eyewitness accounts of the scene.",
+              "sources": [
+                "361fd6845f3f"
+              ]
+            },
+            {
+              "text": "Reports 25 injured, attributing figures to the Public Prosecutor's office or Egyptian authorities.",
+              "sources": [
+                "2562ceb7cf74",
+                "dc5ffae7895b",
+                "ba7e77db4025"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "A crash involving a fuel tanker ignited a large fire on the Ring Road highway around Cairo on Wednesday, killing at least 31 people, Egyptian officials said. A motorist suspected of causing the crash was later arrested.",
+        "sources": [
+          "a088f37fe4ff",
+          "0c3215a57a2a",
+          "ba7e77db4025",
+          "2562ceb7cf74",
+          "f26a537f8605",
+          "937f59036873",
+          "54d9b55642f6",
+          "befa408aca30",
+          "60b84f4836ca",
+          "dc5ffae7895b"
+        ]
+      },
+      "conclusion": {
+        "text": "All sides report a fuel tanker crash and fire on Cairo's Ring Road killing at least 31. Centre and right outlets lead with the arrest of a suspected driver, left outlets with the fire and rescues, and East-bloc outlets with mourning and eyewitnesses. Injury figures are given as 21 or 25.",
+        "sources": [
+          "0c3215a57a2a",
+          "55f347c90532",
+          "befa408aca30",
+          "60b84f4836ca",
+          "9c1105a59a33",
+          "361fd6845f3f",
+          "a088f37fe4ff",
+          "dc5ffae7895b",
+          "2562ceb7cf74"
+        ]
+      },
+      "validation": {
+        "kept": 37,
+        "dropped_by_reason": {}
+      }
+    },
+    {
+      "id": "a0f8a07f4dcd",
+      "title": "US Army detonates unstable lead azide stockpile at Iowa plant",
+      "rank": 2,
+      "outlet_count": 7,
+      "coverage": {
+        "lean": {
+          "left": 1,
+          "centre": 1,
+          "right": 2
+        },
+        "bloc": {
+          "west": 4,
+          "east": 3
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "21a44fb7a413",
+          "outlet_id": "axios",
+          "headline": "Army detonates Iowa explosives amid toxic lead fears",
+          "snippet": "The Army detonated 68 drums of unstable lead azide on an Iowa plant Wednesday after multiple delays, a court challenge and presidential intervention. The big picture: Elected officials slammed the…",
+          "url": "https://www.axios.com/2026/11/25/iowa-army-lead-detonation",
+          "published_at": "2026-11-25T16:16:41Z",
+          "published_at_estimated": false,
+          "image_url": "https://images.axios.com/YfagGyyx7ynLEUEeBmXLGayzPzE=/0x0:4399x2474/1366x768/2026/11/24/1795554200626.jpeg"
+        },
+        {
+          "id": "3065e8948813",
+          "outlet_id": "cgtn",
+          "headline": "Iowa residents react to Army detonation of bomb making chemicals",
+          "snippet": "",
+          "url": "https://newsus.cgtn.com/news/2026-11-26/Iowa-residents-react-to-Army-detonation-of-bomb-making-chemicals-1Sn7Ko9SNi0/p.html",
+          "published_at": "2026-11-25T19:23:56Z",
+          "published_at_estimated": false,
+          "image_url": "https://newsus.cgtn.com/news/2026-11-26/Iowa-residents-react-to-Army-detonation-of-bomb-making-chemicals-1Sn7Ko9SNi0/img/89d312de49b848bca1200bdf442a04a3/89d312de49b848bca1200bdf442a04a3-750.png"
+        },
+        {
+          "id": "9a9c87d15837",
+          "outlet_id": "nbc",
+          "headline": "Questions linger about lead pollution from Iowa blast, despite officials’ assurances",
+          "snippet": "Scientists and Iowa residents said questions remain about how much contamination the Army’s detonation of lead azide caused, though they were hopeful about the initial results.",
+          "url": "https://www.nbcnews.com/science/environment/questions-lead-dust-pollution-safe-iowa-detonation-tests-rcna611366",
+          "published_at": "2026-11-26T01:32:59Z",
+          "published_at_estimated": false,
+          "image_url": "https://media-cldnry.s-nbcnews.com/image/upload/t_fit_1500w/rockcms/2026-11/261125-middletown-iowa-detonation-army-ww-1603-55afd2.jpg"
+        },
+        {
+          "id": "0b1009c219a2",
+          "outlet_id": "examiner",
+          "headline": "EPA chief credits Stephen Miller with Iowa blast success: ‘He took the reins’",
+          "snippet": "White House chief of staff Stephen Miller is to be credited for the success behind the Army’s detonation of 5 tons of destabilized lead azide in Iowa, according to Environmental Protection Agency…",
+          "url": "https://www.washingtonexaminer.com/policy/energy-and-environment/4816115/epa-credits-stephen-miller-iowa-blast-success/",
+          "published_at": "2026-11-26T04:08:32Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.washingtonexaminer.com/wp-content/uploads/2026/11/stephen-miller-oval.jpg?w=1024"
+        },
+        {
+          "id": "f14ebdf7fe00",
+          "outlet_id": "thehindu",
+          "headline": "U.S. Army declares success in detonation of lead-based explosives stockpile in Iowa",
+          "snippet": "The Army and the U.S. Environmental Protection Agency said emission monitors detected zero levels of airborne lead in the surrounding region immediately after the explosion",
+          "url": "https://www.thehindu.com/news/international/us-army-declares-success-in-detonation-of-lead-based-explosives-stockpile-in-iowa/article71745045.ece",
+          "published_at": "2026-11-26T07:55:02Z",
+          "published_at_estimated": false,
+          "image_url": "https://th-i.thgim.com/public/incoming/1bl7w0/article71745056.ece/alternates/LANDSCAPE_1200/2026-11-25T182731Z_1090669330_RC23VOAHB17Y_RTRMADP_3_IOWA-ARMY-DETONATION.JPG"
+        },
+        {
+          "id": "4765c7e37430",
+          "outlet_id": "toi",
+          "headline": "US Army calls Iowa blast of nearly 5 tonnes of toxic explosives a ‘huge success’ after health fears",
+          "snippet": "",
+          "url": "https://timesofindia.indiatimes.com/world/us/us-army-calls-iowa-blast-of-nearly-5-tonnes-of-toxic-explosives-a-huge-success-after-health-fears/articleshow/136191702.cms",
+          "published_at": "2026-11-26T12:30:47Z",
+          "published_at_estimated": false,
+          "image_url": "https://static.toiimg.com/photo/msid-136191929,imgsize-57456.cms"
+        },
+        {
+          "id": "7d276130fcae",
+          "outlet_id": "nypost",
+          "headline": "EPA gives update on Army’s Iowa explosion after completing 1,000 tests for lead contamination",
+          "snippet": "The Army said blowing it up in place was the only responsible option.",
+          "url": "https://nypost.com/2026/11/26/us-news/epa-tests-1000-samples-for-lead-contamination-after-armys-iowa-explosion/",
+          "published_at": "2026-11-26T15:03:15Z",
+          "published_at_estimated": false,
+          "image_url": "https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2Fus-army-detonates-degraded-stockpile-150018156.jpg?w%3D703"
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "The US Army detonated lead azide explosives at a site in Iowa.",
+          "sources": [
+            "21a44fb7a413",
+            "9a9c87d15837",
+            "0b1009c219a2",
+            "f14ebdf7fe00",
+            "4765c7e37430",
+            "7d276130fcae",
+            "3065e8948813"
+          ]
+        },
+        {
+          "text": "The stockpile amounted to about 5 tons of the explosive.",
+          "sources": [
+            "0b1009c219a2",
+            "4765c7e37430"
+          ]
+        },
+        {
+          "text": "The Army described the detonation as a success.",
+          "sources": [
+            "f14ebdf7fe00",
+            "4765c7e37430",
+            "0b1009c219a2"
+          ]
+        },
+        {
+          "text": "The Environmental Protection Agency was involved in assessing the blast and lead contamination.",
+          "sources": [
+            "f14ebdf7fe00",
+            "0b1009c219a2",
+            "7d276130fcae"
+          ]
+        },
+        {
+          "text": "The detonation followed fears about toxic lead and health effects.",
+          "sources": [
+            "21a44fb7a413",
+            "4765c7e37430",
+            "9a9c87d15837"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "9a9c87d15837",
+              "quote": "Questions linger about lead pollution from Iowa blast, despite officials’ assurances",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with unresolved questions from scientists and residents about how much contamination the blast caused, while noting hope about initial results.",
+              "sources": [
+                "9a9c87d15837"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "21a44fb7a413",
+              "quote": "Army detonates Iowa explosives amid toxic lead fears",
+              "field": "headline"
+            },
+            {
+              "article_id": "21a44fb7a413",
+              "quote": "after multiple delays, a court challenge and presidential intervention",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Emphasises the delays, court challenge and presidential intervention preceding the blast, and criticism from elected officials.",
+              "sources": [
+                "21a44fb7a413"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "right",
+          "headline_quotes": [
+            {
+              "article_id": "0b1009c219a2",
+              "quote": "EPA chief credits Stephen Miller with Iowa blast success",
+              "field": "headline"
+            },
+            {
+              "article_id": "7d276130fcae",
+              "quote": "completing 1,000 tests for lead contamination",
+              "field": "headline"
+            },
+            {
+              "article_id": "7d276130fcae",
+              "quote": "the only responsible option",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Attributes the blast's success to White House chief of staff Stephen Miller, according to the EPA chief.",
+              "sources": [
+                "0b1009c219a2"
+              ]
+            },
+            {
+              "text": "Foregrounds EPA testing for lead contamination and the Army's view that detonating in place was the only responsible option.",
+              "sources": [
+                "7d276130fcae"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "right",
+          "text": "Right-leaning coverage does not mention the delays or court challenge that preceded the detonation.",
+          "sources": [
+            "21a44fb7a413"
+          ]
+        },
+        {
+          "lean": "right",
+          "text": "Right-leaning coverage does not mention scientists' and residents' remaining questions about contamination.",
+          "sources": [
+            "9a9c87d15837"
+          ]
+        },
+        {
+          "lean": "left",
+          "text": "Left-leaning coverage does not mention presidential or White House involvement in the detonation.",
+          "sources": [
+            "21a44fb7a413",
+            "0b1009c219a2"
+          ]
+        }
+      ],
+      "contested_claims": [],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "21a44fb7a413",
+              "quote": "amid toxic lead fears",
+              "field": "headline"
+            },
+            {
+              "article_id": "0b1009c219a2",
+              "quote": "He took the reins",
+              "field": "headline"
+            },
+            {
+              "article_id": "9a9c87d15837",
+              "quote": "questions remain about how much contamination",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "West-bloc coverage covers the political path to the blast, including presidential intervention and credit given to Stephen Miller.",
+              "sources": [
+                "21a44fb7a413",
+                "0b1009c219a2"
+              ]
+            },
+            {
+              "text": "It also covers lingering contamination questions and EPA testing.",
+              "sources": [
+                "9a9c87d15837",
+                "7d276130fcae"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "f14ebdf7fe00",
+              "quote": "U.S. Army declares success",
+              "field": "headline"
+            },
+            {
+              "article_id": "4765c7e37430",
+              "quote": "a ‘huge success’ after health fears",
+              "field": "headline"
+            },
+            {
+              "article_id": "3065e8948813",
+              "quote": "Iowa residents react",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "East-bloc coverage leads with the Army's declaration of success and the reported zero airborne lead readings.",
+              "sources": [
+                "f14ebdf7fe00",
+                "4765c7e37430"
+              ]
+            },
+            {
+              "text": "One outlet focuses on residents' reactions to the detonation.",
+              "sources": [
+                "3065e8948813"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "The US Army detonated a stockpile of unstable lead azide, described as 68 drums or about 5 tons, at a plant in Iowa after delays, a court challenge and presidential intervention. The Army and the EPA reported zero airborne lead immediately afterwards and called it a success, while scientists and residents said questions remain about contamination.",
+        "sources": [
+          "21a44fb7a413",
+          "0b1009c219a2",
+          "4765c7e37430",
+          "f14ebdf7fe00",
+          "9a9c87d15837",
+          "7d276130fcae",
+          "3065e8948813"
+        ]
+      },
+      "conclusion": {
+        "text": "All sides report the Army's detonation of lead azide in Iowa, with the Army calling it a success. Left-leaning coverage stresses lingering contamination questions, the centre the political and legal path to the blast, and the right credit to Stephen Miller and EPA testing. East-bloc outlets lead with the success claim and zero lead readings; no direct contradictions appear.",
+        "sources": [
+          "9a9c87d15837",
+          "21a44fb7a413",
+          "0b1009c219a2",
+          "7d276130fcae",
+          "f14ebdf7fe00",
+          "4765c7e37430"
+        ]
+      },
+      "validation": {
+        "kept": 30,
+        "dropped_by_reason": {}
+      }
+    },
+    {
+      "id": "d45442de552b",
+      "title": "Ukrainian drone strike on Russian warship in Benghazi kills two Libyan officers",
+      "rank": 3,
+      "outlet_count": 6,
+      "coverage": {
+        "lean": {
+          "left": 3,
+          "centre": 0,
+          "right": 1
+        },
+        "bloc": {
+          "west": 4,
+          "east": 2
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "43e80286c59c",
+          "outlet_id": "mirror",
+          "headline": "Libyans killed in Ukraine drone attack on Russian warship - army vows revenge",
+          "snippet": "The Libyan National Army has vowed to retaliate against Ukraine after a drone attack on a Russian warship at Benghazi Naval Base left two naval officers dead.",
+          "url": "https://www.mirror.co.uk/news/world-news/ukraine-russian-warship-libya-benghazi-37912406",
+          "published_at": "2026-11-25T08:43:31Z",
+          "published_at_estimated": false,
+          "image_url": "https://i2-prod.mirror.co.uk/incoming/article37912436.ece/ALTERNATES/s615/0_Russia-Ukraine-War-26327310059538.jpg"
+        },
+        {
+          "id": "d242e319e738",
+          "outlet_id": "fox",
+          "headline": "Libyans pledge to retaliate after Ukraine strikes Russian warship near Benghazi, killing 2 soldiers",
+          "snippet": "The Libyan National Army mourns two soldiers who died Tuesday from a Ukrainian drone strike on a Russian warship in Benghazi, vowing retaliation.",
+          "url": "https://www.foxnews.com/world/libyans-pledge-retaliate-ukraine-strikes-russian-warship-benghazi-killing-2-soldiers",
+          "published_at": "2026-11-25T16:57:41Z",
+          "published_at_estimated": false,
+          "image_url": "https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2026/11/931/523/Libya_Russia_Ukraine.jpg?ve=1&tl=1"
+        },
+        {
+          "id": "9ce0fee06ed3",
+          "outlet_id": "huffpost",
+          "headline": "Two Libyan Naval Officers Die Of Wounds From Ukrainian Drone Attack",
+          "snippet": "Libyan military authorities vowed retaliation against Kyiv for the deaths that occurred during an attack on a Russian warship docked in Benghazi.",
+          "url": "https://www.huffpost.com/entry/libyan-naval-officers-die-ukrainian-attack-russia_n_6b0717f3e4b01a3571b9d70f",
+          "published_at": "2026-11-25T17:27:58Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "b5ca1533639a",
+          "outlet_id": "nyt",
+          "headline": "Libyan Forces Threaten Retaliation Over Ukraine’s Attack on Russian Ships",
+          "snippet": "The Ukrainian drone strike off Libya’s coast killed two Libyan naval officers, according to the forces controlling the country’s east.",
+          "url": "https://www.nytimes.com/2026/11/25/world/middleeast/libya-ukraine-russia-haftar.html",
+          "published_at": "2026-11-25T19:02:51Z",
+          "published_at_estimated": false,
+          "image_url": "https://static01.nyt.com/images/2026/11/23/multimedia/25int-libya-ships-ppal/23int-ukraine-libya-01-wljg-mediumSquareAt3X.jpg"
+        },
+        {
+          "id": "4dc97893e99e",
+          "outlet_id": "thenational",
+          "headline": "Benghazi drone strike exposes deep mistrust stalling Libya's unity",
+          "snippet": "Ukraine's sea-drone strike on a Russian warship in Benghazi drew global attention for its drama: a modern, stealth vessel capsizing in a Mediterranean port far from the Black Sea. Inside Libya…",
+          "url": "https://www.thenationalnews.com/news/mena/2026/11/26/benghazi-drone-strike-exposes-deep-mistrust-stalling-libyas-unity/",
+          "published_at": "2026-11-26T11:27:50Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.thenationalnews.com/resizer/v2/L3CEA5XYGVEEBJIPMBRP5E7HSY.jpg?auth=15a0c698c8b5a700bb553e214cd1da4bf13d03e9c7b39cc446832939a30c7178&smart=true&width=2560&height=1440"
+        },
+        {
+          "id": "ef0d853c8b55",
+          "outlet_id": "aljazeera",
+          "headline": "Why is Italy angry with Ukraine for striking Russian ships off Libya?",
+          "snippet": "Analysts say Rome fears instability in Libya could hurt its energy interests and efforts to curb irregular migration.",
+          "url": "https://www.aljazeera.com/news/2026/11/26/why-is-italy-angry-with-ukraine-for-striking-russian-ships-off-libya",
+          "published_at": "2026-11-26T15:02:50Z",
+          "published_at_estimated": false,
+          "image_url": null
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "Ukraine carried out a drone strike on a Russian warship in or off Benghazi, Libya.",
+          "sources": [
+            "43e80286c59c",
+            "d242e319e738",
+            "9ce0fee06ed3",
+            "b5ca1533639a",
+            "4dc97893e99e",
+            "ef0d853c8b55"
+          ]
+        },
+        {
+          "text": "Two Libyan naval officers or soldiers died as a result of the strike.",
+          "sources": [
+            "43e80286c59c",
+            "d242e319e738",
+            "9ce0fee06ed3",
+            "b5ca1533639a"
+          ]
+        },
+        {
+          "text": "Libyan military forces vowed or threatened retaliation against Ukraine.",
+          "sources": [
+            "43e80286c59c",
+            "d242e319e738",
+            "9ce0fee06ed3",
+            "b5ca1533639a"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "43e80286c59c",
+              "quote": "army vows revenge",
+              "field": "headline"
+            },
+            {
+              "article_id": "9ce0fee06ed3",
+              "quote": "Two Libyan Naval Officers Die Of Wounds From Ukrainian Drone Attack",
+              "field": "headline"
+            },
+            {
+              "article_id": "b5ca1533639a",
+              "quote": "according to the forces controlling the country’s east",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the deaths of two naval officers and the threat of retaliation against Kyiv.",
+              "sources": [
+                "43e80286c59c",
+                "9ce0fee06ed3",
+                "b5ca1533639a"
+              ]
+            },
+            {
+              "text": "Attributes the death toll to the forces controlling Libya's east.",
+              "sources": [
+                "b5ca1533639a"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "right",
+          "headline_quotes": [
+            {
+              "article_id": "d242e319e738",
+              "quote": "Libyans pledge to retaliate",
+              "field": "headline"
+            },
+            {
+              "article_id": "d242e319e738",
+              "quote": "The Libyan National Army mourns two soldiers",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the Libyan pledge to retaliate and the army mourning two soldiers who died on Tuesday.",
+              "sources": [
+                "d242e319e738"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [],
+      "contested_claims": [],
+      "opinion": [
+        {
+          "text": "Analysts say Rome fears instability in Libya could hurt its energy interests and efforts to curb irregular migration.",
+          "sources": [
+            "ef0d853c8b55"
+          ]
+        }
+      ],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "43e80286c59c",
+              "quote": "Libyans killed in Ukraine drone attack on Russian warship",
+              "field": "headline"
+            },
+            {
+              "article_id": "d242e319e738",
+              "quote": "Libyans pledge to retaliate",
+              "field": "headline"
+            },
+            {
+              "article_id": "b5ca1533639a",
+              "quote": "Libyan Forces Threaten Retaliation",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the two Libyan deaths and the Libyan military's vow of retaliation against Ukraine.",
+              "sources": [
+                "43e80286c59c",
+                "d242e319e738",
+                "9ce0fee06ed3",
+                "b5ca1533639a"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "4dc97893e99e",
+              "quote": "exposes deep mistrust stalling Libya's unity",
+              "field": "headline"
+            },
+            {
+              "article_id": "4dc97893e99e",
+              "quote": "a modern, stealth vessel capsizing in a Mediterranean port far from the Black Sea",
+              "field": "snippet"
+            },
+            {
+              "article_id": "ef0d853c8b55",
+              "quote": "Why is Italy angry with Ukraine",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Focuses on the strike's wider implications, including mistrust stalling Libya's unity.",
+              "sources": [
+                "4dc97893e99e"
+              ]
+            },
+            {
+              "text": "Describes the warship capsizing in a Mediterranean port far from the Black Sea.",
+              "sources": [
+                "4dc97893e99e"
+              ]
+            },
+            {
+              "text": "Examines Italy's anger with Ukraine over the strike and its energy and migration concerns.",
+              "sources": [
+                "ef0d853c8b55"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "A Ukrainian drone strike on a Russian warship in Benghazi killed two Libyan naval officers. The Libyan National Army, the force controlling Libya's east, vowed to retaliate against Ukraine.",
+        "sources": [
+          "43e80286c59c",
+          "d242e319e738",
+          "9ce0fee06ed3",
+          "b5ca1533639a",
+          "4dc97893e99e"
+        ]
+      },
+      "conclusion": {
+        "text": "All outlets report a Ukrainian drone strike on a Russian warship at Benghazi. West-bloc outlets lead with the two Libyan deaths and retaliation threats, while East-bloc outlets focus on Libya's unity and Italy's concerns. No contradictions appear between them.",
+        "sources": [
+          "43e80286c59c",
+          "d242e319e738",
+          "9ce0fee06ed3",
+          "b5ca1533639a",
+          "4dc97893e99e",
+          "ef0d853c8b55"
+        ]
+      },
+      "validation": {
+        "kept": 24,
+        "dropped_by_reason": {}
+      }
+    },
+    {
+      "id": "c6cc9bf74cfd",
+      "title": "US proposes new tariffs on China, EU and 12 other economies over excess capacity",
+      "rank": 4,
+      "outlet_count": 6,
+      "coverage": {
+        "lean": {
+          "left": 2,
+          "centre": 1,
+          "right": 0
+        },
+        "bloc": {
+          "west": 3,
+          "east": 3
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "f4e79ced95e6",
+          "outlet_id": "thehindu",
+          "headline": "U.S. set to slap tariffs on China, EU and others after probe on excess industrial capacity: report",
+          "snippet": "India was also named among 16 ⁠major U.S. trading partners; Together, the duties are meant to ​rebuild Trump’s global “Liberation Day” tariffs that were struck down by the U.S. Supreme Court in…",
+          "url": "https://www.thehindu.com/news/international/trump-administration-set-to-unveil-new-tariffs-after-probeon-excess-factory-capacity-sources/article71740905.ece",
+          "published_at": "2026-11-25T10:09:32Z",
+          "published_at_estimated": false,
+          "image_url": "https://th-i.thgim.com/public/incoming/gfxfcq/article71740912.ece/alternates/LANDSCAPE_1200/2026-09-21T132213Z_2125814534_RC22NNAEAZ0G_RTRMADP_3_USA-CHINA-BESSENT.JPG"
+        },
+        {
+          "id": "1e4c9f80397e",
+          "outlet_id": "axios",
+          "headline": "Trump prepares new round of tariffs on China, other U.S. trading partners",
+          "snippet": "The Trump administration proposed a new round of tariffs targeting China, the European Union and 12 other economies over policies it says have created excess industrial capacity. Why it matters…",
+          "url": "https://www.axios.com/2026/11/25/trump-tariffs-china",
+          "published_at": "2026-11-25T13:41:15Z",
+          "published_at_estimated": false,
+          "image_url": "https://images.axios.com/1ZuRnzR3tCG2mjV1g3VJ0evjh4s=/0x0:4100x2306/1366x768/2026/11/25/1795607699819.jpeg"
+        },
+        {
+          "id": "c33937841959",
+          "outlet_id": "mirror",
+          "headline": "Brutal US tariff hikes proposed for EU countries and 12 others - full list",
+          "snippet": "The taxes are intended to replace revenues lost after the Supreme Court ruled in February that Trump could not declare an economic emergency to impose across-the-board tariffs",
+          "url": "https://www.mirror.co.uk/news/world-news/us-tariff-hikes-eu-china-37914478",
+          "published_at": "2026-11-25T14:09:49Z",
+          "published_at_estimated": false,
+          "image_url": "https://i2-prod.mirror.co.uk/incoming/article37914502.ece/ALTERNATES/s615/0_Trump-Tariffs-Congress-26316747050166.jpg"
+        },
+        {
+          "id": "fc5bbe29cbaf",
+          "outlet_id": "thehindu",
+          "headline": "Trump’s tariff plan explained: Which countries could be hit and why?",
+          "snippet": "The Trump administration is preparing a fresh tariff offensive targeting major trading partners including China, India and the European Union. Here’s what the investigation is about and what it…",
+          "url": "https://www.thehindu.com/videos/trumps-tariff-plan-explained-which-countries-could-be-hit-and-why/article71743829.ece",
+          "published_at": "2026-11-25T17:40:18Z",
+          "published_at_estimated": false,
+          "image_url": "https://th-i.thgim.com/public/incoming/wqec3p/article71743802.ece/alternates/LANDSCAPE_1200/WhatsApp%20Image%202026-11-25%20at%205.31.07%20PM.jpeg"
+        },
+        {
+          "id": "fd65f19adeeb",
+          "outlet_id": "japantimes",
+          "headline": "Japan protests new U.S. tariff rate and allegation of excess capacity",
+          "snippet": "The U.S. announced plans to impose a 15% levy on imports from Japan in response to alleged excess manufacturing capacity.",
+          "url": "https://www.japantimes.co.jp/business/2026/11/26/economy/japan-protests-trump-new-tariff/",
+          "published_at": "2026-11-26T05:28:00Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.japantimes.co.jp/japantimes/uploads/images/2026/11/26/thumbs/400x400/576158.jpg"
+        },
+        {
+          "id": "717752669c22",
+          "outlet_id": "koreaherald",
+          "headline": "Korea stands by industrial policy after US tariff proposal",
+          "snippet": "South Korea said Thursday it was not considering any drastic changes to its industrial policies after the United States cited those policies in a report underpinning a new tariff proposal…",
+          "url": "https://www.koreaherald.com/article/10950619",
+          "published_at": "2026-11-26T07:00:00Z",
+          "published_at_estimated": false,
+          "image_url": "https://wimg.heraldcorp.com/news/cms/2026/11/26/news-p.v1.20261126.25a2578c420744dfba20460909024cc0_T1.jpg"
+        },
+        {
+          "id": "ed8f54230627",
+          "outlet_id": "thehindu",
+          "headline": "U.S. announces new 25% tariffs on India, second-highest in the 14 countries against which action has been taken",
+          "snippet": "The order by the U.S. Trade Representative also opens the door for a lower 17% tariff if India and the U.S. sign a trade deal",
+          "url": "https://www.thehindu.com/news/international/donald-trump-tariffs-us-midterm-elections/article71743081.ece",
+          "published_at": "2026-11-26T07:20:09Z",
+          "published_at_estimated": false,
+          "image_url": "https://th-i.thgim.com/public/incoming/x6kns7/article71743744.ece/alternates/LANDSCAPE_1200/2026-11-25T135439Z_732317319_RC21VOATCSR3_RTRMADP_3_USA-TRUMP-TARIFFS.JPG"
+        },
+        {
+          "id": "501dfb915138",
+          "outlet_id": "guardian",
+          "headline": "China reserves right to take ‘necessary measures’ after Trump’s new tariff proposals",
+          "snippet": "Beijing says new levies amount to ‘political manipulation’, while Brazil ‘will not yield to this type of threat’ Trump proposing new tariffs on 14 partners including China and EU Beijing has said it…",
+          "url": "https://www.theguardian.com/us-news/2026/nov/26/brazil-china-react-to-new-trump-tariffs-threat",
+          "published_at": "2026-11-26T12:00:22Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.guim.co.uk/img/media/2368ea981f5660064edcacf6ff595f03bb38028d/139_0_1390_1112/master/1390.jpg?width=460&quality=85&auto=format&fit=max&s=98c84cd990752410bc56af9fe1aa82e6"
+        },
+        {
+          "id": "51a005569e63",
+          "outlet_id": "thehindu",
+          "headline": "Experts say new U.S. tariffs do not pose substantial threat, India should not rush into trade deal",
+          "snippet": "The latest proposal by the USTR takes the tariff framework on India back to what it was at the start of trade deal negotiations",
+          "url": "https://www.thehindu.com/business/Economy/experts-say-new-us-tariffs-do-not-pose-substantial-threat-india-should-not-rush-into-trade-deal/article71746007.ece",
+          "published_at": "2026-11-26T15:43:21Z",
+          "published_at_estimated": false,
+          "image_url": "https://th-i.thgim.com/public/incoming/mgpwma/article71747681.ece/alternates/LANDSCAPE_1200/iStock-1089423548%201.jpg"
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "The US has proposed new tariffs targeting China, the European Union and other major trading partners.",
+          "sources": [
+            "1e4c9f80397e",
+            "501dfb915138",
+            "c33937841959",
+            "f4e79ced95e6",
+            "fc5bbe29cbaf"
+          ]
+        },
+        {
+          "text": "The proposal is tied to alleged excess industrial or manufacturing capacity.",
+          "sources": [
+            "1e4c9f80397e",
+            "f4e79ced95e6",
+            "fd65f19adeeb"
+          ]
+        },
+        {
+          "text": "The new duties follow a US Supreme Court ruling that struck down Trump's earlier across-the-board tariffs.",
+          "sources": [
+            "f4e79ced95e6",
+            "c33937841959"
+          ]
+        },
+        {
+          "text": "India is among the countries named in the tariff action.",
+          "sources": [
+            "f4e79ced95e6",
+            "fc5bbe29cbaf",
+            "ed8f54230627",
+            "51a005569e63"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "c33937841959",
+              "quote": "Brutal US tariff hikes proposed for EU countries and 12 others",
+              "field": "headline"
+            },
+            {
+              "article_id": "501dfb915138",
+              "quote": "China reserves right to take ‘necessary measures’",
+              "field": "headline"
+            },
+            {
+              "article_id": "501dfb915138",
+              "quote": "Brazil ‘will not yield to this type of threat’",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Presents the tariffs as a replacement for revenues lost after the Supreme Court's February ruling against Trump's emergency tariffs.",
+              "sources": [
+                "c33937841959"
+              ]
+            },
+            {
+              "text": "Leads with China's warning of countermeasures and its description of the levies as 'political manipulation', plus Brazil's refusal to yield.",
+              "sources": [
+                "501dfb915138"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "1e4c9f80397e",
+              "quote": "Trump prepares new round of tariffs on China, other U.S. trading partners",
+              "field": "headline"
+            },
+            {
+              "article_id": "1e4c9f80397e",
+              "quote": "policies it says have created excess industrial capacity",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the administration's stated rationale of excess industrial capacity, attributed to the administration.",
+              "sources": [
+                "1e4c9f80397e"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not mention the Supreme Court ruling that struck down the earlier tariffs.",
+          "sources": [
+            "c33937841959"
+          ]
+        },
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not mention China's or Brazil's reactions to the proposal.",
+          "sources": [
+            "501dfb915138"
+          ]
+        },
+        {
+          "lean": "left",
+          "text": "Left coverage does not mention the excess industrial capacity rationale given for the tariffs.",
+          "sources": [
+            "1e4c9f80397e"
+          ]
+        }
+      ],
+      "contested_claims": [],
+      "opinion": [
+        {
+          "text": "Experts quoted say the new US tariffs do not pose a substantial threat and India should not rush into a trade deal.",
+          "sources": [
+            "51a005569e63"
+          ]
+        }
+      ],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "c33937841959",
+              "quote": "Brutal US tariff hikes",
+              "field": "headline"
+            },
+            {
+              "article_id": "1e4c9f80397e",
+              "quote": "Trump prepares new round of tariffs",
+              "field": "headline"
+            },
+            {
+              "article_id": "501dfb915138",
+              "quote": "new levies amount to ‘political manipulation’",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Emphasises the Supreme Court context and lost revenues, and reactions from China and Brazil.",
+              "sources": [
+                "c33937841959",
+                "501dfb915138"
+              ]
+            },
+            {
+              "text": "Reports the administration's excess-capacity rationale.",
+              "sources": [
+                "1e4c9f80397e"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "fd65f19adeeb",
+              "quote": "Japan protests new U.S. tariff rate and allegation of excess capacity",
+              "field": "headline"
+            },
+            {
+              "article_id": "717752669c22",
+              "quote": "Korea stands by industrial policy after US tariff proposal",
+              "field": "headline"
+            },
+            {
+              "article_id": "ed8f54230627",
+              "quote": "U.S. announces new 25% tariffs on India",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Focuses on country-specific rates: 15% for Japan, 25% for India with a possible 17% rate if a trade deal is signed.",
+              "sources": [
+                "fd65f19adeeb",
+                "ed8f54230627"
+              ]
+            },
+            {
+              "text": "Reports national responses: Japan protests, South Korea says it is not considering drastic industrial policy changes.",
+              "sources": [
+                "fd65f19adeeb",
+                "717752669c22"
+              ]
+            },
+            {
+              "text": "Indian coverage explains which countries could be hit and carries expert views on India's trade deal stance.",
+              "sources": [
+                "fc5bbe29cbaf",
+                "51a005569e63"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "The Trump administration proposed new tariffs on China, the EU and 12 other economies over policies it says created excess industrial capacity. Reports say the duties are meant to rebuild or replace tariffs struck down by the US Supreme Court. Announced rates include 15% for Japan and 25% for India.",
+        "sources": [
+          "1e4c9f80397e",
+          "501dfb915138",
+          "f4e79ced95e6",
+          "c33937841959",
+          "fd65f19adeeb",
+          "ed8f54230627"
+        ]
+      },
+      "conclusion": {
+        "text": "All sides report a new US tariff proposal on China, the EU and other partners. Western outlets lead with the Supreme Court context and China's and Brazil's reactions; Eastern outlets lead with national rates and responses from Japan, Korea and India. Most reports name 14 economies, while one Hindu report says 16.",
+        "sources": [
+          "1e4c9f80397e",
+          "c33937841959",
+          "501dfb915138",
+          "fd65f19adeeb",
+          "717752669c22",
+          "ed8f54230627",
+          "f4e79ced95e6"
+        ]
+      },
+      "validation": {
+        "kept": 29,
+        "dropped_by_reason": {
+          "contested_same_outlet": 1
+        }
+      }
+    },
+    {
+      "id": "b25697235c7b",
+      "title": "Macy's Thanksgiving Day Parade postponed for first time in its history",
+      "rank": 5,
+      "outlet_count": 5,
+      "coverage": {
+        "lean": {
+          "left": 2,
+          "centre": 1,
+          "right": 1
+        },
+        "bloc": {
+          "west": 4,
+          "east": 1
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "3585d5331d0e",
+          "outlet_id": "axios",
+          "headline": "Macy's Thanksgiving parade postponed for the first time in the event's history",
+          "snippet": "The Macy's Thanksgiving Day Parade has been postponed for the first time in the event's history, the retailer confirmed Wednesday. Why it matters: Macy's was expected to celebrate its 100th…",
+          "url": "https://www.axios.com/2026/11/25/macys-thanksgiving-parade-2026-balloons-weather",
+          "published_at": "2026-11-25T21:28:25Z",
+          "published_at_estimated": false,
+          "image_url": "https://images.axios.com/WpsVxuu_Uf3T6oqolhQMrOJ-Ils=/0x297:7356x4435/1366x768/2026/11/25/1795627145730.jpg"
+        },
+        {
+          "id": "f5b6e046eee0",
+          "outlet_id": "thehindu",
+          "headline": "Bad weather postpones Macy’s 100th Thanksgiving Day Parade for first time ever",
+          "snippet": "The postponement came as New York City is set to get slammed by a storm bringing intense winds and rain to the region",
+          "url": "https://www.thehindu.com/news/international/bad-weather-postpones-macys-100th-thanksgiving-day-parade-for-first-time-ever/article71745030.ece",
+          "published_at": "2026-11-26T01:34:38Z",
+          "published_at_estimated": false,
+          "image_url": "https://th-i.thgim.com/public/incoming/ff20ak/article71745036.ece/alternates/LANDSCAPE_1200/2026-11-26T012212Z_1923368480_RC25VOAWSF79_RTRMADP_3_USA-STORM-MACY-S-PARADE.JPG"
+        },
+        {
+          "id": "c242e40c7b84",
+          "outlet_id": "nbc",
+          "headline": "Macy’s Thanksgiving Day Parade Postponed for First Time Ever",
+          "snippet": "For the first time in its 100-year history, the world-famous Macy’s Thanksgiving Day Parade has been postponed. The unprecedented decision by Macy’s and New York City was made after forecasters…",
+          "url": "https://www.today.com/video/macy-s-thanksgiving-day-parade-postponed-for-first-time-ever-274220101982",
+          "published_at": "2026-11-26T12:27:56Z",
+          "published_at_estimated": false,
+          "image_url": "https://media-cldnry.s-nbcnews.com/image/upload/t_fit_1500w/mpx/2704722219/2026_11/1795696070571_tdy_news_7a_mclaughlin_thanksgiving_parade_postponed_261126_S3_1920x1080-iahvlt.jpg"
+        },
+        {
+          "id": "01723ce572ea",
+          "outlet_id": "nypost",
+          "headline": "Macy’s faces staggering $1.7M loss just to blow up parade balloons again — as helium prices soar",
+          "snippet": "Helium costs have spiked 40% since last year, making balloon refills pricey.",
+          "url": "https://nypost.com/2026/11/26/lifestyle/macys-faces-1-7m-loss-to-blow-up-parade-balloons-again/",
+          "published_at": "2026-11-26T12:37:41Z",
+          "published_at_estimated": false,
+          "image_url": "https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2Fyellow-stars-balloons-floats-central-149938411.jpg?w%3D1024"
+        },
+        {
+          "id": "02b478e604cf",
+          "outlet_id": "independent",
+          "headline": "Parents trick their kids after Macy’s Thanksgiving Day Parade postponement",
+          "snippet": "Annual parade has been postponed due to weather for the first time in its 100-year history",
+          "url": "https://www.independent.co.uk/arts-entertainment/tv/news/macys-thanksgiving-day-parade-postponement-parents-b3092246.html",
+          "published_at": "2026-11-26T16:14:16Z",
+          "published_at_estimated": false,
+          "image_url": "https://static.independent.co.uk/2026/11/26/14/2306914182..?width=1200&auto=webp&trim=0%2C0%2C0%2C0"
+        },
+        {
+          "id": "fc17a3d6e405",
+          "outlet_id": "independent",
+          "headline": "Hoda Kotb breaks silence on historic Macy’s Thanksgiving Day Parade postponement",
+          "snippet": "NBC presenter said she was ‘relieved’ the parade had been postponed",
+          "url": "https://www.independent.co.uk/arts-entertainment/tv/news/hoda-kotb-macy-thanksgiving-parade-b3092315.html",
+          "published_at": "2026-11-26T16:15:17Z",
+          "published_at_estimated": false,
+          "image_url": "https://static.independent.co.uk/2026/11/26/16/2283178892..?width=1200&auto=webp&trim=85%2C530%2C2594%2C0"
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "The Macy's Thanksgiving Day Parade has been postponed for the first time in its history.",
+          "sources": [
+            "3585d5331d0e",
+            "f5b6e046eee0",
+            "c242e40c7b84",
+            "02b478e604cf"
+          ]
+        },
+        {
+          "text": "This would have been the parade's 100th edition, in a 100-year history.",
+          "sources": [
+            "3585d5331d0e",
+            "f5b6e046eee0",
+            "c242e40c7b84",
+            "02b478e604cf"
+          ]
+        },
+        {
+          "text": "The postponement is attributed to bad weather.",
+          "sources": [
+            "f5b6e046eee0",
+            "02b478e604cf"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "c242e40c7b84",
+              "quote": "The unprecedented decision by Macy’s and New York City",
+              "field": "snippet"
+            },
+            {
+              "article_id": "02b478e604cf",
+              "quote": "Parents trick their kids",
+              "field": "headline"
+            },
+            {
+              "article_id": "fc17a3d6e405",
+              "quote": "she was ‘relieved’ the parade had been postponed",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "States that the decision was made jointly by Macy's and New York City after forecasts.",
+              "sources": [
+                "c242e40c7b84"
+              ]
+            },
+            {
+              "text": "Foregrounds reactions to the postponement, from parents and from NBC presenter Hoda Kotb.",
+              "sources": [
+                "02b478e604cf",
+                "fc17a3d6e405"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "3585d5331d0e",
+              "quote": "the retailer confirmed Wednesday",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with Macy's confirmation and the planned 100th celebration.",
+              "sources": [
+                "3585d5331d0e"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "right",
+          "headline_quotes": [
+            {
+              "article_id": "01723ce572ea",
+              "quote": "Macy’s faces staggering $1.7M loss just to blow up parade balloons again",
+              "field": "headline"
+            },
+            {
+              "article_id": "01723ce572ea",
+              "quote": "Helium costs have spiked 40% since last year",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Focuses on the cost to Macy's of refilling the balloons, citing a 40% rise in helium prices.",
+              "sources": [
+                "01723ce572ea"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "right",
+          "text": "Right-leaning coverage does not mention the weather as the reason for the postponement.",
+          "sources": [
+            "02b478e604cf"
+          ]
+        },
+        {
+          "lean": "right",
+          "text": "Right-leaning coverage does not mention that this is the first postponement in the parade's history.",
+          "sources": [
+            "3585d5331d0e",
+            "c242e40c7b84",
+            "02b478e604cf"
+          ]
+        },
+        {
+          "lean": "left",
+          "text": "Left-leaning coverage does not mention the helium cost of refilling the parade balloons.",
+          "sources": [
+            "01723ce572ea"
+          ]
+        }
+      ],
+      "contested_claims": [],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "3585d5331d0e",
+              "quote": "postponed for the first time in the event's history",
+              "field": "headline"
+            },
+            {
+              "article_id": "01723ce572ea",
+              "quote": "as helium prices soar",
+              "field": "headline"
+            },
+            {
+              "article_id": "fc17a3d6e405",
+              "quote": "Hoda Kotb breaks silence",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Covers the confirmation, the decision-makers, reactions and the cost of refilling balloons.",
+              "sources": [
+                "3585d5331d0e",
+                "c242e40c7b84",
+                "01723ce572ea",
+                "02b478e604cf",
+                "fc17a3d6e405"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "f5b6e046eee0",
+              "quote": "Bad weather postpones Macy’s 100th Thanksgiving Day Parade",
+              "field": "headline"
+            },
+            {
+              "article_id": "f5b6e046eee0",
+              "quote": "a storm bringing intense winds and rain to the region",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the weather, describing a storm with intense winds and rain set to hit New York City.",
+              "sources": [
+                "f5b6e046eee0"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "The Macy's Thanksgiving Day Parade, due to mark its 100th year, has been postponed for the first time in its history, as confirmed by Macy's on Wednesday. Reports attribute this to bad weather, with a storm bringing intense winds and rain to New York City. One outlet reports that refilling the balloons could cost Macy's $1.7M.",
+        "sources": [
+          "3585d5331d0e",
+          "f5b6e046eee0",
+          "c242e40c7b84",
+          "02b478e604cf",
+          "01723ce572ea"
+        ]
+      },
+      "conclusion": {
+        "text": "Coverage agrees that the 100th Macy's parade was postponed for the first time, with weather cited as the cause. Left-leaning outlets emphasise reactions, the centre Macy's confirmation, the right helium costs and the East outlet the storm. No claims are contested or contradicted.",
+        "sources": [
+          "3585d5331d0e",
+          "f5b6e046eee0",
+          "c242e40c7b84",
+          "02b478e604cf",
+          "fc17a3d6e405",
+          "01723ce572ea"
+        ]
+      },
+      "validation": {
+        "kept": 25,
+        "dropped_by_reason": {}
+      }
+    },
+    {
+      "id": "5fada4fd0c4a",
+      "title": "UK net migration falls to 77,000, lowest since 1997 outside pandemic",
+      "rank": 6,
+      "outlet_count": 5,
+      "coverage": {
+        "lean": {
+          "left": 1,
+          "centre": 1,
+          "right": 0
+        },
+        "bloc": {
+          "west": 2,
+          "east": 3
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "8121787e720c",
+          "outlet_id": "sky",
+          "headline": "UK net migration falls to lowest level in three decades, excluding pandemic",
+          "snippet": "UK net migration fell to 77,000 in the year to June 2026, provisional new data from the Office for National Statistics (ONS) shows.",
+          "url": "https://news.sky.com/story/uk-net-migration-falls-to-77000-latest-data-shows-13616677",
+          "published_at": "2026-11-26T08:19:00Z",
+          "published_at_estimated": false,
+          "image_url": "https://e3.365dm.com/26/11/1920x1080/skynews-uk-border-border-control_7416859.jpg?20261126085142"
+        },
+        {
+          "id": "4600b8f1f815",
+          "outlet_id": "scmp",
+          "headline": "UK net migration falls to 77,000, lowest annual level in nearly 30 years",
+          "snippet": "Net migration to the UK fell to 77,000 for the year to June, the lowest annual figure since 1997 excluding the Covid years, statistics showed on Thursday. The net migration figures – the difference…",
+          "url": "https://www.scmp.com/news/world/europe/article/3375952/uk-net-migration-falls-77000-lowest-annual-level-nearly-30-years",
+          "published_at": "2026-11-26T13:19:28Z",
+          "published_at_estimated": false,
+          "image_url": "https://cdn.i-scmp.com/sites/default/files/styles/1280x720/public/d8/images/canvas/2026/11/26/c5f8aa66-1754-4c2b-a2de-cffb2bed2ef8_07b73b9e.jpg?itok=qyGZ0EZi&v=1795699165"
+        },
+        {
+          "id": "c4b695995be4",
+          "outlet_id": "nyt",
+          "headline": "Net Migration to U.K. Falls to Lowest Level Since 1997, Excluding Pandemic",
+          "snippet": "The drop was largely driven by fewer people arriving from outside the European Union. It reflects government action to restrict immigration after a public backlash.",
+          "url": "https://www.nytimes.com/2026/11/26/world/europe/uk-net-migration-data.html",
+          "published_at": "2026-11-26T13:51:57Z",
+          "published_at_estimated": false,
+          "image_url": "https://static01.nyt.com/images/2026/11/26/multimedia/26int-uk-immigration-tbmc/26int-uk-immigration-tbmc-mediumSquareAt3X.jpg"
+        },
+        {
+          "id": "1cbdb86082ea",
+          "outlet_id": "thenational",
+          "headline": "UK net migration drops to lowest since 1997",
+          "snippet": "Net migration to the UK has fallen to 77,000, the lowest level for nearly 30 years outside the Covid pandemic, figures showed on Thursday. The figure for the year to June, which represents the…",
+          "url": "https://www.thenationalnews.com/news/uk/2026/11/26/uk-net-migration-drops-to-lowest-since-1997/",
+          "published_at": "2026-11-26T14:08:57Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.thenationalnews.com/resizer/v2/FBR6HSBYGVBWJBQUYHEKBEGMNA.jpg?auth=42f6c4057cf6e67a09b266e9eafeffa02d998b5965b48a8d60d9efb66ff38c1d&smart=true&width=3500&height=2334"
+        },
+        {
+          "id": "dae5928fdb69",
+          "outlet_id": "thehindu",
+          "headline": "U.K. net migration falls to lowest since 1997; Indians largest foreign group entering and leaving the country",
+          "snippet": "Some 44,000 Indians arrived in the U.K. for work-related reasons, 77,000 to study, and 5,000 for other reasons. Some 28,000 Indians on work visas left the U.K. and 55,000 on study visas departed",
+          "url": "https://www.thehindu.com/news/international/uk-net-migration-falls-to-lowest-since-1997-indians-largest-foreign-group-entering-and-leaving-the-country/article71746576.ece",
+          "published_at": "2026-11-26T16:18:30Z",
+          "published_at_estimated": false,
+          "image_url": "https://th-i.thgim.com/public/incoming/kbcw2e/article71746587.ece/alternates/LANDSCAPE_1200/2023-12-05T082430Z_1681444546_RC2VQ4A8JSE1_RTRMADP_3_MIGRATION-BRITAIN-RWANDA-CLEVERLY.JPG"
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "UK net migration fell to 77,000 in the year to June.",
+          "sources": [
+            "8121787e720c",
+            "4600b8f1f815",
+            "1cbdb86082ea"
+          ]
+        },
+        {
+          "text": "The figure is the lowest since 1997, or in about three decades, excluding the pandemic period.",
+          "sources": [
+            "8121787e720c",
+            "4600b8f1f815",
+            "c4b695995be4",
+            "1cbdb86082ea",
+            "dae5928fdb69"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "c4b695995be4",
+              "quote": "largely driven by fewer people arriving from outside the European Union",
+              "field": "snippet"
+            },
+            {
+              "article_id": "c4b695995be4",
+              "quote": "government action to restrict immigration after a public backlash",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the causes of the fall, attributing it mainly to fewer arrivals from outside the European Union.",
+              "sources": [
+                "c4b695995be4"
+              ]
+            },
+            {
+              "text": "Links the drop to government action to restrict immigration following a public backlash.",
+              "sources": [
+                "c4b695995be4"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "8121787e720c",
+              "quote": "lowest level in three decades, excluding pandemic",
+              "field": "headline"
+            },
+            {
+              "article_id": "8121787e720c",
+              "quote": "provisional new data from the Office for National Statistics (ONS) shows",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the 77,000 figure and notes the data are provisional and come from the ONS.",
+              "sources": [
+                "8121787e720c"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "left",
+          "text": "The left-leaning coverage does not mention the 77,000 net migration figure.",
+          "sources": [
+            "8121787e720c"
+          ]
+        },
+        {
+          "lean": "centre",
+          "text": "The centre coverage does not mention fewer non-EU arrivals or government restrictions as drivers of the fall.",
+          "sources": [
+            "c4b695995be4"
+          ]
+        }
+      ],
+      "contested_claims": [],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "8121787e720c",
+              "quote": "UK net migration falls to lowest level in three decades, excluding pandemic",
+              "field": "headline"
+            },
+            {
+              "article_id": "c4b695995be4",
+              "quote": "It reflects government action to restrict immigration after a public backlash.",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Emphasises the official ONS source and the causes of the decline, including government restrictions and fewer non-EU arrivals.",
+              "sources": [
+                "8121787e720c",
+                "c4b695995be4"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "4600b8f1f815",
+              "quote": "lowest annual level in nearly 30 years",
+              "field": "headline"
+            },
+            {
+              "article_id": "1cbdb86082ea",
+              "quote": "the lowest level for nearly 30 years outside the Covid pandemic",
+              "field": "snippet"
+            },
+            {
+              "article_id": "dae5928fdb69",
+              "quote": "Indians largest foreign group entering and leaving the country",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Reports the 77,000 figure and the comparison with nearly 30 years of data outside the Covid years.",
+              "sources": [
+                "4600b8f1f815",
+                "1cbdb86082ea"
+              ]
+            },
+            {
+              "text": "Focuses on Indian nationals as the largest foreign group arriving and leaving, with figures for work and study visas.",
+              "sources": [
+                "dae5928fdb69"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "UK net migration fell to 77,000 in the year to June 2026, according to provisional Office for National Statistics data. Outlets describe it as the lowest level since 1997, or in nearly three decades, excluding the Covid pandemic years.",
+        "sources": [
+          "8121787e720c",
+          "4600b8f1f815",
+          "1cbdb86082ea",
+          "c4b695995be4",
+          "dae5928fdb69"
+        ]
+      },
+      "conclusion": null,
+      "validation": {
+        "kept": 20,
+        "dropped_by_reason": {
+          "untrusted_text": 1
+        }
+      }
+    },
+    {
+      "id": "028847b8d9d9",
+      "title": "Paris appeals court orders Gérard Depardieu to stand trial for rape",
+      "rank": 7,
+      "outlet_count": 5,
+      "coverage": {
+        "lean": {
+          "left": 2,
+          "centre": 2,
+          "right": 0
+        },
+        "bloc": {
+          "west": 4,
+          "east": 1
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "3d3ba10812b1",
+          "outlet_id": "france24",
+          "headline": "🔴 French actor Gérard Depardieu to face trial for alleged rape of actress Charlotte Arnould",
+          "snippet": "",
+          "url": "https://www.france24.com/en/france/20261126-french-actor-g%C3%A9rard-depardieu-to-face-trial-for-rape-his-lawyer-says",
+          "published_at": "2026-11-26T13:46:41Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "a77a27d35bfc",
+          "outlet_id": "nyt",
+          "headline": "Gérard Depardieu Is Ordered to Stand Trial Over Rape Accusation",
+          "snippet": "The actress Charlotte Arnould has accused the French movie star of raping her in 2018. He has denied any wrongdoing in the case.",
+          "url": "https://www.nytimes.com/2026/11/26/world/europe/france-depardieu-rape-trial.html",
+          "published_at": "2026-11-26T14:17:40Z",
+          "published_at_estimated": false,
+          "image_url": "https://static01.nyt.com/images/2026/11/26/multimedia/26france-depardieu-02-blqg/26france-depardieu-02-blqg-mediumSquareAt3X.jpg"
+        },
+        {
+          "id": "22de2ecca378",
+          "outlet_id": "bbc",
+          "headline": "Gérard Depardieu to stand trial for alleged rape of actress in 2018, court rules",
+          "snippet": "A Paris appeals court rules Depardieu will go on trial for the alleged rape of Charlotte Arnould.",
+          "url": "https://www.bbc.co.uk/news/articles/cmlyd76kyx44o",
+          "published_at": "2026-11-26T14:44:26Z",
+          "published_at_estimated": false,
+          "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/c5c6/live/4c0cb100-e97d-11f1-99b6-a35a62fa4264.jpg"
+        },
+        {
+          "id": "a774db22b02d",
+          "outlet_id": "scmp",
+          "headline": "French actor Gerard Depardieu to stand trial for rape after Paris court rejects appeal",
+          "snippet": "Film star ⁠Gerard Depardieu, one of the ⁠leading faces of French cinema, will face trial on charges of raping actress Charlotte Arnould in 2018, after a Paris appeal court on Thursday rejected his…",
+          "url": "https://www.scmp.com/news/world/europe/article/3375961/french-actor-gerard-depardieu-stand-trial-rape-after-paris-court-rejects-appeal",
+          "published_at": "2026-11-26T14:45:59Z",
+          "published_at_estimated": false,
+          "image_url": "https://cdn.i-scmp.com/sites/default/files/styles/1280x720/public/d8/images/canvas/2026/11/26/cae33cb8-c748-430b-91ba-e3c676b1dd76_3358b993.jpg?itok=xL8oNS_e&v=1795704354"
+        },
+        {
+          "id": "d92c076a4886",
+          "outlet_id": "independent",
+          "headline": "Gérard Depardieu ordered to stand trial for rape",
+          "snippet": "It comes shortly after he abandoned his appeal of an earlier sexual assault conviction",
+          "url": "https://www.independent.co.uk/news/world/europe/gerard-depardieu-rape-trial-metoo-b3092287.html",
+          "published_at": "2026-11-26T16:01:25Z",
+          "published_at_estimated": false,
+          "image_url": "https://static.independent.co.uk/2026/11/26/15/2026-11-26T140738Z_816864359_RC2XKDAULW27_RTRMADP_3_PEOPLE-DEPARDIEU.JPG?width=1200&auto=webp&trim=0%2C0%2C0%2C0"
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "Gérard Depardieu is to stand trial on a rape accusation.",
+          "sources": [
+            "3d3ba10812b1",
+            "a77a27d35bfc",
+            "22de2ecca378",
+            "a774db22b02d",
+            "d92c076a4886"
+          ]
+        },
+        {
+          "text": "The accuser is actress Charlotte Arnould.",
+          "sources": [
+            "3d3ba10812b1",
+            "a77a27d35bfc",
+            "22de2ecca378",
+            "a774db22b02d"
+          ]
+        },
+        {
+          "text": "The alleged rape dates from 2018.",
+          "sources": [
+            "a77a27d35bfc",
+            "22de2ecca378",
+            "a774db22b02d"
+          ]
+        },
+        {
+          "text": "The decision was made by a Paris appeals court.",
+          "sources": [
+            "22de2ecca378",
+            "a774db22b02d"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "a77a27d35bfc",
+              "quote": "Gérard Depardieu Is Ordered to Stand Trial Over Rape Accusation",
+              "field": "headline"
+            },
+            {
+              "article_id": "a77a27d35bfc",
+              "quote": "He has denied any wrongdoing in the case.",
+              "field": "snippet"
+            },
+            {
+              "article_id": "d92c076a4886",
+              "quote": "he abandoned his appeal of an earlier sexual assault conviction",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Reports Depardieu's denial of any wrongdoing.",
+              "sources": [
+                "a77a27d35bfc"
+              ]
+            },
+            {
+              "text": "Places the ruling alongside his abandoned appeal of an earlier sexual assault conviction.",
+              "sources": [
+                "d92c076a4886"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "3d3ba10812b1",
+              "quote": "French actor Gérard Depardieu to face trial for alleged rape of actress Charlotte Arnould",
+              "field": "headline"
+            },
+            {
+              "article_id": "22de2ecca378",
+              "quote": "A Paris appeals court rules Depardieu will go on trial",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the accuser's name and describes the rape as alleged.",
+              "sources": [
+                "3d3ba10812b1",
+                "22de2ecca378"
+              ]
+            },
+            {
+              "text": "Attributes the decision to a Paris appeals court ruling.",
+              "sources": [
+                "22de2ecca378"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not mention Depardieu's denial of wrongdoing.",
+          "sources": [
+            "a77a27d35bfc"
+          ]
+        },
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not mention his abandoned appeal of an earlier sexual assault conviction.",
+          "sources": [
+            "d92c076a4886"
+          ]
+        },
+        {
+          "lean": "left",
+          "text": "Left coverage does not mention that the ruling came from a Paris appeals court.",
+          "sources": [
+            "22de2ecca378"
+          ]
+        }
+      ],
+      "contested_claims": [],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "a77a27d35bfc",
+              "quote": "Gérard Depardieu Is Ordered to Stand Trial Over Rape Accusation",
+              "field": "headline"
+            },
+            {
+              "article_id": "22de2ecca378",
+              "quote": "Gérard Depardieu to stand trial for alleged rape of actress in 2018, court rules",
+              "field": "headline"
+            },
+            {
+              "article_id": "d92c076a4886",
+              "quote": "Gérard Depardieu ordered to stand trial for rape",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Reports the order to stand trial, his denial and his earlier sexual assault conviction.",
+              "sources": [
+                "a77a27d35bfc",
+                "22de2ecca378",
+                "d92c076a4886",
+                "3d3ba10812b1"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "a774db22b02d",
+              "quote": "French actor Gerard Depardieu to stand trial for rape after Paris court rejects appeal",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the Paris court rejecting an appeal and describes Depardieu as a leading face of French cinema.",
+              "sources": [
+                "a774db22b02d"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "A Paris appeals court has ordered French actor Gérard Depardieu to stand trial for the alleged rape of actress Charlotte Arnould in 2018. He has denied any wrongdoing. The ruling comes shortly after he abandoned his appeal of an earlier sexual assault conviction.",
+        "sources": [
+          "3d3ba10812b1",
+          "a77a27d35bfc",
+          "22de2ecca378",
+          "a774db22b02d",
+          "d92c076a4886"
+        ]
+      },
+      "conclusion": null,
+      "validation": {
+        "kept": 23,
+        "dropped_by_reason": {
+          "untrusted_text": 1
+        }
+      }
+    },
+    {
+      "id": "14cdd8666863",
+      "title": "Baghdad moves to take control of Kurdish oil and border crossings, sparking protests",
+      "rank": 8,
+      "outlet_count": 4,
+      "coverage": {
+        "lean": {
+          "left": 1,
+          "centre": 1,
+          "right": 0
+        },
+        "bloc": {
+          "west": 2,
+          "east": 2
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "41a7c913cc85",
+          "outlet_id": "nyt",
+          "headline": "Iraq’s Prime Minister Aims to Wrest More Power From Kurdistan Region",
+          "snippet": "Ali al-Zaidi, who just scored a symbolic victory against a powerful Iran-backed militia, has now moved to assert control over Kurdish border crossings and oil resources.",
+          "url": "https://www.nytimes.com/2026/11/24/world/middleeast/iraq-prime-minister-kurdistan-control.html",
+          "published_at": "2026-11-25T07:36:48Z",
+          "published_at_estimated": false,
+          "image_url": "https://static01.nyt.com/images/2026/11/24/multimedia/24int-iraq-pm-01-vgct/24int-iraq-pm-01-vgct-mediumSquareAt3X.jpg"
+        },
+        {
+          "id": "a14cd2a7e6fd",
+          "outlet_id": "thenational",
+          "headline": "Iraq denies sending troops to Kurdistan as crisis talks begin",
+          "snippet": "Iraq's central government moved to calm fears of a confrontation with the semi-autonomous Kurdistan region on Thursday, denying reports that army units were advancing north. Authorities said an…",
+          "url": "https://www.thenationalnews.com/news/mena/2026/11/26/iraq-denies-sending-troops-to-kurdistan-as-crisis-talks-to-begin/",
+          "published_at": "2026-11-26T09:29:17Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.thenationalnews.com/resizer/v2/QMSS6TROEJFZXAR73HHOCZOKEU.jpg?auth=2e5cbbfd90e5df94d1295c7b4da5f2fd2e104468ae71a795bead35da7e3319c8&smart=true&width=2048&height=1668"
+        },
+        {
+          "id": "0f30b38a4875",
+          "outlet_id": "thenational",
+          "headline": "How Baghdad's takeover of Kurdistan oil can be detrimental for Iraq and the region",
+          "snippet": "On Tuesday, Prime Minister Ali Al Zaidi ordered moving army units towards the Kurdistan region of Iraq, to assert federal control over its border crossings as well as oilfields under Kurdish…",
+          "url": "https://www.thenationalnews.com/opinion/comment/2026/11/26/iraq-kurdistan-oil-us-erbil/",
+          "published_at": "2026-11-26T14:00:00Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.thenationalnews.com/resizer/v2/3XSJSY732IMEHM7GEVOQM7IOUU.jpg?auth=1fed36e45877510a70ebb3528f9ea7c8b80e8f6e6c1587a2ec31b0c47385c6e9&smart=true&width=3000&height=2000"
+        },
+        {
+          "id": "86d38211c00a",
+          "outlet_id": "aljazeera",
+          "headline": "How an oil feud is deepening rift between Baghdad and Iraq’s Kurdish region",
+          "snippet": "Prime Minister al-Zaidi's move to take control of border crossings and oilfields has drawn a sharp response from Erbil.",
+          "url": "https://www.aljazeera.com/news/2026/11/26/how-an-oil-feud-is-deepening-rift-between-baghdad-and-iraqs-kurdish-region",
+          "published_at": "2026-11-26T14:10:00Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "e75f4dc93b65",
+          "outlet_id": "dw",
+          "headline": "Protests in Iraqi Kurdistan at plans for government in Baghdad to take over oil, border crossings",
+          "snippet": "Thousands have gathered in the capital of northern Iraq's semiautonomous Kurdish region, waving flags and voicing opposition to plans for the federal government to take control of oil operations and…",
+          "url": "https://www.dw.com/en/protests-in-iraqi-kurdistan-at-plans-for-government-in-baghdad-to-take-over-oil-border-crossings/a-80065994?maca=en-rss-en-world-4025-xml-mrss",
+          "published_at": "2026-11-26T16:13:00Z",
+          "published_at_estimated": false,
+          "image_url": null
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "The federal government in Baghdad has moved to take control of the Kurdistan region's border crossings and oil operations or oilfields.",
+          "sources": [
+            "41a7c913cc85",
+            "0f30b38a4875",
+            "86d38211c00a",
+            "e75f4dc93b65"
+          ]
+        },
+        {
+          "text": "The move is attributed to Prime Minister Ali al-Zaidi.",
+          "sources": [
+            "41a7c913cc85",
+            "0f30b38a4875",
+            "86d38211c00a"
+          ]
+        },
+        {
+          "text": "The move has met opposition in the Kurdish region, through a sharp response from Erbil and street protests.",
+          "sources": [
+            "86d38211c00a",
+            "e75f4dc93b65"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "41a7c913cc85",
+              "quote": "Wrest More Power From Kurdistan Region",
+              "field": "headline"
+            },
+            {
+              "article_id": "41a7c913cc85",
+              "quote": "just scored a symbolic victory against a powerful Iran-backed militia",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Presents the move as the prime minister seeking more power, following a symbolic victory over an Iran-backed militia.",
+              "sources": [
+                "41a7c913cc85"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "e75f4dc93b65",
+              "quote": "Protests in Iraqi Kurdistan",
+              "field": "headline"
+            },
+            {
+              "article_id": "e75f4dc93b65",
+              "quote": "Thousands have gathered in the capital of northern Iraq's semiautonomous Kurdish region",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with protests by thousands in the Kurdish regional capital, waving flags and opposing the federal plans.",
+              "sources": [
+                "e75f4dc93b65"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "left",
+          "text": "Does not mention the protests by thousands in the Kurdish regional capital.",
+          "sources": [
+            "e75f4dc93b65"
+          ]
+        },
+        {
+          "lean": "centre",
+          "text": "Does not mention the prime minister's recent symbolic victory against an Iran-backed militia.",
+          "sources": [
+            "41a7c913cc85"
+          ]
+        }
+      ],
+      "contested_claims": [],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "41a7c913cc85",
+              "quote": "Iraq’s Prime Minister Aims to Wrest More Power From Kurdistan Region",
+              "field": "headline"
+            },
+            {
+              "article_id": "e75f4dc93b65",
+              "quote": "Protests in Iraqi Kurdistan at plans for government in Baghdad to take over oil, border crossings",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Focuses on the prime minister's bid for power and the protest response in the Kurdish region.",
+              "sources": [
+                "41a7c913cc85",
+                "e75f4dc93b65"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "a14cd2a7e6fd",
+              "quote": "Iraq denies sending troops to Kurdistan as crisis talks begin",
+              "field": "headline"
+            },
+            {
+              "article_id": "86d38211c00a",
+              "quote": "deepening rift between Baghdad and Iraq’s Kurdish region",
+              "field": "headline"
+            },
+            {
+              "article_id": "0f30b38a4875",
+              "quote": "can be detrimental for Iraq and the region",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Foregrounds fears of a confrontation, the question of army units moving north and the start of crisis talks.",
+              "sources": [
+                "a14cd2a7e6fd",
+                "0f30b38a4875"
+              ]
+            },
+            {
+              "text": "Describes the dispute as an oil feud deepening a rift between Baghdad and Erbil, with possible harm to Iraq and the region.",
+              "sources": [
+                "86d38211c00a",
+                "0f30b38a4875"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "Iraqi Prime Minister Ali al-Zaidi moved to assert federal control over the Kurdistan region's border crossings and oil, drawing a sharp response from Erbil and protests by thousands in the region's capital. Baghdad denied reports that army units were advancing north as crisis talks began.",
+        "sources": [
+          "41a7c913cc85",
+          "0f30b38a4875",
+          "86d38211c00a",
+          "e75f4dc93b65",
+          "a14cd2a7e6fd"
+        ]
+      },
+      "conclusion": {
+        "text": "All sides report Baghdad's move to take control of Kurdish oil and border crossings. The New York Times links it to a win over an Iran-backed militia, DW leads with protests, and East outlets stress the rift and confrontation fears. One The National piece says army units were ordered towards the region; another reports Baghdad denying troops were advancing.",
+        "sources": [
+          "41a7c913cc85",
+          "e75f4dc93b65",
+          "86d38211c00a",
+          "0f30b38a4875",
+          "a14cd2a7e6fd"
+        ]
+      },
+      "validation": {
+        "kept": 21,
+        "dropped_by_reason": {}
+      }
+    },
+    {
+      "id": "f33f0e518a93",
+      "title": "Plane crash off Mississippi coast kills six family members",
+      "rank": 9,
+      "outlet_count": 4,
+      "coverage": {
+        "lean": {
+          "left": 1,
+          "centre": 0,
+          "right": 2
+        },
+        "bloc": {
+          "west": 3,
+          "east": 1
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "c3ffe7d730a9",
+          "outlet_id": "nbc",
+          "headline": "Plane Crashes Off Mississippi Coast, Killing All 6 Passengers",
+          "snippet": "Six people, including two children, were killed Tuesday after their plane crashed off the coast of Mississippi. The Coast Guard says the bodies of all six people have been recovered, and the cause…",
+          "url": "https://www.today.com/video/plane-crashes-off-mississippi-coast-killing-all-6-passengers-274157637638",
+          "published_at": "2026-11-25T13:10:24Z",
+          "published_at_estimated": false,
+          "image_url": "https://media-cldnry.s-nbcnews.com/image/upload/t_fit_1500w/mpx/2704722219/2026_11/1795612220759_tdy_news_7a_mississippi_plane_crash_261125_S3_1920x1080-k25xn7.jpg"
+        },
+        {
+          "id": "bb5143c68466",
+          "outlet_id": "thehindu",
+          "headline": "Plane crash off coast of Mississippi kills extended family of six on fishing trip",
+          "snippet": "Shortly before losing contact with the plane, an air traffic controller at Gulfport–Biloxi International Airport advised the pilot of precipitation and adverse weather in the area",
+          "url": "https://www.thehindu.com/news/international/plane-crash-off-coast-of-mississippi-kills-extended-family-of-six-on-fishing-trip/article71745032.ece",
+          "published_at": "2026-11-26T01:54:49Z",
+          "published_at_estimated": false,
+          "image_url": "https://th-i.thgim.com/public/incoming/wrqmr0/article71745040.ece/alternates/LANDSCAPE_1200/Mississippi_Plane_Crash_48473.jpg"
+        },
+        {
+          "id": "73b84e67000c",
+          "outlet_id": "nypost",
+          "headline": "Air traffic controller gave pilot dad chilling warning before plane crash killed 6 family members",
+          "snippet": "Six family members, including pilot Brent Stokes, died after their Cessna crashed off the Mississippi coast following warnings of bad weather.",
+          "url": "https://nypost.com/2026/11/26/us-news/air-traffic-controller-gave-pilot-dad-chilling-warning-before-plane-crash-killed-6-family-members/",
+          "published_at": "2026-11-26T14:32:09Z",
+          "published_at_estimated": false,
+          "image_url": "https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2Fphoto-provided-allyson-dickey-shows-150030280.jpg?w%3D768"
+        },
+        {
+          "id": "8e936d03a0b7",
+          "outlet_id": "dailymail",
+          "headline": "Air traffic controller gave pilot dad chilling warning before plane crash killed six family members, including three children aged 10, 12 and 16, on way back from fishing trip",
+          "snippet": "Brent Stokes, 50, was warned that he faced heavy rains and adverse weather on a flight he took with his family before they crashed near Horn Island, Mississippi on Tuesday afternoon.",
+          "url": "https://www.dailymail.com/news/article-16324891/Brent-Stokes-family-pilot-plane-crash-Mississippi-weather-air-traffic.html",
+          "published_at": "2026-11-26T16:35:03Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.dailymail.com/1s/2026/11/26/16/112728489-0-image-a-11_1795710512661.jpg"
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "Six people were killed when a plane crashed off the coast of Mississippi.",
+          "sources": [
+            "c3ffe7d730a9",
+            "bb5143c68466",
+            "73b84e67000c",
+            "8e936d03a0b7"
+          ]
+        },
+        {
+          "text": "The six people killed were members of one family.",
+          "sources": [
+            "bb5143c68466",
+            "73b84e67000c",
+            "8e936d03a0b7"
+          ]
+        },
+        {
+          "text": "Before the crash, the pilot was warned by an air traffic controller of bad or adverse weather in the area.",
+          "sources": [
+            "bb5143c68466",
+            "73b84e67000c",
+            "8e936d03a0b7"
+          ]
+        },
+        {
+          "text": "The family was on a fishing trip.",
+          "sources": [
+            "bb5143c68466",
+            "8e936d03a0b7"
+          ]
+        },
+        {
+          "text": "Children were among those killed.",
+          "sources": [
+            "c3ffe7d730a9",
+            "8e936d03a0b7"
+          ]
+        },
+        {
+          "text": "The crash happened on Tuesday.",
+          "sources": [
+            "c3ffe7d730a9",
+            "8e936d03a0b7"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "c3ffe7d730a9",
+              "quote": "Killing All 6 Passengers",
+              "field": "headline"
+            },
+            {
+              "article_id": "c3ffe7d730a9",
+              "quote": "The Coast Guard says the bodies of all six people have been recovered",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the death toll, including two children, and the Coast Guard's recovery of all six bodies.",
+              "sources": [
+                "c3ffe7d730a9"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "right",
+          "headline_quotes": [
+            {
+              "article_id": "73b84e67000c",
+              "quote": "Air traffic controller gave pilot dad chilling warning",
+              "field": "headline"
+            },
+            {
+              "article_id": "8e936d03a0b7",
+              "quote": "including three children aged 10, 12 and 16",
+              "field": "headline"
+            },
+            {
+              "article_id": "73b84e67000c",
+              "quote": "following warnings of bad weather",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the air traffic controller's weather warning to the pilot, described as a 'chilling warning'.",
+              "sources": [
+                "73b84e67000c",
+                "8e936d03a0b7"
+              ]
+            },
+            {
+              "text": "Names the pilot as Brent Stokes, a father, and gives details such as the Cessna aircraft and the Horn Island location.",
+              "sources": [
+                "73b84e67000c",
+                "8e936d03a0b7"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "left",
+          "text": "Left coverage does not mention the air traffic controller's weather warning to the pilot.",
+          "sources": [
+            "73b84e67000c",
+            "8e936d03a0b7"
+          ]
+        },
+        {
+          "lean": "left",
+          "text": "Left coverage does not mention that the victims were members of one family or name the pilot.",
+          "sources": [
+            "73b84e67000c",
+            "8e936d03a0b7"
+          ]
+        },
+        {
+          "lean": "right",
+          "text": "Right coverage does not mention the Coast Guard's statement that all six bodies were recovered.",
+          "sources": [
+            "c3ffe7d730a9"
+          ]
+        }
+      ],
+      "contested_claims": [
+        {
+          "claim": "The number of children among the six killed is given as two by one outlet and three by another.",
+          "asserted_by": [
+            "c3ffe7d730a9"
+          ],
+          "disputed_by": [
+            "8e936d03a0b7"
+          ]
+        }
+      ],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "c3ffe7d730a9",
+              "quote": "Plane Crashes Off Mississippi Coast, Killing All 6 Passengers",
+              "field": "headline"
+            },
+            {
+              "article_id": "73b84e67000c",
+              "quote": "Air traffic controller gave pilot dad chilling warning",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Emphasises the death toll and, in two articles, the controller's warning to the pilot, named as Brent Stokes.",
+              "sources": [
+                "c3ffe7d730a9",
+                "73b84e67000c",
+                "8e936d03a0b7"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "bb5143c68466",
+              "quote": "kills extended family of six on fishing trip",
+              "field": "headline"
+            },
+            {
+              "article_id": "bb5143c68466",
+              "quote": "advised the pilot of precipitation and adverse weather in the area",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Describes the victims as an extended family on a fishing trip and notes the warning came from a controller at Gulfport–Biloxi International Airport.",
+              "sources": [
+                "bb5143c68466"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "Six people, described as members of one family, were killed on Tuesday when their plane crashed off the Mississippi coast. An air traffic controller had warned the pilot, Brent Stokes, of adverse weather beforehand. The Coast Guard says all six bodies have been recovered.",
+        "sources": [
+          "c3ffe7d730a9",
+          "bb5143c68466",
+          "73b84e67000c",
+          "8e936d03a0b7"
+        ]
+      },
+      "conclusion": {
+        "text": "All outlets report six people killed in a plane crash off the Mississippi coast. Right-leaning and the East outlet lead with the controller's weather warning, while the left outlet leads with the toll and Coast Guard recovery. The number of children killed is given as two in one report and three in another.",
+        "sources": [
+          "c3ffe7d730a9",
+          "bb5143c68466",
+          "73b84e67000c",
+          "8e936d03a0b7"
+        ]
+      },
+      "validation": {
+        "kept": 26,
+        "dropped_by_reason": {}
+      }
+    },
+    {
+      "id": "397d18cdbe08",
+      "title": "Israeli judges suggest dropping key charges in Netanyahu corruption trial",
+      "rank": 10,
+      "outlet_count": 4,
+      "coverage": {
+        "lean": {
+          "left": 2,
+          "centre": 0,
+          "right": 1
+        },
+        "bloc": {
+          "west": 3,
+          "east": 1
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "15a59609acda",
+          "outlet_id": "nyt",
+          "headline": "Judges in Israel Suggest Dropping Key Corruption Case Against Netanyahu",
+          "snippet": "Prime Minister Benjamin Netanyahu is accused of bribery, fraud and breach of trust in a long-running trial that has divided the country. He denies all wrongdoing.",
+          "url": "https://www.nytimes.com/2026/11/25/world/middleeast/judges-israel-corruption-case-netanyahu.html",
+          "published_at": "2026-11-25T20:45:09Z",
+          "published_at_estimated": false,
+          "image_url": "https://static01.nyt.com/images/2026/11/25/multimedia/25int-Israel-Courts-vkbc/25int-Israel-Courts-vkbc-mediumSquareAt3X.jpg"
+        },
+        {
+          "id": "26e47f0f6b40",
+          "outlet_id": "fox",
+          "headline": "Netanyahu declares corruption trial has 'fallen apart' after judges question key charges",
+          "snippet": "Israeli Prime Minister Benjamin Netanyahu declared his corruption trial \"fell apart\" as judges urged prosecutors to rethink the bribery and fraud cases.",
+          "url": "https://www.foxnews.com/world/netanyahu-declares-corruption-trial-fallen-apart-judges-question-key-charges",
+          "published_at": "2026-11-26T02:26:48Z",
+          "published_at_estimated": false,
+          "image_url": "https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2025/03/931/523/netanyahu-2.jpg?ve=1&tl=1"
+        },
+        {
+          "id": "fd5206197e68",
+          "outlet_id": "huffpost",
+          "headline": "In Blow To Prosecutors, Israeli Judges Recommend Dropping Key Charges Against Netanyahu",
+          "snippet": "Netanyahu called the court’s recommendation a “ray of light for truth and justice.”",
+          "url": "https://www.huffpost.com/entry/netanyahu-bribery-case-recommendation-israel_n_6b07ea76e4b01f494a02ff00",
+          "published_at": "2026-11-26T08:25:35Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "058a469e940c",
+          "outlet_id": "timesofisrael",
+          "headline": "Daily Briefing Nov. 26: Netanyahu trial collapsing as judges pillory key charges",
+          "snippet": "Diplomatic correspondent Lazar Berman on the court's bombshell statements about the cases against the premier, and the race to form a government without him",
+          "url": "https://www.timesofisrael.com/daily-briefing-nov-26-netanyahu-trial-collapsing-as-judges-pillory-key-charges/",
+          "published_at": "2026-11-26T12:27:45Z",
+          "published_at_estimated": false,
+          "image_url": null
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "Israeli judges suggested dropping, or questioned, key charges against Prime Minister Benjamin Netanyahu in his corruption trial.",
+          "sources": [
+            "15a59609acda",
+            "26e47f0f6b40",
+            "fd5206197e68",
+            "058a469e940c"
+          ]
+        },
+        {
+          "text": "The charges include bribery and fraud.",
+          "sources": [
+            "15a59609acda",
+            "26e47f0f6b40"
+          ]
+        },
+        {
+          "text": "Netanyahu welcomed the judges' move.",
+          "sources": [
+            "26e47f0f6b40",
+            "fd5206197e68"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "15a59609acda",
+              "quote": "Judges in Israel Suggest Dropping Key Corruption Case Against Netanyahu",
+              "field": "headline"
+            },
+            {
+              "article_id": "15a59609acda",
+              "quote": "a long-running trial that has divided the country",
+              "field": "snippet"
+            },
+            {
+              "article_id": "fd5206197e68",
+              "quote": "In Blow To Prosecutors",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the judges' recommendation and describes it as a blow to prosecutors.",
+              "sources": [
+                "fd5206197e68"
+              ]
+            },
+            {
+              "text": "Sets out the charges of bribery, fraud and breach of trust, notes the trial has divided the country and that Netanyahu denies wrongdoing.",
+              "sources": [
+                "15a59609acda"
+              ]
+            },
+            {
+              "text": "Quotes Netanyahu calling the recommendation a \"ray of light for truth and justice\".",
+              "sources": [
+                "fd5206197e68"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "right",
+          "headline_quotes": [
+            {
+              "article_id": "26e47f0f6b40",
+              "quote": "Netanyahu declares corruption trial has 'fallen apart'",
+              "field": "headline"
+            },
+            {
+              "article_id": "26e47f0f6b40",
+              "quote": "judges urged prosecutors to rethink the bribery and fraud cases",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with Netanyahu's declaration that his trial has fallen apart.",
+              "sources": [
+                "26e47f0f6b40"
+              ]
+            },
+            {
+              "text": "Describes the judges as urging prosecutors to rethink the bribery and fraud cases.",
+              "sources": [
+                "26e47f0f6b40"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "right",
+          "text": "Does not mention that Netanyahu denies all wrongdoing or that the trial has divided the country.",
+          "sources": [
+            "15a59609acda"
+          ]
+        }
+      ],
+      "contested_claims": [],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "26e47f0f6b40",
+              "quote": "Netanyahu declares corruption trial has 'fallen apart'",
+              "field": "headline"
+            },
+            {
+              "article_id": "fd5206197e68",
+              "quote": "In Blow To Prosecutors",
+              "field": "headline"
+            },
+            {
+              "article_id": "15a59609acda",
+              "quote": "Judges in Israel Suggest Dropping Key Corruption Case Against Netanyahu",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Focuses on the judges' recommendation, the charges and Netanyahu's reaction.",
+              "sources": [
+                "15a59609acda",
+                "26e47f0f6b40",
+                "fd5206197e68"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "058a469e940c",
+              "quote": "Netanyahu trial collapsing as judges pillory key charges",
+              "field": "headline"
+            },
+            {
+              "article_id": "058a469e940c",
+              "quote": "the race to form a government without him",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Describes the trial as collapsing and the court's statements as bombshell.",
+              "sources": [
+                "058a469e940c"
+              ]
+            },
+            {
+              "text": "Links the development to a race to form a government without Netanyahu.",
+              "sources": [
+                "058a469e940c"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "Judges in Netanyahu's corruption trial suggested dropping key charges, including bribery and fraud cases, or urged prosecutors to rethink them. Netanyahu, who denies all wrongdoing, said the trial had fallen apart and called the recommendation a ray of light.",
+        "sources": [
+          "15a59609acda",
+          "26e47f0f6b40",
+          "fd5206197e68",
+          "058a469e940c"
+        ]
+      },
+      "conclusion": {
+        "text": "All outlets report judges suggesting dropping or questioning key charges against Netanyahu. Left-leaning outlets frame it as a blow to prosecutors and note his denial, the right-leaning outlet leads with his claim the trial fell apart, and the East-bloc outlet adds the race to form a government without him. No claims are contested.",
+        "sources": [
+          "15a59609acda",
+          "26e47f0f6b40",
+          "fd5206197e68",
+          "058a469e940c"
+        ]
+      },
+      "validation": {
+        "kept": 24,
+        "dropped_by_reason": {}
+      }
+    }
+  ]
+}
