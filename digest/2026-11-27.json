@@ -1,0 +1,3640 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-11-27T16:26:18.160300Z",
+  "date": "2026-11-27",
+  "meta": {
+    "model": "claude-opus-5-5",
+    "cost_usd": 0.579534,
+    "outlets_polled": 29,
+    "articles_collected": 636,
+    "warnings": [
+      "1 feed(s) failed during collect"
+    ],
+    "validation": {
+      "kept": 276,
+      "dropped_by_reason": {
+        "untrusted_text": 2
+      }
+    }
+  },
+  "outlets": [
+    {
+      "id": "guardian",
+      "name": "The Guardian",
+      "lean": "left",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United Kingdom",
+      "home_url": "https://www.theguardian.com/",
+      "rating_basis": "AllSides media bias rating (Lean Left), checked Oct 2026"
+    },
+    {
+      "id": "independent",
+      "name": "The Independent",
+      "lean": "left",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United Kingdom",
+      "home_url": "https://www.independent.co.uk/",
+      "rating_basis": "AllSides media bias rating (Lean Left), checked Oct 2026"
+    },
+    {
+      "id": "mirror",
+      "name": "Daily Mirror",
+      "lean": "left",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United Kingdom",
+      "home_url": "https://www.mirror.co.uk/",
+      "rating_basis": "Ad Fontes Media bias rating (Skews Left), checked Oct 2026"
+    },
+    {
+      "id": "bbc",
+      "name": "BBC News",
+      "lean": "centre",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "public-service",
+      "country": "United Kingdom",
+      "home_url": "https://www.bbc.co.uk/news",
+      "rating_basis": "AllSides media bias rating (Center), checked Oct 2026"
+    },
+    {
+      "id": "sky",
+      "name": "Sky News",
+      "lean": "centre",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United Kingdom",
+      "home_url": "https://news.sky.com/",
+      "rating_basis": "Ad Fontes Media bias rating (Middle), checked Oct 2026"
+    },
+    {
+      "id": "telegraph",
+      "name": "The Telegraph",
+      "lean": "right",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United Kingdom",
+      "home_url": "https://www.telegraph.co.uk/",
+      "rating_basis": "AllSides media bias rating (Lean Right), checked Oct 2026"
+    },
+    {
+      "id": "dailymail",
+      "name": "Daily Mail",
+      "lean": "right",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United Kingdom",
+      "home_url": "https://www.dailymail.co.uk/",
+      "rating_basis": "AllSides media bias rating (Right), checked Oct 2026"
+    },
+    {
+      "id": "thesun",
+      "name": "The Sun",
+      "lean": "right",
+      "region": "uk",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United Kingdom",
+      "home_url": "https://www.thesun.co.uk/",
+      "rating_basis": "AllSides media bias rating (Right), checked Oct 2026"
+    },
+    {
+      "id": "nyt",
+      "name": "The New York Times",
+      "lean": "left",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United States",
+      "home_url": "https://www.nytimes.com/",
+      "rating_basis": "AllSides media bias rating (Lean Left), checked Oct 2026"
+    },
+    {
+      "id": "nbc",
+      "name": "NBC News",
+      "lean": "left",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United States",
+      "home_url": "https://www.nbcnews.com/",
+      "rating_basis": "AllSides media bias rating (Lean Left), checked Oct 2026"
+    },
+    {
+      "id": "huffpost",
+      "name": "HuffPost",
+      "lean": "left",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United States",
+      "home_url": "https://www.huffpost.com/",
+      "rating_basis": "AllSides media bias rating (Left), checked Oct 2026"
+    },
+    {
+      "id": "npr",
+      "name": "NPR",
+      "lean": "centre",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "public-service",
+      "country": "United States",
+      "home_url": "https://www.npr.org/",
+      "rating_basis": "Ad Fontes Media bias rating (Middle / Skews Left), checked Oct 2026"
+    },
+    {
+      "id": "axios",
+      "name": "Axios",
+      "lean": "centre",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United States",
+      "home_url": "https://www.axios.com/",
+      "rating_basis": "AllSides media bias rating (Center), checked Oct 2026"
+    },
+    {
+      "id": "fox",
+      "name": "Fox News",
+      "lean": "right",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United States",
+      "home_url": "https://www.foxnews.com/",
+      "rating_basis": "AllSides media bias rating (Right), checked Oct 2026"
+    },
+    {
+      "id": "nypost",
+      "name": "New York Post",
+      "lean": "right",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United States",
+      "home_url": "https://nypost.com/",
+      "rating_basis": "AllSides media bias rating (Lean Right), checked Oct 2026"
+    },
+    {
+      "id": "examiner",
+      "name": "Washington Examiner",
+      "lean": "right",
+      "region": "us",
+      "bloc": "west",
+      "ownership": "independent",
+      "country": "United States",
+      "home_url": "https://www.washingtonexaminer.com/",
+      "rating_basis": "AllSides media bias rating (Lean Right), checked Oct 2026"
+    },
+    {
+      "id": "france24",
+      "name": "France 24",
+      "lean": "centre",
+      "region": "europe",
+      "bloc": "west",
+      "ownership": "public-service",
+      "country": "France",
+      "home_url": "https://www.france24.com/en/",
+      "rating_basis": "Ad Fontes Media bias rating (Middle), checked Oct 2026"
+    },
+    {
+      "id": "dw",
+      "name": "DW (Deutsche Welle)",
+      "lean": "centre",
+      "region": "europe",
+      "bloc": "west",
+      "ownership": "public-service",
+      "country": "Germany",
+      "home_url": "https://www.dw.com/en/",
+      "rating_basis": "AllSides media bias rating (Center), checked Oct 2026"
+    },
+    {
+      "id": "aljazeera",
+      "name": "Al Jazeera English",
+      "lean": null,
+      "region": "middle_east",
+      "bloc": "east",
+      "ownership": "state-funded",
+      "country": "Qatar",
+      "home_url": "https://www.aljazeera.com/",
+      "rating_basis": "Funded by the State of Qatar; no left/right tag applied"
+    },
+    {
+      "id": "thenational",
+      "name": "The National (UAE)",
+      "lean": null,
+      "region": "middle_east",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "United Arab Emirates",
+      "home_url": "https://www.thenationalnews.com/",
+      "rating_basis": "Owned by International Media Investments (Abu Dhabi); no left/right tag applied"
+    },
+    {
+      "id": "timesofisrael",
+      "name": "The Times of Israel",
+      "lean": null,
+      "region": "middle_east",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "Israel",
+      "home_url": "https://www.timesofisrael.com/",
+      "rating_basis": "Privately owned; no left/right tag applied"
+    },
+    {
+      "id": "cgtn",
+      "name": "CGTN",
+      "lean": null,
+      "region": "asia",
+      "bloc": "east",
+      "ownership": "state-controlled",
+      "country": "China",
+      "home_url": "https://www.cgtn.com/",
+      "rating_basis": "China Global Television Network, part of state broadcaster China Media Group"
+    },
+    {
+      "id": "ecns",
+      "name": "ECNS (China News Service)",
+      "lean": null,
+      "region": "asia",
+      "bloc": "east",
+      "ownership": "state-controlled",
+      "country": "China",
+      "home_url": "https://www.ecns.cn/",
+      "rating_basis": "English service of China News Service, a state news agency"
+    },
+    {
+      "id": "scmp",
+      "name": "South China Morning Post",
+      "lean": null,
+      "region": "asia",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "Hong Kong",
+      "home_url": "https://www.scmp.com/",
+      "rating_basis": "Owned by Alibaba Group; no left/right tag applied"
+    },
+    {
+      "id": "toi",
+      "name": "The Times of India",
+      "lean": null,
+      "region": "asia",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "India",
+      "home_url": "https://timesofindia.indiatimes.com/",
+      "rating_basis": "Privately owned (Bennett, Coleman & Co.); no left/right tag applied"
+    },
+    {
+      "id": "thehindu",
+      "name": "The Hindu",
+      "lean": null,
+      "region": "asia",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "India",
+      "home_url": "https://www.thehindu.com/",
+      "rating_basis": "Privately owned (The Hindu Group); no left/right tag applied"
+    },
+    {
+      "id": "moscowtimes",
+      "name": "The Moscow Times",
+      "lean": null,
+      "region": "europe",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "Russia",
+      "home_url": "https://www.themoscowtimes.com/",
+      "rating_basis": "Independent, Amsterdam-based since 2022; designated \"undesirable\" by Russia; no left/right tag applied"
+    },
+    {
+      "id": "japantimes",
+      "name": "The Japan Times",
+      "lean": null,
+      "region": "asia",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "Japan",
+      "home_url": "https://www.japantimes.co.jp/",
+      "rating_basis": "Privately owned (News2u Holdings); no left/right tag applied"
+    },
+    {
+      "id": "koreaherald",
+      "name": "The Korea Herald",
+      "lean": null,
+      "region": "asia",
+      "bloc": "east",
+      "ownership": "independent",
+      "country": "South Korea",
+      "home_url": "https://www.koreaherald.com/",
+      "rating_basis": "Privately owned (Herald Corporation); no left/right tag applied"
+    }
+  ],
+  "stories": [
+    {
+      "id": "e93d5a8660e7",
+      "title": "Severe storms disrupt US Thanksgiving travel and cut power",
+      "rank": 1,
+      "outlet_count": 9,
+      "coverage": {
+        "lean": {
+          "left": 3,
+          "centre": 4,
+          "right": 0
+        },
+        "bloc": {
+          "west": 7,
+          "east": 2
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "db33bf04062e",
+          "outlet_id": "mirror",
+          "headline": "California flooding chaos after huge waves destroy iconic pier as super El Nino sparks urgent weather warning",
+          "snippet": "Parts of a California pier collapsed into the sea as king tides and huge waves battered the coast, with beachfront homes flooded and residents warned to stay away",
+          "url": "https://www.mirror.co.uk/news/us-news/california-floods-waves-el-nino-37917596",
+          "published_at": "2026-11-26T11:45:41Z",
+          "published_at_estimated": false,
+          "image_url": "https://i2-prod.mirror.co.uk/incoming/article37917552.ece/ALTERNATES/s615/0_King-Tide-Hits-Seven-Feet-in-San-Francisco-California-United-States-25-Nov-2026.jpg"
+        },
+        {
+          "id": "ce7626a57d5c",
+          "outlet_id": "bbc",
+          "headline": "Watch: Roofs torn off and streets under water as severe weather hits US",
+          "snippet": "Hundreds of thousands have been affected by storms in the country as the Thanksgiving holiday weekend begins.",
+          "url": "https://www.bbc.co.uk/news/videos/cq808d704m22o",
+          "published_at": "2026-11-26T19:26:16Z",
+          "published_at_estimated": false,
+          "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/cda3/live/d6364450-ea2b-11f1-a094-5fdc692f3e33.jpg"
+        },
+        {
+          "id": "3f9aa3f62532",
+          "outlet_id": "cgtn",
+          "headline": "Storms disrupt US Thanksgiving holiday travel",
+          "snippet": "",
+          "url": "https://newsus.cgtn.com/news/2026-11-27/Storms-disrupt-US-Thanksgiving-holiday-travel-1SoZrtAJXIQ/p.html",
+          "published_at": "2026-11-26T22:22:31Z",
+          "published_at_estimated": false,
+          "image_url": "https://newsus.cgtn.com/news/2026-11-27/Storms-disrupt-US-Thanksgiving-holiday-travel-1SoZrtAJXIQ/img/04b5633992764327bbfd11cfbe6a1828/04b5633992764327bbfd11cfbe6a1828-750.png"
+        },
+        {
+          "id": "deae3fd6f196",
+          "outlet_id": "cgtn",
+          "headline": "Storm hits US East Coast, causing flight delays, power outages",
+          "snippet": "",
+          "url": "https://news.cgtn.com/news/2026-11-27/Storm-hits-US-East-Coast-causing-flight-delays-power-outages-1SpdUppphfO/p.html",
+          "published_at": "2026-11-27T02:04:48Z",
+          "published_at_estimated": false,
+          "image_url": "https://news.cgtn.com/news/2026-11-27/Storm-hits-US-East-Coast-causing-flight-delays-power-outages-1SpdUppphfO/img/3f1f429c2e0d43e4877335a007614b06/3f1f429c2e0d43e4877335a007614b06-1920.png"
+        },
+        {
+          "id": "e5075afd370a",
+          "outlet_id": "nbc",
+          "headline": "Severe storms upend Thanksgiving travel and leave hundreds of thousands without power",
+          "snippet": "High winds and heavy rains hammered both coasts and hundreds of thousands remained without power after foul weather made for a miserable Thanksgiving for many.",
+          "url": "https://www.nbcnews.com/news/us-news/much-country-thanksgiving-featured-nasty-weather-rcna611521",
+          "published_at": "2026-11-27T05:30:15Z",
+          "published_at_estimated": false,
+          "image_url": "https://media-cldnry.s-nbcnews.com/image/upload/t_fit_1500w/rockcms/2026-11/261127-wx-2-rs-f25603.jpg"
+        },
+        {
+          "id": "57c32ebb90d3",
+          "outlet_id": "thehindu",
+          "headline": "Major storm batters U.S. on Thanksgiving holiday; 400 flights cancelled",
+          "snippet": "New York’s famed Macy’s parade was postponed for the first time in its 100-year history",
+          "url": "https://www.thehindu.com/news/international/major-storm-batters-us-on-thanksgiving-holiday-400-flights-cancelled/article71749233.ece",
+          "published_at": "2026-11-27T07:22:02Z",
+          "published_at_estimated": false,
+          "image_url": "https://th-i.thgim.com/public/incoming/3adbij/article71749239.ece/alternates/LANDSCAPE_1200/2026-11-26T233433Z_1433722125_RC2TVOA4DKZ5_RTRMADP_3_USA-WEATHER.JPG"
+        },
+        {
+          "id": "f4e6fce06a9e",
+          "outlet_id": "guardian",
+          "headline": "King tides batter US coasts as storms threaten Thanksgiving celebrations",
+          "snippet": "Heavy rain, strong winds and coastal flooding creating hazardous conditions for millions travelling for holiday King tides and huge waves have been battering both coasts of the US during a turbulent…",
+          "url": "https://www.theguardian.com/us-news/2026/nov/27/king-tides-us-coasts-storms-threaten-thanksgiving-celebrations",
+          "published_at": "2026-11-27T10:50:48Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.guim.co.uk/img/media/7021c3fba59895984e4b86a1f246a4fffca9c129/748_0_5657_4528/master/5657.jpg?width=460&quality=85&auto=format&fit=max&s=23989f50a3c6cf7970761eaa52edb97e"
+        },
+        {
+          "id": "6fec77c2f27a",
+          "outlet_id": "sky",
+          "headline": "Powerful storm knocks out power and disrupts flights in US - as major Thanksgiving event cancelled",
+          "snippet": "Powerful storms across the US have left hundreds of thousands of homes without power and disrupted thousands of flights ahead of Thanksgiving weekend.",
+          "url": "https://news.sky.com/story/hundreds-of-thousands-still-without-power-after-storms-hit-us-on-thanksgiving-13617158",
+          "published_at": "2026-11-27T10:52:00Z",
+          "published_at_estimated": false,
+          "image_url": "https://e3.365dm.com/26/11/1920x1080/skynews-thanksgiving-weather_7417841.jpg?20261127133353"
+        },
+        {
+          "id": "27de969b1c9f",
+          "outlet_id": "npr",
+          "headline": "From Thanksgiving blackouts to Black Friday, a holiday hit by wild weather and economic woes",
+          "snippet": "A storm battered much of the country on Thursday, knocking out power to thousands of homes and disrupting travel. Today, Black Friday shopping deals kick off, and on Saturday New York City will hold…",
+          "url": "https://www.npr.org/2026/11/27/nx-s1-6054884/thanksgiving-weather-black-friday",
+          "published_at": "2026-11-27T10:59:36Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "b5a5d64c3608",
+          "outlet_id": "npr",
+          "headline": "Thanksgiving storm batters East Coast. And, Black Friday sales to hit record levels",
+          "snippet": "A powerful storm knocked out power for nearly 1 million customers and flooded streets. And, experts predict inflation will not dampen American spending for the holidays",
+          "url": "https://www.npr.org/2026/11/27/g-s1-156004/up-first-newsletter-thanksgiving-storm-black-friday-shopping-asylum-supreme-court",
+          "published_at": "2026-11-27T11:59:02Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "4cda9bbc78b6",
+          "outlet_id": "france24",
+          "headline": "US: Thanksgiving storms cause flooding and travel chaos",
+          "snippet": "Severe storms battered the US East Coast on Thursday, bringing torrential rain, strong winds and coastal flooding. Nearly one million homes were left without power, while hundreds of flights were…",
+          "url": "https://www.france24.com/en/video/20261127-us-thanksgiving-storms-cause-flooding-and-travel-chaos",
+          "published_at": "2026-11-27T12:02:48Z",
+          "published_at_estimated": false,
+          "image_url": "https://s.france24.com/media/display/97d15a54-ea55-11f1-9cd7-81bc2b1dcd65/w:1024/p:16x9/EN-20261127-111335-111501-CS.jpg"
+        },
+        {
+          "id": "43c17bfb0166",
+          "outlet_id": "nbc",
+          "headline": "Severe Weather Wreaks Havoc on Thanksgiving Plans Across US",
+          "snippet": "Record-setting rain, unprecedented flooding and near-hurricane force winds wreaked havoc on holiday plans from coast to coast and leaving nearly a million people dealing with power outages…",
+          "url": "https://www.today.com/video/severe-weather-wreaks-havoc-on-thanksgiving-plans-across-us-274257989613",
+          "published_at": "2026-11-27T12:10:31Z",
+          "published_at_estimated": false,
+          "image_url": "https://media-cldnry.s-nbcnews.com/image/upload/t_fit_1500w/mpx/2704722219/2026_11/1795781425254_tdy_news_7a_erin_angie_wx_storms_261127_S3_1920x1080-52mf1w.jpg"
+        },
+        {
+          "id": "3f5896dd375b",
+          "outlet_id": "guardian",
+          "headline": "Eastern US recovers from storms that snarled Thanksgiving travel as flooding continues",
+          "snippet": "Heavy rains and high winds downed trees and power lines and led to water rescues from New York to Virginia Skies are clearing along the US eastern seaboard, and power was being restored to hundreds…",
+          "url": "https://www.theguardian.com/us-news/2026/nov/27/heavy-rain-wind-flooding-us-thanksgiving",
+          "published_at": "2026-11-27T16:18:56Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.guim.co.uk/img/media/13899cb7af4121d5aac3418608943d1e81f34df4/95_0_2500_2001/master/2500.jpg?width=460&quality=85&auto=format&fit=max&s=7f54d226e6902916564057c52fd2bf8d"
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "Storms disrupted Thanksgiving holiday travel in the US, including flights.",
+          "sources": [
+            "3f9aa3f62532",
+            "deae3fd6f196",
+            "e5075afd370a",
+            "57c32ebb90d3",
+            "f4e6fce06a9e",
+            "6fec77c2f27a",
+            "27de969b1c9f",
+            "4cda9bbc78b6",
+            "3f5896dd375b"
+          ]
+        },
+        {
+          "text": "The storms caused widespread power outages, put at hundreds of thousands to nearly one million homes or customers.",
+          "sources": [
+            "deae3fd6f196",
+            "e5075afd370a",
+            "6fec77c2f27a",
+            "27de969b1c9f",
+            "b5a5d64c3608",
+            "4cda9bbc78b6",
+            "43c17bfb0166",
+            "3f5896dd375b"
+          ]
+        },
+        {
+          "text": "Heavy rain and strong winds brought flooding, including flooded streets and coastal flooding.",
+          "sources": [
+            "ce7626a57d5c",
+            "b5a5d64c3608",
+            "4cda9bbc78b6",
+            "43c17bfb0166",
+            "3f5896dd375b",
+            "f4e6fce06a9e",
+            "db33bf04062e"
+          ]
+        },
+        {
+          "text": "The US East Coast was hit by the storm.",
+          "sources": [
+            "deae3fd6f196",
+            "b5a5d64c3608",
+            "4cda9bbc78b6",
+            "3f5896dd375b"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "db33bf04062e",
+              "quote": "huge waves destroy iconic pier",
+              "field": "headline"
+            },
+            {
+              "article_id": "e5075afd370a",
+              "quote": "Severe storms upend Thanksgiving travel",
+              "field": "headline"
+            },
+            {
+              "article_id": "43c17bfb0166",
+              "quote": "Severe Weather Wreaks Havoc on Thanksgiving Plans Across US",
+              "field": "headline"
+            },
+            {
+              "article_id": "f4e6fce06a9e",
+              "quote": "King tides batter US coasts",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Coastal damage in California, including a pier collapse, flooded beachfront homes and a super El Nino weather warning.",
+              "sources": [
+                "db33bf04062e"
+              ]
+            },
+            {
+              "text": "King tides and huge waves battering both US coasts.",
+              "sources": [
+                "f4e6fce06a9e",
+                "db33bf04062e"
+              ]
+            },
+            {
+              "text": "Record-setting rain, unprecedented flooding and near-hurricane force winds from coast to coast.",
+              "sources": [
+                "43c17bfb0166",
+                "e5075afd370a"
+              ]
+            },
+            {
+              "text": "Recovery in the eastern US, with water rescues from New York to Virginia and power being restored.",
+              "sources": [
+                "3f5896dd375b"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "ce7626a57d5c",
+              "quote": "Roofs torn off and streets under water",
+              "field": "headline"
+            },
+            {
+              "article_id": "6fec77c2f27a",
+              "quote": "major Thanksgiving event cancelled",
+              "field": "headline"
+            },
+            {
+              "article_id": "4cda9bbc78b6",
+              "quote": "Thanksgiving storms cause flooding and travel chaos",
+              "field": "headline"
+            },
+            {
+              "article_id": "b5a5d64c3608",
+              "quote": "Black Friday sales to hit record levels",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Power outages and disruption to thousands of flights.",
+              "sources": [
+                "6fec77c2f27a",
+                "4cda9bbc78b6"
+              ]
+            },
+            {
+              "text": "The storm alongside Black Friday shopping and economic woes, with experts predicting inflation will not dampen holiday spending.",
+              "sources": [
+                "27de969b1c9f",
+                "b5a5d64c3608"
+              ]
+            },
+            {
+              "text": "Physical damage such as roofs torn off and streets under water.",
+              "sources": [
+                "ce7626a57d5c"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "left",
+          "text": "Left coverage does not mention Black Friday sales or the economic outlook for holiday spending.",
+          "sources": [
+            "27de969b1c9f",
+            "b5a5d64c3608"
+          ]
+        },
+        {
+          "lean": "left",
+          "text": "Left coverage does not specifically mention flight disruptions.",
+          "sources": [
+            "6fec77c2f27a",
+            "4cda9bbc78b6"
+          ]
+        },
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not mention California coastal damage, the pier collapse or king tides.",
+          "sources": [
+            "db33bf04062e",
+            "f4e6fce06a9e"
+          ]
+        }
+      ],
+      "contested_claims": [],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "e5075afd370a",
+              "quote": "leave hundreds of thousands without power",
+              "field": "headline"
+            },
+            {
+              "article_id": "db33bf04062e",
+              "quote": "California flooding chaos",
+              "field": "headline"
+            },
+            {
+              "article_id": "27de969b1c9f",
+              "quote": "a holiday hit by wild weather and economic woes",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Scale of power outages, flooding and storm damage on both coasts.",
+              "sources": [
+                "e5075afd370a",
+                "43c17bfb0166",
+                "b5a5d64c3608",
+                "4cda9bbc78b6",
+                "ce7626a57d5c",
+                "f4e6fce06a9e"
+              ]
+            },
+            {
+              "text": "California coastal damage and the economic backdrop of Black Friday.",
+              "sources": [
+                "db33bf04062e",
+                "27de969b1c9f",
+                "b5a5d64c3608"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "3f9aa3f62532",
+              "quote": "Storms disrupt US Thanksgiving holiday travel",
+              "field": "headline"
+            },
+            {
+              "article_id": "deae3fd6f196",
+              "quote": "causing flight delays, power outages",
+              "field": "headline"
+            },
+            {
+              "article_id": "57c32ebb90d3",
+              "quote": "400 flights cancelled",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Travel disruption, flight delays and cancellations, and power outages.",
+              "sources": [
+                "3f9aa3f62532",
+                "deae3fd6f196",
+                "57c32ebb90d3"
+              ]
+            },
+            {
+              "text": "Postponement of New York's Macy's parade for the first time in its 100-year history.",
+              "sources": [
+                "57c32ebb90d3"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "Severe storms with heavy rain, strong winds and flooding hit the US around Thanksgiving, disrupting holiday travel and flights. Reports put those left without power at hundreds of thousands to nearly one million, with the East Coast badly hit and coastal flooding also reported in California.",
+        "sources": [
+          "ce7626a57d5c",
+          "3f9aa3f62532",
+          "deae3fd6f196",
+          "e5075afd370a",
+          "57c32ebb90d3",
+          "6fec77c2f27a",
+          "b5a5d64c3608",
+          "4cda9bbc78b6",
+          "43c17bfb0166",
+          "3f5896dd375b",
+          "db33bf04062e",
+          "f4e6fce06a9e"
+        ]
+      },
+      "conclusion": {
+        "text": "All sides agree that storms disrupted US Thanksgiving travel and caused widespread power outages and flooding. Left outlets add California coastal damage and king tides, centre outlets add the Black Friday economic angle, and East outlets lead with flight disruption and the Macy's parade postponement. No incompatible claims appear.",
+        "sources": [
+          "3f9aa3f62532",
+          "deae3fd6f196",
+          "e5075afd370a",
+          "6fec77c2f27a",
+          "4cda9bbc78b6",
+          "db33bf04062e",
+          "f4e6fce06a9e",
+          "27de969b1c9f",
+          "b5a5d64c3608",
+          "57c32ebb90d3"
+        ]
+      },
+      "validation": {
+        "kept": 34,
+        "dropped_by_reason": {}
+      }
+    },
+    {
+      "id": "9fbdf665377d",
+      "title": "Zelensky criticises Trump's friendship with Putin in BBC interview",
+      "rank": 2,
+      "outlet_count": 7,
+      "coverage": {
+        "lean": {
+          "left": 1,
+          "centre": 1,
+          "right": 3
+        },
+        "bloc": {
+          "west": 5,
+          "east": 2
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "c399ec5952fa",
+          "outlet_id": "bbc",
+          "headline": "Zelensky questions 'strange' Trump-Putin friendship in BBC interview",
+          "snippet": "The Ukrainian president tells the BBC that Russia's Vladimir Putin should not be treated as a friend.",
+          "url": "https://www.bbc.co.uk/news/videos/cm9309nwk7x9o",
+          "published_at": "2026-11-26T22:06:20Z",
+          "published_at_estimated": false,
+          "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/1e73/live/90642570-ea33-11f1-99b6-a35a62fa4264.jpg"
+        },
+        {
+          "id": "606fdc0885f4",
+          "outlet_id": "mirror",
+          "headline": "Donald Trump's friendship with Putin is like being pals with Hitler, says Zelensky",
+          "snippet": "President Zelensky has laid into Donald Trump for being close to Putin - branding it like being friends with Hitler during World War II - as Kyiv's troops hammer the Russian leader's home region St…",
+          "url": "https://www.mirror.co.uk/news/world-news/zelensky-donald-trump-putin-ukraine-37920768",
+          "published_at": "2026-11-27T03:44:21Z",
+          "published_at_estimated": false,
+          "image_url": "https://i2-prod.dailystar.co.uk/incoming/article37882095.ece/ALTERNATES/s615/1_FILES-US-UKRAINE-RUSSIA-CONFLICT-DIPLOMACY-TRUMP.jpg"
+        },
+        {
+          "id": "6ef7aac43443",
+          "outlet_id": "bbc",
+          "headline": "Zelensky criticises 'strange' Trump-Putin friendship in BBC interview",
+          "snippet": "Ukraine's president voices frustration with US and says it is not pushing Russia hard enough in peace talks to end the war.",
+          "url": "https://www.bbc.co.uk/news/articles/c820q9wgrpyyo",
+          "published_at": "2026-11-27T09:07:48Z",
+          "published_at_estimated": false,
+          "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/fdee/live/21e805d0-ea60-11f1-99b6-a35a62fa4264.jpg"
+        },
+        {
+          "id": "cf03cf5f1c55",
+          "outlet_id": "scmp",
+          "headline": "Zelensky says Trump calling Putin ‘my friend’ is like being buddies with Hitler in WWII",
+          "snippet": "Ukraine’s Volodymyr Zelensky said US ⁠President Donald ⁠Trump calling Russia’s ⁠Vladimir Putin “my friend” was strange and akin to making the same comment about Adolf Hitler during World War II. In…",
+          "url": "https://www.scmp.com/news/world/europe/article/3376046/zelensky-says-trump-calling-putin-my-friend-being-buddies-hitler-wwii",
+          "published_at": "2026-11-27T09:22:39Z",
+          "published_at_estimated": false,
+          "image_url": "https://cdn.i-scmp.com/sites/default/files/styles/1280x720/public/d8/images/canvas/2026/11/27/90d54d14-852f-4f2c-b06d-37bce3851d60_ae91d0f5.jpg?itok=d12LnF7x&v=1795771359"
+        },
+        {
+          "id": "61c5ad61e596",
+          "outlet_id": "timesofisrael",
+          "headline": "Zelensky: Trump calling Putin his ‘friend’ like calling Hitler a friend",
+          "snippet": "In BBC interview, Ukraine leader slams US president's 'strange' comment, says Washington must use its leverage to pressure Russia into peace talks",
+          "url": "https://www.timesofisrael.com/zelensky-trump-calling-putin-his-friend-like-calling-hitler-a-friend/",
+          "published_at": "2026-11-27T11:10:54Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "411b50144afa",
+          "outlet_id": "thesun",
+          "headline": "Zelensky slams Trump’s ‘strange’ friendship with Putin after Don shares snap – saying it’s ‘like being pals with HITLER’",
+          "snippet": "VOLODYMYR Zelensky likened Vladimir Putin to Hitler as he blasted Donald Trump's \"strange\" friendship with the bloodthirsty \"killer\". The Ukrainian leader hit out at the US President for embracing…",
+          "url": "https://www.thesun.co.uk/news/41170616/zelensky-slams-trump-putin-friendship/",
+          "published_at": "2026-11-27T12:37:20Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.thesun.co.uk/wp-content%2Fuploads%2F2026%2F11%2Fnewspress-collage-xodryg78n-1795782987653.jpg?quality%3D90%26"
+        },
+        {
+          "id": "3d6f5de54cfd",
+          "outlet_id": "examiner",
+          "headline": "Zelensky chides the Trump-Putin friendship as ‘strange’",
+          "snippet": "Ukrainian President Volodymyr Zelensky called President Donald Trump’s friendship with Russian President Vladimir Putin “strange” in a BBC interview that was published Friday. Trump made headlines…",
+          "url": "https://www.washingtonexaminer.com/news/world/4816476/zelensky-trump-putin-friendship-russia-ukraine-war/",
+          "published_at": "2026-11-27T15:54:09Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.washingtonexaminer.com/wp-content/uploads/2026/04/AP26104392160765.jpg?w=1024"
+        },
+        {
+          "id": "023c2f77e744",
+          "outlet_id": "dailymail",
+          "headline": "Zelensky criticises Trump for calling Putin his 'friend': 'It's like saying you're friends with Hitler'",
+          "snippet": "Volodymyr Zelensky has criticised Donald Trump for posting a photograph of himself embracing Vladimir Putin and calling him 'my friend'.",
+          "url": "https://www.dailymail.com/news/article-16326061/Zelensky-criticises-Trump-calling-Putin-friend-like-saying-youre-friends-Hitler.html",
+          "published_at": "2026-11-27T16:07:15Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.dailymail.com/1s/2026/11/27/07/112757363-0-image-m-9_1795765156465.jpg"
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "Zelensky described Trump's friendship with Putin, or Trump calling Putin a friend, as strange.",
+          "sources": [
+            "c399ec5952fa",
+            "6ef7aac43443",
+            "cf03cf5f1c55",
+            "61c5ad61e596",
+            "411b50144afa",
+            "3d6f5de54cfd"
+          ]
+        },
+        {
+          "text": "Zelensky compared Trump's friendship with Putin to being friends with Hitler.",
+          "sources": [
+            "606fdc0885f4",
+            "cf03cf5f1c55",
+            "61c5ad61e596",
+            "411b50144afa",
+            "023c2f77e744"
+          ]
+        },
+        {
+          "text": "The remarks were made in an interview with the BBC.",
+          "sources": [
+            "c399ec5952fa",
+            "6ef7aac43443",
+            "61c5ad61e596",
+            "3d6f5de54cfd"
+          ]
+        },
+        {
+          "text": "Zelensky's criticism followed Trump sharing a photograph of himself embracing Putin and calling him 'my friend'.",
+          "sources": [
+            "411b50144afa",
+            "023c2f77e744"
+          ]
+        },
+        {
+          "text": "Zelensky said the US should do more to pressure Russia in peace talks.",
+          "sources": [
+            "6ef7aac43443",
+            "61c5ad61e596"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "606fdc0885f4",
+              "quote": "like being pals with Hitler",
+              "field": "headline"
+            },
+            {
+              "article_id": "606fdc0885f4",
+              "quote": "laid into Donald Trump for being close to Putin",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the Hitler comparison.",
+              "sources": [
+                "606fdc0885f4"
+              ]
+            },
+            {
+              "text": "Notes that Kyiv's troops are attacking Putin's home region.",
+              "sources": [
+                "606fdc0885f4"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "c399ec5952fa",
+              "quote": "Russia's Vladimir Putin should not be treated as a friend",
+              "field": "snippet"
+            },
+            {
+              "article_id": "6ef7aac43443",
+              "quote": "not pushing Russia hard enough in peace talks",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with Zelensky calling the Trump-Putin friendship 'strange'.",
+              "sources": [
+                "c399ec5952fa",
+                "6ef7aac43443"
+              ]
+            },
+            {
+              "text": "Emphasises Zelensky's frustration that the US is not pushing Russia hard enough in peace talks.",
+              "sources": [
+                "6ef7aac43443"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "right",
+          "headline_quotes": [
+            {
+              "article_id": "411b50144afa",
+              "quote": "like being pals with HITLER",
+              "field": "headline"
+            },
+            {
+              "article_id": "411b50144afa",
+              "quote": "the bloodthirsty \"killer\"",
+              "field": "snippet"
+            },
+            {
+              "article_id": "023c2f77e744",
+              "quote": "It's like saying you're friends with Hitler",
+              "field": "headline"
+            },
+            {
+              "article_id": "3d6f5de54cfd",
+              "quote": "Zelensky chides the Trump-Putin friendship",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Links the criticism to Trump sharing a photograph of himself embracing Putin.",
+              "sources": [
+                "411b50144afa",
+                "023c2f77e744"
+              ]
+            },
+            {
+              "text": "Leads with the Hitler comparison.",
+              "sources": [
+                "411b50144afa",
+                "023c2f77e744"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not mention Zelensky's comparison to Hitler.",
+          "sources": [
+            "606fdc0885f4",
+            "411b50144afa",
+            "023c2f77e744"
+          ]
+        },
+        {
+          "lean": "left",
+          "text": "Left coverage does not mention Zelensky's call for the US to press Russia harder in peace talks.",
+          "sources": [
+            "6ef7aac43443"
+          ]
+        },
+        {
+          "lean": "right",
+          "text": "Right coverage does not mention Zelensky's call for the US to press Russia harder in peace talks.",
+          "sources": [
+            "6ef7aac43443"
+          ]
+        },
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not mention the photograph Trump shared of himself embracing Putin.",
+          "sources": [
+            "411b50144afa",
+            "023c2f77e744"
+          ]
+        }
+      ],
+      "contested_claims": [],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "c399ec5952fa",
+              "quote": "Zelensky questions 'strange' Trump-Putin friendship",
+              "field": "headline"
+            },
+            {
+              "article_id": "411b50144afa",
+              "quote": "like being pals with HITLER",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the 'strange' friendship and the Hitler comparison.",
+              "sources": [
+                "c399ec5952fa",
+                "606fdc0885f4",
+                "411b50144afa",
+                "3d6f5de54cfd",
+                "023c2f77e744"
+              ]
+            },
+            {
+              "text": "Links the criticism to a photograph Trump shared of himself embracing Putin.",
+              "sources": [
+                "411b50144afa",
+                "023c2f77e744"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "cf03cf5f1c55",
+              "quote": "akin to making the same comment about Adolf Hitler during World War II",
+              "field": "snippet"
+            },
+            {
+              "article_id": "61c5ad61e596",
+              "quote": "Washington must use its leverage to pressure Russia into peace talks",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Frames the Hitler comparison around Trump calling Putin his friend.",
+              "sources": [
+                "cf03cf5f1c55",
+                "61c5ad61e596"
+              ]
+            },
+            {
+              "text": "Notes Zelensky's call for Washington to use its leverage on Russia.",
+              "sources": [
+                "61c5ad61e596"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "In a BBC interview, Ukrainian President Volodymyr Zelensky called Donald Trump's friendship with Vladimir Putin \"strange\". He likened Trump calling Putin his friend to being friends with Hitler. He also said the US was not pushing Russia hard enough in peace talks.",
+        "sources": [
+          "c399ec5952fa",
+          "6ef7aac43443",
+          "606fdc0885f4",
+          "cf03cf5f1c55",
+          "61c5ad61e596",
+          "411b50144afa",
+          "3d6f5de54cfd",
+          "023c2f77e744"
+        ]
+      },
+      "conclusion": {
+        "text": "Coverage across leans and blocs agrees that Zelensky called the Trump-Putin friendship strange and compared it to befriending Hitler. Centre outlets lead with US pressure in peace talks and do not mention the Hitler comparison. Right outlets link the remarks to a photo of Trump embracing Putin. No claims are contested.",
+        "sources": [
+          "c399ec5952fa",
+          "6ef7aac43443",
+          "606fdc0885f4",
+          "cf03cf5f1c55",
+          "61c5ad61e596",
+          "411b50144afa",
+          "3d6f5de54cfd",
+          "023c2f77e744"
+        ]
+      },
+      "validation": {
+        "kept": 33,
+        "dropped_by_reason": {}
+      }
+    },
+    {
+      "id": "5c04bd84e72c",
+      "title": "Hackers breach US Air Force Cloud One computing platform",
+      "rank": 3,
+      "outlet_count": 7,
+      "coverage": {
+        "lean": {
+          "left": 2,
+          "centre": 1,
+          "right": 1
+        },
+        "bloc": {
+          "west": 4,
+          "east": 3
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "71cc51703583",
+          "outlet_id": "sky",
+          "headline": "US Air Force's cloud computing platform hacked",
+          "snippet": "The US Air Force's (USAF) flagship cloud computing platform has been hacked, people with knowledge of the incident have said.",
+          "url": "https://news.sky.com/story/us-air-forces-cloud-computing-platform-hacked-13617163",
+          "published_at": "2026-11-27T11:16:00Z",
+          "published_at_estimated": false,
+          "image_url": "https://e3.365dm.com/26/11/1920x1080/skynews-pentagon-depatment-of-defence_7417763.jpg?20261127121415"
+        },
+        {
+          "id": "1e11dd60e363",
+          "outlet_id": "nypost",
+          "headline": "Hackers breach US Air Force flagship cloud computing platform — jeopardizing sensitive info",
+          "snippet": "The development could jeopardize a vast swathe of sensitive tactical, personnel and logistics data.",
+          "url": "https://nypost.com/2026/11/27/us-news/hackers-breach-us-air-force-flagship-cloud-one-computing-platform/",
+          "published_at": "2026-11-27T12:17:03Z",
+          "published_at_estimated": false,
+          "image_url": "https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2Fusaf-thunderbirds-perform-max-power-147952761.jpg?w%3D1024"
+        },
+        {
+          "id": "18fbdd5be7b9",
+          "outlet_id": "scmp",
+          "headline": "Hackers breach US Air Force Cloud One platform, putting military data at risk",
+          "snippet": "Hackers have breached the US Air Force’s flagship cloud computing platform, three people familiar with the matter said, in a development that could jeopardise a vast swathe of sensitive tactical…",
+          "url": "https://www.scmp.com/news/world/united-states-canada/article/3376087/hackers-breach-us-air-force-cloud-one-platform-putting-military-data-risk",
+          "published_at": "2026-11-27T12:25:16Z",
+          "published_at_estimated": false,
+          "image_url": "https://cdn.i-scmp.com/sites/default/files/styles/1280x720/public/d8/images/canvas/2026/11/27/c6acc802-0762-4130-b8e1-8e0c782557b3_75a05897.jpg?itok=otAeOadi&v=1795782314"
+        },
+        {
+          "id": "c8f91d33d5c1",
+          "outlet_id": "timesofisrael",
+          "headline": "Hackers breach US Air Force’s flagship Cloud One platform",
+          "snippet": "Intrusion could expose sensitive personnel, logistics and operational data; US Cyber Command called in to assess damage amid heightened anxiety over AI-powered intrusions",
+          "url": "https://www.timesofisrael.com/hackers-breach-us-air-forces-flagship-cloud-one-platform-report/",
+          "published_at": "2026-11-27T14:15:30Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "1e9b0120c8f9",
+          "outlet_id": "guardian",
+          "headline": "Hackers reportedly breach US Air Force’s flagship cloud computing platform",
+          "snippet": "Intrusion into Cloud One platform could jeopardize security of sensitive tactical, personnel and logistics data Hackers are reported to have breached the US Air Force’s flagship cloud computing…",
+          "url": "https://www.theguardian.com/technology/2026/nov/27/hackers-breach-us-air-force-cloud-computing",
+          "published_at": "2026-11-27T14:50:15Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.guim.co.uk/img/media/b78bd09c92d89960e79cab8a33338868663794eb/171_0_1706_1365/master/1706.jpg?width=460&quality=85&auto=format&fit=max&s=e4a153578bffdb298bc1a795067a88c8"
+        },
+        {
+          "id": "e7f37578653e",
+          "outlet_id": "nbc",
+          "headline": "Hackers attack and penetrate Air Force’s computing platform",
+          "snippet": "Hackers penetrated the Air Force’s cloud computing platform in a breach that could have exposed sensitive military information, a U.S. official said Friday.",
+          "url": "https://www.nbcnews.com/news/us-news/hackers-attack-penetrate-air-forces-computing-platform-rcna611559",
+          "published_at": "2026-11-27T15:28:41Z",
+          "published_at_estimated": false,
+          "image_url": "https://media-cldnry.s-nbcnews.com/image/upload/t_fit_1500w/rockcms/2026-11/261127-us-air-force-mb-1526-138dff.jpg"
+        },
+        {
+          "id": "86da2200d1ad",
+          "outlet_id": "thehindu",
+          "headline": "Hackers breach U.S. Air Force flagship Cloud One computing platform",
+          "snippet": "The intrusion at Cloud One was discovered within the past month or so ⁠during work to upgrade the system, two people familiar with the matter said",
+          "url": "https://www.thehindu.com/news/international/hackers-breach-us-air-force-flagship-cloud-one-computing-platform/article71750783.ece",
+          "published_at": "2026-11-27T15:45:59Z",
+          "published_at_estimated": false,
+          "image_url": "https://th-i.thgim.com/public/incoming/ahyovp/article71750819.ece/alternates/LANDSCAPE_1200/2026-11-27T110007Z_1971608881_RC27VS91XAH3_RTRMADP_3_USA-PENTAGON-AIR-FORCE-CLOUD.JPG"
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "Hackers breached the US Air Force's flagship cloud computing platform.",
+          "sources": [
+            "71cc51703583",
+            "1e11dd60e363",
+            "18fbdd5be7b9",
+            "c8f91d33d5c1",
+            "1e9b0120c8f9",
+            "e7f37578653e",
+            "86da2200d1ad"
+          ]
+        },
+        {
+          "text": "The platform affected is named Cloud One.",
+          "sources": [
+            "18fbdd5be7b9",
+            "c8f91d33d5c1",
+            "1e9b0120c8f9",
+            "86da2200d1ad"
+          ]
+        },
+        {
+          "text": "The breach could expose or jeopardise sensitive military data, including tactical, personnel and logistics information.",
+          "sources": [
+            "1e11dd60e363",
+            "18fbdd5be7b9",
+            "c8f91d33d5c1",
+            "1e9b0120c8f9",
+            "e7f37578653e"
+          ]
+        },
+        {
+          "text": "The information is attributed to people familiar with the matter or to a US official.",
+          "sources": [
+            "71cc51703583",
+            "18fbdd5be7b9",
+            "e7f37578653e",
+            "86da2200d1ad"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "1e9b0120c8f9",
+              "quote": "Hackers reportedly breach US Air Force’s flagship cloud computing platform",
+              "field": "headline"
+            },
+            {
+              "article_id": "e7f37578653e",
+              "quote": "Hackers attack and penetrate Air Force’s computing platform",
+              "field": "headline"
+            },
+            {
+              "article_id": "e7f37578653e",
+              "quote": "a U.S. official said Friday",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Attributes the breach to reports and to a US official.",
+              "sources": [
+                "1e9b0120c8f9",
+                "e7f37578653e"
+              ]
+            },
+            {
+              "text": "Emphasises the possible exposure of sensitive military, tactical, personnel and logistics data.",
+              "sources": [
+                "1e9b0120c8f9",
+                "e7f37578653e"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "71cc51703583",
+              "quote": "US Air Force's cloud computing platform hacked",
+              "field": "headline"
+            },
+            {
+              "article_id": "71cc51703583",
+              "quote": "people with knowledge of the incident have said",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the fact of the hack, attributed to people with knowledge of the incident.",
+              "sources": [
+                "71cc51703583"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "right",
+          "headline_quotes": [
+            {
+              "article_id": "1e11dd60e363",
+              "quote": "jeopardizing sensitive info",
+              "field": "headline"
+            },
+            {
+              "article_id": "1e11dd60e363",
+              "quote": "a vast swathe of sensitive tactical, personnel and logistics data",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the risk to sensitive tactical, personnel and logistics data.",
+              "sources": [
+                "1e11dd60e363"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not mention the potential exposure of sensitive military data.",
+          "sources": [
+            "1e11dd60e363",
+            "1e9b0120c8f9",
+            "e7f37578653e"
+          ]
+        },
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not name the platform as Cloud One.",
+          "sources": [
+            "1e9b0120c8f9"
+          ]
+        },
+        {
+          "lean": "right",
+          "text": "Right coverage does not name the platform as Cloud One.",
+          "sources": [
+            "1e9b0120c8f9"
+          ]
+        }
+      ],
+      "contested_claims": [],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "71cc51703583",
+              "quote": "US Air Force's cloud computing platform hacked",
+              "field": "headline"
+            },
+            {
+              "article_id": "1e11dd60e363",
+              "quote": "jeopardizing sensitive info",
+              "field": "headline"
+            },
+            {
+              "article_id": "1e9b0120c8f9",
+              "quote": "Hackers reportedly breach",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the hack of the Air Force's cloud platform and the risk to sensitive data, attributed to officials or informed people.",
+              "sources": [
+                "71cc51703583",
+                "1e11dd60e363",
+                "1e9b0120c8f9",
+                "e7f37578653e"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "18fbdd5be7b9",
+              "quote": "putting military data at risk",
+              "field": "headline"
+            },
+            {
+              "article_id": "c8f91d33d5c1",
+              "quote": "US Cyber Command called in to assess damage",
+              "field": "snippet"
+            },
+            {
+              "article_id": "86da2200d1ad",
+              "quote": "discovered within the past month or so ⁠during work to upgrade the system",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Names Cloud One in every headline.",
+              "sources": [
+                "18fbdd5be7b9",
+                "c8f91d33d5c1",
+                "86da2200d1ad"
+              ]
+            },
+            {
+              "text": "Reports that US Cyber Command was called in to assess damage amid anxiety over AI-powered intrusions.",
+              "sources": [
+                "c8f91d33d5c1"
+              ]
+            },
+            {
+              "text": "Reports the intrusion was discovered within roughly the past month during system upgrade work.",
+              "sources": [
+                "86da2200d1ad"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "Hackers have breached the US Air Force's flagship cloud computing platform, Cloud One, according to people familiar with the matter and a US official. Reports say the intrusion could expose sensitive tactical, personnel and logistics data.",
+        "sources": [
+          "71cc51703583",
+          "1e11dd60e363",
+          "18fbdd5be7b9",
+          "c8f91d33d5c1",
+          "1e9b0120c8f9",
+          "e7f37578653e",
+          "86da2200d1ad"
+        ]
+      },
+      "conclusion": null,
+      "validation": {
+        "kept": 29,
+        "dropped_by_reason": {
+          "untrusted_text": 1
+        }
+      }
+    },
+    {
+      "id": "9db28d836f94",
+      "title": "China opposes proposed US Section 301 tariffs on China and other economies",
+      "rank": 4,
+      "outlet_count": 7,
+      "coverage": {
+        "lean": {
+          "left": 1,
+          "centre": 0,
+          "right": 0
+        },
+        "bloc": {
+          "west": 1,
+          "east": 6
+        }
+      },
+      "blindspot": {
+        "lean": "left",
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "237c6dbce8f4",
+          "outlet_id": "cgtn",
+          "headline": "China firmly opposes US's additional tariffs on China, other economies",
+          "snippet": "China firmly opposes the imposition of additional Section 301 tariffs by the United States on China and other economies, a Ministry of Commerce spokesperson said on Thursday.",
+          "url": "https://news.cgtn.com/news/2026-11-26/China-firmly-opposes-US-s-additional-tariffs-on-China-other-economies-1SnZ0kfFYI0/p.html",
+          "published_at": "2026-11-26T08:23:43Z",
+          "published_at_estimated": false,
+          "image_url": "https://news.cgtn.com/news/2026-11-26/China-firmly-opposes-US-s-additional-tariffs-on-China-other-economies-1SnZ0kfFYI0/img/f610302bf8cf424d86a230525575ced5/f610302bf8cf424d86a230525575ced5-1920.png"
+        },
+        {
+          "id": "501dfb915138",
+          "outlet_id": "guardian",
+          "headline": "China reserves right to take ‘necessary measures’ after Trump’s new tariff proposals",
+          "snippet": "Beijing says new levies amount to ‘political manipulation’, while Brazil ‘will not yield to this type of threat’ Trump proposing new tariffs on 14 partners including China and EU Beijing has said it…",
+          "url": "https://www.theguardian.com/us-news/2026/nov/26/brazil-china-react-to-new-trump-tariffs-threat",
+          "published_at": "2026-11-26T12:00:22Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.guim.co.uk/img/media/2368ea981f5660064edcacf6ff595f03bb38028d/139_0_1390_1112/master/1390.jpg?width=460&quality=85&auto=format&fit=max&s=98c84cd990752410bc56af9fe1aa82e6"
+        },
+        {
+          "id": "51a005569e63",
+          "outlet_id": "thehindu",
+          "headline": "Experts say new U.S. tariffs do not pose substantial threat, India should not rush into trade deal",
+          "snippet": "The latest proposal by the USTR takes the tariff framework on India back to what it was at the start of trade deal negotiations",
+          "url": "https://www.thehindu.com/business/Economy/experts-say-new-us-tariffs-do-not-pose-substantial-threat-india-should-not-rush-into-trade-deal/article71746007.ece",
+          "published_at": "2026-11-26T15:43:21Z",
+          "published_at_estimated": false,
+          "image_url": "https://th-i.thgim.com/public/incoming/6u4w3z/article71747681.ece/alternates/LANDSCAPE_1200/iStock-1089423548%201.jpg"
+        },
+        {
+          "id": "88cf8bb01465",
+          "outlet_id": "japantimes",
+          "headline": "U.S. tariff plan has Japan asking questions and pushing back",
+          "snippet": "Rates could be taken to 15% on most Japanese goods, from the current 12.5%.",
+          "url": "https://www.japantimes.co.jp/business/2026/11/27/trump-tariff-japan/",
+          "published_at": "2026-11-27T07:17:00Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.japantimes.co.jp/japantimes/uploads/images/2026/11/27/thumbs/400x400/576351.jpg"
+        },
+        {
+          "id": "0d58ebdd2359",
+          "outlet_id": "ecns",
+          "headline": "China opposes proposed U.S. tariffs",
+          "snippet": "China has voiced firm opposition to the United States' latest proposals to ratchet up tariffs following its Section 301 investigations, the Ministry of Commerce said on Thursday, urging Washington…",
+          "url": "https://www.ecns.cn/business/2026-11-27/detail-ihfnkzcu9657375.shtml",
+          "published_at": "2026-11-27T09:14:40Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "3ffe2566ba64",
+          "outlet_id": "scmp",
+          "headline": "Why Trump’s new tariff threats may spur Southeast Asia to rethink US trade deals",
+          "snippet": "US President Donald Trump’s latest tariff threats have led analysts to question whether the trade deals Southeast Asian countries previously struck with Washington were worth pursuing, as those…",
+          "url": "https://www.scmp.com/week-asia/economics/article/3376040/why-trumps-new-tariff-threats-may-spur-southeast-asia-rethink-us-trade-deals",
+          "published_at": "2026-11-27T10:00:09Z",
+          "published_at_estimated": false,
+          "image_url": "https://cdn.i-scmp.com/sites/default/files/styles/1280x720/public/d8/images/canvas/2026/11/27/e286d279-2904-416f-a59b-0bfa20f39e7f_de0bddb1.jpg?itok=b0ljC8AN&v=1795770405"
+        },
+        {
+          "id": "d7e5567749d7",
+          "outlet_id": "aljazeera",
+          "headline": "Trump embraced Xi, then slapped new tariffs on China: What’s his game plan?",
+          "snippet": "US president's new tariff regime targets China hardest, just weeks before Trump and Xi meet again in Miami.",
+          "url": "https://www.aljazeera.com/features/2026/11/27/trump-embraced-xi-then-slapped-new-tariffs-on-china-whats-his-game-plan",
+          "published_at": "2026-11-27T12:48:44Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "3e53df67cb8e",
+          "outlet_id": "ecns",
+          "headline": "Commerce ministry firmly opposes proposed U.S. Section 301 tariffs on China, other economies",
+          "snippet": "China firmly opposes a U.S. proposal to impose additional Section 301 tariffs on the country and other economies, a spokesperson for the Ministry of Commerce said Thursday.",
+          "url": "https://www.ecns.cn/cns-wire/2026-11-27/detail-ihfnkzcu9657989.shtml",
+          "published_at": "2026-11-27T14:41:21Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "4c45100d5b44",
+          "outlet_id": "ecns",
+          "headline": "China urges U.S. to resolve trade issues through consultation",
+          "snippet": "China on Thursday urged the United States to resolve trade issues through consultation on the basis of equality, mutual respect and mutual benefit.",
+          "url": "https://www.ecns.cn/news/politics/2026-11-27/detail-ihfnkzcu9658254.shtml",
+          "published_at": "2026-11-27T15:22:46Z",
+          "published_at_estimated": false,
+          "image_url": null
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "China opposes the newly proposed US tariffs on China and other economies.",
+          "sources": [
+            "237c6dbce8f4",
+            "501dfb915138",
+            "0d58ebdd2359",
+            "3e53df67cb8e"
+          ]
+        },
+        {
+          "text": "The opposition was voiced on Thursday by China's Ministry of Commerce.",
+          "sources": [
+            "237c6dbce8f4",
+            "0d58ebdd2359",
+            "3e53df67cb8e"
+          ]
+        },
+        {
+          "text": "The new US tariff proposals target several trading partners besides China.",
+          "sources": [
+            "237c6dbce8f4",
+            "501dfb915138",
+            "3e53df67cb8e",
+            "88cf8bb01465",
+            "51a005569e63",
+            "3ffe2566ba64"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "501dfb915138",
+              "quote": "China reserves right to take ‘necessary measures’",
+              "field": "headline"
+            },
+            {
+              "article_id": "501dfb915138",
+              "quote": "Beijing says new levies amount to ‘political manipulation’",
+              "field": "snippet"
+            },
+            {
+              "article_id": "501dfb915138",
+              "quote": "Brazil ‘will not yield to this type of threat’",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with Beijing reserving the right to take necessary measures and describing the levies as political manipulation.",
+              "sources": [
+                "501dfb915138"
+              ]
+            },
+            {
+              "text": "Notes Brazil's refusal to yield and that the proposals cover 14 partners including China and the EU.",
+              "sources": [
+                "501dfb915138"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [],
+      "contested_claims": [],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "501dfb915138",
+              "quote": "Trump’s new tariff proposals",
+              "field": "headline"
+            },
+            {
+              "article_id": "501dfb915138",
+              "quote": "Trump proposing new tariffs on 14 partners including China and EU",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Foregrounds Beijing's warning of necessary measures, its political manipulation charge and Brazil's response.",
+              "sources": [
+                "501dfb915138"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "237c6dbce8f4",
+              "quote": "China firmly opposes US's additional tariffs on China, other economies",
+              "field": "headline"
+            },
+            {
+              "article_id": "4c45100d5b44",
+              "quote": "China urges U.S. to resolve trade issues through consultation",
+              "field": "headline"
+            },
+            {
+              "article_id": "88cf8bb01465",
+              "quote": "U.S. tariff plan has Japan asking questions and pushing back",
+              "field": "headline"
+            },
+            {
+              "article_id": "51a005569e63",
+              "quote": "Experts say new U.S. tariffs do not pose substantial threat",
+              "field": "headline"
+            },
+            {
+              "article_id": "d7e5567749d7",
+              "quote": "new tariff regime targets China hardest",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Chinese state outlets carry the Ministry of Commerce's firm opposition and its call for consultation based on equality, mutual respect and mutual benefit.",
+              "sources": [
+                "237c6dbce8f4",
+                "0d58ebdd2359",
+                "3e53df67cb8e",
+                "4c45100d5b44"
+              ]
+            },
+            {
+              "text": "Other outlets focus on effects on partners: Japan's rate could rise to 15% from 12.5%, and India's framework reverts to its pre-negotiation level.",
+              "sources": [
+                "88cf8bb01465",
+                "51a005569e63"
+              ]
+            },
+            {
+              "text": "Reports analysts questioning whether Southeast Asian trade deals with Washington were worth pursuing.",
+              "sources": [
+                "3ffe2566ba64"
+              ]
+            },
+            {
+              "text": "Notes the tariffs target China hardest weeks before Trump and Xi meet again in Miami.",
+              "sources": [
+                "d7e5567749d7"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "The US has proposed additional Section 301 tariffs on China and other economies, and China's Ministry of Commerce said on Thursday that it firmly opposes them and urged consultation. Beijing said it reserves the right to take necessary measures, while coverage also reports effects on Japan, India and Southeast Asia.",
+        "sources": [
+          "237c6dbce8f4",
+          "501dfb915138",
+          "0d58ebdd2359",
+          "3e53df67cb8e",
+          "4c45100d5b44",
+          "88cf8bb01465",
+          "51a005569e63",
+          "3ffe2566ba64"
+        ]
+      },
+      "conclusion": {
+        "text": "All coverage reports the US tariff proposals and China's opposition to them. The single West article leads with Beijing's political manipulation charge and Brazil's response, while East outlets range from Chinese ministry statements to impacts on Japan, India and Southeast Asia. No claims are contested between outlets.",
+        "sources": [
+          "501dfb915138",
+          "237c6dbce8f4",
+          "0d58ebdd2359",
+          "3e53df67cb8e",
+          "4c45100d5b44",
+          "88cf8bb01465",
+          "51a005569e63",
+          "3ffe2566ba64"
+        ]
+      },
+      "validation": {
+        "kept": 22,
+        "dropped_by_reason": {}
+      }
+    },
+    {
+      "id": "4c603cedcece",
+      "title": "Two Italian technicians killed in drone attack in Kuwait",
+      "rank": 5,
+      "outlet_count": 6,
+      "coverage": {
+        "lean": {
+          "left": 1,
+          "centre": 1,
+          "right": 1
+        },
+        "bloc": {
+          "west": 3,
+          "east": 3
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "9223927a2f86",
+          "outlet_id": "nyt",
+          "headline": "Two Italians Killed in Iranian Drone Attack on Kuwait, Officials Say",
+          "snippet": "The deaths follow a series of strikes on Gulf Arab states that host U.S. military facilities in recent weeks as talks to end the war continue to stall.",
+          "url": "https://www.nytimes.com/2026/11/26/world/middleeast/italians-killed-iran-drone-attack-kuwait.html",
+          "published_at": "2026-11-26T19:33:06Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "7c691f26b24f",
+          "outlet_id": "fox",
+          "headline": "Iran accuses Zelenskyy of 'false flag' Kuwait drone strike op to get Trump's attention",
+          "snippet": "A former Iran nuclear adviser claimed Thursday the Kuwait drone attack was a Ukrainian \"false flag\" staged to get President Donald Trump's attention.",
+          "url": "https://www.foxnews.com/world/iran-accuses-zelenskyy-false-flag-kuwait-drone-strike-op-get-trumps-attention",
+          "published_at": "2026-11-26T23:19:59Z",
+          "published_at_estimated": false,
+          "image_url": "https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2026/03/931/523/kuwait-iran-us-air-force-jets.jpg?ve=1&tl=1"
+        },
+        {
+          "id": "71c117502256",
+          "outlet_id": "thehindu",
+          "headline": "Two Italians killed in drone attack in Kuwait",
+          "snippet": "‘Around 2:00 p.m. today, several Iranian-made drones targeted Kuwaiti military installations, including an air-defence detection station where two Italian technicians from Rheinmetall were working,’…",
+          "url": "https://www.thehindu.com/news/international/drone-attack-kuwait-us-iran-war-death-november-27-2026/article71748337.ece",
+          "published_at": "2026-11-26T23:39:13Z",
+          "published_at_estimated": false,
+          "image_url": "https://th-i.thgim.com/public/incoming/col18g/article71748862.ece/alternates/LANDSCAPE_1200/2026-04-04T150829Z_926261471_RC2EIKA1Z4FH_RTRMADP_3_IRAN-CRISIS-BAHRAIN.JPG"
+        },
+        {
+          "id": "211a6ee6ba95",
+          "outlet_id": "thenational",
+          "headline": "Iranian drone attack hits Kuwait, Hatta opens hydroelectric plant and Abu Dhabi menus to add calorie counts",
+          "snippet": "In today's episode of Trending Middle East, two Italian citizens have been killed in Kuwait in an Iranian drone attack. Kuwait has condemned what it called a flagrant breach of its sovereignty…",
+          "url": "https://www.thenationalnews.com/podcasts/trending-middle-east/2026/11/27/iranian-drone-attack-hits-kuwait-hatta-opens-hydroelectric-plant-and-abu-dhabi-menus-to-add-calorie-counts/",
+          "published_at": "2026-11-27T05:56:21Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.thenationalnews.com/resizer/v2/YY5TWMWH6FG5JOFTJHWKUWJCJ4.jpg?auth=86c3c51a28e8925beeedcc44849ca91062fd67d582e612be868c9be6a2d6bc43&smart=true&width=4096&height=2984"
+        },
+        {
+          "id": "9d7d70589927",
+          "outlet_id": "france24",
+          "headline": "Kuwait: Two Italians killed in drone attack",
+          "snippet": "A drone attack in Kuwait killed two Italian technicians working on an air defence system on Thursday, marking the first fatal strike in the Gulf state for months.",
+          "url": "https://www.france24.com/en/video/20261127-kuwait-two-italians-killed-in-drone-attack",
+          "published_at": "2026-11-27T11:45:48Z",
+          "published_at_estimated": false,
+          "image_url": "https://s.france24.com/media/display/4502e30e-ea52-11f1-ae75-77d069279b82/w:1024/p:16x9/EN-20261127-110542-110701-CS.jpg"
+        },
+        {
+          "id": "dc2a8ce9fe06",
+          "outlet_id": "aljazeera",
+          "headline": "Italians killed in Kuwait: Why is Iran denying responsibility?",
+          "snippet": "Iran has openly claimed its strikes on Gulf states throughout the war. So why is it denying an attack on Kuwait?",
+          "url": "https://www.aljazeera.com/news/2026/11/27/italians-killed-in-kuwait-why-is-iran-denying-responsibility",
+          "published_at": "2026-11-27T11:51:26Z",
+          "published_at_estimated": false,
+          "image_url": null
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "Two Italians were killed in a drone attack in Kuwait.",
+          "sources": [
+            "9223927a2f86",
+            "71c117502256",
+            "211a6ee6ba95",
+            "9d7d70589927",
+            "dc2a8ce9fe06"
+          ]
+        },
+        {
+          "text": "The two Italians were technicians working at an air defence site or system.",
+          "sources": [
+            "71c117502256",
+            "9d7d70589927"
+          ]
+        },
+        {
+          "text": "The attack took place on Thursday.",
+          "sources": [
+            "7c691f26b24f",
+            "9d7d70589927"
+          ]
+        },
+        {
+          "text": "The attack is described as carried out with Iranian or Iranian-made drones.",
+          "sources": [
+            "9223927a2f86",
+            "71c117502256",
+            "211a6ee6ba95"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "9223927a2f86",
+              "quote": "Two Italians Killed in Iranian Drone Attack on Kuwait, Officials Say",
+              "field": "headline"
+            },
+            {
+              "article_id": "9223927a2f86",
+              "quote": "talks to end the war continue to stall",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Attributes the Iranian attribution to officials and places the deaths in a series of strikes on Gulf states hosting U.S. military facilities.",
+              "sources": [
+                "9223927a2f86"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "9d7d70589927",
+              "quote": "Kuwait: Two Italians killed in drone attack",
+              "field": "headline"
+            },
+            {
+              "article_id": "9d7d70589927",
+              "quote": "marking the first fatal strike in the Gulf state for months",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Emphasises that the victims worked on an air defence system and that this was the first fatal strike in Kuwait for months.",
+              "sources": [
+                "9d7d70589927"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "right",
+          "headline_quotes": [
+            {
+              "article_id": "7c691f26b24f",
+              "quote": "Iran accuses Zelenskyy of 'false flag' Kuwait drone strike op to get Trump's attention",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with a former Iran nuclear adviser's claim that the attack was a Ukrainian false flag aimed at getting Donald Trump's attention.",
+              "sources": [
+                "7c691f26b24f"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "right",
+          "text": "Does not mention that two Italians were killed in the attack.",
+          "sources": [
+            "9223927a2f86",
+            "9d7d70589927"
+          ]
+        },
+        {
+          "lean": "left",
+          "text": "Does not mention the claim that the attack was a Ukrainian false flag.",
+          "sources": [
+            "7c691f26b24f"
+          ]
+        },
+        {
+          "lean": "centre",
+          "text": "Does not attribute the drone attack to Iran.",
+          "sources": [
+            "9223927a2f86"
+          ]
+        }
+      ],
+      "contested_claims": [
+        {
+          "claim": "Iran was responsible for the drone attack on Kuwait.",
+          "asserted_by": [
+            "9223927a2f86",
+            "211a6ee6ba95",
+            "71c117502256"
+          ],
+          "disputed_by": [
+            "7c691f26b24f",
+            "dc2a8ce9fe06"
+          ]
+        }
+      ],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "9223927a2f86",
+              "quote": "Iranian Drone Attack on Kuwait, Officials Say",
+              "field": "headline"
+            },
+            {
+              "article_id": "7c691f26b24f",
+              "quote": "Ukrainian \"false flag\" staged to get President Donald Trump's attention",
+              "field": "snippet"
+            },
+            {
+              "article_id": "9d7d70589927",
+              "quote": "the first fatal strike in the Gulf state for months",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Places the attack in the context of the wider war, stalled talks and strikes on Gulf states hosting U.S. facilities.",
+              "sources": [
+                "9223927a2f86"
+              ]
+            },
+            {
+              "text": "Reports a former Iranian adviser's false flag claim involving Ukraine.",
+              "sources": [
+                "7c691f26b24f"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "71c117502256",
+              "quote": "several Iranian-made drones targeted Kuwaiti military installations",
+              "field": "snippet"
+            },
+            {
+              "article_id": "211a6ee6ba95",
+              "quote": "Kuwait has condemned what it called a flagrant breach of its sovereignty",
+              "field": "snippet"
+            },
+            {
+              "article_id": "dc2a8ce9fe06",
+              "quote": "Why is Iran denying responsibility?",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Details the targets, including an air-defence detection station where two Rheinmetall technicians worked.",
+              "sources": [
+                "71c117502256"
+              ]
+            },
+            {
+              "text": "Reports Kuwait's condemnation of a breach of its sovereignty.",
+              "sources": [
+                "211a6ee6ba95"
+              ]
+            },
+            {
+              "text": "Focuses on Iran denying this attack despite openly claiming earlier strikes on Gulf states.",
+              "sources": [
+                "dc2a8ce9fe06"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "Two Italians were killed in a drone attack in Kuwait on Thursday; some reports describe them as technicians working on an air defence system. Several outlets attribute the attack to Iranian or Iranian-made drones, while others report that Iran denies responsibility and that a former Iranian adviser called it a Ukrainian false flag.",
+        "sources": [
+          "9223927a2f86",
+          "7c691f26b24f",
+          "71c117502256",
+          "211a6ee6ba95",
+          "9d7d70589927",
+          "dc2a8ce9fe06"
+        ]
+      },
+      "conclusion": {
+        "text": "All outlets report a fatal drone attack in Kuwait, most noting two Italians killed. Some link it to Iranian drones, while Fox leads with a former Iranian adviser's false flag claim and Al Jazeera with Iran's denial. Responsibility is contested within both blocs rather than between them.",
+        "sources": [
+          "9223927a2f86",
+          "7c691f26b24f",
+          "71c117502256",
+          "211a6ee6ba95",
+          "9d7d70589927",
+          "dc2a8ce9fe06"
+        ]
+      },
+      "validation": {
+        "kept": 29,
+        "dropped_by_reason": {}
+      }
+    },
+    {
+      "id": "6a01eb20aa33",
+      "title": "Spain's final campaign push ahead of Sunday's snap general election",
+      "rank": 6,
+      "outlet_count": 6,
+      "coverage": {
+        "lean": {
+          "left": 2,
+          "centre": 2,
+          "right": 0
+        },
+        "bloc": {
+          "west": 4,
+          "east": 2
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "6691263d1f81",
+          "outlet_id": "bbc",
+          "headline": "Leaders clash in final Spain election debate as housing dominates run-in",
+          "snippet": "The struggle many face in buying a home has been the biggest issue of a bitter campaign.",
+          "url": "https://www.bbc.co.uk/news/articles/ckr5gr4g8gn5o",
+          "published_at": "2026-11-27T06:03:39Z",
+          "published_at_estimated": false,
+          "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/c5a0/live/2d2b3d80-ea39-11f1-a094-5fdc692f3e33.jpg"
+        },
+        {
+          "id": "a076598bbed4",
+          "outlet_id": "bbc",
+          "headline": "'It's impossible': Spain's young people on housing ahead of Sunday's election",
+          "snippet": "Europe correspondent Nick Beake speaks to one couple kept apart by high rents in Valencia.",
+          "url": "https://www.bbc.co.uk/news/videos/cm9w9y8947xqo",
+          "published_at": "2026-11-27T06:09:31Z",
+          "published_at_estimated": false,
+          "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/b6e8/live/fb20a6d0-e9cb-11f1-99b6-a35a62fa4264.jpg"
+        },
+        {
+          "id": "a9ea6e17ba7f",
+          "outlet_id": "thenational",
+          "headline": "Can Spain's Pedro Sanchez stage another comeback in Sunday's election?",
+          "snippet": "Spanish Prime Minister Pedro Sanchez is famous for his “remontadas”, or political comebacks, but he and his socialist party face formidable obstacles ahead of Sunday's snap election. His win, or his…",
+          "url": "https://www.thenationalnews.com/news/europe/2026/11/27/can-spains-pedro-sanchez-stage-another-comeback-in-sundays-election/",
+          "published_at": "2026-11-27T10:37:08Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.thenationalnews.com/resizer/v2/JX2XT3LV2XOLGVOELHYYPWKZB4.jpg?auth=19eb708f8bc7be11f83c0420a2f69e78b1169d84aaa4ca0b887c82b53170134b&smart=true&width=5244&height=3496"
+        },
+        {
+          "id": "d1b69fd79fe7",
+          "outlet_id": "france24",
+          "headline": "Spain general election 2026: Could Sánchez lose power?",
+          "snippet": "Spanish voters head to the polls in just three days for a snap election, after eight years of Socialist-led rule. Prime Minister Pedro Sánchez is fighting to stay in power, but an alliance between…",
+          "url": "https://www.france24.com/en/video/20261127-spain-general-election-2026-could-s%C3%A1nchez-lose-power",
+          "published_at": "2026-11-27T10:46:41Z",
+          "published_at_estimated": false,
+          "image_url": "https://s.france24.com/media/display/f8f8a758-ea4e-11f1-95e3-f9cf020caef6/w:1024/p:16x9/EN-20261127-100420-100610-CS.jpg"
+        },
+        {
+          "id": "6f3333551859",
+          "outlet_id": "france24",
+          "headline": "Spain’s Pedro makes final campaign push to beat the right ahead of crunch vote",
+          "snippet": "Spanish Prime Minister Pedro Sanchez makes his final campaign push with a rally in Madrid Friday, the last day of campaigning for Sunday's high-stakes elections. Opinion polls show the Socialist…",
+          "url": "https://www.france24.com/en/europe/20261127-sanchez-makes-last-bid-to-beat-the-right-ahead-of-spanish-vote",
+          "published_at": "2026-11-27T10:57:18Z",
+          "published_at_estimated": false,
+          "image_url": "https://s.france24.com/media/display/4f8aa164-ea51-11f1-a0d5-77d069279b82/w:1024/p:16x9/8fc348c708cdc4651d7877edc47076fb001aea55.jpg"
+        },
+        {
+          "id": "0cdbabdbcf0c",
+          "outlet_id": "aljazeera",
+          "headline": "What Spain’s election means for Morocco",
+          "snippet": "The vote could reshape diplomatic relations, but shared strategic interests will continue to bind the two countries.",
+          "url": "https://www.aljazeera.com/opinions/2026/11/27/what-spains-election-means-for-morocco",
+          "published_at": "2026-11-27T11:33:17Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "379363326a9a",
+          "outlet_id": "france24",
+          "headline": "Spain election: Housing crisis and immigration dominate final campaign debate",
+          "snippet": "Spain goes to the polls on Sunday in an early parliamentary election that may usher in a right-wing coalition to replace the Socialist-led minority government of Prime Minister Pedro Sanchez, one of…",
+          "url": "https://www.france24.com/en/video/20261127-spain-election-housing-crisis-and-immigration-dominate-final-campaign-debate",
+          "published_at": "2026-11-27T11:51:07Z",
+          "published_at_estimated": false,
+          "image_url": "https://s.france24.com/media/display/c71918ae-ea52-11f1-947a-f9cf020caef6/w:1024/p:16x9/EN-20261127-110703-110925-CS.jpg"
+        },
+        {
+          "id": "5912544d82f4",
+          "outlet_id": "nyt",
+          "headline": "Spain’s Far-Right Era Ended in 1975. Will This Man Change That?",
+          "snippet": "If the polls are right, Santiago Abascal’s Vox party could become the first far-right group to join a Spanish government since the days of Franco.",
+          "url": "https://www.nytimes.com/2026/11/27/world/europe/santiago-abascal-vox-spain-far-right.html",
+          "published_at": "2026-11-27T14:45:20Z",
+          "published_at_estimated": false,
+          "image_url": "https://static01.nyt.com/images/2026/11/27/multimedia/27int-spain-abascal-promo-zlgq/27int-spain-abascal-promo-zlgq-mediumSquareAt3X.jpg"
+        },
+        {
+          "id": "7b4d275d9206",
+          "outlet_id": "guardian",
+          "headline": "Spanish prime minister Pedro Sánchez confident of election victory despite polls – Europe live",
+          "snippet": "‘I can’t conceive of us losing,’ the leader said Freelance journalist based in Madrid and host of the Sobremesa podcast Vox has often been portrayed in international coverage as a party of Franco…",
+          "url": "https://www.theguardian.com/world/live/2026/nov/27/zelenskyy-putin-trump-comments-russia-ukraine-latest-news-updates",
+          "published_at": "2026-11-27T16:19:50Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.guim.co.uk/img/media/3b8d31f150e01e5b763ede39082829dcd3e49221/674_52_2022_1618/master/2022.jpg?width=460&quality=85&auto=format&fit=max&s=54034372f9f8150116ecd2150b65bfca"
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "Spain holds a snap or early general election on Sunday.",
+          "sources": [
+            "a9ea6e17ba7f",
+            "d1b69fd79fe7",
+            "6f3333551859",
+            "379363326a9a",
+            "a076598bbed4"
+          ]
+        },
+        {
+          "text": "Prime Minister Pedro Sánchez and his Socialist party face the prospect of losing power, with polls pointing to a possible right-wing government.",
+          "sources": [
+            "a9ea6e17ba7f",
+            "d1b69fd79fe7",
+            "379363326a9a",
+            "5912544d82f4",
+            "7b4d275d9206"
+          ]
+        },
+        {
+          "text": "Housing has been a dominant issue of the campaign and the final debate.",
+          "sources": [
+            "6691263d1f81",
+            "a076598bbed4",
+            "379363326a9a"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "5912544d82f4",
+              "quote": "Spain’s Far-Right Era Ended in 1975. Will This Man Change That?",
+              "field": "headline"
+            },
+            {
+              "article_id": "7b4d275d9206",
+              "quote": "‘I can’t conceive of us losing,’ the leader said",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the possibility of Santiago Abascal's Vox becoming the first far-right party in a Spanish government since Franco.",
+              "sources": [
+                "5912544d82f4"
+              ]
+            },
+            {
+              "text": "Foregrounds Sánchez's stated confidence of victory despite the polls.",
+              "sources": [
+                "7b4d275d9206"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "6691263d1f81",
+              "quote": "housing dominates run-in",
+              "field": "headline"
+            },
+            {
+              "article_id": "d1b69fd79fe7",
+              "quote": "Could Sánchez lose power?",
+              "field": "headline"
+            },
+            {
+              "article_id": "6f3333551859",
+              "quote": "final campaign push to beat the right",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Emphasises housing, including young people's difficulty with high rents, and immigration as the main campaign issues.",
+              "sources": [
+                "6691263d1f81",
+                "a076598bbed4",
+                "379363326a9a"
+              ]
+            },
+            {
+              "text": "Focuses on Sánchez's final rally in Madrid and the prospect of a right-wing coalition replacing him.",
+              "sources": [
+                "6f3333551859",
+                "d1b69fd79fe7",
+                "379363326a9a"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "left",
+          "text": "Left coverage does not mention housing or immigration as campaign issues.",
+          "sources": [
+            "6691263d1f81",
+            "a076598bbed4",
+            "379363326a9a"
+          ]
+        },
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not name Vox or its leader Santiago Abascal.",
+          "sources": [
+            "5912544d82f4",
+            "7b4d275d9206"
+          ]
+        }
+      ],
+      "contested_claims": [],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "379363326a9a",
+              "quote": "Housing crisis and immigration dominate final campaign debate",
+              "field": "headline"
+            },
+            {
+              "article_id": "5912544d82f4",
+              "quote": "Will This Man Change That?",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Emphasises housing, the final debate and the possible entry of the far right into government.",
+              "sources": [
+                "6691263d1f81",
+                "379363326a9a",
+                "5912544d82f4",
+                "7b4d275d9206"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "a9ea6e17ba7f",
+              "quote": "Can Spain's Pedro Sanchez stage another comeback",
+              "field": "headline"
+            },
+            {
+              "article_id": "0cdbabdbcf0c",
+              "quote": "What Spain’s election means for Morocco",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Focuses on Sánchez's record of political comebacks and the obstacles he faces.",
+              "sources": [
+                "a9ea6e17ba7f"
+              ]
+            },
+            {
+              "text": "Examines how the vote could reshape Spain's diplomatic relations with Morocco.",
+              "sources": [
+                "0cdbabdbcf0c"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "Spain holds a snap general election on Sunday, and Prime Minister Pedro Sánchez made a final campaign push after eight years of Socialist-led rule. Polls suggest a right-wing coalition could replace his government, possibly bringing Vox into power. Housing dominated the final debate and the campaign.",
+        "sources": [
+          "6f3333551859",
+          "d1b69fd79fe7",
+          "379363326a9a",
+          "5912544d82f4",
+          "6691263d1f81",
+          "a9ea6e17ba7f"
+        ]
+      },
+      "conclusion": {
+        "text": "All sides agree Spain votes on Sunday with Sánchez under pressure from polls. Centre outlets lead with housing and the final push, left outlets with Vox and the far right, and East-bloc outlets with Sánchez's comebacks and ties with Morocco. No coverage disputes another's facts.",
+        "sources": [
+          "d1b69fd79fe7",
+          "6691263d1f81",
+          "379363326a9a",
+          "5912544d82f4",
+          "7b4d275d9206",
+          "a9ea6e17ba7f",
+          "0cdbabdbcf0c"
+        ]
+      },
+      "validation": {
+        "kept": 23,
+        "dropped_by_reason": {}
+      }
+    },
+    {
+      "id": "7885f9cbfcbb",
+      "title": "Explosion at Bangchak oil refinery in Bangkok injures nine",
+      "rank": 7,
+      "outlet_count": 5,
+      "coverage": {
+        "lean": {
+          "left": 1,
+          "centre": 1,
+          "right": 1
+        },
+        "bloc": {
+          "west": 3,
+          "east": 2
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "e8b5a6ea8be5",
+          "outlet_id": "mirror",
+          "headline": "Multiple casualties as huge explosion rocks Bangkok oil depot - mass evacuation ordered",
+          "snippet": "Residents in Bangkok, Thailand, were forced to evacuate after an explosion at the Bangchak oil refinery left at least nine people injured.",
+          "url": "https://www.mirror.co.uk/news/world-news/bangkok-explosion-oil-depot-thailand-37917328",
+          "published_at": "2026-11-26T10:07:30Z",
+          "published_at_estimated": false,
+          "image_url": "https://i2-prod.mirror.co.uk/incoming/article37917286.ece/ALTERNATES/s615/2_Explosion-sparks-fire-at-Bangkok-oil-refinery.jpg"
+        },
+        {
+          "id": "9c6be9ee508d",
+          "outlet_id": "thehindu",
+          "headline": "Massive fire at Bangkok oil refinery leaves several injured, Bangchak Corp shuts all units",
+          "snippet": "Flames rose high above the site, followed by black smoke that swept across the Thai capital’s skyline",
+          "url": "https://www.thehindu.com/news/international/bangkok-oil-refinery-fire-blast-bangchak-injured-casualties-nov-26-2026/article71745999.ece",
+          "published_at": "2026-11-26T10:19:37Z",
+          "published_at_estimated": false,
+          "image_url": "https://th-i.thgim.com/public/incoming/oawmaa/article71746010.ece/alternates/LANDSCAPE_1200/Thailand_Explosion_62383.jpg"
+        },
+        {
+          "id": "b8cbe724beb1",
+          "outlet_id": "bbc",
+          "headline": "Nine injured, three critically, after Bangkok oil refinery explosion",
+          "snippet": "Black smoke could be seen across Bangkok's skyline after the blast, as officials urged residents to leave the area.",
+          "url": "https://www.bbc.co.uk/news/articles/crx209kwk4kzo",
+          "published_at": "2026-11-26T16:21:19Z",
+          "published_at_estimated": false,
+          "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/579b/live/12356f50-e985-11f1-bb43-d1b6102e3b60.jpg"
+        },
+        {
+          "id": "a9a51321c16f",
+          "outlet_id": "fox",
+          "headline": "Bangkok oil refinery explosion injures at least 9, Thailand company monitoring air quality",
+          "snippet": "Nine people are injured, three critically, after an explosion at Bangchak Corporation's oil refinery in Bangkok, Thailand, as residents get phone alerts.",
+          "url": "https://www.foxnews.com/world/bangkok-oil-refinery-explosion-injures-least-9-thailand-company-monitoring-air-quality",
+          "published_at": "2026-11-26T18:21:59Z",
+          "published_at_estimated": false,
+          "image_url": "https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2026/11/931/523/Bangkok_fir3.jpg?ve=1&tl=1"
+        },
+        {
+          "id": "0e24e5f3de2b",
+          "outlet_id": "ecns",
+          "headline": "At least 9 injured in oil refinery explosion in Bangkok",
+          "snippet": "At least nine people were injured in the explosion at an oil refinery in the Thai capital, Bangkok, on Thursday afternoon, Bangkok Governor Chadchart Sittipunt said at the scene.",
+          "url": "https://www.ecns.cn/photo/2026-11-27/detail-ihfnkzcu9658213.shtml",
+          "published_at": "2026-11-27T15:14:24Z",
+          "published_at_estimated": false,
+          "image_url": null
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "An explosion occurred at an oil refinery in Bangkok, Thailand.",
+          "sources": [
+            "e8b5a6ea8be5",
+            "9c6be9ee508d",
+            "b8cbe724beb1",
+            "a9a51321c16f",
+            "0e24e5f3de2b"
+          ]
+        },
+        {
+          "text": "At least nine people were injured.",
+          "sources": [
+            "e8b5a6ea8be5",
+            "b8cbe724beb1",
+            "a9a51321c16f",
+            "0e24e5f3de2b"
+          ]
+        },
+        {
+          "text": "Three of the injured were in a critical condition.",
+          "sources": [
+            "b8cbe724beb1",
+            "a9a51321c16f"
+          ]
+        },
+        {
+          "text": "The refinery belongs to Bangchak.",
+          "sources": [
+            "e8b5a6ea8be5",
+            "9c6be9ee508d",
+            "a9a51321c16f"
+          ]
+        },
+        {
+          "text": "Black smoke was visible across Bangkok's skyline.",
+          "sources": [
+            "9c6be9ee508d",
+            "b8cbe724beb1"
+          ]
+        },
+        {
+          "text": "Residents were evacuated or urged to leave the area.",
+          "sources": [
+            "e8b5a6ea8be5",
+            "b8cbe724beb1"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "e8b5a6ea8be5",
+              "quote": "huge explosion rocks Bangkok oil depot",
+              "field": "headline"
+            },
+            {
+              "article_id": "e8b5a6ea8be5",
+              "quote": "mass evacuation ordered",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with multiple casualties and the evacuation of residents.",
+              "sources": [
+                "e8b5a6ea8be5"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "b8cbe724beb1",
+              "quote": "Nine injured, three critically",
+              "field": "headline"
+            },
+            {
+              "article_id": "b8cbe724beb1",
+              "quote": "officials urged residents to leave the area",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the number and severity of injuries and the smoke over the skyline.",
+              "sources": [
+                "b8cbe724beb1"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "right",
+          "headline_quotes": [
+            {
+              "article_id": "a9a51321c16f",
+              "quote": "Thailand company monitoring air quality",
+              "field": "headline"
+            },
+            {
+              "article_id": "a9a51321c16f",
+              "quote": "residents get phone alerts",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Emphasises the company's air-quality monitoring and phone alerts sent to residents.",
+              "sources": [
+                "a9a51321c16f"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "left",
+          "text": "Left coverage does not mention that three of the injured were in a critical condition.",
+          "sources": [
+            "b8cbe724beb1",
+            "a9a51321c16f"
+          ]
+        },
+        {
+          "lean": "right",
+          "text": "Right coverage does not mention residents being evacuated or urged to leave the area.",
+          "sources": [
+            "e8b5a6ea8be5",
+            "b8cbe724beb1"
+          ]
+        }
+      ],
+      "contested_claims": [],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "e8b5a6ea8be5",
+              "quote": "mass evacuation ordered",
+              "field": "headline"
+            },
+            {
+              "article_id": "b8cbe724beb1",
+              "quote": "Nine injured, three critically",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Foregrounds injury numbers, critical cases and the evacuation or alerting of residents.",
+              "sources": [
+                "e8b5a6ea8be5",
+                "b8cbe724beb1",
+                "a9a51321c16f"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "9c6be9ee508d",
+              "quote": "Bangchak Corp shuts all units",
+              "field": "headline"
+            },
+            {
+              "article_id": "0e24e5f3de2b",
+              "quote": "Bangkok Governor Chadchart Sittipunt said at the scene",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Foregrounds the fire and smoke, the shutdown of all Bangchak units and the Bangkok governor's statement at the scene.",
+              "sources": [
+                "9c6be9ee508d",
+                "0e24e5f3de2b"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "An explosion at the Bangchak oil refinery in Bangkok, Thailand, injured at least nine people, three of them critically. Black smoke spread across the city's skyline and residents were urged to leave the area, while Bangchak Corp shut all units.",
+        "sources": [
+          "e8b5a6ea8be5",
+          "9c6be9ee508d",
+          "b8cbe724beb1",
+          "a9a51321c16f",
+          "0e24e5f3de2b"
+        ]
+      },
+      "conclusion": null,
+      "validation": {
+        "kept": 24,
+        "dropped_by_reason": {
+          "untrusted_text": 1
+        }
+      }
+    },
+    {
+      "id": "47090b156326",
+      "title": "Norse Atlantic Airways halts flights and files for bankruptcy",
+      "rank": 8,
+      "outlet_count": 5,
+      "coverage": {
+        "lean": {
+          "left": 2,
+          "centre": 1,
+          "right": 1
+        },
+        "bloc": {
+          "west": 4,
+          "east": 1
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": null
+      },
+      "articles": [
+        {
+          "id": "120ce32f6deb",
+          "outlet_id": "fox",
+          "headline": "Norse Atlantic airline suspends all flights, on brink of bankruptcy amid rising fuel costs",
+          "snippet": "Norse Atlantic suspended all flights as its board warned it may file for bankruptcy without urgent short-term financing, leaving PIA passengers stranded.",
+          "url": "https://www.foxnews.com/world/norse-atlantic-airlines-suspends-all-flights-brink-bankruptcy-amid-rising-fuel-costs",
+          "published_at": "2026-11-26T13:56:57Z",
+          "published_at_estimated": false,
+          "image_url": "https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2026/11/931/523/Norse.jpg?ve=1&tl=1"
+        },
+        {
+          "id": "148f0bbe4ad7",
+          "outlet_id": "mirror",
+          "headline": "Another blow for European airline after all flights are cancelled",
+          "snippet": "Norse Atlantic Airways has suspended all flights amid a critical financial situation, with the airline warning it could file for bankruptcy unless an urgent solution to its finances is found.",
+          "url": "https://www.mirror.co.uk/travel/another-blow-european-airline-after-37921680",
+          "published_at": "2026-11-27T10:36:58Z",
+          "published_at_estimated": false,
+          "image_url": "https://i2-prod.mirror.co.uk/travel/article37921678.ece/ALTERNATES/s615/0_A-view-of-a-Boeing-787-9-Dreamliner-Norse-Atlantic-Airways.jpg"
+        },
+        {
+          "id": "c6fedce7001a",
+          "outlet_id": "toi",
+          "headline": "Norse Atlantic risks losing all 12 Dreamliners as funding crisis threatens bankruptcy",
+          "snippet": "Norse Atlantic Airways finds itself in dire straits, grappling with severe financial challenges stemming from lease terminations for its Boeing 787 fleet. After halting all operations on November 26…",
+          "url": "https://timesofindia.indiatimes.com/world/us/norse-atlantic-faces-termination-of-leases-for-all-12-boeing-787s-as-cash-strapped-airline-seeks-emergency-funding-flights-are-suspended-bankruptcy-remains-a-risk-and-it-disputes-the-lessors-move/articleshow/136222700.cms",
+          "published_at": "2026-11-27T13:00:59Z",
+          "published_at_estimated": false,
+          "image_url": "https://static.toiimg.com/photo/msid-136223259,imgsize-965099.cms"
+        },
+        {
+          "id": "533d4c49c527",
+          "outlet_id": "dw",
+          "headline": "Airline Norse Atlantic files for bankruptcy, succumbing to aviation fuel costs",
+          "snippet": "The low-cost airline was only founded a few years ago and had been struggling to turn a profit. The spike in aviation fuel prices caused by the war in Iran has now driven Norway's Norse Atlantic…",
+          "url": "https://www.dw.com/en/airline-norse-atlantic-files-for-bankruptcy-succumbing-to-aviation-fuel-costs/a-80076728?maca=en-rss-en-world-4025-xml-mrss",
+          "published_at": "2026-11-27T14:20:00Z",
+          "published_at_estimated": false,
+          "image_url": null
+        },
+        {
+          "id": "13da389fbfac",
+          "outlet_id": "guardian",
+          "headline": "Norse Atlantic Airways files for bankruptcy and cancels all future flights",
+          "snippet": "Norwegian airline tells customers not to come to airports after surging fuel costs caused by Iran war ruin finances Norse Atlantic Airways has filed for bankruptcy and cancelled all future flights…",
+          "url": "https://www.theguardian.com/business/2026/nov/27/norse-atlantic-airways-files-for-bankruptcy-cancels-all-future-flights",
+          "published_at": "2026-11-27T15:40:35Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.guim.co.uk/img/media/e1f07f0b2a8329b3e1557eed373d0458f8cb7e9a/71_0_3289_2633/master/3289.jpg?width=460&quality=85&auto=format&fit=max&s=e5aa35d8f9ecfdf994b96cca189d0b41"
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "Norse Atlantic Airways suspended or cancelled all its flights.",
+          "sources": [
+            "120ce32f6deb",
+            "148f0bbe4ad7",
+            "c6fedce7001a",
+            "13da389fbfac"
+          ]
+        },
+        {
+          "text": "The airline faces bankruptcy because of its financial situation.",
+          "sources": [
+            "120ce32f6deb",
+            "148f0bbe4ad7",
+            "c6fedce7001a",
+            "533d4c49c527",
+            "13da389fbfac"
+          ]
+        },
+        {
+          "text": "Rising aviation fuel costs are cited as a cause of the airline's financial problems.",
+          "sources": [
+            "120ce32f6deb",
+            "533d4c49c527",
+            "13da389fbfac"
+          ]
+        },
+        {
+          "text": "The fuel cost rise is attributed to the war in Iran.",
+          "sources": [
+            "533d4c49c527",
+            "13da389fbfac"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "148f0bbe4ad7",
+              "quote": "Another blow for European airline after all flights are cancelled",
+              "field": "headline"
+            },
+            {
+              "article_id": "13da389fbfac",
+              "quote": "files for bankruptcy and cancels all future flights",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the cancellation of all flights and the airline's critical financial situation.",
+              "sources": [
+                "148f0bbe4ad7",
+                "13da389fbfac"
+              ]
+            },
+            {
+              "text": "Reports the airline told customers not to come to airports.",
+              "sources": [
+                "13da389fbfac"
+              ]
+            },
+            {
+              "text": "Attributes the airline's ruined finances to surging fuel costs caused by the Iran war.",
+              "sources": [
+                "13da389fbfac"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "533d4c49c527",
+              "quote": "succumbing to aviation fuel costs",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Describes Norse Atlantic as a low-cost airline founded only a few years ago that had struggled to turn a profit.",
+              "sources": [
+                "533d4c49c527"
+              ]
+            },
+            {
+              "text": "Attributes the collapse to a spike in aviation fuel prices caused by the war in Iran.",
+              "sources": [
+                "533d4c49c527"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "right",
+          "headline_quotes": [
+            {
+              "article_id": "120ce32f6deb",
+              "quote": "on brink of bankruptcy amid rising fuel costs",
+              "field": "headline"
+            },
+            {
+              "article_id": "120ce32f6deb",
+              "quote": "leaving PIA passengers stranded",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Reports the board warned it may file for bankruptcy without urgent short-term financing.",
+              "sources": [
+                "120ce32f6deb"
+              ]
+            },
+            {
+              "text": "Highlights PIA passengers left stranded by the suspension.",
+              "sources": [
+                "120ce32f6deb"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "right",
+          "text": "Right-leaning coverage does not mention the war in Iran as the cause of higher fuel costs.",
+          "sources": [
+            "533d4c49c527",
+            "13da389fbfac"
+          ]
+        },
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not mention the suspension or cancellation of the airline's flights.",
+          "sources": [
+            "120ce32f6deb",
+            "148f0bbe4ad7",
+            "13da389fbfac"
+          ]
+        }
+      ],
+      "contested_claims": [
+        {
+          "claim": "Norse Atlantic Airways has filed for bankruptcy, rather than only warning that it might.",
+          "asserted_by": [
+            "533d4c49c527",
+            "13da389fbfac"
+          ],
+          "disputed_by": [
+            "120ce32f6deb",
+            "148f0bbe4ad7"
+          ]
+        }
+      ],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "533d4c49c527",
+              "quote": "Airline Norse Atlantic files for bankruptcy",
+              "field": "headline"
+            },
+            {
+              "article_id": "120ce32f6deb",
+              "quote": "Norse Atlantic airline suspends all flights",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the halt of flights and bankruptcy, attributed to rising fuel costs.",
+              "sources": [
+                "120ce32f6deb",
+                "148f0bbe4ad7",
+                "533d4c49c527",
+                "13da389fbfac"
+              ]
+            },
+            {
+              "text": "Reports effects on passengers, including stranded PIA passengers and customers told not to come to airports.",
+              "sources": [
+                "120ce32f6deb",
+                "13da389fbfac"
+              ]
+            }
+          ]
+        },
+        {
+          "bloc": "east",
+          "headline_quotes": [
+            {
+              "article_id": "c6fedce7001a",
+              "quote": "Norse Atlantic risks losing all 12 Dreamliners",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Attributes the financial challenges to lease terminations for the airline's Boeing 787 fleet.",
+              "sources": [
+                "c6fedce7001a"
+              ]
+            },
+            {
+              "text": "Reports the airline halted all operations on 26 November and faces possible bankruptcy.",
+              "sources": [
+                "c6fedce7001a"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "Norse Atlantic Airways halted all flights, with one report dating the halt to 26 November. Some outlets report the Norwegian airline has filed for bankruptcy; earlier reports say it warned it might file without urgent financing. Reports cite rising fuel costs or lease terminations for its Boeing 787 fleet.",
+        "sources": [
+          "120ce32f6deb",
+          "148f0bbe4ad7",
+          "c6fedce7001a",
+          "533d4c49c527",
+          "13da389fbfac"
+        ]
+      },
+      "conclusion": {
+        "text": "All coverage agrees Norse Atlantic halted flights and faces bankruptcy. Western outlets attribute this to fuel costs, some linking them to the Iran war, while the Eastern outlet focuses on lease terminations for its 787 fleet. Reports differ on whether it has filed for bankruptcy or only warned it might.",
+        "sources": [
+          "120ce32f6deb",
+          "148f0bbe4ad7",
+          "c6fedce7001a",
+          "533d4c49c527",
+          "13da389fbfac"
+        ]
+      },
+      "validation": {
+        "kept": 28,
+        "dropped_by_reason": {}
+      }
+    },
+    {
+      "id": "e6962e023a9c",
+      "title": "UK contacts 100,000 reservists to prepare for possible war",
+      "rank": 9,
+      "outlet_count": 4,
+      "coverage": {
+        "lean": {
+          "left": 1,
+          "centre": 1,
+          "right": 2
+        },
+        "bloc": {
+          "west": 4,
+          "east": 0
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": "west"
+      },
+      "articles": [
+        {
+          "id": "7439521a5021",
+          "outlet_id": "mirror",
+          "headline": "UK military chiefs write to 100,000 reservists telling them to prepare for war",
+          "snippet": "The move follows increasing threats from Vladimir Putin, and marks the first time since the Cold War that reservists have been urged to get ready for war",
+          "url": "https://www.mirror.co.uk/news/uk-news/uk-mod-military-war-veterans-37916592",
+          "published_at": "2026-11-26T07:54:32Z",
+          "published_at_estimated": false,
+          "image_url": "https://i2-prod.mirror.co.uk/incoming/article37835155.ece/ALTERNATES/s615/1_Major-wargame-sees-mass-drop-of-British-troops-into-Europe.jpg"
+        },
+        {
+          "id": "e1b73f7267f7",
+          "outlet_id": "mirror",
+          "headline": "'The steady drumbeat of war is growing louder - here's how Britain is being put on notice'",
+          "snippet": "OPINION: 'The government has subtly been warning UK troops and civilians to prepare for an escalation in conflict and finally the message appears to be coming through - with troops put on standby",
+          "url": "https://www.mirror.co.uk/news/uk-news/reservists-called-up-military-army-37917518",
+          "published_at": "2026-11-26T11:51:01Z",
+          "published_at_estimated": false,
+          "image_url": "https://i2-prod.mirror.co.uk/incoming/article37917575.ece/ALTERNATES/s615/2_Coalition-Of-The-Willing-Military-Drills-In-Poland-Nowa-Deba-20-Nov-2026.jpg"
+        },
+        {
+          "id": "22869b5b0977",
+          "outlet_id": "fox",
+          "headline": "UK shields fighter jets, contacts reservists in Cold War-scale push amid Russia threat",
+          "snippet": "Wes Streeting says the United Kingdom is contacting former service members to update its strategic reserve as Russian sabotage rises across Europe.",
+          "url": "https://www.foxnews.com/world/uk-shields-fighter-jets-contacts-reservists-cold-war-scale-push-amid-russia-threat",
+          "published_at": "2026-11-26T21:14:20Z",
+          "published_at_estimated": false,
+          "image_url": "https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2026/11/931/523/uk-fighter-jet.jpg?ve=1&tl=1"
+        },
+        {
+          "id": "e7d64f3e5b9d",
+          "outlet_id": "sky",
+          "headline": "MoD can't find contact details for half of veterans",
+          "snippet": "The Ministry of Defence has published open letters to almost 100,000 veterans about their duty to mobilise in a crisis but it appears unable to find many people's direct contact details.",
+          "url": "https://news.sky.com/story/mod-missing-contact-details-for-nearly-half-of-uks-strategic-reservists-13617071",
+          "published_at": "2026-11-27T07:30:00Z",
+          "published_at_estimated": false,
+          "image_url": "https://e3.365dm.com/26/11/1920x1080/skynews-uk-army-military-reserves_7416868.jpg?20261126091243"
+        },
+        {
+          "id": "80c271ff5683",
+          "outlet_id": "dailymail",
+          "headline": "Military can't find HALF of its army of veteran reservists who may be called up if Britain goes to war",
+          "snippet": "The UK has almost 100,000 people in its so-called 'strategic reserve', who were this week told to prepare for war in the biggest drive of its kind since the Cold War.",
+          "url": "https://www.dailymail.com/news/article-16326399/military-half-veteran-strategic-reserve.html",
+          "published_at": "2026-11-27T16:06:02Z",
+          "published_at_estimated": false,
+          "image_url": "https://i.dailymail.com/1s/2026/11/27/11/112739619-0-image-a-6_1795778651177.jpg"
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "Almost 100,000 reservists or veterans have been contacted about preparing for war or mobilising in a crisis.",
+          "sources": [
+            "7439521a5021",
+            "e7d64f3e5b9d",
+            "80c271ff5683"
+          ]
+        },
+        {
+          "text": "The UK is contacting former service members as part of its strategic reserve.",
+          "sources": [
+            "22869b5b0977",
+            "80c271ff5683",
+            "e7d64f3e5b9d"
+          ]
+        },
+        {
+          "text": "The move is described as the first or biggest of its kind since the Cold War.",
+          "sources": [
+            "7439521a5021",
+            "22869b5b0977",
+            "80c271ff5683"
+          ]
+        },
+        {
+          "text": "The move is linked to threats from Russia or Vladimir Putin.",
+          "sources": [
+            "7439521a5021",
+            "22869b5b0977"
+          ]
+        },
+        {
+          "text": "The military cannot find contact details for about half of the veterans.",
+          "sources": [
+            "e7d64f3e5b9d",
+            "80c271ff5683"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "7439521a5021",
+              "quote": "telling them to prepare for war",
+              "field": "headline"
+            },
+            {
+              "article_id": "e1b73f7267f7",
+              "quote": "The steady drumbeat of war is growing louder",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the instruction to prepare for war, linking it to increasing threats from Vladimir Putin.",
+              "sources": [
+                "7439521a5021"
+              ]
+            },
+            {
+              "text": "Presents it as the first time since the Cold War reservists have been urged to get ready for war.",
+              "sources": [
+                "7439521a5021"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "e7d64f3e5b9d",
+              "quote": "MoD can't find contact details for half of veterans",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the Ministry of Defence being unable to find direct contact details for many of the veterans.",
+              "sources": [
+                "e7d64f3e5b9d"
+              ]
+            },
+            {
+              "text": "Describes the letters as open letters about veterans' duty to mobilise in a crisis.",
+              "sources": [
+                "e7d64f3e5b9d"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "right",
+          "headline_quotes": [
+            {
+              "article_id": "22869b5b0977",
+              "quote": "Cold War-scale push amid Russia threat",
+              "field": "headline"
+            },
+            {
+              "article_id": "80c271ff5683",
+              "quote": "Military can't find HALF of its army of veteran reservists",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Links the move to rising Russian sabotage across Europe and mentions the UK shielding fighter jets.",
+              "sources": [
+                "22869b5b0977"
+              ]
+            },
+            {
+              "text": "Attributes the statement on contacting former service members to Wes Streeting.",
+              "sources": [
+                "22869b5b0977"
+              ]
+            },
+            {
+              "text": "Leads with the military being unable to find half of its veteran reservists.",
+              "sources": [
+                "80c271ff5683"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "left",
+          "text": "Left coverage does not mention that the military cannot find contact details for about half of the veterans.",
+          "sources": [
+            "e7d64f3e5b9d",
+            "80c271ff5683"
+          ]
+        },
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not mention Russia or Putin as the context for the move.",
+          "sources": [
+            "7439521a5021",
+            "22869b5b0977"
+          ]
+        },
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not mention the comparison with the Cold War.",
+          "sources": [
+            "7439521a5021",
+            "22869b5b0977",
+            "80c271ff5683"
+          ]
+        }
+      ],
+      "contested_claims": [],
+      "opinion": [
+        {
+          "text": "A Daily Mirror opinion piece argues the government has subtly been warning troops and civilians to prepare for an escalation in conflict, with troops put on standby.",
+          "sources": [
+            "e1b73f7267f7"
+          ]
+        }
+      ],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "7439521a5021",
+              "quote": "UK military chiefs write to 100,000 reservists telling them to prepare for war",
+              "field": "headline"
+            },
+            {
+              "article_id": "e7d64f3e5b9d",
+              "quote": "MoD can't find contact details for half of veterans",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Emphasises the scale of the call to prepare for war and its Cold War comparison.",
+              "sources": [
+                "7439521a5021",
+                "22869b5b0977",
+                "80c271ff5683"
+              ]
+            },
+            {
+              "text": "Emphasises the gap in contact details for about half of the veterans.",
+              "sources": [
+                "e7d64f3e5b9d",
+                "80c271ff5683"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "The UK has contacted almost 100,000 former service members in its strategic reserve, telling them to prepare for war in what is described as the biggest such move since the Cold War, amid threats from Russia. Reports say the Ministry of Defence cannot find direct contact details for about half of them.",
+        "sources": [
+          "7439521a5021",
+          "22869b5b0977",
+          "e7d64f3e5b9d",
+          "80c271ff5683"
+        ]
+      },
+      "conclusion": {
+        "text": "All coverage agrees the UK has contacted about 100,000 former service members to prepare for possible war. Left and right outlets frame it around the Russian threat and Cold War comparison, while centre and one right outlet lead with the MoD being unable to find half of them. No claims are disputed between outlets.",
+        "sources": [
+          "7439521a5021",
+          "22869b5b0977",
+          "e7d64f3e5b9d",
+          "80c271ff5683"
+        ]
+      },
+      "validation": {
+        "kept": 27,
+        "dropped_by_reason": {}
+      }
+    },
+    {
+      "id": "480b791041b9",
+      "title": "Kenyan cult leader Paul Mackenzie convicted over 123 more deaths",
+      "rank": 10,
+      "outlet_count": 4,
+      "coverage": {
+        "lean": {
+          "left": 1,
+          "centre": 2,
+          "right": 1
+        },
+        "bloc": {
+          "west": 4,
+          "east": 0
+        }
+      },
+      "blindspot": {
+        "lean": null,
+        "bloc": "west"
+      },
+      "articles": [
+        {
+          "id": "535841d1b326",
+          "outlet_id": "sky",
+          "headline": "Kenyan cult leader in jail for 191 murders convicted over another 123 deaths",
+          "snippet": "A Kenyan cult leader has been convicted of manslaughter over the deaths of 123 of his followers, having already been found guilty of murdering 191 others.",
+          "url": "https://news.sky.com/story/kenyan-cult-leader-in-jail-for-191-murders-convicted-over-another-123-deaths-13617227",
+          "published_at": "2026-11-27T14:30:00Z",
+          "published_at_estimated": false,
+          "image_url": "https://e3.365dm.com/26/11/1920x1080/skynews-paul-mackenzie-good-news-international_7398786.jpg?20261127144057"
+        },
+        {
+          "id": "60f312e8437f",
+          "outlet_id": "mirror",
+          "headline": "Kenyan cult leader serving 200-year sentence is convicted again over 123 more deaths",
+          "snippet": "Paul Mackenzie, who led an apocalyptic church cult in Kenya and ordered his followers to stop eating, and has been convicted over the deaths of 123 more people",
+          "url": "https://www.mirror.co.uk/news/world-news/kenyan-cult-leader-paul-mackenzie-37923153",
+          "published_at": "2026-11-27T14:50:13Z",
+          "published_at_estimated": false,
+          "image_url": "https://i2-prod.mirror.co.uk/incoming/article37923159.ece/ALTERNATES/s615/1_Kenyas-starvation-cult-leader-sentenced-to-200-years-in-prison.jpg"
+        },
+        {
+          "id": "946fe2ac1f44",
+          "outlet_id": "thesun",
+          "headline": "Starvation cult leader jailed for 200 years over murder of 190 children found guilty of another 123 deaths",
+          "snippet": "A SICK cult leader who starved 190 children to death in a depraved doomsday ploy has been found guilty of another 123 deaths. Paul Mackenzie - who is already serving a 200 year jail sentence - led…",
+          "url": "https://www.thesun.co.uk/news/41173205/cult-leader-jailed-more-child-murders/",
+          "published_at": "2026-11-27T14:59:35Z",
+          "published_at_estimated": false,
+          "image_url": "https://www.thesun.co.uk/wp-content%2Fuploads%2F2026%2F11%2Fnewspress-collage-4v2l0cf6i-1795791489148.jpg?quality%3D90%26"
+        },
+        {
+          "id": "d28ced1357d5",
+          "outlet_id": "bbc",
+          "headline": "Kenyan doomsday cult leader convicted over further 123 deaths",
+          "snippet": "Paul Mackenzie is found guilty of killing followers, weeks after being jailed for the mass murder of children.",
+          "url": "https://www.bbc.co.uk/news/articles/cmy49de4xx1zo",
+          "published_at": "2026-11-27T16:06:37Z",
+          "published_at_estimated": false,
+          "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/fd53/live/e165d810-ea74-11f1-a828-d384c0290f6b.jpg"
+        }
+      ],
+      "agreed_facts": [
+        {
+          "text": "A Kenyan cult leader has been convicted over the deaths of a further 123 people.",
+          "sources": [
+            "535841d1b326",
+            "60f312e8437f",
+            "946fe2ac1f44",
+            "d28ced1357d5"
+          ]
+        },
+        {
+          "text": "He had already been convicted and jailed for earlier killings before this verdict.",
+          "sources": [
+            "535841d1b326",
+            "60f312e8437f",
+            "946fe2ac1f44",
+            "d28ced1357d5"
+          ]
+        },
+        {
+          "text": "The cult leader is named as Paul Mackenzie.",
+          "sources": [
+            "60f312e8437f",
+            "946fe2ac1f44",
+            "d28ced1357d5"
+          ]
+        },
+        {
+          "text": "He is already serving a 200-year sentence.",
+          "sources": [
+            "60f312e8437f",
+            "946fe2ac1f44"
+          ]
+        },
+        {
+          "text": "The deaths are linked to starvation of followers.",
+          "sources": [
+            "60f312e8437f",
+            "946fe2ac1f44"
+          ]
+        }
+      ],
+      "framing": [
+        {
+          "lean": "left",
+          "headline_quotes": [
+            {
+              "article_id": "60f312e8437f",
+              "quote": "serving 200-year sentence is convicted again over 123 more deaths",
+              "field": "headline"
+            },
+            {
+              "article_id": "60f312e8437f",
+              "quote": "ordered his followers to stop eating",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with his existing 200-year sentence and describes him as leading an apocalyptic church cult that ordered followers to stop eating.",
+              "sources": [
+                "60f312e8437f"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "centre",
+          "headline_quotes": [
+            {
+              "article_id": "535841d1b326",
+              "quote": "convicted of manslaughter over the deaths of 123 of his followers",
+              "field": "snippet"
+            },
+            {
+              "article_id": "d28ced1357d5",
+              "quote": "Kenyan doomsday cult leader convicted over further 123 deaths",
+              "field": "headline"
+            },
+            {
+              "article_id": "d28ced1357d5",
+              "quote": "weeks after being jailed for the mass murder of children",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Specifies the new conviction as manslaughter and the earlier one as murder of 191 others.",
+              "sources": [
+                "535841d1b326"
+              ]
+            },
+            {
+              "text": "Notes the verdict came weeks after he was jailed for the mass murder of children.",
+              "sources": [
+                "d28ced1357d5"
+              ]
+            }
+          ]
+        },
+        {
+          "lean": "right",
+          "headline_quotes": [
+            {
+              "article_id": "946fe2ac1f44",
+              "quote": "Starvation cult leader jailed for 200 years",
+              "field": "headline"
+            },
+            {
+              "article_id": "946fe2ac1f44",
+              "quote": "A SICK cult leader who starved 190 children to death in a depraved doomsday ploy",
+              "field": "snippet"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with starvation and the 200-year sentence, and describes the earlier victims as 190 children.",
+              "sources": [
+                "946fe2ac1f44"
+              ]
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "lean": "centre",
+          "text": "Centre coverage does not mention the 200-year sentence he is already serving.",
+          "sources": [
+            "60f312e8437f",
+            "946fe2ac1f44"
+          ]
+        },
+        {
+          "lean": "left",
+          "text": "Left coverage does not mention that the earlier victims were children.",
+          "sources": [
+            "946fe2ac1f44",
+            "d28ced1357d5"
+          ]
+        },
+        {
+          "lean": "left",
+          "text": "Left coverage does not state that the new conviction is for manslaughter.",
+          "sources": [
+            "535841d1b326"
+          ]
+        },
+        {
+          "lean": "right",
+          "text": "Right coverage does not state that the new conviction is for manslaughter.",
+          "sources": [
+            "535841d1b326"
+          ]
+        }
+      ],
+      "contested_claims": [
+        {
+          "claim": "The number of people he was earlier found guilty of murdering is 191.",
+          "asserted_by": [
+            "535841d1b326"
+          ],
+          "disputed_by": [
+            "946fe2ac1f44"
+          ]
+        }
+      ],
+      "opinion": [],
+      "framing_by_bloc": [
+        {
+          "bloc": "west",
+          "headline_quotes": [
+            {
+              "article_id": "535841d1b326",
+              "quote": "convicted over another 123 deaths",
+              "field": "headline"
+            },
+            {
+              "article_id": "d28ced1357d5",
+              "quote": "Kenyan doomsday cult leader convicted over further 123 deaths",
+              "field": "headline"
+            },
+            {
+              "article_id": "946fe2ac1f44",
+              "quote": "Starvation cult leader jailed for 200 years",
+              "field": "headline"
+            }
+          ],
+          "emphasis": [
+            {
+              "text": "Leads with the new conviction over 123 deaths and his existing jail term for earlier killings.",
+              "sources": [
+                "535841d1b326",
+                "60f312e8437f",
+                "946fe2ac1f44",
+                "d28ced1357d5"
+              ]
+            }
+          ]
+        }
+      ],
+      "east_west_contradictions": [],
+      "summary": {
+        "text": "Kenyan cult leader Paul Mackenzie has been convicted over the deaths of 123 more of his followers. He was already jailed for earlier murders, with outlets giving 191 or 190 victims and reporting a 200-year sentence.",
+        "sources": [
+          "535841d1b326",
+          "60f312e8437f",
+          "946fe2ac1f44",
+          "d28ced1357d5"
+        ]
+      },
+      "conclusion": {
+        "text": "All outlets report Paul Mackenzie's new conviction over 123 deaths on top of an earlier murder conviction. The left and right lead with his 200-year sentence and starvation, the centre with manslaughter and child victims. The earlier victim count differs between 191 and 190.",
+        "sources": [
+          "535841d1b326",
+          "60f312e8437f",
+          "946fe2ac1f44",
+          "d28ced1357d5"
+        ]
+      },
+      "validation": {
+        "kept": 27,
+        "dropped_by_reason": {}
+      }
+    }
+  ]
+}
